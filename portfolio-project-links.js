@@ -115,6 +115,39 @@
     modalDownload.setAttribute('rel', 'noopener noreferrer');
   };
 
+  const forceProjectLinks = () => {
+    const modalDownload = document.getElementById('modal-download');
+    if (!modalDownload) return;
+
+    const applyIfProject = () => {
+      const title = document.getElementById('modal-title')?.textContent?.trim();
+      if (!title || !knownProjectLinks.has(title)) return;
+      applyGitHubLinkForCurrentModal();
+    };
+
+    const originalSetAttribute = modalDownload.setAttribute.bind(modalDownload);
+    modalDownload.setAttribute = function patchedSetAttribute(name, value) {
+      originalSetAttribute(name, value);
+      if (name === 'href' || name === 'download' || name === 'hidden') {
+        setTimeout(applyIfProject, 0);
+      }
+    };
+
+    const originalRemoveAttribute = modalDownload.removeAttribute.bind(modalDownload);
+    modalDownload.removeAttribute = function patchedRemoveAttribute(name) {
+      originalRemoveAttribute(name);
+      if (name === 'href' || name === 'download' || name === 'hidden') {
+        setTimeout(applyIfProject, 0);
+      }
+    };
+
+    document.addEventListener('click', () => {
+      setTimeout(applyIfProject, 0);
+      setTimeout(applyIfProject, 80);
+      setTimeout(applyIfProject, 180);
+    }, true);
+  };
+
   const openProjectModal = (project) => {
     const modal = document.getElementById('detail-modal');
     const modalCard = document.getElementById('modal-card');
@@ -204,6 +237,7 @@
 
     new MutationObserver(() => {
       setTimeout(applyGitHubLinkForCurrentModal, 0);
+      setTimeout(applyGitHubLinkForCurrentModal, 80);
     }).observe(modalTitle, { childList: true, characterData: true, subtree: true });
   };
 
@@ -223,6 +257,7 @@
     ensureExtraProjects();
     setupModalObserver();
     setupRefreshHooks();
+    forceProjectLinks();
     setTimeout(ensureExtraProjects, 150);
   };
 
