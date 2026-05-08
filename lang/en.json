@@ -1,0 +1,127 @@
+﻿{
+  "skip": { "content": "Skip to content" },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "career": "Journey",
+    "tech": "Tech Stack",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "hero": {
+    "kicker": "Application Development Portfolio",
+    "description": "I build clean, maintainable software solutions for web, APIs, data, and automation. My focus is robust architecture, teamwork, and clear user flows.",
+    "ctaPortfolio": "View Portfolio",
+    "ctaContact": "Contact",
+    "ctaEmail": "Email"
+  },
+  "focus": {
+    "title": "Current Focus",
+    "subline": "Click a domain to see my current development focus.",
+    "web": {
+      "tab": "Web",
+      "title": "Web",
+      "text": "Responsive interfaces with clear UX and semantic markup.",
+      "points": ["HTML/CSS architecture", "Interactive JavaScript flows", "Mobile-first delivery"],
+      "status": "Active: UI/UX"
+    },
+    "backend": {
+      "tab": "Backend",
+      "title": "Backend",
+      "text": "API design with maintainable structure and traceable data logic.",
+      "points": ["C# and .NET APIs", "SQL/NoSQL data modeling", "Clean layer separation"],
+      "status": "Active: API design"
+    },
+    "cloud": {
+      "tab": "Cloud",
+      "title": "Cloud",
+      "text": "Deploying and running services in stable environments.",
+      "points": ["AWS fundamentals", "Containerization with Docker", "Configurable deployments"],
+      "status": "Active: Deployment"
+    },
+    "automation": {
+      "tab": "Automation",
+      "title": "Automation",
+      "text": "Automating recurring tasks efficiently and reliably.",
+      "points": ["PowerShell scripts", "Power Automate flows", "Logging and triggers"],
+      "status": "Active: Workflows"
+    }
+  },
+  "about": {
+    "kicker": "About",
+    "title": "Personal Profile",
+    "cardTitle": "Hi, I am Aleksandar",
+    "description": "I attend IMS with a focus on application development and enjoy working on projects with structured architecture, clear APIs, and clean front-end implementation. Teamwork, responsibility, and continuous improvement are important to me."
+  },
+  "career": {
+    "kicker": "Journey",
+    "title": "Path and Learning Environment",
+    "subline": "My current path combines school, computer science, and practical experience in application development.",
+    "items": {
+      "hackathon": {
+        "type": "Event",
+        "title": "Baden hackt",
+        "period": "2026",
+        "description": "Participation in the \"Baden hackt\" hackathon with a focus on teamwork, ideation, and fast technical implementation."
+      },
+      "ims": {
+        "type": "Education",
+        "title": "Alte Kantonsschule Aarau & Berufsbildung Baden",
+        "period": "2024 - present",
+        "description": "Computer Science Middle School (IMS), specialization in application development. I am currently deepening my academic foundations and connecting them with practical software development."
+      },
+      "school": {
+        "type": "School",
+        "title": "Bezirksschule Buchs AG",
+        "period": "2021 - 2024",
+        "description": "This is where I built my academic foundation and further developed my interest in computer science, technology, and structured learning."
+      }
+    }
+  },
+  "stats": {
+    "projects": "Projects",
+    "certificates": "Certificates",
+    "years": "Years coding"
+  },
+  "tech": {
+    "kicker": "Tech Stack",
+    "title": "Technologies I have already used",
+    "subline": "Hover over a logo to see its name."
+  },
+  "portfolio": {
+    "kicker": "Portfolio",
+    "title": "Projects and Certificates",
+    "subline": "Two ongoing projects are already listed. Certificates will be added later.",
+    "tabs": {
+      "projects": "Projects",
+      "certificates": "Certificates"
+    },
+    "detailsButton": "Show details",
+    "empty": {
+      "projects": { "title": "Projects: No content yet" },
+      "certificates": { "title": "Certificates: No content yet" },
+      "description": "Data with real screenshots and descriptions will be added tomorrow.",
+      "previewButton": "Open detail preview",
+      "modalDescription": "The detail/zoom scaffold is active and ready for real data.",
+      "modalMeta": ["Title", "Short description", "Image/screenshot", "Technologies or proof", "External link (optional)"]
+    }
+  },
+  "contact": {
+    "kicker": "Contact",
+    "title": "Let us work together",
+    "description": "I look forward to hearing from you for internships, collaboration, or project ideas.",
+    "phoneLabel": "Phone",
+    "mailLabel": "Email",
+    "schoolMailLabel": "School email"
+  },
+  "modal": {
+    "close": "Close",
+    "title": "Detail view",
+    "projectKicker": "Project status",
+    "certificateKicker": "Certificate"
+  },
+  "portfolioDownloadButton": "Download PDF",
+  "footer": {
+    "rights": "All rights reserved."
+  }
+}

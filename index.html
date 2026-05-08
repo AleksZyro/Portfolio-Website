@@ -1,0 +1,268 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio von Aleksandar Nikolic - Applikationsentwicklung, Projekte und Tech-Stack.">
+  <title>Aleksandar Nikolic | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content" data-i18n="skip.content">Zum Inhalt springen</a>
+
+  <header class="site-header" id="top">
+    <nav class="navbar container" aria-label="Hauptnavigation">
+      <a class="brand" href="#home" aria-label="Startseite">
+        <span class="brand-latin">Aleksandar <em>Nikolic</em></span>
+        <span class="brand-cyrillic" aria-hidden="true">Александар Николић</span>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-list" id="nav-list">
+        <li><a href="#home" data-i18n="nav.home">Start</a></li>
+        <li><a href="#about" data-i18n="nav.about">Über mich</a></li>
+        <li><a href="#career" data-i18n="nav.career">Werdegang</a></li>
+        <li><a href="#tech-stack" data-i18n="nav.tech">Tech-Stack</a></li>
+        <li><a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Kontakt</a></li>
+      </ul>
+
+      <div class="language-switch" aria-label="Sprache wechseln">
+        <button type="button" class="lang-btn is-active" data-lang="de">DE</button>
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="fr">FR</button>
+        <button type="button" class="lang-btn" data-lang="sr">SR</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero section" id="home" aria-labelledby="hero-title">
+      <div class="bg-glow bg-glow-left" aria-hidden="true"></div>
+      <div class="bg-glow bg-glow-right" aria-hidden="true"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="kicker" data-i18n="hero.kicker">Portfolio Applikationsentwicklung</p>
+          <h1 id="hero-title">Aleksandar <span>Nikolic</span></h1>
+          <p data-i18n="hero.description">
+            Ich entwickle saubere, wartbare Softwarelösungen für Web, APIs, Daten und Automatisierung.
+            Fokus auf robuste Architektur, Teamarbeit und klare User-Flows.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#portfolio" data-i18n="hero.ctaPortfolio">Portfolio ansehen</a>
+            <a class="btn btn-secondary" href="#contact" data-i18n="hero.ctaContact">Kontakt</a>
+            <a class="btn btn-secondary" href="mailto:aleksandar.nikolic@stud.altekanti.ch" data-i18n="hero.ctaEmail">E-Mail</a>
+          </div>
+        </div>
+
+        <aside class="hero-interactive reveal" aria-labelledby="focus-switcher-title">
+          <h2 id="focus-switcher-title" class="mini-title" data-i18n="focus.title">Aktiver Fokus</h2>
+          <p class="mini-subline" data-i18n="focus.subline">Klicke auf einen Bereich, um den aktuellen Entwicklungsfokus zu sehen.</p>
+
+          <div class="focus-tabs" role="tablist" aria-label="Fokusauswahl">
+            <button type="button" class="focus-tab is-active" data-focus="web" role="tab" aria-selected="true" data-i18n="focus.web.tab">Web</button>
+            <button type="button" class="focus-tab" data-focus="backend" role="tab" aria-selected="false" data-i18n="focus.backend.tab">Backend</button>
+            <button type="button" class="focus-tab" data-focus="cloud" role="tab" aria-selected="false" data-i18n="focus.cloud.tab">Cloud</button>
+            <button type="button" class="focus-tab" data-focus="automation" role="tab" aria-selected="false" data-i18n="focus.automation.tab">Automatisierung</button>
+          </div>
+
+          <div class="focus-panel" id="focus-panel" aria-live="polite">
+            <h3 id="focus-title">Web</h3>
+            <p id="focus-text"></p>
+            <ul id="focus-list"></ul>
+            <span class="live-status"><span class="dot" aria-hidden="true"></span><span id="focus-status"></span></span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="about section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker" data-i18n="about.kicker">Über mich</p>
+          <h2 id="about-title" data-i18n="about.title">Persönliches Profil</h2>
+        </div>
+
+        <div class="about-grid reveal">
+          <article class="about-card">
+            <h3 data-i18n="about.cardTitle">Hallo, ich bin Aleksandar</h3>
+            <p data-i18n="about.description">
+              Ich besuche die IMS mit Schwerpunkt Applikationsentwicklung und arbeite gerne an
+              Projekten mit strukturierter Architektur, nachvollziehbaren APIs und sauberem Frontend.
+              Mir sind Teamfähigkeit, Verantwortung und stetige Verbesserung wichtig.
+            </p>
+          </article>
+
+          <aside class="profile-card" aria-label="Profil und Kennzahlen">
+            <figure class="profile-photo-wrap">
+              <img src="assets/profile-temp.jpeg" alt="Temporäres Profilfoto von Aleksandar Nikolic" class="profile-photo">
+            </figure>
+
+            <div class="stats-grid">
+              <article class="stat-box">
+                <strong id="projects-count"></strong>
+                <span data-i18n="stats.projects">Projekte</span>
+              </article>
+              <article class="stat-box">
+                <strong id="certificates-count"></strong>
+                <span data-i18n="stats.certificates">Zertifikate</span>
+              </article>
+              <article class="stat-box">
+                <strong id="years-count"></strong>
+                <span data-i18n="stats.years">Jahre Coding</span>
+              </article>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="career section" id="career" aria-labelledby="career-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker" data-i18n="career.kicker">Werdegang</p>
+          <h2 id="career-title" data-i18n="career.title">Weg und Lernumfeld</h2>
+          <p class="section-subline" data-i18n="career.subline">Mein aktueller Weg verbindet Schule, Informatik und praktische Erfahrungen in der Applikationsentwicklung.</p>
+        </div>
+
+        <div class="career-timeline reveal">
+          <article class="career-item">
+            <span class="career-dot" aria-hidden="true"></span>
+            <div class="career-card">
+              <div class="career-card-head">
+                <div>
+                  <p class="career-type" data-i18n="career.items.hackathon.type">Event</p>
+                  <h3 data-i18n="career.items.hackathon.title">Baden hackt</h3>
+                </div>
+                <span class="career-badge" data-i18n="career.items.hackathon.period">2026</span>
+              </div>
+              <p data-i18n="career.items.hackathon.description">Teilnahme am Hackathon "Baden hackt" mit Fokus auf Teamarbeit, Ideenfindung und schneller technischer Umsetzung.</p>
+            </div>
+          </article>
+
+          <article class="career-item">
+            <span class="career-dot" aria-hidden="true"></span>
+            <div class="career-card">
+              <div class="career-card-head">
+                <div>
+                  <p class="career-type" data-i18n="career.items.ims.type">Ausbildung</p>
+                  <h3 data-i18n="career.items.ims.title">Alte Kantonsschule Aarau &amp; Berufsbildung Baden</h3>
+                </div>
+                <span class="career-badge" data-i18n="career.items.ims.period">2024 - heute</span>
+              </div>
+              <p data-i18n="career.items.ims.description">Informatikmittelschule (IMS), Fachrichtung Applikationsentwicklung. Aktuell vertiefe ich schulische Grundlagen und verbinde sie mit praktischer Softwareentwicklung.</p>
+            </div>
+          </article>
+
+          <article class="career-item">
+            <span class="career-dot" aria-hidden="true"></span>
+            <div class="career-card">
+              <div class="career-card-head">
+                <div>
+                  <p class="career-type" data-i18n="career.items.school.type">Schule</p>
+                  <h3 data-i18n="career.items.school.title">Bezirksschule Buchs AG</h3>
+                </div>
+                <span class="career-badge" data-i18n="career.items.school.period">2021 - 2024</span>
+              </div>
+              <p data-i18n="career.items.school.description">Hier habe ich meine schulische Grundlage aufgebaut und mein Interesse an Informatik, Technik und strukturiertem Lernen weiterentwickelt.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="tech section" id="tech-stack" aria-labelledby="tech-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker" data-i18n="tech.kicker">Tech-Stack</p>
+          <h2 id="tech-title" data-i18n="tech.title">Technologien, die ich bereits genutzt habe</h2>
+          <p class="section-subline" data-i18n="tech.subline">Fahre über ein Logo, um den Namen zu sehen.</p>
+        </div>
+
+        <div class="tech-grid reveal" id="tech-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="portfolio section" id="portfolio" aria-labelledby="portfolio-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker" data-i18n="portfolio.kicker">Portfolio</p>
+          <h2 id="portfolio-title" data-i18n="portfolio.title">Projekte und Zertifikate</h2>
+          <p class="section-subline" data-i18n="portfolio.subline">Zwei laufende Projekte sind bereits hinterlegt. Zertifikate folgen später.</p>
+        </div>
+
+        <div class="portfolio-tabs reveal" role="tablist" aria-label="Portfolio Kategorien">
+          <button type="button" class="tab is-active" data-tab="projects" role="tab" aria-selected="true" data-i18n="portfolio.tabs.projects">Projekte</button>
+          <button type="button" class="tab" data-tab="certificates" role="tab" aria-selected="false" data-i18n="portfolio.tabs.certificates">Zertifikate</button>
+        </div>
+
+        <div class="tab-panel is-active reveal" id="panel-projects" aria-label="Projektliste">
+          <div class="cards-grid" id="projects-grid"></div>
+        </div>
+
+        <div class="tab-panel reveal" id="panel-certificates" aria-label="Zertifikatsliste">
+          <div class="cards-grid" id="certificates-grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-wrap reveal">
+        <div>
+          <p class="kicker" data-i18n="contact.kicker">Kontakt</p>
+          <h2 id="contact-title" data-i18n="contact.title">Lass uns zusammenarbeiten</h2>
+          <p data-i18n="contact.description">Für Praktikum, Zusammenarbeit oder Projektideen freue ich mich auf deine Nachricht.</p>
+        </div>
+
+        <div class="contact-links">
+          <a href="tel:+41765205730"><span data-i18n="contact.phoneLabel">Telefon</span>: 076 520 57 30</a>
+          <a href="mailto:aleksandar.nikolic@stud.altekanti.ch"><span data-i18n="contact.mailLabel">E-Mail</span>: aleksandar.nikolic@stud.altekanti.ch</a>
+          <a href="mailto:a.nikolic.inif24@bbbaden.ch"><span data-i18n="contact.schoolMailLabel">Schul-Mail</span>: a.nikolic.inif24@bbbaden.ch</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="detail-modal" class="detail-modal" aria-labelledby="modal-title">
+    <article class="modal-card" id="modal-card">
+      <div class="modal-head">
+        <div>
+          <p class="modal-kicker">Projektstatus</p>
+          <h3 id="modal-title" data-i18n="modal.title">Detailansicht</h3>
+        </div>
+        <div class="modal-actions">
+          <a class="modal-download" id="modal-download" href="#" download hidden data-i18n="portfolioDownloadButton">Download PDF</a>
+          <button type="button" class="modal-close" id="modal-close" aria-label="Detailansicht schliessen" title="Schliessen">×</button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-preview">
+          <iframe id="modal-file-viewer" class="modal-file-viewer" title="Dokumentvorschau" hidden></iframe>
+          <span class="modal-preview-label">Vorschau folgt</span>
+          <span class="modal-preview-title" id="modal-preview-title">Projektvorschau</span>
+          <span class="modal-preview-subtitle" id="modal-preview-subtitle">Visual folgt</span>
+          <span class="project-status-chip">In Arbeit</span>
+        </div>
+        <div id="modal-description" class="modal-description"></div>
+        <ul id="modal-meta"></ul>
+      </div>
+    </article>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Aleksandar Nikolic - <span data-i18n="footer.rights">Alle Rechte vorbehalten.</span></p>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

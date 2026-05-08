@@ -1,0 +1,127 @@
+﻿{
+  "skip": { "content": "Preskoci na sadrzaj" },
+  "nav": {
+    "home": "Pocetna",
+    "about": "O meni",
+    "career": "Put",
+    "tech": "Tech stack",
+    "portfolio": "Portfolio",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "kicker": "Portfolio aplikativnog razvoja",
+    "description": "Pravim cista i odrziva softverska resenja za web, API-je, podatke i automatizaciju. Fokus mi je na stabilnoj arhitekturi, timskom radu i jasnom korisnickom toku.",
+    "ctaPortfolio": "Pogledaj portfolio",
+    "ctaContact": "Kontakt",
+    "ctaEmail": "E-mail"
+  },
+  "focus": {
+    "title": "Trenutni fokus",
+    "subline": "Klikni na oblast da vidis moj trenutni fokus razvoja.",
+    "web": {
+      "tab": "Web",
+      "title": "Web",
+      "text": "Responzivni interfejsi sa jasnim UX-om i semantickim markup-om.",
+      "points": ["HTML/CSS arhitektura", "Interaktivni JavaScript tokovi", "Mobile-first pristup"],
+      "status": "Aktivno: UI/UX"
+    },
+    "backend": {
+      "tab": "Backend",
+      "title": "Backend",
+      "text": "Dizajn API-ja sa odrzivom strukturom i jasnom logikom podataka.",
+      "points": ["C# i .NET API-ji", "SQL/NoSQL modelovanje", "Cisto razdvajanje slojeva"],
+      "status": "Aktivno: API dizajn"
+    },
+    "cloud": {
+      "tab": "Cloud",
+      "title": "Cloud",
+      "text": "Deploy i rad servisa u stabilnim okruzenjima.",
+      "points": ["AWS osnove", "Kontejnerizacija uz Docker", "Podesivi deployment-i"],
+      "status": "Aktivno: Deployment"
+    },
+    "automation": {
+      "tab": "Automatizacija",
+      "title": "Automatizacija",
+      "text": "Efikasna automatizacija ponavljajucih zadataka.",
+      "points": ["PowerShell skripte", "Power Automate flow-ovi", "Logovanje i trigger-i"],
+      "status": "Aktivno: Workflow"
+    }
+  },
+  "about": {
+    "kicker": "O meni",
+    "title": "Licni profil",
+    "cardTitle": "Zdravo, ja sam Aleksandar",
+    "description": "Pohadjam IMS sa fokusom na razvoj aplikacija i volim projekte sa struktuiranom arhitekturom, jasnim API-jima i cistim frontend-om. Timski rad, odgovornost i stalno usavrsavanje su mi veoma vazni."
+  },
+  "career": {
+    "kicker": "Put",
+    "title": "Put i okruzenje za ucenje",
+    "subline": "Moj trenutni put povezuje skolu, informatiku i prakticno iskustvo u razvoju aplikacija.",
+    "items": {
+      "hackathon": {
+        "type": "Dogadjaj",
+        "title": "Baden hackt",
+        "period": "2026",
+        "description": "Ucesce na hakatonu \"Baden hackt\" sa fokusom na timski rad, razvoj ideja i brzu tehnicku realizaciju."
+      },
+      "ims": {
+        "type": "Obrazovanje",
+        "title": "Alte Kantonsschule Aarau & Berufsbildung Baden",
+        "period": "2024 - danas",
+        "description": "Informaticka srednja skola (IMS), smjer razvoj aplikacija. Trenutno produbljujem skolske osnove i povezujem ih sa prakticnim razvojem softvera."
+      },
+      "school": {
+        "type": "Skola",
+        "title": "Bezirksschule Buchs AG",
+        "period": "2021 - 2024",
+        "description": "Tu sam izgradio svoju skolsku osnovu i dodatno razvio interesovanje za informatiku, tehniku i strukturisano ucenje."
+      }
+    }
+  },
+  "stats": {
+    "projects": "Projekti",
+    "certificates": "Sertifikati",
+    "years": "Godine kodiranja"
+  },
+  "tech": {
+    "kicker": "Tech stack",
+    "title": "Tehnologije koje sam vec koristio",
+    "subline": "Predji preko logotipa da vidis naziv."
+  },
+  "portfolio": {
+    "kicker": "Portfolio",
+    "title": "Projekti i sertifikati",
+    "subline": "Dva aktuelna projekta su vec dodata. Sertifikati ce biti dodati kasnije.",
+    "tabs": {
+      "projects": "Projekti",
+      "certificates": "Sertifikati"
+    },
+    "detailsButton": "Prikazi detalje",
+    "empty": {
+      "projects": { "title": "Projekti: Jos nema sadrzaja" },
+      "certificates": { "title": "Sertifikati: Jos nema sadrzaja" },
+      "description": "Podaci sa pravim screenshot-ovima i opisima bice dodati sutra.",
+      "previewButton": "Otvori pregled detalja",
+      "modalDescription": "Scaffold za detalje/zoom je aktivan i spreman za stvarne podatke.",
+      "modalMeta": ["Naslov", "Kratak opis", "Slika/screenshot", "Tehnologije ili dokaz", "Eksterni link (opciono)"]
+    }
+  },
+  "contact": {
+    "kicker": "Kontakt",
+    "title": "Hajde da saradjujemo",
+    "description": "Radujem se poruci za praksu, saradnju ili ideje za projekat.",
+    "phoneLabel": "Telefon",
+    "mailLabel": "E-mail",
+    "schoolMailLabel": "Skolski e-mail"
+  },
+  "modal": {
+    "close": "Zatvori",
+    "title": "Detaljni prikaz",
+    "projectKicker": "Status projekta",
+    "certificateKicker": "Sertifikat"
+  },
+  "portfolioDownloadButton": "Preuzmi PDF",
+  "footer": {
+    "rights": "Sva prava zadrzana."
+  }
+}
