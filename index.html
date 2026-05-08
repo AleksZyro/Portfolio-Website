@@ -288,6 +288,22 @@
     </div>
   </footer>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('a[href="#career"]').forEach((link) => {
+        link.addEventListener('click', (event) => {
+          event.preventDefault();
+          const careerSection = document.getElementById('career');
+          if (!careerSection) return;
+          window.scrollTo({
+            top: careerSection.offsetTop + 70,
+            behavior: 'smooth'
+          });
+          history.replaceState(null, '', '#career');
+        });
+      });
+    });
+  </script>
   <script src="app.js" defer></script>
 </body>
 </html>
