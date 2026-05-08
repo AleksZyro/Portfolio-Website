@@ -38,7 +38,10 @@
     }
   ];
 
-  const knownProjectLinks = new Map(githubProjects.map((project) => [project.title, project.url]));
+  const knownProjectLinks = new Map([
+    ['SortLab', 'https://github.com/Aleksandros2/sortlab'],
+    ...githubProjects.map((project) => [project.title, project.url])
+  ]);
 
   const getText = (key, fallback) => {
     try {
