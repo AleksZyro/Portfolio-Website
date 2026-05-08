@@ -10,13 +10,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
-    #projects-grid .item-card:first-child .project-status-chip {
+    #projects-grid .item-card:first-child .project-status-chip,
+    .modal-card.has-project-image .project-status-chip {
       border-color: rgba(52, 211, 153, 0.42);
       background: rgba(8, 44, 31, 0.92);
       color: #7dffbd;
     }
 
-    #projects-grid .item-card:first-child .project-status-chip::before {
+    #projects-grid .item-card:first-child .project-status-chip::before,
+    .modal-card.has-project-image .project-status-chip::before {
       content: "✓";
       display: inline-grid;
       place-items: center;
