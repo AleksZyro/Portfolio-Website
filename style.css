@@ -537,6 +537,16 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.8rem, 
   overflow: hidden;
   padding: 18px;
 }
+.modal-card.has-project-image .modal-preview {
+  background:
+    linear-gradient(180deg, rgba(10, 8, 26, 0.08), rgba(10, 8, 26, 0.18)),
+    var(--modal-preview-image) center / cover no-repeat;
+}
+.modal-card.has-project-image .modal-preview-label,
+.modal-card.has-project-image .modal-preview-title,
+.modal-card.has-project-image .modal-preview-subtitle {
+  display: none;
+}
 .modal-card.is-document .modal-preview {
   min-height: min(72vh, 860px);
 }

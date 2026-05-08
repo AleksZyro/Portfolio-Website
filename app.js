@@ -2,6 +2,15 @@
   codingSinceYear: 2025,
   projects: [
     {
+      title: 'SortLab',
+      cardDescription: 'Interaktiver Visualizer für Sortieralgorithmen mit Live-Steuerung, Balkenansicht, Statistik und Lernbereich.',
+      detailDescription: 'SortLab\n\nSortLab ist ein interaktiver Visualizer für Sortieralgorithmen. Nutzerinnen und Nutzer sehen Schritt für Schritt, wie ein Array sortiert wird, können die Geschwindigkeit live anpassen und verschiedene Verfahren direkt miteinander vergleichen.\n\nIm Projekt enthalten sind aktuell fünf Algorithmen: Bubble Sort, Selection Sort, Insertion Sort, Quick Sort und Heap Sort. Zusätzlich zeigt das Dashboard Vergleiche, Swaps, Schritte und die Laufzeit in Millisekunden an.\n\nDas Ziel des Projekts war es, Informatik, Visualisierung und verständliche Lernhilfe in einer modernen Oberfläche zusammenzubringen.',
+      meta: ['Status: Fertig', 'Tech: React, Vite, JavaScript, CSS', 'Fokus: Algorithmen und Visualisierung'],
+      previewImage: 'assets/project-previews/sortlab-preview.svg',
+      previewLabel: 'Projektvorschau',
+      previewBadge: ''
+    },
+    {
       title: 'Heimatschutz Aargau - interne Webanwendung',
       cardDescription: 'Interne Webanwendung zur Sammlung, Darstellung und Pruefung von Baugesuchen mit AGIS-Schutzdaten.',
       detailDescription: 'Heimatschutz Aargau - interne Webanwendung\n\nGemeinsam mit zwei Mitschülern entwickle ich aktuell eine interne Webanwendung für den Heimatschutz Aargau. Die Anwendung soll Baugesuche aus offiziellen Gemeindequellen sammeln, übersichtlich darstellen und mit amtlichen AGIS-Schutzdaten abgleichen. Ziel ist es, relevante Fälle schneller zu erkennen und die interne Team-Bearbeitung mit Karte, Notizen und Statusübersicht zu unterstützen.\n\nDas Projekt befindet sich noch in Entwicklung. Da weitere Teams und externe Stellen beteiligt sind, kann die Anwendung momentan noch nicht öffentlich gezeigt oder verlinkt werden.',
@@ -191,7 +200,7 @@ const embeddedDictionaries = {
     portfolio: {
       kicker: 'Portfolio',
       title: 'Projekte und Zertifikate',
-      subline: 'Zwei laufende Projekte sind bereits hinterlegt. Zertifikate folgen später.',
+      subline: 'Drei Projekte und drei Zertifikate sind bereits hinterlegt.',
       tabs: { projects: 'Projekte', certificates: 'Zertifikate' },
       detailsButton: 'Details anzeigen',
       empty: {
@@ -297,7 +306,7 @@ const embeddedDictionaries = {
     portfolio: {
       kicker: 'Portfolio',
       title: 'Projects and Certificates',
-      subline: 'Two ongoing projects are already listed. Certificates will be added later.',
+      subline: 'Three projects and three certificates are already listed.',
       tabs: { projects: 'Projects', certificates: 'Certificates' },
       detailsButton: 'Show details',
       empty: {
@@ -403,7 +412,7 @@ const embeddedDictionaries = {
     portfolio: {
       kicker: 'Portfolio',
       title: 'Projets et certificats',
-      subline: 'Deux projets en cours sont deja disponibles. Les certificats seront ajoutes plus tard.',
+      subline: 'Trois projets et trois certificats sont deja disponibles.',
       tabs: { projects: 'Projets', certificates: 'Certificats' },
       detailsButton: 'Afficher les details',
       empty: {
@@ -509,7 +518,7 @@ const embeddedDictionaries = {
     portfolio: {
       kicker: 'Portfolio',
       title: 'Projekti i sertifikati',
-      subline: 'Dva aktuelna projekta su vec dodata. Sertifikati ce biti dodati kasnije.',
+      subline: 'Tri projekta i tri sertifikata su vec dodati.',
       tabs: { projects: 'Projekti', certificates: 'Sertifikati' },
       detailsButton: 'Prikazi detalje',
       empty: {
@@ -663,7 +672,8 @@ const createCard = (item) => {
 
   const statusChip = document.createElement('span');
   statusChip.className = 'project-status-chip';
-  statusChip.textContent = item.previewBadge || 'In Arbeit';
+  statusChip.hidden = !item.previewBadge;
+  statusChip.textContent = item.previewBadge || '';
 
   preview.append(previewLabel, previewTitle, statusChip);
 
@@ -687,6 +697,9 @@ const createCard = (item) => {
   }
   if (item.previewBadge) {
     detailButton.dataset.previewBadge = item.previewBadge;
+  }
+  if (item.previewImage) {
+    detailButton.dataset.previewImage = item.previewImage;
   }
 
   card.append(preview, title, description, detailButton);
@@ -879,10 +892,11 @@ const setModalDescription = (description) => {
     });
 };
 
-const configureModalFile = ({ file, previewLabel, previewBadge }) => {
+const configureModalFile = ({ file, previewLabel, previewBadge, previewImage }) => {
   const hasFile = Boolean(file);
 
   modalCard?.classList.toggle('is-document', hasFile);
+  modalCard?.classList.toggle('has-project-image', !hasFile && Boolean(previewImage));
 
   if (modalKicker) {
     modalKicker.textContent = hasFile
@@ -911,8 +925,14 @@ const configureModalFile = ({ file, previewLabel, previewBadge }) => {
   }
 
   if (modalPreviewBadge) {
-    modalPreviewBadge.hidden = false;
-    modalPreviewBadge.textContent = previewBadge || 'In Arbeit';
+    modalPreviewBadge.hidden = !previewBadge;
+    modalPreviewBadge.textContent = previewBadge || '';
+  }
+
+  if (!hasFile && previewImage) {
+    modalCard?.style.setProperty('--modal-preview-image', `url("${previewImage}")`);
+  } else {
+    modalCard?.style.removeProperty('--modal-preview-image');
   }
 
   if (modalDownload) {
@@ -971,7 +991,8 @@ document.addEventListener('click', (event) => {
     {
       file: trigger.dataset.file || '',
       previewLabel: trigger.dataset.previewLabel || '',
-      previewBadge: trigger.dataset.previewBadge || ''
+      previewBadge: trigger.dataset.previewBadge || '',
+      previewImage: trigger.dataset.previewImage || ''
     }
   );
 });

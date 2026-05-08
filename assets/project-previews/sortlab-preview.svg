@@ -1,0 +1,90 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="40" x2="1160" y2="680" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#101A36"/>
+      <stop offset="1" stop-color="#0B1127"/>
+    </linearGradient>
+    <linearGradient id="card" x1="210" y1="160" x2="1110" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#101631"/>
+      <stop offset="1" stop-color="#0A1126"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#8EC1FF"/>
+      <stop offset="1" stop-color="#4C67FF"/>
+    </linearGradient>
+    <filter id="glow" x="-60" y="-60" width="1400" height="840" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="720" rx="34" fill="url(#bg)"/>
+  <circle cx="160" cy="88" r="180" fill="#57B8FF" fill-opacity="0.12" filter="url(#glow)"/>
+  <circle cx="1120" cy="120" r="180" fill="#74F2C7" fill-opacity="0.08" filter="url(#glow)"/>
+
+  <text x="86" y="106" fill="#F4F7FF" font-size="52" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Balkenvisualisierung</text>
+  <text x="86" y="160" fill="#9CB0E2" font-size="28" font-family="Segoe UI, Arial, sans-serif">Verglichene, getauschte und bereits sortierte Werte werden farblich markiert.</text>
+
+  <g transform="translate(86 208)">
+    <circle cx="10" cy="12" r="10" fill="#6A8AFF"/>
+    <text x="34" y="20" fill="#A7B8E7" font-size="22" font-family="Segoe UI, Arial, sans-serif">Normal</text>
+    <circle cx="170" cy="12" r="10" fill="#FFC35A"/>
+    <text x="194" y="20" fill="#A7B8E7" font-size="22" font-family="Segoe UI, Arial, sans-serif">Vergleich</text>
+    <circle cx="372" cy="12" r="10" fill="#FF7BAC"/>
+    <text x="396" y="20" fill="#A7B8E7" font-size="22" font-family="Segoe UI, Arial, sans-serif">Tausch</text>
+    <circle cx="540" cy="12" r="10" fill="#74F2C7"/>
+    <text x="564" y="20" fill="#A7B8E7" font-size="22" font-family="Segoe UI, Arial, sans-serif">Sortiert</text>
+  </g>
+
+  <rect x="70" y="244" width="1140" height="408" rx="28" fill="url(#card)" stroke="#253863" stroke-width="2"/>
+
+  <g transform="translate(110 300)">
+    <g fill="#8EB8FF" font-size="24" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">
+      <text x="20" y="238">22</text>
+      <text x="70" y="204">39</text>
+      <text x="120" y="208">38</text>
+      <text x="170" y="204">39</text>
+      <text x="220" y="126">83</text>
+      <text x="270" y="244">32</text>
+      <text x="320" y="166">56</text>
+      <text x="370" y="214">36</text>
+      <text x="420" y="196">42</text>
+      <text x="470" y="204">39</text>
+      <text x="520" y="238">25</text>
+      <text x="570" y="208">41</text>
+      <text x="620" y="86">88</text>
+      <text x="670" y="160">53</text>
+      <text x="720" y="178">47</text>
+      <text x="770" y="78">93</text>
+      <text x="820" y="156">61</text>
+      <text x="870" y="174">45</text>
+      <text x="920" y="74">94</text>
+      <text x="970" y="206">40</text>
+    </g>
+
+    <g>
+      <rect x="0" y="250" width="24" height="180" rx="12" fill="url(#bar)"/>
+      <rect x="50" y="172" width="24" height="258" rx="12" fill="url(#bar)"/>
+      <rect x="100" y="176" width="24" height="254" rx="12" fill="url(#bar)"/>
+      <rect x="150" y="172" width="24" height="258" rx="12" fill="url(#bar)"/>
+      <rect x="200" y="94" width="24" height="336" rx="12" fill="url(#bar)"/>
+      <rect x="250" y="212" width="24" height="218" rx="12" fill="url(#bar)"/>
+      <rect x="300" y="134" width="24" height="296" rx="12" fill="url(#bar)"/>
+      <rect x="350" y="182" width="24" height="248" rx="12" fill="url(#bar)"/>
+      <rect x="400" y="164" width="24" height="266" rx="12" fill="url(#bar)"/>
+      <rect x="450" y="172" width="24" height="258" rx="12" fill="url(#bar)"/>
+      <rect x="500" y="206" width="24" height="224" rx="12" fill="url(#bar)"/>
+      <rect x="550" y="176" width="24" height="254" rx="12" fill="url(#bar)"/>
+      <rect x="600" y="56" width="24" height="374" rx="12" fill="url(#bar)"/>
+      <rect x="650" y="130" width="24" height="300" rx="12" fill="url(#bar)"/>
+      <rect x="700" y="148" width="24" height="282" rx="12" fill="url(#bar)"/>
+      <rect x="750" y="48" width="24" height="382" rx="12" fill="url(#bar)"/>
+      <rect x="800" y="126" width="24" height="304" rx="12" fill="url(#bar)"/>
+      <rect x="850" y="144" width="24" height="286" rx="12" fill="url(#bar)"/>
+      <rect x="900" y="44" width="24" height="386" rx="12" fill="url(#bar)"/>
+      <rect x="950" y="176" width="24" height="254" rx="12" fill="url(#bar)"/>
+    </g>
+  </g>
+
+  <text x="992" y="114" fill="#FFFFFF" font-size="38" font-family="Segoe UI, Arial, sans-serif" font-weight="700" text-anchor="end">SortLab</text>
+  <text x="992" y="154" fill="#A5B6E7" font-size="24" font-family="Segoe UI, Arial, sans-serif" text-anchor="end">Visualizer für Sortieralgorithmen</text>
+</svg>

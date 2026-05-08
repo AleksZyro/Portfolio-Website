@@ -91,7 +91,7 @@
   "portfolio": {
     "kicker": "Portfolio",
     "title": "Projets et certificats",
-    "subline": "Deux projets en cours sont deja disponibles. Les certificats seront ajoutes plus tard.",
+    "subline": "Trois projets et trois certificats sont deja disponibles.",
     "tabs": {
       "projects": "Projets",
       "certificates": "Certificats"
