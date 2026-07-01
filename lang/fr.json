@@ -1,127 +1,127 @@
-﻿{
+{
   "skip": { "content": "Aller au contenu" },
   "nav": {
     "home": "Accueil",
-    "about": "A propos",
+    "about": "À propos",
     "career": "Parcours",
-    "tech": "Stack tech",
+    "tech": "Stack technique",
     "portfolio": "Portfolio",
     "contact": "Contact"
   },
   "hero": {
-    "kicker": "Portfolio developpement applicatif",
-    "description": "Je cree des solutions logicielles propres et maintenables pour le web, les API, les donnees et l'automatisation. Mon focus: architecture robuste, travail d'equipe et parcours utilisateur clairs.",
+    "kicker": "Portfolio de développement applicatif",
+    "description": "Je développe mes propres applications dans les domaines du web, des API, des données et de l’automatisation, tout en approfondissant l’architecture structurée, les tests et les interfaces utilisateur compréhensibles.",
     "ctaPortfolio": "Voir le portfolio",
     "ctaContact": "Contact",
     "ctaEmail": "E-mail"
   },
   "focus": {
     "title": "Focus actuel",
-    "subline": "Clique sur un domaine pour voir mon focus de developpement actuel.",
+    "subline": "Clique sur un domaine pour voir mon focus de développement actuel.",
     "web": {
       "tab": "Web",
       "title": "Web",
-      "text": "Interfaces responsives avec UX claire et balisage semantique.",
+      "text": "Interfaces responsives avec une UX claire et un balisage sémantique.",
       "points": ["Architecture HTML/CSS", "Flux JavaScript interactifs", "Approche mobile-first"],
-      "status": "Actif: UI/UX"
+      "status": "Actif : UI/UX"
     },
     "backend": {
       "tab": "Backend",
       "title": "Backend",
-      "text": "Conception d'API avec structure maintenable et logique de donnees tracable.",
-      "points": ["API C# et .NET", "Modelisation SQL/NoSQL", "Separation claire des couches"],
-      "status": "Actif: Conception API"
+      "text": "Conception d’API avec une structure maintenable et une logique de données traçable.",
+      "points": ["API C# et .NET", "Modélisation SQL/NoSQL", "Séparation claire des couches"],
+      "status": "Actif : conception d’API"
     },
     "cloud": {
       "tab": "Cloud",
       "title": "Cloud",
-      "text": "Deploiement et exploitation de services dans des environnements stables.",
-      "points": ["Bases AWS", "Conteneurisation avec Docker", "Deploiements configurables"],
-      "status": "Actif: Deploiement"
+      "text": "Déploiement et exploitation de services dans des environnements stables.",
+      "points": ["Bases AWS", "Conteneurisation avec Docker", "Déploiements configurables"],
+      "status": "Actif : déploiement"
     },
     "automation": {
       "tab": "Automatisation",
       "title": "Automatisation",
-      "text": "Automatiser efficacement les taches recurrentes.",
-      "points": ["Scripts PowerShell", "Flux Power Automate", "Journalisation et declencheurs"],
-      "status": "Actif: Workflows"
+      "text": "Automatiser efficacement les tâches récurrentes.",
+      "points": ["Scripts PowerShell", "Flux Power Automate", "Journalisation et déclencheurs"],
+      "status": "Actif : workflows"
     }
   },
   "about": {
-    "kicker": "A propos",
+    "kicker": "À propos",
     "title": "Profil personnel",
-    "cardTitle": "Salut, je suis Aleksandar",
-    "description": "Je frequente l'IMS avec une specialisation en developpement applicatif et j'aime travailler sur des projets avec une architecture structuree, des API claires et un front-end propre. L'esprit d'equipe, la responsabilite et l'amelioration continue sont essentiels pour moi."
+    "cardTitle": "Bonjour, je suis Aleksandar",
+    "description": "Je fréquente l’IMS avec une spécialisation en développement applicatif et j’approfondis mes bases scolaires grâce à des projets logiciels personnels et collaboratifs. J’accorde de l’importance à des interfaces compréhensibles, à un code lisible et à l’apprentissage continu."
   },
   "career": {
     "kicker": "Parcours",
-    "title": "Parcours et cadre d apprentissage",
-    "subline": "Mon parcours actuel relie l ecole, l informatique et l experience pratique en developpement applicatif.",
+    "title": "Parcours et cadre d’apprentissage",
+    "subline": "Mon parcours actuel relie l’école, l’informatique et l’expérience pratique en développement applicatif.",
     "items": {
       "hackathon": {
-        "type": "Evenement",
+        "type": "Événement",
         "title": "Baden hackt",
         "period": "2026",
-        "description": "Participation au hackathon \"Baden hackt\" avec un accent sur le travail d equipe, l ideation et la mise en oeuvre technique rapide."
+        "description": "Participation au hackathon \"Baden hackt\" avec un accent sur le travail d’équipe, l’idéation et la mise en œuvre technique rapide."
       },
       "ims": {
         "type": "Formation",
         "title": "Alte Kantonsschule Aarau & Berufsbildung Baden",
-        "period": "2024 - aujourd hui",
-        "description": "Ecole moyenne d informatique (IMS), orientation developpement applicatif. J approfondis actuellement mes bases scolaires et les relie au developpement logiciel pratique."
+        "period": "2024 - aujourd’hui",
+        "description": "École moyenne d’informatique (IMS), orientation développement applicatif. J’approfondis actuellement mes bases scolaires et les relie au développement logiciel pratique."
       },
       "school": {
-        "type": "Ecole",
+        "type": "École",
         "title": "Bezirksschule Buchs AG",
         "period": "2021 - 2024",
-        "description": "C est la que j ai construit ma base scolaire et developpe davantage mon interet pour l informatique, la technique et l apprentissage structure."
+        "description": "C’est là que j’ai construit ma base scolaire et développé davantage mon intérêt pour l’informatique, la technique et l’apprentissage structuré."
       }
     }
   },
   "stats": {
     "projects": "Projets",
     "certificates": "Certificats",
-    "years": "Annees de code"
+    "years": "Années de code"
   },
   "tech": {
-    "kicker": "Stack tech",
-    "title": "Technologies deja utilisees",
-    "subline": "Survole un logo pour voir son nom."
+    "kicker": "Stack technique",
+    "title": "Technologies déjà utilisées",
+    "subline": "Cette liste réunit des expériences issues de projets personnels, de projets d’équipe et des cours de l’IMS ; le niveau d’approfondissement varie selon la technologie."
   },
   "portfolio": {
     "kicker": "Portfolio",
     "title": "Projets et certificats",
-    "subline": "Trois projets et trois certificats sont deja disponibles.",
+    "subline": "Cinq projets et trois certificats sont déjà disponibles.",
     "tabs": {
       "projects": "Projets",
       "certificates": "Certificats"
     },
-    "detailsButton": "Afficher les details",
+    "detailsButton": "Afficher les détails",
     "empty": {
-      "projects": { "title": "Projets: Pas encore de contenu" },
-      "certificates": { "title": "Certificats: Pas encore de contenu" },
-      "description": "Les donnees avec vraies captures et descriptions seront ajoutees demain.",
-      "previewButton": "Ouvrir l'aperçu detail",
-      "modalDescription": "Le scaffold detail/zoom est actif et pret pour des donnees reelles.",
+      "projects": { "title": "Projets : pas encore de contenu" },
+      "certificates": { "title": "Certificats : pas encore de contenu" },
+      "description": "Les données avec de vraies captures et descriptions seront ajoutées ultérieurement.",
+      "previewButton": "Ouvrir l’aperçu détaillé",
+      "modalDescription": "La structure de la vue détaillée est prête pour des données réelles.",
       "modalMeta": ["Titre", "Description courte", "Image/capture", "Technologies ou preuve", "Lien externe (optionnel)"]
     }
   },
   "contact": {
     "kicker": "Contact",
     "title": "Travaillons ensemble",
-    "description": "Je me rejouis de votre message pour un stage, une collaboration ou des idees de projet.",
-    "phoneLabel": "Telephone",
+    "description": "Je me réjouis de votre message pour un stage, une collaboration ou des idées de projet.",
+    "phoneLabel": "Téléphone",
     "mailLabel": "E-mail",
-    "schoolMailLabel": "E-mail ecole"
+    "schoolMailLabel": "E-mail scolaire"
   },
   "modal": {
     "close": "Fermer",
-    "title": "Vue detail",
+    "title": "Vue détaillée",
     "projectKicker": "Statut du projet",
     "certificateKicker": "Certificat"
   },
-  "portfolioDownloadButton": "Telecharger le PDF",
+  "portfolioDownloadButton": "Télécharger le PDF",
   "footer": {
-    "rights": "Tous droits reserves."
+    "rights": "Tous droits réservés."
   }
 }

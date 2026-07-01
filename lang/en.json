@@ -1,4 +1,4 @@
-﻿{
+{
   "skip": { "content": "Skip to content" },
   "nav": {
     "home": "Home",
@@ -10,7 +10,7 @@
   },
   "hero": {
     "kicker": "Application Development Portfolio",
-    "description": "I build clean, maintainable software solutions for web, APIs, data, and automation. My focus is robust architecture, teamwork, and clear user flows.",
+    "description": "I build my own applications in web, APIs, data, and automation while deepening my understanding of structured architecture, testing, and clear user interfaces.",
     "ctaPortfolio": "View Portfolio",
     "ctaContact": "Contact",
     "ctaEmail": "Email"
@@ -51,7 +51,7 @@
     "kicker": "About",
     "title": "Personal Profile",
     "cardTitle": "Hi, I am Aleksandar",
-    "description": "I attend IMS with a focus on application development and enjoy working on projects with structured architecture, clear APIs, and clean front-end implementation. Teamwork, responsibility, and continuous improvement are important to me."
+    "description": "I attend IMS with a focus on application development and deepen my academic foundations through personal and collaborative software projects. I value clear user interfaces, understandable code, and continuous learning."
   },
   "career": {
     "kicker": "Journey",
@@ -86,12 +86,12 @@
   "tech": {
     "kicker": "Tech Stack",
     "title": "Technologies I have already used",
-    "subline": "Hover over a logo to see its name."
+    "subline": "This overview combines experience from personal projects, team projects, and IMS coursework; the depth of experience varies by technology."
   },
   "portfolio": {
     "kicker": "Portfolio",
     "title": "Projects and Certificates",
-    "subline": "Three projects and three certificates are already listed.",
+    "subline": "Five projects and three certificates are already listed.",
     "tabs": {
       "projects": "Projects",
       "certificates": "Certificates"

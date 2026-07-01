@@ -1,4 +1,51 @@
 (() => {
+  const embeddedCopyOverrides = {
+    de: {
+      heroDescription: 'Ich entwickle eigene Anwendungen in den Bereichen Web, APIs, Daten und Automatisierung und vertiefe dabei strukturierte Architektur, Tests und verständliche Benutzeroberflächen.',
+      aboutDescription: 'Ich besuche die IMS mit Schwerpunkt Applikationsentwicklung und vertiefe schulische Grundlagen durch eigene und gemeinsame Softwareprojekte. Dabei lege ich Wert auf verständliche Benutzeroberflächen, nachvollziehbaren Code und kontinuierliches Lernen.',
+      techSubline: 'Die Erfahrungen stammen aus eigenen Projekten, Teamprojekten und dem IMS-Unterricht und sind je nach Technologie unterschiedlich vertieft.',
+      portfolioSubline: 'Fünf Projekte und drei Zertifikate sind bereits hinterlegt.'
+    },
+    en: {
+      heroDescription: 'I build my own applications in web, APIs, data, and automation while deepening my understanding of structured architecture, testing, and clear user interfaces.',
+      aboutDescription: 'I attend IMS with a focus on application development and deepen my academic foundations through personal and collaborative software projects. I value clear user interfaces, understandable code, and continuous learning.',
+      techSubline: 'This overview combines experience from personal projects, team projects, and IMS coursework; the depth of experience varies by technology.',
+      portfolioSubline: 'Five projects and three certificates are already listed.'
+    },
+    fr: {
+      heroDescription: 'Je développe mes propres applications dans les domaines du web, des API, des données et de l’automatisation, tout en approfondissant l’architecture structurée, les tests et les interfaces utilisateur compréhensibles.',
+      aboutDescription: 'Je fréquente l’IMS avec une spécialisation en développement applicatif et j’approfondis mes bases scolaires grâce à des projets logiciels personnels et collaboratifs. J’accorde de l’importance à des interfaces compréhensibles, à un code lisible et à l’apprentissage continu.',
+      techSubline: 'Cette liste réunit des expériences issues de projets personnels, de projets d’équipe et des cours de l’IMS ; le niveau d’approfondissement varie selon la technologie.',
+      portfolioSubline: 'Cinq projets et trois certificats sont déjà disponibles.'
+    },
+    sr: {
+      heroDescription: 'Razvijam sopstvene aplikacije za web, API-je, podatke i automatizaciju, dok produbljujem znanje o strukturisanoj arhitekturi, testiranju i razumljivim korisničkim interfejsima.',
+      aboutDescription: 'Pohađam IMS sa fokusom na razvoj aplikacija i produbljujem školske osnove kroz samostalne i timske softverske projekte. Važni su mi razumljivi korisnički interfejsi, pregledan kod i stalno učenje.',
+      techSubline: 'Ova lista objedinjuje iskustvo iz samostalnih projekata, timskih projekata i IMS nastave; nivo iskustva se razlikuje u zavisnosti od tehnologije.',
+      portfolioSubline: 'Pet projekata i tri sertifikata su već dodati.'
+    }
+  };
+
+  const applyEmbeddedCopyOverrides = () => {
+    try {
+      if (typeof embeddedDictionaries === 'undefined') return;
+
+      Object.entries(embeddedCopyOverrides).forEach(([languageCode, copy]) => {
+        const dictionary = embeddedDictionaries[languageCode];
+        if (!dictionary) return;
+
+        dictionary.hero.description = copy.heroDescription;
+        dictionary.about.description = copy.aboutDescription;
+        dictionary.tech.subline = copy.techSubline;
+        dictionary.portfolio.subline = copy.portfolioSubline;
+      });
+    } catch (_) {
+      // External language JSON files remain the primary source on the deployed site.
+    }
+  };
+
+  applyEmbeddedCopyOverrides();
+
   const githubProjects = [
     {
       key: 'sounddeck',

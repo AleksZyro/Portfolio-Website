@@ -26,6 +26,14 @@ Die Website zeigt nicht nur fertige Ergebnisse, sondern auch meinen Lernfortschr
 
 Interaktiver Visualizer für Sortieralgorithmen. Das Projekt zeigt, wie verschiedene Algorithmen ein Array sortieren, und visualisiert Schritte, Vergleiche, Swaps und Laufzeit.
 
+### Heimatschutz Aargau – interne Webanwendung
+
+Gemeinsames Schulprojekt zur Sammlung, Darstellung und Prüfung von Baugesuchen mit amtlichen AGIS-Schutzdaten. Das Projekt befindet sich in Entwicklung und ist derzeit nicht öffentlich verlinkt.
+
+### UMR – Useless Mobs Reworked
+
+Gemeinsames Minecraft-Mod-Projekt, das bisher wenig relevante Mobs mit neuen Funktionen und stärkerem Gameplay-Einfluss überarbeitet. Die Veröffentlichung auf CurseForge ist nach der Fertigstellung vorgesehen.
+
 ### SoundDeck
 
 Windows-Soundboard-MVP mit Python und PySide6. Nutzer können MP3-Dateien hinzufügen, Sounds abspielen, Kategorien verwenden und Audio über ausgewählte Geräte routen.
@@ -42,6 +50,8 @@ Die Website besteht hauptsächlich aus:
 index.html
 style.css
 app.js
+portfolio-project-links.js
+lang/
 assets/
 ```
 
@@ -52,6 +62,8 @@ Verwendete Technologien:
 - JavaScript
 - GitHub
 - Netlify
+
+Die dargestellten Technologie-Erfahrungen stammen aus eigenen Projekten, Teamprojekten und dem IMS-Unterricht. Der Erfahrungsumfang ist je nach Technologie unterschiedlich.
 
 ## Zielgruppe
 

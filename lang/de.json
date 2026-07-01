@@ -1,4 +1,4 @@
-﻿{
+{
   "skip": { "content": "Zum Inhalt springen" },
   "nav": {
     "home": "Start",
@@ -10,7 +10,7 @@
   },
   "hero": {
     "kicker": "Portfolio Applikationsentwicklung",
-    "description": "Ich entwickle saubere, wartbare Softwarelösungen für Web, APIs, Daten und Automatisierung. Fokus auf robuste Architektur, Teamarbeit und klare User-Flows.",
+    "description": "Ich entwickle eigene Anwendungen in den Bereichen Web, APIs, Daten und Automatisierung und vertiefe dabei strukturierte Architektur, Tests und verständliche Benutzeroberflächen.",
     "ctaPortfolio": "Portfolio ansehen",
     "ctaContact": "Kontakt",
     "ctaEmail": "E-Mail"
@@ -51,7 +51,7 @@
     "kicker": "Über mich",
     "title": "Persönliches Profil",
     "cardTitle": "Hallo, ich bin Aleksandar",
-    "description": "Ich besuche die IMS mit Schwerpunkt Applikationsentwicklung und arbeite gerne an Projekten mit strukturierter Architektur, nachvollziehbaren APIs und sauberem Frontend. Mir sind Teamfähigkeit, Verantwortung und stetige Verbesserung wichtig."
+    "description": "Ich besuche die IMS mit Schwerpunkt Applikationsentwicklung und vertiefe schulische Grundlagen durch eigene und gemeinsame Softwareprojekte. Dabei lege ich Wert auf verständliche Benutzeroberflächen, nachvollziehbaren Code und kontinuierliches Lernen."
   },
   "career": {
     "kicker": "Werdegang",
@@ -86,12 +86,12 @@
   "tech": {
     "kicker": "Tech-Stack",
     "title": "Technologien, die ich bereits genutzt habe",
-    "subline": "Fahre über ein Logo, um den Namen zu sehen."
+    "subline": "Die Erfahrungen stammen aus eigenen Projekten, Teamprojekten und dem IMS-Unterricht und sind je nach Technologie unterschiedlich vertieft."
   },
   "portfolio": {
     "kicker": "Portfolio",
     "title": "Projekte und Zertifikate",
-    "subline": "Drei Projekte und drei Zertifikate sind bereits hinterlegt.",
+    "subline": "Fünf Projekte und drei Zertifikate sind bereits hinterlegt.",
     "tabs": {
       "projects": "Projekte",
       "certificates": "Zertifikate"
