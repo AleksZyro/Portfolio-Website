@@ -95,7 +95,7 @@
       "hackathon": {
         "type": "Event",
         "title": "Baden hackt",
-        "period": "2026",
+        "period": "Participation",
         "description": "Participation in the \"Baden hackt\" hackathon with a focus on teamwork, ideation, and fast technical implementation."
       },
       "ims": {
@@ -180,7 +180,8 @@
   },
   "portfolioDownloadButton": "Download PDF",
   "footer": {
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "legalLink": "Privacy and cookies"
   },
   "github": {
     "kicker": "GitHub",
@@ -192,9 +193,17 @@
     "openSourceEmpty": "No publicly verifiable merges listed yet.",
     "openSourceText": "Once merged pull requests are available, they will be listed here with project, short description, and link."
   },
-  "interactive": {
-    "kicker": "Interactive workspace",
-    "title": "Project focus",
-    "subline": "Hover over a node to quickly read focus, stack and status."
+  "legal": {
+    "kicker": "Legal",
+    "title": "Privacy and cookies",
+    "subline": "A short note on which data this portfolio website processes.",
+    "privacyTitle": "Privacy",
+    "privacyText": "This portfolio website does not process form entries and does not use analytics or advertising trackers. When the site is opened, technically necessary access data may be processed by the hosting provider.",
+    "cookieTitle": "Cookies and local storage",
+    "cookieText": "The site does not set tracking cookies. Language and theme can be stored locally in the browser so the setting is kept for the next visit.",
+    "externalTitle": "External content",
+    "externalText": "Project images, certificates and the Pacman contribution graphic are loaded locally. External links to GitHub or e-mail only open when clicked.",
+    "contactTitle": "Contact for privacy questions",
+    "contactText": "For questions about this portfolio website or personal data, I can be reached through the e-mail address listed in the contact section."
   }
 }

@@ -120,10 +120,6 @@ const focusStatus = document.getElementById('focus-status');
 const languageButtons = document.querySelectorAll('.lang-btn');
 const themeToggle = document.getElementById('theme-toggle');
 const heroCopy = document.querySelector('.hero-copy');
-const heroInteractiveCard = document.querySelector('.hero-interactive-card');
-const workNodes = document.querySelectorAll('.work-node');
-const workMapStatus = document.getElementById('work-map-status');
-const interactiveBackground = document.querySelector('.interactive-background');
 const modal = document.getElementById('detail-modal');
 const modalCard = document.getElementById('modal-card');
 const modalClose = document.getElementById('modal-close');
@@ -225,7 +221,7 @@ const embeddedDictionaries = {
         hackathon: {
           type: 'Event',
           title: 'Baden hackt',
-          period: '2026',
+          period: 'Teilnahme',
           description: 'Teilnahme am Hackathon "Baden hackt" mit Fokus auf Teamarbeit, Ideenfindung und schneller technischer Umsetzung.'
         },
         ims: {
@@ -293,7 +289,7 @@ const embeddedDictionaries = {
     },
     modal: { close: 'Schliessen', title: 'Detailansicht', projectKicker: 'Projektstatus', certificateKicker: 'Zertifikat' },
     portfolioDownloadButton: 'Download PDF',
-    footer: { rights: 'Alle Rechte vorbehalten.' }
+    footer: { rights: 'Alle Rechte vorbehalten.', legalLink: 'Datenschutz und Cookies' }
   },
   en: {
     skip: { content: 'Skip to content' },
@@ -366,7 +362,7 @@ const embeddedDictionaries = {
         hackathon: {
           type: 'Event',
           title: 'Baden hackt',
-          period: '2026',
+          period: 'Participation',
           description: 'Participation in the "Baden hackt" hackathon with a focus on teamwork, ideation, and fast technical implementation.'
         },
         ims: {
@@ -423,7 +419,7 @@ const embeddedDictionaries = {
     },
     modal: { close: 'Close', title: 'Detail view', projectKicker: 'Project status', certificateKicker: 'Certificate' },
     portfolioDownloadButton: 'Download PDF',
-    footer: { rights: 'All rights reserved.' }
+    footer: { rights: 'All rights reserved.', legalLink: 'Privacy and cookies' }
   },
   fr: {
     skip: { content: 'Aller au contenu' },
@@ -496,7 +492,7 @@ const embeddedDictionaries = {
         hackathon: {
           type: 'Evenement',
           title: 'Baden hackt',
-          period: '2026',
+          period: 'Participation',
           description: 'Participation au hackathon "Baden hackt" avec un accent sur le travail d equipe, l ideation et la mise en oeuvre technique rapide.'
         },
         ims: {
@@ -555,7 +551,7 @@ const embeddedDictionaries = {
     },
     modal: { close: 'Fermer', title: 'Vue detail', projectKicker: 'Statut du projet', certificateKicker: 'Certificat' },
     portfolioDownloadButton: 'Telecharger le PDF',
-    footer: { rights: 'Tous droits reserves.' }
+    footer: { rights: 'Tous droits reserves.', legalLink: 'Confidentialite et cookies' }
   },
   sr: {
     skip: { content: 'Preskoci na sadrzaj' },
@@ -628,7 +624,7 @@ const embeddedDictionaries = {
         hackathon: {
           type: 'Dogadjaj',
           title: 'Baden hackt',
-          period: '2026',
+          period: 'Ucesce',
           description: 'Ucesce na hakatonu "Baden hackt" sa fokusom na timski rad, razvoj ideja i brzu tehnicku realizaciju.'
         },
         ims: {
@@ -685,7 +681,7 @@ const embeddedDictionaries = {
     },
     modal: { close: 'Zatvori', title: 'Detaljni prikaz', projectKicker: 'Status projekta', certificateKicker: 'Sertifikat' },
     portfolioDownloadButton: 'Preuzmi PDF',
-    footer: { rights: 'Sva prava zadrzana.' }
+    footer: { rights: 'Sva prava zadrzana.', legalLink: 'Privatnost i kolacici' }
   }
 };
 
@@ -719,21 +715,14 @@ const setMenuState = (isOpen) => {
   navToggle.setAttribute('aria-expanded', String(isOpen));
 };
 
-const scrollToSection = (targetId) => {
+const scrollToSection = (targetId, behavior = 'smooth') => {
   const section = document.querySelector(targetId);
   if (!section) return;
 
   const headerHeight = document.querySelector('.site-header')?.offsetHeight || 0;
-  const sectionNudges = {
-    '#portfolio': -18,
-    '#tech-stack': -18,
-    '#about': -18,
-    '#career': -18,
-    '#contact': -18
-  };
-  const top = Math.max(section.offsetTop - headerHeight + (sectionNudges[targetId] || -8), 0);
+  const top = Math.max(window.scrollY + section.getBoundingClientRect().top - headerHeight - 18, 0);
 
-  window.scrollTo({ top, behavior: 'smooth' });
+  window.scrollTo({ top, behavior });
   if (window.location.hash !== targetId) {
     window.history.replaceState(null, '', targetId);
   }
@@ -819,37 +808,6 @@ if (heroCopy) {
     heroCopy.style.setProperty('--spot-x', `${x.toFixed(1)}%`);
     heroCopy.style.setProperty('--spot-y', `${y.toFixed(1)}%`);
   });
-}
-
-if (heroInteractiveCard) {
-  heroInteractiveCard.addEventListener('pointermove', (event) => {
-    const rect = heroInteractiveCard.getBoundingClientRect();
-    const x = ((event.clientX - rect.left) / Math.max(rect.width, 1) - 0.5) * 2;
-    const y = ((event.clientY - rect.top) / Math.max(rect.height, 1) - 0.5) * 2;
-    heroInteractiveCard.style.setProperty('--mouse-x', x.toFixed(3));
-    heroInteractiveCard.style.setProperty('--mouse-y', y.toFixed(3));
-  });
-}
-
-workNodes.forEach((node) => {
-  const setActiveWorkNode = () => {
-    workNodes.forEach((item) => item.classList.toggle('is-active', item === node));
-    if (workMapStatus) {
-      workMapStatus.textContent = node.dataset.workInfo || node.textContent;
-    }
-  };
-
-  node.addEventListener('pointerenter', setActiveWorkNode);
-  node.addEventListener('focus', setActiveWorkNode);
-});
-
-if (interactiveBackground) {
-  window.addEventListener('pointermove', (event) => {
-    const x = (event.clientX / Math.max(window.innerWidth, 1) - 0.5) * 2;
-    const y = (event.clientY / Math.max(window.innerHeight, 1) - 0.5) * 2;
-    interactiveBackground.style.setProperty('--mouse-x', x.toFixed(3));
-    interactiveBackground.style.setProperty('--mouse-y', y.toFixed(3));
-  }, { passive: true });
 }
 
 const renderStats = () => {
@@ -1447,6 +1405,19 @@ const loadLanguage = async (languageCode) => {
   selectLanguageButton(languageCode);
 };
 
+const alignInitialHash = () => {
+  const target = window.location.hash;
+  if (!target || !document.querySelector(target)) return;
+
+  const align = () => {
+    scrollToSection(target, 'auto');
+    setActiveNav(target.slice(1));
+  };
+
+  window.setTimeout(align, 80);
+  window.setTimeout(align, 420);
+};
+
 languageButtons.forEach((button) => {
   button.addEventListener('click', () => {
     loadLanguage(button.dataset.lang).catch(() => {
@@ -1482,11 +1453,12 @@ if (tabs.length) {
 }
 updateNavForScroll();
 
-loadLanguage(storedLanguage).catch(() => {
+loadLanguage(storedLanguage).then(alignInitialHash).catch(() => {
   activeDictionary = {};
   applyStaticTranslations();
   refreshDynamicTexts();
   document.documentElement.lang = 'de';
   selectLanguageButton('de');
+  alignInitialHash();
 });
 

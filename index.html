@@ -12,10 +12,6 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content" data-i18n="skip.content">Zum Inhalt springen</a>
-  <div class="interactive-background" aria-hidden="true">
-    <span class="bg-cursor-glow"></span>
-  </div>
-
   <header class="site-header" id="top">
     <nav class="navbar container" aria-label="Hauptnavigation">
       <a class="brand" href="#home" aria-label="Startseite">
@@ -116,25 +112,6 @@
           </div>
         </div>
 
-        <aside class="hero-interactive-card reveal" aria-labelledby="interactive-title">
-          <div class="interactive-card-head">
-            <p class="kicker" data-i18n="interactive.kicker">Interaktive Arbeitsfläche</p>
-            <h2 id="interactive-title" data-i18n="interactive.title">Projektfokus</h2>
-            <p data-i18n="interactive.subline">Hover über einen Knoten, um Fokus, Stack und Status schneller zu erfassen.</p>
-          </div>
-
-          <div class="work-map" aria-label="Interaktive Projekt- und Tech-Übersicht">
-            <button type="button" class="work-node node-project is-primary" data-work-info="PathLab | React/Vite, Tests | fertig">PathLab</button>
-            <button type="button" class="work-node node-project" data-work-info="SortLab | React/Vite, Algorithmen | fertig">SortLab</button>
-            <button type="button" class="work-node node-project" data-work-info="VSW | FastAPI, React | Teamprojekt">VSW</button>
-            <button type="button" class="work-node node-tech" data-work-info="Python | lokale Tools, APIs, Daten">Python</button>
-            <button type="button" class="work-node node-tech" data-work-info="GitHub | Repos, Commits, Workflows">GitHub</button>
-            <button type="button" class="work-node node-tech" data-work-info="SQLite/JSON | kleine Datenmodelle">Daten</button>
-          </div>
-
-          <p class="work-map-status" id="work-map-status" aria-live="polite">PathLab | React/Vite, Tests | fertig</p>
-        </aside>
-
       </div>
     </section>
 
@@ -184,8 +161,8 @@
             <a class="link-arrow" href="https://github.com/AleksZyro" target="_blank" rel="noopener noreferrer" data-i18n="github.profileLink">GitHub-Profil</a>
             <a class="link-arrow" href="https://github.com/AleksZyro?tab=repositories" target="_blank" rel="noopener noreferrer" data-i18n="github.reposLink">Repositories</a>
           </div>
-          <div class="activity-strip" aria-label="GitHub Contribution Chart">
-            <img src="https://github-readme-activity-graph.vercel.app/graph?username=AleksZyro&amp;theme=react-dark&amp;hide_border=true&amp;area=true" alt="GitHub Contribution Chart von Aleksandar Nikolic" loading="lazy">
+          <div class="activity-strip pacman-strip" aria-label="GitHub Contribution Pacman">
+            <img src="assets/pacman-contrib.svg" alt="Pacman Contribution Übersicht von Aleksandar Nikolic" loading="lazy">
           </div>
         </article>
 
@@ -221,15 +198,6 @@
         </div>
 
         <div class="about-grid reveal">
-          <article class="about-card">
-            <h3 data-i18n="about.cardTitle">Hallo, ich bin Aleksandar</h3>
-            <p data-i18n="about.description">
-              Ich besuche die IMS mit Schwerpunkt Applikationsentwicklung und arbeite gerne an
-              Projekten mit strukturierter Architektur, nachvollziehbaren APIs und sauberem Frontend.
-              Mir sind Teamfähigkeit, Verantwortung und stetige Verbesserung wichtig.
-            </p>
-          </article>
-
           <aside class="profile-card about-compact" aria-label="Kurzinfo">
             <figure class="profile-photo-wrap">
               <img src="assets/profile-temp.jpeg" alt="Temporäres Profilfoto von Aleksandar Nikolic" class="profile-photo">
@@ -241,6 +209,15 @@
               <li data-i18n="about.factWork">Arbeitsweise: Tests, klare Struktur, ehrliche Projektstände</li>
             </ul>
           </aside>
+
+          <article class="about-card">
+            <h3 data-i18n="about.cardTitle">Hallo, ich bin Aleksandar</h3>
+            <p data-i18n="about.description">
+              Ich besuche die IMS mit Schwerpunkt Applikationsentwicklung und arbeite gerne an
+              Projekten mit strukturierter Architektur, nachvollziehbaren APIs und sauberem Frontend.
+              Mir sind Teamfähigkeit, Verantwortung und stetige Verbesserung wichtig.
+            </p>
+          </article>
         </div>
       </div>
     </section>
@@ -262,7 +239,7 @@
                   <p class="career-type" data-i18n="career.items.hackathon.type">Event</p>
                   <h3 data-i18n="career.items.hackathon.title">Baden hackt</h3>
                 </div>
-                <span class="career-badge" data-i18n="career.items.hackathon.period">2026</span>
+                <span class="career-badge" data-i18n="career.items.hackathon.period">Teilnahme</span>
               </div>
               <p data-i18n="career.items.hackathon.description">Teilnahme am Hackathon "Baden hackt" mit Fokus auf Teamarbeit, Ideenfindung und schneller technischer Umsetzung.</p>
             </div>
@@ -315,6 +292,49 @@
         </div>
       </div>
     </section>
+
+    <section class="legal section" id="legal" aria-labelledby="legal-title">
+      <div class="container legal-wrap reveal">
+        <div class="section-head">
+          <p class="kicker" data-i18n="legal.kicker">Rechtliches</p>
+          <h2 id="legal-title" data-i18n="legal.title">Datenschutz und Cookies</h2>
+          <p class="section-subline" data-i18n="legal.subline">Kurzer Hinweis dazu, welche Daten diese Portfolio-Seite verarbeitet.</p>
+        </div>
+
+        <div class="legal-grid">
+          <article class="legal-card">
+            <h3 data-i18n="legal.privacyTitle">Datenschutz</h3>
+            <p data-i18n="legal.privacyText">
+              Diese Portfolio-Seite verarbeitet keine Formulareingaben und nutzt keine Analyse- oder Werbetracker.
+              Beim Aufruf der Seite können technisch notwendige Zugriffsdaten durch den Hostinganbieter verarbeitet werden.
+            </p>
+          </article>
+
+          <article class="legal-card">
+            <h3 data-i18n="legal.cookieTitle">Cookies und lokale Speicherung</h3>
+            <p data-i18n="legal.cookieText">
+              Die Seite setzt keine Tracking-Cookies. Sprache und Theme können lokal im Browser gespeichert werden,
+              damit die Einstellung beim nächsten Besuch erhalten bleibt.
+            </p>
+          </article>
+
+          <article class="legal-card">
+            <h3 data-i18n="legal.externalTitle">Externe Inhalte</h3>
+            <p data-i18n="legal.externalText">
+              Projektbilder, Zertifikate und die Pacman-Contribution-Grafik werden lokal geladen. Externe Links zu GitHub
+              oder E-Mail werden erst beim Anklicken geöffnet.
+            </p>
+          </article>
+
+          <article class="legal-card">
+            <h3 data-i18n="legal.contactTitle">Kontakt für Datenschutzfragen</h3>
+            <p data-i18n="legal.contactText">
+              Für Fragen zur Portfolio-Seite oder zu personenbezogenen Daten bin ich über die im Kontaktbereich genannte E-Mail erreichbar.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
   </main>
 
   <dialog id="detail-modal" class="detail-modal" aria-labelledby="modal-title">
@@ -345,7 +365,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; <span id="year"></span> Aleksandar Nikolic - <span data-i18n="footer.rights">Alle Rechte vorbehalten.</span></p>
+      <p>&copy; <span id="year"></span> Aleksandar Nikolic - <span data-i18n="footer.rights">Alle Rechte vorbehalten.</span> <a href="#legal" data-i18n="footer.legalLink">Datenschutz und Cookies</a></p>
     </div>
   </footer>
 
