@@ -230,14 +230,15 @@ body[data-theme="light"] .site-header {
   background: rgba(20, 17, 31, 0.62);
   color: var(--text);
   border-radius: 999px;
-  min-width: 64px;
+  width: 42px;
   height: 38px;
-  padding: 0 10px;
+  padding: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: 0.74rem;
+  font-family: "Noto Color Emoji", "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
+  font-size: 1.05rem;
   font-weight: 800;
   line-height: 1;
   white-space: nowrap;
@@ -538,122 +539,15 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   gap: 14px;
 }
 
-.project-detail-panel,
-.certificate-block {
-  border: 1px solid var(--line);
-  background: var(--surface);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow);
-}
-
-.project-detail-panel {
-  position: sticky;
-  top: calc(var(--header-h) + 16px);
-  display: grid;
-  gap: 12px;
-  padding: 18px;
-}
-
-.project-detail-panel h3 {
-  font-family: "Space Grotesk", "Sora", sans-serif;
-  font-size: 1.35rem;
-}
-
-.project-detail-panel p {
-  color: var(--muted);
-  line-height: 1.65;
-}
-
-.github-grid {
-  display: grid;
-  gap: 16px;
-  align-items: stretch;
-}
-
-.github-card {
-  border: 1px solid var(--line);
-  background: var(--surface);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow);
-  padding: 20px;
-  display: grid;
-  gap: 12px;
-}
-
-.github-card p {
-  color: var(--muted);
-  line-height: 1.65;
-}
-
-.github-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.github-links a {
-  border: 1px solid rgba(141, 108, 255, 0.30);
-  background: rgba(141, 108, 255, 0.12);
-  color: var(--text);
-  border-radius: 999px;
-  padding: 8px 11px;
-  font-weight: 800;
-}
-
-.activity-strip {
-  border: 1px solid rgba(185, 174, 220, 0.16);
-  background: rgba(11, 10, 18, 0.34);
-  border-radius: 12px;
-  padding: 10px;
-  overflow-x: auto;
-}
-
-.activity-strip img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.pacman-strip {
-  background: rgba(8, 11, 22, 0.72);
-}
-
-.pacman-strip img {
-  min-width: 520px;
-}
-
-.open-source-empty {
-  color: var(--text);
-  font-weight: 800;
-}
-
-.project-detail-facts {
-  display: grid;
-  gap: 10px;
-  margin: 0;
-}
-
-.project-detail-facts dt {
-  border-top: 1px solid rgba(185, 174, 220, 0.12);
-  padding-top: 10px;
-  color: var(--accent-2);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  margin-bottom: 4px;
-  text-transform: uppercase;
-}
-
-.project-detail-facts dd {
-  margin: 0;
-  color: var(--text);
-}
-
 .certificate-block {
   display: grid;
   gap: 14px;
   margin-top: 20px;
   padding: 18px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
 }
 
 .certificate-head {
@@ -680,7 +574,7 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
 }
 
 .about-compact .profile-photo-wrap {
-  width: min(260px, 100%);
+  width: min(170px, 100%);
   margin-bottom: 0;
 }
 
@@ -935,7 +829,7 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
 .cards-grid { grid-template-columns: 1fr; }
 
 .item-card, .empty-state { padding: 14px; }
-.item-card { display: grid; gap: 10px; align-content: start; }
+.item-card { display: grid; gap: 9px; align-content: start; }
 .item-card h3 { color: var(--text); }
 .item-card {
   transition: border-color 0.18s ease, background 0.18s ease, transform 0.18s ease;
@@ -954,7 +848,6 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
 
 body[data-theme="light"] .item-card,
 body[data-theme="light"] .empty-state,
-body[data-theme="light"] .project-detail-panel,
 body[data-theme="light"] .certificate-block,
 body[data-theme="light"] .github-card,
 body[data-theme="light"] .about-card,
@@ -971,7 +864,7 @@ body[data-theme="light"] .item-card.is-selected {
 }
 .project-preview {
   position: relative;
-  min-height: 132px;
+  min-height: 118px;
   border-radius: 10px;
   border: 1px solid rgba(136, 155, 255, 0.28);
   background:
@@ -1044,6 +937,18 @@ body[data-theme="light"] .item-card.is-selected {
   gap: 7px;
 }
 
+.card-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.card-actions .project-links {
+  display: contents;
+}
+
 .project-tags span,
 .project-links a {
   border: 1px solid rgba(185, 174, 220, 0.16);
@@ -1090,7 +995,7 @@ body[data-theme="light"] .project-links a {
   border-color: rgba(181, 158, 255, 0.72);
 }
 
-.item-card button, .empty-action { justify-self: start; border: 1px solid var(--line); background: rgba(16, 14, 26, 0.78); color: var(--text); border-radius: 10px; padding: 8px 12px; cursor: pointer; transition: background 0.16s ease, border-color 0.16s ease, color 0.16s ease; }
+.item-card button, .empty-action { justify-self: start; border: 1px solid var(--line); background: rgba(16, 14, 26, 0.78); color: var(--text); border-radius: 10px; padding: 7px 11px; cursor: pointer; transition: background 0.16s ease, border-color 0.16s ease, color 0.16s ease; }
 .item-card button:hover,
 .item-card button:focus-visible,
 .empty-action:hover,
@@ -1338,7 +1243,7 @@ body[data-theme="light"] .project-filters {
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
 @media (min-width: 700px) {
-  .about-grid { grid-template-columns: minmax(240px, 0.58fr) minmax(0, 1.42fr); align-items: stretch; }
+  .about-grid { grid-template-columns: 1.08fr 0.92fr; align-items: stretch; }
   .contact-wrap { grid-template-columns: 1.08fr 0.92fr; }
   .github-grid { grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.55fr); }
   .cards-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -1355,7 +1260,8 @@ body[data-theme="light"] .project-filters {
   .nav-list a { padding: 9px 10px; }
   .language-switch { width: auto; }
   .lang-btn { min-width: 44px; padding-inline: 7px; }
-  .project-explorer { grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.75fr); }
+  .project-explorer { display: block; }
+  .project-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .cards-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .tech-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); max-width: none; }
   .compact-certificates { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -1363,10 +1269,6 @@ body[data-theme="light"] .project-filters {
 
 @media (min-width: 1200px) {
   .nav-list a { padding-inline: 12px; }
-}
-
-@media (max-width: 959px) {
-  .project-detail-panel { position: static; }
 }
 
 @media (max-width: 420px) {
