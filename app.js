@@ -1,15 +1,15 @@
-const portfolioData = {
+﻿const portfolioData = {
   codingSinceYear: 2025,
   projects: [
     {
       title: 'PathLab',
-      cardDescription: 'Visualizer für Wegfindungsalgorithmen auf einem gewichteten Raster mit BFS, DFS, Dijkstra und A*.',
-      detailDescription: 'PathLab\n\nPathLab ist ein interaktiver Visualizer zum Lernen und Vergleichen von Wegfindungsalgorithmen. Die Anwendung arbeitet mit einem gewichteten Raster, Start- und Zielpunkten sowie Feldern wie Wand, Wasser und Schlamm.\n\nDer Schwerpunkt liegt auf nachvollziehbarer Algorithmus-Visualisierung: BFS, DFS, Dijkstra und A* können einzeln ausgeführt oder verglichen werden. Die Anwendung zeigt den gefundenen Pfad, Kosten und Laufzeit getrennt von der Animation.\n\nDas Projekt ist eine stabile Portfolio-Version mit GitHub-Pages-Demo, automatisierten Tests und GitHub-Actions-Workflow.',
-      meta: ['Status: stabile Portfolio-Version', 'Stack: React, Vite, JavaScript, CSS, Vitest', 'Fokus: Algorithmen, Tests, UI-State', 'Demo: aktuell nicht verlinkt', 'Repository: öffentlich'],
+      cardDescription: 'Visualizer fÃ¼r Wegfindungsalgorithmen auf einem gewichteten Raster mit BFS, DFS, Dijkstra und A*.',
+      detailDescription: 'PathLab\n\nPathLab ist ein interaktiver Visualizer zum Lernen und Vergleichen von Wegfindungsalgorithmen. Die Anwendung arbeitet mit einem gewichteten Raster, Start- und Zielpunkten sowie Feldern wie Wand, Wasser und Schlamm.\n\nDer Schwerpunkt liegt auf nachvollziehbarer Algorithmus-Visualisierung: BFS, DFS, Dijkstra und A* kÃ¶nnen einzeln ausgefÃ¼hrt oder verglichen werden. Die Anwendung zeigt den gefundenen Pfad, Kosten und Laufzeit getrennt von der Animation.\n\nDas Projekt ist eine stabile Portfolio-Version mit GitHub-Pages-Demo, automatisierten Tests und GitHub-Actions-Workflow.',
+      meta: ['Status: stabile Portfolio-Version', 'Stack: React, Vite, JavaScript, CSS, Vitest', 'Fokus: Algorithmen, Tests, UI-State', 'Demo: aktuell nicht verlinkt', 'Repository: Ã¶ffentlich'],
       tags: ['fertig', 'React/Vite', 'Tests', 'GitHub Pages'],
       filters: ['web', 'visualisierung'],
       role: 'Eigenes Lern- und Portfolio-Projekt',
-      learning: 'Algorithmen getrennt von React-Komponenten halten, Tests für Randfälle schreiben und UI-State nachvollziehbar machen.',
+      learning: 'Algorithmen getrennt von React-Komponenten halten, Tests fÃ¼r RandfÃ¤lle schreiben und UI-State nachvollziehbar machen.',
       links: [
         { label: 'GitHub', url: 'https://github.com/AleksZyro/PathLab' }
       ],
@@ -19,9 +19,9 @@ const portfolioData = {
     },
     {
       title: 'SortLab',
-      cardDescription: 'Sortieralgorithmus-Visualizer mit Balkenansicht, Steuerung, Statistik und Erklärbereich.',
-      detailDescription: 'SortLab\n\nSortLab ist ein interaktiver Visualizer für Sortieralgorithmen. Nutzerinnen und Nutzer sehen Schritt für Schritt, wie ein Array sortiert wird, können die Geschwindigkeit live anpassen und verschiedene Verfahren vergleichen.\n\nEnthalten sind Bubble Sort, Selection Sort, Insertion Sort, Quick Sort und Heap Sort. Das Dashboard zeigt Vergleiche, Swaps, Schritte und Laufzeit in Millisekunden.\n\nDas Projekt ist fertig nutzbar und dient als Lernprojekt für Algorithmen, React-State und Visualisierung.',
-      meta: ['Status: fertig nutzbar', 'Stack: React, Vite, JavaScript, CSS', 'Fokus: Sortieralgorithmen und Visualisierung', 'Demo: lokal vorhanden', 'Repository: noch nicht öffentlich verlinkt'],
+      cardDescription: 'Sortieralgorithmus-Visualizer mit Balkenansicht, Steuerung, Statistik und ErklÃ¤rbereich.',
+      detailDescription: 'SortLab\n\nSortLab ist ein interaktiver Visualizer fÃ¼r Sortieralgorithmen. Nutzerinnen und Nutzer sehen Schritt fÃ¼r Schritt, wie ein Array sortiert wird, kÃ¶nnen die Geschwindigkeit live anpassen und verschiedene Verfahren vergleichen.\n\nEnthalten sind Bubble Sort, Selection Sort, Insertion Sort, Quick Sort und Heap Sort. Das Dashboard zeigt Vergleiche, Swaps, Schritte und Laufzeit in Millisekunden.\n\nDas Projekt ist fertig nutzbar und dient als Lernprojekt fÃ¼r Algorithmen, React-State und Visualisierung.',
+      meta: ['Status: fertig nutzbar', 'Stack: React, Vite, JavaScript, CSS', 'Fokus: Sortieralgorithmen und Visualisierung', 'Demo: lokal vorhanden', 'Repository: noch nicht Ã¶ffentlich verlinkt'],
       tags: ['fertig', 'React/Vite', 'Algorithmen', 'lokal'],
       filters: ['web', 'visualisierung'],
       role: 'Eigenes Lernprojekt',
@@ -32,13 +32,13 @@ const portfolioData = {
     },
     {
       title: 'VSW - Vulnerability Scanner Web App',
-      cardDescription: 'Defensive Fullstack-Web-App für risikoarme Security-Checks an autorisierten Domains oder IPs.',
-      detailDescription: 'VSW - Vulnerability Scanner Web App\n\nVSW ist ein gemeinsames Projekt mit Botond. Die Anwendung führt defensive, passive oder risikoarme Checks aus und stellt Ergebnisse in einem React-Dashboard dar.\n\nDer Fokus liegt auf HTTP-Security-Headern, TLS-/Zertifikatsinformationen, einer kleinen sicheren Portliste, Reports und Exporten. Das Projekt enthält ein FastAPI-Backend, ein React-Frontend, Tests und Docker-Grundlagen.\n\nWichtig: Das Projekt ist ausdrücklich für eigene Systeme oder Systeme mit Erlaubnis gedacht. Es enthält keine Exploits, kein Brute Force und keine aggressiven Scans.',
+      cardDescription: 'Defensive Fullstack-Web-App fÃ¼r risikoarme Security-Checks an autorisierten Domains oder IPs.',
+      detailDescription: 'VSW - Vulnerability Scanner Web App\n\nVSW ist ein gemeinsames Projekt mit Botond. Die Anwendung fÃ¼hrt defensive, passive oder risikoarme Checks aus und stellt Ergebnisse in einem React-Dashboard dar.\n\nDer Fokus liegt auf HTTP-Security-Headern, TLS-/Zertifikatsinformationen, einer kleinen sicheren Portliste, Reports und Exporten. Das Projekt enthÃ¤lt ein FastAPI-Backend, ein React-Frontend, Tests und Docker-Grundlagen.\n\nWichtig: Das Projekt ist ausdrÃ¼cklich fÃ¼r eigene Systeme oder Systeme mit Erlaubnis gedacht. Es enthÃ¤lt keine Exploits, kein Brute Force und keine aggressiven Scans.',
       meta: ['Status: in Arbeit', 'Team: gemeinsam mit Botond', 'Stack: FastAPI, React, TypeScript, SQLite/PostgreSQL, Docker', 'Sichtbarkeit: Repository bei Botond', 'Hinweis: nur defensive Checks'],
       tags: ['in Arbeit', 'gemeinsam', 'FastAPI', 'React'],
       filters: ['python', 'web', 'fullstack', 'in-arbeit'],
       role: 'Gemeinsames Projekt mit Botond',
-      learning: 'Defensive Checks klar begrenzen, Backend und Frontend sauber trennen und Ergebnisse verständlich darstellen.',
+      learning: 'Defensive Checks klar begrenzen, Backend und Frontend sauber trennen und Ergebnisse verstÃ¤ndlich darstellen.',
       links: [
         { label: 'GitHub', url: 'https://github.com/BotondCsereklye/VSW' }
       ],
@@ -49,8 +49,8 @@ const portfolioData = {
     {
       title: 'BESP2074',
       cardDescription: 'Lokale Balkan-Wirtschaftssimulation mit Python-Modell, JSON-Export und Web-Dashboard.',
-      detailDescription: 'BESP2074\n\nBESP2074 ist eine lokale, jahresbasierte Balkan-Simulation. Das Projekt nutzt ein Python-Modell, strukturierte JSON-Daten und ein lokales Web-Dashboard, um Szenarien bis 2074 darzustellen.\n\nDie Anwendung ist als Lern- und Szenariosimulation gedacht. Die Resultate sind keine echten wirtschaftlichen, politischen oder finanziellen Prognosen, sondern vereinfachte Modellläufe mit Annahmen, Seeds und optionalen Ereignissen.\n\nDas Projekt ist lokal nutzbar, aber noch nicht als fertige öffentliche Anwendung veröffentlicht.',
-      meta: ['Status: lokal nutzbar, nicht veröffentlicht', 'Stack: Python, JSON, HTML/CSS, JavaScript', 'Fokus: Simulation, Datenexport, Dashboard', 'Repository: aktuell nicht verlinkt', 'Hinweis: keine Prognose'],
+      detailDescription: 'BESP2074\n\nBESP2074 ist eine lokale, jahresbasierte Balkan-Simulation. Das Projekt nutzt ein Python-Modell, strukturierte JSON-Daten und ein lokales Web-Dashboard, um Szenarien bis 2074 darzustellen.\n\nDie Anwendung ist als Lern- und Szenariosimulation gedacht. Die Resultate sind keine echten wirtschaftlichen, politischen oder finanziellen Prognosen, sondern vereinfachte ModelllÃ¤ufe mit Annahmen, Seeds und optionalen Ereignissen.\n\nDas Projekt ist lokal nutzbar, aber noch nicht als fertige Ã¶ffentliche Anwendung verÃ¶ffentlicht.',
+      meta: ['Status: lokal nutzbar, nicht verÃ¶ffentlicht', 'Stack: Python, JSON, HTML/CSS, JavaScript', 'Fokus: Simulation, Datenexport, Dashboard', 'Repository: aktuell nicht verlinkt', 'Hinweis: keine Prognose'],
       tags: ['in Arbeit', 'Python', 'Simulation', 'lokal'],
       filters: ['python', 'web', 'visualisierung', 'in-arbeit'],
       role: 'Eigenes Simulationsprojekt',
@@ -65,7 +65,7 @@ const portfolioData = {
       title: 'Ethical Hacker',
       cardDescription: 'Zertifikat im PDF-Format mit direkter Vorschau und Download.',
       detailDescription: 'Dieses Zertifikat kannst du direkt im Portfolio ansehen oder herunterladen.',
-      meta: ['Format: PDF', 'Nachweis: Zertifikat', 'Download: verfügbar'],
+      meta: ['Format: PDF', 'Nachweis: Zertifikat', 'Download: verfÃ¼gbar'],
       file: 'assets/certificates/ethical-hacker.pdf',
       previewImage: 'assets/certificate-previews/ethical-hacker.png',
       previewLabel: 'Zertifikat',
@@ -75,7 +75,7 @@ const portfolioData = {
       title: 'Introduction to Cybersecurity',
       cardDescription: 'Zertifikat im PDF-Format mit direkter Vorschau und Download.',
       detailDescription: 'Dieses Zertifikat kannst du direkt im Portfolio ansehen oder herunterladen.',
-      meta: ['Format: PDF', 'Nachweis: Zertifikat', 'Download: verfügbar'],
+      meta: ['Format: PDF', 'Nachweis: Zertifikat', 'Download: verfÃ¼gbar'],
       file: 'assets/certificates/introduction-to-cybersecurity.pdf',
       previewImage: 'assets/certificate-previews/introduction-to-cybersecurity.png',
       previewLabel: 'Zertifikat',
@@ -85,7 +85,7 @@ const portfolioData = {
       title: 'BBB Hackathon',
       cardDescription: 'Zertifikat im PDF-Format mit direkter Vorschau und Download.',
       detailDescription: 'Dieses Zertifikat kannst du direkt im Portfolio ansehen oder herunterladen.',
-      meta: ['Format: PDF', 'Nachweis: Zertifikat', 'Download: verfügbar'],
+      meta: ['Format: PDF', 'Nachweis: Zertifikat', 'Download: verfÃ¼gbar'],
       file: 'assets/certificates/bbb-hackathon.pdf',
       previewImage: 'assets/certificate-previews/bbb-hackathon-preview.svg',
       previewLabel: 'Zertifikat',
@@ -122,8 +122,7 @@ const languageMenu = document.getElementById('language-menu');
 const languageOptions = document.querySelectorAll('.lang-option');
 const languageCurrentFlag = document.getElementById('language-current-flag');
 const languageCurrentLabel = document.getElementById('language-current-label');
-const themeToggle = document.getElementById('theme-toggle');
-const heroCopy = document.querySelector('.hero-copy');
+const surfaceCanvas = document.getElementById('surface-canvas');
 const modal = document.getElementById('detail-modal');
 const modalCard = document.getElementById('modal-card');
 const modalClose = document.getElementById('modal-close');
@@ -159,13 +158,13 @@ const embeddedDictionaries = {
     nav: { home: 'Start', about: '\u00dcber mich', career: 'Werdegang', tech: 'Tech-Stack', portfolio: 'Projekte', github: 'GitHub', contact: 'Kontakt' },
     hero: {
       kicker: 'IMS Applikationsentwicklung | Praktikum 2027/2028',
-      description: 'Ich entwickle kleine bis mittelgrosse Python- und Web-Anwendungen mit Fokus auf lokale Tools, APIs, Tests und nachvollziehbare Benutzeroberflächen.',
+      description: 'Ich entwickle kleine bis mittelgrosse Python- und Web-Anwendungen mit Fokus auf lokale Tools, APIs, Tests und nachvollziehbare BenutzeroberflÃ¤chen.',
       factEducation: 'Ab Sommer 2026: 3. IMS-Jahr, Applikationsentwicklung',
       factInternship: 'Praktikum gesucht: Schweiz, 2027/2028',
       availability: 'Aktuell suche ich eine Praktikumsstelle in der Schweiz f\u00fcr das 4. IMS-Jahr, Zeitraum 2027/2028.',
       factProjects: 'Projekte: PathLab, SortLab, VSW, BESP2074',
       factStack: 'Python, React/Vite, FastAPI, Git',
-      projectsKicker: 'Ausgewählte Projekte',
+      projectsKicker: 'AusgewÃ¤hlte Projekte',
       projectsTitle: 'Projekte',
       projectPathlab: 'Routing-Visualizer, Tests, GitHub',
       projectSortlab: 'Sortieralgorithmen, React/Vite',
@@ -178,11 +177,11 @@ const embeddedDictionaries = {
     },
     focus: {
       title: 'Technische Praxis',
-      subline: 'Kurzer Überblick über die Bereiche, in denen ich aktuell praktisch arbeite.',
+      subline: 'Kurzer Ãœberblick Ã¼ber die Bereiche, in denen ich aktuell praktisch arbeite.',
       web: {
         tab: 'Web',
         title: 'Web',
-        text: 'Weboberflächen für Lernprojekte, Dashboards und Portfolio-Projekte.',
+        text: 'WeboberflÃ¤chen fÃ¼r Lernprojekte, Dashboards und Portfolio-Projekte.',
         points: ['HTML/CSS', 'JavaScript', 'React/Vite'],
         status: 'Praxis: PathLab, SortLab, VSW'
       },
@@ -203,16 +202,16 @@ const embeddedDictionaries = {
       automation: {
         tab: 'Automatisierung',
         title: 'Automatisierung',
-        text: 'Skripte für lokale Abläufe, Starts und einfache wiederkehrende Aufgaben.',
+        text: 'Skripte fÃ¼r lokale AblÃ¤ufe, Starts und einfache wiederkehrende Aufgaben.',
         points: ['PowerShell', 'CLI-Tools', 'lokale Helfer'],
         status: 'Praxis: Windows-Tools'
       }
     },
     about: {
-      kicker: 'Über mich',
-      title: 'Über mich',
+      kicker: 'Ãœber mich',
+      title: 'Ãœber mich',
       cardTitle: 'Hallo, ich bin Aleksandar',
-      description: 'Ich besuche die IMS mit Schwerpunkt Applikationsentwicklung. Meine Projekte bewegen sich vor allem zwischen Python-Tools, Weboberflächen, APIs, Tests und Datenverarbeitung. Wichtig sind mir nachvollziehbarer Code, klare Struktur und ehrliche Projektstände.',
+      description: 'Ich besuche die IMS mit Schwerpunkt Applikationsentwicklung. Meine Projekte bewegen sich vor allem zwischen Python-Tools, WeboberflÃ¤chen, APIs, Tests und Datenverarbeitung. Wichtig sind mir nachvollziehbarer Code, klare Struktur und ehrliche ProjektstÃ¤nde.',
       factStatus: 'Status: ab Sommer 2026 im 3. IMS-Jahr',
       factFocus: 'Fokus: Python, Web, lokale Tools, APIs',
       factWork: 'Ziel: Praktikum Schweiz, 2027/2028'
@@ -246,11 +245,11 @@ const embeddedDictionaries = {
     tech: {
       kicker: 'Tech-Stack',
       title: 'Tech-Stack nach Einsatzbereich',
-      subline: 'Nur Technologien, die in aktuellen Projekten vorkommen oder die ich plausibel erklären kann.'
+      subline: 'Nur Technologien, die in aktuellen Projekten vorkommen oder die ich plausibel erklÃ¤ren kann.'
     },
     portfolio: {
       kicker: 'Projekte',
-      title: 'Ausgewählte Arbeiten',
+      title: 'AusgewÃ¤hlte Arbeiten',
       subline: 'Projekt-Explorer mit Status, Stack und Links oder Hinweisen.',
       certificatesTitle: 'Zertifikate',
       certificatesSubline: 'Nachweise als PDF mit Vorschau und Download.',
@@ -266,9 +265,9 @@ const embeddedDictionaries = {
       empty: {
         projects: { title: 'Projekte: Noch keine Inhalte' },
         certificates: { title: 'Zertifikate: Noch keine Inhalte' },
-        description: 'Die Daten werden morgen mit echten Screenshots und Beschreibungen befüllt.',
-        previewButton: 'Detailansicht-Vorschau öffnen',
-        modalDescription: 'Scaffold für Zoom/Detailansicht ist aktiv und bereit für reale Daten.',
+        description: 'Die Daten werden morgen mit echten Screenshots und Beschreibungen befÃ¼llt.',
+        previewButton: 'Detailansicht-Vorschau Ã¶ffnen',
+        modalDescription: 'Scaffold fÃ¼r Zoom/Detailansicht ist aktiv und bereit fÃ¼r reale Daten.',
         modalMeta: ['Titel', 'Kurzbeschreibung', 'Bild/Screenshot', 'Technologien oder Nachweis', 'Externer Link (optional)']
       }
     },
@@ -286,7 +285,7 @@ const embeddedDictionaries = {
     contact: {
       kicker: 'Kontakt',
       title: 'Kontakt',
-      description: 'Für Praktikum, Rückfragen oder Zusammenarbeit bin ich per E-Mail erreichbar.',
+      description: 'FÃ¼r Praktikum, RÃ¼ckfragen oder Zusammenarbeit bin ich per E-Mail erreichbar.',
       phoneLabel: 'Telefon',
       mailLabel: 'E-Mail',
       schoolMailLabel: 'Schul-Mail'
@@ -427,7 +426,7 @@ const embeddedDictionaries = {
   },
   fr: {
     skip: { content: 'Aller au contenu' },
-    nav: { home: 'Accueil', about: 'À propos', career: 'Parcours', tech: 'Stack tech', portfolio: 'Projets', github: 'GitHub', contact: 'Contact' },
+    nav: { home: 'Accueil', about: 'Ã€ propos', career: 'Parcours', tech: 'Stack tech', portfolio: 'Projets', github: 'GitHub', contact: 'Contact' },
     hero: {
       kicker: 'D\u00e9veloppement applicatif IMS | Stage 2027/2028',
       description: 'Je developpe de petites et moyennes applications Python et web avec un focus sur les outils locaux, les API, les tests et des interfaces comprehensibles.',
@@ -480,7 +479,7 @@ const embeddedDictionaries = {
       }
     },
     about: {
-      kicker: 'À propos',
+      kicker: 'Ã€ propos',
       title: '\u00c0 propos de moi',
       cardTitle: 'Salut, je suis Aleksandar',
       description: 'Je frequente l\'IMS avec une specialisation en developpement applicatif. Mes projets se situent surtout entre outils Python, interfaces web, API, tests et traitement de donnees. Une structure claire, un code comprehensible et des statuts de projet honnetes sont importants pour moi.',
@@ -538,7 +537,7 @@ const embeddedDictionaries = {
         projects: { title: 'Projets: Pas encore de contenu' },
         certificates: { title: 'Certificats: Pas encore de contenu' },
         description: 'Les donnees avec vraies captures et descriptions seront ajoutees demain.',
-        previewButton: 'Ouvrir l\'aperçu detail',
+        previewButton: 'Ouvrir l\'aperÃ§u detail',
         modalDescription: 'Le scaffold detail/zoom est actif et pret pour des donnees reelles.',
         modalMeta: ['Titre', 'Description courte', 'Image/capture', 'Technologies ou preuve', 'Lien externe (optionnel)']
       }
@@ -555,11 +554,11 @@ const embeddedDictionaries = {
     },
     modal: { close: 'Fermer', title: 'Vue detail', projectKicker: 'Statut du projet', certificateKicker: 'Certificat' },
     portfolioDownloadButton: 'Telecharger le PDF',
-    footer: { rights: 'Tous droits réservés.', legalLink: 'Confidentialité et cookies' }
+    footer: { rights: 'Tous droits rÃ©servÃ©s.', legalLink: 'ConfidentialitÃ© et cookies' }
   },
   sr: {
-    skip: { content: 'Preskoči na sadržaj' },
-    nav: { home: 'Početak', about: 'O meni', career: 'Razvoj', tech: 'Tech stack', portfolio: 'Projekti', github: 'GitHub', contact: 'Kontakt' },
+    skip: { content: 'PreskoÄi na sadrÅ¾aj' },
+    nav: { home: 'PoÄetak', about: 'O meni', career: 'Razvoj', tech: 'Tech stack', portfolio: 'Projekti', github: 'GitHub', contact: 'Kontakt' },
     hero: {
       kicker: 'IMS razvoj aplikacija | praksa 2027/2028',
       description: 'Razvijam male i srednje Python i web aplikacije sa fokusom na lokalne alate, API-je, testove i razumljive korisnicke interfejse.',
@@ -615,14 +614,14 @@ const embeddedDictionaries = {
       kicker: 'O meni',
       title: 'Licni profil',
       cardTitle: 'Zdravo, ja sam Aleksandar',
-      description: 'Učenik sam IMS-a sa fokusom na razvoj aplikacija. Moji projekti su uglavnom između Python alata, web interfejsa, API-ja, testova i obrade podataka. Važni su mi jasna struktura, razumljiv kod i iskren status projekta.',
+      description: 'UÄenik sam IMS-a sa fokusom na razvoj aplikacija. Moji projekti su uglavnom izmeÄ‘u Python alata, web interfejsa, API-ja, testova i obrade podataka. VaÅ¾ni su mi jasna struktura, razumljiv kod i iskren status projekta.',
       factStatus: 'Status: IMS, razvoj aplikacija',
       factFocus: 'Fokus: Python, web, lokalni alati',
       factWork: 'Rad: testovi, jasna struktura, iskren status projekta'
     },
     career: {
       kicker: 'Razvoj',
-      title: 'Razvoj i okruženje za učenje',
+      title: 'Razvoj i okruÅ¾enje za uÄenje',
       subline: 'Moj trenutni put povezuje skolu, informatiku i prakticno iskustvo u razvoju aplikacija.',
       items: {
         hackathon: {
@@ -685,7 +684,7 @@ const embeddedDictionaries = {
     },
     modal: { close: 'Zatvori', title: 'Detaljni prikaz', projectKicker: 'Status projekta', certificateKicker: 'Sertifikat' },
     portfolioDownloadButton: 'Preuzmi PDF',
-    footer: { rights: 'Sva prava zadržana.', legalLink: 'Privatnost i cookies' }
+    footer: { rights: 'Sva prava zadrÅ¾ana.', legalLink: 'Privatnost i cookies' }
   }
 };
 
@@ -787,50 +786,69 @@ window.addEventListener('resize', () => {
   renderTechStack();
 });
 
-const applyTheme = (theme) => {
-  const nextTheme = theme === 'light' ? 'light' : 'dark';
-  document.body.dataset.theme = nextTheme;
-  localStorage.setItem('portfolio-theme', nextTheme);
-
-  if (!themeToggle) return;
-  const isLight = nextTheme === 'light';
-  themeToggle.setAttribute('aria-pressed', String(isLight));
-  themeToggle.setAttribute('aria-label', isLight ? 'Dark Mode aktivieren' : 'Light Mode aktivieren');
-  const icon = themeToggle.querySelector('.theme-icon');
-  if (icon) {
-    icon.textContent = isLight ? '🌙' : '☀️';
-  }
-};
-
-if (themeToggle) {
-  themeToggle.addEventListener('click', () => {
-    applyTheme(document.body.dataset.theme === 'light' ? 'dark' : 'light');
-  });
-}
-
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-if (!prefersReducedMotion.matches) {
-  window.addEventListener('pointermove', (event) => {
-    document.body.style.setProperty('--surface-x', `${event.clientX}px`);
-    document.body.style.setProperty('--surface-y', `${event.clientY}px`);
-    document.body.style.setProperty('--surface-opacity', '1');
-  }, { passive: true });
+if (surfaceCanvas && !prefersReducedMotion.matches) {
+  const ctx = surfaceCanvas.getContext('2d');
+  const scratches = [];
+  let canvasWidth = 0;
+  let canvasHeight = 0;
 
-  window.addEventListener('pointerleave', () => {
-    document.body.style.setProperty('--surface-opacity', '0');
-  });
+  const resizeSurfaceCanvas = () => {
+    const ratio = window.devicePixelRatio || 1;
+    canvasWidth = window.innerWidth;
+    canvasHeight = window.innerHeight;
+    surfaceCanvas.width = Math.round(canvasWidth * ratio);
+    surfaceCanvas.height = Math.round(canvasHeight * ratio);
+    surfaceCanvas.style.width = `${canvasWidth}px`;
+    surfaceCanvas.style.height = `${canvasHeight}px`;
+    ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+  };
+
+  const addScratches = (x, y, amount = 5) => {
+    for (let index = 0; index < amount; index += 1) {
+      scratches.push({
+        x: x + (Math.random() - 0.5) * 74,
+        y: y + (Math.random() - 0.5) * 46,
+        length: 10 + Math.random() * 28,
+        angle: -0.35 + Math.random() * 0.7,
+        life: 1,
+        decay: 0.012 + Math.random() * 0.018,
+      });
+    }
+    if (scratches.length > 180) scratches.splice(0, scratches.length - 180);
+  };
+
+  const drawSurface = () => {
+    ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+    for (let index = scratches.length - 1; index >= 0; index -= 1) {
+      const scratch = scratches[index];
+      scratch.life -= scratch.decay;
+      if (scratch.life <= 0) {
+        scratches.splice(index, 1);
+        continue;
+      }
+
+      const alpha = Math.min(0.24, scratch.life * 0.18);
+      const dx = Math.cos(scratch.angle) * scratch.length;
+      const dy = Math.sin(scratch.angle) * scratch.length;
+      ctx.beginPath();
+      ctx.moveTo(scratch.x - dx / 2, scratch.y - dy / 2);
+      ctx.lineTo(scratch.x + dx / 2, scratch.y + dy / 2);
+      ctx.strokeStyle = `rgba(180, 167, 229, ${alpha})`;
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    }
+    window.requestAnimationFrame(drawSurface);
+  };
+
+  resizeSurfaceCanvas();
+  window.addEventListener('resize', resizeSurfaceCanvas);
+  window.addEventListener('pointermove', (event) => addScratches(event.clientX, event.clientY), { passive: true });
+  window.addEventListener('pointerdown', (event) => addScratches(event.clientX, event.clientY, 18), { passive: true });
+  drawSurface();
 }
 
-if (heroCopy) {
-  heroCopy.addEventListener('pointermove', (event) => {
-    const rect = heroCopy.getBoundingClientRect();
-    const x = ((event.clientX - rect.left) / rect.width) * 100;
-    const y = ((event.clientY - rect.top) / rect.height) * 100;
-    heroCopy.style.setProperty('--spot-x', `${x.toFixed(1)}%`);
-    heroCopy.style.setProperty('--spot-y', `${y.toFixed(1)}%`);
-  });
-}
 
 const renderStats = () => {
   if (!projectsCountEl || !certificatesCountEl || !yearsCountEl) return;
@@ -966,14 +984,14 @@ const createEmptyState = (typeKey) => {
   title.textContent = t(`portfolio.empty.${typeKey}.title`, 'Noch keine Inhalte');
 
   const text = document.createElement('p');
-    text.textContent = t('portfolio.empty.description', 'Die Daten werden morgen mit echten Screenshots und Beschreibungen befüllt.');
+    text.textContent = t('portfolio.empty.description', 'Die Daten werden morgen mit echten Screenshots und Beschreibungen befÃ¼llt.');
 
   const previewButton = document.createElement('button');
   previewButton.type = 'button';
   previewButton.className = 'empty-action';
-  previewButton.textContent = t('portfolio.empty.previewButton', 'Detailansicht-Vorschau öffnen');
+  previewButton.textContent = t('portfolio.empty.previewButton', 'Detailansicht-Vorschau Ã¶ffnen');
   previewButton.dataset.title = t('modal.title', 'Detailansicht');
-  previewButton.dataset.description = t('portfolio.empty.modalDescription', 'Scaffold für Zoom/Detailansicht ist aktiv und bereit für reale Daten.');
+  previewButton.dataset.description = t('portfolio.empty.modalDescription', 'Scaffold fÃ¼r Zoom/Detailansicht ist aktiv und bereit fÃ¼r reale Daten.');
   previewButton.dataset.meta = JSON.stringify(tArray('portfolio.empty.modalMeta', [
     'Titel',
     'Kurzbeschreibung',
@@ -1078,7 +1096,7 @@ const renderTechStack = () => {
 const focusDefinitions = () => ({
   web: {
     title: t('focus.web.title', 'Web'),
-    text: t('focus.web.text', 'Weboberflächen für Lernprojekte, Dashboards und Portfolio-Projekte.'),
+    text: t('focus.web.text', 'WeboberflÃ¤chen fÃ¼r Lernprojekte, Dashboards und Portfolio-Projekte.'),
     points: tArray('focus.web.points', ['HTML/CSS', 'JavaScript', 'React/Vite']),
     status: t('focus.web.status', 'Praxis: PathLab, SortLab, VSW')
   },
@@ -1096,7 +1114,7 @@ const focusDefinitions = () => ({
   },
   automation: {
     title: t('focus.automation.title', 'Automatisierung'),
-    text: t('focus.automation.text', 'Skripte für lokale Abläufe, Starts und einfache wiederkehrende Aufgaben.'),
+    text: t('focus.automation.text', 'Skripte fÃ¼r lokale AblÃ¤ufe, Starts und einfache wiederkehrende Aufgaben.'),
     points: tArray('focus.automation.points', ['PowerShell', 'CLI-Tools', 'lokale Helfer']),
     status: t('focus.automation.status', 'Praxis: Windows-Tools')
   }
@@ -1454,9 +1472,7 @@ if ('IntersectionObserver' in window) {
 }
 
 const storedLanguage = localStorage.getItem('portfolio-language') || 'de';
-const storedTheme = localStorage.getItem('portfolio-theme') || 'dark';
-
-applyTheme(storedTheme);
+localStorage.removeItem('portfolio-theme');
 renderStats();
 renderTechStack();
 if (tabs.length) {
@@ -1472,4 +1488,3 @@ loadLanguage(storedLanguage).then(alignInitialHash).catch(() => {
   selectLanguageButton('de');
   alignInitialHash();
 });
-
