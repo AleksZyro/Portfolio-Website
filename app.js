@@ -117,7 +117,11 @@ const focusText = document.getElementById('focus-text');
 const focusList = document.getElementById('focus-list');
 const focusStatus = document.getElementById('focus-status');
 const languageButtons = document.querySelectorAll('.lang-btn');
-const languageSelect = document.getElementById('language-select');
+const languageMenuButton = document.getElementById('language-menu-button');
+const languageMenu = document.getElementById('language-menu');
+const languageOptions = document.querySelectorAll('.lang-option');
+const languageCurrentFlag = document.getElementById('language-current-flag');
+const languageCurrentLabel = document.getElementById('language-current-label');
 const themeToggle = document.getElementById('theme-toggle');
 const heroCopy = document.querySelector('.hero-copy');
 const modal = document.getElementById('detail-modal');
@@ -611,7 +615,7 @@ const embeddedDictionaries = {
       kicker: 'O meni',
       title: 'Licni profil',
       cardTitle: 'Zdravo, ja sam Aleksandar',
-      description: 'Pohadjam IMS sa fokusom na razvoj aplikacija. Moji projekti su uglavnom izmedju Python alata, web interfejsa, API-ja, testova i obrade podataka. Vazni su mi jasna struktura, razumljiv kod i iskren status projekta.',
+      description: 'Učenik sam IMS-a sa fokusom na razvoj aplikacija. Moji projekti su uglavnom između Python alata, web interfejsa, API-ja, testova i obrade podataka. Važni su mi jasna struktura, razumljiv kod i iskren status projekta.',
       factStatus: 'Status: IMS, razvoj aplikacija',
       factFocus: 'Fokus: Python, web, lokalni alati',
       factWork: 'Rad: testovi, jasna struktura, iskren status projekta'
@@ -681,7 +685,7 @@ const embeddedDictionaries = {
     },
     modal: { close: 'Zatvori', title: 'Detaljni prikaz', projectKicker: 'Status projekta', certificateKicker: 'Sertifikat' },
     portfolioDownloadButton: 'Preuzmi PDF',
-    footer: { rights: 'Sva prava zadržana.', legalLink: 'Privatnost i kolacici' }
+    footer: { rights: 'Sva prava zadržana.', legalLink: 'Privatnost i cookies' }
   }
 };
 
@@ -1294,9 +1298,24 @@ const selectLanguageButton = (languageCode) => {
     button.setAttribute('aria-pressed', String(isActive));
   });
 
-  if (languageSelect) {
-    languageSelect.value = languageCode;
+  languageOptions.forEach((option) => {
+    const isActive = option.dataset.lang === languageCode;
+    option.classList.toggle('is-active', isActive);
+    option.setAttribute('aria-selected', String(isActive));
+  });
+
+  const selectedOption = [...languageOptions].find((option) => option.dataset.lang === languageCode);
+  if (selectedOption && languageCurrentLabel && languageCurrentFlag) {
+    const selectedFlag = selectedOption.querySelector('.flag');
+    languageCurrentLabel.textContent = selectedOption.textContent.trim();
+    languageCurrentFlag.className = selectedFlag ? selectedFlag.className : 'flag flag-de';
   }
+};
+
+const setLanguageMenuOpen = (isOpen) => {
+  if (!languageMenu || !languageMenuButton) return;
+  languageMenu.hidden = !isOpen;
+  languageMenuButton.setAttribute('aria-expanded', String(isOpen));
 };
 
 const refreshDynamicTexts = () => {
@@ -1352,9 +1371,53 @@ languageButtons.forEach((button) => {
   });
 });
 
-if (languageSelect) {
-  languageSelect.addEventListener('change', () => {
-    loadLanguage(languageSelect.value).catch(() => {
+if (languageMenuButton && languageMenu) {
+  languageMenuButton.addEventListener('click', () => {
+    setLanguageMenuOpen(languageMenu.hidden);
+  });
+
+  languageOptions.forEach((option) => {
+    option.addEventListener('click', () => {
+      setLanguageMenuOpen(false);
+      loadLanguage(option.dataset.lang).catch(() => {
+        selectLanguageButton('de');
+        document.documentElement.lang = 'de';
+      });
+    });
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!languageMenu.hidden && !event.target.closest('.language-switch')) {
+      setLanguageMenuOpen(false);
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      setLanguageMenuOpen(false);
+    }
+  });
+}
+
+if (languageOptions.length) {
+  languageOptions.forEach((option) => {
+    option.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        setLanguageMenuOpen(false);
+        loadLanguage(option.dataset.lang).catch(() => {
+          selectLanguageButton('de');
+          document.documentElement.lang = 'de';
+        });
+      }
+    });
+  });
+}
+
+const legacyLanguageSelect = document.getElementById('language-select');
+if (legacyLanguageSelect) {
+  legacyLanguageSelect.addEventListener('change', () => {
+    loadLanguage(legacyLanguageSelect.value).catch(() => {
       selectLanguageButton('de');
       document.documentElement.lang = 'de';
     });

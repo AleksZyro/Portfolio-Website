@@ -164,20 +164,72 @@ body[data-theme="light"] .site-header {
   gap: 5px;
   flex-wrap: nowrap;
   align-items: center;
+  position: relative;
 }
 
-.lang-select {
+.lang-menu-button {
   border: 1px solid var(--line);
   background: rgba(20, 17, 31, 0.72);
   color: var(--text);
   border-radius: 999px;
-  min-height: 38px;
-  padding: 0 34px 0 12px;
+  min-height: 40px;
+  min-width: 86px;
+  padding: 0 12px;
   font-size: 0.82rem;
   font-weight: 800;
   cursor: pointer;
-  font-family: "Sora", "Noto Color Emoji", "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
   white-space: nowrap;
+}
+
+.lang-menu-button::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg) translateY(-1px);
+  opacity: 0.72;
+}
+
+.lang-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 80;
+  display: grid;
+  gap: 4px;
+  min-width: 132px;
+  padding: 6px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(12, 10, 20, 0.98);
+  box-shadow: var(--shadow);
+}
+
+.lang-option {
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  border-radius: 10px;
+  padding: 8px 9px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-align: left;
+}
+
+.lang-option:hover,
+.lang-option:focus-visible,
+.lang-option.is-active {
+  color: var(--text);
+  background: rgba(141, 108, 255, 0.18);
 }
 
 .lang-btn {
@@ -271,16 +323,20 @@ body[data-theme="light"] .site-header {
 }
 
 body[data-theme="light"] .theme-toggle,
-body[data-theme="light"] .lang-select,
+body[data-theme="light"] .lang-menu-button,
 body[data-theme="light"] .lang-btn {
   background: rgba(255, 255, 255, 0.72);
 }
 
 body[data-theme="light"] .lang-btn,
-body[data-theme="light"] .lang-select,
+body[data-theme="light"] .lang-menu-button,
 body[data-theme="light"] .theme-toggle {
   color: #211936;
   border-color: rgba(59, 45, 95, 0.20);
+}
+
+body[data-theme="light"] .lang-menu {
+  background: rgba(255, 255, 255, 0.98);
 }
 
 .theme-toggle:hover,
@@ -566,11 +622,6 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   display: grid;
   gap: 14px;
   margin-top: 20px;
-  padding: 18px;
-  border: 1px solid var(--line);
-  background: var(--surface);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow);
 }
 
 .certificate-head {
@@ -871,7 +922,6 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
 
 body[data-theme="light"] .item-card,
 body[data-theme="light"] .empty-state,
-body[data-theme="light"] .certificate-block,
 body[data-theme="light"] .github-card,
 body[data-theme="light"] .about-card,
 body[data-theme="light"] .profile-card,

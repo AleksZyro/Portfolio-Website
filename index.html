@@ -34,14 +34,17 @@
       </ul>
 
       <div class="language-switch" aria-label="Sprache wechseln">
-        <label class="visually-hidden" for="language-select">Sprache wechseln</label>
-        <select class="lang-select" id="language-select" aria-label="Sprache wechseln">
-          <option value="de">🇩🇪 DE</option>
-          <option value="en">🇬🇧 EN</option>
-          <option value="fr">🇫🇷 FR</option>
-          <option value="sr">🇷🇸 SR Lat</option>
-          <option value="sr-cyrl">🇷🇸 SR Ћир</option>
-        </select>
+        <button type="button" class="lang-menu-button" id="language-menu-button" aria-haspopup="listbox" aria-expanded="false" aria-label="Sprache wechseln">
+          <span class="flag flag-de" id="language-current-flag" aria-hidden="true"></span>
+          <span id="language-current-label">DE</span>
+        </button>
+        <div class="lang-menu" id="language-menu" role="listbox" aria-label="Sprache auswählen" hidden>
+          <button type="button" class="lang-option is-active" data-lang="de" role="option" aria-selected="true"><span class="flag flag-de" aria-hidden="true"></span><span>DE</span></button>
+          <button type="button" class="lang-option" data-lang="en" role="option" aria-selected="false"><span class="flag flag-gb" aria-hidden="true"></span><span>EN</span></button>
+          <button type="button" class="lang-option" data-lang="fr" role="option" aria-selected="false"><span class="flag flag-fr" aria-hidden="true"></span><span>FR</span></button>
+          <button type="button" class="lang-option" data-lang="sr" role="option" aria-selected="false"><span class="flag flag-rs" aria-hidden="true"></span><span>SR (lat)</span></button>
+          <button type="button" class="lang-option" data-lang="sr-cyrl" role="option" aria-selected="false"><span class="flag flag-rs" aria-hidden="true"></span><span>SR (kyr)</span></button>
+        </div>
       </div>
 
       <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Light Mode aktivieren" aria-pressed="false">

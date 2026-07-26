@@ -64,7 +64,7 @@
         "GitHub Actions",
         "Docker osnove"
       ],
-      "status": "Praksa: testovi i build-ovi"
+      "status": "Praksa: testovi i buildovi"
     },
     "automation": {
       "tab": "Automatizacija",
@@ -82,7 +82,7 @@
     "kicker": "O meni",
     "title": "O meni",
     "cardTitle": "Zdravo, ja sam Aleksandar",
-    "description": "Pohađam IMS sa fokusom na razvoj aplikacija i sada krećem u 3. IMS godinu. Moji projekti su uglavnom između Python alata, web interfejsa, API-ja, testova i obrade podataka. Za 4. IMS godinu tražim mesto za praksu u Švajcarskoj za 2027/2028.",
+    "description": "Učenik sam IMS-a sa fokusom na razvoj aplikacija i sada krećem u 3. IMS godinu. Moji projekti su uglavnom između Python alata, web interfejsa, API-ja, testova i obrade podataka. Za 4. IMS godinu tražim mesto za praksu u Švajcarskoj za 2027/2028.",
     "factStatus": "Status: od leta 2026 u 3. IMS godini",
     "factFocus": "Fokus: Python, web, lokalni alati, API-ji",
     "factWork": "Cilj: praksa u Švajcarskoj, 2027/2028"
@@ -125,7 +125,7 @@
   "portfolio": {
     "kicker": "Projekti",
     "title": "Odabrani radovi",
-    "subline": "Explorer projekata sa statusom, stack-om i linkovima ili napomenama.",
+    "subline": "Explorer projekata sa statusom, stackom i linkovima ili napomenama.",
     "certificatesTitle": "Sertifikati",
     "certificatesSubline": "PDF dokazi sa pregledom i preuzimanjem.",
     "detailKicker": "Detalji projekta",
@@ -140,10 +140,10 @@
     "detailsButton": "Prikaži detalje",
     "empty": {
       "projects": {
-        "title": "Projekti: Jos nema sadrzaja"
+        "title": "Projekti: Još nema sadržaja"
       },
       "certificates": {
-        "title": "Sertifikati: Jos nema sadrzaja"
+        "title": "Sertifikati: Još nema sadržaja"
       },
       "description": "Podaci sa pravim screenshotovima i opisima biće dodati sutra.",
       "previewButton": "Otvori pregled detalja",
@@ -167,10 +167,10 @@
   "contact": {
     "kicker": "Kontakt",
     "title": "Kontakt",
-    "description": "Za praksu u Svajcarskoj za 2027/2028, pitanja ili saradnju dostupan sam putem e-maila.",
+    "description": "Za praksu u Švajcarskoj za 2027/2028, pitanja ili saradnju dostupan sam putem e-maila.",
     "phoneLabel": "Telefon",
     "mailLabel": "E-mail",
-    "schoolMailLabel": "Skolski e-mail"
+    "schoolMailLabel": "Školski e-mail"
   },
   "modal": {
     "close": "Zatvori",
@@ -181,7 +181,7 @@
   "portfolioDownloadButton": "Preuzmi PDF",
   "footer": {
     "rights": "Sva prava zadržana.",
-    "legalLink": "Privatnost i kolačići"
+    "legalLink": "Privatnost i cookies"
   },
   "github": {
     "kicker": "GitHub",
@@ -195,12 +195,12 @@
   },
   "legal": {
     "kicker": "Pravno",
-    "title": "Privatnost i kolačići",
+    "title": "Privatnost i cookies",
     "subline": "Kratka napomena o tome koje podatke ova portfolio stranica obrađuje.",
     "privacyTitle": "Privatnost",
     "privacyText": "Ova portfolio stranica ne obrađuje unose iz formulara i ne koristi analitiku ili reklamne trackere. Pri otvaranju stranice hosting provajder može obrađivati tehnički neophodne pristupne podatke.",
-    "cookieTitle": "Kolačići i lokalno skladištenje",
-    "cookieText": "Stranica ne postavlja tracking kolačiće. Jezik i tema mogu biti lokalno sačuvani u browseru, kako bi podešavanje ostalo za sledeću posetu.",
+    "cookieTitle": "Cookies i lokalno skladištenje",
+    "cookieText": "Stranica ne postavlja tracking cookies. Jezik i tema mogu biti lokalno sačuvani u browseru, kako bi podešavanje ostalo za sledeću posetu.",
     "externalTitle": "Eksterni sadržaj",
     "externalText": "Slike projekata, sertifikati i Pacman contribution grafika učitavaju se lokalno. Eksterni linkovi ka GitHubu ili e-mailu otvaraju se tek nakon klika.",
     "contactTitle": "Kontakt za pitanja o privatnosti",
