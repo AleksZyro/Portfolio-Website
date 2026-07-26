@@ -108,7 +108,6 @@ const revealItems = document.querySelectorAll('.reveal');
 const tabs = document.querySelectorAll('.tab');
 const tabPanels = { projects: document.getElementById('panel-projects'), certificates: document.getElementById('panel-certificates') };
 const projectFilters = document.querySelectorAll('.filter-chip');
-const projectDetailPanel = document.getElementById('project-detail-panel');
 const projectsGrid = document.getElementById('projects-grid');
 const certificatesGrid = document.getElementById('certificates-grid');
 const techGrid = document.getElementById('tech-grid');
@@ -720,7 +719,11 @@ const scrollToSection = (targetId, behavior = 'smooth') => {
   if (!section) return;
 
   const headerHeight = document.querySelector('.site-header')?.offsetHeight || 0;
-  const top = Math.max(window.scrollY + section.getBoundingClientRect().top - headerHeight - 18, 0);
+  const sectionOffsets = {
+    '#portfolio': 8
+  };
+  const extraOffset = sectionOffsets[targetId] ?? 18;
+  const top = Math.max(window.scrollY + section.getBoundingClientRect().top - headerHeight - extraOffset, 0);
 
   window.scrollTo({ top, behavior });
   if (window.location.hash !== targetId) {
@@ -790,7 +793,7 @@ const applyTheme = (theme) => {
   themeToggle.setAttribute('aria-label', isLight ? 'Dark Mode aktivieren' : 'Light Mode aktivieren');
   const icon = themeToggle.querySelector('.theme-icon');
   if (icon) {
-    icon.textContent = isLight ? 'Dark' : 'Light';
+    icon.textContent = isLight ? '🌙' : '☀️';
   }
 };
 
@@ -857,7 +860,12 @@ const createCard = (item) => {
 
   const tags = document.createElement('div');
   tags.className = 'project-tags';
-  (item.tags || []).forEach((tagText) => {
+  const duplicatedStatusTags = new Set(
+    [item.previewBadge, 'fertig', 'in arbeit', 'lokal', 'privat']
+      .filter(Boolean)
+      .map((value) => String(value).trim().toLowerCase())
+  );
+  (item.tags || []).filter((tagText) => !duplicatedStatusTags.has(String(tagText).trim().toLowerCase())).forEach((tagText) => {
     const tag = document.createElement('span');
     tag.textContent = tagText;
     tags.append(tag);
@@ -899,98 +907,19 @@ const createCard = (item) => {
     detailButton.dataset.links = JSON.stringify(item.links);
   }
 
-  if (!item.file) {
-    detailButton.dataset.projectTitle = item.title;
-    delete detailButton.dataset.detailTrigger;
-    delete detailButton.dataset.title;
-    delete detailButton.dataset.description;
-    delete detailButton.dataset.meta;
+  const actions = document.createElement('div');
+  actions.className = 'card-actions';
+  if (links.children.length) {
+    actions.append(links);
   }
+  actions.append(detailButton);
 
   card.append(preview, title, description);
   if (tags.children.length) {
     card.append(tags);
   }
-  if (links.children.length) {
-    card.append(links);
-  }
-  card.append(detailButton);
+  card.append(actions);
   return card;
-};
-
-const parseProjectStack = (item) => {
-  const stack = (item.meta || []).find((entry) => entry.toLowerCase().startsWith('stack:'));
-  return stack ? stack.replace(/^Stack:\s*/i, '') : '';
-};
-
-const parseProjectStatus = (item) => {
-  const status = (item.meta || []).find((entry) => entry.toLowerCase().startsWith('status:'));
-  return status ? status.replace(/^Status:\s*/i, '') : '';
-};
-
-const renderProjectDetail = (item) => {
-  if (!projectDetailPanel) return;
-  projectDetailPanel.innerHTML = '';
-
-  if (!item) {
-    const kicker = document.createElement('p');
-    kicker.className = 'kicker';
-    kicker.textContent = t('portfolio.detailKicker', 'Projektdetails');
-
-    const title = document.createElement('h3');
-    title.textContent = t('portfolio.detailEmptyTitle', 'Projekt auswählen');
-
-    const description = document.createElement('p');
-    description.textContent = t('portfolio.detailEmptyText', 'Klicke auf eine Projektkarte, um Status, Stack, Rolle und Lerneffekt anzuzeigen.');
-
-    projectDetailPanel.append(kicker, title, description);
-    return;
-  }
-
-
-  const kicker = document.createElement('p');
-  kicker.className = 'kicker';
-  kicker.textContent = t('portfolio.detailKicker', 'Projektdetails');
-
-  const title = document.createElement('h3');
-  title.textContent = item.title;
-
-  const description = document.createElement('p');
-  description.textContent = item.cardDescription || '';
-
-  const facts = document.createElement('dl');
-  facts.className = 'project-detail-facts';
-
-  [
-    [t('portfolio.detailStatus', 'Status'), parseProjectStatus(item)],
-    [t('portfolio.detailStack', 'Stack'), parseProjectStack(item)],
-    [t('portfolio.detailRole', 'Rolle'), item.role || ''],
-    [t('portfolio.detailLearning', 'Lerneffekt'), item.learning || '']
-  ].forEach(([label, value]) => {
-    if (!value) return;
-    const term = document.createElement('dt');
-    term.textContent = label;
-    const detail = document.createElement('dd');
-    detail.textContent = value;
-    facts.append(term, detail);
-  });
-
-  const links = document.createElement('div');
-  links.className = 'project-links';
-  (item.links || []).forEach((linkItem) => {
-    const link = document.createElement('a');
-    link.className = 'link-arrow';
-    link.href = linkItem.url;
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
-    link.textContent = linkItem.label;
-    links.append(link);
-  });
-
-  projectDetailPanel.append(kicker, title, description, facts);
-  if (links.children.length) {
-    projectDetailPanel.append(links);
-  }
 };
 
 const renderProjectExplorer = () => {
@@ -1008,8 +937,6 @@ const renderProjectExplorer = () => {
   filteredProjects.forEach((project) => {
     projectsGrid.append(createCard(project));
   });
-
-  renderProjectDetail(filteredProjects.find((project) => project.title === activeProjectTitle));
 };
 
 const createEmptyState = (typeKey) => {
@@ -1320,14 +1247,6 @@ const tryParseMeta = (value) => {
 };
 
 document.addEventListener('click', (event) => {
-  const projectTrigger = event.target.closest('button[data-project-title]');
-  if (projectTrigger) {
-    activeProjectTitle = projectTrigger.dataset.projectTitle;
-    renderProjectExplorer();
-    projectDetailPanel?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-    return;
-  }
-
   const trigger = event.target.closest('button[data-detail-trigger][data-title][data-description]');
   if (!trigger) {
     return;
