@@ -1,80 +1,114 @@
 {
-  "skip": { "content": "Preskoči na sadržaj" },
+  "skip": {
+    "content": "Preskoci na sadrzaj"
+  },
   "nav": {
-    "home": "Početna",
+    "home": "Pocetna",
     "about": "O meni",
     "career": "Put",
     "tech": "Tech stack",
-    "portfolio": "Portfolio",
-    "contact": "Kontakt"
+    "portfolio": "Projekti",
+    "contact": "Kontakt",
+    "github": "GitHub"
   },
   "hero": {
-    "kicker": "Portfolio razvoja aplikacija",
-    "description": "Razvijam sopstvene aplikacije za web, API-je, podatke i automatizaciju, dok produbljujem znanje o strukturisanoj arhitekturi, testiranju i razumljivim korisničkim interfejsima.",
-    "ctaPortfolio": "Pogledaj portfolio",
+    "kicker": "IMS razvoj aplikacija | praksa 2027/2028",
+    "description": "Krećem u 3. IMS godinu i razvijam male i srednje Python i web aplikacije sa fokusom na lokalne alate, API-je, testove i razumljive korisničke interfejse.",
+    "factEducation": "Od leta 2026: 3. IMS godina, razvoj aplikacija",
+    "factProjects": "Projekti: PathLab, SortLab, VSW, BESP2074",
+    "factStack": "Python, React/Vite, FastAPI, Git",
+    "projectsKicker": "Odabrani projekti",
+    "projectsTitle": "Lako proverljivo",
+    "projectPathlab": "Routing vizualizacija, testovi, GitHub",
+    "projectSortlab": "Algoritmi sortiranja, React/Vite",
+    "projectVsw": "Defanzivne provere, timski projekat",
+    "projectBesp": "Lokalna Python simulacija",
+    "ctaPortfolio": "Pogledaj projekte",
     "ctaContact": "Kontakt",
-    "ctaEmail": "E-mail"
+    "ctaEmail": "E-mail",
+    "availability": "Trenutno tražim mesto za praksu u Švajcarskoj za 4. IMS godinu, period 2027/2028.",
+    "factInternship": "Tražim praksu: Švajcarska, 2027/2028",
+    "ctaGithub": "GitHub"
   },
   "focus": {
-    "title": "Trenutni fokus",
-    "subline": "Klikni na oblast da vidiš moj trenutni fokus razvoja.",
+    "title": "Oblasti rada",
+    "subline": "Kratak pregled oblasti u kojima trenutno prakticno radim.",
     "web": {
       "tab": "Web",
       "title": "Web",
-      "text": "Responzivni interfejsi sa jasnim UX-om i semantičkim markup-om.",
-      "points": ["HTML/CSS arhitektura", "Interaktivni JavaScript tokovi", "Mobile-first pristup"],
-      "status": "Aktivno: UI/UX"
+      "text": "Web interfejsi za projekte ucenja, dashboard-e i portfolio projekte.",
+      "points": [
+        "HTML/CSS",
+        "JavaScript",
+        "React/Vite"
+      ],
+      "status": "Praksa: PathLab, SortLab, VSW"
     },
     "backend": {
       "tab": "Backend",
       "title": "Backend",
-      "text": "Dizajn API-ja sa održivom strukturom i jasnom logikom podataka.",
-      "points": ["C# i .NET API-ji", "SQL/NoSQL modelovanje", "Čisto razdvajanje slojeva"],
-      "status": "Aktivno: API dizajn"
+      "text": "Mali API-ji i lokalni servisi sa jasnom logikom podataka.",
+      "points": [
+        "FastAPI",
+        "pytest",
+        "SQLite/JSON"
+      ],
+      "status": "Praksa: VSW, lokalni alati"
     },
     "cloud": {
-      "tab": "Cloud",
-      "title": "Cloud",
-      "text": "Deploy i rad servisa u stabilnim okruženjima.",
-      "points": ["AWS osnove", "Kontejnerizacija uz Docker", "Podesivi deployment-i"],
-      "status": "Aktivno: deployment"
+      "tab": "Alati",
+      "title": "Alati",
+      "text": "Projektni rad sa kontrolom verzija, jednostavnim workflow-ovima i lokalnim setup-ima.",
+      "points": [
+        "Git i GitHub",
+        "GitHub Actions",
+        "Docker osnove"
+      ],
+      "status": "Praksa: testovi i build-ovi"
     },
     "automation": {
       "tab": "Automatizacija",
       "title": "Automatizacija",
-      "text": "Efikasna automatizacija ponavljajućih zadataka.",
-      "points": ["PowerShell skripte", "Power Automate tokovi", "Logovanje i okidači"],
-      "status": "Aktivno: workflow"
+      "text": "Skripte za lokalne tokove rada, startovanje alata i jednostavne ponavljajuce zadatke.",
+      "points": [
+        "PowerShell",
+        "CLI alati",
+        "lokalni pomocnici"
+      ],
+      "status": "Praksa: Windows alati"
     }
   },
   "about": {
     "kicker": "O meni",
-    "title": "Lični profil",
+    "title": "O meni",
     "cardTitle": "Zdravo, ja sam Aleksandar",
-    "description": "Pohađam IMS sa fokusom na razvoj aplikacija i produbljujem školske osnove kroz samostalne i timske softverske projekte. Važni su mi razumljivi korisnički interfejsi, pregledan kod i stalno učenje."
+    "description": "Pohađam IMS sa fokusom na razvoj aplikacija i sada krećem u 3. IMS godinu. Moji projekti su uglavnom između Python alata, web interfejsa, API-ja, testova i obrade podataka. Za 4. IMS godinu tražim mesto za praksu u Švajcarskoj za 2027/2028.",
+    "factStatus": "Status: od leta 2026 u 3. IMS godini",
+    "factFocus": "Fokus: Python, web, lokalni alati, API-ji",
+    "factWork": "Cilj: praksa u Švajcarskoj, 2027/2028"
   },
   "career": {
     "kicker": "Put",
-    "title": "Put i okruženje za učenje",
-    "subline": "Moj trenutni put povezuje školu, informatiku i praktično iskustvo u razvoju aplikacija.",
+    "title": "Put i okruzenje za ucenje",
+    "subline": "Moj trenutni put povezuje skolu, informatiku i prakticno iskustvo u razvoju aplikacija.",
     "items": {
       "hackathon": {
-        "type": "Događaj",
+        "type": "Dogadjaj",
         "title": "Baden hackt",
         "period": "2026",
-        "description": "Učešće na hakatonu \"Baden hackt\" sa fokusom na timski rad, razvoj ideja i brzu tehničku realizaciju."
+        "description": "Ucesce na hakatonu \"Baden hackt\" sa fokusom na timski rad, razvoj ideja i brzu tehnicku realizaciju."
       },
       "ims": {
         "type": "Obrazovanje",
         "title": "Alte Kantonsschule Aarau & Berufsbildung Baden",
         "period": "2024 - danas",
-        "description": "Informatička srednja škola (IMS), smer razvoj aplikacija. Trenutno produbljujem školske osnove i povezujem ih sa praktičnim razvojem softvera."
+        "description": "Informaticka srednja skola (IMS), smer razvoj aplikacija. Krecem u 3. IMS godinu i pripremam se za praksu u 4. godini."
       },
       "school": {
-        "type": "Škola",
+        "type": "Skola",
         "title": "Bezirksschule Buchs AG",
         "period": "2021 - 2024",
-        "description": "Tu sam izgradio svoju školsku osnovu i dodatno razvio interesovanje za informatiku, tehniku i strukturisano učenje."
+        "description": "Tu sam izgradio svoju skolsku osnovu i dodatno razvio interesovanje za informatiku, tehniku i strukturisano ucenje."
       }
     }
   },
@@ -85,34 +119,58 @@
   },
   "tech": {
     "kicker": "Tech stack",
-    "title": "Tehnologije koje sam već koristio",
-    "subline": "Ova lista objedinjuje iskustvo iz samostalnih projekata, timskih projekata i IMS nastave; nivo iskustva se razlikuje u zavisnosti od tehnologije."
+    "title": "Tech stack po oblasti",
+    "subline": "Samo tehnologije koje se pojavljuju u trenutnim projektima ili koje mogu smisleno objasniti."
   },
   "portfolio": {
-    "kicker": "Portfolio",
-    "title": "Projekti i sertifikati",
-    "subline": "Pet projekata i tri sertifikata su već dodati.",
+    "kicker": "Projekti",
+    "title": "Odabrani radovi",
+    "subline": "Explorer projekata sa statusom, stack-om i linkovima ili napomenama.",
+    "certificatesTitle": "Sertifikati",
+    "certificatesSubline": "PDF dokazi sa pregledom i preuzimanjem.",
+    "detailKicker": "Detalji projekta",
+    "detailStatus": "Status",
+    "detailStack": "Stack",
+    "detailRole": "Uloga",
+    "detailLearning": "Ucenje",
     "tabs": {
       "projects": "Projekti",
       "certificates": "Sertifikati"
     },
-    "detailsButton": "Prikaži detalje",
+    "detailsButton": "Prikazi detalje",
     "empty": {
-      "projects": { "title": "Projekti: još nema sadržaja" },
-      "certificates": { "title": "Sertifikati: još nema sadržaja" },
-      "description": "Podaci sa pravim snimcima ekrana i opisima biće dodati naknadno.",
+      "projects": {
+        "title": "Projekti: Jos nema sadrzaja"
+      },
+      "certificates": {
+        "title": "Sertifikati: Jos nema sadrzaja"
+      },
+      "description": "Podaci sa pravim screenshot-ovima i opisima bice dodati sutra.",
       "previewButton": "Otvori pregled detalja",
-      "modalDescription": "Struktura za detaljni prikaz je spremna za stvarne podatke.",
-      "modalMeta": ["Naslov", "Kratak opis", "Slika/snimak ekrana", "Tehnologije ili dokaz", "Eksterni link (opciono)"]
-    }
+      "modalDescription": "Scaffold za detalje/zoom je aktivan i spreman za stvarne podatke.",
+      "modalMeta": [
+        "Naslov",
+        "Kratak opis",
+        "Slika/screenshot",
+        "Tehnologije ili dokaz",
+        "Eksterni link (opciono)"
+      ]
+    },
+    "detailEmptyTitle": "Izaberi projekat",
+    "detailEmptyText": "Klikni na projektnu karticu da vidiš status, stack, ulogu i šta sam naučio."
+  },
+  "filters": {
+    "all": "Svi",
+    "visualization": "Vizualizacija",
+    "inProgress": "U radu"
   },
   "contact": {
     "kicker": "Kontakt",
-    "title": "Hajde da sarađujemo",
-    "description": "Radujem se poruci za praksu, saradnju ili ideje za projekat.",
+    "title": "Kontakt",
+    "description": "Za praksu u Svajcarskoj za 2027/2028, pitanja ili saradnju dostupan sam putem e-maila.",
     "phoneLabel": "Telefon",
     "mailLabel": "E-mail",
-    "schoolMailLabel": "Školski e-mail"
+    "schoolMailLabel": "Skolski e-mail"
   },
   "modal": {
     "close": "Zatvori",
@@ -122,6 +180,16 @@
   },
   "portfolioDownloadButton": "Preuzmi PDF",
   "footer": {
-    "rights": "Sva prava zadržana."
+    "rights": "Sva prava zadrzana."
+  },
+  "github": {
+    "kicker": "GitHub",
+    "title": "Aktivnost i open source",
+    "subline": "GitHub koristim za jasno dokumentovanje projekata, verzionisanje promena i javno linkovanje radova.",
+    "profileLink": "GitHub profil",
+    "reposLink": "Repositories",
+    "openSourceTitle": "Open-source merge-ovi",
+    "openSourceEmpty": "Jos nema javno proverljivih merge-ova.",
+    "openSourceText": "Kada budu dostupni merge-ovani pull requestovi, ovde ce biti navedeni sa projektom, kratkim opisom i linkom."
   }
 }

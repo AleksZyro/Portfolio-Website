@@ -1,57 +1,91 @@
 {
-  "skip": { "content": "Skip to content" },
+  "skip": {
+    "content": "Skip to content"
+  },
   "nav": {
     "home": "Home",
     "about": "About",
     "career": "Journey",
     "tech": "Tech Stack",
-    "portfolio": "Portfolio",
-    "contact": "Contact"
+    "portfolio": "Projects",
+    "contact": "Contact",
+    "github": "GitHub"
   },
   "hero": {
-    "kicker": "Application Development Portfolio",
-    "description": "I build my own applications in web, APIs, data, and automation while deepening my understanding of structured architecture, testing, and clear user interfaces.",
-    "ctaPortfolio": "View Portfolio",
+    "kicker": "IMS Application Development | Internship 2027/2028",
+    "description": "I am starting my 3rd IMS year and build small to mid-sized Python and web applications with a focus on local tools, APIs, tests, and understandable user interfaces.",
+    "factEducation": "From summer 2026: 3rd IMS year, application development",
+    "factProjects": "Projects: PathLab, SortLab, VSW, BESP2074",
+    "factStack": "Python, React/Vite, FastAPI, Git",
+    "projectsKicker": "Selected projects",
+    "projectsTitle": "Easy to verify",
+    "projectPathlab": "Routing visualizer, tests, GitHub",
+    "projectSortlab": "Sorting algorithms, React/Vite",
+    "projectVsw": "Defensive checks, team project",
+    "projectBesp": "Local Python simulation",
+    "ctaPortfolio": "View projects",
     "ctaContact": "Contact",
-    "ctaEmail": "Email"
+    "ctaEmail": "Email",
+    "availability": "I am currently looking for an internship position in Switzerland for the 4th IMS year, period 2027/2028.",
+    "factInternship": "Looking for an internship: Switzerland, 2027/2028",
+    "ctaGithub": "GitHub"
   },
   "focus": {
-    "title": "Current Focus",
-    "subline": "Click a domain to see my current development focus.",
+    "title": "Work areas",
+    "subline": "A short overview of the areas where I currently work in practice.",
     "web": {
       "tab": "Web",
       "title": "Web",
-      "text": "Responsive interfaces with clear UX and semantic markup.",
-      "points": ["HTML/CSS architecture", "Interactive JavaScript flows", "Mobile-first delivery"],
-      "status": "Active: UI/UX"
+      "text": "Web interfaces for learning projects, dashboards, and portfolio projects.",
+      "points": [
+        "HTML/CSS",
+        "JavaScript",
+        "React/Vite"
+      ],
+      "status": "Practice: PathLab, SortLab, VSW"
     },
     "backend": {
       "tab": "Backend",
       "title": "Backend",
-      "text": "API design with maintainable structure and traceable data logic.",
-      "points": ["C# and .NET APIs", "SQL/NoSQL data modeling", "Clean layer separation"],
-      "status": "Active: API design"
+      "text": "Small APIs and local services with clear data logic.",
+      "points": [
+        "FastAPI",
+        "pytest",
+        "SQLite/JSON"
+      ],
+      "status": "Practice: VSW, local tools"
     },
     "cloud": {
-      "tab": "Cloud",
-      "title": "Cloud",
-      "text": "Deploying and running services in stable environments.",
-      "points": ["AWS fundamentals", "Containerization with Docker", "Configurable deployments"],
-      "status": "Active: Deployment"
+      "tab": "Tools",
+      "title": "Tools",
+      "text": "Project work with version control, simple workflows, and local setups.",
+      "points": [
+        "Git and GitHub",
+        "GitHub Actions",
+        "Docker basics"
+      ],
+      "status": "Practice: tests and builds"
     },
     "automation": {
       "tab": "Automation",
       "title": "Automation",
-      "text": "Automating recurring tasks efficiently and reliably.",
-      "points": ["PowerShell scripts", "Power Automate flows", "Logging and triggers"],
-      "status": "Active: Workflows"
+      "text": "Scripts for local workflows, launches, and simple recurring tasks.",
+      "points": [
+        "PowerShell",
+        "CLI tools",
+        "local helpers"
+      ],
+      "status": "Practice: Windows tools"
     }
   },
   "about": {
     "kicker": "About",
-    "title": "Personal Profile",
+    "title": "About me",
     "cardTitle": "Hi, I am Aleksandar",
-    "description": "I attend IMS with a focus on application development and deepen my academic foundations through personal and collaborative software projects. I value clear user interfaces, understandable code, and continuous learning."
+    "description": "I attend the IMS with a focus on application development and am now starting my 3rd IMS year. My projects are mainly between Python tools, web interfaces, APIs, tests, and data processing. For the 4th IMS year, I am looking for an internship position in Switzerland for 2027/2028.",
+    "factStatus": "Status: 3rd IMS year from summer 2026",
+    "factFocus": "Focus: Python, web, local tools, APIs",
+    "factWork": "Goal: internship in Switzerland, 2027/2028"
   },
   "career": {
     "kicker": "Journey",
@@ -68,7 +102,7 @@
         "type": "Education",
         "title": "Alte Kantonsschule Aarau & Berufsbildung Baden",
         "period": "2024 - present",
-        "description": "Computer Science Middle School (IMS), specialization in application development. I am currently deepening my academic foundations and connecting them with practical software development."
+        "description": "Computer Science Middle School (IMS), specialization in application development. I am starting my 3rd IMS year and preparing for the internship phase in the 4th year."
       },
       "school": {
         "type": "School",
@@ -85,31 +119,55 @@
   },
   "tech": {
     "kicker": "Tech Stack",
-    "title": "Technologies I have already used",
-    "subline": "This overview combines experience from personal projects, team projects, and IMS coursework; the depth of experience varies by technology."
+    "title": "Tech stack by use case",
+    "subline": "Only technologies that appear in current projects or that I can explain plausibly."
   },
   "portfolio": {
-    "kicker": "Portfolio",
-    "title": "Projects and Certificates",
-    "subline": "Five projects and three certificates are already listed.",
+    "kicker": "Projects",
+    "title": "Selected work",
+    "subline": "Project explorer with status, stack, and links or notes.",
+    "certificatesTitle": "Certificates",
+    "certificatesSubline": "PDF proof with preview and download.",
+    "detailKicker": "Project details",
+    "detailStatus": "Status",
+    "detailStack": "Stack",
+    "detailRole": "Role",
+    "detailLearning": "Learning",
     "tabs": {
       "projects": "Projects",
       "certificates": "Certificates"
     },
     "detailsButton": "Show details",
     "empty": {
-      "projects": { "title": "Projects: No content yet" },
-      "certificates": { "title": "Certificates: No content yet" },
+      "projects": {
+        "title": "Projects: No content yet"
+      },
+      "certificates": {
+        "title": "Certificates: No content yet"
+      },
       "description": "Data with real screenshots and descriptions will be added tomorrow.",
       "previewButton": "Open detail preview",
       "modalDescription": "The detail/zoom scaffold is active and ready for real data.",
-      "modalMeta": ["Title", "Short description", "Image/screenshot", "Technologies or proof", "External link (optional)"]
-    }
+      "modalMeta": [
+        "Title",
+        "Short description",
+        "Image/screenshot",
+        "Technologies or proof",
+        "External link (optional)"
+      ]
+    },
+    "detailEmptyTitle": "Select a project",
+    "detailEmptyText": "Click a project card to show status, stack, role, and learning focus."
+  },
+  "filters": {
+    "all": "All",
+    "visualization": "Visualization",
+    "inProgress": "In progress"
   },
   "contact": {
     "kicker": "Contact",
-    "title": "Let us work together",
-    "description": "I look forward to hearing from you for internships, collaboration, or project ideas.",
+    "title": "Contact",
+    "description": "For an internship position in Switzerland for 2027/2028, questions, or collaboration, I am reachable by email.",
     "phoneLabel": "Phone",
     "mailLabel": "Email",
     "schoolMailLabel": "School email"
@@ -123,5 +181,15 @@
   "portfolioDownloadButton": "Download PDF",
   "footer": {
     "rights": "All rights reserved."
+  },
+  "github": {
+    "kicker": "GitHub",
+    "title": "Activity and Open Source",
+    "subline": "I use GitHub to document projects clearly, version changes, and make public work linkable.",
+    "profileLink": "GitHub profile",
+    "reposLink": "Repositories",
+    "openSourceTitle": "Open-source merges",
+    "openSourceEmpty": "No publicly verifiable merges listed yet.",
+    "openSourceText": "Once merged pull requests are available, they will be listed here with project, short description, and link."
   }
 }
