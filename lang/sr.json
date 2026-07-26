@@ -191,5 +191,10 @@
     "openSourceTitle": "Open-source merge-ovi",
     "openSourceEmpty": "Jos nema javno proverljivih merge-ova.",
     "openSourceText": "Kada budu dostupni merge-ovani pull requestovi, ovde ce biti navedeni sa projektom, kratkim opisom i linkom."
+  },
+  "interactive": {
+    "kicker": "Interaktivna radna površina",
+    "title": "Fokus projekta",
+    "subline": "Pređi preko čvora da brzo vidiš fokus, stack i status."
   }
 }

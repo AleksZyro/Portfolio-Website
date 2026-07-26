@@ -191,5 +191,10 @@
     "openSourceTitle": "Open-source merges",
     "openSourceEmpty": "No publicly verifiable merges listed yet.",
     "openSourceText": "Once merged pull requests are available, they will be listed here with project, short description, and link."
+  },
+  "interactive": {
+    "kicker": "Interactive workspace",
+    "title": "Project focus",
+    "subline": "Hover over a node to quickly read focus, stack and status."
   }
 }

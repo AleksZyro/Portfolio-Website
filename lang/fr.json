@@ -191,5 +191,10 @@
     "openSourceTitle": "Merges open source",
     "openSourceEmpty": "Aucun merge vérifiable publiquement n’est encore listé.",
     "openSourceText": "Dès que des pull requests mergées seront disponibles, elles seront listées ici avec projet, courte description et lien."
+  },
+  "interactive": {
+    "kicker": "Espace de travail interactif",
+    "title": "Focus projets",
+    "subline": "Survole un nœud pour voir rapidement le focus, le stack et le statut."
   }
 }
