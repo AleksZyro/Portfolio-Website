@@ -34,10 +34,14 @@
       </ul>
 
       <div class="language-switch" aria-label="Sprache wechseln">
-        <button type="button" class="lang-btn is-active" data-lang="de" aria-label="Deutsch" aria-pressed="true"><span class="flag flag-de" aria-hidden="true"></span><span>DE</span></button>
-        <button type="button" class="lang-btn" data-lang="en" aria-label="English" aria-pressed="false"><span class="flag flag-gb" aria-hidden="true"></span><span>EN</span></button>
-        <button type="button" class="lang-btn" data-lang="fr" aria-label="Français" aria-pressed="false"><span class="flag flag-fr" aria-hidden="true"></span><span>FR</span></button>
-        <button type="button" class="lang-btn" data-lang="sr" aria-label="Srpski" aria-pressed="false"><span class="flag flag-rs" aria-hidden="true"></span><span>SR</span></button>
+        <label class="visually-hidden" for="language-select">Sprache wechseln</label>
+        <select class="lang-select" id="language-select" aria-label="Sprache wechseln">
+          <option value="de">🇩🇪 DE</option>
+          <option value="en">🇬🇧 EN</option>
+          <option value="fr">🇫🇷 FR</option>
+          <option value="sr">🇷🇸 SR Lat</option>
+          <option value="sr-cyrl">🇷🇸 SR Ћир</option>
+        </select>
       </div>
 
       <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Light Mode aktivieren" aria-pressed="false">

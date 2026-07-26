@@ -4,7 +4,7 @@
   },
   "nav": {
     "home": "Accueil",
-    "about": "A propos",
+    "about": "À propos",
     "career": "Parcours",
     "tech": "Stack tech",
     "portfolio": "Projets",
@@ -17,11 +17,11 @@
     "factEducation": "Dès l’été 2026: 3e année IMS, développement applicatif",
     "factProjects": "Projets: PathLab, SortLab, VSW, BESP2074",
     "factStack": "Python, React/Vite, FastAPI, Git",
-    "projectsKicker": "Projets selectionnes",
-    "projectsTitle": "Faciles a verifier",
+    "projectsKicker": "Projets sélectionnés",
+    "projectsTitle": "Faciles à vérifier",
     "projectPathlab": "Visualiseur de chemins, tests, GitHub",
     "projectSortlab": "Algorithmes de tri, React/Vite",
-    "projectVsw": "Checks defensifs, projet en equipe",
+    "projectVsw": "Checks défensifs, projet en équipe",
     "projectBesp": "Simulation Python locale",
     "ctaPortfolio": "Voir les projets",
     "ctaContact": "Contact",
@@ -32,7 +32,7 @@
   },
   "focus": {
     "title": "Domaines de travail",
-    "subline": "Apercu court des domaines dans lesquels je travaille actuellement en pratique.",
+    "subline": "Aperçu court des domaines dans lesquels je travaille actuellement en pratique.",
     "web": {
       "tab": "Web",
       "title": "Web",
@@ -47,7 +47,7 @@
     "backend": {
       "tab": "Backend",
       "title": "Backend",
-      "text": "Petites API et services locaux avec une logique de donnees claire.",
+      "text": "Petites API et services locaux avec une logique de données claire.",
       "points": [
         "FastAPI",
         "pytest",
@@ -58,7 +58,7 @@
     "cloud": {
       "tab": "Outils",
       "title": "Outils",
-      "text": "Travail de projet avec controle de version, workflows simples et setups locaux.",
+      "text": "Travail de projet avec contrôle de version, workflows simples et setups locaux.",
       "points": [
         "Git et GitHub",
         "GitHub Actions",
@@ -69,7 +69,7 @@
     "automation": {
       "tab": "Automatisation",
       "title": "Automatisation",
-      "text": "Scripts pour les workflows locaux, les lancements et les taches simples recurrentes.",
+      "text": "Scripts pour les workflows locaux, les lancements et les tâches simples récurrentes.",
       "points": [
         "PowerShell",
         "Outils CLI",
@@ -79,7 +79,7 @@
     }
   },
   "about": {
-    "kicker": "A propos",
+    "kicker": "À propos",
     "title": "À propos de moi",
     "cardTitle": "Salut, je suis Aleksandar",
     "description": "Je suis l’IMS avec un accent sur le développement applicatif et je commence maintenant ma 3e année IMS. Mes projets se situent surtout entre outils Python, interfaces web, API, tests et traitement de données. Pour la 4e année IMS, je cherche une place de stage en Suisse pour 2027/2028.",
@@ -89,55 +89,55 @@
   },
   "career": {
     "kicker": "Parcours",
-    "title": "Parcours et cadre d apprentissage",
-    "subline": "Mon parcours actuel relie l ecole, l informatique et l experience pratique en developpement applicatif.",
+    "title": "Parcours et cadre d’apprentissage",
+    "subline": "Mon parcours actuel relie l’école, l’informatique et l’expérience pratique en développement applicatif.",
     "items": {
       "hackathon": {
-        "type": "Evenement",
+        "type": "Événement",
         "title": "Baden hackt",
         "period": "Participation",
-        "description": "Participation au hackathon \"Baden hackt\" avec un accent sur le travail d equipe, l ideation et la mise en oeuvre technique rapide."
+        "description": "Participation au hackathon \"Baden hackt\" avec un accent sur le travail d’équipe, l’idéation et la mise en oeuvre technique rapide."
       },
       "ims": {
         "type": "Formation",
         "title": "Alte Kantonsschule Aarau & Berufsbildung Baden",
-        "period": "2024 - aujourd hui",
+        "period": "2024 - aujourd’hui",
         "description": "École d’informatique moyenne (IMS), orientation développement applicatif. Je commence ma 3e année IMS et me prépare à la phase de stage en 4e année."
       },
       "school": {
-        "type": "Ecole",
+        "type": "École",
         "title": "Bezirksschule Buchs AG",
         "period": "2021 - 2024",
-        "description": "C est la que j ai construit ma base scolaire et developpe davantage mon interet pour l informatique, la technique et l apprentissage structure."
+        "description": "C’est là que j’ai construit ma base scolaire et développé davantage mon intérêt pour l’informatique, la technique et l’apprentissage structuré."
       }
     }
   },
   "stats": {
     "projects": "Projets",
     "certificates": "Certificats",
-    "years": "Annees de code"
+    "years": "Années de code"
   },
   "tech": {
     "kicker": "Stack tech",
     "title": "Stack tech par domaine",
-    "subline": "Uniquement les technologies presentes dans mes projets actuels ou que je peux expliquer de maniere plausible."
+    "subline": "Uniquement les technologies présentes dans mes projets actuels ou que je peux expliquer de manière plausible."
   },
   "portfolio": {
     "kicker": "Projets",
-    "title": "Travaux selectionnes",
+    "title": "Travaux sélectionnés",
     "subline": "Explorateur de projets avec statut, stack et liens ou notes.",
     "certificatesTitle": "Certificats",
-    "certificatesSubline": "Justificatifs PDF avec apercu et telechargement.",
-    "detailKicker": "Details du projet",
+    "certificatesSubline": "Justificatifs PDF avec aperçu et téléchargement.",
+    "detailKicker": "Détails du projet",
     "detailStatus": "Statut",
     "detailStack": "Stack",
-    "detailRole": "Role",
+    "detailRole": "Rôle",
     "detailLearning": "Apprentissage",
     "tabs": {
       "projects": "Projets",
       "certificates": "Certificats"
     },
-    "detailsButton": "Afficher les details",
+    "detailsButton": "Afficher les détails",
     "empty": {
       "projects": {
         "title": "Projets: Pas encore de contenu"
@@ -145,9 +145,9 @@
       "certificates": {
         "title": "Certificats: Pas encore de contenu"
       },
-      "description": "Les donnees avec vraies captures et descriptions seront ajoutees demain.",
-      "previewButton": "Ouvrir l'aperçu detail",
-      "modalDescription": "Le scaffold detail/zoom est actif et pret pour des donnees reelles.",
+      "description": "Les données avec vraies captures et descriptions seront ajoutées demain.",
+      "previewButton": "Ouvrir l’aperçu détail",
+      "modalDescription": "Le scaffold détail/zoom est actif et prêt pour des données réelles.",
       "modalMeta": [
         "Titre",
         "Description courte",
@@ -168,20 +168,20 @@
     "kicker": "Contact",
     "title": "Contact",
     "description": "Pour une place de stage en Suisse en 2027/2028, des questions ou une collaboration, je suis joignable par e-mail.",
-    "phoneLabel": "Telephone",
+    "phoneLabel": "Téléphone",
     "mailLabel": "E-mail",
-    "schoolMailLabel": "E-mail ecole"
+    "schoolMailLabel": "E-mail école"
   },
   "modal": {
     "close": "Fermer",
-    "title": "Vue detail",
+    "title": "Vue détail",
     "projectKicker": "Statut du projet",
     "certificateKicker": "Certificat"
   },
-  "portfolioDownloadButton": "Telecharger le PDF",
+  "portfolioDownloadButton": "Télécharger le PDF",
   "footer": {
-    "rights": "Tous droits reserves.",
-    "legalLink": "Confidentialite et cookies"
+    "rights": "Tous droits réservés.",
+    "legalLink": "Confidentialité et cookies"
   },
   "github": {
     "kicker": "GitHub",
@@ -194,16 +194,16 @@
     "openSourceText": "Dès que des pull requests mergées seront disponibles, elles seront listées ici avec projet, courte description et lien."
   },
   "legal": {
-    "kicker": "Mentions legales",
-    "title": "Confidentialite et cookies",
-    "subline": "Court apercu des donnees traitees par ce site portfolio.",
-    "privacyTitle": "Confidentialite",
-    "privacyText": "Ce site portfolio ne traite pas de saisies de formulaire et n utilise pas d outils d analyse ou de publicite. Lors du chargement du site, des donnees d acces techniquement necessaires peuvent etre traitees par l hebergeur.",
+    "kicker": "Mentions légales",
+    "title": "Confidentialité et cookies",
+    "subline": "Court aperçu des données traitées par ce site portfolio.",
+    "privacyTitle": "Confidentialité",
+    "privacyText": "Ce site portfolio ne traite pas de saisies de formulaire et n’utilise pas d’outils d’analyse ou de publicité. Lors du chargement du site, des données d’accès techniquement nécessaires peuvent être traitées par l’hébergeur.",
     "cookieTitle": "Cookies et stockage local",
-    "cookieText": "Le site ne place pas de cookies de suivi. La langue et le theme peuvent etre enregistres localement dans le navigateur afin de conserver le reglage lors de la prochaine visite.",
+    "cookieText": "Le site ne place pas de cookies de suivi. La langue et le thème peuvent être enregistrés localement dans le navigateur afin de conserver le réglage lors de la prochaine visite.",
     "externalTitle": "Contenus externes",
-    "externalText": "Les images de projets, certificats et le graphique Pacman Contributions sont charges localement. Les liens externes vers GitHub ou e-mail ne s ouvrent qu au clic.",
-    "contactTitle": "Contact pour les questions de confidentialite",
-    "contactText": "Pour toute question sur ce site portfolio ou les donnees personnelles, je suis joignable via l adresse e-mail indiquee dans la section contact."
+    "externalText": "Les images de projets, certificats et le graphique Pacman Contributions sont chargés localement. Les liens externes vers GitHub ou e-mail ne s’ouvrent qu’au clic.",
+    "contactTitle": "Contact pour les questions de confidentialité",
+    "contactText": "Pour toute question sur ce site portfolio ou les données personnelles, je suis joignable via l’adresse e-mail indiquée dans la section contact."
   }
 }

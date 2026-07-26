@@ -1,0 +1,209 @@
+{
+  "skip": {
+    "content": "Прескочи на садржај"
+  },
+  "nav": {
+    "home": "Почетак",
+    "about": "О мени",
+    "career": "Развој",
+    "tech": "Tech stack",
+    "portfolio": "Пројекти",
+    "contact": "Контакт",
+    "github": "GitHub"
+  },
+  "hero": {
+    "kicker": "IMS развој апликација | пракса 2027/2028",
+    "description": "Крећем у 3. IMS годину и развијам мале и средње Python и web апликације са фокусом на локалне алате, API-је, тестове и разумљиве корисничке интерфејсе.",
+    "factEducation": "Од лета 2026: 3. IMS година, развој апликација",
+    "factProjects": "Пројекти: PathLab, SortLab, VSW, BESP2074",
+    "factStack": "Python, React/Vite, FastAPI, Git",
+    "projectsKicker": "Одабрани пројекти",
+    "projectsTitle": "Лако проверљиво",
+    "projectPathlab": "Визуализација рута, тестови, GitHub",
+    "projectSortlab": "Алгоритми сортирања, React/Vite",
+    "projectVsw": "Дефанзивне провере, тимски пројекат",
+    "projectBesp": "Локална Python симулација",
+    "ctaPortfolio": "Погледај пројекте",
+    "ctaContact": "Контакт",
+    "ctaEmail": "E-mail",
+    "availability": "Тренутно тражим место за праксу у Швајцарској за 4. IMS годину, период 2027/2028.",
+    "factInternship": "Тражим праксу: Швајцарска, 2027/2028",
+    "ctaGithub": "GitHub"
+  },
+  "focus": {
+    "title": "Области рада",
+    "subline": "Кратак преглед области у којима тренутно практично радим.",
+    "web": {
+      "tab": "Web",
+      "title": "Web",
+      "text": "Web интерфејси за пројекте учења, dashboarde и portfolio пројекте.",
+      "points": [
+        "HTML/CSS",
+        "JavaScript",
+        "React/Vite"
+      ],
+      "status": "Пракса: PathLab, SortLab, VSW"
+    },
+    "backend": {
+      "tab": "Backend",
+      "title": "Backend",
+      "text": "Мали API-ји и локални сервиси са јасном логиком података.",
+      "points": [
+        "FastAPI",
+        "pytest",
+        "SQLite/JSON"
+      ],
+      "status": "Пракса: VSW, локални алати"
+    },
+    "cloud": {
+      "tab": "Алати",
+      "title": "Алати",
+      "text": "Пројектни рад са контролом верзија, једноставним workflowovima и локалним setupima.",
+      "points": [
+        "Git и GitHub",
+        "GitHub Actions",
+        "Docker основе"
+      ],
+      "status": "Пракса: тестови и buildovi"
+    },
+    "automation": {
+      "tab": "Аутоматизација",
+      "title": "Аутоматизација",
+      "text": "Скрипте за локалне токове рада, покретање алата и једноставне понављајуће задатке.",
+      "points": [
+        "PowerShell",
+        "CLI алати",
+        "локални помоћници"
+      ],
+      "status": "Пракса: Windows алати"
+    }
+  },
+  "about": {
+    "kicker": "О мени",
+    "title": "О мени",
+    "cardTitle": "Здраво, ја сам Александар",
+    "description": "Похађам IMS са фокусом на развој апликација и сада крећем у 3. IMS годину. Моји пројекти су углавном између Python алата, web интерфејса, API-ја, тестова и обраде података. За 4. IMS годину тражим место за праксу у Швајцарској за 2027/2028.",
+    "factStatus": "Статус: од лета 2026 у 3. IMS години",
+    "factFocus": "Фокус: Python, web, локални алати, API-ји",
+    "factWork": "Циљ: пракса у Швајцарској, 2027/2028"
+  },
+  "career": {
+    "kicker": "Развој",
+    "title": "Развој и окружење за учење",
+    "subline": "Мој тренутни пут повезује школу, информатику и практично искуство у развоју апликација.",
+    "items": {
+      "hackathon": {
+        "type": "Догађај",
+        "title": "Baden hackt",
+        "period": "Учешће",
+        "description": "Учешће на hackathonu \"Baden hackt\" са фокусом на тимски рад, развој идеја и брзу техничку реализацију."
+      },
+      "ims": {
+        "type": "Образовање",
+        "title": "Alte Kantonsschule Aarau & Berufsbildung Baden",
+        "period": "2024 - данас",
+        "description": "Информатика у средњој школи (IMS), смер развој апликација. Крећем у 3. IMS годину и припремам се за праксу у 4. години."
+      },
+      "school": {
+        "type": "Школа",
+        "title": "Bezirksschule Buchs AG",
+        "period": "2021 - 2024",
+        "description": "Ту сам изградио своју школску основу и додатно развио интересовање за информатику, технику и структурисано учење."
+      }
+    }
+  },
+  "stats": {
+    "projects": "Пројекти",
+    "certificates": "Сертификати",
+    "years": "Године кодирања"
+  },
+  "tech": {
+    "kicker": "Tech stack",
+    "title": "Tech stack по области",
+    "subline": "Само технологије које се појављују у тренутним пројектима или које могу смислено објаснити."
+  },
+  "portfolio": {
+    "kicker": "Пројекти",
+    "title": "Одабрани радови",
+    "subline": "Explorer пројеката са статусом, stackom и линковима или напоменама.",
+    "certificatesTitle": "Сертификати",
+    "certificatesSubline": "PDF докази са прегледом и преузимањем.",
+    "detailKicker": "Детаљи пројекта",
+    "detailStatus": "Статус",
+    "detailStack": "Stack",
+    "detailRole": "Улога",
+    "detailLearning": "Учење",
+    "tabs": {
+      "projects": "Пројекти",
+      "certificates": "Сертификати"
+    },
+    "detailsButton": "Прикажи детаље",
+    "empty": {
+      "projects": {
+        "title": "Пројекти: још нема садржаја"
+      },
+      "certificates": {
+        "title": "Сертификати: још нема садржаја"
+      },
+      "description": "Подаци са правим screenshotovima и описима биће додати сутра.",
+      "previewButton": "Отвори преглед детаља",
+      "modalDescription": "Scaffold за детаље/zoom је активан и спреман за стварне податке.",
+      "modalMeta": [
+        "Наслов",
+        "Кратак опис",
+        "Слика/screenshot",
+        "Технологије или доказ",
+        "Екстерни линк (опционо)"
+      ]
+    },
+    "detailEmptyTitle": "Изабери пројекат",
+    "detailEmptyText": "Кликни на пројектну картицу да видиш статус, stack, улогу и шта сам научио."
+  },
+  "filters": {
+    "all": "Сви",
+    "visualization": "Визуализација",
+    "inProgress": "У раду"
+  },
+  "contact": {
+    "kicker": "Контакт",
+    "title": "Контакт",
+    "description": "За праксу у Швајцарској за 2027/2028, питања или сарадњу доступан сам путем e-maila.",
+    "phoneLabel": "Телефон",
+    "mailLabel": "E-mail",
+    "schoolMailLabel": "Школски e-mail"
+  },
+  "modal": {
+    "close": "Затвори",
+    "title": "Детаљни приказ",
+    "projectKicker": "Статус пројекта",
+    "certificateKicker": "Сертификат"
+  },
+  "portfolioDownloadButton": "Преузми PDF",
+  "footer": {
+    "rights": "Сва права задржана.",
+    "legalLink": "Приватност и колачићи"
+  },
+  "github": {
+    "kicker": "GitHub",
+    "title": "Активност и open source",
+    "subline": "GitHub користим за јасно документовање пројеката, верзионисање промена и јавно линковање радова.",
+    "profileLink": "GitHub профил",
+    "reposLink": "Repositories",
+    "openSourceTitle": "Open-source mergeovi",
+    "openSourceEmpty": "Још нема јавно проверљивих mergeova.",
+    "openSourceText": "Када буду доступни mergeovani pull requestovi, овде ће бити наведени са пројектом, кратким описом и линком."
+  },
+  "legal": {
+    "kicker": "Правно",
+    "title": "Приватност и колачићи",
+    "subline": "Кратка напомена о томе које податке ова portfolio страница обрађује.",
+    "privacyTitle": "Приватност",
+    "privacyText": "Ова portfolio страница не обрађује уносе из формулара и не користи аналитику или рекламне trackere. При отварању странице hosting провајдер може обрађивати технички неопходне приступне податке.",
+    "cookieTitle": "Колачићи и локално складиштење",
+    "cookieText": "Страница не поставља tracking колачиће. Језик и тема могу бити локално сачувани у browseru, како би подешавање остало за следећу посету.",
+    "externalTitle": "Екстерни садржај",
+    "externalText": "Слике пројеката, сертификати и Pacman contribution графика учитавају се локално. Екстерни линкови ка GitHubu или e-mailu отварају се тек након клика.",
+    "contactTitle": "Контакт за питања о приватности",
+    "contactText": "За питања о овој portfolio страници или личним подацима можеш ме контактирати преко e-mail адресе наведене у контакт секцији."
+  }
+}

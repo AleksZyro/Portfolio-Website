@@ -117,6 +117,7 @@ const focusText = document.getElementById('focus-text');
 const focusList = document.getElementById('focus-list');
 const focusStatus = document.getElementById('focus-status');
 const languageButtons = document.querySelectorAll('.lang-btn');
+const languageSelect = document.getElementById('language-select');
 const themeToggle = document.getElementById('theme-toggle');
 const heroCopy = document.querySelector('.hero-copy');
 const modal = document.getElementById('detail-modal');
@@ -422,7 +423,7 @@ const embeddedDictionaries = {
   },
   fr: {
     skip: { content: 'Aller au contenu' },
-    nav: { home: 'Accueil', about: 'A propos', career: 'Parcours', tech: 'Stack tech', portfolio: 'Projets', github: 'GitHub', contact: 'Contact' },
+    nav: { home: 'Accueil', about: 'À propos', career: 'Parcours', tech: 'Stack tech', portfolio: 'Projets', github: 'GitHub', contact: 'Contact' },
     hero: {
       kicker: 'D\u00e9veloppement applicatif IMS | Stage 2027/2028',
       description: 'Je developpe de petites et moyennes applications Python et web avec un focus sur les outils locaux, les API, les tests et des interfaces comprehensibles.',
@@ -475,7 +476,7 @@ const embeddedDictionaries = {
       }
     },
     about: {
-      kicker: 'A propos',
+      kicker: 'À propos',
       title: '\u00c0 propos de moi',
       cardTitle: 'Salut, je suis Aleksandar',
       description: 'Je frequente l\'IMS avec une specialisation en developpement applicatif. Mes projets se situent surtout entre outils Python, interfaces web, API, tests et traitement de donnees. Une structure claire, un code comprehensible et des statuts de projet honnetes sont importants pour moi.',
@@ -550,11 +551,11 @@ const embeddedDictionaries = {
     },
     modal: { close: 'Fermer', title: 'Vue detail', projectKicker: 'Statut du projet', certificateKicker: 'Certificat' },
     portfolioDownloadButton: 'Telecharger le PDF',
-    footer: { rights: 'Tous droits reserves.', legalLink: 'Confidentialite et cookies' }
+    footer: { rights: 'Tous droits réservés.', legalLink: 'Confidentialité et cookies' }
   },
   sr: {
-    skip: { content: 'Preskoci na sadrzaj' },
-    nav: { home: 'Pocetna', about: 'O meni', career: 'Put', tech: 'Tech stack', portfolio: 'Projekti', github: 'GitHub', contact: 'Kontakt' },
+    skip: { content: 'Preskoči na sadržaj' },
+    nav: { home: 'Početak', about: 'O meni', career: 'Razvoj', tech: 'Tech stack', portfolio: 'Projekti', github: 'GitHub', contact: 'Kontakt' },
     hero: {
       kicker: 'IMS razvoj aplikacija | praksa 2027/2028',
       description: 'Razvijam male i srednje Python i web aplikacije sa fokusom na lokalne alate, API-je, testove i razumljive korisnicke interfejse.',
@@ -616,8 +617,8 @@ const embeddedDictionaries = {
       factWork: 'Rad: testovi, jasna struktura, iskren status projekta'
     },
     career: {
-      kicker: 'Put',
-      title: 'Put i okruzenje za ucenje',
+      kicker: 'Razvoj',
+      title: 'Razvoj i okruženje za učenje',
       subline: 'Moj trenutni put povezuje skolu, informatiku i prakticno iskustvo u razvoju aplikacija.',
       items: {
         hackathon: {
@@ -680,7 +681,7 @@ const embeddedDictionaries = {
     },
     modal: { close: 'Zatvori', title: 'Detaljni prikaz', projectKicker: 'Status projekta', certificateKicker: 'Sertifikat' },
     portfolioDownloadButton: 'Preuzmi PDF',
-    footer: { rights: 'Sva prava zadrzana.', legalLink: 'Privatnost i kolacici' }
+    footer: { rights: 'Sva prava zadržana.', legalLink: 'Privatnost i kolacici' }
   }
 };
 
@@ -1292,6 +1293,10 @@ const selectLanguageButton = (languageCode) => {
     button.classList.toggle('is-active', isActive);
     button.setAttribute('aria-pressed', String(isActive));
   });
+
+  if (languageSelect) {
+    languageSelect.value = languageCode;
+  }
 };
 
 const refreshDynamicTexts = () => {
@@ -1319,7 +1324,8 @@ const loadLanguage = async (languageCode) => {
   applyStaticTranslations();
   refreshDynamicTexts();
 
-  document.documentElement.lang = languageCode;
+  const htmlLanguageCodes = { sr: 'sr-Latn', 'sr-cyrl': 'sr-Cyrl' };
+  document.documentElement.lang = htmlLanguageCodes[languageCode] || languageCode;
   localStorage.setItem('portfolio-language', languageCode);
   selectLanguageButton(languageCode);
 };
@@ -1345,6 +1351,15 @@ languageButtons.forEach((button) => {
     });
   });
 });
+
+if (languageSelect) {
+  languageSelect.addEventListener('change', () => {
+    loadLanguage(languageSelect.value).catch(() => {
+      selectLanguageButton('de');
+      document.documentElement.lang = 'de';
+    });
+  });
+}
 
 if ('IntersectionObserver' in window) {
   const revealObserver = new IntersectionObserver((entries, obs) => {

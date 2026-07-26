@@ -1,11 +1,11 @@
 {
   "skip": {
-    "content": "Preskoci na sadrzaj"
+    "content": "Preskoči na sadržaj"
   },
   "nav": {
-    "home": "Pocetna",
+    "home": "Početak",
     "about": "O meni",
-    "career": "Put",
+    "career": "Razvoj",
     "tech": "Tech stack",
     "portfolio": "Projekti",
     "contact": "Kontakt",
@@ -19,7 +19,7 @@
     "factStack": "Python, React/Vite, FastAPI, Git",
     "projectsKicker": "Odabrani projekti",
     "projectsTitle": "Lako proverljivo",
-    "projectPathlab": "Routing vizualizacija, testovi, GitHub",
+    "projectPathlab": "Vizualizacija ruta, testovi, GitHub",
     "projectSortlab": "Algoritmi sortiranja, React/Vite",
     "projectVsw": "Defanzivne provere, timski projekat",
     "projectBesp": "Lokalna Python simulacija",
@@ -32,11 +32,11 @@
   },
   "focus": {
     "title": "Oblasti rada",
-    "subline": "Kratak pregled oblasti u kojima trenutno prakticno radim.",
+    "subline": "Kratak pregled oblasti u kojima trenutno praktično radim.",
     "web": {
       "tab": "Web",
       "title": "Web",
-      "text": "Web interfejsi za projekte ucenja, dashboard-e i portfolio projekte.",
+      "text": "Web interfejsi za projekte učenja, dashboarde i portfolio projekte.",
       "points": [
         "HTML/CSS",
         "JavaScript",
@@ -58,7 +58,7 @@
     "cloud": {
       "tab": "Alati",
       "title": "Alati",
-      "text": "Projektni rad sa kontrolom verzija, jednostavnim workflow-ovima i lokalnim setup-ima.",
+      "text": "Projektni rad sa kontrolom verzija, jednostavnim workflowovima i lokalnim setupima.",
       "points": [
         "Git i GitHub",
         "GitHub Actions",
@@ -69,11 +69,11 @@
     "automation": {
       "tab": "Automatizacija",
       "title": "Automatizacija",
-      "text": "Skripte za lokalne tokove rada, startovanje alata i jednostavne ponavljajuce zadatke.",
+      "text": "Skripte za lokalne tokove rada, pokretanje alata i jednostavne ponavljajuće zadatke.",
       "points": [
         "PowerShell",
         "CLI alati",
-        "lokalni pomocnici"
+        "lokalni pomoćnici"
       ],
       "status": "Praksa: Windows alati"
     }
@@ -88,27 +88,27 @@
     "factWork": "Cilj: praksa u Švajcarskoj, 2027/2028"
   },
   "career": {
-    "kicker": "Put",
-    "title": "Put i okruzenje za ucenje",
-    "subline": "Moj trenutni put povezuje skolu, informatiku i prakticno iskustvo u razvoju aplikacija.",
+    "kicker": "Razvoj",
+    "title": "Razvoj i okruženje za učenje",
+    "subline": "Moj trenutni put povezuje školu, informatiku i praktično iskustvo u razvoju aplikacija.",
     "items": {
       "hackathon": {
-        "type": "Dogadjaj",
+        "type": "Događaj",
         "title": "Baden hackt",
-        "period": "Ucesce",
-        "description": "Ucesce na hakatonu \"Baden hackt\" sa fokusom na timski rad, razvoj ideja i brzu tehnicku realizaciju."
+        "period": "Učešće",
+        "description": "Učešće na hackathonu \"Baden hackt\" sa fokusom na timski rad, razvoj ideja i brzu tehničku realizaciju."
       },
       "ims": {
         "type": "Obrazovanje",
         "title": "Alte Kantonsschule Aarau & Berufsbildung Baden",
         "period": "2024 - danas",
-        "description": "Informaticka srednja skola (IMS), smer razvoj aplikacija. Krecem u 3. IMS godinu i pripremam se za praksu u 4. godini."
+        "description": "Informatika u srednjoj školi (IMS), smer razvoj aplikacija. Krećem u 3. IMS godinu i pripremam se za praksu u 4. godini."
       },
       "school": {
-        "type": "Skola",
+        "type": "Škola",
         "title": "Bezirksschule Buchs AG",
         "period": "2021 - 2024",
-        "description": "Tu sam izgradio svoju skolsku osnovu i dodatno razvio interesovanje za informatiku, tehniku i strukturisano ucenje."
+        "description": "Tu sam izgradio svoju školsku osnovu i dodatno razvio interesovanje za informatiku, tehniku i strukturisano učenje."
       }
     }
   },
@@ -132,12 +132,12 @@
     "detailStatus": "Status",
     "detailStack": "Stack",
     "detailRole": "Uloga",
-    "detailLearning": "Ucenje",
+    "detailLearning": "Učenje",
     "tabs": {
       "projects": "Projekti",
       "certificates": "Sertifikati"
     },
-    "detailsButton": "Prikazi detalje",
+    "detailsButton": "Prikaži detalje",
     "empty": {
       "projects": {
         "title": "Projekti: Jos nema sadrzaja"
@@ -145,7 +145,7 @@
       "certificates": {
         "title": "Sertifikati: Jos nema sadrzaja"
       },
-      "description": "Podaci sa pravim screenshot-ovima i opisima bice dodati sutra.",
+      "description": "Podaci sa pravim screenshotovima i opisima biće dodati sutra.",
       "previewButton": "Otvori pregled detalja",
       "modalDescription": "Scaffold za detalje/zoom je aktivan i spreman za stvarne podatke.",
       "modalMeta": [
@@ -180,8 +180,8 @@
   },
   "portfolioDownloadButton": "Preuzmi PDF",
   "footer": {
-    "rights": "Sva prava zadrzana.",
-    "legalLink": "Privatnost i kolacici"
+    "rights": "Sva prava zadržana.",
+    "legalLink": "Privatnost i kolačići"
   },
   "github": {
     "kicker": "GitHub",
@@ -190,20 +190,20 @@
     "profileLink": "GitHub profil",
     "reposLink": "Repositories",
     "openSourceTitle": "Open-source merge-ovi",
-    "openSourceEmpty": "Jos nema javno proverljivih merge-ova.",
-    "openSourceText": "Kada budu dostupni merge-ovani pull requestovi, ovde ce biti navedeni sa projektom, kratkim opisom i linkom."
+    "openSourceEmpty": "Još nema javno proverljivih mergeova.",
+    "openSourceText": "Kada budu dostupni mergeovani pull requestovi, ovde će biti navedeni sa projektom, kratkim opisom i linkom."
   },
   "legal": {
     "kicker": "Pravno",
-    "title": "Privatnost i kolacici",
-    "subline": "Kratka napomena o tome koje podatke ova portfolio stranica obradjuje.",
+    "title": "Privatnost i kolačići",
+    "subline": "Kratka napomena o tome koje podatke ova portfolio stranica obrađuje.",
     "privacyTitle": "Privatnost",
-    "privacyText": "Ova portfolio stranica ne obradjuje unose iz formulara i ne koristi analitiku ili reklamne trackere. Pri otvaranju stranice hosting provajder moze obradjivati tehnicki neophodne pristupne podatke.",
-    "cookieTitle": "Kolacici i lokalno skladistenje",
-    "cookieText": "Stranica ne postavlja tracking kolacice. Jezik i tema mogu biti lokalno sacuvani u browseru, kako bi podesavanje ostalo za sledecu posetu.",
-    "externalTitle": "Eksterni sadrzaj",
-    "externalText": "Slike projekata, sertifikati i Pacman contribution grafika ucitavaju se lokalno. Eksterni linkovi ka GitHubu ili e-mailu otvaraju se tek nakon klika.",
+    "privacyText": "Ova portfolio stranica ne obrađuje unose iz formulara i ne koristi analitiku ili reklamne trackere. Pri otvaranju stranice hosting provajder može obrađivati tehnički neophodne pristupne podatke.",
+    "cookieTitle": "Kolačići i lokalno skladištenje",
+    "cookieText": "Stranica ne postavlja tracking kolačiće. Jezik i tema mogu biti lokalno sačuvani u browseru, kako bi podešavanje ostalo za sledeću posetu.",
+    "externalTitle": "Eksterni sadržaj",
+    "externalText": "Slike projekata, sertifikati i Pacman contribution grafika učitavaju se lokalno. Eksterni linkovi ka GitHubu ili e-mailu otvaraju se tek nakon klika.",
     "contactTitle": "Kontakt za pitanja o privatnosti",
-    "contactText": "Za pitanja o ovoj portfolio stranici ili licnim podacima mozes me kontaktirati preko e-mail adrese navedene u kontakt sekciji."
+    "contactText": "Za pitanja o ovoj portfolio stranici ili ličnim podacima možeš me kontaktirati preko e-mail adrese navedene u kontakt sekciji."
   }
 }
