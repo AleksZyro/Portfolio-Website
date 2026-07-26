@@ -808,6 +808,20 @@ if (themeToggle) {
   });
 }
 
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+if (!prefersReducedMotion.matches) {
+  window.addEventListener('pointermove', (event) => {
+    document.body.style.setProperty('--surface-x', `${event.clientX}px`);
+    document.body.style.setProperty('--surface-y', `${event.clientY}px`);
+    document.body.style.setProperty('--surface-opacity', '1');
+  }, { passive: true });
+
+  window.addEventListener('pointerleave', () => {
+    document.body.style.setProperty('--surface-opacity', '0');
+  });
+}
+
 if (heroCopy) {
   heroCopy.addEventListener('pointermove', (event) => {
     const rect = heroCopy.getBoundingClientRect();
