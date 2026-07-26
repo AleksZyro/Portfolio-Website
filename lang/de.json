@@ -1,57 +1,91 @@
 {
-  "skip": { "content": "Zum Inhalt springen" },
+  "skip": {
+    "content": "Zum Inhalt springen"
+  },
   "nav": {
     "home": "Start",
     "about": "Über mich",
     "career": "Werdegang",
     "tech": "Tech-Stack",
-    "portfolio": "Portfolio",
-    "contact": "Kontakt"
+    "portfolio": "Projekte",
+    "contact": "Kontakt",
+    "github": "GitHub"
   },
   "hero": {
-    "kicker": "Portfolio Applikationsentwicklung",
-    "description": "Ich entwickle eigene Anwendungen in den Bereichen Web, APIs, Daten und Automatisierung und vertiefe dabei strukturierte Architektur, Tests und verständliche Benutzeroberflächen.",
-    "ctaPortfolio": "Portfolio ansehen",
+    "kicker": "IMS Applikationsentwicklung | Praktikum 2027/2028",
+    "description": "Ich starte ins 3. IMS-Jahr und entwickle kleine bis mittelgrosse Python- und Web-Anwendungen mit Fokus auf lokale Tools, APIs, Tests und nachvollziehbare Benutzeroberflächen.",
+    "factEducation": "Ab Sommer 2026: 3. IMS-Jahr, Applikationsentwicklung",
+    "factProjects": "Projekte: PathLab, SortLab, VSW, BESP2074",
+    "factStack": "Python, React/Vite, FastAPI, Git",
+    "projectsKicker": "Ausgewählte Projekte",
+    "projectsTitle": "Projekte",
+    "projectPathlab": "Routing-Visualizer, Tests, GitHub",
+    "projectSortlab": "Sortieralgorithmen, React/Vite",
+    "projectVsw": "Defensive Checks, Teamprojekt",
+    "projectBesp": "Lokale Python-Simulation",
+    "ctaPortfolio": "Projekte ansehen",
     "ctaContact": "Kontakt",
-    "ctaEmail": "E-Mail"
+    "ctaEmail": "E-Mail",
+    "availability": "Aktuell suche ich eine Praktikumsstelle in der Schweiz für das 4. IMS-Jahr, Zeitraum 2027/2028.",
+    "factInternship": "Praktikum gesucht: Schweiz, 2027/2028",
+    "ctaGithub": "GitHub"
   },
   "focus": {
-    "title": "Aktiver Fokus",
-    "subline": "Klicke auf einen Bereich, um den aktuellen Entwicklungsfokus zu sehen.",
+    "title": "Technische Praxis",
+    "subline": "Kurzer Überblick über die Bereiche, in denen ich aktuell praktisch arbeite.",
     "web": {
       "tab": "Web",
       "title": "Web",
-      "text": "Responsive Oberflächen mit klarer UX und semantischem Markup.",
-      "points": ["HTML/CSS Architektur", "Interaktive JavaScript-Flows", "Mobile-first Umsetzung"],
-      "status": "Aktiv: UI/UX"
+      "text": "Weboberflächen für Lernprojekte, Dashboards und Portfolio-Projekte.",
+      "points": [
+        "HTML/CSS",
+        "JavaScript",
+        "React/Vite"
+      ],
+      "status": "Praxis: PathLab, SortLab, VSW"
     },
     "backend": {
       "tab": "Backend",
       "title": "Backend",
-      "text": "API-Design mit wartbarer Struktur und nachvollziehbarer Datenlogik.",
-      "points": ["C# und .NET APIs", "SQL/NoSQL Datenmodellierung", "Saubere Layer-Aufteilung"],
-      "status": "Aktiv: API-Design"
+      "text": "Kleine APIs und lokale Services mit klarer Datenlogik.",
+      "points": [
+        "FastAPI",
+        "pytest",
+        "SQLite/JSON"
+      ],
+      "status": "Praxis: VSW, lokale Tools"
     },
     "cloud": {
-      "tab": "Cloud",
-      "title": "Cloud",
-      "text": "Deployment und Betrieb von Services in stabilen Umgebungen.",
-      "points": ["AWS Grundlagen", "Container mit Docker", "Konfigurierbare Deployments"],
-      "status": "Aktiv: Deployment"
+      "tab": "Tools",
+      "title": "Tools",
+      "text": "Projektarbeit mit Versionskontrolle, einfachen Workflows und lokalen Setups.",
+      "points": [
+        "Git und GitHub",
+        "GitHub Actions",
+        "Docker-Grundlagen"
+      ],
+      "status": "Praxis: Tests und Builds"
     },
     "automation": {
       "tab": "Automatisierung",
       "title": "Automatisierung",
-      "text": "Wiederkehrende Aufgaben effizient automatisieren und überwachen.",
-      "points": ["PowerShell Skripte", "Power Automate Flows", "Logging und Trigger"],
-      "status": "Aktiv: Workflows"
+      "text": "Skripte für lokale Abläufe, Starts und einfache wiederkehrende Aufgaben.",
+      "points": [
+        "PowerShell",
+        "CLI-Tools",
+        "lokale Helfer"
+      ],
+      "status": "Praxis: Windows-Tools"
     }
   },
   "about": {
     "kicker": "Über mich",
-    "title": "Persönliches Profil",
+    "title": "Über mich",
     "cardTitle": "Hallo, ich bin Aleksandar",
-    "description": "Ich besuche die IMS mit Schwerpunkt Applikationsentwicklung und vertiefe schulische Grundlagen durch eigene und gemeinsame Softwareprojekte. Dabei lege ich Wert auf verständliche Benutzeroberflächen, nachvollziehbaren Code und kontinuierliches Lernen."
+    "description": "Ich besuche die Informatikmittelschule mit Schwerpunkt Applikationsentwicklung und starte nun ins 3. IMS-Jahr. Meine Projekte bewegen sich vor allem zwischen Python-Tools, Weboberflächen, APIs, Tests und Datenverarbeitung. Für das 4. IMS-Jahr suche ich eine Praktikumsstelle in der Schweiz für 2027/2028.",
+    "factStatus": "Status: ab Sommer 2026 im 3. IMS-Jahr",
+    "factFocus": "Fokus: Python, Web, lokale Tools, APIs",
+    "factWork": "Ziel: Praktikum Schweiz, 2027/2028"
   },
   "career": {
     "kicker": "Werdegang",
@@ -68,7 +102,7 @@
         "type": "Ausbildung",
         "title": "Alte Kantonsschule Aarau & Berufsbildung Baden",
         "period": "2024 - heute",
-        "description": "Informatikmittelschule (IMS), Fachrichtung Applikationsentwicklung. Aktuell vertiefe ich schulische Grundlagen und verbinde sie mit praktischer Softwareentwicklung."
+        "description": "Informatikmittelschule (IMS), Fachrichtung Applikationsentwicklung. Ich starte ins 3. IMS-Jahr und bereite mich auf die Praktikumsphase im 4. Jahr vor."
       },
       "school": {
         "type": "Schule",
@@ -85,31 +119,55 @@
   },
   "tech": {
     "kicker": "Tech-Stack",
-    "title": "Technologien, die ich bereits genutzt habe",
-    "subline": "Die Erfahrungen stammen aus eigenen Projekten, Teamprojekten und dem IMS-Unterricht und sind je nach Technologie unterschiedlich vertieft."
+    "title": "Tech-Stack nach Einsatzbereich",
+    "subline": "Nur Technologien, die in aktuellen Projekten vorkommen oder die ich plausibel erklären kann."
   },
   "portfolio": {
-    "kicker": "Portfolio",
-    "title": "Projekte und Zertifikate",
-    "subline": "Fünf Projekte und drei Zertifikate sind bereits hinterlegt.",
+    "kicker": "Projekte",
+    "title": "Ausgewählte Arbeiten",
+    "subline": "Projekt-Explorer mit Status, Stack und Links oder Hinweisen.",
+    "certificatesTitle": "Zertifikate",
+    "certificatesSubline": "Nachweise als PDF mit Vorschau und Download.",
+    "detailKicker": "Projektdetails",
+    "detailStatus": "Status",
+    "detailStack": "Stack",
+    "detailRole": "Rolle",
+    "detailLearning": "Lerneffekt",
     "tabs": {
       "projects": "Projekte",
       "certificates": "Zertifikate"
     },
     "detailsButton": "Details anzeigen",
     "empty": {
-      "projects": { "title": "Projekte: Noch keine Inhalte" },
-      "certificates": { "title": "Zertifikate: Noch keine Inhalte" },
-      "description": "Die Daten werden morgen mit echten Screenshots und Beschreibungen befuellt.",
+      "projects": {
+        "title": "Projekte: Noch keine Inhalte"
+      },
+      "certificates": {
+        "title": "Zertifikate: Noch keine Inhalte"
+      },
+      "description": "Die Daten werden morgen mit echten Screenshots und Beschreibungen befüllt.",
       "previewButton": "Detailansicht-Vorschau öffnen",
-      "modalDescription": "Scaffold fuer Zoom/Detailansicht ist aktiv und bereit fuer reale Daten.",
-      "modalMeta": ["Titel", "Kurzbeschreibung", "Bild/Screenshot", "Technologien oder Nachweis", "Externer Link (optional)"]
-    }
+      "modalDescription": "Scaffold für Zoom/Detailansicht ist aktiv und bereit für reale Daten.",
+      "modalMeta": [
+        "Titel",
+        "Kurzbeschreibung",
+        "Bild/Screenshot",
+        "Technologien oder Nachweis",
+        "Externer Link (optional)"
+      ]
+    },
+    "detailEmptyTitle": "Projekt auswählen",
+    "detailEmptyText": "Klicke auf eine Projektkarte, um Status, Stack, Rolle und Lerneffekt anzuzeigen."
+  },
+  "filters": {
+    "all": "Alle",
+    "visualization": "Visualisierung",
+    "inProgress": "In Arbeit"
   },
   "contact": {
     "kicker": "Kontakt",
-    "title": "Lass uns zusammenarbeiten",
-    "description": "Für Praktikum, Zusammenarbeit oder Projektideen freue ich mich auf deine Nachricht.",
+    "title": "Kontakt",
+    "description": "Für eine Praktikumsstelle 2027/2028 in der Schweiz, Rückfragen oder Zusammenarbeit bin ich per E-Mail erreichbar.",
     "phoneLabel": "Telefon",
     "mailLabel": "E-Mail",
     "schoolMailLabel": "Schul-Mail"
@@ -123,5 +181,15 @@
   "portfolioDownloadButton": "Download PDF",
   "footer": {
     "rights": "Alle Rechte vorbehalten."
+  },
+  "github": {
+    "kicker": "GitHub",
+    "title": "Aktivität und Open Source",
+    "subline": "GitHub nutze ich, um Projekte nachvollziehbar zu dokumentieren, Änderungen zu versionieren und öffentliche Arbeiten verlinkbar zu machen.",
+    "profileLink": "GitHub-Profil",
+    "reposLink": "Repositories",
+    "openSourceTitle": "Open-Source-Merges",
+    "openSourceEmpty": "Noch keine öffentlich belegten Merges hinterlegt.",
+    "openSourceText": "Sobald gemergte Pull Requests vorhanden sind, werden sie hier mit Projekt, Kurzbeschreibung und Link aufgeführt."
   }
 }

@@ -1,76 +1,50 @@
-# Portfolio-Website
+# Portfolio Website
 
-Dies ist meine persönliche Portfolio-Website für Bewerbungen im Bereich Informatik und Applikationsentwicklung.
+Persönliche Portfolio-Seite von Aleksandar Nikolic. Die Seite zeigt Profil, Werdegang, Tech-Stack, Projekte, Zertifikate und Kontaktinformationen in einem statischen Frontend.
 
-Live-Version: [nikolicaleksandar.netlify.app](https://nikolicaleksandar.netlify.app/)
+## Ziel
 
-## Zweck des Portfolios
-
-Mit dieser Website präsentiere ich meine bisherigen Informatik-Erfahrungen aus der IMS, eigene Projekte, Zertifikate und Technologien, mit denen ich bereits gearbeitet habe. Das Portfolio dient vor allem dazu, mich bei Praktikumsstellen, Lehrbetrieben, Projektpartnern oder späteren Arbeitgebern professionell vorzustellen.
-
-Die Website zeigt nicht nur fertige Ergebnisse, sondern auch meinen Lernfortschritt: Welche Projekte ich umgesetzt habe, welche Technologien ich nutze und wie ich technische Themen verständlich dokumentiere.
+Die Seite soll ein glaubwürdiges Entwicklerprofil zeigen: echte Projekte, klare Projektstände, nachvollziehbarer Tech-Stack und direkte Kontaktmöglichkeiten.
 
 ## Inhalte
 
-- persönliches Profil
-- Werdegang und IMS-Ausbildung
-- Tech-Stack
-- fertige und laufende Projekte
-- Zertifikate
-- Kontaktmöglichkeiten
-- mehrsprachige Oberfläche
+- Startbereich mit Kurzprofil, Skills und Kontaktlinks
+- Über-mich-Bereich mit Kennzahlen
+- Werdegang mit IMS, Bezirksschule und Hackathon
+- Gruppierter Tech-Stack nach Einsatzbereich
+- Portfolio-Bereich mit Projekten und Zertifikaten
+- Detailansicht für Projekte und PDF-Zertifikate
+- Mehrsprachigkeit über `lang/de.json`, `lang/en.json`, `lang/fr.json` und `lang/sr.json`
 
-## Projekte im Portfolio
-
-### SortLab
-
-Interaktiver Visualizer für Sortieralgorithmen. Das Projekt zeigt, wie verschiedene Algorithmen ein Array sortieren, und visualisiert Schritte, Vergleiche, Swaps und Laufzeit.
-
-### Heimatschutz Aargau – interne Webanwendung
-
-Gemeinsames Schulprojekt zur Sammlung, Darstellung und Prüfung von Baugesuchen mit amtlichen AGIS-Schutzdaten. Das Projekt befindet sich in Entwicklung und ist derzeit nicht öffentlich verlinkt.
-
-### UMR – Useless Mobs Reworked
-
-Gemeinsames Minecraft-Mod-Projekt, das bisher wenig relevante Mobs mit neuen Funktionen und stärkerem Gameplay-Einfluss überarbeitet. Die Veröffentlichung auf CurseForge ist nach der Fertigstellung vorgesehen.
-
-### SoundDeck
-
-Windows-Soundboard-MVP mit Python und PySide6. Nutzer können MP3-Dateien hinzufügen, Sounds abspielen, Kategorien verwenden und Audio über ausgewählte Geräte routen.
-
-### Portfolio Website
-
-Diese Website selbst ist ebenfalls ein Projekt. Sie ist statisch mit HTML, CSS und JavaScript aufgebaut und wird über Netlify veröffentlicht.
-
-## Technische Umsetzung
-
-Die Website besteht hauptsächlich aus:
-
-```text
-index.html
-style.css
-app.js
-portfolio-project-links.js
-lang/
-assets/
-```
-
-Verwendete Technologien:
+## Tech-Stack
 
 - HTML
 - CSS
 - JavaScript
-- GitHub
-- Netlify
+- JSON
+- Lokale Assets für Bilder, Icons und Zertifikate
 
-Die dargestellten Technologie-Erfahrungen stammen aus eigenen Projekten, Teamprojekten und dem IMS-Unterricht. Der Erfahrungsumfang ist je nach Technologie unterschiedlich.
+## Lokal starten
 
-## Zielgruppe
+Die Seite ist statisch. Am einfachsten läuft sie über einen lokalen Server:
 
-Dieses Portfolio richtet sich an Personen und Betriebe, die sich schnell ein Bild von meinen Informatik-Kenntnissen, meinem Arbeitsstil und meinen Projekten machen möchten.
+```powershell
+cd "C:\Users\Startklar\OneDrive - Alte Kantonsschule Aarau\Desktop\Dokumente\Playground\Portfolio"
+python -m http.server 8765
+```
 
-## Autor
+Danach im Browser öffnen:
 
-**Aleksandar Nikolic**  
-IMS Applikationsentwicklung  
-Kanton Aargau, Schweiz
+```text
+http://127.0.0.1:8765
+```
+
+## Projektpflege
+
+- Projekte, Zertifikate und Tech-Gruppen werden in `app.js` gepflegt.
+- Übersetzungen werden in `lang/*.json` gepflegt.
+- Bilder, Previews und PDFs liegen in `assets/`.
+
+## Status
+
+Aktiv in Bearbeitung. Projektstände im Portfolio werden bewusst ehrlich gekennzeichnet, z. B. fertig, in Arbeit, lokal nutzbar oder nicht öffentlich verlinkt.

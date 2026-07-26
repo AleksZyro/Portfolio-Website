@@ -2,25 +2,62 @@
   codingSinceYear: 2025,
   projects: [
     {
+      title: 'PathLab',
+      cardDescription: 'Visualizer für Wegfindungsalgorithmen auf einem gewichteten Raster mit BFS, DFS, Dijkstra und A*.',
+      detailDescription: 'PathLab\n\nPathLab ist ein interaktiver Visualizer zum Lernen und Vergleichen von Wegfindungsalgorithmen. Die Anwendung arbeitet mit einem gewichteten Raster, Start- und Zielpunkten sowie Feldern wie Wand, Wasser und Schlamm.\n\nDer Schwerpunkt liegt auf nachvollziehbarer Algorithmus-Visualisierung: BFS, DFS, Dijkstra und A* können einzeln ausgeführt oder verglichen werden. Die Anwendung zeigt den gefundenen Pfad, Kosten und Laufzeit getrennt von der Animation.\n\nDas Projekt ist eine stabile Portfolio-Version mit GitHub-Pages-Demo, automatisierten Tests und GitHub-Actions-Workflow.',
+      meta: ['Status: stabile Portfolio-Version', 'Stack: React, Vite, JavaScript, CSS, Vitest', 'Fokus: Algorithmen, Tests, UI-State', 'Demo: aktuell nicht verlinkt', 'Repository: öffentlich'],
+      tags: ['fertig', 'React/Vite', 'Tests', 'GitHub Pages'],
+      filters: ['web', 'visualisierung'],
+      role: 'Eigenes Lern- und Portfolio-Projekt',
+      learning: 'Algorithmen getrennt von React-Komponenten halten, Tests für Randfälle schreiben und UI-State nachvollziehbar machen.',
+      links: [
+        { label: 'GitHub', url: 'https://github.com/AleksZyro/PathLab' }
+      ],
+      previewImage: 'assets/project-previews/pathlab-overview.png',
+      previewLabel: 'Projektvorschau',
+      previewBadge: 'Fertig'
+    },
+    {
       title: 'SortLab',
-      cardDescription: 'Interaktiver Visualizer für Sortieralgorithmen mit Live-Steuerung, Balkenansicht, Statistik und Lernbereich.',
-      detailDescription: 'SortLab\n\nSortLab ist ein interaktiver Visualizer für Sortieralgorithmen. Nutzerinnen und Nutzer sehen Schritt für Schritt, wie ein Array sortiert wird, können die Geschwindigkeit live anpassen und verschiedene Verfahren direkt miteinander vergleichen.\n\nIm Projekt enthalten sind aktuell fünf Algorithmen: Bubble Sort, Selection Sort, Insertion Sort, Quick Sort und Heap Sort. Zusätzlich zeigt das Dashboard Vergleiche, Swaps, Schritte und die Laufzeit in Millisekunden an.\n\nDas Ziel des Projekts war es, Informatik, Visualisierung und verständliche Lernhilfe in einer modernen Oberfläche zusammenzubringen.',
-      meta: ['Status: Fertig', 'Tech: React, Vite, JavaScript, CSS', 'Fokus: Algorithmen und Visualisierung'],
+      cardDescription: 'Sortieralgorithmus-Visualizer mit Balkenansicht, Steuerung, Statistik und Erklärbereich.',
+      detailDescription: 'SortLab\n\nSortLab ist ein interaktiver Visualizer für Sortieralgorithmen. Nutzerinnen und Nutzer sehen Schritt für Schritt, wie ein Array sortiert wird, können die Geschwindigkeit live anpassen und verschiedene Verfahren vergleichen.\n\nEnthalten sind Bubble Sort, Selection Sort, Insertion Sort, Quick Sort und Heap Sort. Das Dashboard zeigt Vergleiche, Swaps, Schritte und Laufzeit in Millisekunden.\n\nDas Projekt ist fertig nutzbar und dient als Lernprojekt für Algorithmen, React-State und Visualisierung.',
+      meta: ['Status: fertig nutzbar', 'Stack: React, Vite, JavaScript, CSS', 'Fokus: Sortieralgorithmen und Visualisierung', 'Demo: lokal vorhanden', 'Repository: noch nicht öffentlich verlinkt'],
+      tags: ['fertig', 'React/Vite', 'Algorithmen', 'lokal'],
+      filters: ['web', 'visualisierung'],
+      role: 'Eigenes Lernprojekt',
+      learning: 'Animation, Laufzeitsteuerung und Statistik so verbinden, dass der Algorithmus sichtbar und bedienbar bleibt.',
       previewImage: 'assets/project-previews/sortlab-preview.svg',
       previewLabel: 'Projektvorschau',
-      previewBadge: ''
+      previewBadge: 'Fertig'
     },
     {
-      title: 'Heimatschutz Aargau - interne Webanwendung',
-      cardDescription: 'Interne Webanwendung zur Sammlung, Darstellung und Pruefung von Baugesuchen mit AGIS-Schutzdaten.',
-      detailDescription: 'Heimatschutz Aargau - interne Webanwendung\n\nGemeinsam mit zwei Mitschülern entwickle ich aktuell eine interne Webanwendung für den Heimatschutz Aargau. Die Anwendung soll Baugesuche aus offiziellen Gemeindequellen sammeln, übersichtlich darstellen und mit amtlichen AGIS-Schutzdaten abgleichen. Ziel ist es, relevante Fälle schneller zu erkennen und die interne Team-Bearbeitung mit Karte, Notizen und Statusübersicht zu unterstützen.\n\nDas Projekt befindet sich noch in Entwicklung. Da weitere Teams und externe Stellen beteiligt sind, kann die Anwendung momentan noch nicht öffentlich gezeigt oder verlinkt werden.',
-      meta: ['Status: In Entwicklung', 'Sichtbarkeit: Nicht öffentlich', 'Team: 3 Schüler']
+      title: 'VSW - Vulnerability Scanner Web App',
+      cardDescription: 'Defensive Fullstack-Web-App für risikoarme Security-Checks an autorisierten Domains oder IPs.',
+      detailDescription: 'VSW - Vulnerability Scanner Web App\n\nVSW ist ein gemeinsames Projekt mit Botond. Die Anwendung führt defensive, passive oder risikoarme Checks aus und stellt Ergebnisse in einem React-Dashboard dar.\n\nDer Fokus liegt auf HTTP-Security-Headern, TLS-/Zertifikatsinformationen, einer kleinen sicheren Portliste, Reports und Exporten. Das Projekt enthält ein FastAPI-Backend, ein React-Frontend, Tests und Docker-Grundlagen.\n\nWichtig: Das Projekt ist ausdrücklich für eigene Systeme oder Systeme mit Erlaubnis gedacht. Es enthält keine Exploits, kein Brute Force und keine aggressiven Scans.',
+      meta: ['Status: in Arbeit', 'Team: gemeinsam mit Botond', 'Stack: FastAPI, React, TypeScript, SQLite/PostgreSQL, Docker', 'Sichtbarkeit: Repository bei Botond', 'Hinweis: nur defensive Checks'],
+      tags: ['in Arbeit', 'gemeinsam', 'FastAPI', 'React'],
+      filters: ['python', 'web', 'fullstack', 'in-arbeit'],
+      role: 'Gemeinsames Projekt mit Botond',
+      learning: 'Defensive Checks klar begrenzen, Backend und Frontend sauber trennen und Ergebnisse verständlich darstellen.',
+      links: [
+        { label: 'GitHub', url: 'https://github.com/BotondCsereklye/VSW' }
+      ],
+      previewImage: 'assets/project-previews/vsw-preview.svg',
+      previewLabel: 'Projektvorschau',
+      previewBadge: 'In Arbeit'
     },
     {
-      title: 'UMR - Useless Mobs Reworked',
-      cardDescription: 'Minecraft-Mod zur Überarbeitung wenig relevanter Mobs mit neuen Funktionen und stärkerem Gameplay-Einfluss.',
-      detailDescription: 'UMR - Useless Mobs Reworked\n\nGemeinsam mit einem Mitschüler arbeite ich aktuell an UMR, einer Minecraft-Mod, die bisher wenig relevante oder selten genutzte Mobs überarbeitet. Ziel ist es, diesen Mobs neue Funktionen zu geben, sie interessanter zu machen und ihren Einfluss auf das Gameplay zu erhöhen.\n\nNach der Fertigstellung soll die Mod auf CurseForge veröffentlicht werden.',
-      meta: ['Status: In Entwicklung', 'Kategorie: Minecraft Mod', 'Geplante Plattform: CurseForge']
+      title: 'BESP2074',
+      cardDescription: 'Lokale Balkan-Wirtschaftssimulation mit Python-Modell, JSON-Export und Web-Dashboard.',
+      detailDescription: 'BESP2074\n\nBESP2074 ist eine lokale, jahresbasierte Balkan-Simulation. Das Projekt nutzt ein Python-Modell, strukturierte JSON-Daten und ein lokales Web-Dashboard, um Szenarien bis 2074 darzustellen.\n\nDie Anwendung ist als Lern- und Szenariosimulation gedacht. Die Resultate sind keine echten wirtschaftlichen, politischen oder finanziellen Prognosen, sondern vereinfachte Modellläufe mit Annahmen, Seeds und optionalen Ereignissen.\n\nDas Projekt ist lokal nutzbar, aber noch nicht als fertige öffentliche Anwendung veröffentlicht.',
+      meta: ['Status: lokal nutzbar, nicht veröffentlicht', 'Stack: Python, JSON, HTML/CSS, JavaScript', 'Fokus: Simulation, Datenexport, Dashboard', 'Repository: aktuell nicht verlinkt', 'Hinweis: keine Prognose'],
+      tags: ['in Arbeit', 'Python', 'Simulation', 'lokal'],
+      filters: ['python', 'web', 'visualisierung', 'in-arbeit'],
+      role: 'Eigenes Simulationsprojekt',
+      learning: 'Modellannahmen, JSON-Export und Dashboard so verbinden, dass lokale Szenarien nachvollziehbar bleiben.',
+      previewImage: 'assets/project-previews/besp2074-preview.svg',
+      previewLabel: 'Projektvorschau',
+      previewBadge: 'Lokal'
     }
   ],
   certificates: [
@@ -28,7 +65,7 @@
       title: 'Ethical Hacker',
       cardDescription: 'Zertifikat im PDF-Format mit direkter Vorschau und Download.',
       detailDescription: 'Dieses Zertifikat kannst du direkt im Portfolio ansehen oder herunterladen.',
-      meta: ['Format: PDF', 'Nachweis: Zertifikat', 'Download: Verfuegbar'],
+      meta: ['Format: PDF', 'Nachweis: Zertifikat', 'Download: verfügbar'],
       file: 'assets/certificates/ethical-hacker.pdf',
       previewImage: 'assets/certificate-previews/ethical-hacker.png',
       previewLabel: 'Zertifikat',
@@ -38,7 +75,7 @@
       title: 'Introduction to Cybersecurity',
       cardDescription: 'Zertifikat im PDF-Format mit direkter Vorschau und Download.',
       detailDescription: 'Dieses Zertifikat kannst du direkt im Portfolio ansehen oder herunterladen.',
-      meta: ['Format: PDF', 'Nachweis: Zertifikat', 'Download: Verfuegbar'],
+      meta: ['Format: PDF', 'Nachweis: Zertifikat', 'Download: verfügbar'],
       file: 'assets/certificates/introduction-to-cybersecurity.pdf',
       previewImage: 'assets/certificate-previews/introduction-to-cybersecurity.png',
       previewLabel: 'Zertifikat',
@@ -48,29 +85,18 @@
       title: 'BBB Hackathon',
       cardDescription: 'Zertifikat im PDF-Format mit direkter Vorschau und Download.',
       detailDescription: 'Dieses Zertifikat kannst du direkt im Portfolio ansehen oder herunterladen.',
-      meta: ['Format: PDF', 'Nachweis: Zertifikat', 'Download: Verfuegbar'],
+      meta: ['Format: PDF', 'Nachweis: Zertifikat', 'Download: verfügbar'],
       file: 'assets/certificates/bbb-hackathon.pdf',
       previewImage: 'assets/certificate-previews/bbb-hackathon-preview.svg',
       previewLabel: 'Zertifikat',
       previewBadge: 'PDF'
     }
   ],
-  technologies: [
-    { label: 'Python', iconPng: 'https://img.icons8.com/color/48/python--v1.png', fallback: 'PY', glow: 'rgba(80, 164, 255, 0.30)' },
-    { label: 'C#', iconPng: 'https://img.icons8.com/color/48/c-sharp-logo.png', fallback: 'C#', glow: 'rgba(196, 96, 255, 0.30)' },
-    { label: 'JavaScript', iconPng: 'https://img.icons8.com/color/48/javascript--v1.png', fallback: 'JS', glow: 'rgba(255, 218, 67, 0.30)' },
-    { label: 'Java', iconPng: 'https://img.icons8.com/color/48/java-coffee-cup-logo--v1.png', fallback: 'JV', glow: 'rgba(93, 180, 255, 0.30)' },
-    { label: 'Git', iconPng: 'https://img.icons8.com/color/48/git.png', fallback: 'GT', glow: 'rgba(255, 118, 84, 0.30)' },
-    { label: 'Node.js', iconPng: 'https://img.icons8.com/color/48/nodejs.png', fallback: 'ND', glow: 'rgba(112, 210, 121, 0.30)' },
-    { label: 'Docker', iconPng: 'https://img.icons8.com/color/48/docker.png', fallback: 'DK', glow: 'rgba(83, 167, 255, 0.30)' },
-    { label: 'SQL', iconPng: 'assets/icons/sql.svg', fallback: 'SQL', glow: 'rgba(84, 139, 255, 0.30)' },
-    { label: 'NoSQL', iconPng: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg', fallback: 'NQ', glow: 'rgba(111, 201, 110, 0.30)' },
-    { label: '.NET', iconPng: 'https://img.icons8.com/color/48/net-framework.png', fallback: '.N', glow: 'rgba(160, 104, 255, 0.30)' },
-    { label: 'HTML', iconPng: 'https://img.icons8.com/color/48/html-5--v1.png', fallback: 'HT', glow: 'rgba(255, 122, 84, 0.30)' },
-    { label: 'CSS', iconPng: 'https://img.icons8.com/color/48/css3.png', fallback: 'CS', glow: 'rgba(80, 164, 255, 0.30)' },
-    { label: 'AWS Cloud', iconPng: 'https://img.icons8.com/color/48/amazon-web-services.png', fallback: 'AW', glow: 'rgba(255, 183, 90, 0.30)' },
-    { label: 'PowerShell Script', iconPng: 'https://img.icons8.com/color/48/powershell.png', fallback: 'PS', glow: 'rgba(76, 174, 255, 0.30)' },
-    { label: 'Power Automate', iconPng: 'assets/icons/power-automate.svg', fallback: 'PA', glow: 'rgba(98, 159, 255, 0.30)' }
+  techGroups: [
+    { title: 'Python', items: ['FastAPI', 'pytest', 'CLI/local tools'] },
+    { title: 'Frontend', items: ['HTML/CSS', 'JavaScript', 'React/Vite'] },
+    { title: 'Daten', items: ['JSON', 'CSV', 'SQLite'] },
+    { title: 'Tools', items: ['Git', 'GitHub Actions', 'Docker-Grundlagen'] }
   ]
 };
 
@@ -81,6 +107,8 @@ const sections = [...document.querySelectorAll('main section[id]')];
 const revealItems = document.querySelectorAll('.reveal');
 const tabs = document.querySelectorAll('.tab');
 const tabPanels = { projects: document.getElementById('panel-projects'), certificates: document.getElementById('panel-certificates') };
+const projectFilters = document.querySelectorAll('.filter-chip');
+const projectDetailPanel = document.getElementById('project-detail-panel');
 const projectsGrid = document.getElementById('projects-grid');
 const certificatesGrid = document.getElementById('certificates-grid');
 const techGrid = document.getElementById('tech-grid');
@@ -90,6 +118,9 @@ const focusText = document.getElementById('focus-text');
 const focusList = document.getElementById('focus-list');
 const focusStatus = document.getElementById('focus-status');
 const languageButtons = document.querySelectorAll('.lang-btn');
+const themeToggle = document.getElementById('theme-toggle');
+const heroCopy = document.querySelector('.hero-copy');
+const interactiveBackground = document.querySelector('.interactive-background');
 const modal = document.getElementById('detail-modal');
 const modalCard = document.getElementById('modal-card');
 const modalClose = document.getElementById('modal-close');
@@ -117,54 +148,71 @@ i18nElements.forEach((element) => {
 
 let activeDictionary = {};
 let currentFocusKey = 'web';
+let activeProjectFilter = 'all';
+let activeProjectTitle = '';
 const embeddedDictionaries = {
   de: {
     skip: { content: 'Zum Inhalt springen' },
-    nav: { home: 'Start', about: 'Über mich', career: 'Werdegang', tech: 'Tech-Stack', portfolio: 'Portfolio', contact: 'Kontakt' },
+    nav: { home: 'Start', about: '\u00dcber mich', career: 'Werdegang', tech: 'Tech-Stack', portfolio: 'Projekte', github: 'GitHub', contact: 'Kontakt' },
     hero: {
-      kicker: 'Portfolio Applikationsentwicklung',
-      description: 'Ich entwickle saubere, wartbare Softwarelösungen für Web, APIs, Daten und Automatisierung. Fokus auf robuste Architektur, Teamarbeit und klare User-Flows.',
-      ctaPortfolio: 'Portfolio ansehen',
+      kicker: 'IMS Applikationsentwicklung | Praktikum 2027/2028',
+      description: 'Ich entwickle kleine bis mittelgrosse Python- und Web-Anwendungen mit Fokus auf lokale Tools, APIs, Tests und nachvollziehbare Benutzeroberflächen.',
+      factEducation: 'Ab Sommer 2026: 3. IMS-Jahr, Applikationsentwicklung',
+      factInternship: 'Praktikum gesucht: Schweiz, 2027/2028',
+      availability: 'Aktuell suche ich eine Praktikumsstelle in der Schweiz f\u00fcr das 4. IMS-Jahr, Zeitraum 2027/2028.',
+      factProjects: 'Projekte: PathLab, SortLab, VSW, BESP2074',
+      factStack: 'Python, React/Vite, FastAPI, Git',
+      projectsKicker: 'Ausgewählte Projekte',
+      projectsTitle: 'Projekte',
+      projectPathlab: 'Routing-Visualizer, Tests, GitHub',
+      projectSortlab: 'Sortieralgorithmen, React/Vite',
+      projectVsw: 'Defensive Checks, Teamprojekt',
+      projectBesp: 'Lokale Python-Simulation',
+      ctaPortfolio: 'Projekte ansehen',
+      ctaGithub: 'GitHub',
       ctaContact: 'Kontakt',
       ctaEmail: 'E-Mail'
     },
     focus: {
-      title: 'Aktiver Fokus',
-      subline: 'Klicke auf einen Bereich, um den aktuellen Entwicklungsfokus zu sehen.',
+      title: 'Technische Praxis',
+      subline: 'Kurzer Überblick über die Bereiche, in denen ich aktuell praktisch arbeite.',
       web: {
         tab: 'Web',
         title: 'Web',
-        text: 'Responsive Oberflächen mit klarer UX und semantischem Markup.',
-        points: ['HTML/CSS Architektur', 'Interaktive JavaScript-Flows', 'Mobile-first Umsetzung'],
-        status: 'Aktiv: UI/UX'
+        text: 'Weboberflächen für Lernprojekte, Dashboards und Portfolio-Projekte.',
+        points: ['HTML/CSS', 'JavaScript', 'React/Vite'],
+        status: 'Praxis: PathLab, SortLab, VSW'
       },
       backend: {
         tab: 'Backend',
         title: 'Backend',
-        text: 'API-Design mit wartbarer Struktur und nachvollziehbarer Datenlogik.',
-        points: ['C# und .NET APIs', 'SQL/NoSQL Datenmodellierung', 'Saubere Layer-Aufteilung'],
-        status: 'Aktiv: API-Design'
+        text: 'Kleine APIs und lokale Services mit klarer Datenlogik.',
+        points: ['FastAPI', 'pytest', 'SQLite/JSON'],
+        status: 'Praxis: VSW, lokale Tools'
       },
       cloud: {
-        tab: 'Cloud',
-        title: 'Cloud',
-        text: 'Deployment und Betrieb von Services in stabilen Umgebungen.',
-        points: ['AWS Grundlagen', 'Container mit Docker', 'Konfigurierbare Deployments'],
-        status: 'Aktiv: Deployment'
+        tab: 'Tools',
+        title: 'Tools',
+        text: 'Projektarbeit mit Versionskontrolle, einfachen Workflows und lokalen Setups.',
+        points: ['Git und GitHub', 'GitHub Actions', 'Docker-Grundlagen'],
+        status: 'Praxis: Tests und Builds'
       },
       automation: {
         tab: 'Automatisierung',
         title: 'Automatisierung',
-        text: 'Wiederkehrende Aufgaben effizient automatisieren und überwachen.',
-        points: ['PowerShell Skripte', 'Power Automate Flows', 'Logging und Trigger'],
-        status: 'Aktiv: Workflows'
+        text: 'Skripte für lokale Abläufe, Starts und einfache wiederkehrende Aufgaben.',
+        points: ['PowerShell', 'CLI-Tools', 'lokale Helfer'],
+        status: 'Praxis: Windows-Tools'
       }
     },
     about: {
       kicker: 'Über mich',
-      title: 'Persönliches Profil',
+      title: 'Über mich',
       cardTitle: 'Hallo, ich bin Aleksandar',
-      description: 'Ich besuche die IMS mit Schwerpunkt Applikationsentwicklung und arbeite gerne an Projekten mit strukturierter Architektur, nachvollziehbaren APIs und sauberem Frontend. Mir sind Teamfähigkeit, Verantwortung und stetige Verbesserung wichtig.'
+      description: 'Ich besuche die IMS mit Schwerpunkt Applikationsentwicklung. Meine Projekte bewegen sich vor allem zwischen Python-Tools, Weboberflächen, APIs, Tests und Datenverarbeitung. Wichtig sind mir nachvollziehbarer Code, klare Struktur und ehrliche Projektstände.',
+      factStatus: 'Status: ab Sommer 2026 im 3. IMS-Jahr',
+      factFocus: 'Fokus: Python, Web, lokale Tools, APIs',
+      factWork: 'Ziel: Praktikum Schweiz, 2027/2028'
     },
     career: {
       kicker: 'Werdegang',
@@ -181,7 +229,7 @@ const embeddedDictionaries = {
           type: 'Ausbildung',
           title: 'Alte Kantonsschule Aarau & Berufsbildung Baden',
           period: '2024 - heute',
-          description: 'Informatikmittelschule (IMS), Fachrichtung Applikationsentwicklung. Aktuell vertiefe ich schulische Grundlagen und verbinde sie mit praktischer Softwareentwicklung.'
+          description: 'Informatikmittelschule (IMS), Fachrichtung Applikationsentwicklung. Ich starte ins 3. IMS-Jahr und bereite mich auf die Praktikumsphase im 4. Jahr vor.'
         },
         school: {
           type: 'Schule',
@@ -194,28 +242,48 @@ const embeddedDictionaries = {
     stats: { projects: 'Projekte', certificates: 'Zertifikate', years: 'Jahre Coding' },
     tech: {
       kicker: 'Tech-Stack',
-      title: 'Technologien, die ich bereits genutzt habe',
-      subline: 'Fahre über ein Logo, um den Namen zu sehen.'
+      title: 'Tech-Stack nach Einsatzbereich',
+      subline: 'Nur Technologien, die in aktuellen Projekten vorkommen oder die ich plausibel erklären kann.'
     },
     portfolio: {
-      kicker: 'Portfolio',
-      title: 'Projekte und Zertifikate',
-      subline: 'Drei Projekte und drei Zertifikate sind bereits hinterlegt.',
+      kicker: 'Projekte',
+      title: 'Ausgewählte Arbeiten',
+      subline: 'Projekt-Explorer mit Status, Stack und Links oder Hinweisen.',
+      certificatesTitle: 'Zertifikate',
+      certificatesSubline: 'Nachweise als PDF mit Vorschau und Download.',
+      detailKicker: 'Projektdetails',
+      detailStatus: 'Status',
+      detailStack: 'Stack',
+      detailRole: 'Rolle',
+      detailLearning: 'Lerneffekt',
+      detailEmptyTitle: 'Projekt ausw\u00e4hlen',
+      detailEmptyText: 'Klicke auf eine Projektkarte, um Status, Stack, Rolle und Lerneffekt anzuzeigen.',
       tabs: { projects: 'Projekte', certificates: 'Zertifikate' },
       detailsButton: 'Details anzeigen',
       empty: {
         projects: { title: 'Projekte: Noch keine Inhalte' },
         certificates: { title: 'Zertifikate: Noch keine Inhalte' },
-        description: 'Die Daten werden morgen mit echten Screenshots und Beschreibungen befuellt.',
+        description: 'Die Daten werden morgen mit echten Screenshots und Beschreibungen befüllt.',
         previewButton: 'Detailansicht-Vorschau öffnen',
-        modalDescription: 'Scaffold fuer Zoom/Detailansicht ist aktiv und bereit fuer reale Daten.',
+        modalDescription: 'Scaffold für Zoom/Detailansicht ist aktiv und bereit für reale Daten.',
         modalMeta: ['Titel', 'Kurzbeschreibung', 'Bild/Screenshot', 'Technologien oder Nachweis', 'Externer Link (optional)']
       }
     },
+    filters: { all: 'Alle', visualization: 'Visualisierung', inProgress: 'In Arbeit' },
+    github: {
+      kicker: 'GitHub',
+      title: 'Aktivit\u00e4t und Open Source',
+      subline: 'GitHub nutze ich, um Projekte nachvollziehbar zu dokumentieren, \u00c4nderungen zu versionieren und \u00f6ffentliche Arbeiten verlinkbar zu machen.',
+      profileLink: 'GitHub-Profil',
+      reposLink: 'Repositories',
+      openSourceTitle: 'Open-Source-Merges',
+      openSourceEmpty: 'Noch keine \u00f6ffentlich belegten Merges hinterlegt.',
+      openSourceText: 'Sobald gemergte Pull Requests vorhanden sind, werden sie hier mit Projekt, Kurzbeschreibung und Link aufgef\u00fchrt.'
+    },
     contact: {
       kicker: 'Kontakt',
-      title: 'Lass uns zusammenarbeiten',
-      description: 'Für Praktikum, Zusammenarbeit oder Projektideen freue ich mich auf deine Nachricht.',
+      title: 'Kontakt',
+      description: 'Für Praktikum, Rückfragen oder Zusammenarbeit bin ich per E-Mail erreichbar.',
       phoneLabel: 'Telefon',
       mailLabel: 'E-Mail',
       schoolMailLabel: 'Schul-Mail'
@@ -226,51 +294,66 @@ const embeddedDictionaries = {
   },
   en: {
     skip: { content: 'Skip to content' },
-    nav: { home: 'Home', about: 'About', career: 'Journey', tech: 'Tech Stack', portfolio: 'Portfolio', contact: 'Contact' },
+    nav: { home: 'Home', about: 'About', career: 'Journey', tech: 'Tech Stack', portfolio: 'Projects', github: 'GitHub', contact: 'Contact' },
     hero: {
-      kicker: 'Application Development Portfolio',
-      description: 'I build clean, maintainable software solutions for web, APIs, data, and automation. My focus is robust architecture, teamwork, and clear user flows.',
-      ctaPortfolio: 'View Portfolio',
+      kicker: 'IMS Application Development | Internship 2027/2028',
+      description: 'I build small to mid-sized Python and web applications with a focus on local tools, APIs, tests, and understandable user interfaces.',
+      factEducation: 'From summer 2026: 3rd IMS year, application development',
+      factInternship: 'Looking for an internship: Switzerland, 2027/2028',
+      availability: 'I am currently looking for an internship position in Switzerland for the 4th IMS year, period 2027/2028.',
+      factProjects: 'PathLab, SortLab, VSW, BESP2074',
+      factStack: 'Python, React/Vite, FastAPI, Git',
+      projectsKicker: 'Selected projects',
+      projectsTitle: 'Easy to verify',
+      projectPathlab: 'Routing visualizer, tests, GitHub',
+      projectSortlab: 'Sorting algorithms, React/Vite',
+      projectVsw: 'Defensive checks, team project',
+      projectBesp: 'Local Python simulation',
+      ctaPortfolio: 'View projects',
+      ctaGithub: 'GitHub',
       ctaContact: 'Contact',
       ctaEmail: 'Email'
     },
     focus: {
-      title: 'Current Focus',
-      subline: 'Click a domain to see my current development focus.',
+      title: 'Work areas',
+      subline: 'A short overview of the areas where I currently work in practice.',
       web: {
         tab: 'Web',
         title: 'Web',
-        text: 'Responsive interfaces with clear UX and semantic markup.',
-        points: ['HTML/CSS architecture', 'Interactive JavaScript flows', 'Mobile-first delivery'],
-        status: 'Active: UI/UX'
+        text: 'Web interfaces for learning projects, dashboards, and portfolio projects.',
+        points: ['HTML/CSS', 'JavaScript', 'React/Vite'],
+        status: 'Practice: PathLab, SortLab, VSW'
       },
       backend: {
         tab: 'Backend',
         title: 'Backend',
-        text: 'API design with maintainable structure and traceable data logic.',
-        points: ['C# and .NET APIs', 'SQL/NoSQL data modeling', 'Clean layer separation'],
-        status: 'Active: API design'
+        text: 'Small APIs and local services with clear data logic.',
+        points: ['FastAPI', 'pytest', 'SQLite/JSON'],
+        status: 'Practice: VSW, local tools'
       },
       cloud: {
-        tab: 'Cloud',
-        title: 'Cloud',
-        text: 'Deploying and running services in stable environments.',
-        points: ['AWS fundamentals', 'Containerization with Docker', 'Configurable deployments'],
-        status: 'Active: Deployment'
+        tab: 'Tools',
+        title: 'Tools',
+        text: 'Project work with version control, simple workflows, and local setups.',
+        points: ['Git and GitHub', 'GitHub Actions', 'Docker basics'],
+        status: 'Practice: tests and builds'
       },
       automation: {
         tab: 'Automation',
         title: 'Automation',
-        text: 'Automating recurring tasks efficiently and reliably.',
-        points: ['PowerShell scripts', 'Power Automate flows', 'Logging and triggers'],
-        status: 'Active: Workflows'
+        text: 'Scripts for local workflows, launches, and simple recurring tasks.',
+        points: ['PowerShell', 'CLI tools', 'local helpers'],
+        status: 'Practice: Windows tools'
       }
     },
     about: {
       kicker: 'About',
       title: 'Personal Profile',
       cardTitle: 'Hi, I am Aleksandar',
-      description: 'I attend IMS with a focus on application development and enjoy working on projects with structured architecture, clear APIs, and clean front-end implementation. Teamwork, responsibility, and continuous improvement are important to me.'
+      description: 'I attend IMS with a focus on application development. My projects are mainly between Python tools, web interfaces, APIs, tests, and data processing. Clear structure, understandable code, and honest project status matter to me.',
+      factStatus: 'Status: IMS, application development',
+      factFocus: 'Focus: Python, web, local tools',
+      factWork: 'Work style: tests, clear structure, honest project status'
     },
     career: {
       kicker: 'Journey',
@@ -300,13 +383,20 @@ const embeddedDictionaries = {
     stats: { projects: 'Projects', certificates: 'Certificates', years: 'Years coding' },
     tech: {
       kicker: 'Tech Stack',
-      title: 'Technologies I have already used',
-      subline: 'Hover over a logo to see its name.'
+      title: 'Tech stack by use case',
+      subline: 'Only technologies that appear in current projects or that I can explain plausibly.'
     },
     portfolio: {
-      kicker: 'Portfolio',
-      title: 'Projects and Certificates',
-      subline: 'Three projects and three certificates are already listed.',
+      kicker: 'Projects',
+      title: 'Selected work',
+      subline: 'Project explorer with status, stack, and links or notes.',
+      certificatesTitle: 'Certificates',
+      certificatesSubline: 'PDF proof with preview and download.',
+      detailKicker: 'Project details',
+      detailStatus: 'Status',
+      detailStack: 'Stack',
+      detailRole: 'Role',
+      detailLearning: 'Learning',
       tabs: { projects: 'Projects', certificates: 'Certificates' },
       detailsButton: 'Show details',
       empty: {
@@ -318,10 +408,12 @@ const embeddedDictionaries = {
         modalMeta: ['Title', 'Short description', 'Image/screenshot', 'Technologies or proof', 'External link (optional)']
       }
     },
+    filters: { all: 'All', visualization: 'Visualization', inProgress: 'In progress' },
+    github: { kicker: 'GitHub', title: 'Activity and Open Source', subline: 'I use GitHub to document projects clearly, version changes, and make public work linkable.', profileLink: 'GitHub profile', reposLink: 'Repositories', openSourceTitle: 'Open-source merges', openSourceEmpty: 'No publicly verifiable merges listed yet.', openSourceText: 'Once merged pull requests are available, they will be listed here with project, short description, and link.' },
     contact: {
       kicker: 'Contact',
-      title: 'Let us work together',
-      description: 'I look forward to hearing from you for internships, collaboration, or project ideas.',
+      title: 'Contact',
+      description: 'For internships, questions, or collaboration, I am reachable by email.',
       phoneLabel: 'Phone',
       mailLabel: 'Email',
       schoolMailLabel: 'School email'
@@ -332,51 +424,66 @@ const embeddedDictionaries = {
   },
   fr: {
     skip: { content: 'Aller au contenu' },
-    nav: { home: 'Accueil', about: 'A propos', career: 'Parcours', tech: 'Stack tech', portfolio: 'Portfolio', contact: 'Contact' },
+    nav: { home: 'Accueil', about: 'A propos', career: 'Parcours', tech: 'Stack tech', portfolio: 'Projets', github: 'GitHub', contact: 'Contact' },
     hero: {
-      kicker: 'Portfolio developpement applicatif',
-      description: 'Je cree des solutions logicielles propres et maintenables pour le web, les API, les donnees et l\'automatisation. Mon focus: architecture robuste, travail d\'equipe et parcours utilisateur clairs.',
-      ctaPortfolio: 'Voir le portfolio',
+      kicker: 'D\u00e9veloppement applicatif IMS | Stage 2027/2028',
+      description: 'Je developpe de petites et moyennes applications Python et web avec un focus sur les outils locaux, les API, les tests et des interfaces comprehensibles.',
+      factEducation: 'D\u00e8s l\u2019\u00e9t\u00e9 2026: 3e ann\u00e9e IMS, d\u00e9veloppement applicatif',
+      factInternship: 'Stage recherch\u00e9: Suisse, 2027/2028',
+      availability: 'Je cherche actuellement une place de stage en Suisse pour la 4e ann\u00e9e IMS, p\u00e9riode 2027/2028.',
+      factProjects: 'PathLab, SortLab, VSW, BESP2074',
+      factStack: 'Python, React/Vite, FastAPI, Git',
+      projectsKicker: 'Projets selectionnes',
+      projectsTitle: 'Faciles a verifier',
+      projectPathlab: 'Visualiseur de chemins, tests, GitHub',
+      projectSortlab: 'Algorithmes de tri, React/Vite',
+      projectVsw: 'Checks defensifs, projet en equipe',
+      projectBesp: 'Simulation Python locale',
+      ctaPortfolio: 'Voir les projets',
+      ctaGithub: 'GitHub',
       ctaContact: 'Contact',
       ctaEmail: 'E-mail'
     },
     focus: {
-      title: 'Focus actuel',
-      subline: 'Clique sur un domaine pour voir mon focus de developpement actuel.',
+      title: 'Domaines de travail',
+      subline: 'Apercu court des domaines dans lesquels je travaille actuellement en pratique.',
       web: {
         tab: 'Web',
         title: 'Web',
-        text: 'Interfaces responsives avec UX claire et balisage semantique.',
-        points: ['Architecture HTML/CSS', 'Flux JavaScript interactifs', 'Approche mobile-first'],
-        status: 'Actif: UI/UX'
+        text: 'Interfaces web pour projets d\'apprentissage, tableaux de bord et portfolio.',
+        points: ['HTML/CSS', 'JavaScript', 'React/Vite'],
+        status: 'Pratique: PathLab, SortLab, VSW'
       },
       backend: {
         tab: 'Backend',
         title: 'Backend',
-        text: 'Conception d\'API avec structure maintenable et logique de donnees tracable.',
-        points: ['API C# et .NET', 'Modelisation SQL/NoSQL', 'Separation claire des couches'],
-        status: 'Actif: Conception API'
+        text: 'Petites API et services locaux avec une logique de donnees claire.',
+        points: ['FastAPI', 'pytest', 'SQLite/JSON'],
+        status: 'Pratique: VSW, outils locaux'
       },
       cloud: {
-        tab: 'Cloud',
-        title: 'Cloud',
-        text: 'Deploiement et exploitation de services dans des environnements stables.',
-        points: ['Bases AWS', 'Conteneurisation avec Docker', 'Deploiements configurables'],
-        status: 'Actif: Deploiement'
+        tab: 'Outils',
+        title: 'Outils',
+        text: 'Travail de projet avec controle de version, workflows simples et setups locaux.',
+        points: ['Git et GitHub', 'GitHub Actions', 'Bases Docker'],
+        status: 'Pratique: tests et builds'
       },
       automation: {
         tab: 'Automatisation',
         title: 'Automatisation',
-        text: 'Automatiser efficacement les taches recurrentes.',
-        points: ['Scripts PowerShell', 'Flux Power Automate', 'Journalisation et declencheurs'],
-        status: 'Actif: Workflows'
+        text: 'Scripts pour les workflows locaux, les lancements et les taches simples recurrentes.',
+        points: ['PowerShell', 'Outils CLI', 'Assistants locaux'],
+        status: 'Pratique: outils Windows'
       }
     },
     about: {
       kicker: 'A propos',
-      title: 'Profil personnel',
+      title: '\u00c0 propos de moi',
       cardTitle: 'Salut, je suis Aleksandar',
-      description: 'Je frequente l\'IMS avec une specialisation en developpement applicatif et j\'aime travailler sur des projets avec une architecture structuree, des API claires et un front-end propre. L\'esprit d\'equipe, la responsabilite et l\'amelioration continue sont essentiels pour moi.'
+      description: 'Je frequente l\'IMS avec une specialisation en developpement applicatif. Mes projets se situent surtout entre outils Python, interfaces web, API, tests et traitement de donnees. Une structure claire, un code comprehensible et des statuts de projet honnetes sont importants pour moi.',
+      factStatus: 'Statut: IMS, developpement applicatif',
+      factFocus: 'Focus: Python, web, outils locaux',
+      factWork: 'Methode: tests, structure claire, statuts honnetes'
     },
     career: {
       kicker: 'Parcours',
@@ -406,13 +513,22 @@ const embeddedDictionaries = {
     stats: { projects: 'Projets', certificates: 'Certificats', years: 'Annees de code' },
     tech: {
       kicker: 'Stack tech',
-      title: 'Technologies deja utilisees',
-      subline: 'Survole un logo pour voir son nom.'
+      title: 'Stack tech par domaine',
+      subline: 'Uniquement les technologies presentes dans mes projets actuels ou que je peux expliquer de maniere plausible.'
     },
     portfolio: {
-      kicker: 'Portfolio',
-      title: 'Projets et certificats',
-      subline: 'Trois projets et trois certificats sont deja disponibles.',
+      kicker: 'Projets',
+      title: 'Travaux selectionnes',
+      subline: 'Explorateur de projets avec statut, stack et liens ou notes.',
+      certificatesTitle: 'Certificats',
+      certificatesSubline: 'Justificatifs PDF avec apercu et telechargement.',
+      detailKicker: 'Details du projet',
+      detailStatus: 'Statut',
+      detailStack: 'Stack',
+      detailRole: 'Role',
+      detailLearning: 'Apprentissage',
+      detailEmptyTitle: 'Choisir un projet',
+      detailEmptyText: 'Clique sur une carte de projet pour afficher le statut, le stack, le r\u00f4le et ce que le projet m\u2019apporte.',
       tabs: { projects: 'Projets', certificates: 'Certificats' },
       detailsButton: 'Afficher les details',
       empty: {
@@ -424,10 +540,12 @@ const embeddedDictionaries = {
         modalMeta: ['Titre', 'Description courte', 'Image/capture', 'Technologies ou preuve', 'Lien externe (optionnel)']
       }
     },
+    filters: { all: 'Tous', visualization: 'Visualisation', inProgress: 'En cours' },
+    github: { kicker: 'GitHub', title: 'Activit\u00e9 et open source', subline: 'J\u2019utilise GitHub pour documenter mes projets, versionner les changements et rendre mes travaux publics faciles \u00e0 consulter.', profileLink: 'Profil GitHub', reposLink: 'Repositories', openSourceTitle: 'Merges open source', openSourceEmpty: 'Aucun merge v\u00e9rifiable publiquement n\u2019est encore list\u00e9.', openSourceText: 'D\u00e8s que des pull requests merg\u00e9es seront disponibles, elles seront list\u00e9es ici avec projet, courte description et lien.' },
     contact: {
       kicker: 'Contact',
-      title: 'Travaillons ensemble',
-      description: 'Je me rejouis de votre message pour un stage, une collaboration ou des idees de projet.',
+      title: 'Contact',
+      description: 'Pour un stage, des questions ou une collaboration, je suis joignable par e-mail.',
       phoneLabel: 'Telephone',
       mailLabel: 'E-mail',
       schoolMailLabel: 'E-mail ecole'
@@ -438,51 +556,66 @@ const embeddedDictionaries = {
   },
   sr: {
     skip: { content: 'Preskoci na sadrzaj' },
-    nav: { home: 'Pocetna', about: 'O meni', career: 'Put', tech: 'Tech stack', portfolio: 'Portfolio', contact: 'Kontakt' },
+    nav: { home: 'Pocetna', about: 'O meni', career: 'Put', tech: 'Tech stack', portfolio: 'Projekti', github: 'GitHub', contact: 'Kontakt' },
     hero: {
-      kicker: 'Portfolio aplikativnog razvoja',
-      description: 'Pravim cista i odrziva softverska resenja za web, API-je, podatke i automatizaciju. Fokus mi je na stabilnoj arhitekturi, timskom radu i jasnom korisnickom toku.',
-      ctaPortfolio: 'Pogledaj portfolio',
+      kicker: 'IMS razvoj aplikacija | praksa 2027/2028',
+      description: 'Razvijam male i srednje Python i web aplikacije sa fokusom na lokalne alate, API-je, testove i razumljive korisnicke interfejse.',
+      factEducation: 'Od leta 2026: 3. IMS godina, razvoj aplikacija',
+      factInternship: 'Tra\u017eim praksu: \u0160vajcarska, 2027/2028',
+      availability: 'Trenutno tra\u017eim mesto za praksu u \u0160vajcarskoj za 4. IMS godinu, period 2027/2028.',
+      factProjects: 'PathLab, SortLab, VSW, BESP2074',
+      factStack: 'Python, React/Vite, FastAPI, Git',
+      projectsKicker: 'Odabrani projekti',
+      projectsTitle: 'Lako proverljivo',
+      projectPathlab: 'Routing vizualizacija, testovi, GitHub',
+      projectSortlab: 'Algoritmi sortiranja, React/Vite',
+      projectVsw: 'Defanzivne provere, timski projekat',
+      projectBesp: 'Lokalna Python simulacija',
+      ctaPortfolio: 'Pogledaj projekte',
+      ctaGithub: 'GitHub',
       ctaContact: 'Kontakt',
       ctaEmail: 'E-mail'
     },
     focus: {
-      title: 'Trenutni fokus',
-      subline: 'Klikni na oblast da vidis moj trenutni fokus razvoja.',
+      title: 'Oblasti rada',
+      subline: 'Kratak pregled oblasti u kojima trenutno prakticno radim.',
       web: {
         tab: 'Web',
         title: 'Web',
-        text: 'Responzivni interfejsi sa jasnim UX-om i semantickim markup-om.',
-        points: ['HTML/CSS arhitektura', 'Interaktivni JavaScript tokovi', 'Mobile-first pristup'],
-        status: 'Aktivno: UI/UX'
+        text: 'Web interfejsi za projekte ucenja, dashboard-e i portfolio projekte.',
+        points: ['HTML/CSS', 'JavaScript', 'React/Vite'],
+        status: 'Praksa: PathLab, SortLab, VSW'
       },
       backend: {
         tab: 'Backend',
         title: 'Backend',
-        text: 'Dizajn API-ja sa odrzivom strukturom i jasnom logikom podataka.',
-        points: ['C# i .NET API-ji', 'SQL/NoSQL modelovanje', 'Cisto razdvajanje slojeva'],
-        status: 'Aktivno: API dizajn'
+        text: 'Mali API-ji i lokalni servisi sa jasnom logikom podataka.',
+        points: ['FastAPI', 'pytest', 'SQLite/JSON'],
+        status: 'Praksa: VSW, lokalni alati'
       },
       cloud: {
-        tab: 'Cloud',
-        title: 'Cloud',
-        text: 'Deploy i rad servisa u stabilnim okruzenjima.',
-        points: ['AWS osnove', 'Kontejnerizacija uz Docker', 'Podesivi deployment-i'],
-        status: 'Aktivno: Deployment'
+        tab: 'Alati',
+        title: 'Alati',
+        text: 'Projektni rad sa kontrolom verzija, jednostavnim workflow-ovima i lokalnim setup-ima.',
+        points: ['Git i GitHub', 'GitHub Actions', 'Docker osnove'],
+        status: 'Praksa: testovi i build-ovi'
       },
       automation: {
         tab: 'Automatizacija',
         title: 'Automatizacija',
-        text: 'Efikasna automatizacija ponavljajucih zadataka.',
-        points: ['PowerShell skripte', 'Power Automate flow-ovi', 'Logovanje i trigger-i'],
-        status: 'Aktivno: Workflow'
+        text: 'Skripte za lokalne tokove rada, startovanje alata i jednostavne ponavljajuce zadatke.',
+        points: ['PowerShell', 'CLI alati', 'lokalni pomocnici'],
+        status: 'Praksa: Windows alati'
       }
     },
     about: {
       kicker: 'O meni',
       title: 'Licni profil',
       cardTitle: 'Zdravo, ja sam Aleksandar',
-      description: 'Pohadjam IMS sa fokusom na razvoj aplikacija i volim projekte sa struktuiranom arhitekturom, jasnim API-jima i cistim frontend-om. Timski rad, odgovornost i stalno usavrsavanje su mi veoma vazni.'
+      description: 'Pohadjam IMS sa fokusom na razvoj aplikacija. Moji projekti su uglavnom izmedju Python alata, web interfejsa, API-ja, testova i obrade podataka. Vazni su mi jasna struktura, razumljiv kod i iskren status projekta.',
+      factStatus: 'Status: IMS, razvoj aplikacija',
+      factFocus: 'Fokus: Python, web, lokalni alati',
+      factWork: 'Rad: testovi, jasna struktura, iskren status projekta'
     },
     career: {
       kicker: 'Put',
@@ -512,13 +645,20 @@ const embeddedDictionaries = {
     stats: { projects: 'Projekti', certificates: 'Sertifikati', years: 'Godine kodiranja' },
     tech: {
       kicker: 'Tech stack',
-      title: 'Tehnologije koje sam vec koristio',
-      subline: 'Predji preko logotipa da vidis naziv.'
+      title: 'Tech stack po oblasti',
+      subline: 'Samo tehnologije koje se pojavljuju u trenutnim projektima ili koje mogu smisleno objasniti.'
     },
     portfolio: {
-      kicker: 'Portfolio',
-      title: 'Projekti i sertifikati',
-      subline: 'Tri projekta i tri sertifikata su vec dodati.',
+      kicker: 'Projekti',
+      title: 'Odabrani radovi',
+      subline: 'Explorer projekata sa statusom, stack-om i linkovima ili napomenama.',
+      certificatesTitle: 'Sertifikati',
+      certificatesSubline: 'PDF dokazi sa pregledom i preuzimanjem.',
+      detailKicker: 'Detalji projekta',
+      detailStatus: 'Status',
+      detailStack: 'Stack',
+      detailRole: 'Uloga',
+      detailLearning: 'Ucenje',
       tabs: { projects: 'Projekti', certificates: 'Sertifikati' },
       detailsButton: 'Prikazi detalje',
       empty: {
@@ -530,10 +670,12 @@ const embeddedDictionaries = {
         modalMeta: ['Naslov', 'Kratak opis', 'Slika/screenshot', 'Tehnologije ili dokaz', 'Eksterni link (opciono)']
       }
     },
+    filters: { all: 'Svi', visualization: 'Vizualizacija', inProgress: 'U radu' },
+    github: { kicker: 'GitHub', title: 'Aktivnost i open source', subline: 'GitHub koristim za jasno dokumentovanje projekata, verzionisanje promena i javno linkovanje radova.', profileLink: 'GitHub profil', reposLink: 'Repositories', openSourceTitle: 'Open-source merge-ovi', openSourceEmpty: 'Jos nema javno proverljivih merge-ova.', openSourceText: 'Kada budu dostupni merge-ovani pull requestovi, ovde ce biti navedeni sa projektom, kratkim opisom i linkom.' },
     contact: {
       kicker: 'Kontakt',
-      title: 'Hajde da saradjujemo',
-      description: 'Radujem se poruci za praksu, saradnju ili ideje za projekat.',
+      title: 'Kontakt',
+      description: 'Za praksu, pitanja ili saradnju dostupan sam putem e-maila.',
       phoneLabel: 'Telefon',
       mailLabel: 'E-mail',
       schoolMailLabel: 'Skolski e-mail'
@@ -580,10 +722,13 @@ const scrollToSection = (targetId) => {
 
   const headerHeight = document.querySelector('.site-header')?.offsetHeight || 0;
   const sectionNudges = {
-    '#tech-stack': 82,
-    '#portfolio': 38
+    '#portfolio': -18,
+    '#tech-stack': -18,
+    '#about': -18,
+    '#career': -18,
+    '#contact': -18
   };
-  const top = Math.max(section.offsetTop - headerHeight + (sectionNudges[targetId] || 8), 0);
+  const top = Math.max(section.offsetTop - headerHeight + (sectionNudges[targetId] || -8), 0);
 
   window.scrollTo({ top, behavior: 'smooth' });
   if (window.location.hash !== targetId) {
@@ -642,7 +787,48 @@ window.addEventListener('resize', () => {
   renderTechStack();
 });
 
+const applyTheme = (theme) => {
+  const nextTheme = theme === 'light' ? 'light' : 'dark';
+  document.body.dataset.theme = nextTheme;
+  localStorage.setItem('portfolio-theme', nextTheme);
+
+  if (!themeToggle) return;
+  const isLight = nextTheme === 'light';
+  themeToggle.setAttribute('aria-pressed', String(isLight));
+  themeToggle.setAttribute('aria-label', isLight ? 'Dark Mode aktivieren' : 'Light Mode aktivieren');
+  const icon = themeToggle.querySelector('.theme-icon');
+  if (icon) {
+    icon.textContent = isLight ? 'Dark' : 'Light';
+  }
+};
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    applyTheme(document.body.dataset.theme === 'light' ? 'dark' : 'light');
+  });
+}
+
+if (heroCopy) {
+  heroCopy.addEventListener('pointermove', (event) => {
+    const rect = heroCopy.getBoundingClientRect();
+    const x = ((event.clientX - rect.left) / rect.width) * 100;
+    const y = ((event.clientY - rect.top) / rect.height) * 100;
+    heroCopy.style.setProperty('--spot-x', `${x.toFixed(1)}%`);
+    heroCopy.style.setProperty('--spot-y', `${y.toFixed(1)}%`);
+  });
+}
+
+if (interactiveBackground) {
+  window.addEventListener('pointermove', (event) => {
+    const x = (event.clientX / Math.max(window.innerWidth, 1) - 0.5) * 2;
+    const y = (event.clientY / Math.max(window.innerHeight, 1) - 0.5) * 2;
+    interactiveBackground.style.setProperty('--mouse-x', x.toFixed(3));
+    interactiveBackground.style.setProperty('--mouse-y', y.toFixed(3));
+  }, { passive: true });
+}
+
 const renderStats = () => {
+  if (!projectsCountEl || !certificatesCountEl || !yearsCountEl) return;
   const currentYear = new Date().getFullYear();
   const yearsCoding = Math.max(1, currentYear - portfolioData.codingSinceYear + 1);
 
@@ -654,6 +840,9 @@ const renderStats = () => {
 const createCard = (item) => {
   const card = document.createElement('article');
   card.className = 'item-card';
+  if (item.title === activeProjectTitle) {
+    card.classList.add('is-selected');
+  }
 
   const preview = document.createElement('div');
   preview.className = 'project-preview';
@@ -683,9 +872,30 @@ const createCard = (item) => {
   const description = document.createElement('p');
   description.textContent = item.cardDescription || item.description || '';
 
+  const tags = document.createElement('div');
+  tags.className = 'project-tags';
+  (item.tags || []).forEach((tagText) => {
+    const tag = document.createElement('span');
+    tag.textContent = tagText;
+    tags.append(tag);
+  });
+
+  const links = document.createElement('div');
+  links.className = 'project-links';
+  (item.links || []).forEach((linkItem) => {
+    const link = document.createElement('a');
+    link.className = 'link-arrow';
+    link.href = linkItem.url;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.textContent = linkItem.label;
+    links.append(link);
+  });
+
   const detailButton = document.createElement('button');
   detailButton.type = 'button';
   detailButton.textContent = t('portfolio.detailsButton', 'Details anzeigen');
+  detailButton.dataset.detailTrigger = 'true';
   detailButton.dataset.title = item.title;
   detailButton.dataset.description = item.detailDescription || item.description || '';
   detailButton.dataset.meta = JSON.stringify(item.meta || []);
@@ -702,8 +912,121 @@ const createCard = (item) => {
     detailButton.dataset.previewImage = item.previewImage;
   }
 
-  card.append(preview, title, description, detailButton);
+  if (item.links) {
+    detailButton.dataset.links = JSON.stringify(item.links);
+  }
+
+  if (!item.file) {
+    detailButton.dataset.projectTitle = item.title;
+    delete detailButton.dataset.detailTrigger;
+    delete detailButton.dataset.title;
+    delete detailButton.dataset.description;
+    delete detailButton.dataset.meta;
+  }
+
+  card.append(preview, title, description);
+  if (tags.children.length) {
+    card.append(tags);
+  }
+  if (links.children.length) {
+    card.append(links);
+  }
+  card.append(detailButton);
   return card;
+};
+
+const parseProjectStack = (item) => {
+  const stack = (item.meta || []).find((entry) => entry.toLowerCase().startsWith('stack:'));
+  return stack ? stack.replace(/^Stack:\s*/i, '') : '';
+};
+
+const parseProjectStatus = (item) => {
+  const status = (item.meta || []).find((entry) => entry.toLowerCase().startsWith('status:'));
+  return status ? status.replace(/^Status:\s*/i, '') : '';
+};
+
+const renderProjectDetail = (item) => {
+  if (!projectDetailPanel) return;
+  projectDetailPanel.innerHTML = '';
+
+  if (!item) {
+    const kicker = document.createElement('p');
+    kicker.className = 'kicker';
+    kicker.textContent = t('portfolio.detailKicker', 'Projektdetails');
+
+    const title = document.createElement('h3');
+    title.textContent = t('portfolio.detailEmptyTitle', 'Projekt auswählen');
+
+    const description = document.createElement('p');
+    description.textContent = t('portfolio.detailEmptyText', 'Klicke auf eine Projektkarte, um Status, Stack, Rolle und Lerneffekt anzuzeigen.');
+
+    projectDetailPanel.append(kicker, title, description);
+    return;
+  }
+
+
+  const kicker = document.createElement('p');
+  kicker.className = 'kicker';
+  kicker.textContent = t('portfolio.detailKicker', 'Projektdetails');
+
+  const title = document.createElement('h3');
+  title.textContent = item.title;
+
+  const description = document.createElement('p');
+  description.textContent = item.cardDescription || '';
+
+  const facts = document.createElement('dl');
+  facts.className = 'project-detail-facts';
+
+  [
+    [t('portfolio.detailStatus', 'Status'), parseProjectStatus(item)],
+    [t('portfolio.detailStack', 'Stack'), parseProjectStack(item)],
+    [t('portfolio.detailRole', 'Rolle'), item.role || ''],
+    [t('portfolio.detailLearning', 'Lerneffekt'), item.learning || '']
+  ].forEach(([label, value]) => {
+    if (!value) return;
+    const term = document.createElement('dt');
+    term.textContent = label;
+    const detail = document.createElement('dd');
+    detail.textContent = value;
+    facts.append(term, detail);
+  });
+
+  const links = document.createElement('div');
+  links.className = 'project-links';
+  (item.links || []).forEach((linkItem) => {
+    const link = document.createElement('a');
+    link.className = 'link-arrow';
+    link.href = linkItem.url;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.textContent = linkItem.label;
+    links.append(link);
+  });
+
+  projectDetailPanel.append(kicker, title, description, facts);
+  if (links.children.length) {
+    projectDetailPanel.append(links);
+  }
+};
+
+const renderProjectExplorer = () => {
+  if (!projectsGrid) return;
+
+  const filteredProjects = portfolioData.projects.filter((project) => (
+    activeProjectFilter === 'all' || (project.filters || []).includes(activeProjectFilter)
+  ));
+
+  if (activeProjectTitle && !filteredProjects.some((project) => project.title === activeProjectTitle)) {
+    activeProjectTitle = '';
+  }
+
+  projectsGrid.innerHTML = '';
+  filteredProjects.forEach((project) => {
+    projectsGrid.append(createCard(project));
+  });
+
+  renderProjectDetail(filteredProjects.find((project) => project.title === activeProjectTitle));
 };
 
 const createEmptyState = (typeKey) => {
@@ -714,14 +1037,14 @@ const createEmptyState = (typeKey) => {
   title.textContent = t(`portfolio.empty.${typeKey}.title`, 'Noch keine Inhalte');
 
   const text = document.createElement('p');
-  text.textContent = t('portfolio.empty.description', 'Die Daten werden morgen mit echten Screenshots und Beschreibungen befuellt.');
+    text.textContent = t('portfolio.empty.description', 'Die Daten werden morgen mit echten Screenshots und Beschreibungen befüllt.');
 
   const previewButton = document.createElement('button');
   previewButton.type = 'button';
   previewButton.className = 'empty-action';
-  previewButton.textContent = t('portfolio.empty.previewButton', 'Detailansicht-Vorschau oeffnen');
+  previewButton.textContent = t('portfolio.empty.previewButton', 'Detailansicht-Vorschau öffnen');
   previewButton.dataset.title = t('modal.title', 'Detailansicht');
-  previewButton.dataset.description = t('portfolio.empty.modalDescription', 'Scaffold fuer Zoom/Detailansicht ist aktiv und bereit fuer reale Daten.');
+  previewButton.dataset.description = t('portfolio.empty.modalDescription', 'Scaffold für Zoom/Detailansicht ist aktiv und bereit für reale Daten.');
   previewButton.dataset.meta = JSON.stringify(tArray('portfolio.empty.modalMeta', [
     'Titel',
     'Kurzbeschreibung',
@@ -750,7 +1073,28 @@ const renderCollection = (items, container, typeKey) => {
 const renderTechStack = () => {
   techGrid.innerHTML = '';
 
-  portfolioData.technologies.forEach((tech) => {
+  if (Array.isArray(portfolioData.techGroups)) {
+    portfolioData.techGroups.forEach((group) => {
+      const card = document.createElement('article');
+      card.className = 'tech-group-card';
+
+      const title = document.createElement('h3');
+      title.textContent = group.title;
+
+      const list = document.createElement('ul');
+      (group.items || []).forEach((item) => {
+        const listItem = document.createElement('li');
+        listItem.textContent = item;
+        list.append(listItem);
+      });
+
+      card.append(title, list);
+      techGrid.append(card);
+    });
+    return;
+  }
+
+  (portfolioData.technologies || []).forEach((tech) => {
     const tile = document.createElement('article');
     tile.className = 'tech-tile';
     tile.style.setProperty('--tile-glow', tech.glow || 'rgba(105, 145, 255, 0.30)');
@@ -805,31 +1149,32 @@ const renderTechStack = () => {
 const focusDefinitions = () => ({
   web: {
     title: t('focus.web.title', 'Web'),
-    text: t('focus.web.text', 'Responsive Oberflaechen mit klarer UX und semantischem Markup.'),
-    points: tArray('focus.web.points', ['HTML/CSS Architektur', 'Interaktive JavaScript-Flows', 'Mobile-first Umsetzung']),
-    status: t('focus.web.status', 'Aktiv: UI/UX')
+    text: t('focus.web.text', 'Weboberflächen für Lernprojekte, Dashboards und Portfolio-Projekte.'),
+    points: tArray('focus.web.points', ['HTML/CSS', 'JavaScript', 'React/Vite']),
+    status: t('focus.web.status', 'Praxis: PathLab, SortLab, VSW')
   },
   backend: {
     title: t('focus.backend.title', 'Backend'),
-    text: t('focus.backend.text', 'API-Design mit wartbarer Struktur und nachvollziehbarer Datenlogik.'),
-    points: tArray('focus.backend.points', ['C# und .NET APIs', 'SQL/NoSQL Datenmodellierung', 'Saubere Layer-Aufteilung']),
-    status: t('focus.backend.status', 'Aktiv: API-Design')
+    text: t('focus.backend.text', 'Kleine APIs und lokale Services mit klarer Datenlogik.'),
+    points: tArray('focus.backend.points', ['FastAPI', 'pytest', 'SQLite/JSON']),
+    status: t('focus.backend.status', 'Praxis: VSW, lokale Tools')
   },
   cloud: {
-    title: t('focus.cloud.title', 'Cloud'),
-    text: t('focus.cloud.text', 'Deployment und Betrieb von Services in stabilen Umgebungen.'),
-    points: tArray('focus.cloud.points', ['AWS Grundlagen', 'Container mit Docker', 'Konfigurierbare Deployments']),
-    status: t('focus.cloud.status', 'Aktiv: Deployment')
+    title: t('focus.cloud.title', 'Tools'),
+    text: t('focus.cloud.text', 'Projektarbeit mit Versionskontrolle, einfachen Workflows und lokalen Setups.'),
+    points: tArray('focus.cloud.points', ['Git und GitHub', 'GitHub Actions', 'Docker-Grundlagen']),
+    status: t('focus.cloud.status', 'Praxis: Tests und Builds')
   },
   automation: {
     title: t('focus.automation.title', 'Automatisierung'),
-    text: t('focus.automation.text', 'Wiederkehrende Aufgaben effizient automatisieren und ueberwachen.'),
-    points: tArray('focus.automation.points', ['PowerShell Skripte', 'Power Automate Flows', 'Logging und Trigger']),
-    status: t('focus.automation.status', 'Aktiv: Workflows')
+    text: t('focus.automation.text', 'Skripte für lokale Abläufe, Starts und einfache wiederkehrende Aufgaben.'),
+    points: tArray('focus.automation.points', ['PowerShell', 'CLI-Tools', 'lokale Helfer']),
+    status: t('focus.automation.status', 'Praxis: Windows-Tools')
   }
 });
 
 const activateFocus = (focusKey) => {
+  if (!focusTitle || !focusText || !focusList || !focusStatus) return;
   const allFocus = focusDefinitions();
   const focus = allFocus[focusKey];
   if (!focus) return;
@@ -868,6 +1213,7 @@ const activateTab = (tabName) => {
   });
 
   Object.entries(tabPanels).forEach(([key, panel]) => {
+    if (!panel) return;
     panel.classList.toggle('is-active', key === tabName);
   });
 };
@@ -875,6 +1221,18 @@ const activateTab = (tabName) => {
 tabs.forEach((tab) => {
   tab.addEventListener('click', () => {
     activateTab(tab.dataset.tab);
+  });
+});
+
+projectFilters.forEach((filterButton) => {
+  filterButton.addEventListener('click', () => {
+    activeProjectFilter = filterButton.dataset.filter || 'all';
+    projectFilters.forEach((button) => {
+      const active = button === filterButton;
+      button.classList.toggle('is-active', active);
+      button.setAttribute('aria-pressed', String(active));
+    });
+    renderProjectExplorer();
   });
 });
 
@@ -979,7 +1337,15 @@ const tryParseMeta = (value) => {
 };
 
 document.addEventListener('click', (event) => {
-  const trigger = event.target.closest('button[data-title][data-description]');
+  const projectTrigger = event.target.closest('button[data-project-title]');
+  if (projectTrigger) {
+    activeProjectTitle = projectTrigger.dataset.projectTitle;
+    renderProjectExplorer();
+    projectDetailPanel?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    return;
+  }
+
+  const trigger = event.target.closest('button[data-detail-trigger][data-title][data-description]');
   if (!trigger) {
     return;
   }
@@ -1020,13 +1386,15 @@ if (modal) {
 
 const selectLanguageButton = (languageCode) => {
   languageButtons.forEach((button) => {
-    button.classList.toggle('is-active', button.dataset.lang === languageCode);
+    const isActive = button.dataset.lang === languageCode;
+    button.classList.toggle('is-active', isActive);
+    button.setAttribute('aria-pressed', String(isActive));
   });
 };
 
 const refreshDynamicTexts = () => {
   activateFocus(currentFocusKey);
-  renderCollection(portfolioData.projects, projectsGrid, 'projects');
+  renderProjectExplorer();
   renderCollection(portfolioData.certificates, certificatesGrid, 'certificates');
 };
 
@@ -1079,10 +1447,14 @@ if ('IntersectionObserver' in window) {
 }
 
 const storedLanguage = localStorage.getItem('portfolio-language') || 'de';
+const storedTheme = localStorage.getItem('portfolio-theme') || 'dark';
 
+applyTheme(storedTheme);
 renderStats();
 renderTechStack();
-activateTab('projects');
+if (tabs.length) {
+  activateTab('projects');
+}
 updateNavForScroll();
 
 loadLanguage(storedLanguage).catch(() => {

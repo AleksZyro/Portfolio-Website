@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8">
@@ -9,33 +9,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <style>
-    #projects-grid .item-card:first-child .project-status-chip,
-    .modal-card.has-project-image .project-status-chip {
-      border-color: rgba(52, 211, 153, 0.42);
-      background: rgba(8, 44, 31, 0.92);
-      color: #7dffbd;
-    }
-
-    #projects-grid .item-card:first-child .project-status-chip::before,
-    .modal-card.has-project-image .project-status-chip::before {
-      content: "✓";
-      display: inline-grid;
-      place-items: center;
-      width: 18px;
-      height: 18px;
-      border-radius: 50%;
-      background: #22c55e;
-      color: #07170f;
-      font-size: 0.82rem;
-      font-weight: 900;
-      line-height: 1;
-      box-shadow: 0 0 0 1px rgba(125, 255, 189, 0.35), 0 0 14px rgba(34, 197, 94, 0.45);
-    }
-  </style>
 </head>
 <body>
   <a class="skip-link" href="#main-content" data-i18n="skip.content">Zum Inhalt springen</a>
+  <div class="interactive-background" aria-hidden="true">
+    <span class="bg-point point-a"></span>
+    <span class="bg-point point-b"></span>
+    <span class="bg-point point-c"></span>
+    <span class="bg-point point-d"></span>
+    <span class="bg-point point-e"></span>
+  </div>
 
   <header class="site-header" id="top">
     <nav class="navbar container" aria-label="Hauptnavigation">
@@ -50,19 +33,24 @@
 
       <ul class="nav-list" id="nav-list">
         <li><a href="#home" data-i18n="nav.home">Start</a></li>
+        <li><a href="#portfolio" data-i18n="nav.portfolio">Projekte</a></li>
+        <li><a href="#github-activity" data-i18n="nav.github">GitHub</a></li>
+        <li><a href="#tech-stack" data-i18n="nav.tech">Tech-Stack</a></li>
         <li><a href="#about" data-i18n="nav.about">Über mich</a></li>
         <li><a href="#career" data-i18n="nav.career">Werdegang</a></li>
-        <li><a href="#tech-stack" data-i18n="nav.tech">Tech-Stack</a></li>
-        <li><a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a></li>
         <li><a href="#contact" data-i18n="nav.contact">Kontakt</a></li>
       </ul>
 
       <div class="language-switch" aria-label="Sprache wechseln">
-        <button type="button" class="lang-btn is-active" data-lang="de">DE</button>
-        <button type="button" class="lang-btn" data-lang="en">EN</button>
-        <button type="button" class="lang-btn" data-lang="fr">FR</button>
-        <button type="button" class="lang-btn" data-lang="sr">SR</button>
+        <button type="button" class="lang-btn is-active" data-lang="de" aria-label="Deutsch" aria-pressed="true"><span class="flag flag-de" aria-hidden="true"></span><span>DE</span></button>
+        <button type="button" class="lang-btn" data-lang="en" aria-label="English" aria-pressed="false"><span class="flag flag-gb" aria-hidden="true"></span><span>EN</span></button>
+        <button type="button" class="lang-btn" data-lang="fr" aria-label="Français" aria-pressed="false"><span class="flag flag-fr" aria-hidden="true"></span><span>FR</span></button>
+        <button type="button" class="lang-btn" data-lang="sr" aria-label="Srpski" aria-pressed="false"><span class="flag flag-rs" aria-hidden="true"></span><span>SR</span></button>
       </div>
+
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Light Mode aktivieren" aria-pressed="false">
+        <span class="theme-icon" aria-hidden="true">Light</span>
+      </button>
     </nav>
   </header>
 
@@ -73,38 +61,140 @@
 
       <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <p class="kicker" data-i18n="hero.kicker">Portfolio Applikationsentwicklung</p>
+          <p class="kicker" data-i18n="hero.kicker">IMS Applikationsentwicklung | Praktikum 2027/2028</p>
           <h1 id="hero-title">Aleksandar <span>Nikolic</span></h1>
           <p data-i18n="hero.description">
-            Ich entwickle saubere, wartbare Softwarelösungen für Web, APIs, Daten und Automatisierung.
-            Fokus auf robuste Architektur, Teamarbeit und klare User-Flows.
+            Ich starte ins 3. IMS-Jahr und entwickle kleine bis mittelgrosse Python- und Web-Anwendungen
+            mit Fokus auf lokale Tools, APIs, Tests und nachvollziehbare Benutzeroberflächen.
           </p>
 
+          <p class="availability-note" data-i18n="hero.availability">
+            Aktuell suche ich eine Praktikumsstelle in der Schweiz für das 4. IMS-Jahr, Zeitraum 2027/2028.
+          </p>
+
+          <ul class="hero-facts" aria-label="Kurzprofil">
+            <li data-i18n="hero.factEducation">Ab Sommer 2026: 3. IMS-Jahr, Applikationsentwicklung</li>
+            <li data-i18n="hero.factInternship">Praktikum gesucht: Schweiz, 2027/2028</li>
+            <li data-i18n="hero.factProjects">PathLab, SortLab, VSW, BESP2074</li>
+            <li data-i18n="hero.factStack">Python, React/Vite, FastAPI, Git</li>
+          </ul>
+
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#portfolio" data-i18n="hero.ctaPortfolio">Portfolio ansehen</a>
+            <a class="btn btn-primary" href="#portfolio" data-i18n="hero.ctaPortfolio">Projekte ansehen</a>
+            <a class="btn btn-secondary link-arrow" href="https://github.com/Aleksandros2" target="_blank" rel="noopener noreferrer" data-i18n="hero.ctaGithub">GitHub</a>
             <a class="btn btn-secondary" href="#contact" data-i18n="hero.ctaContact">Kontakt</a>
             <a class="btn btn-secondary" href="mailto:aleksandar.nikolic@stud.altekanti.ch" data-i18n="hero.ctaEmail">E-Mail</a>
           </div>
+
+          <div class="hero-ticker" aria-label="Aktuelle Projektschwerpunkte">
+            <div class="ticker-track">
+              <div class="ticker-set">
+                <span>Python</span>
+                <span>JavaScript</span>
+                <span>React/Vite</span>
+                <span>FastAPI</span>
+                <span>HTML/CSS</span>
+                <span>SQL</span>
+                <span>SQLite</span>
+                <span>JSON</span>
+                <span>CSV</span>
+                <span>Git</span>
+                <span>GitHub Actions</span>
+                <span>Docker</span>
+              </div>
+              <div class="ticker-set" aria-hidden="true">
+                <span>Python</span>
+                <span>JavaScript</span>
+                <span>React/Vite</span>
+                <span>FastAPI</span>
+                <span>HTML/CSS</span>
+                <span>SQL</span>
+                <span>SQLite</span>
+                <span>JSON</span>
+                <span>CSV</span>
+                <span>Git</span>
+                <span>GitHub Actions</span>
+                <span>Docker</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <aside class="hero-interactive reveal" aria-labelledby="focus-switcher-title">
-          <h2 id="focus-switcher-title" class="mini-title" data-i18n="focus.title">Aktiver Fokus</h2>
-          <p class="mini-subline" data-i18n="focus.subline">Klicke auf einen Bereich, um den aktuellen Entwicklungsfokus zu sehen.</p>
+      </div>
+    </section>
 
-          <div class="focus-tabs" role="tablist" aria-label="Fokusauswahl">
-            <button type="button" class="focus-tab is-active" data-focus="web" role="tab" aria-selected="true" data-i18n="focus.web.tab">Web</button>
-            <button type="button" class="focus-tab" data-focus="backend" role="tab" aria-selected="false" data-i18n="focus.backend.tab">Backend</button>
-            <button type="button" class="focus-tab" data-focus="cloud" role="tab" aria-selected="false" data-i18n="focus.cloud.tab">Cloud</button>
-            <button type="button" class="focus-tab" data-focus="automation" role="tab" aria-selected="false" data-i18n="focus.automation.tab">Automatisierung</button>
-          </div>
 
-          <div class="focus-panel" id="focus-panel" aria-live="polite">
-            <h3 id="focus-title">Web</h3>
-            <p id="focus-text"></p>
-            <ul id="focus-list"></ul>
-            <span class="live-status"><span class="dot" aria-hidden="true"></span><span id="focus-status"></span></span>
+    <section class="portfolio section" id="portfolio" aria-labelledby="portfolio-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker" data-i18n="portfolio.kicker">Projekte</p>
+          <h2 id="portfolio-title" data-i18n="portfolio.title">Ausgewählte Arbeiten</h2>
+          <p class="section-subline" data-i18n="portfolio.subline">Projekt-Explorer mit Status, Stack und Links oder Hinweisen.</p>
+        </div>
+
+        <div class="project-filters reveal" id="project-filters" aria-label="Projektfilter">
+          <button type="button" class="filter-chip is-active" data-filter="all" data-i18n="filters.all" aria-pressed="true">Alle</button>
+          <button type="button" class="filter-chip" data-filter="python" aria-pressed="false">Python</button>
+          <button type="button" class="filter-chip" data-filter="web" aria-pressed="false">Web</button>
+          <button type="button" class="filter-chip" data-filter="fullstack" aria-pressed="false">Fullstack</button>
+          <button type="button" class="filter-chip" data-filter="visualisierung" data-i18n="filters.visualization" aria-pressed="false">Visualisierung</button>
+          <button type="button" class="filter-chip" data-filter="in-arbeit" data-i18n="filters.inProgress" aria-pressed="false">In Arbeit</button>
+        </div>
+
+        <div class="project-explorer reveal">
+          <div class="project-list" id="projects-grid" aria-label="Projektliste"></div>
+          <aside class="project-detail-panel" id="project-detail-panel" aria-live="polite" aria-label="Projektdetails"></aside>
+        </div>
+
+        <div class="certificate-block reveal">
+          <div class="certificate-head">
+            <h3 data-i18n="portfolio.certificatesTitle">Zertifikate</h3>
+            <p data-i18n="portfolio.certificatesSubline">Nachweise als PDF mit Vorschau und Download.</p>
           </div>
+          <div class="cards-grid compact-certificates" id="certificates-grid" aria-label="Zertifikatsliste"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="github-section section" id="github-activity" aria-labelledby="github-title">
+      <div class="container github-grid reveal">
+        <article class="github-card github-activity-card">
+          <p class="kicker" data-i18n="github.kicker">GitHub</p>
+          <h2 id="github-title" data-i18n="github.title">Aktivität und Open Source</h2>
+          <p data-i18n="github.subline">
+            GitHub nutze ich, um Projekte nachvollziehbar zu dokumentieren, Änderungen zu versionieren
+            und öffentliche Arbeiten verlinkbar zu machen.
+          </p>
+          <div class="github-links">
+            <a class="link-arrow" href="https://github.com/Aleksandros2" target="_blank" rel="noopener noreferrer" data-i18n="github.profileLink">GitHub-Profil</a>
+            <a class="link-arrow" href="https://github.com/Aleksandros2?tab=repositories" target="_blank" rel="noopener noreferrer" data-i18n="github.reposLink">Repositories</a>
+          </div>
+          <div class="activity-strip" aria-label="GitHub Contribution Chart">
+            <img src="https://github-readme-activity-graph.vercel.app/graph?username=Aleksandros2&amp;theme=react-dark&amp;hide_border=true&amp;area=true" alt="GitHub Contribution Chart von Aleksandar Nikolic" loading="lazy">
+          </div>
+        </article>
+
+        <aside class="github-card open-source-card">
+          <h3 data-i18n="github.openSourceTitle">Open-Source-Merges</h3>
+          <p class="open-source-empty" data-i18n="github.openSourceEmpty">Noch keine öffentlich belegten Merges hinterlegt.</p>
+          <p data-i18n="github.openSourceText">
+            Sobald gemergte Pull Requests vorhanden sind, werden sie hier mit Projekt, Kurzbeschreibung und Link aufgeführt.
+          </p>
         </aside>
+      </div>
+    </section>
+
+
+
+    <section class="tech section" id="tech-stack" aria-labelledby="tech-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker" data-i18n="tech.kicker">Tech-Stack</p>
+          <h2 id="tech-title" data-i18n="tech.title">Tech-Stack nach Einsatzbereich</h2>
+          <p class="section-subline" data-i18n="tech.subline">Nur Technologien, die in aktuellen Projekten vorkommen oder die ich plausibel erklären kann.</p>
+        </div>
+
+        <div class="tech-grid reveal" id="tech-grid" aria-live="polite"></div>
       </div>
     </section>
 
@@ -112,7 +202,7 @@
       <div class="container">
         <div class="section-head reveal">
           <p class="kicker" data-i18n="about.kicker">Über mich</p>
-          <h2 id="about-title" data-i18n="about.title">Persönliches Profil</h2>
+          <h2 id="about-title" data-i18n="about.title">Über mich</h2>
         </div>
 
         <div class="about-grid reveal">
@@ -125,25 +215,16 @@
             </p>
           </article>
 
-          <aside class="profile-card" aria-label="Profil und Kennzahlen">
+          <aside class="profile-card about-compact" aria-label="Kurzinfo">
             <figure class="profile-photo-wrap">
               <img src="assets/profile-temp.jpeg" alt="Temporäres Profilfoto von Aleksandar Nikolic" class="profile-photo">
             </figure>
 
-            <div class="stats-grid">
-              <article class="stat-box">
-                <strong id="projects-count"></strong>
-                <span data-i18n="stats.projects">Projekte</span>
-              </article>
-              <article class="stat-box">
-                <strong id="certificates-count"></strong>
-                <span data-i18n="stats.certificates">Zertifikate</span>
-              </article>
-              <article class="stat-box">
-                <strong id="years-count"></strong>
-                <span data-i18n="stats.years">Jahre Coding</span>
-              </article>
-            </div>
+            <ul class="about-facts">
+              <li data-i18n="about.factStatus">Status: IMS, Applikationsentwicklung</li>
+              <li data-i18n="about.factFocus">Fokus: Python, Web, lokale Tools</li>
+              <li data-i18n="about.factWork">Arbeitsweise: Tests, klare Struktur, ehrliche Projektstände</li>
+            </ul>
           </aside>
         </div>
       </div>
@@ -203,54 +284,19 @@
       </div>
     </section>
 
-    <section class="tech section" id="tech-stack" aria-labelledby="tech-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="kicker" data-i18n="tech.kicker">Tech-Stack</p>
-          <h2 id="tech-title" data-i18n="tech.title">Technologien, die ich bereits genutzt habe</h2>
-          <p class="section-subline" data-i18n="tech.subline">Fahre über ein Logo, um den Namen zu sehen.</p>
-        </div>
-
-        <div class="tech-grid reveal" id="tech-grid" aria-live="polite"></div>
-      </div>
-    </section>
-
-    <section class="portfolio section" id="portfolio" aria-labelledby="portfolio-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="kicker" data-i18n="portfolio.kicker">Portfolio</p>
-          <h2 id="portfolio-title" data-i18n="portfolio.title">Projekte und Zertifikate</h2>
-          <p class="section-subline" data-i18n="portfolio.subline">Zwei laufende Projekte sind bereits hinterlegt. Zertifikate folgen später.</p>
-        </div>
-
-        <div class="portfolio-tabs reveal" role="tablist" aria-label="Portfolio Kategorien">
-          <button type="button" class="tab is-active" data-tab="projects" role="tab" aria-selected="true" data-i18n="portfolio.tabs.projects">Projekte</button>
-          <button type="button" class="tab" data-tab="certificates" role="tab" aria-selected="false" data-i18n="portfolio.tabs.certificates">Zertifikate</button>
-        </div>
-
-        <div class="tab-panel is-active reveal" id="panel-projects" aria-label="Projektliste">
-          <div class="cards-grid" id="projects-grid"></div>
-        </div>
-
-        <div class="tab-panel reveal" id="panel-certificates" aria-label="Zertifikatsliste">
-          <div class="cards-grid" id="certificates-grid"></div>
-        </div>
-      </div>
-    </section>
 
     <section class="contact section" id="contact" aria-labelledby="contact-title">
       <div class="container contact-wrap reveal">
         <div>
           <p class="kicker" data-i18n="contact.kicker">Kontakt</p>
-          <h2 id="contact-title" data-i18n="contact.title">Lass uns zusammenarbeiten</h2>
-          <p data-i18n="contact.description">Für Praktikum, Zusammenarbeit oder Projektideen freue ich mich auf deine Nachricht.</p>
+          <h2 id="contact-title" data-i18n="contact.title">Kontakt</h2>
+          <p data-i18n="contact.description">Für Praktikum, Rückfragen oder Zusammenarbeit bin ich per E-Mail erreichbar.</p>
         </div>
 
         <div class="contact-links">
           <a href="tel:+41765205730"><span data-i18n="contact.phoneLabel">Telefon</span>: 076 520 57 30</a>
           <a href="mailto:aleksandar.nikolic@stud.altekanti.ch"><span data-i18n="contact.mailLabel">E-Mail</span>: aleksandar.nikolic@stud.altekanti.ch</a>
-          <a href="mailto:a.nikolic.inif24@bbbaden.ch"><span>E-Mail</span>: a.nikolic.inif24@bbbaden.ch</a>
-          <a href="https://github.com/Aleksandros2" target="_blank" rel="noopener noreferrer"><span>GitHub</span>: Aleksandros2</a>
+          <a href="mailto:a.nikolic.inif24@bbbaden.ch"><span data-i18n="contact.schoolMailLabel">Schul-Mail</span>: a.nikolic.inif24@bbbaden.ch</a>
         </div>
       </div>
     </section>
@@ -288,23 +334,6 @@
     </div>
   </footer>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('a[href="#career"]').forEach((link) => {
-        link.addEventListener('click', (event) => {
-          event.preventDefault();
-          const careerSection = document.getElementById('career');
-          if (!careerSection) return;
-          window.scrollTo({
-            top: careerSection.offsetTop + 25,
-            behavior: 'smooth'
-          });
-          history.replaceState(null, '', '#career');
-        });
-      });
-    });
-  </script>
   <script src="app.js" defer></script>
-  <script src="portfolio-project-links.js" defer></script>
 </body>
 </html>
