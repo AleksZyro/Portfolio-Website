@@ -95,7 +95,7 @@
       "hackathon": {
         "type": "Dogadjaj",
         "title": "Baden hackt",
-        "period": "2026",
+        "period": "Ucesce",
         "description": "Ucesce na hakatonu \"Baden hackt\" sa fokusom na timski rad, razvoj ideja i brzu tehnicku realizaciju."
       },
       "ims": {
@@ -180,7 +180,8 @@
   },
   "portfolioDownloadButton": "Preuzmi PDF",
   "footer": {
-    "rights": "Sva prava zadrzana."
+    "rights": "Sva prava zadrzana.",
+    "legalLink": "Privatnost i kolacici"
   },
   "github": {
     "kicker": "GitHub",
@@ -192,9 +193,17 @@
     "openSourceEmpty": "Jos nema javno proverljivih merge-ova.",
     "openSourceText": "Kada budu dostupni merge-ovani pull requestovi, ovde ce biti navedeni sa projektom, kratkim opisom i linkom."
   },
-  "interactive": {
-    "kicker": "Interaktivna radna površina",
-    "title": "Fokus projekta",
-    "subline": "Pređi preko čvora da brzo vidiš fokus, stack i status."
+  "legal": {
+    "kicker": "Pravno",
+    "title": "Privatnost i kolacici",
+    "subline": "Kratka napomena o tome koje podatke ova portfolio stranica obradjuje.",
+    "privacyTitle": "Privatnost",
+    "privacyText": "Ova portfolio stranica ne obradjuje unose iz formulara i ne koristi analitiku ili reklamne trackere. Pri otvaranju stranice hosting provajder moze obradjivati tehnicki neophodne pristupne podatke.",
+    "cookieTitle": "Kolacici i lokalno skladistenje",
+    "cookieText": "Stranica ne postavlja tracking kolacice. Jezik i tema mogu biti lokalno sacuvani u browseru, kako bi podesavanje ostalo za sledecu posetu.",
+    "externalTitle": "Eksterni sadrzaj",
+    "externalText": "Slike projekata, sertifikati i Pacman contribution grafika ucitavaju se lokalno. Eksterni linkovi ka GitHubu ili e-mailu otvaraju se tek nakon klika.",
+    "contactTitle": "Kontakt za pitanja o privatnosti",
+    "contactText": "Za pitanja o ovoj portfolio stranici ili licnim podacima mozes me kontaktirati preko e-mail adrese navedene u kontakt sekciji."
   }
 }

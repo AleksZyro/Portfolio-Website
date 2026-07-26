@@ -95,7 +95,7 @@
       "hackathon": {
         "type": "Evenement",
         "title": "Baden hackt",
-        "period": "2026",
+        "period": "Participation",
         "description": "Participation au hackathon \"Baden hackt\" avec un accent sur le travail d equipe, l ideation et la mise en oeuvre technique rapide."
       },
       "ims": {
@@ -180,7 +180,8 @@
   },
   "portfolioDownloadButton": "Telecharger le PDF",
   "footer": {
-    "rights": "Tous droits reserves."
+    "rights": "Tous droits reserves.",
+    "legalLink": "Confidentialite et cookies"
   },
   "github": {
     "kicker": "GitHub",
@@ -192,9 +193,17 @@
     "openSourceEmpty": "Aucun merge vérifiable publiquement n’est encore listé.",
     "openSourceText": "Dès que des pull requests mergées seront disponibles, elles seront listées ici avec projet, courte description et lien."
   },
-  "interactive": {
-    "kicker": "Espace de travail interactif",
-    "title": "Focus projets",
-    "subline": "Survole un nœud pour voir rapidement le focus, le stack et le statut."
+  "legal": {
+    "kicker": "Mentions legales",
+    "title": "Confidentialite et cookies",
+    "subline": "Court apercu des donnees traitees par ce site portfolio.",
+    "privacyTitle": "Confidentialite",
+    "privacyText": "Ce site portfolio ne traite pas de saisies de formulaire et n utilise pas d outils d analyse ou de publicite. Lors du chargement du site, des donnees d acces techniquement necessaires peuvent etre traitees par l hebergeur.",
+    "cookieTitle": "Cookies et stockage local",
+    "cookieText": "Le site ne place pas de cookies de suivi. La langue et le theme peuvent etre enregistres localement dans le navigateur afin de conserver le reglage lors de la prochaine visite.",
+    "externalTitle": "Contenus externes",
+    "externalText": "Les images de projets, certificats et le graphique Pacman Contributions sont charges localement. Les liens externes vers GitHub ou e-mail ne s ouvrent qu au clic.",
+    "contactTitle": "Contact pour les questions de confidentialite",
+    "contactText": "Pour toute question sur ce site portfolio ou les donnees personnelles, je suis joignable via l adresse e-mail indiquee dans la section contact."
   }
 }
