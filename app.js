@@ -1,4 +1,4 @@
-﻿const portfolioData = {
+const portfolioData = {
   codingSinceYear: 2025,
   projects: [
     {
@@ -120,6 +120,9 @@ const focusStatus = document.getElementById('focus-status');
 const languageButtons = document.querySelectorAll('.lang-btn');
 const themeToggle = document.getElementById('theme-toggle');
 const heroCopy = document.querySelector('.hero-copy');
+const heroInteractiveCard = document.querySelector('.hero-interactive-card');
+const workNodes = document.querySelectorAll('.work-node');
+const workMapStatus = document.getElementById('work-map-status');
 const interactiveBackground = document.querySelector('.interactive-background');
 const modal = document.getElementById('detail-modal');
 const modalCard = document.getElementById('modal-card');
@@ -817,6 +820,28 @@ if (heroCopy) {
     heroCopy.style.setProperty('--spot-y', `${y.toFixed(1)}%`);
   });
 }
+
+if (heroInteractiveCard) {
+  heroInteractiveCard.addEventListener('pointermove', (event) => {
+    const rect = heroInteractiveCard.getBoundingClientRect();
+    const x = ((event.clientX - rect.left) / Math.max(rect.width, 1) - 0.5) * 2;
+    const y = ((event.clientY - rect.top) / Math.max(rect.height, 1) - 0.5) * 2;
+    heroInteractiveCard.style.setProperty('--mouse-x', x.toFixed(3));
+    heroInteractiveCard.style.setProperty('--mouse-y', y.toFixed(3));
+  });
+}
+
+workNodes.forEach((node) => {
+  const setActiveWorkNode = () => {
+    workNodes.forEach((item) => item.classList.toggle('is-active', item === node));
+    if (workMapStatus) {
+      workMapStatus.textContent = node.dataset.workInfo || node.textContent;
+    }
+  };
+
+  node.addEventListener('pointerenter', setActiveWorkNode);
+  node.addEventListener('focus', setActiveWorkNode);
+});
 
 if (interactiveBackground) {
   window.addEventListener('pointermove', (event) => {

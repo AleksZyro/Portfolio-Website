@@ -1,10 +1,10 @@
 (() => {
   const embeddedCopyOverrides = {
     de: {
-      heroDescription: 'Ich entwickle eigene Anwendungen in den Bereichen Web, APIs, Daten und Automatisierung und vertiefe dabei strukturierte Architektur, Tests und verständliche Benutzeroberflächen.',
-      aboutDescription: 'Ich besuche die IMS mit Schwerpunkt Applikationsentwicklung und vertiefe schulische Grundlagen durch eigene und gemeinsame Softwareprojekte. Dabei lege ich Wert auf verständliche Benutzeroberflächen, nachvollziehbaren Code und kontinuierliches Lernen.',
+      heroDescription: 'Ich entwickle eigene Anwendungen in den Bereichen Web, APIs, Daten und Automatisierung und vertiefe dabei strukturierte Architektur, Tests und verstÃ¤ndliche BenutzeroberflÃ¤chen.',
+      aboutDescription: 'Ich besuche die IMS mit Schwerpunkt Applikationsentwicklung und vertiefe schulische Grundlagen durch eigene und gemeinsame Softwareprojekte. Dabei lege ich Wert auf verstÃ¤ndliche BenutzeroberflÃ¤chen, nachvollziehbaren Code und kontinuierliches Lernen.',
       techSubline: 'Die Erfahrungen stammen aus eigenen Projekten, Teamprojekten und dem IMS-Unterricht und sind je nach Technologie unterschiedlich vertieft.',
-      portfolioSubline: 'Fünf Projekte und drei Zertifikate sind bereits hinterlegt.'
+      portfolioSubline: 'FÃ¼nf Projekte und drei Zertifikate sind bereits hinterlegt.'
     },
     en: {
       heroDescription: 'I build my own applications in web, APIs, data, and automation while deepening my understanding of structured architecture, testing, and clear user interfaces.',
@@ -13,16 +13,16 @@
       portfolioSubline: 'Five projects and three certificates are already listed.'
     },
     fr: {
-      heroDescription: 'Je développe mes propres applications dans les domaines du web, des API, des données et de l’automatisation, tout en approfondissant l’architecture structurée, les tests et les interfaces utilisateur compréhensibles.',
-      aboutDescription: 'Je fréquente l’IMS avec une spécialisation en développement applicatif et j’approfondis mes bases scolaires grâce à des projets logiciels personnels et collaboratifs. J’accorde de l’importance à des interfaces compréhensibles, à un code lisible et à l’apprentissage continu.',
-      techSubline: 'Cette liste réunit des expériences issues de projets personnels, de projets d’équipe et des cours de l’IMS ; le niveau d’approfondissement varie selon la technologie.',
-      portfolioSubline: 'Cinq projets et trois certificats sont déjà disponibles.'
+      heroDescription: 'Je dÃ©veloppe mes propres applications dans les domaines du web, des API, des donnÃ©es et de lâ€™automatisation, tout en approfondissant lâ€™architecture structurÃ©e, les tests et les interfaces utilisateur comprÃ©hensibles.',
+      aboutDescription: 'Je frÃ©quente lâ€™IMS avec une spÃ©cialisation en dÃ©veloppement applicatif et jâ€™approfondis mes bases scolaires grÃ¢ce Ã  des projets logiciels personnels et collaboratifs. Jâ€™accorde de lâ€™importance Ã  des interfaces comprÃ©hensibles, Ã  un code lisible et Ã  lâ€™apprentissage continu.',
+      techSubline: 'Cette liste rÃ©unit des expÃ©riences issues de projets personnels, de projets dâ€™Ã©quipe et des cours de lâ€™IMS ; le niveau dâ€™approfondissement varie selon la technologie.',
+      portfolioSubline: 'Cinq projets et trois certificats sont dÃ©jÃ  disponibles.'
     },
     sr: {
-      heroDescription: 'Razvijam sopstvene aplikacije za web, API-je, podatke i automatizaciju, dok produbljujem znanje o strukturisanoj arhitekturi, testiranju i razumljivim korisničkim interfejsima.',
-      aboutDescription: 'Pohađam IMS sa fokusom na razvoj aplikacija i produbljujem školske osnove kroz samostalne i timske softverske projekte. Važni su mi razumljivi korisnički interfejsi, pregledan kod i stalno učenje.',
+      heroDescription: 'Razvijam sopstvene aplikacije za web, API-je, podatke i automatizaciju, dok produbljujem znanje o strukturisanoj arhitekturi, testiranju i razumljivim korisniÄkim interfejsima.',
+      aboutDescription: 'PohaÄ‘am IMS sa fokusom na razvoj aplikacija i produbljujem Å¡kolske osnove kroz samostalne i timske softverske projekte. VaÅ¾ni su mi razumljivi korisniÄki interfejsi, pregledan kod i stalno uÄenje.',
       techSubline: 'Ova lista objedinjuje iskustvo iz samostalnih projekata, timskih projekata i IMS nastave; nivo iskustva se razlikuje u zavisnosti od tehnologije.',
-      portfolioSubline: 'Pet projekata i tri sertifikata su već dodati.'
+      portfolioSubline: 'Pet projekata i tri sertifikata su veÄ‡ dodati.'
     }
   };
 
@@ -50,43 +50,43 @@
     {
       key: 'sounddeck',
       title: 'SoundDeck',
-      cardDescription: 'Windows-Soundboard-MVP mit PySide6, MP3-Soundkarten, Kategorien, Hotkeys und Audio-Routing für virtuelle Geräte.',
+      cardDescription: 'Windows-Soundboard-MVP mit PySide6, MP3-Soundkarten, Kategorien, Hotkeys und Audio-Routing fÃ¼r virtuelle GerÃ¤te.',
       detailDescription: [
         'SoundDeck',
         '',
-        'SoundDeck ist eine Windows-Desktop-App als Soundboard. Nutzer können MP3-Dateien hinzufügen, als Soundkarten verwalten und über ein ausgewähltes Audio-Ausgabegerät abspielen.',
+        'SoundDeck ist eine Windows-Desktop-App als Soundboard. Nutzer kÃ¶nnen MP3-Dateien hinzufÃ¼gen, als Soundkarten verwalten und Ã¼ber ein ausgewÃ¤hltes Audio-AusgabegerÃ¤t abspielen.',
         '',
-        'Das Projekt ist als MVP umgesetzt und enthält eine PySide6-Oberfläche, lokale JSON-Konfiguration, Kategorien, Hotkeys, globale Lautstärke, Lautstärke pro Sound und eine vereinfachte Audio-Geräteauswahl für normale Geräte sowie virtuelle Routing-Geräte wie VB-Cable oder VoiceMeeter.',
+        'Das Projekt ist als MVP umgesetzt und enthÃ¤lt eine PySide6-OberflÃ¤che, lokale JSON-Konfiguration, Kategorien, Hotkeys, globale LautstÃ¤rke, LautstÃ¤rke pro Sound und eine vereinfachte Audio-GerÃ¤teauswahl fÃ¼r normale GerÃ¤te sowie virtuelle Routing-GerÃ¤te wie VB-Cable oder VoiceMeeter.',
         '',
-        'Im GitHub-Repository befindet sich zusätzlich eine Benutzeranleitung für Anfänger, damit SoundDeck auch ohne Informatik-Vorwissen getestet werden kann.'
+        'Im GitHub-Repository befindet sich zusÃ¤tzlich eine Benutzeranleitung fÃ¼r AnfÃ¤nger, damit SoundDeck auch ohne Informatik-Vorwissen getestet werden kann.'
       ].join('\n'),
-      meta: ['Status: MVP funktionsfähig', 'Tech: Python, PySide6, sounddevice, soundfile, NumPy', 'Fokus: Desktop-App und Audio-Routing'],
-      url: 'https://github.com/Aleksandros2/Soundboard',
+      meta: ['Status: MVP funktionsfÃ¤hig', 'Tech: Python, PySide6, sounddevice, soundfile, NumPy', 'Fokus: Desktop-App und Audio-Routing'],
+      url: 'https://github.com/AleksZyro/Soundboard',
       previewLabel: 'GitHub Projekt',
       previewBadge: 'Fertig'
     },
     {
       key: 'portfolio-website',
       title: 'Portfolio Website',
-      cardDescription: 'Persönliche Portfolio-Website für Bewerbungen mit Projekten, Zertifikaten, Tech-Stack und mehrsprachiger Oberfläche.',
+      cardDescription: 'PersÃ¶nliche Portfolio-Website fÃ¼r Bewerbungen mit Projekten, Zertifikaten, Tech-Stack und mehrsprachiger OberflÃ¤che.',
       detailDescription: [
         'Portfolio Website',
         '',
-        'Diese Website ist mein digitales Bewerbungsportfolio. Sie zeigt mein Profil, meinen Werdegang, meine Technologien, Projekte, Zertifikate und Kontaktmöglichkeiten in einer modernen responsiven Oberfläche.',
+        'Diese Website ist mein digitales Bewerbungsportfolio. Sie zeigt mein Profil, meinen Werdegang, meine Technologien, Projekte, Zertifikate und KontaktmÃ¶glichkeiten in einer modernen responsiven OberflÃ¤che.',
         '',
-        'Die Website ist statisch aufgebaut und verwendet HTML, CSS und JavaScript. Sie ist auf Netlify veröffentlicht und über GitHub versioniert.',
+        'Die Website ist statisch aufgebaut und verwendet HTML, CSS und JavaScript. Sie ist auf Netlify verÃ¶ffentlicht und Ã¼ber GitHub versioniert.',
         '',
-        'Das Repository enthält die Struktur der Seite, die Projektdaten, Styles, Assets und die Logik für Detailansichten, Sprachumschaltung und Portfolio-Karten.'
+        'Das Repository enthÃ¤lt die Struktur der Seite, die Projektdaten, Styles, Assets und die Logik fÃ¼r Detailansichten, Sprachumschaltung und Portfolio-Karten.'
       ].join('\n'),
-      meta: ['Status: Online', 'Tech: HTML, CSS, JavaScript, Netlify', 'Fokus: Bewerbungsportfolio und Projektpräsentation'],
-      url: 'https://github.com/Aleksandros2/Portfolio-Website',
+      meta: ['Status: Online', 'Tech: HTML, CSS, JavaScript, Netlify', 'Fokus: Bewerbungsportfolio und ProjektprÃ¤sentation'],
+      url: 'https://github.com/AleksZyro/Portfolio-Website',
       previewLabel: 'GitHub Projekt',
       previewBadge: 'Online'
     }
   ];
 
   const knownProjectLinks = new Map([
-    ['SortLab', 'https://github.com/Aleksandros2/sortlab'],
+    ['SortLab', 'https://github.com/AleksZyro/sortlab'],
     ...githubProjects.map((project) => [project.title, project.url])
   ]);
 
@@ -120,7 +120,7 @@
         color: #7dffbd;
       }
       .project-status-chip.is-complete::before {
-        content: "✓";
+        content: "âœ“";
         display: inline-grid;
         place-items: center;
         width: 18px;
@@ -155,7 +155,7 @@
 
     modalDownload.hidden = false;
     modalDownload.href = knownProjectLinks.get(title);
-    modalDownload.textContent = 'GitHub öffnen';
+    modalDownload.textContent = 'GitHub Ã¶ffnen';
     modalDownload.classList.add('is-github-link');
     modalDownload.removeAttribute('download');
     modalDownload.setAttribute('target', '_blank');
@@ -233,7 +233,7 @@
 
     modalDownload.hidden = false;
     modalDownload.href = project.url;
-    modalDownload.textContent = 'GitHub öffnen';
+    modalDownload.textContent = 'GitHub Ã¶ffnen';
     modalDownload.classList.add('is-github-link');
     modalDownload.removeAttribute('download');
     modalDownload.setAttribute('target', '_blank');

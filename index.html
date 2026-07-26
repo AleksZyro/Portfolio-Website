@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8">
@@ -13,11 +13,7 @@
 <body>
   <a class="skip-link" href="#main-content" data-i18n="skip.content">Zum Inhalt springen</a>
   <div class="interactive-background" aria-hidden="true">
-    <span class="bg-point point-a"></span>
-    <span class="bg-point point-b"></span>
-    <span class="bg-point point-c"></span>
-    <span class="bg-point point-d"></span>
-    <span class="bg-point point-e"></span>
+    <span class="bg-cursor-glow"></span>
   </div>
 
   <header class="site-header" id="top">
@@ -81,7 +77,7 @@
 
           <div class="hero-actions">
             <a class="btn btn-primary" href="#portfolio" data-i18n="hero.ctaPortfolio">Projekte ansehen</a>
-            <a class="btn btn-secondary link-arrow" href="https://github.com/Aleksandros2" target="_blank" rel="noopener noreferrer" data-i18n="hero.ctaGithub">GitHub</a>
+            <a class="btn btn-secondary link-arrow" href="https://github.com/AleksZyro" target="_blank" rel="noopener noreferrer" data-i18n="hero.ctaGithub">GitHub</a>
             <a class="btn btn-secondary" href="#contact" data-i18n="hero.ctaContact">Kontakt</a>
             <a class="btn btn-secondary" href="mailto:aleksandar.nikolic@stud.altekanti.ch" data-i18n="hero.ctaEmail">E-Mail</a>
           </div>
@@ -119,6 +115,25 @@
             </div>
           </div>
         </div>
+
+        <aside class="hero-interactive-card reveal" aria-labelledby="interactive-title">
+          <div class="interactive-card-head">
+            <p class="kicker" data-i18n="interactive.kicker">Interaktive Arbeitsfläche</p>
+            <h2 id="interactive-title" data-i18n="interactive.title">Projektfokus</h2>
+            <p data-i18n="interactive.subline">Hover über einen Knoten, um Fokus, Stack und Status schneller zu erfassen.</p>
+          </div>
+
+          <div class="work-map" aria-label="Interaktive Projekt- und Tech-Übersicht">
+            <button type="button" class="work-node node-project is-primary" data-work-info="PathLab | React/Vite, Tests | fertig">PathLab</button>
+            <button type="button" class="work-node node-project" data-work-info="SortLab | React/Vite, Algorithmen | fertig">SortLab</button>
+            <button type="button" class="work-node node-project" data-work-info="VSW | FastAPI, React | Teamprojekt">VSW</button>
+            <button type="button" class="work-node node-tech" data-work-info="Python | lokale Tools, APIs, Daten">Python</button>
+            <button type="button" class="work-node node-tech" data-work-info="GitHub | Repos, Commits, Workflows">GitHub</button>
+            <button type="button" class="work-node node-tech" data-work-info="SQLite/JSON | kleine Datenmodelle">Daten</button>
+          </div>
+
+          <p class="work-map-status" id="work-map-status" aria-live="polite">PathLab | React/Vite, Tests | fertig</p>
+        </aside>
 
       </div>
     </section>
@@ -166,11 +181,11 @@
             und öffentliche Arbeiten verlinkbar zu machen.
           </p>
           <div class="github-links">
-            <a class="link-arrow" href="https://github.com/Aleksandros2" target="_blank" rel="noopener noreferrer" data-i18n="github.profileLink">GitHub-Profil</a>
-            <a class="link-arrow" href="https://github.com/Aleksandros2?tab=repositories" target="_blank" rel="noopener noreferrer" data-i18n="github.reposLink">Repositories</a>
+            <a class="link-arrow" href="https://github.com/AleksZyro" target="_blank" rel="noopener noreferrer" data-i18n="github.profileLink">GitHub-Profil</a>
+            <a class="link-arrow" href="https://github.com/AleksZyro?tab=repositories" target="_blank" rel="noopener noreferrer" data-i18n="github.reposLink">Repositories</a>
           </div>
           <div class="activity-strip" aria-label="GitHub Contribution Chart">
-            <img src="https://github-readme-activity-graph.vercel.app/graph?username=Aleksandros2&amp;theme=react-dark&amp;hide_border=true&amp;area=true" alt="GitHub Contribution Chart von Aleksandar Nikolic" loading="lazy">
+            <img src="https://github-readme-activity-graph.vercel.app/graph?username=AleksZyro&amp;theme=react-dark&amp;hide_border=true&amp;area=true" alt="GitHub Contribution Chart von Aleksandar Nikolic" loading="lazy">
           </div>
         </article>
 

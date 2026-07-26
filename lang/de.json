@@ -191,5 +191,10 @@
     "openSourceTitle": "Open-Source-Merges",
     "openSourceEmpty": "Noch keine öffentlich belegten Merges hinterlegt.",
     "openSourceText": "Sobald gemergte Pull Requests vorhanden sind, werden sie hier mit Projekt, Kurzbeschreibung und Link aufgeführt."
+  },
+  "interactive": {
+    "kicker": "Interaktive Arbeitsfläche",
+    "title": "Projektfokus",
+    "subline": "Hover über einen Knoten, um Fokus, Stack und Status schneller zu erfassen."
   }
 }
