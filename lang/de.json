@@ -125,7 +125,7 @@
   "portfolio": {
     "kicker": "Projekte",
     "title": "Ausgewählte Arbeiten",
-    "subline": "Projekt-Explorer mit Status, Stack und Links oder Hinweisen.",
+    "subline": "Projekt-Explorer mit Stack, Links und kurzen Hinweisen.",
     "certificatesTitle": "Zertifikate",
     "certificatesSubline": "Nachweise als PDF mit Vorschau und Download.",
     "detailKicker": "Projektdetails",
@@ -175,7 +175,7 @@
   "modal": {
     "close": "Schliessen",
     "title": "Detailansicht",
-    "projectKicker": "Projektstatus",
+    "projectKicker": "Projektdetails",
     "certificateKicker": "Zertifikat"
   },
   "portfolioDownloadButton": "Download PDF",
@@ -200,10 +200,123 @@
     "privacyTitle": "Datenschutz",
     "privacyText": "Diese Portfolio-Seite verarbeitet keine Formulareingaben und nutzt keine Analyse- oder Werbetracker. Beim Aufruf der Seite können technisch notwendige Zugriffsdaten durch den Hostinganbieter verarbeitet werden.",
     "cookieTitle": "Cookies und lokale Speicherung",
-    "cookieText": "Die Seite setzt keine Tracking-Cookies. Sprache und Theme können lokal im Browser gespeichert werden, damit die Einstellung beim nächsten Besuch erhalten bleibt.",
+    "cookieText": "Die Seite setzt keine Tracking-Cookies. Die Sprache kann lokal im Browser gespeichert werden, damit die Einstellung beim nächsten Besuch erhalten bleibt.",
     "externalTitle": "Externe Inhalte",
     "externalText": "Projektbilder, Zertifikate und die Pacman-Contribution-Grafik werden lokal geladen. Externe Links zu GitHub oder E-Mail werden erst beim Anklicken geöffnet.",
     "contactTitle": "Kontakt für Datenschutzfragen",
     "contactText": "Für Fragen zur Portfolio-Seite oder zu personenbezogenen Daten bin ich über die im Kontaktbereich genannte E-Mail erreichbar."
+  },
+  "portfolioItems": {
+    "projects": {
+      "pathlab": {
+        "title": "PathLab",
+        "cardDescription": "Visualizer für Wegfindungsalgorithmen auf einem gewichteten Raster mit BFS, DFS, Dijkstra und A*.",
+        "detailDescription": "PathLab\n\nPathLab ist ein interaktiver Visualizer zum Lernen und Vergleichen von Wegfindungsalgorithmen. Die Anwendung arbeitet mit einem gewichteten Raster, Start- und Zielpunkten sowie Feldern wie Wand, Wasser und Schlamm.\n\nDer Schwerpunkt liegt auf nachvollziehbarer Algorithmus-Visualisierung: BFS, DFS, Dijkstra und A* können einzeln ausgeführt oder verglichen werden. Die Anwendung zeigt den gefundenen Pfad, Kosten und Laufzeit getrennt von der Animation.\n\nDas Projekt ist eine stabile Portfolio-Version mit GitHub-Pages-Demo, automatisierten Tests und GitHub-Actions-Workflow.",
+        "meta": [
+          "Stack: React, Vite, JavaScript, CSS, Vitest",
+          "Fokus: Algorithmen, Tests, UI-State",
+          "Demo: aktuell nicht verlinkt",
+          "Repository: öffentlich"
+        ],
+        "tags": [
+          "React/Vite",
+          "Tests",
+          "GitHub Pages"
+        ],
+        "role": "Eigenes Lern- und Portfolio-Projekt",
+        "learning": "Algorithmen getrennt von React-Komponenten halten, Tests für Randfälle schreiben und UI-State nachvollziehbar machen.",
+        "previewLabel": "Projektvorschau"
+      },
+      "sortlab": {
+        "title": "SortLab",
+        "cardDescription": "Sortieralgorithmus-Visualizer mit Balkenansicht, Steuerung, Statistik und Erklärbereich.",
+        "detailDescription": "SortLab\n\nSortLab ist ein interaktiver Visualizer für Sortieralgorithmen. Nutzerinnen und Nutzer sehen Schritt für Schritt, wie ein Array sortiert wird, können die Geschwindigkeit live anpassen und verschiedene Verfahren vergleichen.\n\nEnthalten sind Bubble Sort, Selection Sort, Insertion Sort, Quick Sort und Heap Sort. Das Dashboard zeigt Vergleiche, Swaps, Schritte und Laufzeit in Millisekunden.\n\nDas Projekt dient als Lernprojekt für Algorithmen, React-State und Visualisierung.",
+        "meta": [
+          "Stack: React, Vite, JavaScript, CSS",
+          "Fokus: Sortieralgorithmen und Visualisierung",
+          "Demo: lokal vorhanden",
+          "Repository: noch nicht öffentlich verlinkt"
+        ],
+        "tags": [
+          "React/Vite",
+          "Algorithmen"
+        ],
+        "role": "Eigenes Lernprojekt",
+        "learning": "Animation, Laufzeitsteuerung und Statistik so verbinden, dass der Algorithmus sichtbar und bedienbar bleibt.",
+        "previewLabel": "Projektvorschau"
+      },
+      "vsw": {
+        "title": "VSW - Vulnerability Scanner Web App",
+        "cardDescription": "Defensive Fullstack-Web-App für risikoarme Security-Checks an autorisierten Domains oder IPs.",
+        "detailDescription": "VSW - Vulnerability Scanner Web App\n\nVSW ist ein gemeinsames Projekt mit Botond. Die Anwendung führt defensive, passive oder risikoarme Checks aus und stellt Ergebnisse in einem React-Dashboard dar.\n\nDer Fokus liegt auf HTTP-Security-Headern, TLS-/Zertifikatsinformationen, einer kleinen sicheren Portliste, Reports und Exporten. Das Projekt enthält ein FastAPI-Backend, ein React-Frontend, Tests und Docker-Grundlagen.\n\nWichtig: Das Projekt ist ausdrücklich für eigene Systeme oder Systeme mit Erlaubnis gedacht. Es enthält keine Exploits, kein Brute Force und keine aggressiven Scans.",
+        "meta": [
+          "Team: gemeinsam mit Botond",
+          "Stack: FastAPI, React, TypeScript, SQLite/PostgreSQL, Docker",
+          "Sichtbarkeit: Repository bei Botond",
+          "Hinweis: nur defensive Checks"
+        ],
+        "tags": [
+          "gemeinsam",
+          "FastAPI",
+          "React"
+        ],
+        "role": "Gemeinsames Projekt mit Botond",
+        "learning": "Defensive Checks klar begrenzen, Backend und Frontend sauber trennen und Ergebnisse verständlich darstellen.",
+        "previewLabel": "Projektvorschau"
+      },
+      "besp2074": {
+        "title": "BESP2074",
+        "cardDescription": "Lokale Balkan-Wirtschaftssimulation mit Python-Modell, JSON-Export und Web-Dashboard.",
+        "detailDescription": "BESP2074\n\nBESP2074 ist eine lokale, jahresbasierte Balkan-Simulation. Das Projekt nutzt ein Python-Modell, strukturierte JSON-Daten und ein lokales Web-Dashboard, um Szenarien bis 2074 darzustellen.\n\nDie Anwendung ist als Lern- und Szenariosimulation gedacht. Die Resultate sind keine echten wirtschaftlichen, politischen oder finanziellen Prognosen, sondern vereinfachte Modellläufe mit Annahmen, Seeds und optionalen Ereignissen.\n\nDas Projekt ist lokal nutzbar, aber noch nicht als fertige öffentliche Anwendung veröffentlicht.",
+        "meta": [
+          "Stack: Python, JSON, HTML/CSS, JavaScript",
+          "Fokus: Simulation, Datenexport, Dashboard",
+          "Repository: aktuell nicht verlinkt",
+          "Hinweis: keine Prognose"
+        ],
+        "tags": [
+          "Python",
+          "Simulation"
+        ],
+        "role": "Eigenes Simulationsprojekt",
+        "learning": "Modellannahmen, JSON-Export und Dashboard so verbinden, dass lokale Szenarien nachvollziehbar bleiben.",
+        "previewLabel": "Projektvorschau"
+      }
+    },
+    "certificates": {
+      "ethicalHacker": {
+        "title": "Ethical Hacker",
+        "cardDescription": "Zertifikat im PDF-Format mit direkter Vorschau und Download.",
+        "detailDescription": "Dieses Zertifikat kannst du direkt im Portfolio ansehen oder herunterladen.",
+        "meta": [
+          "Format: PDF",
+          "Nachweis: Zertifikat",
+          "Download: verfügbar"
+        ],
+        "previewLabel": "Zertifikat"
+      },
+      "introCybersecurity": {
+        "title": "Introduction to Cybersecurity",
+        "cardDescription": "Zertifikat im PDF-Format mit direkter Vorschau und Download.",
+        "detailDescription": "Dieses Zertifikat kannst du direkt im Portfolio ansehen oder herunterladen.",
+        "meta": [
+          "Format: PDF",
+          "Nachweis: Zertifikat",
+          "Download: verfügbar"
+        ],
+        "previewLabel": "Zertifikat"
+      },
+      "bbbHackathon": {
+        "title": "BBB Hackathon",
+        "cardDescription": "Zertifikat im PDF-Format mit direkter Vorschau und Download.",
+        "detailDescription": "Dieses Zertifikat kannst du direkt im Portfolio ansehen oder herunterladen.",
+        "meta": [
+          "Format: PDF",
+          "Nachweis: Zertifikat",
+          "Download: verfügbar"
+        ],
+        "previewLabel": "Zertifikat"
+      }
+    }
   }
 }

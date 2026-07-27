@@ -879,7 +879,7 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
 
 .project-preview {
   position: relative;
-  min-height: 118px;
+  min-height: clamp(168px, 15vw, 210px);
   border-radius: 10px;
   border: 1px solid rgba(136, 155, 255, 0.28);
   background-color: rgba(13, 14, 27, 0.96);
@@ -915,29 +915,6 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   font-size: 0.95rem;
   font-weight: 700;
   line-height: 1.2;
-}
-.project-status-chip {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 207, 87, 0.35);
-  background: rgba(44, 28, 8, 0.9);
-  color: #ffd86b;
-  font-size: 0.74rem;
-  font-weight: 700;
-}
-.project-status-chip::before {
-  content: "";
-  width: 10px;
-  height: 10px;
-  border-radius: 3px;
-  background: #ffcc4d;
-  box-shadow: 0 0 0 1px rgba(255, 216, 107, 0.25);
 }
 .project-tags,
 .project-links {

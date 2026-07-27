@@ -125,7 +125,7 @@
   "portfolio": {
     "kicker": "Пројекти",
     "title": "Одабрани радови",
-    "subline": "Explorer пројеката са статусом, stackom и линковима или напоменама.",
+    "subline": "Explorer пројеката са stackom, линковима и кратким напоменама.",
     "certificatesTitle": "Сертификати",
     "certificatesSubline": "PDF докази са прегледом и преузимањем.",
     "detailKicker": "Детаљи пројекта",
@@ -175,13 +175,13 @@
   "modal": {
     "close": "Затвори",
     "title": "Детаљни приказ",
-    "projectKicker": "Статус пројекта",
+    "projectKicker": "Детаљи пројекта",
     "certificateKicker": "Сертификат"
   },
   "portfolioDownloadButton": "Преузми PDF",
   "footer": {
     "rights": "Сва права задржана.",
-    "legalLink": "Приватност и cookies"
+    "legalLink": "Приватност и кукији"
   },
   "github": {
     "kicker": "GitHub",
@@ -195,15 +195,128 @@
   },
   "legal": {
     "kicker": "Правно",
-    "title": "Приватност и cookies",
+    "title": "Приватност и кукији",
     "subline": "Кратка напомена о томе које податке ова portfolio страница обрађује.",
     "privacyTitle": "Приватност",
     "privacyText": "Ова portfolio страница не обрађује уносе из формулара и не користи аналитику или рекламне trackere. При отварању странице hosting провајдер може обрађивати технички неопходне приступне податке.",
-    "cookieTitle": "Cookies и локално складиштење",
-    "cookieText": "Страница не поставља tracking cookies. Језик и тема могу бити локално сачувани у browseru, како би подешавање остало за следећу посету.",
+    "cookieTitle": "Кукији и локално складиштење",
+    "cookieText": "Страница не поставља tracking кукије. Језик може бити локално сачуван у прегледачу, како би подешавање остало за следећу посету.",
     "externalTitle": "Екстерни садржај",
-    "externalText": "Слике пројеката, сертификати и Pacman contribution графика учитавају се локално. Екстерни линкови ка GitHubu или e-mailu отварају се тек након клика.",
+    "externalText": "Слике пројеката, сертификати и Pacman contribution графика учитавају се локално. Екстерни линкови ка GitHub-у или e-mail-у отварају се тек након клика.",
     "contactTitle": "Контакт за питања о приватности",
     "contactText": "За питања о овој portfolio страници или личним подацима можеш ме контактирати преко e-mail адресе наведене у контакт секцији."
+  },
+  "portfolioItems": {
+    "projects": {
+      "pathlab": {
+        "title": "PathLab",
+        "cardDescription": "Visualizer за алгоритме проналажења пута на пондерисаној мрежи са BFS, DFS, Dijkstra и A*.",
+        "detailDescription": "PathLab\n\nPathLab је интерактивни visualizer за учење и поређење алгоритама за проналажење пута. Апликација користи пондерисану мрежу, почетну и циљну тачку, као и поља попут зида, воде и блата.\n\nФокус је на разумљивој визуализацији алгоритама: BFS, DFS, Dijkstra и A* могу се покретати појединачно или поредити. Апликација одвојено приказује пронађени пут, трошкове и време извршавања.\n\nПројекат има стабилну portfolio верзију, аутоматизоване тестове и GitHub Actions workflow.",
+        "meta": [
+          "Stack: React, Vite, JavaScript, CSS, Vitest",
+          "Фокус: алгоритми, тестови, UI state",
+          "Demo: тренутно није линкован",
+          "Repository: јаван"
+        ],
+        "tags": [
+          "React/Vite",
+          "Тестови",
+          "GitHub Pages"
+        ],
+        "role": "Лични пројекат за учење и portfolio",
+        "learning": "Одвојити алгоритме од React компоненти, писати тестове за рубне случајеве и учинити UI state разумљивим.",
+        "previewLabel": "Преглед пројекта"
+      },
+      "sortlab": {
+        "title": "SortLab",
+        "cardDescription": "Visualizer алгоритама сортирања са стубићима, контролама, статистикама и објашњењем.",
+        "detailDescription": "SortLab\n\nSortLab је интерактивни visualizer алгоритама сортирања. Корисници корак по корак виде како се низ сортира, могу уживо мењати брзину и поредити различите алгоритме.\n\nУкључени су Bubble Sort, Selection Sort, Insertion Sort, Quick Sort и Heap Sort. Dashboard приказује поређења, замене, кораке и време извршавања у милисекундама.\n\nПројекат служи као пројекат за учење алгоритама, React state-а и визуализације.",
+        "meta": [
+          "Stack: React, Vite, JavaScript, CSS",
+          "Фокус: алгоритми сортирања и визуализација",
+          "Demo: локално доступан",
+          "Repository: још није јавно линкован"
+        ],
+        "tags": [
+          "React/Vite",
+          "Алгоритми"
+        ],
+        "role": "Лични пројекат за учење",
+        "learning": "Повезати анимацију, контролу брзине и статистику тако да алгоритам остане видљив и употребљив.",
+        "previewLabel": "Преглед пројекта"
+      },
+      "vsw": {
+        "title": "VSW - Vulnerability Scanner Web App",
+        "cardDescription": "Дефанзивна fullstack web апликација за нискоризичне security провере на ауторизованим доменима или IP адресама.",
+        "detailDescription": "VSW - Vulnerability Scanner Web App\n\nVSW је заједнички пројекат са Ботондом. Апликација извршава дефанзивне, пасивне или нискоризичне провере и приказује резултате у React dashboardu.\n\nФокус је на HTTP security headerima, TLS информацијама о сертификатима, малој сигурној листи портова, reportima и exportima. Пројекат садржи FastAPI backend, React frontend, тестове и Docker основе.\n\nВажно: Пројекат је намењен искључиво за сопствене системе или системе уз дозволу. Не садржи exploite, brute force ни агресивне scanove.",
+        "meta": [
+          "Тим: заједно са Ботондом",
+          "Stack: FastAPI, React, TypeScript, SQLite/PostgreSQL, Docker",
+          "Видљивост: repository код Ботонда",
+          "Напомена: само дефанзивне провере"
+        ],
+        "tags": [
+          "заједно",
+          "FastAPI",
+          "React"
+        ],
+        "role": "Заједнички пројекат са Ботондом",
+        "learning": "Јасно ограничити дефанзивне провере, одвојити backend и frontend и разумљиво приказати резултате.",
+        "previewLabel": "Преглед пројекта"
+      },
+      "besp2074": {
+        "title": "BESP2074",
+        "cardDescription": "Локална балканска економска симулација са Python моделом, JSON exportom и web dashboardom.",
+        "detailDescription": "BESP2074\n\nBESP2074 је локална, годишња балканска симулација. Пројекат користи Python модел, структурисане JSON податке и локални web dashboard за приказ сценарија до 2074.\n\nАпликација је замишљена као симулација за учење и сценарије. Резултати нису стварне економске, политичке или финансијске прогнозе, већ поједностављени model runovi са претпоставкама, seedovima и опционалним догађајима.\n\nПројекат је локално употребљив, али још није објављен као готова јавна апликација.",
+        "meta": [
+          "Stack: Python, JSON, HTML/CSS, JavaScript",
+          "Фокус: симулација, export података, dashboard",
+          "Repository: тренутно није линкован",
+          "Напомена: није прогноза"
+        ],
+        "tags": [
+          "Python",
+          "Симулација"
+        ],
+        "role": "Лични симулациони пројекат",
+        "learning": "Повезати претпоставке модела, JSON export и dashboard тако да локални сценарији остану разумљиви.",
+        "previewLabel": "Преглед пројекта"
+      }
+    },
+    "certificates": {
+      "ethicalHacker": {
+        "title": "Ethical Hacker",
+        "cardDescription": "Сертификат у PDF формату са директним прегледом и преузимањем.",
+        "detailDescription": "Овај сертификат можеш директно погледати или преузети у portfoliju.",
+        "meta": [
+          "Format: PDF",
+          "Доказ: сертификат",
+          "Преузимање: доступно"
+        ],
+        "previewLabel": "Сертификат"
+      },
+      "introCybersecurity": {
+        "title": "Introduction to Cybersecurity",
+        "cardDescription": "Сертификат у PDF формату са директним прегледом и преузимањем.",
+        "detailDescription": "Овај сертификат можеш директно погледати или преузети у portfoliju.",
+        "meta": [
+          "Format: PDF",
+          "Доказ: сертификат",
+          "Преузимање: доступно"
+        ],
+        "previewLabel": "Сертификат"
+      },
+      "bbbHackathon": {
+        "title": "BBB Hackathon",
+        "cardDescription": "Сертификат у PDF формату са директним прегледом и преузимањем.",
+        "detailDescription": "Овај сертификат можеш директно погледати или преузети у portfoliju.",
+        "meta": [
+          "Format: PDF",
+          "Доказ: сертификат",
+          "Преузимање: доступно"
+        ],
+        "previewLabel": "Сертификат"
+      }
+    }
   }
 }

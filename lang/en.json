@@ -125,7 +125,7 @@
   "portfolio": {
     "kicker": "Projects",
     "title": "Selected work",
-    "subline": "Project explorer with status, stack, and links or notes.",
+    "subline": "Project explorer with stack, links, and short notes.",
     "certificatesTitle": "Certificates",
     "certificatesSubline": "PDF proof with preview and download.",
     "detailKicker": "Project details",
@@ -175,7 +175,7 @@
   "modal": {
     "close": "Close",
     "title": "Detail view",
-    "projectKicker": "Project status",
+    "projectKicker": "Project details",
     "certificateKicker": "Certificate"
   },
   "portfolioDownloadButton": "Download PDF",
@@ -200,10 +200,123 @@
     "privacyTitle": "Privacy",
     "privacyText": "This portfolio website does not process form entries and does not use analytics or advertising trackers. When the site is opened, technically necessary access data may be processed by the hosting provider.",
     "cookieTitle": "Cookies and local storage",
-    "cookieText": "The site does not set tracking cookies. Language and theme can be stored locally in the browser so the setting is kept for the next visit.",
+    "cookieText": "The site does not set tracking cookies. The language can be stored locally in the browser so the setting is kept for the next visit.",
     "externalTitle": "External content",
     "externalText": "Project images, certificates and the Pacman contribution graphic are loaded locally. External links to GitHub or e-mail only open when clicked.",
     "contactTitle": "Contact for privacy questions",
     "contactText": "For questions about this portfolio website or personal data, I can be reached through the e-mail address listed in the contact section."
+  },
+  "portfolioItems": {
+    "projects": {
+      "pathlab": {
+        "title": "PathLab",
+        "cardDescription": "Visualizer for pathfinding algorithms on a weighted grid with BFS, DFS, Dijkstra, and A*.",
+        "detailDescription": "PathLab\n\nPathLab is an interactive visualizer for learning and comparing pathfinding algorithms. It uses a weighted grid with start and target points as well as fields such as wall, water, and mud.\n\nThe focus is understandable algorithm visualization: BFS, DFS, Dijkstra, and A* can be run individually or compared. The app separates path, cost, and runtime from the animation.\n\nThe project is a stable portfolio version with a GitHub Pages demo, automated tests, and a GitHub Actions workflow.",
+        "meta": [
+          "Stack: React, Vite, JavaScript, CSS, Vitest",
+          "Focus: algorithms, tests, UI state",
+          "Demo: not linked yet",
+          "Repository: public"
+        ],
+        "tags": [
+          "React/Vite",
+          "Tests",
+          "GitHub Pages"
+        ],
+        "role": "Personal learning and portfolio project",
+        "learning": "Keeping algorithms separate from React components, writing tests for edge cases, and making UI state understandable.",
+        "previewLabel": "Project preview"
+      },
+      "sortlab": {
+        "title": "SortLab",
+        "cardDescription": "Sorting algorithm visualizer with bar chart, controls, statistics, and explanation area.",
+        "detailDescription": "SortLab\n\nSortLab is an interactive visualizer for sorting algorithms. Users can see step by step how an array is sorted, adjust speed live, and compare different algorithms.\n\nIt includes Bubble Sort, Selection Sort, Insertion Sort, Quick Sort, and Heap Sort. The dashboard shows comparisons, swaps, steps, and runtime in milliseconds.\n\nThe project is a learning project for algorithms, React state, and visualization.",
+        "meta": [
+          "Stack: React, Vite, JavaScript, CSS",
+          "Focus: sorting algorithms and visualization",
+          "Demo: available locally",
+          "Repository: not publicly linked yet"
+        ],
+        "tags": [
+          "React/Vite",
+          "Algorithms"
+        ],
+        "role": "Personal learning project",
+        "learning": "Connecting animation, speed control, and statistics so the algorithm stays visible and usable.",
+        "previewLabel": "Project preview"
+      },
+      "vsw": {
+        "title": "VSW - Vulnerability Scanner Web App",
+        "cardDescription": "Defensive full-stack web app for low-risk security checks on authorized domains or IPs.",
+        "detailDescription": "VSW - Vulnerability Scanner Web App\n\nVSW is a joint project with Botond. The app runs defensive, passive, or low-risk checks and displays results in a React dashboard.\n\nThe focus is on HTTP security headers, TLS/certificate information, a small safe port list, reports, and exports. The project contains a FastAPI backend, a React frontend, tests, and Docker basics.\n\nImportant: The project is explicitly intended for owned systems or systems with permission. It contains no exploits, no brute force, and no aggressive scans.",
+        "meta": [
+          "Team: together with Botond",
+          "Stack: FastAPI, React, TypeScript, SQLite/PostgreSQL, Docker",
+          "Visibility: repository at Botond",
+          "Note: defensive checks only"
+        ],
+        "tags": [
+          "team project",
+          "FastAPI",
+          "React"
+        ],
+        "role": "Joint project with Botond",
+        "learning": "Clearly limiting defensive checks, separating backend and frontend, and presenting results understandably.",
+        "previewLabel": "Project preview"
+      },
+      "besp2074": {
+        "title": "BESP2074",
+        "cardDescription": "Local Balkan economy simulation with Python model, JSON export, and web dashboard.",
+        "detailDescription": "BESP2074\n\nBESP2074 is a local, year-based Balkan simulation. The project uses a Python model, structured JSON data, and a local web dashboard to display scenarios up to 2074.\n\nThe app is intended as a learning and scenario simulation. The results are not real economic, political, or financial forecasts, but simplified model runs with assumptions, seeds, and optional events.\n\nThe project is usable locally but is not yet published as a finished public application.",
+        "meta": [
+          "Stack: Python, JSON, HTML/CSS, JavaScript",
+          "Focus: simulation, data export, dashboard",
+          "Repository: not linked yet",
+          "Note: no forecast"
+        ],
+        "tags": [
+          "Python",
+          "Simulation"
+        ],
+        "role": "Personal simulation project",
+        "learning": "Connecting model assumptions, JSON export, and dashboard so local scenarios remain understandable.",
+        "previewLabel": "Project preview"
+      }
+    },
+    "certificates": {
+      "ethicalHacker": {
+        "title": "Ethical Hacker",
+        "cardDescription": "Certificate in PDF format with direct preview and download.",
+        "detailDescription": "You can view or download this certificate directly in the portfolio.",
+        "meta": [
+          "Format: PDF",
+          "Proof: certificate",
+          "Download: available"
+        ],
+        "previewLabel": "Certificate"
+      },
+      "introCybersecurity": {
+        "title": "Introduction to Cybersecurity",
+        "cardDescription": "Certificate in PDF format with direct preview and download.",
+        "detailDescription": "You can view or download this certificate directly in the portfolio.",
+        "meta": [
+          "Format: PDF",
+          "Proof: certificate",
+          "Download: available"
+        ],
+        "previewLabel": "Certificate"
+      },
+      "bbbHackathon": {
+        "title": "BBB Hackathon",
+        "cardDescription": "Certificate in PDF format with direct preview and download.",
+        "detailDescription": "You can view or download this certificate directly in the portfolio.",
+        "meta": [
+          "Format: PDF",
+          "Proof: certificate",
+          "Download: available"
+        ],
+        "previewLabel": "Certificate"
+      }
+    }
   }
 }
