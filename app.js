@@ -720,6 +720,13 @@ const localizedPortfolioItem = (item, typeKey) => {
   };
 };
 
+const localizedLinkLabel = (label) => {
+  if (String(label).toLowerCase() === 'github') {
+    return t('linkLabels.github', label);
+  }
+  return label;
+};
+
 const applyStaticTranslations = () => {
   i18nElements.forEach((element) => {
     const key = element.getAttribute('data-i18n');
@@ -949,7 +956,7 @@ const createCard = (item, typeKey = 'projects') => {
     link.href = linkItem.url;
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
-    link.textContent = linkItem.label;
+    link.textContent = localizedLinkLabel(linkItem.label);
     links.append(link);
   });
 

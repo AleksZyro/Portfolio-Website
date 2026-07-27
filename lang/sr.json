@@ -6,7 +6,7 @@
     "home": "Početak",
     "about": "O meni",
     "career": "Razvoj",
-    "tech": "Tech stack",
+    "tech": "Teh stek",
     "portfolio": "Projekti",
     "contact": "Kontakt",
     "github": "GitHub"
@@ -118,8 +118,8 @@
     "years": "Godine kodiranja"
   },
   "tech": {
-    "kicker": "Tech stack",
-    "title": "Tech stack po oblasti",
+    "kicker": "Teh stek",
+    "title": "Teh stek po oblasti",
     "subline": "Samo tehnologije koje se pojavljuju u trenutnim projektima ili koje mogu smisleno objasniti."
   },
   "portfolio": {
@@ -185,11 +185,11 @@
   },
   "github": {
     "kicker": "GitHub",
-    "title": "Aktivnost i open source",
-    "subline": "GitHub koristim za jasno dokumentovanje projekata, verzionisanje promena i javno linkovanje radova.",
+    "title": "GitHub aktivnost i open source",
+    "subline": "GitHub koristim za dokumentovanje projekata, verzionisanje promena i javno linkovanje radova.",
     "profileLink": "GitHub profil",
-    "reposLink": "Repositories",
-    "openSourceTitle": "Open-source merge-ovi",
+    "reposLink": "Repozitorijumi",
+    "openSourceTitle": "Open source doprinosi",
     "openSourceEmpty": "Još nema javno proverljivih mergeova.",
     "openSourceText": "Kada budu dostupni mergeovani pull requestovi, ovde će biti navedeni sa projektom, kratkim opisom i linkom."
   },
@@ -210,13 +210,13 @@
     "projects": {
       "pathlab": {
         "title": "PathLab",
-        "cardDescription": "Visualizer za algoritme pronalaženja puta na ponderisanoj mreži sa BFS, DFS, Dijkstra i A*.",
-        "detailDescription": "PathLab\n\nPathLab je interaktivni visualizer za učenje i poređenje algoritama za pronalaženje puta. Aplikacija koristi ponderisanu mrežu, početnu i ciljnu tačku, kao i polja poput zida, vode i blata.\n\nFokus je na razumljivoj vizualizaciji algoritama: BFS, DFS, Dijkstra i A* mogu se pokretati pojedinačno ili porediti. Aplikacija odvojeno prikazuje pronađeni put, troškove i vreme izvršavanja.\n\nProjekat ima stabilnu portfolio verziju, automatizovane testove i GitHub Actions workflow.",
+        "cardDescription": "Vizualizator algoritama za pronalaženje puta na mreži sa težinama: BFS, DFS, Dijkstra i A*.",
+        "detailDescription": "PathLab\n\nPathLab je interaktivni vizualizator za učenje i poređenje algoritama za pronalaženje puta. Aplikacija koristi mrežu sa težinama, početnu i ciljnu tačku, kao i polja poput zida, vode i blata.\n\nFokus je na razumljivoj vizualizaciji algoritama: BFS, DFS, Dijkstra i A* mogu se pokretati pojedinačno ili porediti. Aplikacija odvojeno prikazuje pronađeni put, troškove i vreme izvršavanja.\n\nProjekat ima stabilnu portfolio verziju, automatizovane testove i GitHub Actions workflow.",
         "meta": [
-          "Stack: React, Vite, JavaScript, CSS, Vitest",
-          "Fokus: algoritmi, testovi, UI state",
+          "Stek: React, Vite, JavaScript, CSS, Vitest",
+          "Fokus: algoritmi, testovi, UI stanje",
           "Demo: trenutno nije linkovan",
-          "Repository: javan"
+          "Repozitorijum: javan"
         ],
         "tags": [
           "React/Vite",
@@ -224,18 +224,18 @@
           "GitHub Pages"
         ],
         "role": "Lični projekat za učenje i portfolio",
-        "learning": "Odvojiti algoritme od React komponenti, pisati testove za rubne slučajeve i učiniti UI state razumljivim.",
+        "learning": "Odvojiti algoritme od React komponenti, pisati testove za rubne slučajeve i učiniti UI stanje razumljivim.",
         "previewLabel": "Pregled projekta"
       },
       "sortlab": {
         "title": "SortLab",
-        "cardDescription": "Visualizer algoritama sortiranja sa stubićima, kontrolama, statistikama i objašnjenjem.",
-        "detailDescription": "SortLab\n\nSortLab je interaktivni visualizer algoritama sortiranja. Korisnici korak po korak vide kako se niz sortira, mogu uživo menjati brzinu i porediti različite algoritme.\n\nUključeni su Bubble Sort, Selection Sort, Insertion Sort, Quick Sort i Heap Sort. Dashboard prikazuje poređenja, zamene, korake i vreme izvršavanja u milisekundama.\n\nProjekat služi kao projekat za učenje algoritama, React state-a i vizualizacije.",
+        "cardDescription": "Vizualizator algoritama sortiranja sa stubićima, kontrolama, statistikom i objašnjenjem.",
+        "detailDescription": "SortLab\n\nSortLab je interaktivni vizualizator algoritama sortiranja. Korisnici korak po korak vide kako se niz sortira, mogu uživo menjati brzinu i porediti različite algoritme.\n\nUključeni su Bubble Sort, Selection Sort, Insertion Sort, Quick Sort i Heap Sort. Dashboard prikazuje poređenja, zamene, korake i vreme izvršavanja u milisekundama.\n\nProjekat služi kao projekat za učenje algoritama, React state-a i vizualizacije.",
         "meta": [
-          "Stack: React, Vite, JavaScript, CSS",
+          "Stek: React, Vite, JavaScript, CSS",
           "Fokus: algoritmi sortiranja i vizualizacija",
           "Demo: lokalno dostupan",
-          "Repository: još nije javno linkovan"
+          "Repozitorijum: još nije javno linkovan"
         ],
         "tags": [
           "React/Vite",
@@ -246,13 +246,13 @@
         "previewLabel": "Pregled projekta"
       },
       "vsw": {
-        "title": "VSW - Vulnerability Scanner Web App",
-        "cardDescription": "Defanzivna fullstack web aplikacija za niskorizične security provere na autorizovanim domenima ili IP adresama.",
-        "detailDescription": "VSW - Vulnerability Scanner Web App\n\nVSW je zajednički projekat sa Botondom. Aplikacija izvršava defanzivne, pasivne ili niskorizične provere i prikazuje rezultate u React dashboardu.\n\nFokus je na HTTP security headerima, TLS informacijama o sertifikatima, maloj sigurnoj listi portova, reportima i exportima. Projekat sadrži FastAPI backend, React frontend, testove i Docker osnove.\n\nVažno: Projekat je namenjen isključivo za sopstvene sisteme ili sisteme uz dozvolu. Ne sadrži exploite, brute force ni agresivne scanove.",
+        "title": "VSW - Web aplikacija za proveru ranjivosti",
+        "cardDescription": "Defanzivna fulstek veb aplikacija za niskorizične bezbednosne provere na autorizovanim domenima ili IP adresama.",
+        "detailDescription": "VSW - Web aplikacija za proveru ranjivosti\n\nVSW je zajednički projekat sa Botondom. Aplikacija izvršava defanzivne, pasivne ili niskorizične provere i prikazuje rezultate u React dashboardu.\n\nFokus je na HTTP security headerima, TLS informacijama o sertifikatima, maloj sigurnoj listi portova, izveštajima i exportima. Projekat sadrži FastAPI backend, React frontend, testove i Docker osnove.\n\nVažno: Projekat je namenjen isključivo za sopstvene sisteme ili sisteme uz dozvolu. Ne sadrži exploite, brute force ni agresivne scanove.",
         "meta": [
           "Tim: zajedno sa Botondom",
-          "Stack: FastAPI, React, TypeScript, SQLite/PostgreSQL, Docker",
-          "Vidljivost: repository kod Botonda",
+          "Stek: FastAPI, React, TypeScript, SQLite/PostgreSQL, Docker",
+          "Vidljivost: repozitorijum kod Botonda",
           "Napomena: samo defanzivne provere"
         ],
         "tags": [
@@ -269,9 +269,9 @@
         "cardDescription": "Lokalna balkanska ekonomska simulacija sa Python modelom, JSON exportom i web dashboardom.",
         "detailDescription": "BESP2074\n\nBESP2074 je lokalna, godišnja balkanska simulacija. Projekat koristi Python model, strukturisane JSON podatke i lokalni web dashboard za prikaz scenarija do 2074.\n\nAplikacija je zamišljena kao simulacija za učenje i scenarije. Rezultati nisu stvarne ekonomske, političke ili finansijske prognoze, već pojednostavljeni model runovi sa pretpostavkama, seedovima i opcionalnim događajima.\n\nProjekat je lokalno upotrebljiv, ali još nije objavljen kao gotova javna aplikacija.",
         "meta": [
-          "Stack: Python, JSON, HTML/CSS, JavaScript",
+          "Stek: Python, JSON, HTML/CSS, JavaScript",
           "Fokus: simulacija, export podataka, dashboard",
-          "Repository: trenutno nije linkovan",
+          "Repozitorijum: trenutno nije linkovan",
           "Napomena: nije prognoza"
         ],
         "tags": [
@@ -318,5 +318,8 @@
         "previewLabel": "Sertifikat"
       }
     }
+  },
+  "linkLabels": {
+    "github": "GitHub"
   }
 }
