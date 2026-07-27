@@ -806,7 +806,7 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
 
 if (surfaceCanvas && !prefersReducedMotion.matches) {
   const ctx = surfaceCanvas.getContext('2d');
-  const scratches = [];
+  const bolts = [];
   let canvasWidth = 0;
   let canvasHeight = 0;
 
@@ -821,47 +821,73 @@ if (surfaceCanvas && !prefersReducedMotion.matches) {
     ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
   };
 
-  const addScratches = (x, y, amount = 5) => {
-    for (let index = 0; index < amount; index += 1) {
-      scratches.push({
-        x: x + (Math.random() - 0.5) * 74,
-        y: y + (Math.random() - 0.5) * 46,
-        length: 10 + Math.random() * 28,
-        angle: -0.35 + Math.random() * 0.7,
-        life: 1,
-        decay: 0.012 + Math.random() * 0.018,
+  const createBoltPoints = (x, y) => {
+    const points = [{ x, y }];
+    const segmentCount = 3 + Math.floor(Math.random() * 3);
+    const angle = -0.9 + Math.random() * 1.8;
+    const length = 18 + Math.random() * 34;
+    const step = length / segmentCount;
+
+    for (let index = 1; index <= segmentCount; index += 1) {
+      const forward = step * index;
+      const jag = (index % 2 === 0 ? -1 : 1) * (5 + Math.random() * 11);
+      points.push({
+        x: x + Math.cos(angle) * forward + Math.cos(angle + Math.PI / 2) * jag,
+        y: y + Math.sin(angle) * forward + Math.sin(angle + Math.PI / 2) * jag
       });
     }
-    if (scratches.length > 180) scratches.splice(0, scratches.length - 180);
+
+    return points;
+  };
+
+  const addBolts = (x, y, amount = 3) => {
+    for (let index = 0; index < amount; index += 1) {
+      const originX = x + (Math.random() - 0.5) * 78;
+      const originY = y + (Math.random() - 0.5) * 56;
+      bolts.push({
+        points: createBoltPoints(originX, originY),
+        life: 1,
+        width: 0.8 + Math.random() * 1.1,
+        decay: 0.018 + Math.random() * 0.022,
+      });
+    }
+    if (bolts.length > 90) bolts.splice(0, bolts.length - 90);
   };
 
   const drawSurface = () => {
     ctx.clearRect(0, 0, canvasWidth, canvasHeight);
-    for (let index = scratches.length - 1; index >= 0; index -= 1) {
-      const scratch = scratches[index];
-      scratch.life -= scratch.decay;
-      if (scratch.life <= 0) {
-        scratches.splice(index, 1);
+    for (let index = bolts.length - 1; index >= 0; index -= 1) {
+      const bolt = bolts[index];
+      bolt.life -= bolt.decay;
+      if (bolt.life <= 0) {
+        bolts.splice(index, 1);
         continue;
       }
 
-      const alpha = Math.min(0.24, scratch.life * 0.18);
-      const dx = Math.cos(scratch.angle) * scratch.length;
-      const dy = Math.sin(scratch.angle) * scratch.length;
+      const alpha = Math.min(0.34, bolt.life * 0.26);
       ctx.beginPath();
-      ctx.moveTo(scratch.x - dx / 2, scratch.y - dy / 2);
-      ctx.lineTo(scratch.x + dx / 2, scratch.y + dy / 2);
-      ctx.strokeStyle = `rgba(180, 167, 229, ${alpha})`;
-      ctx.lineWidth = 1;
+      bolt.points.forEach((point, pointIndex) => {
+        if (pointIndex === 0) {
+          ctx.moveTo(point.x, point.y);
+        } else {
+          ctx.lineTo(point.x, point.y);
+        }
+      });
+      ctx.strokeStyle = `rgba(188, 169, 255, ${alpha})`;
+      ctx.lineWidth = bolt.width;
+      ctx.lineJoin = 'miter';
+      ctx.shadowBlur = 12;
+      ctx.shadowColor = `rgba(141, 108, 255, ${alpha})`;
       ctx.stroke();
+      ctx.shadowBlur = 0;
     }
     window.requestAnimationFrame(drawSurface);
   };
 
   resizeSurfaceCanvas();
   window.addEventListener('resize', resizeSurfaceCanvas);
-  window.addEventListener('pointermove', (event) => addScratches(event.clientX, event.clientY), { passive: true });
-  window.addEventListener('pointerdown', (event) => addScratches(event.clientX, event.clientY, 18), { passive: true });
+  window.addEventListener('pointermove', (event) => addBolts(event.clientX, event.clientY), { passive: true });
+  window.addEventListener('pointerdown', (event) => addBolts(event.clientX, event.clientY, 14), { passive: true });
   drawSurface();
 }
 
@@ -950,10 +976,10 @@ const createCard = (item, typeKey = 'projects') => {
 
   const actions = document.createElement('div');
   actions.className = 'card-actions';
+  actions.append(detailButton);
   if (links.children.length) {
     actions.append(links);
   }
-  actions.append(detailButton);
 
   card.append(preview, title, description);
   if (tags.children.length) {
