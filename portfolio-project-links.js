@@ -102,12 +102,18 @@
     return fallback;
   };
 
-  const paragraphsFromText = (text) => text
-    .split('\n')
-    .map((line) => line.trim())
-    .filter(Boolean)
-    .map((line) => `<p>${line}</p>`)
-    .join('');
+  const appendParagraphs = (target, text) => {
+    target.textContent = '';
+    String(text || '')
+      .split('\n')
+      .map((line) => line.trim())
+      .filter(Boolean)
+      .forEach((line) => {
+        const paragraph = document.createElement('p');
+        paragraph.textContent = line;
+        target.appendChild(paragraph);
+      });
+  };
 
   const injectStyles = () => {
     if (document.getElementById('portfolio-project-link-styles')) return;
@@ -220,8 +226,13 @@
 
     if (modalKicker) modalKicker.textContent = getText('modal.projectKicker', 'Projektstatus');
     modalTitle.textContent = project.title;
-    modalDescription.innerHTML = paragraphsFromText(project.detailDescription);
-    modalMeta.innerHTML = project.meta.map((entry) => `<li>${entry}</li>`).join('');
+    appendParagraphs(modalDescription, project.detailDescription);
+    modalMeta.textContent = '';
+    project.meta.forEach((entry) => {
+      const item = document.createElement('li');
+      item.textContent = entry;
+      modalMeta.appendChild(item);
+    });
 
     if (modalPreviewLabel) modalPreviewLabel.textContent = project.previewLabel;
     if (modalPreviewTitle) modalPreviewTitle.textContent = project.title;
@@ -248,18 +259,34 @@
     article.className = 'item-card';
     article.dataset.extraProject = project.key;
 
-    article.innerHTML = `
-      <div class="project-preview">
-        <span class="project-preview-label">${project.previewLabel}</span>
-        <span class="project-preview-title">${project.title}</span>
-        <span class="project-status-chip is-complete">${project.previewBadge}</span>
-      </div>
-      <h3>${project.title}</h3>
-      <p>${project.cardDescription}</p>
-      <button type="button">${getText('portfolio.detailsButton', 'Details anzeigen')}</button>
-    `;
+    const preview = document.createElement('div');
+    preview.className = 'project-preview';
 
-    article.querySelector('button')?.addEventListener('click', () => openProjectModal(project));
+    const previewLabel = document.createElement('span');
+    previewLabel.className = 'project-preview-label';
+    previewLabel.textContent = project.previewLabel;
+
+    const previewTitle = document.createElement('span');
+    previewTitle.className = 'project-preview-title';
+    previewTitle.textContent = project.title;
+
+    const previewBadge = document.createElement('span');
+    previewBadge.className = 'project-status-chip is-complete';
+    previewBadge.textContent = project.previewBadge;
+
+    const title = document.createElement('h3');
+    title.textContent = project.title;
+
+    const description = document.createElement('p');
+    description.textContent = project.cardDescription;
+
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.textContent = getText('portfolio.detailsButton', 'Details anzeigen');
+    button.addEventListener('click', () => openProjectModal(project));
+
+    preview.append(previewLabel, previewTitle, previewBadge);
+    article.append(preview, title, description, button);
     return article;
   };
 
