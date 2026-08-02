@@ -886,8 +886,8 @@ if (surfaceCanvas && !prefersReducedMotion.matches) {
       points: mainPath,
       branches,
       life: 1,
-      decay: force ? 0.052 : 0.068,
-      width: force ? 1.45 : 1.05
+      decay: force ? 0.048 : 0.062,
+      width: force ? 1.8 : 1.32
     });
 
     for (let index = 0; index < (force ? 12 : 6); index += 1) {
@@ -949,15 +949,15 @@ if (surfaceCanvas && !prefersReducedMotion.matches) {
         continue;
       }
 
-      const alpha = Math.min(0.34, strike.life * 0.30);
+      const alpha = Math.min(0.52, strike.life * 0.44);
       ctx.beginPath();
       strokePath(strike.points);
       strike.branches.forEach(strokePath);
       ctx.strokeStyle = `rgba(213, 205, 255, ${alpha})`;
       ctx.lineWidth = strike.width;
       ctx.lineJoin = 'miter';
-      ctx.shadowBlur = 5;
-      ctx.shadowColor = `rgba(140, 117, 223, ${alpha * 0.58})`;
+      ctx.shadowBlur = 9;
+      ctx.shadowColor = `rgba(140, 117, 223, ${alpha * 0.82})`;
       ctx.stroke();
       ctx.shadowBlur = 0;
     }
@@ -973,7 +973,7 @@ if (surfaceCanvas && !prefersReducedMotion.matches) {
       }
       ctx.beginPath();
       ctx.arc(spark.x, spark.y, 1.2, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(188, 169, 255, ${spark.life * 0.34})`;
+      ctx.fillStyle = `rgba(202, 190, 255, ${spark.life * 0.46})`;
       ctx.fill();
     }
 
