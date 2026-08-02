@@ -285,7 +285,6 @@ const embeddedDictionaries = {
       kicker: 'Kontakt',
       title: 'Kontakt',
       description: 'Für Praktikum, Rückfragen oder Zusammenarbeit bin ich per E-Mail erreichbar.',
-      phoneLabel: 'Telefon',
       mailLabel: 'E-Mail',
       schoolMailLabel: 'Schul-Mail'
     },
@@ -415,7 +414,6 @@ const embeddedDictionaries = {
       kicker: 'Contact',
       title: 'Contact',
       description: 'For internships, questions, or collaboration, I am reachable by email.',
-      phoneLabel: 'Phone',
       mailLabel: 'Email',
       schoolMailLabel: 'School email'
     },
@@ -547,7 +545,6 @@ const embeddedDictionaries = {
       kicker: 'Contact',
       title: 'Contact',
       description: 'Pour un stage, des questions ou une collaboration, je suis joignable par e-mail.',
-      phoneLabel: 'Telephone',
       mailLabel: 'E-mail',
       schoolMailLabel: 'E-mail école'
     },
@@ -677,7 +674,6 @@ const embeddedDictionaries = {
       kicker: 'Kontakt',
       title: 'Kontakt',
       description: 'Za praksu, pitanja ili saradnju dostupan sam putem e-maila.',
-      phoneLabel: 'Telefon',
       mailLabel: 'E-mail',
       schoolMailLabel: 'Skolski e-mail'
     },
@@ -813,9 +809,10 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
 
 if (surfaceCanvas && !prefersReducedMotion.matches) {
   const ctx = surfaceCanvas.getContext('2d');
-  const bolts = [];
+  const strikes = [];
   let canvasWidth = 0;
   let canvasHeight = 0;
+  let lastStrikeTime = 0;
 
   const resizeSurfaceCanvas = () => {
     const ratio = window.devicePixelRatio || 1;
@@ -828,63 +825,73 @@ if (surfaceCanvas && !prefersReducedMotion.matches) {
     ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
   };
 
-  const createBoltPoints = (x, y) => {
-    const points = [{ x, y }];
-    const segmentCount = 3 + Math.floor(Math.random() * 3);
-    const angle = -0.9 + Math.random() * 1.8;
-    const length = 18 + Math.random() * 34;
-    const step = length / segmentCount;
+  const createStrikePath = (targetX, targetY) => {
+    const startX = Math.min(Math.max(targetX + (Math.random() - 0.5) * 170, 24), canvasWidth - 24);
+    const startY = Math.max(targetY - 170 - Math.random() * 110, 24);
+    const points = [{ x: startX, y: startY }];
+    const segmentCount = 5;
 
     for (let index = 1; index <= segmentCount; index += 1) {
-      const forward = step * index;
-      const jag = (index % 2 === 0 ? -1 : 1) * (5 + Math.random() * 11);
+      const progress = index / segmentCount;
+      const baseX = startX + (targetX - startX) * progress;
+      const baseY = startY + (targetY - startY) * progress;
+      const offset = index === segmentCount ? 0 : (index % 2 === 0 ? -1 : 1) * (10 + Math.random() * 16);
       points.push({
-        x: x + Math.cos(angle) * forward + Math.cos(angle + Math.PI / 2) * jag,
-        y: y + Math.sin(angle) * forward + Math.sin(angle + Math.PI / 2) * jag
+        x: baseX + offset,
+        y: baseY
       });
     }
 
     return points;
   };
 
-  const addBolts = (x, y, amount = 3) => {
+  const addStrike = (x, y, force = false) => {
+    const now = performance.now();
+    if (!force && now - lastStrikeTime < 95) return;
+    lastStrikeTime = now;
+
+    strikes.push({
+      points: createStrikePath(x, y),
+      life: 1,
+      decay: force ? 0.055 : 0.07,
+      width: force ? 1.6 : 1.15
+    });
+
+    if (strikes.length > 24) strikes.splice(0, strikes.length - 24);
+  };
+
+  const addBurst = (x, y, amount = 4) => {
     for (let index = 0; index < amount; index += 1) {
-      const originX = x + (Math.random() - 0.5) * 78;
-      const originY = y + (Math.random() - 0.5) * 56;
-      bolts.push({
-        points: createBoltPoints(originX, originY),
-        life: 1,
-        width: 0.8 + Math.random() * 1.1,
-        decay: 0.018 + Math.random() * 0.022,
-      });
+      window.setTimeout(() => {
+        addStrike(x + (Math.random() - 0.5) * 90, y + (Math.random() - 0.5) * 48, true);
+      }, index * 35);
     }
-    if (bolts.length > 90) bolts.splice(0, bolts.length - 90);
   };
 
   const drawSurface = () => {
     ctx.clearRect(0, 0, canvasWidth, canvasHeight);
-    for (let index = bolts.length - 1; index >= 0; index -= 1) {
-      const bolt = bolts[index];
-      bolt.life -= bolt.decay;
-      if (bolt.life <= 0) {
-        bolts.splice(index, 1);
+    for (let index = strikes.length - 1; index >= 0; index -= 1) {
+      const strike = strikes[index];
+      strike.life -= strike.decay;
+      if (strike.life <= 0) {
+        strikes.splice(index, 1);
         continue;
       }
 
-      const alpha = Math.min(0.34, bolt.life * 0.26);
+      const alpha = Math.min(0.42, strike.life * 0.38);
       ctx.beginPath();
-      bolt.points.forEach((point, pointIndex) => {
+      strike.points.forEach((point, pointIndex) => {
         if (pointIndex === 0) {
           ctx.moveTo(point.x, point.y);
         } else {
           ctx.lineTo(point.x, point.y);
         }
       });
-      ctx.strokeStyle = `rgba(188, 169, 255, ${alpha})`;
-      ctx.lineWidth = bolt.width;
+      ctx.strokeStyle = `rgba(213, 205, 255, ${alpha})`;
+      ctx.lineWidth = strike.width;
       ctx.lineJoin = 'miter';
-      ctx.shadowBlur = 12;
-      ctx.shadowColor = `rgba(141, 108, 255, ${alpha})`;
+      ctx.shadowBlur = 4;
+      ctx.shadowColor = `rgba(140, 117, 223, ${alpha * 0.65})`;
       ctx.stroke();
       ctx.shadowBlur = 0;
     }
@@ -893,8 +900,8 @@ if (surfaceCanvas && !prefersReducedMotion.matches) {
 
   resizeSurfaceCanvas();
   window.addEventListener('resize', resizeSurfaceCanvas);
-  window.addEventListener('pointermove', (event) => addBolts(event.clientX, event.clientY), { passive: true });
-  window.addEventListener('pointerdown', (event) => addBolts(event.clientX, event.clientY, 14), { passive: true });
+  window.addEventListener('pointermove', (event) => addStrike(event.clientX, event.clientY), { passive: true });
+  window.addEventListener('pointerdown', (event) => addBurst(event.clientX, event.clientY), { passive: true });
   drawSurface();
 }
 

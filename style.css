@@ -42,8 +42,8 @@ body::before {
   z-index: 0;
   background-color: var(--bg-900);
   background-image:
-    url("data:image/svg+xml,%3Csvg width='112' height='112' viewBox='0 0 112 112' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.045'%3E%3Ccircle cx='10' cy='17' r='0.7'/%3E%3Ccircle cx='46' cy='9' r='0.45'/%3E%3Ccircle cx='84' cy='25' r='0.55'/%3E%3Ccircle cx='27' cy='64' r='0.5'/%3E%3Ccircle cx='76' cy='86' r='0.65'/%3E%3C/g%3E%3Cg fill='none' stroke='%23bca9ff' stroke-opacity='0.075' stroke-width='1'%3E%3Cpath d='M22 42l10-9-4 12 12-5-15 18 5-14z'/%3E%3Cpath d='M70 54l8-8-3 11 10-3-13 15 4-12z'/%3E%3Cpath d='M43 92l7-7-2 9 8-2-10 13 3-10z'/%3E%3C/g%3E%3C/svg%3E");
-  opacity: 0.9;
+    url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.035'%3E%3Ccircle cx='14' cy='18' r='0.65'/%3E%3Ccircle cx='52' cy='12' r='0.45'/%3E%3Ccircle cx='94' cy='29' r='0.55'/%3E%3Ccircle cx='31' cy='74' r='0.5'/%3E%3Ccircle cx='82' cy='92' r='0.6'/%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.82;
 }
 
 .surface-canvas {
@@ -53,7 +53,7 @@ body::before {
   height: 100%;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.72;
+  opacity: 0.56;
 }
 
 body.modal-open {
