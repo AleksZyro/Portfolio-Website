@@ -810,6 +810,8 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
 if (surfaceCanvas && !prefersReducedMotion.matches) {
   const ctx = surfaceCanvas.getContext('2d');
   const strikes = [];
+  const sparks = [];
+  const ambient = [];
   let canvasWidth = 0;
   let canvasHeight = 0;
   let lastStrikeTime = 0;
@@ -823,53 +825,122 @@ if (surfaceCanvas && !prefersReducedMotion.matches) {
     surfaceCanvas.style.width = `${canvasWidth}px`;
     surfaceCanvas.style.height = `${canvasHeight}px`;
     ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+    ambient.length = 0;
+    const ambientCount = Math.max(34, Math.min(76, Math.floor((canvasWidth * canvasHeight) / 26000)));
+    for (let index = 0; index < ambientCount; index += 1) {
+      ambient.push({
+        x: Math.random() * canvasWidth,
+        y: Math.random() * canvasHeight,
+        radius: 0.6 + Math.random() * 1.4,
+        vx: (Math.random() - 0.5) * 0.08,
+        vy: (Math.random() - 0.5) * 0.08,
+        phase: Math.random() * Math.PI * 2
+      });
+    }
   };
 
-  const createStrikePath = (targetX, targetY) => {
-    const startX = Math.min(Math.max(targetX + (Math.random() - 0.5) * 170, 24), canvasWidth - 24);
-    const startY = Math.max(targetY - 170 - Math.random() * 110, 24);
+  const createStrikePath = (startX, startY, targetX, targetY, segments = 4, jagAmount = 10) => {
     const points = [{ x: startX, y: startY }];
-    const segmentCount = 5;
 
-    for (let index = 1; index <= segmentCount; index += 1) {
-      const progress = index / segmentCount;
+    for (let index = 1; index <= segments; index += 1) {
+      const progress = index / segments;
       const baseX = startX + (targetX - startX) * progress;
       const baseY = startY + (targetY - startY) * progress;
-      const offset = index === segmentCount ? 0 : (index % 2 === 0 ? -1 : 1) * (10 + Math.random() * 16);
+      const offset = index === segments ? 0 : (index % 2 === 0 ? -1 : 1) * (5 + Math.random() * jagAmount);
       points.push({
         x: baseX + offset,
-        y: baseY
+        y: baseY + (Math.random() - 0.5) * 8
       });
     }
 
     return points;
   };
 
-  const addStrike = (x, y, force = false) => {
+  const addStrike = (x, y, force = false, spread = 1) => {
     const now = performance.now();
-    if (!force && now - lastStrikeTime < 95) return;
+    if (!force && now - lastStrikeTime < 115) return;
     lastStrikeTime = now;
 
-    strikes.push({
-      points: createStrikePath(x, y),
-      life: 1,
-      decay: force ? 0.055 : 0.07,
-      width: force ? 1.6 : 1.15
+    const targetX = x + (Math.random() - 0.5) * 30 * spread;
+    const targetY = y + (Math.random() - 0.5) * 20 * spread;
+    const startX = Math.min(Math.max(targetX + (Math.random() - 0.5) * 86 * spread, 20), canvasWidth - 20);
+    const startY = Math.max(targetY - 70 - Math.random() * 82 * spread, 20);
+    const mainPath = createStrikePath(startX, startY, targetX, targetY, force ? 5 : 4, force ? 13 : 9);
+    const branches = [];
+
+    mainPath.slice(1, -1).forEach((point, index) => {
+      if (Math.random() < (force ? 0.54 : 0.26)) {
+        const direction = index % 2 === 0 ? -1 : 1;
+        branches.push(createStrikePath(
+          point.x,
+          point.y,
+          point.x + direction * (14 + Math.random() * 22),
+          point.y + 12 + Math.random() * 24,
+          2,
+          6
+        ));
+      }
     });
 
-    if (strikes.length > 24) strikes.splice(0, strikes.length - 24);
+    strikes.push({
+      points: mainPath,
+      branches,
+      life: 1,
+      decay: force ? 0.052 : 0.068,
+      width: force ? 1.45 : 1.05
+    });
+
+    for (let index = 0; index < (force ? 12 : 6); index += 1) {
+      sparks.push({
+        x: targetX,
+        y: targetY,
+        vx: (Math.random() - 0.5) * (force ? 3.2 : 2.2),
+        vy: (Math.random() - 0.5) * (force ? 2.8 : 1.8),
+        life: 1,
+        decay: 0.035 + Math.random() * 0.03
+      });
+    }
+
+    if (strikes.length > 32) strikes.splice(0, strikes.length - 32);
+    if (sparks.length > 160) sparks.splice(0, sparks.length - 160);
   };
 
-  const addBurst = (x, y, amount = 4) => {
+  const addBurst = (x, y, amount = 6) => {
     for (let index = 0; index < amount; index += 1) {
       window.setTimeout(() => {
-        addStrike(x + (Math.random() - 0.5) * 90, y + (Math.random() - 0.5) * 48, true);
-      }, index * 35);
+        addStrike(x + (Math.random() - 0.5) * 120, y + (Math.random() - 0.5) * 78, true, 1.1);
+      }, index * 42);
     }
+  };
+
+  const strokePath = (points) => {
+    points.forEach((point, pointIndex) => {
+      if (pointIndex === 0) {
+        ctx.moveTo(point.x, point.y);
+      } else {
+        ctx.lineTo(point.x, point.y);
+      }
+    });
   };
 
   const drawSurface = () => {
     ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+    const time = performance.now() * 0.001;
+
+    ambient.forEach((dot) => {
+      dot.x += dot.vx;
+      dot.y += dot.vy;
+      if (dot.x < -10) dot.x = canvasWidth + 10;
+      if (dot.x > canvasWidth + 10) dot.x = -10;
+      if (dot.y < -10) dot.y = canvasHeight + 10;
+      if (dot.y > canvasHeight + 10) dot.y = -10;
+      const alpha = 0.08 + Math.sin(time + dot.phase) * 0.025;
+      ctx.beginPath();
+      ctx.arc(dot.x, dot.y, dot.radius, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(180, 167, 229, ${alpha})`;
+      ctx.fill();
+    });
+
     for (let index = strikes.length - 1; index >= 0; index -= 1) {
       const strike = strikes[index];
       strike.life -= strike.decay;
@@ -878,23 +949,34 @@ if (surfaceCanvas && !prefersReducedMotion.matches) {
         continue;
       }
 
-      const alpha = Math.min(0.42, strike.life * 0.38);
+      const alpha = Math.min(0.34, strike.life * 0.30);
       ctx.beginPath();
-      strike.points.forEach((point, pointIndex) => {
-        if (pointIndex === 0) {
-          ctx.moveTo(point.x, point.y);
-        } else {
-          ctx.lineTo(point.x, point.y);
-        }
-      });
+      strokePath(strike.points);
+      strike.branches.forEach(strokePath);
       ctx.strokeStyle = `rgba(213, 205, 255, ${alpha})`;
       ctx.lineWidth = strike.width;
       ctx.lineJoin = 'miter';
-      ctx.shadowBlur = 4;
-      ctx.shadowColor = `rgba(140, 117, 223, ${alpha * 0.65})`;
+      ctx.shadowBlur = 5;
+      ctx.shadowColor = `rgba(140, 117, 223, ${alpha * 0.58})`;
       ctx.stroke();
       ctx.shadowBlur = 0;
     }
+
+    for (let index = sparks.length - 1; index >= 0; index -= 1) {
+      const spark = sparks[index];
+      spark.life -= spark.decay;
+      spark.x += spark.vx;
+      spark.y += spark.vy;
+      if (spark.life <= 0) {
+        sparks.splice(index, 1);
+        continue;
+      }
+      ctx.beginPath();
+      ctx.arc(spark.x, spark.y, 1.2, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(188, 169, 255, ${spark.life * 0.34})`;
+      ctx.fill();
+    }
+
     window.requestAnimationFrame(drawSurface);
   };
 
