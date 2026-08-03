@@ -204,7 +204,7 @@
     "cookieTitle": "Cookies and local storage",
     "cookieText": "The site does not set tracking cookies. The language can be stored locally in the browser so the setting is kept for the next visit.",
     "externalTitle": "External content",
-    "externalText": "Project images, certificates and the Pacman contribution graphic are loaded locally. External links to GitHub or e-mail only open when clicked.",
+    "externalText": "Project images, certificates and the GitHub contribution graphic are loaded locally. External links to GitHub or e-mail only open when clicked.",
     "contactTitle": "Contact for privacy questions",
     "contactText": "For questions about this portfolio website or personal data, I can be reached through the e-mail address listed in the contact section."
   },

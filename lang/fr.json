@@ -204,7 +204,7 @@
     "cookieTitle": "Cookies et stockage local",
     "cookieText": "Le site ne place pas de cookies de suivi. La langue peut être enregistrée localement dans le navigateur afin de conserver le réglage lors de la prochaine visite.",
     "externalTitle": "Contenus externes",
-    "externalText": "Les images de projets, certificats et le graphique Pacman Contributions sont chargés localement. Les liens externes vers GitHub ou e-mail ne s’ouvrent qu’au clic.",
+    "externalText": "Les images de projets, certificats et le graphique GitHub Contributions sont chargés localement. Les liens externes vers GitHub ou e-mail ne s’ouvrent qu’au clic.",
     "contactTitle": "Contact pour les questions de confidentialité",
     "contactText": "Pour toute question sur ce site portfolio ou les données personnelles, je suis joignable via l’adresse e-mail indiquée dans la section contact."
   },

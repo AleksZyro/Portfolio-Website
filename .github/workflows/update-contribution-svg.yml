@@ -21,20 +21,20 @@ jobs:
           node-version: "20"
 
       - name: Generate contribution SVG
-        run: node scripts/generate-pacman-contrib.mjs
+        run: node scripts/generate-contribution-graphic.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_USER: AleksZyro
 
       - name: Commit updated SVG
         run: |
-          if git diff --quiet -- assets/pacman-contrib.svg; then
+          if git diff --quiet -- assets/contribution-graphic.svg; then
             echo "No contribution SVG changes."
             exit 0
           fi
 
           git config user.name "AleksZyro"
           git config user.email "A.Nikolic.inf24@stud.bbbaden.ch"
-          git add assets/pacman-contrib.svg
+          git add assets/contribution-graphic.svg
           git commit -m "Update contribution graphic"
           git push
