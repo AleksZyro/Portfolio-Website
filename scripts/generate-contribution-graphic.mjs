@@ -23,6 +23,12 @@ const query = `
   }
 `;
 
+const escapeHtml = (value) => String(value)
+  .replaceAll('&', '&amp;')
+  .replaceAll('<', '&lt;')
+  .replaceAll('>', '&gt;')
+  .replaceAll('"', '&quot;');
+
 const fetchGraphqlCalendar = async () => {
   const response = await fetch('https://api.github.com/graphql', {
     method: 'POST',
@@ -51,6 +57,12 @@ const fetchGraphqlCalendar = async () => {
   return calendar;
 };
 
+const contributionCountFromTooltip = (tooltip) => {
+  if (/No contributions/i.test(tooltip)) return 0;
+  const match = tooltip.match(/([\d,.' ]+)\s+contributions?/i);
+  return match ? Number(match[1].replace(/[^\d]/g, '')) : 0;
+};
+
 const fetchPublicCalendar = async () => {
   const response = await fetch(`https://github.com/users/${user}/contributions`, {
     headers: { 'user-agent': `${user}-portfolio-contribution-graphic` }
@@ -63,101 +75,119 @@ const fetchPublicCalendar = async () => {
   const html = await response.text();
   const totalMatch = html.match(/<h2[^>]*>\s*([\d,.' ]+)\s*contributions?/i);
   const totalContributions = totalMatch ? Number(totalMatch[1].replace(/[^\d]/g, '')) : 0;
-  const dayMatches = [...html.matchAll(/data-date="([^"]+)"[^>]*data-level="([^"]+)"/g)];
+  const dayMatches = [...html.matchAll(/data-date="([^"]+)"[^>]*data-level="([^"]+)"[\s\S]*?<\/td>\s*<tool-tip[^>]*>([\s\S]*?)<\/tool-tip>/g)];
   const contributionDays = dayMatches.map((match) => ({
     date: match[1],
-    contributionCount: Number(match[2])
-  }));
+    contributionCount: contributionCountFromTooltip(match[3]),
+    level: Number(match[2])
+  })).sort((a, b) => a.date.localeCompare(b.date));
 
   if (!contributionDays.length) {
     throw new Error(`No public contribution days found for ${user}.`);
   }
 
+  const firstDate = new Date(`${contributionDays[0].date}T00:00:00Z`);
   const weeks = [];
-  for (let index = 0; index < contributionDays.length; index += 7) {
-    weeks.push({ contributionDays: contributionDays.slice(index, index + 7) });
+  for (const day of contributionDays) {
+    const date = new Date(`${day.date}T00:00:00Z`);
+    const weekIndex = Math.floor((date - firstDate) / (7 * 24 * 60 * 60 * 1000));
+    if (!weeks[weekIndex]) weeks[weekIndex] = { contributionDays: [] };
+    weeks[weekIndex].contributionDays[date.getUTCDay()] = day;
   }
 
-  return { totalContributions, weeks };
+  return {
+    totalContributions,
+    weeks: weeks.map((week) => ({
+      contributionDays: Array.from({ length: 7 }, (_, index) => week.contributionDays[index]).filter(Boolean)
+    }))
+  };
 };
-
-const escapeHtml = (value) => String(value)
-  .replaceAll('&', '&amp;')
-  .replaceAll('<', '&lt;')
-  .replaceAll('>', '&gt;')
-  .replaceAll('"', '&quot;');
 
 const calendar = token ? await fetchGraphqlCalendar() : await fetchPublicCalendar();
 const weeks = calendar.weeks.slice(-53);
 const days = weeks.flatMap((week) => week.contributionDays);
 const maxCount = Math.max(1, ...days.map((day) => day.contributionCount));
-const total = calendar.totalContributions;
 
-const width = 892;
-const height = 204;
-const cell = 15;
-const gap = 1;
-const gridX = 22;
-const gridY = 62;
-const progressX = 244;
-const progressWidth = 626;
-const progressFill = Math.min(progressWidth, Math.round((total / Math.max(total, 1000)) * progressWidth));
+const width = 980;
+const height = 242;
+const cell = 11;
+const gap = 4;
+const panelX = 22;
+const panelY = 50;
+const panelWidth = 916;
+const panelHeight = 154;
+const gridX = 92;
+const gridY = 82;
+const monthY = 75;
+const legendY = 186;
+const weekdayLabels = [
+  { label: 'Mon', row: 1 },
+  { label: 'Wed', row: 3 },
+  { label: 'Fri', row: 5 }
+];
+const monthLabels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-const colorFor = (count) => {
-  if (count === 0) return '#1a2743';
+const levelFor = (count) => {
+  if (count <= 0) return 0;
   const ratio = count / maxCount;
-  if (ratio > 0.7) return '#98c7ff';
-  if (ratio > 0.38) return '#5e95f5';
-  if (ratio > 0.16) return '#3f6fb9';
-  return '#263b62';
+  if (ratio > 0.7) return 4;
+  if (ratio > 0.38) return 3;
+  if (ratio > 0.16) return 2;
+  return 1;
 };
 
-const cells = weeks.map((week, weekIndex) => week.contributionDays.map((day, rowIndex) => {
+const colorFor = (count) => ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353'][levelFor(count)];
+
+const cells = weeks.map((week, weekIndex) => week.contributionDays.map((day) => {
+  const date = new Date(`${day.date}T00:00:00Z`);
   const x = gridX + weekIndex * (cell + gap);
-  const y = gridY + rowIndex * (cell + gap);
+  const y = gridY + date.getUTCDay() * (cell + gap);
   const label = `${day.date}: ${day.contributionCount} contributions`;
-  return `  <rect class="grid-cell" x="${x}" y="${y}" width="${cell}" height="${cell}" fill="${colorFor(day.contributionCount)}"><title>${escapeHtml(label)}</title></rect>`;
+  return `  <rect class="day-cell" x="${x}" y="${y}" width="${cell}" height="${cell}" rx="2" fill="${colorFor(day.contributionCount)}"><title>${escapeHtml(label)}</title></rect>`;
 }).join('\n')).join('\n');
 
-const markers = [0, 0.28, 0.56, 0.84, 1].map((ratio, index) => {
-  const x = progressX + ratio * progressWidth;
-  const colors = ['#ff5d6c', '#ffb85c', '#67d9ff', '#8d6cff', '#93c5fd'];
-  return `  <g class="ghost-hud" transform="translate(${x.toFixed(1)} 19.0) scale(0.9)">
-    <path d="M -5.8 4.8 L -5.8 -1.3 C -5.8 -5.0 -3.2 -7.0 0 -7.0 C 3.2 -7.0 5.8 -5.0 5.8 -1.3 L 5.8 4.8 L 3.4 3.1 L 1.1 4.8 L -1.1 3.1 L -3.4 4.8 Z" fill="${colors[index]}" />
-    <circle class="ghost-eye" cx="-2" cy="-2.2" r="1.2" />
-    <circle class="ghost-eye" cx="2" cy="-2.2" r="1.2" />
-    <circle class="ghost-pupil" cx="-1.5" cy="-2.2" r="0.42" />
-    <circle class="ghost-pupil" cx="2.5" cy="-2.2" r="0.42" />
-  </g>`;
+const months = weeks.map((week, weekIndex) => {
+  const firstDay = week.contributionDays[0];
+  if (!firstDay) return '';
+  const date = new Date(`${firstDay.date}T00:00:00Z`);
+  const previousWeek = weeks[weekIndex - 1]?.contributionDays[0];
+  const previousDate = previousWeek ? new Date(`${previousWeek.date}T00:00:00Z`) : null;
+  if (previousDate && previousDate.getUTCMonth() === date.getUTCMonth()) return '';
+  const x = gridX + weekIndex * (cell + gap);
+  return `  <text x="${x}" y="${monthY}" class="month-label">${monthLabels[date.getUTCMonth()]}</text>`;
+}).filter(Boolean).join('\n');
+
+const weekdays = weekdayLabels.map((item) => {
+  const y = gridY + item.row * (cell + gap) + cell - 1;
+  return `  <text x="${gridX - 18}" y="${y}" class="weekday-label" text-anchor="end">${item.label}</text>`;
 }).join('\n');
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="274" viewBox="0 0 ${width} ${height}" fill="none" role="img" aria-label="${escapeHtml(user)} contribution activity">
-  <defs>
-    <linearGradient id="shell" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#07111f" />
-      <stop offset="100%" stop-color="#0d1930" />
-    </linearGradient>
-    <style>
-      .t-sub { font: 700 13px 'Segoe UI', 'Trebuchet MS', sans-serif; fill: #a8c4ec; }
-      .t-small { font: 700 11px 'Consolas', 'Courier New', monospace; fill: #8fb3df; }
-      .grid-cell { rx: 2; ry: 2; shape-rendering: geometricPrecision; }
-      .progress-track { fill: #122340; }
-      .progress-fill { fill: #ffd54a; }
-      .ghost-hud { opacity: 0.88; }
-      .ghost-eye { fill: #f5fbff; }
-      .ghost-pupil { fill: #132744; }
-    </style>
-  </defs>
+const legendCells = [0, 1, 2, 3, 4].map((level, index) => {
+  const x = 790 + index * 17;
+  const color = ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353'][level];
+  return `  <rect x="${x}" y="${legendY - 10}" width="11" height="11" rx="2" fill="${color}" />`;
+}).join('\n');
 
-  <rect width="${width}" height="${height}" fill="url(#shell)" rx="18" />
-  <rect x="22" y="18" width="204" height="22" rx="9" fill="#102036" stroke="#29466f" stroke-opacity="0.65" />
-  <text x="36" y="33" class="t-sub">Commit amount</text>
-  <text x="190" y="33" class="t-sub">/${total}</text>
-  <rect x="${progressX}" y="27" width="${progressWidth}" height="6" rx="3" class="progress-track" />
-  <rect x="${progressX}" y="27" width="${progressFill}" height="6" rx="3" class="progress-fill" />
-${markers}
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="296" viewBox="0 0 ${width} ${height}" fill="none" role="img" aria-label="${escapeHtml(user)} GitHub contribution calendar">
+  <style>
+    .title { font: 500 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #f0f6fc; }
+    .month-label, .weekday-label, .legend, .hint { font: 400 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #f0f6fc; }
+    .hint, .legend-muted { fill: #8b949e; }
+    .day-cell { shape-rendering: geometricPrecision; }
+  </style>
+
+  <rect width="${width}" height="${height}" rx="14" fill="#0d1117" />
+  <text x="${panelX}" y="34" class="title">${calendar.totalContributions} contributions in the last year</text>
+  <text x="${panelX + panelWidth - 6}" y="34" class="hint" text-anchor="end">Contribution settings</text>
+  <path d="M ${panelX + panelWidth - 2} 30 l 4 4 l 4 -4" stroke="#8b949e" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="${panelX}" y="${panelY}" width="${panelWidth}" height="${panelHeight}" rx="6" fill="none" stroke="#30363d" />
+${months}
+${weekdays}
 ${cells}
-  <text x="${width - 22}" y="${height - 18}" class="t-small" text-anchor="end">updated daily via GitHub Actions</text>
+  <text x="${gridX - 26}" y="${legendY}" class="hint">Learn how we count contributions</text>
+  <text x="760" y="${legendY}" class="legend-muted">Less</text>
+${legendCells}
+  <text x="874" y="${legendY}" class="legend-muted">More</text>
 </svg>
 `;
 
