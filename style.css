@@ -627,19 +627,23 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
 }
 
 .more-project-card {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
-  justify-content: space-between;
   gap: 12px;
   border: 1px solid var(--line);
   background: rgba(25, 22, 36, 0.74);
   border-radius: var(--radius-md);
   padding: 12px;
+  min-height: 172px;
 }
 
 .more-project-content {
   display: grid;
+  grid-template-rows: auto 1fr auto;
   gap: 7px;
+  height: 100%;
+  min-width: 0;
 }
 
 .more-project-card h4 {
@@ -650,6 +654,7 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
 .more-project-card p {
   color: var(--muted);
   line-height: 1.45;
+  align-self: start;
 }
 
 .more-project-tags {
@@ -669,10 +674,13 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
 
 .more-project-link {
   flex: 0 0 auto;
+  align-self: center;
+  justify-self: center;
   border: 1px solid rgba(185, 174, 220, 0.18);
   border-radius: 999px;
   padding: 7px 10px;
   font-weight: 800;
+  white-space: nowrap;
 }
 
 .more-project-link.is-disabled {
@@ -981,10 +989,15 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
 }
 
 .certificate-preview.has-image {
-  min-height: clamp(210px, 19vw, 270px);
+  min-height: clamp(154px, 13vw, 190px);
+  padding: 18px;
   background:
-    var(--preview-image) center / contain no-repeat,
+    var(--preview-image) center / calc(100% - 44px) auto no-repeat,
     rgba(12, 11, 20, 0.72);
+}
+
+.certificate-card {
+  gap: 8px;
 }
 .project-preview.has-image .project-preview-label,
 .project-preview.has-image .project-preview-title {
@@ -1455,7 +1468,7 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
 
   .more-project-card {
     align-items: flex-start;
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 
   .stats-grid { grid-template-columns: 1fr; }

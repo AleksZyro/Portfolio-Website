@@ -15,7 +15,6 @@
         { label: 'GitHub', url: 'https://github.com/AleksZyro/PathLab' },
         { label: 'Demo', url: 'https://alekszyro.github.io/PathLab/' }
       ],
-      previewImage: 'assets/project-previews/pathlab-overview.svg',
       previewLabel: 'Projektvorschau'
     },
     {
@@ -32,7 +31,6 @@
         { label: 'GitHub', url: 'https://github.com/AleksZyro/SortLab' },
         { label: 'Demo', url: 'https://alekszyro.github.io/SortLab/' }
       ],
-      previewImage: 'assets/project-previews/sortlab-preview.svg',
       previewLabel: 'Projektvorschau'
     },
     {
@@ -48,7 +46,6 @@
       links: [
         { label: 'GitHub', url: 'https://github.com/BotondCsereklye/VSW' }
       ],
-      previewImage: 'assets/project-previews/vsw-preview.svg',
       previewLabel: 'Projektvorschau'
     },
     {
@@ -64,7 +61,6 @@
       links: [
         { label: 'GitHub', url: 'https://github.com/AleksZyro/FolioLint' }
       ],
-      previewImage: 'assets/project-previews/foliolint-preview.svg',
       previewLabel: 'Projektvorschau'
     },
     {
@@ -80,7 +76,6 @@
       links: [
         { label: 'GitHub', url: 'https://github.com/AleksZyro/BESP2074' }
       ],
-      previewImage: 'assets/project-previews/besp2074-preview.svg',
       previewLabel: 'Projektvorschau'
     }
   ],
