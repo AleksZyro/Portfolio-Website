@@ -121,13 +121,13 @@ const cells = weeks.map((week, weekIndex) => week.contributionDays.map((day, row
 
 const markers = [0, 0.28, 0.56, 0.84, 1].map((ratio, index) => {
   const x = progressX + ratio * progressWidth;
-  const colors = ['#ff5d6c', '#ffb86b', '#67d9ff', '#8d6cff', '#93c5fd'];
-  return `  <g class="hud-marker" transform="translate(${x.toFixed(1)} 30)">
-    <circle r="8.5" fill="${colors[index]}" opacity="0.95" />
-    <circle cx="-2.8" cy="-1.8" r="1.5" fill="#f5fbff" />
-    <circle cx="2.8" cy="-1.8" r="1.5" fill="#f5fbff" />
-    <circle cx="-2.2" cy="-1.7" r="0.55" fill="#132744" />
-    <circle cx="3.4" cy="-1.7" r="0.55" fill="#132744" />
+  const colors = ['#ff5d6c', '#ffb85c', '#67d9ff', '#8d6cff', '#93c5fd'];
+  return `  <g class="ghost-hud" transform="translate(${x.toFixed(1)} 19.0) scale(0.9)">
+    <path d="M -5.8 4.8 L -5.8 -1.3 C -5.8 -5.0 -3.2 -7.0 0 -7.0 C 3.2 -7.0 5.8 -5.0 5.8 -1.3 L 5.8 4.8 L 3.4 3.1 L 1.1 4.8 L -1.1 3.1 L -3.4 4.8 Z" fill="${colors[index]}" />
+    <circle class="ghost-eye" cx="-2" cy="-2.2" r="1.2" />
+    <circle class="ghost-eye" cx="2" cy="-2.2" r="1.2" />
+    <circle class="ghost-pupil" cx="-1.5" cy="-2.2" r="0.42" />
+    <circle class="ghost-pupil" cx="2.5" cy="-2.2" r="0.42" />
   </g>`;
 }).join('\n');
 
@@ -143,7 +143,9 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="274" v
       .grid-cell { rx: 2; ry: 2; shape-rendering: geometricPrecision; }
       .progress-track { fill: #122340; }
       .progress-fill { fill: #ffd54a; }
-      .hud-marker { opacity: 0.86; }
+      .ghost-hud { opacity: 0.88; }
+      .ghost-eye { fill: #f5fbff; }
+      .ghost-pupil { fill: #132744; }
     </style>
   </defs>
 

@@ -10,7 +10,9 @@
       .grid-cell { rx: 2; ry: 2; shape-rendering: geometricPrecision; }
       .progress-track { fill: #122340; }
       .progress-fill { fill: #ffd54a; }
-      .hud-marker { opacity: 0.86; }
+      .ghost-hud { opacity: 0.88; }
+      .ghost-eye { fill: #f5fbff; }
+      .ghost-pupil { fill: #132744; }
     </style>
   </defs>
 
@@ -20,40 +22,40 @@
   <text x="190" y="33" class="t-sub">/971</text>
   <rect x="244" y="27" width="626" height="6" rx="3" class="progress-track" />
   <rect x="244" y="27" width="608" height="6" rx="3" class="progress-fill" />
-  <g class="hud-marker" transform="translate(244.0 30)">
-    <circle r="8.5" fill="#ff5d6c" opacity="0.95" />
-    <circle cx="-2.8" cy="-1.8" r="1.5" fill="#f5fbff" />
-    <circle cx="2.8" cy="-1.8" r="1.5" fill="#f5fbff" />
-    <circle cx="-2.2" cy="-1.7" r="0.55" fill="#132744" />
-    <circle cx="3.4" cy="-1.7" r="0.55" fill="#132744" />
+  <g class="ghost-hud" transform="translate(244.0 19.0) scale(0.9)">
+    <path d="M -5.8 4.8 L -5.8 -1.3 C -5.8 -5.0 -3.2 -7.0 0 -7.0 C 3.2 -7.0 5.8 -5.0 5.8 -1.3 L 5.8 4.8 L 3.4 3.1 L 1.1 4.8 L -1.1 3.1 L -3.4 4.8 Z" fill="#ff5d6c" />
+    <circle class="ghost-eye" cx="-2" cy="-2.2" r="1.2" />
+    <circle class="ghost-eye" cx="2" cy="-2.2" r="1.2" />
+    <circle class="ghost-pupil" cx="-1.5" cy="-2.2" r="0.42" />
+    <circle class="ghost-pupil" cx="2.5" cy="-2.2" r="0.42" />
   </g>
-  <g class="hud-marker" transform="translate(419.3 30)">
-    <circle r="8.5" fill="#ffb86b" opacity="0.95" />
-    <circle cx="-2.8" cy="-1.8" r="1.5" fill="#f5fbff" />
-    <circle cx="2.8" cy="-1.8" r="1.5" fill="#f5fbff" />
-    <circle cx="-2.2" cy="-1.7" r="0.55" fill="#132744" />
-    <circle cx="3.4" cy="-1.7" r="0.55" fill="#132744" />
+  <g class="ghost-hud" transform="translate(419.3 19.0) scale(0.9)">
+    <path d="M -5.8 4.8 L -5.8 -1.3 C -5.8 -5.0 -3.2 -7.0 0 -7.0 C 3.2 -7.0 5.8 -5.0 5.8 -1.3 L 5.8 4.8 L 3.4 3.1 L 1.1 4.8 L -1.1 3.1 L -3.4 4.8 Z" fill="#ffb85c" />
+    <circle class="ghost-eye" cx="-2" cy="-2.2" r="1.2" />
+    <circle class="ghost-eye" cx="2" cy="-2.2" r="1.2" />
+    <circle class="ghost-pupil" cx="-1.5" cy="-2.2" r="0.42" />
+    <circle class="ghost-pupil" cx="2.5" cy="-2.2" r="0.42" />
   </g>
-  <g class="hud-marker" transform="translate(594.6 30)">
-    <circle r="8.5" fill="#67d9ff" opacity="0.95" />
-    <circle cx="-2.8" cy="-1.8" r="1.5" fill="#f5fbff" />
-    <circle cx="2.8" cy="-1.8" r="1.5" fill="#f5fbff" />
-    <circle cx="-2.2" cy="-1.7" r="0.55" fill="#132744" />
-    <circle cx="3.4" cy="-1.7" r="0.55" fill="#132744" />
+  <g class="ghost-hud" transform="translate(594.6 19.0) scale(0.9)">
+    <path d="M -5.8 4.8 L -5.8 -1.3 C -5.8 -5.0 -3.2 -7.0 0 -7.0 C 3.2 -7.0 5.8 -5.0 5.8 -1.3 L 5.8 4.8 L 3.4 3.1 L 1.1 4.8 L -1.1 3.1 L -3.4 4.8 Z" fill="#67d9ff" />
+    <circle class="ghost-eye" cx="-2" cy="-2.2" r="1.2" />
+    <circle class="ghost-eye" cx="2" cy="-2.2" r="1.2" />
+    <circle class="ghost-pupil" cx="-1.5" cy="-2.2" r="0.42" />
+    <circle class="ghost-pupil" cx="2.5" cy="-2.2" r="0.42" />
   </g>
-  <g class="hud-marker" transform="translate(769.8 30)">
-    <circle r="8.5" fill="#8d6cff" opacity="0.95" />
-    <circle cx="-2.8" cy="-1.8" r="1.5" fill="#f5fbff" />
-    <circle cx="2.8" cy="-1.8" r="1.5" fill="#f5fbff" />
-    <circle cx="-2.2" cy="-1.7" r="0.55" fill="#132744" />
-    <circle cx="3.4" cy="-1.7" r="0.55" fill="#132744" />
+  <g class="ghost-hud" transform="translate(769.8 19.0) scale(0.9)">
+    <path d="M -5.8 4.8 L -5.8 -1.3 C -5.8 -5.0 -3.2 -7.0 0 -7.0 C 3.2 -7.0 5.8 -5.0 5.8 -1.3 L 5.8 4.8 L 3.4 3.1 L 1.1 4.8 L -1.1 3.1 L -3.4 4.8 Z" fill="#8d6cff" />
+    <circle class="ghost-eye" cx="-2" cy="-2.2" r="1.2" />
+    <circle class="ghost-eye" cx="2" cy="-2.2" r="1.2" />
+    <circle class="ghost-pupil" cx="-1.5" cy="-2.2" r="0.42" />
+    <circle class="ghost-pupil" cx="2.5" cy="-2.2" r="0.42" />
   </g>
-  <g class="hud-marker" transform="translate(870.0 30)">
-    <circle r="8.5" fill="#93c5fd" opacity="0.95" />
-    <circle cx="-2.8" cy="-1.8" r="1.5" fill="#f5fbff" />
-    <circle cx="2.8" cy="-1.8" r="1.5" fill="#f5fbff" />
-    <circle cx="-2.2" cy="-1.7" r="0.55" fill="#132744" />
-    <circle cx="3.4" cy="-1.7" r="0.55" fill="#132744" />
+  <g class="ghost-hud" transform="translate(870.0 19.0) scale(0.9)">
+    <path d="M -5.8 4.8 L -5.8 -1.3 C -5.8 -5.0 -3.2 -7.0 0 -7.0 C 3.2 -7.0 5.8 -5.0 5.8 -1.3 L 5.8 4.8 L 3.4 3.1 L 1.1 4.8 L -1.1 3.1 L -3.4 4.8 Z" fill="#93c5fd" />
+    <circle class="ghost-eye" cx="-2" cy="-2.2" r="1.2" />
+    <circle class="ghost-eye" cx="2" cy="-2.2" r="1.2" />
+    <circle class="ghost-pupil" cx="-1.5" cy="-2.2" r="0.42" />
+    <circle class="ghost-pupil" cx="2.5" cy="-2.2" r="0.42" />
   </g>
   <rect class="grid-cell" x="22" y="62" width="15" height="15" fill="#1a2743"><title>2025-08-03: 0 contributions</title></rect>
   <rect class="grid-cell" x="22" y="78" width="15" height="15" fill="#1a2743"><title>2025-08-10: 0 contributions</title></rect>
