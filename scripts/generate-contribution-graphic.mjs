@@ -108,18 +108,18 @@ const weeks = calendar.weeks.slice(-53);
 const days = weeks.flatMap((week) => week.contributionDays);
 const maxCount = Math.max(1, ...days.map((day) => day.contributionCount));
 
-const width = 980;
-const height = 242;
+const width = 960;
+const height = 224;
 const cell = 11;
 const gap = 4;
 const panelX = 22;
 const panelY = 50;
 const panelWidth = 916;
-const panelHeight = 154;
+const panelHeight = 150;
 const gridX = 92;
 const gridY = 82;
 const monthY = 75;
-const legendY = 186;
+const footerY = 192;
 const weekdayLabels = [
   { label: 'Mon', row: 1 },
   { label: 'Wed', row: 3 },
@@ -163,12 +163,12 @@ const weekdays = weekdayLabels.map((item) => {
 }).join('\n');
 
 const legendCells = [0, 1, 2, 3, 4].map((level, index) => {
-  const x = 790 + index * 17;
+  const x = 775 + index * 17;
   const color = ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353'][level];
-  return `  <rect x="${x}" y="${legendY - 10}" width="11" height="11" rx="2" fill="${color}" />`;
+  return `  <rect x="${x}" y="${footerY - 10}" width="11" height="11" rx="2" fill="${color}" />`;
 }).join('\n');
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="296" viewBox="0 0 ${width} ${height}" fill="none" role="img" aria-label="${escapeHtml(user)} GitHub contribution calendar">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 ${width} ${height}" fill="none" role="img" aria-label="${escapeHtml(user)} GitHub contribution calendar">
   <style>
     .title { font: 500 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #f0f6fc; }
     .month-label, .weekday-label, .legend, .hint { font: 400 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #f0f6fc; }
@@ -178,16 +178,16 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="296" v
 
   <rect width="${width}" height="${height}" rx="14" fill="#0d1117" />
   <text x="${panelX}" y="34" class="title">${calendar.totalContributions} contributions in the last year</text>
-  <text x="${panelX + panelWidth - 6}" y="34" class="hint" text-anchor="end">Contribution settings</text>
-  <path d="M ${panelX + panelWidth - 2} 30 l 4 4 l 4 -4" stroke="#8b949e" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="${panelX + panelWidth - 10}" y="34" class="hint" text-anchor="end">Contribution settings</text>
+  <path d="M ${panelX + panelWidth - 6} 30 l 4 4 l 4 -4" stroke="#8b949e" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
   <rect x="${panelX}" y="${panelY}" width="${panelWidth}" height="${panelHeight}" rx="6" fill="none" stroke="#30363d" />
 ${months}
 ${weekdays}
 ${cells}
-  <text x="${gridX - 26}" y="${legendY}" class="hint">Learn how we count contributions</text>
-  <text x="760" y="${legendY}" class="legend-muted">Less</text>
+  <text x="${gridX - 26}" y="${footerY}" class="hint">Learn how we count contributions</text>
+  <text x="745" y="${footerY}" class="legend-muted">Less</text>
 ${legendCells}
-  <text x="874" y="${legendY}" class="legend-muted">More</text>
+  <text x="859" y="${footerY}" class="legend-muted">More</text>
 </svg>
 `;
 

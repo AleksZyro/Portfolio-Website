@@ -1217,7 +1217,8 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
 .activity-strip img {
   display: block;
   width: 100%;
-  min-height: 150px;
+  height: auto;
+  min-height: 0;
   object-fit: contain;
 }
 
