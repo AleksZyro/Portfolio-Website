@@ -221,7 +221,6 @@ const modalKicker = document.querySelector('.modal-kicker');
 const modalPreviewLabel = document.querySelector('.modal-preview-label');
 const modalPreviewTitle = document.getElementById('modal-preview-title');
 const modalPreviewSubtitle = document.getElementById('modal-preview-subtitle');
-const modalFileViewer = document.getElementById('modal-file-viewer');
 const modalDownload = document.getElementById('modal-download');
 
 const yearTarget = document.getElementById('year');
@@ -1241,6 +1240,7 @@ const createCard = (item, typeKey = 'projects') => {
   detailButton.dataset.title = displayItem.title;
   detailButton.dataset.description = displayItem.detailDescription || displayItem.description || '';
   detailButton.dataset.meta = JSON.stringify(displayItem.meta || []);
+  detailButton.dataset.itemType = typeKey;
   if (item.file) {
     detailButton.dataset.file = item.file;
   }
@@ -1538,49 +1538,46 @@ const setModalDescription = (description) => {
     });
 };
 
-const configureModalFile = ({ file, previewLabel, previewImage }) => {
-  const hasFile = Boolean(file);
+const configureModalFile = ({ file, previewLabel, previewImage, itemType }) => {
+  const isCertificate = itemType === 'certificates';
+  const hasPreviewImage = Boolean(previewImage);
+  const hasDownload = isCertificate && Boolean(file);
 
-  modalCard?.classList.toggle('is-document', hasFile);
-  modalCard?.classList.toggle('has-project-image', !hasFile && Boolean(previewImage));
+  modalCard?.classList.toggle('is-document', isCertificate);
+  modalCard?.classList.toggle('has-preview-image', hasPreviewImage);
 
   if (modalKicker) {
-    modalKicker.textContent = hasFile
+    modalKicker.textContent = isCertificate
       ? t('modal.certificateKicker', 'Zertifikat')
       : t('modal.projectKicker', 'Projektstatus');
   }
 
-  if (modalFileViewer) {
-    modalFileViewer.hidden = !hasFile;
-    modalFileViewer.src = hasFile ? file : 'about:blank';
-  }
-
   if (modalPreviewLabel) {
-    modalPreviewLabel.hidden = hasFile;
+    modalPreviewLabel.hidden = hasPreviewImage;
     modalPreviewLabel.textContent = previewLabel || 'Preview folgt';
   }
 
   if (modalPreviewTitle) {
-    modalPreviewTitle.hidden = hasFile;
+    modalPreviewTitle.hidden = hasPreviewImage;
     modalPreviewTitle.textContent = optionsTitleBuffer || 'Projektvorschau';
   }
 
   if (modalPreviewSubtitle) {
-    modalPreviewSubtitle.hidden = hasFile;
-    modalPreviewSubtitle.textContent = hasFile ? '' : 'Visual folgt';
+    modalPreviewSubtitle.hidden = hasPreviewImage;
+    modalPreviewSubtitle.textContent = isCertificate ? '' : 'Visual folgt';
   }
 
-  if (!hasFile && previewImage) {
-    modalCard?.style.setProperty('--modal-preview-image', `url("${previewImage}")`);
+  if (hasPreviewImage) {
+    modalCard?.style.setProperty('--modal-preview-image', 'url("' + previewImage + '")');
   } else {
     modalCard?.style.removeProperty('--modal-preview-image');
   }
 
   if (modalDownload) {
-    modalDownload.hidden = !hasFile;
-    modalDownload.href = hasFile ? file : '#';
+    modalDownload.hidden = !hasDownload;
+    modalDownload.href = hasDownload ? file : '#';
     modalDownload.textContent = t('portfolioDownloadButton', 'Download PDF');
-    if (hasFile) {
+    if (hasDownload) {
       const filename = file.split('/').pop() || 'zertifikat.pdf';
       modalDownload.setAttribute('download', filename);
     } else {
@@ -1632,7 +1629,8 @@ document.addEventListener('click', (event) => {
     {
       file: trigger.dataset.file || '',
       previewLabel: trigger.dataset.previewLabel || '',
-      previewImage: trigger.dataset.previewImage || ''
+      previewImage: trigger.dataset.previewImage || '',
+      itemType: trigger.dataset.itemType || ''
     }
   );
 });
