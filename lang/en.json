@@ -95,8 +95,8 @@
       "hackathon": {
         "type": "Event",
         "title": "Baden hackt",
-        "period": "Participation",
-        "description": "Participation in the \"Baden hackt\" hackathon with a focus on teamwork, ideation, and fast technical implementation."
+        "period": "2026",
+        "description": "Hackathon \"Baden hackt\" with a focus on teamwork, ideation, and fast technical implementation."
       },
       "ims": {
         "type": "Education",
@@ -157,7 +157,9 @@
       ]
     },
     "detailEmptyTitle": "Select a project",
-    "detailEmptyText": "Click a project card to show status, stack, role, and learning focus."
+    "detailEmptyText": "Click a project card to show status, stack, role, and learning focus.",
+    "moreProjectsTitle": "More projects",
+    "moreProjectsSubline": "Compact overview for smaller projects or work that is not fully documented yet."
   },
   "filters": {
     "all": "All",
@@ -215,7 +217,7 @@
         "meta": [
           "Stack: React, Vite, JavaScript, CSS, Vitest",
           "Focus: algorithms, tests, UI state",
-          "Demo: not linked yet",
+          "Demo: GitHub Pages",
           "Repository: public"
         ],
         "tags": [
@@ -234,8 +236,8 @@
         "meta": [
           "Stack: React, Vite, JavaScript, CSS",
           "Focus: sorting algorithms and visualization",
-          "Demo: available locally",
-          "Repository: not publicly linked yet"
+          "Demo: GitHub Pages",
+          "Repository: public"
         ],
         "tags": [
           "React/Vite",
@@ -271,8 +273,8 @@
         "meta": [
           "Stack: Python, JSON, HTML/CSS, JavaScript",
           "Focus: simulation, data export, dashboard",
-          "Repository: not linked yet",
-          "Note: no forecast"
+          "Repository: public",
+          "Note: not a forecast"
         ],
         "tags": [
           "Python",
@@ -280,6 +282,25 @@
         ],
         "role": "Personal simulation project",
         "learning": "Connecting model assumptions, JSON export, and dashboard so local scenarios remain understandable.",
+        "previewLabel": "Project preview"
+      },
+      "foliolint": {
+        "title": "FolioLint",
+        "cardDescription": "Local Python CLI for checking repositories for portfolio readiness, README structure, and public presentation quality.",
+        "detailDescription": "FolioLint\n\nFolioLint is a local, rule-based Python CLI for repository checks. The tool checks whether a project is documented well enough for a portfolio and whether key information such as README, status, setup, and public presentation quality is understandable.\n\nThe focus is on simple, explainable rules instead of black-box analysis. The project fits directly into my portfolio because it helps me clean up my own repositories systematically.",
+        "meta": [
+          "Status: usable locally",
+          "Stack: Python, CLI, JSON rules",
+          "Focus: repository quality, README checks, automation",
+          "Repository: public"
+        ],
+        "tags": [
+          "Python",
+          "CLI",
+          "README"
+        ],
+        "role": "Own tooling project",
+        "learning": "Structure rule-based checks so they stay understandable and lead to real improvements in project repositories.",
         "previewLabel": "Project preview"
       }
     },
@@ -354,6 +375,34 @@
         "React",
         "Security"
       ]
+    }
+  },
+  "moreProjects": {
+    "linkPending": "Link pending",
+    "items": {
+      "umr": {
+        "title": "UMR",
+        "description": "Minecraft mod that reworks rarely used mobs with new functions and stronger gameplay impact.",
+        "tags": [
+          "Java",
+          "Minecraft Mod"
+        ]
+      },
+      "twintype": {
+        "title": "TwinType",
+        "description": "Smaller Python project that still needs compact documentation.",
+        "tags": [
+          "Python"
+        ]
+      },
+      "repostencil": {
+        "title": "RepoStencil",
+        "description": "Planned or not yet publicly linked tooling project around repository structure and templates.",
+        "tags": [
+          "Tooling",
+          "Repo structure"
+        ]
+      }
     }
   }
 }

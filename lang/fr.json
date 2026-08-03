@@ -95,8 +95,8 @@
       "hackathon": {
         "type": "Événement",
         "title": "Baden hackt",
-        "period": "Participation",
-        "description": "Participation au hackathon \"Baden hackt\" avec un accent sur le travail d’équipe, l’idéation et la mise en oeuvre technique rapide."
+        "period": "2026",
+        "description": "Hackathon \"Baden hackt\" avec un accent sur le travail d’équipe, l’idéation et la mise en oeuvre technique rapide."
       },
       "ims": {
         "type": "Formation",
@@ -157,7 +157,9 @@
       ]
     },
     "detailEmptyTitle": "Choisir un projet",
-    "detailEmptyText": "Clique sur une carte de projet pour afficher le statut, le stack, le rôle et ce que le projet m’apporte."
+    "detailEmptyText": "Clique sur une carte de projet pour afficher le statut, le stack, le rôle et ce que le projet m’apporte.",
+    "moreProjectsTitle": "Autres projets",
+    "moreProjectsSubline": "Aperçu compact de projets plus petits ou pas encore entièrement documentés."
   },
   "filters": {
     "all": "Tous",
@@ -215,7 +217,7 @@
         "meta": [
           "Stack: React, Vite, JavaScript, CSS, Vitest",
           "Focus: algorithmes, tests, état UI",
-          "Démo: pas encore liée",
+          "Démo: GitHub Pages",
           "Repository: public"
         ],
         "tags": [
@@ -234,8 +236,8 @@
         "meta": [
           "Stack: React, Vite, JavaScript, CSS",
           "Focus: algorithmes de tri et visualisation",
-          "Démo: disponible localement",
-          "Repository: pas encore lié publiquement"
+          "Démo: GitHub Pages",
+          "Repository: public"
         ],
         "tags": [
           "React/Vite",
@@ -271,8 +273,8 @@
         "meta": [
           "Stack: Python, JSON, HTML/CSS, JavaScript",
           "Focus: simulation, export de données, dashboard",
-          "Repository: pas encore lié",
-          "Note: aucune prévision"
+          "Repository: public",
+          "Note: pas une prévision"
         ],
         "tags": [
           "Python",
@@ -280,6 +282,25 @@
         ],
         "role": "Projet personnel de simulation",
         "learning": "Relier hypothèses du modèle, export JSON et dashboard pour que les scénarios locaux restent compréhensibles.",
+        "previewLabel": "Aperçu du projet"
+      },
+      "foliolint": {
+        "title": "FolioLint",
+        "cardDescription": "CLI Python local pour vérifier la qualité portfolio, la structure README et la présentation publique de repositories.",
+        "detailDescription": "FolioLint\n\nFolioLint est un CLI Python local basé sur des règles pour vérifier des repositories. L’outil contrôle si un projet est assez bien documenté pour un portfolio et si les informations comme README, statut, setup et présentation publique sont compréhensibles.\n\nLe focus est mis sur des règles simples et explicables plutôt que sur une analyse opaque. Le projet est directement lié à mon portfolio, car il m’aide à améliorer mes repositories de manière systématique.",
+        "meta": [
+          "Statut: utilisable localement",
+          "Stack: Python, CLI, règles JSON",
+          "Focus: qualité repository, checks README, automatisation",
+          "Repository: public"
+        ],
+        "tags": [
+          "Python",
+          "CLI",
+          "README"
+        ],
+        "role": "Projet tooling personnel",
+        "learning": "Structurer des checks basés sur des règles afin qu’ils restent compréhensibles et améliorent réellement les repositories.",
         "previewLabel": "Aperçu du projet"
       }
     },
@@ -354,6 +375,34 @@
         "React",
         "Security"
       ]
+    }
+  },
+  "moreProjects": {
+    "linkPending": "Lien à venir",
+    "items": {
+      "umr": {
+        "title": "UMR",
+        "description": "Mod Minecraft qui retravaille des mobs peu utilisés avec de nouvelles fonctions et un impact plus fort sur le gameplay.",
+        "tags": [
+          "Java",
+          "Minecraft Mod"
+        ]
+      },
+      "twintype": {
+        "title": "TwinType",
+        "description": "Petit projet Python qui doit encore être documenté de manière compacte.",
+        "tags": [
+          "Python"
+        ]
+      },
+      "repostencil": {
+        "title": "RepoStencil",
+        "description": "Projet tooling planifié ou pas encore lié publiquement autour de la structure de repositories et de templates.",
+        "tags": [
+          "Tooling",
+          "Structure repo"
+        ]
+      }
     }
   }
 }

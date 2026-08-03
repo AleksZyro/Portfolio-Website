@@ -6,15 +6,16 @@
       title: 'PathLab',
       cardDescription: 'Visualizer für Wegfindungsalgorithmen auf einem gewichteten Raster mit BFS, DFS, Dijkstra und A*.',
       detailDescription: 'PathLab\n\nPathLab ist ein interaktiver Visualizer zum Lernen und Vergleichen von Wegfindungsalgorithmen. Die Anwendung arbeitet mit einem gewichteten Raster, Start- und Zielpunkten sowie Feldern wie Wand, Wasser und Schlamm.\n\nDer Schwerpunkt liegt auf nachvollziehbarer Algorithmus-Visualisierung: BFS, DFS, Dijkstra und A* können einzeln ausgeführt oder verglichen werden. Die Anwendung zeigt den gefundenen Pfad, Kosten und Laufzeit getrennt von der Animation.\n\nDas Projekt ist eine stabile Portfolio-Version mit GitHub-Pages-Demo, automatisierten Tests und GitHub-Actions-Workflow.',
-      meta: ['Status: stabile Portfolio-Version', 'Stack: React, Vite, JavaScript, CSS, Vitest', 'Fokus: Algorithmen, Tests, UI-State', 'Demo: aktuell nicht verlinkt', 'Repository: öffentlich'],
+      meta: ['Status: stabile Portfolio-Version', 'Stack: React, Vite, JavaScript, CSS, Vitest', 'Fokus: Algorithmen, Tests, UI-State', 'Demo: GitHub Pages', 'Repository: öffentlich'],
       tags: ['React/Vite', 'Tests', 'GitHub Pages'],
       filters: ['web', 'visualisierung'],
       role: 'Eigenes Lern- und Portfolio-Projekt',
       learning: 'Algorithmen getrennt von React-Komponenten halten, Tests für Randfälle schreiben und UI-State nachvollziehbar machen.',
       links: [
-        { label: 'GitHub', url: 'https://github.com/AleksZyro/PathLab' }
+        { label: 'GitHub', url: 'https://github.com/AleksZyro/PathLab' },
+        { label: 'Demo', url: 'https://alekszyro.github.io/PathLab/' }
       ],
-      previewImage: 'assets/project-previews/pathlab-overview.png',
+      previewImage: 'assets/project-previews/pathlab-overview.svg',
       previewLabel: 'Projektvorschau'
     },
     {
@@ -22,11 +23,15 @@
       title: 'SortLab',
       cardDescription: 'Sortieralgorithmus-Visualizer mit Balkenansicht, Steuerung, Statistik und Erklärbereich.',
       detailDescription: 'SortLab\n\nSortLab ist ein interaktiver Visualizer für Sortieralgorithmen. Nutzerinnen und Nutzer sehen Schritt für Schritt, wie ein Array sortiert wird, können die Geschwindigkeit live anpassen und verschiedene Verfahren vergleichen.\n\nEnthalten sind Bubble Sort, Selection Sort, Insertion Sort, Quick Sort und Heap Sort. Das Dashboard zeigt Vergleiche, Swaps, Schritte und Laufzeit in Millisekunden.\n\nDas Projekt ist fertig nutzbar und dient als Lernprojekt für Algorithmen, React-State und Visualisierung.',
-      meta: ['Status: fertig nutzbar', 'Stack: React, Vite, JavaScript, CSS', 'Fokus: Sortieralgorithmen und Visualisierung', 'Demo: lokal vorhanden', 'Repository: noch nicht öffentlich verlinkt'],
+      meta: ['Status: fertig nutzbar', 'Stack: React, Vite, JavaScript, CSS', 'Fokus: Sortieralgorithmen und Visualisierung', 'Demo: GitHub Pages', 'Repository: öffentlich'],
       tags: ['React/Vite', 'Algorithmen'],
       filters: ['web', 'visualisierung'],
       role: 'Eigenes Lernprojekt',
       learning: 'Animation, Laufzeitsteuerung und Statistik so verbinden, dass der Algorithmus sichtbar und bedienbar bleibt.',
+      links: [
+        { label: 'GitHub', url: 'https://github.com/AleksZyro/SortLab' },
+        { label: 'Demo', url: 'https://alekszyro.github.io/SortLab/' }
+      ],
       previewImage: 'assets/project-previews/sortlab-preview.svg',
       previewLabel: 'Projektvorschau'
     },
@@ -47,17 +52,58 @@
       previewLabel: 'Projektvorschau'
     },
     {
+      id: 'foliolint',
+      title: 'FolioLint',
+      cardDescription: 'Lokales Python-CLI, das Repositories auf Portfolio-Tauglichkeit, README-Struktur und öffentliche Präsentierbarkeit prüft.',
+      detailDescription: 'FolioLint\n\nFolioLint ist ein lokales, regelbasiertes Python-CLI für Repository-Checks. Das Tool prüft, ob ein Projekt für ein Portfolio sauber genug dokumentiert ist und ob wichtige Hinweise wie README, Status, Setup und öffentliche Präsentierbarkeit nachvollziehbar sind.\n\nDer Fokus liegt auf einfachen, erklärbaren Regeln statt auf Blackbox-Analyse. Das Projekt passt direkt zu meinem Portfolio, weil es hilft, eigene Repositories systematisch aufzuräumen und besser vorzeigbar zu machen.',
+      meta: ['Status: lokal nutzbar', 'Stack: Python, CLI, JSON-Regeln', 'Fokus: Repository-Qualität, README-Checks, Automatisierung', 'Repository: öffentlich'],
+      tags: ['Python', 'CLI', 'README'],
+      filters: ['python'],
+      role: 'Eigenes Tooling-Projekt',
+      learning: 'Regelbasierte Checks so strukturieren, dass sie nachvollziehbar bleiben und echte Verbesserungen an Projekt-Repositories anstossen.',
+      links: [
+        { label: 'GitHub', url: 'https://github.com/AleksZyro/FolioLint' }
+      ],
+      previewImage: 'assets/project-previews/foliolint-preview.svg',
+      previewLabel: 'Projektvorschau'
+    },
+    {
       id: 'besp2074',
       title: 'BESP2074',
       cardDescription: 'Lokale Balkan-Wirtschaftssimulation mit Python-Modell, JSON-Export und Web-Dashboard.',
       detailDescription: 'BESP2074\n\nBESP2074 ist eine lokale, jahresbasierte Balkan-Simulation. Das Projekt nutzt ein Python-Modell, strukturierte JSON-Daten und ein lokales Web-Dashboard, um Szenarien bis 2074 darzustellen.\n\nDie Anwendung ist als Lern- und Szenariosimulation gedacht. Die Resultate sind keine echten wirtschaftlichen, politischen oder finanziellen Prognosen, sondern vereinfachte Modellläufe mit Annahmen, Seeds und optionalen Ereignissen.\n\nDas Projekt ist lokal nutzbar, aber noch nicht als fertige öffentliche Anwendung veröffentlicht.',
-      meta: ['Status: lokal nutzbar, nicht veröffentlicht', 'Stack: Python, JSON, HTML/CSS, JavaScript', 'Fokus: Simulation, Datenexport, Dashboard', 'Repository: aktuell nicht verlinkt', 'Hinweis: keine Prognose'],
+      meta: ['Status: lokal nutzbar, nicht veröffentlicht', 'Stack: Python, JSON, HTML/CSS, JavaScript', 'Fokus: Simulation, Datenexport, Dashboard', 'Repository: öffentlich', 'Hinweis: keine Prognose'],
       tags: ['Python', 'Simulation'],
       filters: ['python', 'web', 'visualisierung', 'in-arbeit'],
       role: 'Eigenes Simulationsprojekt',
       learning: 'Modellannahmen, JSON-Export und Dashboard so verbinden, dass lokale Szenarien nachvollziehbar bleiben.',
+      links: [
+        { label: 'GitHub', url: 'https://github.com/AleksZyro/BESP2074' }
+      ],
       previewImage: 'assets/project-previews/besp2074-preview.svg',
       previewLabel: 'Projektvorschau'
+    }
+  ],
+  moreProjects: [
+    {
+      id: 'umr',
+      title: 'UMR',
+      description: 'Minecraft-Mod zur Überarbeitung wenig genutzter Mobs mit neuen Funktionen und stärkerem Gameplay-Einfluss.',
+      tags: ['Java', 'Minecraft Mod'],
+      url: 'https://github.com/AleksZyro/UMR-Useless-mobs-reworked-Mod'
+    },
+    {
+      id: 'twintype',
+      title: 'TwinType',
+      description: 'Kleineres Python-Projekt, das noch kompakt dokumentiert wird.',
+      tags: ['Python'],
+      url: 'https://github.com/AleksZyro/TwinType'
+    },
+    {
+      id: 'repostencil',
+      title: 'RepoStencil',
+      description: 'Geplantes bzw. noch nicht öffentlich verlinktes Tooling-Projekt rund um Repository-Struktur und Vorlagen.',
+      tags: ['Tooling', 'Repo-Struktur']
     }
   ],
   certificates: [
@@ -156,6 +202,7 @@ const tabs = document.querySelectorAll('.tab');
 const tabPanels = { projects: document.getElementById('panel-projects'), certificates: document.getElementById('panel-certificates') };
 const projectFilters = document.querySelectorAll('.filter-chip');
 const projectsGrid = document.getElementById('projects-grid');
+const moreProjectsList = document.getElementById('more-projects-list');
 const certificatesGrid = document.getElementById('certificates-grid');
 const openSourceList = document.getElementById('open-source-list');
 const techGrid = document.getElementById('tech-grid');
@@ -271,8 +318,8 @@ const embeddedDictionaries = {
         hackathon: {
           type: 'Event',
           title: 'Baden hackt',
-          period: 'Teilnahme',
-          description: 'Teilnahme am Hackathon "Baden hackt" mit Fokus auf Teamarbeit, Ideenfindung und schneller technischer Umsetzung.'
+          period: '2026',
+          description: 'Hackathon "Baden hackt" mit Fokus auf Teamarbeit, Ideenfindung und schneller technischer Umsetzung.'
         },
         ims: {
           type: 'Ausbildung',
@@ -411,8 +458,8 @@ const embeddedDictionaries = {
         hackathon: {
           type: 'Event',
           title: 'Baden hackt',
-          period: 'Participation',
-          description: 'Participation in the "Baden hackt" hackathon with a focus on teamwork, ideation, and fast technical implementation.'
+          period: '2026',
+          description: 'Hackathon "Baden hackt" with a focus on teamwork, ideation, and fast technical implementation.'
         },
         ims: {
           type: 'Education',
@@ -540,8 +587,8 @@ const embeddedDictionaries = {
         hackathon: {
           type: 'Evenement',
           title: 'Baden hackt',
-          period: 'Participation',
-          description: 'Participation au hackathon "Baden hackt" avec un accent sur le travail d equipe, l ideation et la mise en oeuvre technique rapide.'
+          period: '2026',
+          description: 'Hackathon "Baden hackt" avec un accent sur le travail d equipe, l ideation et la mise en oeuvre technique rapide.'
         },
         ims: {
           type: 'Formation',
@@ -671,8 +718,8 @@ const embeddedDictionaries = {
         hackathon: {
           type: 'Dogadjaj',
           title: 'Baden hackt',
-          period: 'Ucesce',
-          description: 'Ucesce na hakatonu "Baden hackt" sa fokusom na timski rad, razvoj ideja i brzu tehnicku realizaciju.'
+          period: '2026',
+          description: 'Hackathon "Baden hackt" sa fokusom na timski rad, razvoj ideja i brzu tehnicku realizaciju.'
         },
         ims: {
           type: 'Obrazovanje',
@@ -761,6 +808,16 @@ const localizedPortfolioItem = (item, typeKey) => {
     role: t(`${translationPath}.role`, item.role || ''),
     learning: t(`${translationPath}.learning`, item.learning || ''),
     previewLabel: t(`${translationPath}.previewLabel`, item.previewLabel || 'Preview folgt')
+  };
+};
+
+const localizedMoreProject = (item) => {
+  const translationPath = `moreProjects.items.${item.id}`;
+  return {
+    ...item,
+    title: t(`${translationPath}.title`, item.title),
+    description: t(`${translationPath}.description`, item.description),
+    tags: tArray(`${translationPath}.tags`, item.tags || [])
   };
 };
 
@@ -1132,12 +1189,18 @@ const createCard = (item, typeKey = 'projects') => {
   const displayItem = localizedPortfolioItem(item, typeKey);
   const card = document.createElement('article');
   card.className = 'item-card';
+  if (typeKey === 'certificates') {
+    card.classList.add('certificate-card');
+  }
   if (item.title === activeProjectTitle) {
     card.classList.add('is-selected');
   }
 
   const preview = document.createElement('div');
   preview.className = 'project-preview';
+  if (typeKey === 'certificates') {
+    preview.classList.add('certificate-preview');
+  }
   if (item.previewImage) {
     preview.classList.add('has-image');
     preview.style.setProperty('--preview-image', `url("${item.previewImage}")`);
@@ -1229,6 +1292,48 @@ const renderProjectExplorer = () => {
   projectsGrid.innerHTML = '';
   filteredProjects.forEach((project) => {
     projectsGrid.append(createCard(project, 'projects'));
+  });
+};
+
+const renderMoreProjects = () => {
+  if (!moreProjectsList) return;
+
+  moreProjectsList.innerHTML = '';
+  (portfolioData.moreProjects || []).forEach((project) => {
+    const item = localizedMoreProject(project);
+    const card = document.createElement('article');
+    card.className = 'more-project-card';
+
+    const content = document.createElement('div');
+    content.className = 'more-project-content';
+
+    const title = document.createElement('h4');
+    title.textContent = item.title;
+
+    const description = document.createElement('p');
+    description.textContent = item.description;
+
+    const tags = document.createElement('div');
+    tags.className = 'more-project-tags';
+    (item.tags || []).forEach((tagText) => {
+      const tag = document.createElement('span');
+      tag.textContent = tagText;
+      tags.append(tag);
+    });
+
+    content.append(title, description, tags);
+
+    const action = item.url ? document.createElement('a') : document.createElement('span');
+    action.className = item.url ? 'link-arrow more-project-link' : 'more-project-link is-disabled';
+    action.textContent = item.url ? t('linkLabels.github', 'GitHub') : t('moreProjects.linkPending', 'Link folgt');
+    if (item.url) {
+      action.href = item.url;
+      action.target = '_blank';
+      action.rel = 'noopener noreferrer';
+    }
+
+    card.append(content, action);
+    moreProjectsList.append(card);
   });
 };
 
@@ -1603,6 +1708,7 @@ const setLanguageMenuOpen = (isOpen) => {
 const refreshDynamicTexts = () => {
   activateFocus(currentFocusKey);
   renderProjectExplorer();
+  renderMoreProjects();
   renderCollection(portfolioData.certificates, certificatesGrid, 'certificates');
   renderOpenSourceContributions();
 };
@@ -1739,3 +1845,4 @@ loadLanguage(storedLanguage).then(alignInitialHash).catch(() => {
   selectLanguageButton('de');
   alignInitialHash();
 });
+

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-label="VSW preview">
+  <rect width="900" height="420" rx="28" fill="#101323"/>
+  <rect x="34" y="34" width="832" height="352" rx="22" fill="#171c31" stroke="#38405f"/>
+  <rect x="70" y="82" width="300" height="250" rx="18" fill="#0d1325" stroke="#2f3b64"/>
+  <text x="96" y="126" fill="#f1edff" font-family="Sora, Segoe UI, sans-serif" font-size="28" font-weight="800">Security Check</text>
+  <text x="96" y="166" fill="#c8c0df" font-family="Sora, Segoe UI, sans-serif" font-size="18">autorisierte Domain</text>
+  <rect x="96" y="206" width="210" height="42" rx="12" fill="#8d6cff"/>
+  <text x="124" y="234" fill="#120b2a" font-family="Sora, Segoe UI, sans-serif" font-size="18" font-weight="800">Scan starten</text>
+  <g transform="translate(430 88)">
+    <rect width="350" height="58" rx="14" fill="#0d1325" stroke="#2f3b64"/>
+    <circle cx="34" cy="29" r="10" fill="#43d67c"/>
+    <text x="58" y="36" fill="#f1edff" font-family="Sora, Segoe UI, sans-serif" font-size="20" font-weight="700">HTTP Header</text>
+    <rect y="84" width="350" height="58" rx="14" fill="#0d1325" stroke="#2f3b64"/>
+    <circle cx="34" cy="113" r="10" fill="#ffcf5b"/>
+    <text x="58" y="120" fill="#f1edff" font-family="Sora, Segoe UI, sans-serif" font-size="20" font-weight="700">TLS Zertifikat</text>
+    <rect y="168" width="350" height="58" rx="14" fill="#0d1325" stroke="#2f3b64"/>
+    <circle cx="34" cy="197" r="10" fill="#72a9ff"/>
+    <text x="58" y="204" fill="#f1edff" font-family="Sora, Segoe UI, sans-serif" font-size="20" font-weight="700">Report Export</text>
+  </g>
+  <text x="70" y="370" fill="#b8c8ef" font-family="Sora, Segoe UI, sans-serif" font-size="24" font-weight="700">VSW</text>
+</svg>

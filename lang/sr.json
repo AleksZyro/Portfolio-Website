@@ -95,8 +95,8 @@
       "hackathon": {
         "type": "Događaj",
         "title": "Baden hackt",
-        "period": "Učešće",
-        "description": "Učešće na hackathonu \"Baden hackt\" sa fokusom na timski rad, razvoj ideja i brzu tehničku realizaciju."
+        "period": "2026",
+        "description": "Hackathon \"Baden hackt\" sa fokusom na timski rad, razvoj ideja i brzu tehničku realizaciju."
       },
       "ims": {
         "type": "Obrazovanje",
@@ -157,7 +157,9 @@
       ]
     },
     "detailEmptyTitle": "Izaberi projekat",
-    "detailEmptyText": "Klikni na projektnu karticu da vidiš status, stack, ulogu i šta sam naučio."
+    "detailEmptyText": "Klikni na projektnu karticu da vidiš status, stack, ulogu i šta sam naučio.",
+    "moreProjectsTitle": "Dodatni projekti",
+    "moreProjectsSubline": "Kompaktan pregled manjih projekata ili radova koji još nisu potpuno dokumentovani."
   },
   "filters": {
     "all": "Svi",
@@ -213,9 +215,9 @@
         "cardDescription": "Vizualizator algoritama za pronalaženje puta na mreži sa težinama: BFS, DFS, Dijkstra i A*.",
         "detailDescription": "PathLab\n\nPathLab je interaktivni vizualizator za učenje i poređenje algoritama za pronalaženje puta. Aplikacija koristi mrežu sa težinama, početnu i ciljnu tačku, kao i polja poput zida, vode i blata.\n\nFokus je na razumljivoj vizualizaciji algoritama: BFS, DFS, Dijkstra i A* mogu se pokretati pojedinačno ili porediti. Aplikacija odvojeno prikazuje pronađeni put, troškove i vreme izvršavanja.\n\nProjekat ima stabilnu portfolio verziju, automatizovane testove i GitHub Actions workflow.",
         "meta": [
-          "Stek: React, Vite, JavaScript, CSS, Vitest",
-          "Fokus: algoritmi, testovi, UI stanje",
-          "Demo: trenutno nije linkovan",
+          "Stack: React, Vite, JavaScript, CSS, Vitest",
+          "Fokus: algoritmi, testovi, UI state",
+          "Demo: GitHub Pages",
           "Repozitorijum: javan"
         ],
         "tags": [
@@ -232,10 +234,10 @@
         "cardDescription": "Vizualizator algoritama sortiranja sa stubićima, kontrolama, statistikom i objašnjenjem.",
         "detailDescription": "SortLab\n\nSortLab je interaktivni vizualizator algoritama sortiranja. Korisnici korak po korak vide kako se niz sortira, mogu uživo menjati brzinu i porediti različite algoritme.\n\nUključeni su Bubble Sort, Selection Sort, Insertion Sort, Quick Sort i Heap Sort. Dashboard prikazuje poređenja, zamene, korake i vreme izvršavanja u milisekundama.\n\nProjekat služi kao projekat za učenje algoritama, React state-a i vizualizacije.",
         "meta": [
-          "Stek: React, Vite, JavaScript, CSS",
+          "Stack: React, Vite, JavaScript, CSS",
           "Fokus: algoritmi sortiranja i vizualizacija",
-          "Demo: lokalno dostupan",
-          "Repozitorijum: još nije javno linkovan"
+          "Demo: GitHub Pages",
+          "Repozitorijum: javan"
         ],
         "tags": [
           "React/Vite",
@@ -269,9 +271,9 @@
         "cardDescription": "Lokalna balkanska ekonomska simulacija sa Python modelom, JSON exportom i web dashboardom.",
         "detailDescription": "BESP2074\n\nBESP2074 je lokalna, godišnja balkanska simulacija. Projekat koristi Python model, strukturisane JSON podatke i lokalni web dashboard za prikaz scenarija do 2074.\n\nAplikacija je zamišljena kao simulacija za učenje i scenarije. Rezultati nisu stvarne ekonomske, političke ili finansijske prognoze, već pojednostavljeni model runovi sa pretpostavkama, seedovima i opcionalnim događajima.\n\nProjekat je lokalno upotrebljiv, ali još nije objavljen kao gotova javna aplikacija.",
         "meta": [
-          "Stek: Python, JSON, HTML/CSS, JavaScript",
-          "Fokus: simulacija, export podataka, dashboard",
-          "Repozitorijum: trenutno nije linkovan",
+          "Stack: Python, JSON, HTML/CSS, JavaScript",
+          "Fokus: simulacija, izvoz podataka, dashboard",
+          "Repozitorijum: javan",
           "Napomena: nije prognoza"
         ],
         "tags": [
@@ -280,6 +282,25 @@
         ],
         "role": "Lični simulacioni projekat",
         "learning": "Povezati pretpostavke modela, JSON export i dashboard tako da lokalni scenariji ostanu razumljivi.",
+        "previewLabel": "Pregled projekta"
+      },
+      "foliolint": {
+        "title": "FolioLint",
+        "cardDescription": "Lokalni Python CLI za proveru da li su repozitorijumi spremni za portfolio, README strukturu i javno predstavljanje.",
+        "detailDescription": "FolioLint\n\nFolioLint je lokalni Python CLI zasnovan na pravilima za proveru repozitorijuma. Alat proverava da li je projekat dovoljno dobro dokumentovan za portfolio i da li su informacije kao README, status, setup i javno predstavljanje razumljive.\n\nFokus je na jednostavnim i objašnjivim pravilima umesto na blackbox analizi. Projekat direktno odgovara mom portfoliju, jer pomaže da se repozitorijumi sistematski srede.",
+        "meta": [
+          "Status: lokalno upotrebljivo",
+          "Stack: Python, CLI, JSON pravila",
+          "Fokus: kvalitet repozitorijuma, README provere, automatizacija",
+          "Repozitorijum: javan"
+        ],
+        "tags": [
+          "Python",
+          "CLI",
+          "README"
+        ],
+        "role": "Sopstveni tooling projekat",
+        "learning": "Strukturisati provere zasnovane na pravilima tako da ostanu razumljive i stvarno poboljšaju projektne repozitorijume.",
         "previewLabel": "Pregled projekta"
       }
     },
@@ -357,6 +378,34 @@
         "React",
         "Security"
       ]
+    }
+  },
+  "moreProjects": {
+    "linkPending": "Link sledi",
+    "items": {
+      "umr": {
+        "title": "UMR",
+        "description": "Minecraft mod koji prerađuje retko korišćene mobove novim funkcijama i većim uticajem na gameplay.",
+        "tags": [
+          "Java",
+          "Minecraft Mod"
+        ]
+      },
+      "twintype": {
+        "title": "TwinType",
+        "description": "Manji Python projekat koji još treba kompaktno dokumentovati.",
+        "tags": [
+          "Python"
+        ]
+      },
+      "repostencil": {
+        "title": "RepoStencil",
+        "description": "Planirani ili još nejavno linkovani tooling projekat oko strukture repozitorijuma i šablona.",
+        "tags": [
+          "Tooling",
+          "Struktura repozitorijuma"
+        ]
+      }
     }
   }
 }
