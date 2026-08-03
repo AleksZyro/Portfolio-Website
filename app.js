@@ -97,6 +97,53 @@
     { title: 'Frontend', items: ['HTML/CSS', 'JavaScript', 'React/Vite'] },
     { title: 'Daten', items: ['JSON', 'CSV', 'SQLite'] },
     { title: 'Tools', items: ['Git', 'GitHub Actions', 'Docker-Grundlagen'] }
+  ],
+  openSourceContributions: [
+    {
+      id: 'vaultCleaner54',
+      repo: 'tonym999/vault-cleaner',
+      number: 54,
+      title: 'Honor configured CLI paths',
+      summary: 'Verbessert die CLI-Pfadlogik, damit konfigurierte Eingabe- und Ausgabepfade korrekt respektiert werden.',
+      tags: ['Python', 'CLI'],
+      url: 'https://github.com/tonym999/vault-cleaner/pull/54'
+    },
+    {
+      id: 'agentcache38',
+      repo: 'Yashwant00CR7/agentcache',
+      number: 38,
+      title: 'Prefer workspace VS Code MCP config',
+      summary: 'Priorisiert Workspace-Konfigurationen für VS Code MCP, damit projektspezifische Setups sauber greifen.',
+      tags: ['Dev Tools', 'Config'],
+      url: 'https://github.com/Yashwant00CR7/agentcache/pull/38'
+    },
+    {
+      id: 'contextPilot36',
+      repo: 'msousa202/ContextPilot',
+      number: 36,
+      title: 'Handle invalid compress JSON',
+      summary: 'Fängt ungültige JSON-Antworten beim Komprimieren ab und macht den Fehlerfall robuster.',
+      tags: ['Python', 'JSON'],
+      url: 'https://github.com/msousa202/ContextPilot/pull/36'
+    },
+    {
+      id: 'internetEinAus4',
+      repo: 'BotondCsereklye/internet-ein-aus',
+      number: 4,
+      title: 'Show demo gif and fix captions',
+      summary: 'Korrigiert README-Demo und Beschriftungen, damit das Hackathon-Projekt besser nachvollziehbar ist.',
+      tags: ['Docs', 'README'],
+      url: 'https://github.com/BotondCsereklye/internet-ein-aus/pull/4'
+    },
+    {
+      id: 'vsw25',
+      repo: 'BotondCsereklye/VSW',
+      number: 25,
+      title: 'fix: improve host rules and same-origin navigation',
+      summary: 'Verbessert Host-Regeln und Navigation innerhalb der gemeinsamen Security-Web-App.',
+      tags: ['React', 'Security'],
+      url: 'https://github.com/BotondCsereklye/VSW/pull/25'
+    }
   ]
 };
 
@@ -110,6 +157,7 @@ const tabPanels = { projects: document.getElementById('panel-projects'), certifi
 const projectFilters = document.querySelectorAll('.filter-chip');
 const projectsGrid = document.getElementById('projects-grid');
 const certificatesGrid = document.getElementById('certificates-grid');
+const openSourceList = document.getElementById('open-source-list');
 const techGrid = document.getElementById('tech-grid');
 const focusTabs = document.querySelectorAll('.focus-tab');
 const focusTitle = document.getElementById('focus-title');
@@ -721,6 +769,88 @@ const localizedLinkLabel = (label) => {
     return t('linkLabels.github', label);
   }
   return label;
+};
+
+const localizedOpenSourceContribution = (item) => {
+  const translationPath = `openSourceContributions.${item.id}`;
+  return {
+    ...item,
+    title: t(`${translationPath}.title`, item.title),
+    summary: t(`${translationPath}.summary`, item.summary),
+    tags: tArray(`${translationPath}.tags`, item.tags || [])
+  };
+};
+
+const mergeIcon = () => {
+  const icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  icon.setAttribute('viewBox', '0 0 16 16');
+  icon.setAttribute('aria-hidden', 'true');
+  icon.classList.add('merge-icon');
+  icon.innerHTML = '<path fill="currentColor" d="M5 1.75a2.25 2.25 0 1 1-1.5 2.122v6.256A2.25 2.25 0 1 1 2 12.25V3.872A2.25 2.25 0 0 1 5 1.75Zm7.25 0a2.25 2.25 0 0 1 .75 4.372v1.128A3.75 3.75 0 0 1 9.25 11H8.621l1.44 1.44A.75.75 0 1 1 9 13.5l-2.72-2.72a.75.75 0 0 1 0-1.06L9 7a.75.75 0 1 1 1.06 1.06L8.622 9.5h.629A2.25 2.25 0 0 0 11.5 7.25V6.122a2.25 2.25 0 0 1 .75-4.372ZM3.5 4a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Zm8 0a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Zm-8 8.25a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z"></path>';
+  return icon;
+};
+
+const renderOpenSourceContributions = () => {
+  if (!openSourceList) return;
+
+  openSourceList.innerHTML = '';
+  const contributions = portfolioData.openSourceContributions || [];
+
+  if (!contributions.length) {
+    const empty = document.createElement('p');
+    empty.className = 'open-source-empty';
+    empty.textContent = t('github.openSourceEmpty', 'Noch keine öffentlich belegten Merges hinterlegt.');
+    openSourceList.append(empty);
+    return;
+  }
+
+  contributions.forEach((contribution) => {
+    const item = localizedOpenSourceContribution(contribution);
+    const card = document.createElement('a');
+    card.className = 'open-source-pr';
+    card.href = item.url;
+    card.target = '_blank';
+    card.rel = 'noopener noreferrer';
+    card.setAttribute('aria-label', `${item.repo} Pull Request ${item.number}: ${item.title}`);
+
+    const top = document.createElement('div');
+    top.className = 'open-source-top';
+
+    const repo = document.createElement('span');
+    repo.className = 'open-source-repo';
+    repo.textContent = item.repo;
+
+    const number = document.createElement('span');
+    number.className = 'open-source-number';
+    number.textContent = `PR #${item.number}`;
+
+    top.append(repo, number);
+
+    const title = document.createElement('h4');
+    title.textContent = item.title;
+
+    const summary = document.createElement('p');
+    summary.textContent = item.summary;
+
+    const bottom = document.createElement('div');
+    bottom.className = 'open-source-bottom';
+
+    const tags = document.createElement('div');
+    tags.className = 'open-source-tags';
+    (item.tags || []).forEach((tagText) => {
+      const tag = document.createElement('span');
+      tag.textContent = tagText;
+      tags.append(tag);
+    });
+
+    const merged = document.createElement('span');
+    merged.className = 'merged-badge';
+    merged.append(mergeIcon(), document.createTextNode(t('github.mergedLabel', 'Merged')));
+
+    bottom.append(tags, merged);
+    card.append(top, title, summary, bottom);
+    openSourceList.append(card);
+  });
 };
 
 const applyStaticTranslations = () => {
@@ -1474,6 +1604,7 @@ const refreshDynamicTexts = () => {
   activateFocus(currentFocusKey);
   renderProjectExplorer();
   renderCollection(portfolioData.certificates, certificatesGrid, 'certificates');
+  renderOpenSourceContributions();
 };
 
 const loadLanguage = async (languageCode) => {

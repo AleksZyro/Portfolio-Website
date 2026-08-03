@@ -190,7 +190,8 @@
     "reposLink": "Repositories",
     "openSourceTitle": "Open-Source-Merges",
     "openSourceEmpty": "Noch keine öffentlich belegten Merges hinterlegt.",
-    "openSourceText": "Sobald gemergte Pull Requests vorhanden sind, werden sie hier mit Projekt, Kurzbeschreibung und Link aufgeführt."
+    "openSourceText": "Ausgewählte gemergte Pull Requests mit direktem Link zum Nachweis.",
+    "mergedLabel": "Merged"
   },
   "legal": {
     "kicker": "Rechtliches",
@@ -316,6 +317,43 @@
         ],
         "previewLabel": "Zertifikat"
       }
+    }
+  },
+  "openSourceContributions": {
+    "vaultCleaner54": {
+      "summary": "Verbessert die CLI-Pfadlogik, damit konfigurierte Eingabe- und Ausgabepfade korrekt respektiert werden.",
+      "tags": [
+        "Python",
+        "CLI"
+      ]
+    },
+    "agentcache38": {
+      "summary": "Priorisiert Workspace-Konfigurationen für VS Code MCP, damit projektspezifische Setups sauber greifen.",
+      "tags": [
+        "Dev Tools",
+        "Config"
+      ]
+    },
+    "contextPilot36": {
+      "summary": "Fängt ungültige JSON-Antworten beim Komprimieren ab und macht den Fehlerfall robuster.",
+      "tags": [
+        "Python",
+        "JSON"
+      ]
+    },
+    "internetEinAus4": {
+      "summary": "Korrigiert README-Demo und Beschriftungen, damit das Hackathon-Projekt besser nachvollziehbar ist.",
+      "tags": [
+        "Docs",
+        "README"
+      ]
+    },
+    "vsw25": {
+      "summary": "Verbessert Host-Regeln und Navigation innerhalb der gemeinsamen Security-Web-App.",
+      "tags": [
+        "React",
+        "Security"
+      ]
     }
   }
 }

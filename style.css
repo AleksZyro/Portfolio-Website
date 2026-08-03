@@ -1165,6 +1165,146 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   border-color: rgba(124, 193, 255, 0.52);
   background: rgba(20, 43, 78, 0.98);
 }
+
+.github-grid {
+  display: grid;
+  gap: 16px;
+  align-items: start;
+}
+
+.github-card {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+
+.github-activity-card,
+.open-source-card {
+  display: grid;
+  gap: 14px;
+}
+
+.github-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.activity-strip {
+  border: 1px solid rgba(141, 108, 255, 0.24);
+  background: rgba(11, 10, 18, 0.42);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.activity-strip img {
+  display: block;
+  width: 100%;
+  min-height: 150px;
+  object-fit: contain;
+}
+
+.open-source-list {
+  display: grid;
+  gap: 10px;
+}
+
+.open-source-pr {
+  display: grid;
+  gap: 10px;
+  min-height: 174px;
+  padding: 13px;
+  border: 1px solid rgba(185, 174, 220, 0.18);
+  border-radius: 12px;
+  background:
+    linear-gradient(90deg, rgba(141, 108, 255, 0.12), transparent 34%) top left / 100% 3px no-repeat,
+    rgba(17, 15, 27, 0.76);
+  transition: border-color 0.16s ease, transform 0.16s ease, background-color 0.16s ease;
+}
+
+.open-source-pr:hover,
+.open-source-pr:focus-visible {
+  border-color: rgba(150, 122, 255, 0.58);
+  background-color: rgba(28, 23, 43, 0.9);
+  transform: translateY(-2px);
+}
+
+.open-source-top,
+.open-source-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.open-source-repo {
+  color: #a9c3ff;
+  font-family: "Space Grotesk", "Sora", sans-serif;
+  font-weight: 700;
+}
+
+.open-source-number {
+  color: var(--muted);
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+
+.open-source-pr h4 {
+  color: var(--text);
+  font-size: 1.02rem;
+  line-height: 1.25;
+}
+
+.open-source-pr p,
+.open-source-card p {
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.open-source-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.open-source-tags span {
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.open-source-tags span + span::before {
+  content: "·";
+  margin-right: 6px;
+  color: rgba(181, 158, 255, 0.7);
+}
+
+.merged-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 9px;
+  border-radius: 9px;
+  color: #f3edff;
+  background: rgba(141, 108, 255, 0.92);
+  font-size: 0.76rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.merge-icon {
+  width: 15px;
+  height: 15px;
+  color: #efe8ff;
+}
+
+.open-source-empty {
+  border: 1px dashed rgba(185, 174, 220, 0.24);
+  border-radius: 12px;
+  padding: 12px;
+}
 .modal-close:hover,
 .modal-close:focus-visible {
   border-color: rgba(150, 122, 255, 0.72);

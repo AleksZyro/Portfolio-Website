@@ -190,7 +190,8 @@
     "reposLink": "Repozitorijumi",
     "openSourceTitle": "Open source doprinosi",
     "openSourceEmpty": "Još nema javno proverljivih mergeova.",
-    "openSourceText": "Kada budu dostupni mergeovani pull requestovi, ovde će biti navedeni sa projektom, kratkim opisom i linkom."
+    "openSourceText": "Odabrani mergeovani pull requestovi sa direktnim linkom ka dokazu.",
+    "mergedLabel": "Merged"
   },
   "legal": {
     "kicker": "Pravno",
@@ -320,5 +321,42 @@
   },
   "linkLabels": {
     "github": "GitHub"
+  },
+  "openSourceContributions": {
+    "vaultCleaner54": {
+      "summary": "Poboljšava CLI logiku putanja, tako da se podešene ulazne i izlazne putanje pravilno poštuju.",
+      "tags": [
+        "Python",
+        "CLI"
+      ]
+    },
+    "agentcache38": {
+      "summary": "Daje prednost workspace konfiguraciji za VS Code MCP, tako da podešavanja specifična za projekat rade čistije.",
+      "tags": [
+        "Dev Tools",
+        "Config"
+      ]
+    },
+    "contextPilot36": {
+      "summary": "Obrađuje nevažeće JSON odgovore tokom kompresije i čini taj slučaj greške stabilnijim.",
+      "tags": [
+        "Python",
+        "JSON"
+      ]
+    },
+    "internetEinAus4": {
+      "summary": "Ispravlja README demo i opise, da bi hackathon projekat bio lakši za razumevanje.",
+      "tags": [
+        "Docs",
+        "README"
+      ]
+    },
+    "vsw25": {
+      "summary": "Poboljšava host pravila i navigaciju unutar zajedničke security web aplikacije.",
+      "tags": [
+        "React",
+        "Security"
+      ]
+    }
   }
 }
