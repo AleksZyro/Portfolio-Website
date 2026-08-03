@@ -1317,7 +1317,11 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
 .merge-icon {
   width: 15px;
   height: 15px;
-  color: #efe8ff;
+  display: inline-block;
+  flex: 0 0 auto;
+  background-color: currentColor;
+  -webkit-mask: url("assets/icons/git-merge-16.svg") center / contain no-repeat;
+  mask: url("assets/icons/git-merge-16.svg") center / contain no-repeat;
 }
 
 .open-source-empty {

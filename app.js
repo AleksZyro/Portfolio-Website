@@ -372,7 +372,7 @@ const embeddedDictionaries = {
       title: 'Kontakt',
       description: 'Für Praktikum, Rückfragen oder Zusammenarbeit bin ich per E-Mail erreichbar.',
       mailLabel: 'E-Mail',
-      schoolMailLabel: 'Schul-Mail'
+      schoolMailLabel: 'E-Mail'
     },
     modal: { close: 'Schliessen', title: 'Detailansicht', projectKicker: 'Projektstatus', certificateKicker: 'Zertifikat' },
     portfolioDownloadButton: 'Download PDF',
@@ -501,7 +501,7 @@ const embeddedDictionaries = {
       title: 'Contact',
       description: 'For internships, questions, or collaboration, I am reachable by email.',
       mailLabel: 'Email',
-      schoolMailLabel: 'School email'
+      schoolMailLabel: 'Email'
     },
     modal: { close: 'Close', title: 'Detail view', projectKicker: 'Project status', certificateKicker: 'Certificate' },
     portfolioDownloadButton: 'Download PDF',
@@ -632,7 +632,7 @@ const embeddedDictionaries = {
       title: 'Contact',
       description: 'Pour un stage, des questions ou une collaboration, je suis joignable par e-mail.',
       mailLabel: 'E-mail',
-      schoolMailLabel: 'E-mail école'
+      schoolMailLabel: 'E-mail'
     },
     modal: { close: 'Fermer', title: 'Vue detail', projectKicker: 'Statut du projet', certificateKicker: 'Certificat' },
     portfolioDownloadButton: 'Telecharger le PDF',
@@ -761,7 +761,7 @@ const embeddedDictionaries = {
       title: 'Kontakt',
       description: 'Za praksu, pitanja ili saradnju dostupan sam putem e-maila.',
       mailLabel: 'E-mail',
-      schoolMailLabel: 'Skolski e-mail'
+      schoolMailLabel: 'E-mail'
     },
     modal: { close: 'Zatvori', title: 'Detaljni prikaz', projectKicker: 'Status projekta', certificateKicker: 'Sertifikat' },
     portfolioDownloadButton: 'Preuzmi PDF',
@@ -830,11 +830,9 @@ const localizedOpenSourceContribution = (item) => {
 };
 
 const mergeIcon = () => {
-  const icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-  icon.setAttribute('viewBox', '0 0 16 16');
+  const icon = document.createElement('span');
+  icon.className = 'merge-icon';
   icon.setAttribute('aria-hidden', 'true');
-  icon.classList.add('merge-icon');
-  icon.innerHTML = '<path fill="currentColor" d="M5 1.75a2.25 2.25 0 1 1-1.5 2.122v6.256A2.25 2.25 0 1 1 2 12.25V3.872A2.25 2.25 0 0 1 5 1.75Zm7.25 0a2.25 2.25 0 0 1 .75 4.372v1.128A3.75 3.75 0 0 1 9.25 11H8.621l1.44 1.44A.75.75 0 1 1 9 13.5l-2.72-2.72a.75.75 0 0 1 0-1.06L9 7a.75.75 0 1 1 1.06 1.06L8.622 9.5h.629A2.25 2.25 0 0 0 11.5 7.25V6.122a2.25 2.25 0 0 1 .75-4.372ZM3.5 4a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Zm8 0a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Zm-8 8.25a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z"></path>';
   return icon;
 };
 
@@ -919,12 +917,9 @@ const scrollToSection = (targetId, behavior = 'smooth') => {
   const section = document.querySelector(targetId);
   if (!section) return;
 
-  const headerHeight = document.querySelector('.site-header')?.offsetHeight || 0;
-  const sectionOffsets = {
-    '#portfolio': 8
-  };
-  const extraOffset = sectionOffsets[targetId] ?? 18;
-  const top = Math.max(window.scrollY + section.getBoundingClientRect().top - headerHeight - extraOffset, 0);
+  const header = document.querySelector('.site-header');
+  const headerHeight = header ? Math.ceil(header.getBoundingClientRect().height) : 0;
+  const top = Math.max(window.pageYOffset + section.getBoundingClientRect().top - headerHeight - 22, 0);
 
   window.scrollTo({ top, behavior });
   if (window.location.hash !== targetId) {
@@ -950,8 +945,12 @@ if (navToggle && navList) {
       const target = link.getAttribute('href');
       if (target && target.startsWith('#')) {
         event.preventDefault();
-        scrollToSection(target);
-        setActiveNav(target.slice(1));
+        setMenuState(false);
+        window.requestAnimationFrame(() => {
+          scrollToSection(target);
+          setActiveNav(target.slice(1));
+        });
+        return;
       }
       setMenuState(false);
     });
