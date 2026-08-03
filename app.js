@@ -195,9 +195,7 @@ const sections = [...document.querySelectorAll('main section[id]')];
 const revealItems = document.querySelectorAll('.reveal');
 const tabs = document.querySelectorAll('.tab');
 const tabPanels = { projects: document.getElementById('panel-projects'), certificates: document.getElementById('panel-certificates') };
-const projectFilters = document.querySelectorAll('.filter-chip');
 const projectsGrid = document.getElementById('projects-grid');
-const moreProjectsList = document.getElementById('more-projects-list');
 const certificatesGrid = document.getElementById('certificates-grid');
 const openSourceList = document.getElementById('open-source-list');
 const techGrid = document.getElementById('tech-grid');
@@ -239,7 +237,6 @@ i18nElements.forEach((element) => {
 
 let activeDictionary = {};
 let currentFocusKey = 'web';
-let activeProjectFilter = 'all';
 let activeProjectTitle = '';
 const embeddedDictionaries = {
   de: {
@@ -1276,60 +1273,60 @@ const createCard = (item, typeKey = 'projects') => {
 const renderProjectExplorer = () => {
   if (!projectsGrid) return;
 
-  const filteredProjects = portfolioData.projects.filter((project) => (
-    activeProjectFilter === 'all' || (project.filters || []).includes(activeProjectFilter)
-  ));
-
-  if (activeProjectTitle && !filteredProjects.some((project) => project.title === activeProjectTitle)) {
+  if (activeProjectTitle && !portfolioData.projects.some((project) => project.title === activeProjectTitle)) {
     activeProjectTitle = '';
   }
 
   projectsGrid.innerHTML = '';
-  filteredProjects.forEach((project) => {
+  portfolioData.projects.forEach((project) => {
     projectsGrid.append(createCard(project, 'projects'));
   });
+  projectsGrid.append(createMoreProjectsCard());
 };
 
-const renderMoreProjects = () => {
-  if (!moreProjectsList) return;
+const createMoreProjectsCard = () => {
+  const card = document.createElement('article');
+  card.className = 'item-card more-projects-summary-card';
 
-  moreProjectsList.innerHTML = '';
+  const preview = document.createElement('div');
+  preview.className = 'project-preview more-projects-preview';
+
+  const previewLabel = document.createElement('span');
+  previewLabel.className = 'project-preview-label';
+  previewLabel.textContent = t('portfolio.moreProjectsTitle', 'Weitere Projekte');
+
+  const previewTitle = document.createElement('span');
+  previewTitle.className = 'project-preview-title';
+  previewTitle.textContent = t('portfolio.moreProjectsSubline', 'Kompakte Übersicht für kleinere Projekte.');
+
+  preview.append(previewLabel, previewTitle);
+
+  const title = document.createElement('h3');
+  title.textContent = t('portfolio.moreProjectsTitle', 'Weitere Projekte');
+
+  const description = document.createElement('p');
+  description.textContent = t('portfolio.moreProjectsSubline', 'Kompakte Übersicht für kleinere oder noch nicht ausführlich dokumentierte Arbeiten.');
+
+  const list = document.createElement('div');
+  list.className = 'more-projects-card-list';
+
   (portfolioData.moreProjects || []).forEach((project) => {
     const item = localizedMoreProject(project);
-    const card = document.createElement('article');
-    card.className = 'more-project-card';
-
-    const content = document.createElement('div');
-    content.className = 'more-project-content';
-
-    const title = document.createElement('h4');
-    title.textContent = item.title;
-
-    const description = document.createElement('p');
-    description.textContent = item.description;
-
-    const tags = document.createElement('div');
-    tags.className = 'more-project-tags';
-    (item.tags || []).forEach((tagText) => {
-      const tag = document.createElement('span');
-      tag.textContent = tagText;
-      tags.append(tag);
-    });
-
-    content.append(title, description, tags);
-
     const action = item.url ? document.createElement('a') : document.createElement('span');
-    action.className = item.url ? 'link-arrow more-project-link' : 'more-project-link is-disabled';
-    action.textContent = item.url ? t('linkLabels.github', 'GitHub') : t('moreProjects.linkPending', 'Link folgt');
+    action.className = item.url ? 'link-arrow more-project-name' : 'more-project-name is-disabled';
+    action.textContent = item.title;
     if (item.url) {
       action.href = item.url;
       action.target = '_blank';
       action.rel = 'noopener noreferrer';
+    } else {
+      action.title = t('moreProjects.linkPending', 'Link folgt');
     }
-
-    card.append(content, action);
-    moreProjectsList.append(card);
+    list.append(action);
   });
+
+  card.append(preview, title, description, list);
+  return card;
 };
 
 const createEmptyState = (typeKey) => {
@@ -1527,18 +1524,6 @@ tabs.forEach((tab) => {
   });
 });
 
-projectFilters.forEach((filterButton) => {
-  filterButton.addEventListener('click', () => {
-    activeProjectFilter = filterButton.dataset.filter || 'all';
-    projectFilters.forEach((button) => {
-      const active = button === filterButton;
-      button.classList.toggle('is-active', active);
-      button.setAttribute('aria-pressed', String(active));
-    });
-    renderProjectExplorer();
-  });
-});
-
 const setModalDescription = (description) => {
   modalDescription.innerHTML = '';
 
@@ -1703,7 +1688,6 @@ const setLanguageMenuOpen = (isOpen) => {
 const refreshDynamicTexts = () => {
   activateFocus(currentFocusKey);
   renderProjectExplorer();
-  renderMoreProjects();
   renderCollection(portfolioData.certificates, certificatesGrid, 'certificates');
   renderOpenSourceContributions();
 };
