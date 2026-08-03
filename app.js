@@ -129,7 +129,7 @@
       detailDescription: 'Dieses Zertifikat kannst du direkt im Portfolio ansehen oder herunterladen.',
       meta: ['Format: PDF', 'Nachweis: Zertifikat', 'Download: verfügbar'],
       file: 'assets/certificates/bbb-hackathon.pdf',
-      previewImage: 'assets/certificate-previews/bbb-hackathon-preview.svg',
+      previewImage: 'assets/certificate-previews/bbb-hackathon-preview.png',
       previewLabel: 'Zertifikat'
     }
   ],
@@ -168,22 +168,22 @@
       url: 'https://github.com/msousa202/ContextPilot/pull/36'
     },
     {
-      id: 'internetEinAus4',
-      repo: 'BotondCsereklye/internet-ein-aus',
-      number: 4,
-      title: 'Show demo gif and fix captions',
-      summary: 'Korrigiert README-Demo und Beschriftungen, damit das Hackathon-Projekt besser nachvollziehbar ist.',
-      tags: ['Docs', 'README'],
-      url: 'https://github.com/BotondCsereklye/internet-ein-aus/pull/4'
+      id: 'beets6839',
+      repo: 'beetbox/beets',
+      number: 6839,
+      title: 'Preserve null artpath in edit',
+      summary: 'Sichert den Umgang mit leerem Artpath beim Bearbeiten, damit bestehende Daten nicht unbeabsichtigt verändert werden.',
+      tags: ['Python', 'Beets'],
+      url: 'https://github.com/beetbox/beets/pull/6839'
     },
     {
-      id: 'vsw25',
-      repo: 'BotondCsereklye/VSW',
-      number: 25,
-      title: 'fix: improve host rules and same-origin navigation',
-      summary: 'Verbessert Host-Regeln und Navigation innerhalb der gemeinsamen Security-Web-App.',
-      tags: ['React', 'Security'],
-      url: 'https://github.com/BotondCsereklye/VSW/pull/25'
+      id: 'beets6837',
+      repo: 'beetbox/beets',
+      number: 6837,
+      title: 'Improve subsonicupdate error for non-JSON responses',
+      summary: 'Verbessert die Fehlermeldung für Subsonic-Updates, wenn ein Server keine JSON-Antwort liefert.',
+      tags: ['Python', 'Error Handling'],
+      url: 'https://github.com/beetbox/beets/pull/6837'
     }
   ]
 };

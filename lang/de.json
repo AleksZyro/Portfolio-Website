@@ -362,18 +362,18 @@
         "JSON"
       ]
     },
-    "internetEinAus4": {
-      "summary": "Korrigiert README-Demo und Beschriftungen, damit das Hackathon-Projekt besser nachvollziehbar ist.",
+    "beets6839": {
+      "summary": "Sichert den Umgang mit leerem Artpath beim Bearbeiten, damit bestehende Daten nicht unbeabsichtigt verändert werden.",
       "tags": [
-        "Docs",
-        "README"
+        "Python",
+        "Beets"
       ]
     },
-    "vsw25": {
-      "summary": "Verbessert Host-Regeln und Navigation innerhalb der gemeinsamen Security-Web-App.",
+    "beets6837": {
+      "summary": "Verbessert die Fehlermeldung für Subsonic-Updates, wenn ein Server keine JSON-Antwort liefert.",
       "tags": [
-        "React",
-        "Security"
+        "Python",
+        "Error Handling"
       ]
     }
   },

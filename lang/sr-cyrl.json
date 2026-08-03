@@ -365,18 +365,18 @@
         "JSON"
       ]
     },
-    "internetEinAus4": {
-      "summary": "Исправља README demo и описе, да би hackathon пројекат био лакши за разумевање.",
+    "beets6839": {
+      "summary": "Чува празне artpath вредности током уређивања, тако да постојећи подаци не буду ненамерно промењени.",
       "tags": [
-        "Docs",
-        "README"
+        "Python",
+        "Beets"
       ]
     },
-    "vsw25": {
-      "summary": "Побољшава host правила и навигацију унутар заједничке security web апликације.",
+    "beets6837": {
+      "summary": "Побољшава Subsonic update поруку о грешци када сервер не враћа JSON.",
       "tags": [
-        "React",
-        "Security"
+        "Python",
+        "Error Handling"
       ]
     }
   },

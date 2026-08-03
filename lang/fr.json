@@ -362,18 +362,18 @@
         "JSON"
       ]
     },
-    "internetEinAus4": {
-      "summary": "Corrige la démo README et les légendes pour rendre le projet de hackathon plus compréhensible.",
+    "beets6839": {
+      "summary": "Préserve les valeurs artpath vides pendant l’édition afin que les données existantes ne soient pas modifiées involontairement.",
       "tags": [
-        "Docs",
-        "README"
+        "Python",
+        "Beets"
       ]
     },
-    "vsw25": {
-      "summary": "Améliore les règles d’hôte et la navigation dans l’application web de sécurité développée en équipe.",
+    "beets6837": {
+      "summary": "Améliore le message d’erreur Subsonic update lorsqu’un serveur ne renvoie pas de JSON.",
       "tags": [
-        "React",
-        "Security"
+        "Python",
+        "Error Handling"
       ]
     }
   },
