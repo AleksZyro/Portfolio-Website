@@ -170,8 +170,8 @@
     "kicker": "Контакт",
     "title": "Контакт",
     "description": "За праксу у Швајцарској за 2027/2028, питања или сарадњу доступан сам путем e-maila.",
-    "mailLabel": "E-mail",
-    "schoolMailLabel": "E-mail"
+    "mailLabel": "",
+    "schoolMailLabel": ""
   },
   "modal": {
     "close": "Затвори",
