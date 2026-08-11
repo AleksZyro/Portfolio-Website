@@ -1044,6 +1044,19 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   line-height: 1.68;
 }
 
+.legal-card-wide {
+  grid-column: 1 / -1;
+}
+
+.legal-list {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.58;
+}
+
 .detail-modal { border: none; padding: 0; background: transparent; }
 .detail-modal::backdrop { background: rgba(1, 1, 8, 0.86); }
 .modal-card {

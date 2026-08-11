@@ -206,7 +206,14 @@
     "externalTitle": "Externe Inhalte",
     "externalText": "Projektbilder, Zertifikate und die GitHub-Contribution-Grafik werden lokal geladen. Externe Links zu GitHub oder E-Mail werden erst beim Anklicken geöffnet.",
     "contactTitle": "Kontakt für Datenschutzfragen",
-    "contactText": "Für Fragen zur Portfolio-Seite oder zu personenbezogenen Daten bin ich über die im Kontaktbereich genannte E-Mail erreichbar."
+    "contactText": "Für Fragen zur Portfolio-Seite oder zu personenbezogenen Daten bin ich über die im Kontaktbereich genannte E-Mail erreichbar.",
+    "hostingTitle": "Hosting und Bot-Schutz",
+    "hostingText": "Die Seite ist statisch aufgebaut und wird ressourcenschonend betrieben. Gegen unnötigen Bot-Traffic sind einfache Schutzmassnahmen vorbereitet oder bewusst als sinnvolle Betriebsoption eingeplant.",
+    "hostingCloudflare": "Cloudflare kann vor die Domain gesetzt werden: DNS-Verwaltung, Bot Fight Mode, optionales Rate Limiting und Cache.",
+    "hostingHeaders": "Netlify-Headers setzen Security-Header und können statische Assets länger cachen.",
+    "hostingRobots": "Eine robots.txt hilft gegen seriöse Crawler; schlechte Bots können sie trotzdem ignorieren.",
+    "hostingAssets": "Bilder und PDFs werden möglichst klein gehalten; grosse Videos oder ZIP-Dateien werden nicht direkt über Netlify ausgeliefert.",
+    "hostingNoCaptcha": "Kein Captcha, Login oder aggressives Geo-Blocking vor der Portfolio-Seite, damit Recruiter sie ohne Hürde öffnen können."
   },
   "portfolioItems": {
     "projects": {
@@ -374,6 +381,13 @@
       "tags": [
         "Python",
         "Error Handling"
+      ]
+    },
+    "sshfs73": {
+      "summary": "Korrigiert den Standardwert für Detail-Listings, damit sshfs-Auflistungen konsistenter funktionieren.",
+      "tags": [
+        "Python",
+        "Filesystem"
       ]
     }
   },

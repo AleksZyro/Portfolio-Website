@@ -206,7 +206,14 @@
     "externalTitle": "Eksterni sadržaj",
     "externalText": "Slike projekata, sertifikati i GitHub contribution grafika učitavaju se lokalno. Eksterni linkovi ka GitHubu ili e-mailu otvaraju se tek nakon klika.",
     "contactTitle": "Kontakt za pitanja o privatnosti",
-    "contactText": "Za pitanja o ovoj portfolio stranici ili ličnim podacima možeš me kontaktirati preko e-mail adrese navedene u kontakt sekciji."
+    "contactText": "Za pitanja o ovoj portfolio stranici ili ličnim podacima možeš me kontaktirati preko e-mail adrese navedene u kontakt sekciji.",
+    "hostingTitle": "Hosting i zaštita od botova",
+    "hostingText": "Stranica je statički portfolio i namerno ostaje lagana. Jednostavne zaštitne mere su pripremljene ili navedene kao razumne opcije rada, kako bi se smanjio nepotreban bot saobraćaj.",
+    "hostingCloudflare": "Cloudflare može biti ispred domena: DNS upravljanje, Bot Fight Mode, opciono ograničavanje zahteva i keš.",
+    "hostingHeaders": "Netlify headers postavljaju sigurnosne headere i mogu duže keširati statičke fajlove.",
+    "hostingRobots": "robots.txt pomaže kod korektnih crawlera; loši botovi ga ipak mogu ignorisati.",
+    "hostingAssets": "Slike i PDF-ovi se drže što manjim; veliki video fajlovi ili ZIP arhive se ne isporučuju direktno preko Netlify-ja.",
+    "hostingNoCaptcha": "Nema captcha provere, login-a ili agresivnog geo-blocking-a ispred portfolio stranice, da bi recruiteri mogli da je otvore bez prepreke."
   },
   "portfolioItems": {
     "projects": {
@@ -377,6 +384,13 @@
       "tags": [
         "Python",
         "Error Handling"
+      ]
+    },
+    "sshfs73": {
+      "summary": "Ispravlja podrazumevanu vrednost za detaljne liste, kako bi sshfs ispisi radili konzistentnije.",
+      "tags": [
+        "Python",
+        "Filesystem"
       ]
     }
   },
