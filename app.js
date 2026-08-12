@@ -138,10 +138,10 @@
     }
   ],
   techGroups: [
-    { title: 'Python', items: ['FastAPI', 'pytest', 'CLI/local tools'] },
-    { title: 'Frontend', items: ['HTML/CSS', 'JavaScript', 'React/Vite'] },
-    { title: 'Daten', items: ['JSON', 'CSV', 'SQLite'] },
-    { title: 'Tools', items: ['Git', 'GitHub Actions', 'Docker-Grundlagen'] }
+    { title: 'Python', items: ['python', 'fastapi', 'pytest', 'cli'] },
+    { title: 'Frontend', items: ['html', 'css', 'javascript', 'react', 'vite'] },
+    { title: 'Daten', items: ['json', 'csv', 'sqlite'] },
+    { title: 'Tools', items: ['git', 'github-actions', 'docker'] }
   ],
   openSourceContributions: [
     {
@@ -1380,6 +1380,24 @@ const renderCollection = (items, container, typeKey) => {
   });
 };
 
+const techCatalog = {
+  python: { label: 'Python', mark: 'Py', icon: 'python', accent: '#4f9ef8', asset: 'python' },
+  fastapi: { label: 'FastAPI', mark: 'F', icon: 'fastapi', accent: '#18b892', asset: 'fastapi' },
+  pytest: { label: 'pytest', mark: 'pt', icon: 'pytest', accent: '#f0a84b', asset: 'pytest' },
+  cli: { label: 'CLI / lokale Tools', mark: '>_', icon: 'cli', accent: '#b4a7e5' },
+  html: { label: 'HTML', mark: '5', icon: 'html', accent: '#f0643b', asset: 'html' },
+  css: { label: 'CSS', mark: '3', icon: 'css', accent: '#3f9ef3', asset: 'css' },
+  javascript: { label: 'JavaScript', mark: 'JS', icon: 'javascript', accent: '#f5d849', asset: 'javascript' },
+  react: { label: 'React', mark: '⚛', icon: 'react', accent: '#61dafb', asset: 'react' },
+  vite: { label: 'Vite', mark: 'V', icon: 'vite', accent: '#9b7cff', asset: 'vite' },
+  json: { label: 'JSON', mark: '{ }', icon: 'json', accent: '#d5b35a', asset: 'json' },
+  csv: { label: 'CSV', mark: 'CSV', icon: 'csv', accent: '#5fca91' },
+  sqlite: { label: 'SQLite', mark: 'SQL', icon: 'sqlite', accent: '#4aa7d9', asset: 'sqlite' },
+  git: { label: 'Git', mark: '◆', icon: 'git', accent: '#f26545', asset: 'git' },
+  'github-actions': { label: 'GitHub Actions', mark: '↗', icon: 'github-actions', accent: '#7d8cff', asset: 'github-actions' },
+  docker: { label: 'Docker', mark: '▦', icon: 'docker', accent: '#38bdf8', asset: 'docker' }
+};
+
 const renderTechStack = () => {
   techGrid.innerHTML = '';
 
@@ -1393,9 +1411,48 @@ const renderTechStack = () => {
       title.textContent = displayGroup.title;
 
       const list = document.createElement('ul');
-      (displayGroup.items || []).forEach((item) => {
+      (group.items || []).forEach((techId, itemIndex) => {
+        const tech = techCatalog[techId] || {
+          label: (displayGroup.items || [])[itemIndex] || techId,
+          accent: '#8c75df',
+          icon: 'code'
+        };
         const listItem = document.createElement('li');
-        listItem.textContent = item;
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'tech-logo-button';
+        button.style.setProperty('--tech-accent', tech.accent);
+        button.setAttribute('aria-label', tech.label);
+        button.setAttribute('aria-pressed', 'false');
+        button.title = tech.label;
+
+        const icon = document.createElement('span');
+        icon.className = `tech-brand-icon tech-brand-${tech.icon}`;
+        icon.setAttribute('aria-hidden', 'true');
+        if (tech.asset) {
+          const image = document.createElement('img');
+          image.src = `assets/tech-icons/${tech.asset}.svg`;
+          image.alt = '';
+          image.loading = 'lazy';
+          icon.append(image);
+        } else {
+          icon.textContent = tech.mark || '';
+        }
+
+        const label = document.createElement('span');
+        label.className = 'tech-logo-label';
+        label.textContent = tech.label;
+
+        button.addEventListener('click', () => {
+          const isSelected = button.getAttribute('aria-pressed') === 'true';
+          list.querySelectorAll('.tech-logo-button[aria-pressed="true"]').forEach((activeButton) => {
+            activeButton.setAttribute('aria-pressed', 'false');
+          });
+          button.setAttribute('aria-pressed', String(!isSelected));
+        });
+
+        button.append(icon, label);
+        listItem.append(button);
         list.append(listItem);
       });
 
