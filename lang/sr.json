@@ -181,8 +181,12 @@
   },
   "portfolioDownloadButton": "Preuzmi PDF",
   "footer": {
-    "rights": "Sva prava zadržana.",
-    "legalLink": "Privatnost i kukiji"
+    "rights": "Sva prava zadr?ana.",
+    "legalLink": "Privatnost i kukiji",
+    "tagline": "IMS razvoj aplikacija ? Portfolio",
+    "imprintLink": "Impresum",
+    "privacyLink": "Privatnost",
+    "cookieLink": "Kukiji"
   },
   "github": {
     "kicker": "GitHub",
@@ -197,23 +201,17 @@
   },
   "legal": {
     "kicker": "Pravno",
-    "title": "Privatnost i kukiji",
-    "subline": "Kratka napomena o tome koje podatke ova portfolio stranica obrađuje.",
+    "title": "Impresum, privatnost i kukiji",
+    "subline": "Kratko, jasno i bez tracking spama.",
     "privacyTitle": "Privatnost",
-    "privacyText": "Ova portfolio stranica ne obrađuje unose iz formulara i ne koristi analitiku ili reklamne trackere. Pri otvaranju stranice hosting provajder može obrađivati tehnički neophodne pristupne podatke.",
-    "cookieTitle": "Kukiji i lokalno skladištenje",
-    "cookieText": "Stranica ne postavlja tracking kukije. Jezik može biti lokalno sačuvan u pregledaču, kako bi podešavanje ostalo za sledeću posetu.",
+    "privacyText": "Nema formulara, nema analitike i nema reklamnih trackera. Hosting provajder obra?uje samo tehni?ki neophodne pristupne podatke pri otvaranju stranice.",
+    "cookieTitle": "Kukiji",
+    "cookieText": "Nema tracking kukija. Lokalno se ?uva samo izabrani jezik, da bi pode?avanje ostalo zapam?eno.",
     "externalTitle": "Eksterni sadržaj",
-    "externalText": "Slike projekata, sertifikati i GitHub contribution grafika učitavaju se lokalno. Eksterni linkovi ka GitHubu ili e-mailu otvaraju se tek nakon klika.",
-    "contactTitle": "Kontakt za pitanja o privatnosti",
-    "contactText": "Za pitanja o ovoj portfolio stranici ili ličnim podacima možeš me kontaktirati preko e-mail adrese navedene u kontakt sekciji.",
-    "hostingTitle": "Hosting i zaštita od botova",
-    "hostingText": "Stranica je statički portfolio i namerno ostaje lagana. Jednostavne zaštitne mere su pripremljene ili navedene kao razumne opcije rada, kako bi se smanjio nepotreban bot saobraćaj.",
-    "hostingCloudflare": "Cloudflare može biti ispred domena: DNS upravljanje, Bot Fight Mode, opciono ograničavanje zahteva i keš.",
-    "hostingHeaders": "Netlify headers postavljaju sigurnosne headere i mogu duže keširati statičke fajlove.",
-    "hostingRobots": "robots.txt pomaže kod korektnih crawlera; loši botovi ga ipak mogu ignorisati.",
-    "hostingAssets": "Slike i PDF-ovi se drže što manjim; veliki video fajlovi ili ZIP arhive se ne isporučuju direktno preko Netlify-ja.",
-    "hostingNoCaptcha": "Nema captcha provere, login-a ili agresivnog geo-blocking-a ispred portfolio stranice, da bi recruiteri mogli da je otvore bez prepreke."
+    "externalText": "Slike projekata, sertifikati i GitHub grafika u?itavaju se lokalno. Eksterni linkovi otvaraju se tek nakon klika.",
+    "imprintTitle": "Impresum",
+    "imprintText": "Privatna portfolio stranica Aleksandra Nikoli?a. Kontakt je mogu? preko e-maila u kontakt sekciji.",
+    "contactLink": "Kontaktiraj me"
   },
   "portfolioItems": {
     "projects": {

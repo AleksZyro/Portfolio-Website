@@ -1026,7 +1026,7 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
 
 .legal-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
   align-items: stretch;
 }
@@ -1047,7 +1047,8 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
 
 .legal-card p {
   color: var(--muted);
-  line-height: 1.68;
+  line-height: 1.55;
+  font-size: 0.94rem;
 }
 
 .legal-card-wide {
@@ -1057,6 +1058,22 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
 .legal-card-contact {
   grid-column: 1 / -1;
   max-width: 520px;
+}
+
+.legal-note {
+  border: 1px solid rgba(185, 174, 220, 0.14);
+  border-radius: var(--radius-lg);
+  background: rgba(12, 10, 20, 0.56);
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  color: var(--muted);
+}
+
+.legal-note p {
+  line-height: 1.55;
 }
 
 .legal-list {
@@ -1388,7 +1405,9 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   .compact-certificates { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .tech-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 880px; margin-inline: auto; }
   .legal-grid { grid-template-columns: 1fr; }
+  .compact-legal-card { min-height: auto; }
   .legal-card-wide, .legal-card-contact { grid-column: auto; max-width: none; }
+  .legal-note { align-items: start; flex-direction: column; }
 }
 
 @media (min-width: 960px) {

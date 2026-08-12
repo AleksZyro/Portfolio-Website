@@ -286,58 +286,47 @@
 
     <section class="legal section" id="legal" aria-labelledby="legal-title">
       <div class="container legal-wrap reveal">
-        <div class="section-head">
+        <div class="section-head legal-head">
           <p class="kicker" data-i18n="legal.kicker">Rechtliches</p>
-          <h2 id="legal-title" data-i18n="legal.title">Datenschutz und Cookies</h2>
-          <p class="section-subline" data-i18n="legal.subline">Kurzer Hinweis dazu, welche Daten diese Portfolio-Seite verarbeitet.</p>
+          <h2 id="legal-title" data-i18n="legal.title">Impressum, Datenschutz und Cookies</h2>
+          <p class="section-subline" data-i18n="legal.subline">Kurz, transparent und ohne Tracking-Geschwurbel.</p>
         </div>
 
-        <div class="legal-grid">
-          <article class="legal-card">
-            <h3 data-i18n="legal.privacyTitle">Datenschutz</h3>
-            <p data-i18n="legal.privacyText">
-              Diese Portfolio-Seite verarbeitet keine Formulareingaben und nutzt keine Analyse- oder Werbetracker.
-              Beim Aufruf der Seite können technisch notwendige Zugriffsdaten durch den Hostinganbieter verarbeitet werden.
-            </p>
+        <div class="legal-grid compact-legal-grid">
+          <article class="legal-card compact-legal-card">
+            <span class="legal-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false"><path d="M7 3h7l4 4v14H7V3Z"/><path d="M14 3v5h5"/><path d="M9.5 12h5M9.5 15h5M9.5 18h3"/></svg>
+            </span>
+            <div>
+              <h3 data-i18n="legal.imprintTitle">Impressum</h3>
+              <p data-i18n="legal.imprintText">Private Portfolio-Seite von Aleksandar Nikolic. Kontakt erfolgt per E-Mail im Kontaktbereich.</p>
+            </div>
           </article>
 
-          <article class="legal-card">
-            <h3 data-i18n="legal.cookieTitle">Cookies und lokale Speicherung</h3>
-            <p data-i18n="legal.cookieText">
-              Die Seite setzt keine Tracking-Cookies. Sprache und Theme können lokal im Browser gespeichert werden,
-              damit die Einstellung beim nächsten Besuch erhalten bleibt.
-            </p>
+          <article class="legal-card compact-legal-card">
+            <span class="legal-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false"><path d="M12 3 5 6v5c0 4.5 2.8 8.5 7 10 4.2-1.5 7-5.5 7-10V6l-7-3Z"/><path d="m9.5 12 1.7 1.7 3.6-4"/></svg>
+            </span>
+            <div>
+              <h3 data-i18n="legal.privacyTitle">Datenschutz</h3>
+              <p data-i18n="legal.privacyText">Keine Formulare, keine Analytics, keine Werbetracker. Beim Aufruf verarbeitet der Hoster nur technisch notwendige Zugriffsdaten.</p>
+            </div>
           </article>
 
-          <article class="legal-card">
-            <h3 data-i18n="legal.externalTitle">Externe Inhalte</h3>
-            <p data-i18n="legal.externalText">
-              Projektbilder, Zertifikate und die GitHub-Contribution-Grafik werden lokal geladen. Externe Links zu GitHub
-              oder E-Mail werden erst beim Anklicken geöffnet.
-            </p>
+          <article class="legal-card compact-legal-card">
+            <span class="legal-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false"><path d="M12 4a7.8 7.8 0 0 0 8 8.2A8 8 0 1 1 12 4Z"/><path d="M9 10h.1M12 15h.1M15 12h.1M16 7h.1"/></svg>
+            </span>
+            <div>
+              <h3 data-i18n="legal.cookieTitle">Cookies</h3>
+              <p data-i18n="legal.cookieText">Keine Tracking-Cookies. Nur die gew?hlte Sprache wird lokal gespeichert, damit die Einstellung erhalten bleibt.</p>
+            </div>
           </article>
+        </div>
 
-          <article class="legal-card legal-card-wide">
-            <h3 data-i18n="legal.hostingTitle">Hosting und Bot-Schutz</h3>
-            <p data-i18n="legal.hostingText">
-              Die Seite ist statisch aufgebaut und wird ressourcenschonend betrieben. Gegen unnötigen Bot-Traffic sind
-              einfache Schutzmassnahmen vorbereitet oder bewusst als sinnvolle Betriebsoption eingeplant.
-            </p>
-            <ul class="legal-list">
-              <li data-i18n="legal.hostingCloudflare">Cloudflare kann vor die Domain gesetzt werden: DNS-Verwaltung, Bot Fight Mode, optionales Rate Limiting und Cache.</li>
-              <li data-i18n="legal.hostingHeaders">Netlify-Headers setzen Security-Header und können statische Assets länger cachen.</li>
-              <li data-i18n="legal.hostingRobots">Eine robots.txt hilft gegen seriöse Crawler; schlechte Bots können sie trotzdem ignorieren.</li>
-              <li data-i18n="legal.hostingAssets">Bilder und PDFs werden möglichst klein gehalten; grosse Videos oder ZIP-Dateien werden nicht direkt über Netlify ausgeliefert.</li>
-              <li data-i18n="legal.hostingNoCaptcha">Kein Captcha, Login oder aggressives Geo-Blocking vor der Portfolio-Seite, damit Recruiter sie ohne Hürde öffnen können.</li>
-            </ul>
-          </article>
-
-          <article class="legal-card legal-card-contact">
-            <h3 data-i18n="legal.contactTitle">Kontakt für Datenschutzfragen</h3>
-            <p data-i18n="legal.contactText">
-              Für Fragen zur Portfolio-Seite oder zu personenbezogenen Daten bin ich über die im Kontaktbereich genannte E-Mail erreichbar.
-            </p>
-          </article>
+        <div class="legal-note">
+          <p data-i18n="legal.externalText">Projektbilder, Zertifikate und die GitHub-Grafik werden lokal geladen. Externe Links ?ffnen sich erst beim Anklicken.</p>
+          <a class="link-arrow" href="#contact" data-i18n="legal.contactLink">Kontakt aufnehmen</a>
         </div>
       </div>
     </section>
@@ -368,8 +357,18 @@
   </dialog>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>&copy; <span id="year"></span> Aleksandar Nikolic - <span data-i18n="footer.rights">Alle Rechte vorbehalten.</span> <a href="#legal" data-i18n="footer.legalLink">Datenschutz und Cookies</a></p>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span>Aleksandar Nikolic</span>
+        <small data-i18n="footer.tagline">IMS Applikationsentwicklung ? Portfolio</small>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="#legal" data-i18n="footer.imprintLink">Impressum</a>
+        <a href="#legal" data-i18n="footer.privacyLink">Datenschutz</a>
+        <a href="#legal" data-i18n="footer.cookieLink">Cookies</a>
+        <a href="https://github.com/AleksZyro" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </nav>
+      <p>&copy; <span id="year"></span> Aleksandar Nikolic</p>
     </div>
   </footer>
 

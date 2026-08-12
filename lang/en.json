@@ -182,7 +182,11 @@
   "portfolioDownloadButton": "Download PDF",
   "footer": {
     "rights": "All rights reserved.",
-    "legalLink": "Privacy and cookies"
+    "legalLink": "Privacy and cookies",
+    "tagline": "IMS application development ? Portfolio",
+    "imprintLink": "Imprint",
+    "privacyLink": "Privacy",
+    "cookieLink": "Cookies"
   },
   "github": {
     "kicker": "GitHub",
@@ -197,23 +201,17 @@
   },
   "legal": {
     "kicker": "Legal",
-    "title": "Privacy and cookies",
-    "subline": "A short note on which data this portfolio website processes.",
+    "title": "Imprint, privacy and cookies",
+    "subline": "Short, transparent, and without tracking noise.",
     "privacyTitle": "Privacy",
-    "privacyText": "This portfolio website does not process form entries and does not use analytics or advertising trackers. When the site is opened, technically necessary access data may be processed by the hosting provider.",
-    "cookieTitle": "Cookies and local storage",
-    "cookieText": "The site does not set tracking cookies. The language can be stored locally in the browser so the setting is kept for the next visit.",
+    "privacyText": "No forms, no analytics, no advertising trackers. The host only processes technically necessary access data when the site is opened.",
+    "cookieTitle": "Cookies",
+    "cookieText": "No tracking cookies. Only the selected language is stored locally so the setting is kept.",
     "externalTitle": "External content",
-    "externalText": "Project images, certificates and the GitHub contribution graphic are loaded locally. External links to GitHub or e-mail only open when clicked.",
-    "contactTitle": "Contact for privacy questions",
-    "contactText": "For questions about this portfolio website or personal data, I can be reached through the e-mail address listed in the contact section.",
-    "hostingTitle": "Hosting and bot protection",
-    "hostingText": "The site is built as a static portfolio and is kept lightweight. Simple protection measures are prepared, or intentionally listed as sensible operating options, to reduce unnecessary bot traffic.",
-    "hostingCloudflare": "Cloudflare can sit in front of the domain: DNS management, Bot Fight Mode, optional rate limiting, and caching.",
-    "hostingHeaders": "Netlify headers set security headers and can cache static assets for longer.",
-    "hostingRobots": "A robots.txt helps with well-behaved crawlers; bad bots can still ignore it.",
-    "hostingAssets": "Images and PDFs are kept as small as practical; large videos or ZIP files are not served directly through Netlify.",
-    "hostingNoCaptcha": "No captcha, login, or aggressive geo-blocking in front of the portfolio, so recruiters can open it without friction."
+    "externalText": "Project images, certificates and the GitHub graphic are loaded locally. External links only open when clicked.",
+    "imprintTitle": "Imprint",
+    "imprintText": "Private portfolio website by Aleksandar Nikolic. Contact is available by e-mail in the contact section.",
+    "contactLink": "Contact me"
   },
   "portfolioItems": {
     "projects": {
