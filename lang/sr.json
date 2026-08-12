@@ -94,9 +94,9 @@
     "items": {
       "hackathon": {
         "type": "Događaj",
-        "title": "Baden hackt",
+        "title": "Baden hakaton",
         "period": "2026",
-        "description": "Hackathon \"Baden hackt\" sa fokusom na timski rad, razvoj ideja i brzu tehničku realizaciju."
+        "description": "Hakaton \"Baden hackt\" sa fokusom na timski rad, razvoj ideja i brzu tehničku realizaciju."
       },
       "ims": {
         "type": "Obrazovanje",
@@ -119,8 +119,8 @@
   },
   "tech": {
     "kicker": "Teh stek",
-    "title": "Teh stek po oblasti",
-    "subline": "Samo tehnologije koje se pojavljuju u trenutnim projektima ili koje mogu smisleno objasniti."
+    "title": "Tehnologije sa kojima sam stekao iskustvo",
+    "subline": "Kompaktan pregled iz škole, projekata, lokalnih alata i trenutnih oblasti učenja."
   },
   "portfolio": {
     "kicker": "Projekti",
@@ -333,7 +333,7 @@
         "previewLabel": "Sertifikat"
       },
       "bbbHackathon": {
-        "title": "BBB Hackathon",
+        "title": "BBB hakaton",
         "cardDescription": "Sertifikat u PDF formatu sa direktnim pregledom i preuzimanjem.",
         "detailDescription": "Ovaj sertifikat možeš direktno pogledati ili preuzeti u portfoliju.",
         "meta": [
@@ -423,35 +423,30 @@
   },
   "techGroups": [
     {
-      "title": "Python",
+      "title": "Tehnologije",
       "items": [
+        "Python",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "React",
+        "Vite",
+        "Node.js",
         "FastAPI",
         "pytest",
-        "CLI/lokalni alati"
-      ]
-    },
-    {
-      "title": "Frontend",
-      "items": [
-        "HTML/CSS",
-        "JavaScript",
-        "React/Vite"
-      ]
-    },
-    {
-      "title": "Podaci",
-      "items": [
+        "Java",
+        "C#",
+        ".NET",
+        "SQLite",
         "JSON",
         "CSV",
-        "SQLite"
-      ]
-    },
-    {
-      "title": "Alati",
-      "items": [
+        "AWS",
         "Git",
         "GitHub Actions",
-        "Docker osnove"
+        "Docker",
+        "PowerShell",
+        "ChatGPT",
+        "Codex"
       ]
     }
   ]

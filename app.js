@@ -138,10 +138,14 @@
     }
   ],
   techGroups: [
-    { title: 'Python', items: ['python', 'fastapi', 'pytest', 'cli'] },
-    { title: 'Frontend', items: ['html', 'css', 'javascript', 'react', 'vite'] },
-    { title: 'Daten', items: ['json', 'csv', 'sqlite'] },
-    { title: 'Tools', items: ['git', 'github-actions', 'docker'] }
+    {
+      title: 'Technologien',
+      items: [
+        'python', 'javascript', 'html', 'css', 'react', 'vite', 'nodejs',
+        'fastapi', 'pytest', 'java', 'csharp', 'dotnet', 'sqlite', 'json', 'csv', 'aws',
+        'git', 'github-actions', 'docker', 'powershell', 'chatgpt', 'codex'
+      ]
+    }
   ],
   openSourceContributions: [
     {
@@ -342,8 +346,8 @@ const embeddedDictionaries = {
     stats: { projects: 'Projekte', certificates: 'Zertifikate', years: 'Jahre Coding' },
     tech: {
       kicker: 'Tech-Stack',
-      title: 'Tech-Stack nach Einsatzbereich',
-      subline: 'Nur Technologien, die in aktuellen Projekten vorkommen oder die ich plausibel erklären kann.'
+      title: 'Technologien, mit denen ich Erfahrung sammeln konnte',
+      subline: 'Eine kompakte Übersicht aus Schule, Projekten, lokalen Tools und aktuellen Lernbereichen.'
     },
     portfolio: {
       kicker: 'Projekte',
@@ -482,8 +486,8 @@ const embeddedDictionaries = {
     stats: { projects: 'Projects', certificates: 'Certificates', years: 'Years coding' },
     tech: {
       kicker: 'Tech Stack',
-      title: 'Tech stack by use case',
-      subline: 'Only technologies that appear in current projects or that I can explain plausibly.'
+      title: 'Technologies I have gained experience with',
+      subline: 'A compact overview from school, projects, local tools, and current learning areas.'
     },
     portfolio: {
       kicker: 'Projects',
@@ -611,8 +615,8 @@ const embeddedDictionaries = {
     stats: { projects: 'Projets', certificates: 'Certificats', years: 'Annees de code' },
     tech: {
       kicker: 'Stack tech',
-      title: 'Stack tech par domaine',
-      subline: 'Uniquement les technologies presentes dans mes projets actuels ou que je peux expliquer de maniere plausible.'
+      title: 'Technologies avec lesquelles j’ai acquis de l’expérience',
+      subline: 'Un aperçu compact issu de l’école, des projets, des outils locaux et des apprentissages actuels.'
     },
     portfolio: {
       kicker: 'Projets',
@@ -742,8 +746,8 @@ const embeddedDictionaries = {
     stats: { projects: 'Projekti', certificates: 'Sertifikati', years: 'Godine kodiranja' },
     tech: {
       kicker: 'Tech stack',
-      title: 'Tech stack po oblasti',
-      subline: 'Samo tehnologije koje se pojavljuju u trenutnim projektima ili koje mogu smisleno objasniti.'
+      title: 'Tehnologije sa kojima sam stekao iskustvo',
+      subline: 'Kompaktan pregled iz škole, projekata, lokalnih alata i trenutnih oblasti učenja.'
     },
     portfolio: {
       kicker: 'Projekti',
@@ -1382,20 +1386,27 @@ const renderCollection = (items, container, typeKey) => {
 
 const techCatalog = {
   python: { label: 'Python', mark: 'Py', icon: 'python', accent: '#4f9ef8', asset: 'python' },
-  fastapi: { label: 'FastAPI', mark: 'F', icon: 'fastapi', accent: '#18b892', asset: 'fastapi' },
-  pytest: { label: 'pytest', mark: 'pt', icon: 'pytest', accent: '#f0a84b', asset: 'pytest' },
-  cli: { label: 'CLI / lokale Tools', mark: '>_', icon: 'cli', accent: '#b4a7e5' },
+  javascript: { label: 'JavaScript', mark: 'JS', icon: 'javascript', accent: '#f5d849', asset: 'javascript' },
   html: { label: 'HTML', mark: '5', icon: 'html', accent: '#f0643b', asset: 'html' },
   css: { label: 'CSS', mark: '3', icon: 'css', accent: '#3f9ef3', asset: 'css' },
-  javascript: { label: 'JavaScript', mark: 'JS', icon: 'javascript', accent: '#f5d849', asset: 'javascript' },
-  react: { label: 'React', mark: '⚛', icon: 'react', accent: '#61dafb', asset: 'react' },
+  react: { label: 'React', mark: 'R', icon: 'react', accent: '#61dafb', asset: 'react' },
   vite: { label: 'Vite', mark: 'V', icon: 'vite', accent: '#9b7cff', asset: 'vite' },
-  json: { label: 'JSON', mark: '{ }', icon: 'json', accent: '#d5b35a', asset: 'json' },
-  csv: { label: 'CSV', mark: 'CSV', icon: 'csv', accent: '#5fca91' },
+  nodejs: { label: 'Node.js', mark: 'Node', icon: 'nodejs', accent: '#76c76b', asset: 'nodejs' },
+  fastapi: { label: 'FastAPI', mark: 'F', icon: 'fastapi', accent: '#18b892', asset: 'fastapi' },
+  pytest: { label: 'pytest', mark: 'pt', icon: 'pytest', accent: '#f0a84b', asset: 'pytest' },
+  java: { label: 'Java', mark: 'J', icon: 'java', accent: '#f06445', asset: 'java' },
+  csharp: { label: 'C#', mark: 'C#', icon: 'csharp', accent: '#a26bff', asset: 'csharp' },
+  dotnet: { label: '.NET', mark: '.NET', icon: 'dotnet', accent: '#8f5cff', asset: 'dotnet' },
   sqlite: { label: 'SQLite', mark: 'SQL', icon: 'sqlite', accent: '#4aa7d9', asset: 'sqlite' },
-  git: { label: 'Git', mark: '◆', icon: 'git', accent: '#f26545', asset: 'git' },
-  'github-actions': { label: 'GitHub Actions', mark: '↗', icon: 'github-actions', accent: '#7d8cff', asset: 'github-actions' },
-  docker: { label: 'Docker', mark: '▦', icon: 'docker', accent: '#38bdf8', asset: 'docker' }
+  json: { label: 'JSON', mark: '{ }', icon: 'json', accent: '#d5b35a', asset: 'json' },
+  csv: { label: 'CSV', mark: 'CSV', icon: 'csv', accent: '#5fca91', asset: 'csv' },
+  aws: { label: 'AWS', mark: 'AWS', icon: 'aws', accent: '#ffb44c', asset: 'aws' },
+  git: { label: 'Git', mark: 'Git', icon: 'git', accent: '#f26545', asset: 'git' },
+  'github-actions': { label: 'GitHub Actions', mark: 'GA', icon: 'github-actions', accent: '#7d8cff', asset: 'github-actions' },
+  docker: { label: 'Docker', mark: 'Dock', icon: 'docker', accent: '#38bdf8', asset: 'docker' },
+  powershell: { label: 'PowerShell', mark: '>_', icon: 'powershell', accent: '#58a6ff', asset: 'powershell' },
+  chatgpt: { label: 'ChatGPT', mark: 'GPT', icon: 'openai', accent: '#74d3ae', asset: 'openai' },
+  codex: { label: 'Codex', mark: '</>', icon: 'codex', accent: '#b69cff', asset: 'codex' }
 };
 
 const renderTechStack = () => {

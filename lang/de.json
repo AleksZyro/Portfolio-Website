@@ -119,8 +119,8 @@
   },
   "tech": {
     "kicker": "Tech-Stack",
-    "title": "Tech-Stack nach Einsatzbereich",
-    "subline": "Nur Technologien, die in aktuellen Projekten vorkommen oder die ich plausibel erklären kann."
+    "title": "Technologien, mit denen ich Erfahrung sammeln konnte",
+    "subline": "Eine kompakte Übersicht aus Schule, Projekten, lokalen Tools und aktuellen Lernbereichen."
   },
   "portfolio": {
     "kicker": "Projekte",
@@ -419,35 +419,30 @@
   },
   "techGroups": [
     {
-      "title": "Python",
+      "title": "Technologien",
       "items": [
+        "Python",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "React",
+        "Vite",
+        "Node.js",
         "FastAPI",
         "pytest",
-        "CLI/local tools"
-      ]
-    },
-    {
-      "title": "Frontend",
-      "items": [
-        "HTML/CSS",
-        "JavaScript",
-        "React/Vite"
-      ]
-    },
-    {
-      "title": "Daten",
-      "items": [
+        "Java",
+        "C#",
+        ".NET",
+        "SQLite",
         "JSON",
         "CSV",
-        "SQLite"
-      ]
-    },
-    {
-      "title": "Tools",
-      "items": [
+        "AWS",
         "Git",
         "GitHub Actions",
-        "Docker-Grundlagen"
+        "Docker",
+        "PowerShell",
+        "ChatGPT",
+        "Codex"
       ]
     }
   ],

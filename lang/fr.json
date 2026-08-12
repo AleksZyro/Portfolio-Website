@@ -119,8 +119,8 @@
   },
   "tech": {
     "kicker": "Stack tech",
-    "title": "Stack tech par domaine",
-    "subline": "Uniquement les technologies présentes dans mes projets actuels ou que je peux expliquer de manière plausible."
+    "title": "Technologies avec lesquelles j’ai acquis de l’expérience",
+    "subline": "Un aperçu compact issu de l’école, des projets, des outils locaux et des apprentissages actuels."
   },
   "portfolio": {
     "kicker": "Projets",
@@ -419,35 +419,30 @@
   },
   "techGroups": [
     {
-      "title": "Python",
+      "title": "Technologies",
       "items": [
+        "Python",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "React",
+        "Vite",
+        "Node.js",
         "FastAPI",
         "pytest",
-        "outils CLI/locaux"
-      ]
-    },
-    {
-      "title": "Frontend",
-      "items": [
-        "HTML/CSS",
-        "JavaScript",
-        "React/Vite"
-      ]
-    },
-    {
-      "title": "Données",
-      "items": [
+        "Java",
+        "C#",
+        ".NET",
+        "SQLite",
         "JSON",
         "CSV",
-        "SQLite"
-      ]
-    },
-    {
-      "title": "Outils",
-      "items": [
+        "AWS",
         "Git",
         "GitHub Actions",
-        "bases Docker"
+        "Docker",
+        "PowerShell",
+        "ChatGPT",
+        "Codex"
       ]
     }
   ],
