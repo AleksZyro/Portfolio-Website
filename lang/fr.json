@@ -170,8 +170,8 @@
     "kicker": "Contact",
     "title": "Contact",
     "description": "Pour une place de stage en Suisse en 2027/2028, des questions ou une collaboration, je suis joignable par e-mail.",
-    "mailLabel": "E-mail",
-    "schoolMailLabel": "E-mail"
+    "mailLabel": "",
+    "schoolMailLabel": ""
   },
   "modal": {
     "close": "Fermer",
@@ -206,7 +206,14 @@
     "externalTitle": "Contenus externes",
     "externalText": "Les images de projets, certificats et le graphique GitHub Contributions sont chargés localement. Les liens externes vers GitHub ou e-mail ne s’ouvrent qu’au clic.",
     "contactTitle": "Contact pour les questions de confidentialité",
-    "contactText": "Pour toute question sur ce site portfolio ou les données personnelles, je suis joignable via l’adresse e-mail indiquée dans la section contact."
+    "contactText": "Pour toute question sur ce site portfolio ou les données personnelles, je suis joignable via l’adresse e-mail indiquée dans la section contact.",
+    "hostingTitle": "Hébergement et protection contre les bots",
+    "hostingText": "Le site est un portfolio statique et reste léger. Des mesures simples sont préparées, ou listées comme options d’exploitation raisonnables, afin de réduire le trafic inutile des bots.",
+    "hostingCloudflare": "Cloudflare peut être placé devant le domaine: gestion DNS, Bot Fight Mode, limitation de débit optionnelle et cache.",
+    "hostingHeaders": "Les en-têtes Netlify définissent des en-têtes de sécurité et peuvent mettre les ressources statiques en cache plus longtemps.",
+    "hostingRobots": "Un fichier robots.txt aide avec les robots respectueux des règles; les mauvais bots peuvent toutefois l’ignorer.",
+    "hostingAssets": "Les images et PDF sont gardés aussi légers que possible; les grandes vidéos ou archives ZIP ne sont pas servies directement via Netlify.",
+    "hostingNoCaptcha": "Pas de captcha, de connexion obligatoire ou de géoblocage agressif devant le portfolio, afin que les recruteurs puissent l’ouvrir sans obstacle."
   },
   "portfolioItems": {
     "projects": {
@@ -374,6 +381,13 @@
       "tags": [
         "Python",
         "Error Handling"
+      ]
+    },
+    "sshfs73": {
+      "summary": "Corrige la valeur par défaut des listings détaillés afin que les listings sshfs soient plus cohérents.",
+      "tags": [
+        "Python",
+        "Filesystem"
       ]
     }
   },

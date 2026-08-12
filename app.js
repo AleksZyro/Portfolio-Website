@@ -15,6 +15,7 @@
         { label: 'GitHub', url: 'https://github.com/AleksZyro/PathLab' },
         { label: 'Demo', url: 'https://alekszyro.github.io/PathLab/' }
       ],
+      previewImage: 'assets/project-previews/pathlab.png',
       previewLabel: 'Projektvorschau'
     },
     {
@@ -31,6 +32,7 @@
         { label: 'GitHub', url: 'https://github.com/AleksZyro/SortLab' },
         { label: 'Demo', url: 'https://alekszyro.github.io/SortLab/' }
       ],
+      previewImage: 'assets/project-previews/sortlab.png',
       previewLabel: 'Projektvorschau'
     },
     {
@@ -46,6 +48,7 @@
       links: [
         { label: 'GitHub', url: 'https://github.com/BotondCsereklye/VSW' }
       ],
+      previewImage: 'assets/project-previews/vsw.jpeg',
       previewLabel: 'Projektvorschau'
     },
     {
@@ -61,6 +64,7 @@
       links: [
         { label: 'GitHub', url: 'https://github.com/AleksZyro/FolioLint' }
       ],
+      previewImage: 'assets/project-previews/foliolint.png',
       previewLabel: 'Projektvorschau'
     },
     {
@@ -76,6 +80,7 @@
       links: [
         { label: 'GitHub', url: 'https://github.com/AleksZyro/BESP2074' }
       ],
+      previewImage: 'assets/project-previews/besp2074.png',
       previewLabel: 'Projektvorschau'
     }
   ],
@@ -184,6 +189,15 @@
       summary: 'Verbessert die Fehlermeldung für Subsonic-Updates, wenn ein Server keine JSON-Antwort liefert.',
       tags: ['Python', 'Error Handling'],
       url: 'https://github.com/beetbox/beets/pull/6837'
+    },
+    {
+      id: 'sshfs73',
+      repo: 'fsspec/sshfs',
+      number: 73,
+      title: 'Fix ls detail default',
+      summary: 'Korrigiert den Standardwert für Detail-Listings, damit sshfs-Auflistungen konsistenter funktionieren.',
+      tags: ['Python', 'Filesystem'],
+      url: 'https://github.com/fsspec/sshfs/pull/73'
     }
   ]
 };
@@ -371,8 +385,8 @@ const embeddedDictionaries = {
       kicker: 'Kontakt',
       title: 'Kontakt',
       description: 'Für Praktikum, Rückfragen oder Zusammenarbeit bin ich per E-Mail erreichbar.',
-      mailLabel: 'E-Mail',
-      schoolMailLabel: 'E-Mail'
+      mailLabel: '',
+      schoolMailLabel: ''
     },
     modal: { close: 'Schliessen', title: 'Detailansicht', projectKicker: 'Projektstatus', certificateKicker: 'Zertifikat' },
     portfolioDownloadButton: 'Download PDF',
@@ -500,8 +514,8 @@ const embeddedDictionaries = {
       kicker: 'Contact',
       title: 'Contact',
       description: 'For internships, questions, or collaboration, I am reachable by email.',
-      mailLabel: 'Email',
-      schoolMailLabel: 'Email'
+      mailLabel: '',
+      schoolMailLabel: ''
     },
     modal: { close: 'Close', title: 'Detail view', projectKicker: 'Project status', certificateKicker: 'Certificate' },
     portfolioDownloadButton: 'Download PDF',
@@ -631,8 +645,8 @@ const embeddedDictionaries = {
       kicker: 'Contact',
       title: 'Contact',
       description: 'Pour un stage, des questions ou une collaboration, je suis joignable par e-mail.',
-      mailLabel: 'E-mail',
-      schoolMailLabel: 'E-mail'
+      mailLabel: '',
+      schoolMailLabel: ''
     },
     modal: { close: 'Fermer', title: 'Vue detail', projectKicker: 'Statut du projet', certificateKicker: 'Certificat' },
     portfolioDownloadButton: 'Telecharger le PDF',
@@ -760,8 +774,8 @@ const embeddedDictionaries = {
       kicker: 'Kontakt',
       title: 'Kontakt',
       description: 'Za praksu, pitanja ili saradnju dostupan sam putem e-maila.',
-      mailLabel: 'E-mail',
-      schoolMailLabel: 'E-mail'
+      mailLabel: '',
+      schoolMailLabel: ''
     },
     modal: { close: 'Zatvori', title: 'Detaljni prikaz', projectKicker: 'Status projekta', certificateKicker: 'Sertifikat' },
     portfolioDownloadButton: 'Preuzmi PDF',

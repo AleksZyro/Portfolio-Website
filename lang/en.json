@@ -170,8 +170,8 @@
     "kicker": "Contact",
     "title": "Contact",
     "description": "For an internship position in Switzerland for 2027/2028, questions, or collaboration, I am reachable by email.",
-    "mailLabel": "Email",
-    "schoolMailLabel": "Email"
+    "mailLabel": "",
+    "schoolMailLabel": ""
   },
   "modal": {
     "close": "Close",
@@ -206,7 +206,14 @@
     "externalTitle": "External content",
     "externalText": "Project images, certificates and the GitHub contribution graphic are loaded locally. External links to GitHub or e-mail only open when clicked.",
     "contactTitle": "Contact for privacy questions",
-    "contactText": "For questions about this portfolio website or personal data, I can be reached through the e-mail address listed in the contact section."
+    "contactText": "For questions about this portfolio website or personal data, I can be reached through the e-mail address listed in the contact section.",
+    "hostingTitle": "Hosting and bot protection",
+    "hostingText": "The site is built as a static portfolio and is kept lightweight. Simple protection measures are prepared, or intentionally listed as sensible operating options, to reduce unnecessary bot traffic.",
+    "hostingCloudflare": "Cloudflare can sit in front of the domain: DNS management, Bot Fight Mode, optional rate limiting, and caching.",
+    "hostingHeaders": "Netlify headers set security headers and can cache static assets for longer.",
+    "hostingRobots": "A robots.txt helps with well-behaved crawlers; bad bots can still ignore it.",
+    "hostingAssets": "Images and PDFs are kept as small as practical; large videos or ZIP files are not served directly through Netlify.",
+    "hostingNoCaptcha": "No captcha, login, or aggressive geo-blocking in front of the portfolio, so recruiters can open it without friction."
   },
   "portfolioItems": {
     "projects": {
@@ -374,6 +381,13 @@
       "tags": [
         "Python",
         "Error Handling"
+      ]
+    },
+    "sshfs73": {
+      "summary": "Fixes the default value for detailed listings so sshfs directory listings behave more consistently.",
+      "tags": [
+        "Python",
+        "Filesystem"
       ]
     }
   },

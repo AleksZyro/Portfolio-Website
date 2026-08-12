@@ -119,7 +119,6 @@ const panelHeight = 150;
 const gridX = 92;
 const gridY = 82;
 const monthY = 75;
-const footerY = 192;
 const weekdayLabels = [
   { label: 'Mon', row: 1 },
   { label: 'Wed', row: 3 },
@@ -162,12 +161,6 @@ const weekdays = weekdayLabels.map((item) => {
   return `  <text x="${gridX - 18}" y="${y}" class="weekday-label" text-anchor="end">${item.label}</text>`;
 }).join('\n');
 
-const legendCells = [0, 1, 2, 3, 4].map((level, index) => {
-  const x = 775 + index * 17;
-  const color = ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353'][level];
-  return `  <rect x="${x}" y="${footerY - 10}" width="11" height="11" rx="2" fill="${color}" />`;
-}).join('\n');
-
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 ${width} ${height}" fill="none" role="img" aria-label="${escapeHtml(user)} GitHub contribution calendar">
   <style>
     .title { font: 500 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #f0f6fc; }
@@ -178,16 +171,10 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" v
 
   <rect width="${width}" height="${height}" rx="14" fill="#0d1117" />
   <text x="${panelX}" y="34" class="title">${calendar.totalContributions} contributions in the last year</text>
-  <text x="${panelX + panelWidth - 10}" y="34" class="hint" text-anchor="end">Contribution settings</text>
-  <path d="M ${panelX + panelWidth - 6} 30 l 4 4 l 4 -4" stroke="#8b949e" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
   <rect x="${panelX}" y="${panelY}" width="${panelWidth}" height="${panelHeight}" rx="6" fill="none" stroke="#30363d" />
 ${months}
 ${weekdays}
 ${cells}
-  <text x="${gridX - 26}" y="${footerY}" class="hint">Learn how we count contributions</text>
-  <text x="745" y="${footerY}" class="legend-muted">Less</text>
-${legendCells}
-  <text x="859" y="${footerY}" class="legend-muted">More</text>
 </svg>
 `;
 
