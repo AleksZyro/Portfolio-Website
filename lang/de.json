@@ -182,7 +182,11 @@
   "portfolioDownloadButton": "Download PDF",
   "footer": {
     "rights": "Alle Rechte vorbehalten.",
-    "legalLink": "Datenschutz und Cookies"
+    "legalLink": "Datenschutz und Cookies",
+    "tagline": "IMS Applikationsentwicklung · Portfolio",
+    "imprintLink": "Impressum",
+    "privacyLink": "Datenschutz",
+    "cookieLink": "Cookies"
   },
   "github": {
     "kicker": "GitHub",
@@ -197,23 +201,17 @@
   },
   "legal": {
     "kicker": "Rechtliches",
-    "title": "Datenschutz und Cookies",
-    "subline": "Kurzer Hinweis dazu, welche Daten diese Portfolio-Seite verarbeitet.",
+    "title": "Impressum, Datenschutz und Cookies",
+    "subline": "Kurz, transparent und ohne Tracking-Geschwurbel.",
     "privacyTitle": "Datenschutz",
-    "privacyText": "Diese Portfolio-Seite verarbeitet keine Formulareingaben und nutzt keine Analyse- oder Werbetracker. Beim Aufruf der Seite können technisch notwendige Zugriffsdaten durch den Hostinganbieter verarbeitet werden.",
-    "cookieTitle": "Cookies und lokale Speicherung",
-    "cookieText": "Die Seite setzt keine Tracking-Cookies. Die Sprache kann lokal im Browser gespeichert werden, damit die Einstellung beim nächsten Besuch erhalten bleibt.",
+    "privacyText": "Keine Formulare, keine Analytics, keine Werbetracker. Beim Aufruf verarbeitet der Hoster nur technisch notwendige Zugriffsdaten.",
+    "cookieTitle": "Cookies",
+    "cookieText": "Keine Tracking-Cookies. Nur die gewählte Sprache wird lokal gespeichert, damit die Einstellung erhalten bleibt.",
     "externalTitle": "Externe Inhalte",
-    "externalText": "Projektbilder, Zertifikate und die GitHub-Contribution-Grafik werden lokal geladen. Externe Links zu GitHub oder E-Mail werden erst beim Anklicken geöffnet.",
-    "contactTitle": "Kontakt für Datenschutzfragen",
-    "contactText": "Für Fragen zur Portfolio-Seite oder zu personenbezogenen Daten bin ich über die im Kontaktbereich genannte E-Mail erreichbar.",
-    "hostingTitle": "Hosting und Bot-Schutz",
-    "hostingText": "Die Seite ist statisch aufgebaut und wird ressourcenschonend betrieben. Gegen unnötigen Bot-Traffic sind einfache Schutzmassnahmen vorbereitet oder bewusst als sinnvolle Betriebsoption eingeplant.",
-    "hostingCloudflare": "Cloudflare kann vor die Domain gesetzt werden: DNS-Verwaltung, Bot Fight Mode, optionales Rate Limiting und Cache.",
-    "hostingHeaders": "Netlify-Headers setzen Security-Header und können statische Assets länger cachen.",
-    "hostingRobots": "Eine robots.txt hilft gegen seriöse Crawler; schlechte Bots können sie trotzdem ignorieren.",
-    "hostingAssets": "Bilder und PDFs werden möglichst klein gehalten; grosse Videos oder ZIP-Dateien werden nicht direkt über Netlify ausgeliefert.",
-    "hostingNoCaptcha": "Kein Captcha, Login oder aggressives Geo-Blocking vor der Portfolio-Seite, damit Recruiter sie ohne Hürde öffnen können."
+    "externalText": "Projektbilder, Zertifikate und die GitHub-Grafik werden lokal geladen. Externe Links öffnen sich erst beim Anklicken.",
+    "imprintTitle": "Impressum",
+    "imprintText": "Private Portfolio-Seite von Aleksandar Nikolic. Kontakt erfolgt per E-Mail im Kontaktbereich.",
+    "contactLink": "Kontakt aufnehmen"
   },
   "portfolioItems": {
     "projects": {
@@ -418,5 +416,39 @@
         ]
       }
     }
-  }
+  },
+  "techGroups": [
+    {
+      "title": "Python",
+      "items": [
+        "FastAPI",
+        "pytest",
+        "CLI/local tools"
+      ]
+    },
+    {
+      "title": "Frontend",
+      "items": [
+        "HTML/CSS",
+        "JavaScript",
+        "React/Vite"
+      ]
+    },
+    {
+      "title": "Daten",
+      "items": [
+        "JSON",
+        "CSV",
+        "SQLite"
+      ]
+    },
+    {
+      "title": "Tools",
+      "items": [
+        "Git",
+        "GitHub Actions",
+        "Docker-Grundlagen"
+      ]
+    }
+  ]
 }

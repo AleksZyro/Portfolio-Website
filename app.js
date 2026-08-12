@@ -64,7 +64,6 @@
       links: [
         { label: 'GitHub', url: 'https://github.com/AleksZyro/FolioLint' }
       ],
-      previewImage: 'assets/project-previews/foliolint.png',
       previewLabel: 'Projektvorschau'
     },
     {
@@ -139,10 +138,10 @@
     }
   ],
   techGroups: [
-    { title: 'Python', items: ['FastAPI', 'pytest', 'CLI/local tools'] },
-    { title: 'Frontend', items: ['HTML/CSS', 'JavaScript', 'React/Vite'] },
-    { title: 'Daten', items: ['JSON', 'CSV', 'SQLite'] },
-    { title: 'Tools', items: ['Git', 'GitHub Actions', 'Docker-Grundlagen'] }
+    { title: 'Python', items: ['python', 'fastapi', 'pytest', 'cli'] },
+    { title: 'Frontend', items: ['html', 'css', 'javascript', 'react', 'vite'] },
+    { title: 'Daten', items: ['json', 'csv', 'sqlite'] },
+    { title: 'Tools', items: ['git', 'github-actions', 'docker'] }
   ],
   openSourceContributions: [
     {
@@ -826,6 +825,15 @@ const localizedMoreProject = (item) => {
   };
 };
 
+const localizedTechGroup = (group, index) => {
+  const translationPath = `techGroups.${index}`;
+  return {
+    ...group,
+    title: t(`${translationPath}.title`, group.title),
+    items: tArray(`${translationPath}.items`, group.items || [])
+  };
+};
+
 const localizedLinkLabel = (label) => {
   if (String(label).toLowerCase() === 'github') {
     return t('linkLabels.github', label);
@@ -928,7 +936,8 @@ const setMenuState = (isOpen) => {
 };
 
 const scrollToSection = (targetId, behavior = 'smooth') => {
-  const section = document.querySelector(targetId);
+  const cleanId = targetId.replace(/^#/, '').split(/[?&]/)[0];
+  const section = document.getElementById(cleanId);
   if (!section) return;
 
   const header = document.querySelector('.site-header');
@@ -936,8 +945,9 @@ const scrollToSection = (targetId, behavior = 'smooth') => {
   const top = Math.max(window.pageYOffset + section.getBoundingClientRect().top - headerHeight - 22, 0);
 
   window.scrollTo({ top, behavior });
-  if (window.location.hash !== targetId) {
-    window.history.replaceState(null, '', targetId);
+  const nextHash = `#${cleanId}`;
+  if (window.location.hash !== nextHash) {
+    window.history.replaceState(null, '', nextHash);
   }
 };
 
@@ -1301,19 +1311,6 @@ const createMoreProjectsCard = () => {
   const card = document.createElement('article');
   card.className = 'item-card more-projects-summary-card';
 
-  const preview = document.createElement('div');
-  preview.className = 'project-preview more-projects-preview';
-
-  const previewLabel = document.createElement('span');
-  previewLabel.className = 'project-preview-label';
-  previewLabel.textContent = t('portfolio.moreProjectsTitle', 'Weitere Projekte');
-
-  const previewTitle = document.createElement('span');
-  previewTitle.className = 'project-preview-title';
-  previewTitle.textContent = t('portfolio.moreProjectsSubline', 'Kompakte Übersicht für kleinere Projekte.');
-
-  preview.append(previewLabel, previewTitle);
-
   const title = document.createElement('h3');
   title.textContent = t('portfolio.moreProjectsTitle', 'Weitere Projekte');
 
@@ -1338,7 +1335,7 @@ const createMoreProjectsCard = () => {
     list.append(action);
   });
 
-  card.append(preview, title, description, list);
+  card.append(title, description, list);
   return card;
 };
 
@@ -1383,21 +1380,79 @@ const renderCollection = (items, container, typeKey) => {
   });
 };
 
+const techCatalog = {
+  python: { label: 'Python', mark: 'Py', icon: 'python', accent: '#4f9ef8', asset: 'python' },
+  fastapi: { label: 'FastAPI', mark: 'F', icon: 'fastapi', accent: '#18b892', asset: 'fastapi' },
+  pytest: { label: 'pytest', mark: 'pt', icon: 'pytest', accent: '#f0a84b', asset: 'pytest' },
+  cli: { label: 'CLI / lokale Tools', mark: '>_', icon: 'cli', accent: '#b4a7e5' },
+  html: { label: 'HTML', mark: '5', icon: 'html', accent: '#f0643b', asset: 'html' },
+  css: { label: 'CSS', mark: '3', icon: 'css', accent: '#3f9ef3', asset: 'css' },
+  javascript: { label: 'JavaScript', mark: 'JS', icon: 'javascript', accent: '#f5d849', asset: 'javascript' },
+  react: { label: 'React', mark: '⚛', icon: 'react', accent: '#61dafb', asset: 'react' },
+  vite: { label: 'Vite', mark: 'V', icon: 'vite', accent: '#9b7cff', asset: 'vite' },
+  json: { label: 'JSON', mark: '{ }', icon: 'json', accent: '#d5b35a', asset: 'json' },
+  csv: { label: 'CSV', mark: 'CSV', icon: 'csv', accent: '#5fca91' },
+  sqlite: { label: 'SQLite', mark: 'SQL', icon: 'sqlite', accent: '#4aa7d9', asset: 'sqlite' },
+  git: { label: 'Git', mark: '◆', icon: 'git', accent: '#f26545', asset: 'git' },
+  'github-actions': { label: 'GitHub Actions', mark: '↗', icon: 'github-actions', accent: '#7d8cff', asset: 'github-actions' },
+  docker: { label: 'Docker', mark: '▦', icon: 'docker', accent: '#38bdf8', asset: 'docker' }
+};
+
 const renderTechStack = () => {
   techGrid.innerHTML = '';
 
   if (Array.isArray(portfolioData.techGroups)) {
-    portfolioData.techGroups.forEach((group) => {
+    portfolioData.techGroups.forEach((group, index) => {
+      const displayGroup = localizedTechGroup(group, index);
       const card = document.createElement('article');
       card.className = 'tech-group-card';
 
       const title = document.createElement('h3');
-      title.textContent = group.title;
+      title.textContent = displayGroup.title;
 
       const list = document.createElement('ul');
-      (group.items || []).forEach((item) => {
+      (group.items || []).forEach((techId, itemIndex) => {
+        const tech = techCatalog[techId] || {
+          label: (displayGroup.items || [])[itemIndex] || techId,
+          accent: '#8c75df',
+          icon: 'code'
+        };
         const listItem = document.createElement('li');
-        listItem.textContent = item;
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'tech-logo-button';
+        button.style.setProperty('--tech-accent', tech.accent);
+        button.setAttribute('aria-label', tech.label);
+        button.setAttribute('aria-pressed', 'false');
+        button.title = tech.label;
+
+        const icon = document.createElement('span');
+        icon.className = `tech-brand-icon tech-brand-${tech.icon}`;
+        icon.setAttribute('aria-hidden', 'true');
+        if (tech.asset) {
+          const image = document.createElement('img');
+          image.src = `assets/tech-icons/${tech.asset}.svg`;
+          image.alt = '';
+          image.loading = 'lazy';
+          icon.append(image);
+        } else {
+          icon.textContent = tech.mark || '';
+        }
+
+        const label = document.createElement('span');
+        label.className = 'tech-logo-label';
+        label.textContent = tech.label;
+
+        button.addEventListener('click', () => {
+          const isSelected = button.getAttribute('aria-pressed') === 'true';
+          list.querySelectorAll('.tech-logo-button[aria-pressed="true"]').forEach((activeButton) => {
+            activeButton.setAttribute('aria-pressed', 'false');
+          });
+          button.setAttribute('aria-pressed', String(!isSelected));
+        });
+
+        button.append(icon, label);
+        listItem.append(button);
         list.append(listItem);
       });
 
@@ -1701,6 +1756,7 @@ const refreshDynamicTexts = () => {
   renderProjectExplorer();
   renderCollection(portfolioData.certificates, certificatesGrid, 'certificates');
   renderOpenSourceContributions();
+  renderTechStack();
 };
 
 const loadLanguage = async (languageCode) => {
@@ -1730,11 +1786,12 @@ const loadLanguage = async (languageCode) => {
 
 const alignInitialHash = () => {
   const target = window.location.hash;
-  if (!target || !document.querySelector(target)) return;
+  const cleanId = target.replace(/^#/, '').split(/[?&]/)[0];
+  if (!cleanId || !document.getElementById(cleanId)) return;
 
   const align = () => {
-    scrollToSection(target, 'auto');
-    setActiveNav(target.slice(1));
+    scrollToSection(`#${cleanId}`, 'auto');
+    setActiveNav(cleanId);
   };
 
   window.setTimeout(align, 80);
