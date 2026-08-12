@@ -450,5 +450,9 @@
         "Docker-Grundlagen"
       ]
     }
-  ]
+  ],
+  "linkLabels": {
+    "github": "GitHub",
+    "demo": "Demo"
+  }
 }

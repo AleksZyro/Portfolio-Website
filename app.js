@@ -835,9 +835,9 @@ const localizedTechGroup = (group, index) => {
 };
 
 const localizedLinkLabel = (label) => {
-  if (String(label).toLowerCase() === 'github') {
-    return t('linkLabels.github', label);
-  }
+  const key = String(label).toLowerCase();
+  const translated = t(`linkLabels.${key}`, '');
+  if (translated) return translated;
   return label;
 };
 
@@ -1412,8 +1412,13 @@ const renderTechStack = () => {
 
       const list = document.createElement('ul');
       (group.items || []).forEach((techId, itemIndex) => {
-        const tech = techCatalog[techId] || {
-          label: (displayGroup.items || [])[itemIndex] || techId,
+        const translatedLabel = (displayGroup.items || [])[itemIndex];
+        const catalogEntry = techCatalog[techId];
+        const tech = catalogEntry ? {
+          ...catalogEntry,
+          label: translatedLabel || catalogEntry.label
+        } : {
+          label: translatedLabel || techId,
           accent: '#8c75df',
           icon: 'code'
         };

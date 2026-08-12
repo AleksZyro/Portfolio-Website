@@ -346,7 +346,8 @@
     }
   },
   "linkLabels": {
-    "github": "GitHub"
+    "github": "GitHub",
+    "demo": "Demo"
   },
   "openSourceContributions": {
     "vaultCleaner54": {
