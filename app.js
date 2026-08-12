@@ -64,7 +64,6 @@
       links: [
         { label: 'GitHub', url: 'https://github.com/AleksZyro/FolioLint' }
       ],
-      previewImage: 'assets/project-previews/foliolint.png',
       previewLabel: 'Projektvorschau'
     },
     {
@@ -826,6 +825,15 @@ const localizedMoreProject = (item) => {
   };
 };
 
+const localizedTechGroup = (group, index) => {
+  const translationPath = `techGroups.${index}`;
+  return {
+    ...group,
+    title: t(`${translationPath}.title`, group.title),
+    items: tArray(`${translationPath}.items`, group.items || [])
+  };
+};
+
 const localizedLinkLabel = (label) => {
   if (String(label).toLowerCase() === 'github') {
     return t('linkLabels.github', label);
@@ -1301,24 +1309,11 @@ const createMoreProjectsCard = () => {
   const card = document.createElement('article');
   card.className = 'item-card more-projects-summary-card';
 
-  const preview = document.createElement('div');
-  preview.className = 'project-preview more-projects-preview';
-
-  const previewLabel = document.createElement('span');
-  previewLabel.className = 'project-preview-label';
-  previewLabel.textContent = t('portfolio.moreProjectsTitle', 'Weitere Projekte');
-
-  const previewTitle = document.createElement('span');
-  previewTitle.className = 'project-preview-title';
-  previewTitle.textContent = t('portfolio.moreProjectsSubline', 'Kompakte Übersicht für kleinere Projekte.');
-
-  preview.append(previewLabel, previewTitle);
-
   const title = document.createElement('h3');
   title.textContent = t('portfolio.moreProjectsTitle', 'Weitere Projekte');
 
   const description = document.createElement('p');
-  description.textContent = t('portfolio.moreProjectsSubline', 'Kompakte Übersicht für kleinere oder noch nicht ausführlich dokumentierte Arbeiten.');
+  description.textContent = t('portfolio.moreProjectsSubline', 'Kompakte ?bersicht f?r kleinere oder noch nicht ausf?hrlich dokumentierte Arbeiten.');
 
   const list = document.createElement('div');
   list.className = 'more-projects-card-list';
@@ -1338,7 +1333,7 @@ const createMoreProjectsCard = () => {
     list.append(action);
   });
 
-  card.append(preview, title, description, list);
+  card.append(title, description, list);
   return card;
 };
 
@@ -1387,15 +1382,16 @@ const renderTechStack = () => {
   techGrid.innerHTML = '';
 
   if (Array.isArray(portfolioData.techGroups)) {
-    portfolioData.techGroups.forEach((group) => {
+    portfolioData.techGroups.forEach((group, index) => {
+      const displayGroup = localizedTechGroup(group, index);
       const card = document.createElement('article');
       card.className = 'tech-group-card';
 
       const title = document.createElement('h3');
-      title.textContent = group.title;
+      title.textContent = displayGroup.title;
 
       const list = document.createElement('ul');
-      (group.items || []).forEach((item) => {
+      (displayGroup.items || []).forEach((item) => {
         const listItem = document.createElement('li');
         listItem.textContent = item;
         list.append(listItem);
@@ -1701,6 +1697,7 @@ const refreshDynamicTexts = () => {
   renderProjectExplorer();
   renderCollection(portfolioData.certificates, certificatesGrid, 'certificates');
   renderOpenSourceContributions();
+  renderTechStack();
 };
 
 const loadLanguage = async (languageCode) => {

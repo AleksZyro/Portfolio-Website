@@ -418,5 +418,39 @@
         ]
       }
     }
-  }
+  },
+  "techGroups": [
+    {
+      "title": "Python",
+      "items": [
+        "FastAPI",
+        "pytest",
+        "outils CLI/locaux"
+      ]
+    },
+    {
+      "title": "Frontend",
+      "items": [
+        "HTML/CSS",
+        "JavaScript",
+        "React/Vite"
+      ]
+    },
+    {
+      "title": "Donn?es",
+      "items": [
+        "JSON",
+        "CSV",
+        "SQLite"
+      ]
+    },
+    {
+      "title": "Outils",
+      "items": [
+        "Git",
+        "GitHub Actions",
+        "bases Docker"
+      ]
+    }
+  ]
 }

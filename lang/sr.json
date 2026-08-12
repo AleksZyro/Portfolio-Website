@@ -421,5 +421,39 @@
         ]
       }
     }
-  }
+  },
+  "techGroups": [
+    {
+      "title": "Python",
+      "items": [
+        "FastAPI",
+        "pytest",
+        "CLI/lokalni alati"
+      ]
+    },
+    {
+      "title": "Frontend",
+      "items": [
+        "HTML/CSS",
+        "JavaScript",
+        "React/Vite"
+      ]
+    },
+    {
+      "title": "Podaci",
+      "items": [
+        "JSON",
+        "CSV",
+        "SQLite"
+      ]
+    },
+    {
+      "title": "Alati",
+      "items": [
+        "Git",
+        "GitHub Actions",
+        "Docker osnove"
+      ]
+    }
+  ]
 }

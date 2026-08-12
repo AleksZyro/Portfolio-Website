@@ -960,14 +960,18 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   border-color: rgba(181, 158, 255, 0.72);
 }
 
-.more-projects-summary-card .more-projects-preview {
-  min-height: clamp(168px, 15vw, 210px);
+.more-projects-summary-card {
+  justify-content: start;
+}
+
+.more-projects-summary-card > p {
+  margin-bottom: 4px;
 }
 
 .more-projects-card-list {
   display: grid;
-  gap: 8px;
-  margin-top: auto;
+  gap: 10px;
+  margin-top: 8px;
 }
 
 .more-project-name {
@@ -1022,7 +1026,9 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
 
 .legal-grid {
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
+  align-items: stretch;
 }
 
 .legal-card {
@@ -1046,6 +1052,11 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
 
 .legal-card-wide {
   grid-column: 1 / -1;
+}
+
+.legal-card-contact {
+  grid-column: 1 / -1;
+  max-width: 520px;
 }
 
 .legal-list {
@@ -1376,7 +1387,8 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   .project-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .compact-certificates { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .tech-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 880px; margin-inline: auto; }
-  .legal-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .legal-grid { grid-template-columns: 1fr; }
+  .legal-card-wide, .legal-card-contact { grid-column: auto; max-width: none; }
 }
 
 @media (min-width: 960px) {
