@@ -74,4 +74,4 @@ http://127.0.0.1:8765
 
 ## Status
 
-Aktiv in Bearbeitung. Projektstände im Portfolio werden bewusst ehrlich gekennzeichnet, z. B. fertig, in Arbeit, lokal nutzbar oder nicht öffentlich verlinkt.
+Aktiv in Bearbeitung. Projektstände im Portfolio werden bewusst ehrlich gekennzeichnet, zB. fertig, in Arbeit, lokal nutzbar oder nicht öffentlich verlinkt.
