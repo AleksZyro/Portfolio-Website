@@ -181,9 +181,9 @@
   },
   "portfolioDownloadButton": "Preuzmi PDF",
   "footer": {
-    "rights": "Sva prava zadr?ana.",
+    "rights": "Sva prava zadržana.",
     "legalLink": "Privatnost i kukiji",
-    "tagline": "IMS razvoj aplikacija ? Portfolio",
+    "tagline": "IMS razvoj aplikacija · Portfolio",
     "imprintLink": "Impresum",
     "privacyLink": "Privatnost",
     "cookieLink": "Kukiji"
@@ -204,13 +204,13 @@
     "title": "Impresum, privatnost i kukiji",
     "subline": "Kratko, jasno i bez tracking spama.",
     "privacyTitle": "Privatnost",
-    "privacyText": "Nema formulara, nema analitike i nema reklamnih trackera. Hosting provajder obra?uje samo tehni?ki neophodne pristupne podatke pri otvaranju stranice.",
+    "privacyText": "Nema formulara, nema analitike i nema reklamnih trackera. Hosting provajder obrađuje samo tehnički neophodne pristupne podatke pri otvaranju stranice.",
     "cookieTitle": "Kukiji",
-    "cookieText": "Nema tracking kukija. Lokalno se ?uva samo izabrani jezik, da bi pode?avanje ostalo zapam?eno.",
+    "cookieText": "Nema tracking kukija. Lokalno se čuva samo izabrani jezik, da bi podešavanje ostalo zapamćeno.",
     "externalTitle": "Eksterni sadržaj",
-    "externalText": "Slike projekata, sertifikati i GitHub grafika u?itavaju se lokalno. Eksterni linkovi otvaraju se tek nakon klika.",
+    "externalText": "Slike projekata, sertifikati i GitHub grafika učitavaju se lokalno. Eksterni linkovi otvaraju se tek nakon klika.",
     "imprintTitle": "Impresum",
-    "imprintText": "Privatna portfolio stranica Aleksandra Nikoli?a. Kontakt je mogu? preko e-maila u kontakt sekciji.",
+    "imprintText": "Privatna portfolio stranica Aleksandra Nikolića. Kontakt je moguć preko e-maila u kontakt sekciji.",
     "contactLink": "Kontaktiraj me"
   },
   "portfolioItems": {

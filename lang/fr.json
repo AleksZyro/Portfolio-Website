@@ -181,11 +181,11 @@
   },
   "portfolioDownloadButton": "Télécharger le PDF",
   "footer": {
-    "rights": "Tous droits r?serv?s.",
-    "legalLink": "Confidentialit? et cookies",
-    "tagline": "D?veloppement applicatif IMS ? Portfolio",
+    "rights": "Tous droits réservés.",
+    "legalLink": "Confidentialité et cookies",
+    "tagline": "Développement applicatif IMS · Portfolio",
     "imprintLink": "Impressum",
-    "privacyLink": "Confidentialit?",
+    "privacyLink": "Confidentialité",
     "cookieLink": "Cookies"
   },
   "github": {
@@ -200,17 +200,17 @@
     "mergedLabel": "Merged"
   },
   "legal": {
-    "kicker": "Mentions l?gales",
-    "title": "Impressum, confidentialit? et cookies",
+    "kicker": "Mentions légales",
+    "title": "Impressum, confidentialité et cookies",
     "subline": "Court, transparent, sans suivi publicitaire.",
-    "privacyTitle": "Confidentialit?",
-    "privacyText": "Aucun formulaire, aucune analyse, aucun traceur publicitaire. L?h?bergeur traite uniquement les donn?es d?acc?s techniquement n?cessaires lors du chargement du site.",
+    "privacyTitle": "Confidentialité",
+    "privacyText": "Aucun formulaire, aucune analyse, aucun traceur publicitaire. L’hébergeur traite uniquement les données d’accès techniquement nécessaires lors du chargement du site.",
     "cookieTitle": "Cookies",
-    "cookieText": "Pas de cookies de suivi. Seule la langue choisie est enregistr?e localement pour conserver le r?glage.",
+    "cookieText": "Pas de cookies de suivi. Seule la langue choisie est enregistrée localement pour conserver le réglage.",
     "externalTitle": "Contenus externes",
-    "externalText": "Les images de projets, certificats et le graphique GitHub sont charg?s localement. Les liens externes ne s?ouvrent qu?au clic.",
+    "externalText": "Les images de projets, certificats et le graphique GitHub sont chargés localement. Les liens externes ne s’ouvrent qu’au clic.",
     "imprintTitle": "Impressum",
-    "imprintText": "Site portfolio priv? d?Aleksandar Nikolic. Le contact se fait par e-mail dans la section contact.",
+    "imprintText": "Site portfolio privé d’Aleksandar Nikolic. Le contact se fait par e-mail dans la section contact.",
     "contactLink": "Me contacter"
   },
   "portfolioItems": {
@@ -435,7 +435,7 @@
       ]
     },
     {
-      "title": "Donn?es",
+      "title": "Données",
       "items": [
         "JSON",
         "CSV",

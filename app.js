@@ -936,7 +936,8 @@ const setMenuState = (isOpen) => {
 };
 
 const scrollToSection = (targetId, behavior = 'smooth') => {
-  const section = document.querySelector(targetId);
+  const cleanId = targetId.replace(/^#/, '').split(/[?&]/)[0];
+  const section = document.getElementById(cleanId);
   if (!section) return;
 
   const header = document.querySelector('.site-header');
@@ -944,8 +945,9 @@ const scrollToSection = (targetId, behavior = 'smooth') => {
   const top = Math.max(window.pageYOffset + section.getBoundingClientRect().top - headerHeight - 22, 0);
 
   window.scrollTo({ top, behavior });
-  if (window.location.hash !== targetId) {
-    window.history.replaceState(null, '', targetId);
+  const nextHash = `#${cleanId}`;
+  if (window.location.hash !== nextHash) {
+    window.history.replaceState(null, '', nextHash);
   }
 };
 
@@ -1313,7 +1315,7 @@ const createMoreProjectsCard = () => {
   title.textContent = t('portfolio.moreProjectsTitle', 'Weitere Projekte');
 
   const description = document.createElement('p');
-  description.textContent = t('portfolio.moreProjectsSubline', 'Kompakte ?bersicht f?r kleinere oder noch nicht ausf?hrlich dokumentierte Arbeiten.');
+  description.textContent = t('portfolio.moreProjectsSubline', 'Kompakte Übersicht für kleinere oder noch nicht ausführlich dokumentierte Arbeiten.');
 
   const list = document.createElement('div');
   list.className = 'more-projects-card-list';
@@ -1727,11 +1729,12 @@ const loadLanguage = async (languageCode) => {
 
 const alignInitialHash = () => {
   const target = window.location.hash;
-  if (!target || !document.querySelector(target)) return;
+  const cleanId = target.replace(/^#/, '').split(/[?&]/)[0];
+  if (!cleanId || !document.getElementById(cleanId)) return;
 
   const align = () => {
-    scrollToSection(target, 'auto');
-    setActiveNav(target.slice(1));
+    scrollToSection(`#${cleanId}`, 'auto');
+    setActiveNav(cleanId);
   };
 
   window.setTimeout(align, 80);

@@ -183,7 +183,7 @@
   "footer": {
     "rights": "Alle Rechte vorbehalten.",
     "legalLink": "Datenschutz und Cookies",
-    "tagline": "IMS Applikationsentwicklung ? Portfolio",
+    "tagline": "IMS Applikationsentwicklung · Portfolio",
     "imprintLink": "Impressum",
     "privacyLink": "Datenschutz",
     "cookieLink": "Cookies"
@@ -206,9 +206,9 @@
     "privacyTitle": "Datenschutz",
     "privacyText": "Keine Formulare, keine Analytics, keine Werbetracker. Beim Aufruf verarbeitet der Hoster nur technisch notwendige Zugriffsdaten.",
     "cookieTitle": "Cookies",
-    "cookieText": "Keine Tracking-Cookies. Nur die gew?hlte Sprache wird lokal gespeichert, damit die Einstellung erhalten bleibt.",
+    "cookieText": "Keine Tracking-Cookies. Nur die gewählte Sprache wird lokal gespeichert, damit die Einstellung erhalten bleibt.",
     "externalTitle": "Externe Inhalte",
-    "externalText": "Projektbilder, Zertifikate und die GitHub-Grafik werden lokal geladen. Externe Links ?ffnen sich erst beim Anklicken.",
+    "externalText": "Projektbilder, Zertifikate und die GitHub-Grafik werden lokal geladen. Externe Links öffnen sich erst beim Anklicken.",
     "imprintTitle": "Impressum",
     "imprintText": "Private Portfolio-Seite von Aleksandar Nikolic. Kontakt erfolgt per E-Mail im Kontaktbereich.",
     "contactLink": "Kontakt aufnehmen"

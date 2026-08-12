@@ -1387,10 +1387,104 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
 }
 #modal-meta { list-style: disc; padding-left: 18px; color: #ddd2ff; display: grid; gap: 6px; margin: 0; }
 
-.site-footer { border-top: 1px solid var(--line); color: var(--muted); padding: 18px 0 24px; }
+.site-footer {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  padding: 20px 0 24px;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer-brand {
+  display: grid;
+  gap: 2px;
+}
+
+.footer-brand span {
+  color: var(--text);
+  font-weight: 800;
+}
+
+.footer-brand small {
+  color: var(--muted);
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
 .site-footer a {
+  border: 1px solid rgba(185, 174, 220, 0.18);
+  border-radius: 999px;
+  padding: 7px 10px;
+  color: #e0d8ff;
+  background: rgba(18, 15, 30, 0.52);
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+  border-color: rgba(181, 158, 255, 0.58);
+  background: rgba(140, 117, 223, 0.14);
+}
+
+.compact-legal-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.compact-legal-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 14px;
+  min-height: 150px;
+}
+
+.legal-icon {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  display: inline-grid;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(181, 158, 255, 0.26);
+  border-radius: 14px;
   color: var(--accent-2);
-  font-weight: 700;
+  background: rgba(140, 117, 223, 0.09);
+}
+
+.legal-icon svg {
+  display: block;
+  width: 22px;
+  height: 22px;
+  max-width: 22px;
+  max-height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.legal-note {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 14px;
+  padding: 14px 16px;
+  border: 1px solid rgba(185, 174, 220, 0.14);
+  border-radius: 16px;
+  background: rgba(18, 15, 30, 0.46);
 }
 .reveal { opacity: 0; transform: translateY(8px); transition: opacity 0.32s ease, transform 0.32s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
