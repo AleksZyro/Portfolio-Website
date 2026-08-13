@@ -48,7 +48,7 @@
       links: [
         { label: 'GitHub', url: 'https://github.com/BotondCsereklye/VSW' }
       ],
-      previewImage: 'assets/project-previews/vsw.svg',
+      previewImage: 'assets/project-previews/vsw.jpeg',
       previewLabel: 'Projektvorschau'
     },
     {
@@ -150,8 +150,8 @@
       title: 'Technologien',
       items: [
         'python', 'javascript', 'html', 'css', 'react', 'vite', 'nodejs',
-        'fastapi', 'pytest', 'java', 'csharp', 'dotnet', 'sqlite', 'json', 'csv', 'aws',
-        'git', 'github-actions', 'docker', 'powershell', 'chatgpt', 'codex'
+        'fastapi', 'pytest', 'java', 'csharp', 'dotnet', 'typescript', 'sqlite', 'json', 'csv', 'aws',
+        'git', 'github-actions', 'docker', 'powershell', 'batchfile', 'chatgpt', 'codex'
       ]
     }
   ],
@@ -1405,6 +1405,7 @@ const techCatalog = {
   java: { label: 'Java', mark: 'J', icon: 'java', accent: '#f06445', asset: 'java' },
   csharp: { label: 'C#', mark: 'C#', icon: 'csharp', accent: '#a26bff', asset: 'csharp' },
   dotnet: { label: '.NET', mark: '.NET', icon: 'dotnet', accent: '#8f5cff', asset: 'dotnet' },
+  typescript: { label: 'TypeScript', mark: 'TS', icon: 'typescript', accent: '#3178c6', asset: 'typescript' },
   sqlite: { label: 'SQLite', mark: 'SQL', icon: 'sqlite', accent: '#4aa7d9', asset: 'sqlite' },
   json: { label: 'JSON', mark: '{ }', icon: 'json', accent: '#d5b35a', asset: 'json' },
   csv: { label: 'CSV', mark: 'CSV', icon: 'csv', accent: '#5fca91', asset: 'csv' },
@@ -1413,8 +1414,9 @@ const techCatalog = {
   'github-actions': { label: 'GitHub Actions', mark: 'GA', icon: 'github-actions', accent: '#7d8cff', asset: 'github-actions' },
   docker: { label: 'Docker', mark: 'Dock', icon: 'docker', accent: '#38bdf8', asset: 'docker' },
   powershell: { label: 'PowerShell', mark: '>_', icon: 'powershell', accent: '#58a6ff', asset: 'powershell' },
+  batchfile: { label: 'Batchfile', mark: 'BAT', icon: 'batchfile', accent: '#66b5ee', asset: 'batchfile' },
   chatgpt: { label: 'ChatGPT', mark: 'GPT', icon: 'openai', accent: '#74d3ae', asset: 'openai' },
-  codex: { label: 'Codex', mark: '</>', icon: 'codex', accent: '#b69cff', asset: 'codex' }
+  codex: { label: 'Codex', mark: '</>', icon: 'openai', accent: '#74d3ae', asset: 'openai' }
 };
 
 const renderTechStack = () => {

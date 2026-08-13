@@ -1,6 +1,0 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Codex">
-  <rect x="9" y="10" width="46" height="44" rx="12" fill="#111729" stroke="#9f86ff" stroke-width="3"/>
-  <path d="M25 24l-8 8 8 8" fill="none" stroke="#d8ceff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M39 24l8 8-8 8" fill="none" stroke="#d8ceff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M35 20l-6 24" fill="none" stroke="#56d7ff" stroke-width="4" stroke-linecap="round"/>
-</svg>

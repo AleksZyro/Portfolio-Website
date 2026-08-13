@@ -441,6 +441,7 @@
         "Java",
         "C#",
         ".NET",
+        "TypeScript",
         "SQLite",
         "JSON",
         "CSV",
@@ -449,6 +450,7 @@
         "GitHub Actions",
         "Docker",
         "PowerShell",
+        "Batchfile",
         "ChatGPT",
         "Codex"
       ]
