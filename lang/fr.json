@@ -407,12 +407,20 @@
           "Python"
         ]
       },
-      "repostencil": {
-        "title": "RepoStencil",
-        "description": "Projet tooling planifié ou pas encore lié publiquement autour de la structure de repositories et de templates.",
+      "lb259": {
+        "title": "LB259",
+        "description": "Projet de dataset sur l’usage du smartphone, la productivité et le bien-être avec données CSV et analyse notebook.",
         "tags": [
-          "Tooling",
-          "Structure repo"
+          "Données",
+          "Notebook"
+        ]
+      },
+      "internetEinAus": {
+        "title": "Internet activé et désactivé",
+        "description": "Prototype de hackathon pour une interface web qui modélise l’accès Internet par salle de classe ou sous-réseau.",
+        "tags": [
+          "Python",
+          "Hackathon"
         ]
       }
     }

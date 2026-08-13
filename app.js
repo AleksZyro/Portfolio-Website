@@ -48,7 +48,7 @@
       links: [
         { label: 'GitHub', url: 'https://github.com/BotondCsereklye/VSW' }
       ],
-      previewImage: 'assets/project-previews/vsw.jpeg',
+      previewImage: 'assets/project-previews/vsw.svg',
       previewLabel: 'Projektvorschau'
     },
     {
@@ -99,10 +99,18 @@
       url: 'https://github.com/AleksZyro/TwinType'
     },
     {
-      id: 'repostencil',
-      title: 'RepoStencil',
-      description: 'Geplantes bzw. noch nicht öffentlich verlinktes Tooling-Projekt rund um Repository-Struktur und Vorlagen.',
-      tags: ['Tooling', 'Repo-Struktur']
+      id: 'lb259',
+      title: 'LB259',
+      description: 'Dataset-Projekt zur Smartphone-Nutzung, Produktivität und Wohlbefinden mit CSV-Daten und Notebook-Auswertung.',
+      tags: ['Daten', 'Notebook'],
+      url: 'https://github.com/BotondCsereklye/LB_259'
+    },
+    {
+      id: 'internetEinAus',
+      title: 'Internet ein und aus',
+      description: 'Hackathon-Prototyp für eine Weboberfläche, die Internetzugang pro Schulzimmer oder Subnetz modelliert.',
+      tags: ['Python', 'Hackathon'],
+      url: 'https://github.com/BotondCsereklye/internet-ein-aus'
     }
   ],
   certificates: [

@@ -411,12 +411,20 @@
           "Python"
         ]
       },
-      "repostencil": {
-        "title": "RepoStencil",
-        "description": "Planirani ili još nejavno linkovani tooling projekat oko strukture repozitorijuma i šablona.",
+      "lb259": {
+        "title": "LB259",
+        "description": "Dataset projekat o korišćenju pametnih telefona, produktivnosti i dobrobiti sa CSV podacima i notebook analizom.",
         "tags": [
-          "Tooling",
-          "Struktura repozitorijuma"
+          "Podaci",
+          "Notebook"
+        ]
+      },
+      "internetEinAus": {
+        "title": "Internet uključi i isključi",
+        "description": "Hakaton prototip za web interfejs koji modeluje pristup internetu po učionici ili subnetu.",
+        "tags": [
+          "Python",
+          "Hakaton"
         ]
       }
     }

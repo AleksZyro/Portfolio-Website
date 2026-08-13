@@ -407,12 +407,20 @@
           "Python"
         ]
       },
-      "repostencil": {
-        "title": "RepoStencil",
-        "description": "Planned or not yet publicly linked tooling project around repository structure and templates.",
+      "lb259": {
+        "title": "LB259",
+        "description": "Dataset project about smartphone use, productivity and wellbeing with CSV data and notebook analysis.",
         "tags": [
-          "Tooling",
-          "Repo structure"
+          "Data",
+          "Notebook"
+        ]
+      },
+      "internetEinAus": {
+        "title": "Internet on and off",
+        "description": "Hackathon prototype for a web interface that models internet access per classroom or subnet.",
+        "tags": [
+          "Python",
+          "Hackathon"
         ]
       }
     }
