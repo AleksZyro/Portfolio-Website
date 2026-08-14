@@ -996,7 +996,7 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
 
 .legal-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 14px;
   align-items: stretch;
 }
@@ -1487,6 +1487,7 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   .open-source-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .tech-grid { grid-template-columns: 1fr; max-width: none; }
   .compact-certificates { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .legal-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 @media (min-width: 1200px) {
