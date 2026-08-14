@@ -64,6 +64,7 @@
       links: [
         { label: 'GitHub', url: 'https://github.com/AleksZyro/FolioLint' }
       ],
+      previewImage: 'assets/project-previews/foliolint.png',
       previewLabel: 'Projektvorschau'
     },
     {
@@ -103,7 +104,7 @@
       title: 'LB259',
       description: 'Dataset-Projekt zur Smartphone-Nutzung, Produktivität und Wohlbefinden mit CSV-Daten und Notebook-Auswertung.',
       tags: ['Daten', 'Notebook'],
-      url: 'https://github.com/BotondCsereklye/LB_259'
+      url: 'https://github.com/AleksZyro/LB259'
     },
     {
       id: 'internetEinAus',
@@ -151,7 +152,7 @@
       items: [
         'python', 'javascript', 'html', 'css', 'react', 'vite', 'nodejs',
         'fastapi', 'pytest', 'java', 'csharp', 'dotnet', 'typescript', 'sqlite', 'json', 'csv', 'aws',
-        'git', 'github-actions', 'docker', 'powershell', 'batchfile', 'chatgpt', 'codex'
+        'git', 'github-actions', 'docker', 'powershell', 'batchfile', 'openai'
       ]
     }
   ],
@@ -1415,8 +1416,7 @@ const techCatalog = {
   docker: { label: 'Docker', mark: 'Dock', icon: 'docker', accent: '#38bdf8', asset: 'docker' },
   powershell: { label: 'PowerShell', mark: '>_', icon: 'powershell', accent: '#58a6ff', asset: 'powershell' },
   batchfile: { label: 'Batchfile', mark: 'BAT', icon: 'batchfile', accent: '#66b5ee', asset: 'batchfile' },
-  chatgpt: { label: 'ChatGPT', mark: 'GPT', icon: 'openai', accent: '#74d3ae', asset: 'openai' },
-  codex: { label: 'Codex', mark: '</>', icon: 'openai', accent: '#74d3ae', asset: 'openai' }
+  openai: { label: 'OpenAI', mark: 'AI', icon: 'openai', accent: '#74d3ae', asset: 'openai' }
 };
 
 const renderTechStack = () => {
