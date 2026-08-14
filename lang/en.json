@@ -119,8 +119,8 @@
   },
   "tech": {
     "kicker": "Tech Stack",
-    "title": "Tech stack by use case",
-    "subline": "Only technologies that appear in current projects or that I can explain plausibly."
+    "title": "Technologies I have gained experience with",
+    "subline": "A compact overview from school, projects, local tools, and current learning areas."
   },
   "portfolio": {
     "kicker": "Projects",
@@ -407,48 +407,56 @@
           "Python"
         ]
       },
-      "repostencil": {
-        "title": "RepoStencil",
-        "description": "Planned or not yet publicly linked tooling project around repository structure and templates.",
+      "lb259": {
+        "title": "LB259",
+        "description": "Dataset project about smartphone use, productivity and wellbeing with CSV data and notebook analysis.",
         "tags": [
-          "Tooling",
-          "Repo structure"
+          "Data",
+          "Notebook"
+        ]
+      },
+      "internetEinAus": {
+        "title": "Internet on and off",
+        "description": "Hackathon prototype for a web interface that models internet access per classroom or subnet.",
+        "tags": [
+          "Python",
+          "Hackathon"
         ]
       }
     }
   },
   "techGroups": [
     {
-      "title": "Python",
+      "title": "Technologies",
       "items": [
+        "Python",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "React",
+        "Vite",
+        "Node.js",
         "FastAPI",
         "pytest",
-        "CLI/local tools"
-      ]
-    },
-    {
-      "title": "Frontend",
-      "items": [
-        "HTML/CSS",
-        "JavaScript",
-        "React/Vite"
-      ]
-    },
-    {
-      "title": "Data",
-      "items": [
+        "Java",
+        "C#",
+        ".NET",
+        "TypeScript",
+        "SQLite",
         "JSON",
         "CSV",
-        "SQLite"
-      ]
-    },
-    {
-      "title": "Tools",
-      "items": [
+        "AWS",
         "Git",
         "GitHub Actions",
-        "Docker basics"
+        "Docker",
+        "PowerShell",
+        "Batchfile",
+        "OpenAI"
       ]
     }
-  ]
+  ],
+  "linkLabels": {
+    "github": "GitHub",
+    "demo": "Demo"
+  }
 }
