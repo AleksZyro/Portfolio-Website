@@ -13,7 +13,7 @@
   },
   "hero": {
     "kicker": "Developerski profil",
-    "description": "Krećem u 3. IMS godinu i razvijam male do srednje Python i web aplikacije, sa fokusom na lokalne alate, API-je, testove i razumljive korisničke interfejse.",
+    "description": "U IMS-u sam sa fokusom na razvoj aplikacija i radim na Python alatima, web interfejsima, API-jima, testovima i obradi podataka.",
     "factProjects": "PathLab, SortLab, VSW, BESP2074",
     "factStack": "Python, React/Vite, FastAPI, Git",
     "projectsKicker": "Odabrani projekti",

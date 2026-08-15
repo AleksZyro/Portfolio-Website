@@ -288,7 +288,7 @@ const embeddedDictionaries = {
     hero: {
       kicker: 'Entwicklerprofil',
       title: 'Praxisorientierte Web- und Python-Projekte',
-      description: 'Ich starte ins 3. IMS-Jahr und entwickle kleine bis mittelgrosse Python- und Web-Anwendungen mit Fokus auf lokale Tools, APIs, Tests und nachvollziehbare Benutzeroberflächen.',
+      description: 'Ich besuche die IMS mit Schwerpunkt Applikationsentwicklung und arbeite an Python-Tools, Weboberflächen, APIs, Tests und Datenverarbeitung.',
       availability: 'Praktikumsstelle in der Schweiz f\u00fcr 2027/2028 gesucht.',
       factProjects: 'PathLab, SortLab, VSW, BESP2074',
       factStack: 'Python, React/Vite, FastAPI, Git',
@@ -427,7 +427,7 @@ const embeddedDictionaries = {
     hero: {
       kicker: 'Developer profile',
       title: 'Practical web and Python projects',
-      description: 'I am starting my 3rd IMS year and build small to medium-sized Python and web applications with a focus on local tools, APIs, tests, and understandable user interfaces.',
+      description: 'I attend the IMS with a focus on application development and work on Python tools, web interfaces, APIs, tests, and data processing.',
       availability: 'Looking for an internship position in Switzerland for 2027/2028.',
       factProjects: 'PathLab, SortLab, VSW, BESP2074',
       factStack: 'Python, React/Vite, FastAPI, Git',
@@ -555,7 +555,7 @@ const embeddedDictionaries = {
     hero: {
       kicker: 'Profil développeur',
       title: 'Projets web et Python orientés pratique',
-      description: 'Je commence ma 3e année IMS et développe des applications Python et web de petite à moyenne taille, avec un focus sur les outils locaux, les API, les tests et les interfaces compréhensibles.',
+      description: 'Je suis une formation IMS avec une spécialisation en développement applicatif et je travaille sur des outils Python, des interfaces web, des API, des tests et du traitement de données.',
       availability: 'Je cherche une place de stage en Suisse pour 2027/2028.',
       factProjects: 'PathLab, SortLab, VSW, BESP2074',
       factStack: 'Python, React/Vite, FastAPI, Git',
@@ -685,7 +685,7 @@ const embeddedDictionaries = {
     hero: {
       kicker: 'Developerski profil',
       title: 'Praktični web i Python projekti',
-      description: 'Krećem u 3. IMS godinu i razvijam male do srednje Python i web aplikacije, sa fokusom na lokalne alate, API-je, testove i razumljive korisničke interfejse.',
+      description: 'U IMS-u sam sa fokusom na razvoj aplikacija i radim na Python alatima, web interfejsima, API-jima, testovima i obradi podataka.',
       availability: 'Tražim praksu u Švajcarskoj za 2027/2028.',
       factProjects: 'PathLab, SortLab, VSW, BESP2074',
       factStack: 'Python, React/Vite, FastAPI, Git',

@@ -13,7 +13,7 @@
   },
   "hero": {
     "kicker": "Developer profile",
-    "description": "I am starting my 3rd IMS year and build small to medium-sized Python and web applications with a focus on local tools, APIs, tests, and understandable user interfaces.",
+    "description": "I attend the IMS with a focus on application development and work on Python tools, web interfaces, APIs, tests, and data processing.",
     "factProjects": "PathLab, SortLab, VSW, BESP2074",
     "factStack": "Python, React/Vite, FastAPI, Git",
     "projectsKicker": "Selected projects",
