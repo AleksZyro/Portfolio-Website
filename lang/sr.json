@@ -60,7 +60,6 @@
       "text": "Projektni rad sa kontrolom verzija, jednostavnim workflowovima i lokalnim setupima.",
       "points": [
         "Git i GitHub",
-        "GitHub Actions",
         "Docker osnove"
       ],
       "status": "Praksa: testovi i buildovi"
@@ -474,7 +473,6 @@
       "title": "Alati, cloud i automatizacija",
       "items": [
         "Git",
-        "GitHub Actions",
         "Docker",
         "PowerShell",
         "Batchfile",

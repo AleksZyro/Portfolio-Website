@@ -60,7 +60,6 @@
       "text": "Projektarbeit mit Versionskontrolle, einfachen Workflows und lokalen Setups.",
       "points": [
         "Git und GitHub",
-        "GitHub Actions",
         "Docker-Grundlagen"
       ],
       "status": "Praxis: Tests und Builds"
@@ -470,7 +469,6 @@
       "title": "Tools, Cloud und Automation",
       "items": [
         "Git",
-        "GitHub Actions",
         "Docker",
         "PowerShell",
         "Batchfile",

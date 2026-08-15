@@ -60,7 +60,6 @@
       "text": "Travail de projet avec contrôle de version, workflows simples et setups locaux.",
       "points": [
         "Git et GitHub",
-        "GitHub Actions",
         "Bases Docker"
       ],
       "status": "Pratique: tests et builds"
@@ -470,7 +469,6 @@
       "title": "Outils, cloud et automatisation",
       "items": [
         "Git",
-        "GitHub Actions",
         "Docker",
         "PowerShell",
         "Batchfile",

@@ -1,4 +1,4 @@
-﻿const portfolioData = {
+const portfolioData = {
   codingSinceYear: 2025,
   projects: [
     {
@@ -170,7 +170,7 @@
     {
       title: 'Tools, Cloud und Automation',
       items: [
-        'git', 'github-actions', 'docker', 'powershell', 'batchfile', 'aws', 'openai'
+        'git', 'docker', 'powershell', 'batchfile', 'aws', 'openai'
       ]
     }
   ],
@@ -324,7 +324,7 @@ const embeddedDictionaries = {
         tab: 'Tools',
         title: 'Tools',
         text: 'Projektarbeit mit Versionskontrolle, einfachen Workflows und lokalen Setups.',
-        points: ['Git und GitHub', 'GitHub Actions', 'Docker-Grundlagen'],
+        points: ['Git und GitHub', 'Docker-Grundlagen'],
         status: 'Praxis: Tests und Builds'
       },
       automation: {
@@ -463,7 +463,7 @@ const embeddedDictionaries = {
         tab: 'Tools',
         title: 'Tools',
         text: 'Project work with version control, simple workflows, and local setups.',
-        points: ['Git and GitHub', 'GitHub Actions', 'Docker basics'],
+        points: ['Git and GitHub', 'Docker basics'],
         status: 'Practice: tests and builds'
       },
       automation: {
@@ -591,7 +591,7 @@ const embeddedDictionaries = {
         tab: 'Outils',
         title: 'Outils',
         text: 'Travail de projet avec controle de version, workflows simples et setups locaux.',
-        points: ['Git et GitHub', 'GitHub Actions', 'Bases Docker'],
+        points: ['Git et GitHub', 'Bases Docker'],
         status: 'Pratique: tests et builds'
       },
       automation: {
@@ -721,7 +721,7 @@ const embeddedDictionaries = {
         tab: 'Alati',
         title: 'Alati',
         text: 'Projektni rad sa kontrolom verzija, jednostavnim workflow-ovima i lokalnim setup-ima.',
-        points: ['Git i GitHub', 'GitHub Actions', 'Docker osnove'],
+        points: ['Git i GitHub', 'Docker osnove'],
         status: 'Praksa: testovi i build-ovi'
       },
       automation: {
@@ -1426,7 +1426,7 @@ const techCatalog = {
   csv: { label: 'CSV', mark: 'CSV', icon: 'csv', accent: '#5fca91', asset: 'csv' },
   aws: { label: 'AWS', mark: 'AWS', icon: 'aws', accent: '#ffb44c', asset: 'aws' },
   git: { label: 'Git', mark: 'Git', icon: 'git', accent: '#f26545', asset: 'git' },
-  'github-actions': { label: 'GitHub Actions', mark: 'GA', icon: 'github-actions', accent: '#7d8cff', asset: 'github-actions' },
+
   docker: { label: 'Docker', mark: 'Dock', icon: 'docker', accent: '#38bdf8', asset: 'docker' },
   powershell: { label: 'PowerShell', mark: '>_', icon: 'powershell', accent: '#58a6ff', asset: 'powershell' },
   batchfile: { label: 'Batchfile', mark: 'BAT', icon: 'batchfile', accent: '#66b5ee', asset: 'batchfile' },
@@ -1570,7 +1570,7 @@ const focusDefinitions = () => ({
   cloud: {
     title: t('focus.cloud.title', 'Tools'),
     text: t('focus.cloud.text', 'Projektarbeit mit Versionskontrolle, einfachen Workflows und lokalen Setups.'),
-    points: tArray('focus.cloud.points', ['Git und GitHub', 'GitHub Actions', 'Docker-Grundlagen']),
+    points: tArray('focus.cloud.points', ['Git und GitHub', 'Docker-Grundlagen']),
     status: t('focus.cloud.status', 'Praxis: Tests und Builds')
   },
   automation: {

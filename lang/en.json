@@ -60,7 +60,6 @@
       "text": "Project work with version control, simple workflows, and local setups.",
       "points": [
         "Git and GitHub",
-        "GitHub Actions",
         "Docker basics"
       ],
       "status": "Practice: tests and builds"
@@ -470,7 +469,6 @@
       "title": "Tools, cloud and automation",
       "items": [
         "Git",
-        "GitHub Actions",
         "Docker",
         "PowerShell",
         "Batchfile",
