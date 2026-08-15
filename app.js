@@ -284,14 +284,13 @@ let activeProjectTitle = '';
 const embeddedDictionaries = {
   de: {
     skip: { content: 'Zum Inhalt springen' },
-    nav: { home: 'Start', about: '\u00dcber mich', career: 'Werdegang', tech: 'Tech-Stack', portfolio: 'Projekte', github: 'GitHub', contact: 'Kontakt' },
+    nav: { home: 'Start', about: '\u00dcber mich', career: 'Werdegang', tech: 'Tech-Stack', portfolio: 'Projekte', github: 'GitHub', contact: 'Kontakt', legal: 'Rechtliches' },
     hero: {
       kicker: 'Entwicklerprofil',
       title: 'Praxisorientierte Web- und Python-Projekte',
       description: 'Ich besuche die IMS mit Schwerpunkt Applikationsentwicklung und arbeite an Python-Tools, Weboberflächen, APIs, Tests und Datenverarbeitung.',
+      about: 'Mir sind klare Benutzeroberflächen, nachvollziehbarer Code, Teamfähigkeit und ehrliche Projektstände wichtig.',
       availability: 'Praktikumsstelle in der Schweiz f\u00fcr 2027/2028 gesucht.',
-      factProjects: 'PathLab, SortLab, VSW, BESP2074',
-      factStack: 'Python, React/Vite, FastAPI, Git',
       projectsKicker: 'Ausgewählte Projekte',
       projectsTitle: 'Projekte',
       projectPathlab: 'Routing-Visualizer, Tests, GitHub',
@@ -423,14 +422,13 @@ const embeddedDictionaries = {
   },
   en: {
     skip: { content: 'Skip to content' },
-    nav: { home: 'Home', about: 'About', career: 'Journey', tech: 'Tech Stack', portfolio: 'Projects', github: 'GitHub', contact: 'Contact' },
+    nav: { home: 'Home', about: 'About', career: 'Journey', tech: 'Tech Stack', portfolio: 'Projects', github: 'GitHub', contact: 'Contact', legal: 'Legal' },
     hero: {
       kicker: 'Developer profile',
       title: 'Practical web and Python projects',
       description: 'I attend the IMS with a focus on application development and work on Python tools, web interfaces, APIs, tests, and data processing.',
+      about: 'Clear user interfaces, understandable code, teamwork, and honest project status are important to me.',
       availability: 'Looking for an internship position in Switzerland for 2027/2028.',
-      factProjects: 'PathLab, SortLab, VSW, BESP2074',
-      factStack: 'Python, React/Vite, FastAPI, Git',
       projectsKicker: 'Selected projects',
       projectsTitle: 'Easy to verify',
       projectPathlab: 'Routing visualizer, tests, GitHub',
@@ -551,14 +549,13 @@ const embeddedDictionaries = {
   },
   fr: {
     skip: { content: 'Aller au contenu' },
-    nav: { home: 'Accueil', about: 'À propos', career: 'Parcours', tech: 'Stack tech', portfolio: 'Projets', github: 'GitHub', contact: 'Contact' },
+    nav: { home: 'Accueil', about: 'À propos', career: 'Parcours', tech: 'Stack tech', portfolio: 'Projets', github: 'GitHub', contact: 'Contact', legal: 'Légal' },
     hero: {
       kicker: 'Profil développeur',
       title: 'Projets web et Python orientés pratique',
       description: 'Je suis une formation IMS avec une spécialisation en développement applicatif et je travaille sur des outils Python, des interfaces web, des API, des tests et du traitement de données.',
+      about: 'J\'accorde de l\'importance aux interfaces claires, au code compréhensible, au travail en équipe et à des états de projet honnêtes.',
       availability: 'Je cherche une place de stage en Suisse pour 2027/2028.',
-      factProjects: 'PathLab, SortLab, VSW, BESP2074',
-      factStack: 'Python, React/Vite, FastAPI, Git',
       projectsKicker: 'Projets selectionnes',
       projectsTitle: 'Faciles a verifier',
       projectPathlab: 'Visualiseur de chemins, tests, GitHub',
@@ -681,14 +678,13 @@ const embeddedDictionaries = {
   },
   sr: {
     skip: { content: 'PreskoÄi na sadrÅ¾aj' },
-    nav: { home: 'PoÄetak', about: 'O meni', career: 'Razvoj', tech: 'Tech stack', portfolio: 'Projekti', github: 'GitHub', contact: 'Kontakt' },
+    nav: { home: 'PoÄetak', about: 'O meni', career: 'Razvoj', tech: 'Tech stack', portfolio: 'Projekti', github: 'GitHub', contact: 'Kontakt', legal: 'Pravno' },
     hero: {
       kicker: 'Developerski profil',
       title: 'Praktični web i Python projekti',
       description: 'U IMS-u sam sa fokusom na razvoj aplikacija i radim na Python alatima, web interfejsima, API-jima, testovima i obradi podataka.',
+      about: 'Važni su mi jasni korisnički interfejsi, razumljiv kod, timski rad i iskren status projekata.',
       availability: 'Tražim praksu u Švajcarskoj za 2027/2028.',
-      factProjects: 'PathLab, SortLab, VSW, BESP2074',
-      factStack: 'Python, React/Vite, FastAPI, Git',
       projectsKicker: 'Odabrani projekti',
       projectsTitle: 'Lako proverljivo',
       projectPathlab: 'Routing vizualizacija, testovi, GitHub',

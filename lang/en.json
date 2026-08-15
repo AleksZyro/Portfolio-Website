@@ -9,13 +9,12 @@
     "tech": "Tech Stack",
     "portfolio": "Projects",
     "contact": "Contact",
-    "github": "GitHub"
+    "github": "GitHub",
+    "legal": "Legal"
   },
   "hero": {
     "kicker": "Developer profile",
     "description": "I attend the IMS with a focus on application development and work on Python tools, web interfaces, APIs, tests, and data processing.",
-    "factProjects": "PathLab, SortLab, VSW, BESP2074",
-    "factStack": "Python, React/Vite, FastAPI, Git",
     "projectsKicker": "Selected projects",
     "projectsTitle": "Easy to verify",
     "projectPathlab": "Routing visualizer, tests, GitHub",
@@ -27,7 +26,8 @@
     "ctaEmail": "Email",
     "availability": "Looking for an internship position in Switzerland for 2027/2028.",
     "ctaGithub": "GitHub",
-    "title": "Practical web and Python projects"
+    "title": "Practical web and Python projects",
+    "about": "Clear user interfaces, understandable code, teamwork, and honest project status are important to me."
   },
   "focus": {
     "title": "Work areas",

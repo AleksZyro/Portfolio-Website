@@ -9,13 +9,12 @@
     "tech": "Teh stek",
     "portfolio": "Projekti",
     "contact": "Kontakt",
-    "github": "GitHub"
+    "github": "GitHub",
+    "legal": "Pravno"
   },
   "hero": {
     "kicker": "Developerski profil",
     "description": "U IMS-u sam sa fokusom na razvoj aplikacija i radim na Python alatima, web interfejsima, API-jima, testovima i obradi podataka.",
-    "factProjects": "PathLab, SortLab, VSW, BESP2074",
-    "factStack": "Python, React/Vite, FastAPI, Git",
     "projectsKicker": "Odabrani projekti",
     "projectsTitle": "Lako proverljivo",
     "projectPathlab": "Vizualizacija ruta, testovi, GitHub",
@@ -27,7 +26,8 @@
     "ctaEmail": "E-mail",
     "availability": "Tražim praksu u Švajcarskoj za 2027/2028.",
     "ctaGithub": "GitHub",
-    "title": "Praktični web i Python projekti"
+    "title": "Praktični web i Python projekti",
+    "about": "Važni su mi jasni korisnički interfejsi, razumljiv kod, timski rad i iskren status projekata."
   },
   "focus": {
     "title": "Oblasti rada",

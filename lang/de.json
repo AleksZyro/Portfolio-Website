@@ -9,13 +9,12 @@
     "tech": "Tech-Stack",
     "portfolio": "Projekte",
     "contact": "Kontakt",
-    "github": "GitHub"
+    "github": "GitHub",
+    "legal": "Rechtliches"
   },
   "hero": {
     "kicker": "Entwicklerprofil",
     "description": "Ich besuche die IMS mit Schwerpunkt Applikationsentwicklung und arbeite an Python-Tools, Weboberflächen, APIs, Tests und Datenverarbeitung.",
-    "factProjects": "PathLab, SortLab, VSW, BESP2074",
-    "factStack": "Python, React/Vite, FastAPI, Git",
     "projectsKicker": "Ausgewählte Projekte",
     "projectsTitle": "Projekte",
     "projectPathlab": "Routing-Visualizer, Tests, GitHub",
@@ -27,7 +26,8 @@
     "ctaEmail": "E-Mail",
     "availability": "Praktikumsstelle in der Schweiz für 2027/2028 gesucht.",
     "ctaGithub": "GitHub",
-    "title": "Praxisorientierte Web- und Python-Projekte"
+    "title": "Praxisorientierte Web- und Python-Projekte",
+    "about": "Mir sind klare Benutzeroberflächen, nachvollziehbarer Code, Teamfähigkeit und ehrliche Projektstände wichtig."
   },
   "focus": {
     "title": "Technische Praxis",
