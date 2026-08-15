@@ -8,9 +8,8 @@
     "career": "Parcours",
     "tech": "Stack tech",
     "portfolio": "Projets",
-    "contact": "Contact",
-    "github": "GitHub",
-    "legal": "Légal"
+    "contact": "Contact & légal",
+    "github": "GitHub"
   },
   "hero": {
     "kicker": "Profil développeur",

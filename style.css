@@ -987,6 +987,10 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   gap: 18px;
 }
 
+.contact .legal-wrap {
+  margin-top: 18px;
+}
+
 .legal-grid {
   display: grid;
   grid-template-columns: 1fr;

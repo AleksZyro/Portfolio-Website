@@ -284,7 +284,7 @@ let activeProjectTitle = '';
 const embeddedDictionaries = {
   de: {
     skip: { content: 'Zum Inhalt springen' },
-    nav: { home: 'Start', about: '\u00dcber mich', career: 'Werdegang', tech: 'Tech-Stack', portfolio: 'Projekte', github: 'GitHub', contact: 'Kontakt', legal: 'Rechtliches' },
+    nav: { home: 'Start', about: '\u00dcber mich', career: 'Werdegang', tech: 'Tech-Stack', portfolio: 'Projekte', github: 'GitHub', contact: 'Kontakt & Rechtliches' },
     hero: {
       kicker: 'Entwicklerprofil',
       title: 'Praxisorientierte Web- und Python-Projekte',
@@ -423,7 +423,7 @@ const embeddedDictionaries = {
   },
   en: {
     skip: { content: 'Skip to content' },
-    nav: { home: 'Home', about: 'About', career: 'Journey', tech: 'Tech Stack', portfolio: 'Projects', github: 'GitHub', contact: 'Contact', legal: 'Legal' },
+    nav: { home: 'Home', about: 'About', career: 'Journey', tech: 'Tech Stack', portfolio: 'Projects', github: 'GitHub', contact: 'Contact & Legal' },
     hero: {
       kicker: 'Developer profile',
       title: 'Practical web and Python projects',
@@ -551,7 +551,7 @@ const embeddedDictionaries = {
   },
   fr: {
     skip: { content: 'Aller au contenu' },
-    nav: { home: 'Accueil', about: 'À propos', career: 'Parcours', tech: 'Stack tech', portfolio: 'Projets', github: 'GitHub', contact: 'Contact', legal: 'Légal' },
+    nav: { home: 'Accueil', about: 'À propos', career: 'Parcours', tech: 'Stack tech', portfolio: 'Projets', github: 'GitHub', contact: 'Contact & légal' },
     hero: {
       kicker: 'Profil développeur',
       title: 'Projets web et Python orientés pratique',
@@ -681,7 +681,7 @@ const embeddedDictionaries = {
   },
   sr: {
     skip: { content: 'PreskoÄi na sadrÅ¾aj' },
-    nav: { home: 'PoÄetak', about: 'O meni', career: 'Razvoj', tech: 'Tech stack', portfolio: 'Projekti', github: 'GitHub', contact: 'Kontakt', legal: 'Pravno' },
+    nav: { home: 'PoÄetak', about: 'O meni', career: 'Razvoj', tech: 'Tech stack', portfolio: 'Projekti', github: 'GitHub', contact: 'Kontakt i pravno' },
     hero: {
       kicker: 'Developerski profil',
       title: 'Praktični web i Python projekti',
