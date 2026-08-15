@@ -12,10 +12,9 @@
     "github": "GitHub"
   },
   "hero": {
-    "kicker": "Développement applicatif IMS | Stage 2027/2028",
-    "description": "Je commence ma 3e année IMS et je développe de petites et moyennes applications Python et web avec un focus sur les outils locaux, les API, les tests et des interfaces compréhensibles.",
-    "factEducation": "Dès l’été 2026: 3e année IMS, développement applicatif",
-    "factProjects": "Projets: PathLab, SortLab, VSW, BESP2074",
+    "kicker": "Profil développeur",
+    "description": "Je commence ma 3e année IMS et développe des applications Python et web de petite à moyenne taille, avec un focus sur les outils locaux, les API, les tests et les interfaces compréhensibles.",
+    "factProjects": "PathLab, SortLab, VSW, BESP2074",
     "factStack": "Python, React/Vite, FastAPI, Git",
     "projectsKicker": "Projets sélectionnés",
     "projectsTitle": "Faciles à vérifier",
@@ -26,9 +25,9 @@
     "ctaPortfolio": "Voir les projets",
     "ctaContact": "Contact",
     "ctaEmail": "E-mail",
-    "availability": "Je cherche actuellement une place de stage en Suisse pour la 4e année IMS, période 2027/2028.",
-    "factInternship": "Stage recherché: Suisse, 2027/2028",
-    "ctaGithub": "GitHub"
+    "availability": "Je cherche une place de stage en Suisse pour 2027/2028.",
+    "ctaGithub": "GitHub",
+    "title": "Projets web et Python orientés pratique"
   },
   "focus": {
     "title": "Domaines de travail",

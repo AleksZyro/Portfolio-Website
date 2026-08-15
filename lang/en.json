@@ -12,10 +12,9 @@
     "github": "GitHub"
   },
   "hero": {
-    "kicker": "IMS Application Development | Internship 2027/2028",
-    "description": "I am starting my 3rd IMS year and build small to mid-sized Python and web applications with a focus on local tools, APIs, tests, and understandable user interfaces.",
-    "factEducation": "From summer 2026: 3rd IMS year, application development",
-    "factProjects": "Projects: PathLab, SortLab, VSW, BESP2074",
+    "kicker": "Developer profile",
+    "description": "I am starting my 3rd IMS year and build small to medium-sized Python and web applications with a focus on local tools, APIs, tests, and understandable user interfaces.",
+    "factProjects": "PathLab, SortLab, VSW, BESP2074",
     "factStack": "Python, React/Vite, FastAPI, Git",
     "projectsKicker": "Selected projects",
     "projectsTitle": "Easy to verify",
@@ -26,9 +25,9 @@
     "ctaPortfolio": "View projects",
     "ctaContact": "Contact",
     "ctaEmail": "Email",
-    "availability": "I am currently looking for an internship position in Switzerland for the 4th IMS year, period 2027/2028.",
-    "factInternship": "Looking for an internship: Switzerland, 2027/2028",
-    "ctaGithub": "GitHub"
+    "availability": "Looking for an internship position in Switzerland for 2027/2028.",
+    "ctaGithub": "GitHub",
+    "title": "Practical web and Python projects"
   },
   "focus": {
     "title": "Work areas",

@@ -12,10 +12,9 @@
     "github": "GitHub"
   },
   "hero": {
-    "kicker": "IMS Applikationsentwicklung | Praktikum 2027/2028",
+    "kicker": "Entwicklerprofil",
     "description": "Ich starte ins 3. IMS-Jahr und entwickle kleine bis mittelgrosse Python- und Web-Anwendungen mit Fokus auf lokale Tools, APIs, Tests und nachvollziehbare Benutzeroberflächen.",
-    "factEducation": "Ab Sommer 2026: 3. IMS-Jahr, Applikationsentwicklung",
-    "factProjects": "Projekte: PathLab, SortLab, VSW, BESP2074",
+    "factProjects": "PathLab, SortLab, VSW, BESP2074",
     "factStack": "Python, React/Vite, FastAPI, Git",
     "projectsKicker": "Ausgewählte Projekte",
     "projectsTitle": "Projekte",
@@ -26,9 +25,9 @@
     "ctaPortfolio": "Projekte ansehen",
     "ctaContact": "Kontakt",
     "ctaEmail": "E-Mail",
-    "availability": "Aktuell suche ich eine Praktikumsstelle in der Schweiz für das 4. IMS-Jahr, Zeitraum 2027/2028.",
-    "factInternship": "Praktikum gesucht: Schweiz, 2027/2028",
-    "ctaGithub": "GitHub"
+    "availability": "Praktikumsstelle in der Schweiz für 2027/2028 gesucht.",
+    "ctaGithub": "GitHub",
+    "title": "Praxisorientierte Web- und Python-Projekte"
   },
   "focus": {
     "title": "Technische Praxis",

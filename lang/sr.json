@@ -12,10 +12,9 @@
     "github": "GitHub"
   },
   "hero": {
-    "kicker": "IMS razvoj aplikacija | praksa 2027/2028",
-    "description": "Krećem u 3. IMS godinu i razvijam male i srednje Python i web aplikacije sa fokusom na lokalne alate, API-je, testove i razumljive korisničke interfejse.",
-    "factEducation": "Od leta 2026: 3. IMS godina, razvoj aplikacija",
-    "factProjects": "Projekti: PathLab, SortLab, VSW, BESP2074",
+    "kicker": "Developerski profil",
+    "description": "Krećem u 3. IMS godinu i razvijam male do srednje Python i web aplikacije, sa fokusom na lokalne alate, API-je, testove i razumljive korisničke interfejse.",
+    "factProjects": "PathLab, SortLab, VSW, BESP2074",
     "factStack": "Python, React/Vite, FastAPI, Git",
     "projectsKicker": "Odabrani projekti",
     "projectsTitle": "Lako proverljivo",
@@ -26,9 +25,9 @@
     "ctaPortfolio": "Pogledaj projekte",
     "ctaContact": "Kontakt",
     "ctaEmail": "E-mail",
-    "availability": "Trenutno tražim mesto za praksu u Švajcarskoj za 4. IMS godinu, period 2027/2028.",
-    "factInternship": "Tražim praksu: Švajcarska, 2027/2028",
-    "ctaGithub": "GitHub"
+    "availability": "Tražim praksu u Švajcarskoj za 2027/2028.",
+    "ctaGithub": "GitHub",
+    "title": "Praktični web i Python projekti"
   },
   "focus": {
     "title": "Oblasti rada",
