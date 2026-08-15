@@ -427,30 +427,55 @@
   },
   "techGroups": [
     {
-      "title": "Technologies",
+      "title": "Bases frontend",
       "items": [
-        "Python",
-        "JavaScript",
         "HTML",
         "CSS",
+        "JavaScript",
+        "TypeScript"
+      ]
+    },
+    {
+      "title": "Runtime frontend",
+      "items": [
         "React",
         "Vite",
-        "Node.js",
+        "Node.js"
+      ]
+    },
+    {
+      "title": "Python et API",
+      "items": [
+        "Python",
         "FastAPI",
-        "pytest",
-        "Java",
-        "C#",
-        ".NET",
-        "TypeScript",
-        "SQLite",
+        "pytest"
+      ]
+    },
+    {
+      "title": "Formats de données et stockage",
+      "items": [
         "JSON",
         "CSV",
-        "AWS",
+        "SQLite"
+      ]
+    },
+    {
+      "title": "Autres langages et frameworks",
+      "items": [
+        "Java",
+        "C#",
+        ".NET"
+      ]
+    },
+    {
+      "title": "Outils, cloud et automatisation",
+      "items": [
         "Git",
         "GitHub Actions",
         "Docker",
         "PowerShell",
         "Batchfile",
+        "AWS",
         "OpenAI"
       ]
     }

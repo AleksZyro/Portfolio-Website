@@ -431,30 +431,55 @@
   },
   "techGroups": [
     {
-      "title": "Tehnologije",
+      "title": "Frontend osnove",
       "items": [
-        "Python",
-        "JavaScript",
         "HTML",
         "CSS",
+        "JavaScript",
+        "TypeScript"
+      ]
+    },
+    {
+      "title": "Frontend runtime",
+      "items": [
         "React",
         "Vite",
-        "Node.js",
+        "Node.js"
+      ]
+    },
+    {
+      "title": "Python i API",
+      "items": [
+        "Python",
         "FastAPI",
-        "pytest",
-        "Java",
-        "C#",
-        ".NET",
-        "TypeScript",
-        "SQLite",
+        "pytest"
+      ]
+    },
+    {
+      "title": "Formati podataka i skladistenje",
+      "items": [
         "JSON",
         "CSV",
-        "AWS",
+        "SQLite"
+      ]
+    },
+    {
+      "title": "Drugi jezici i framework-i",
+      "items": [
+        "Java",
+        "C#",
+        ".NET"
+      ]
+    },
+    {
+      "title": "Alati, cloud i automatizacija",
+      "items": [
         "Git",
         "GitHub Actions",
         "Docker",
         "PowerShell",
         "Batchfile",
+        "AWS",
         "OpenAI"
       ]
     }

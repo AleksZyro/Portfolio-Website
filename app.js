@@ -148,11 +148,29 @@
   ],
   techGroups: [
     {
-      title: 'Technologien',
+      title: 'Frontend-Basics',
+      items: ['html', 'css', 'javascript', 'typescript']
+    },
+    {
+      title: 'Frontend-Runtime',
+      items: ['react', 'vite', 'nodejs']
+    },
+    {
+      title: 'Python und API',
+      items: ['python', 'fastapi', 'pytest']
+    },
+    {
+      title: 'Datenformate und Speicher',
+      items: ['json', 'csv', 'sqlite']
+    },
+    {
+      title: 'Weitere Sprachen und Frameworks',
+      items: ['java', 'csharp', 'dotnet']
+    },
+    {
+      title: 'Tools, Cloud und Automation',
       items: [
-        'python', 'javascript', 'html', 'css', 'react', 'vite', 'nodejs',
-        'fastapi', 'pytest', 'java', 'csharp', 'dotnet', 'typescript', 'sqlite', 'json', 'csv', 'aws',
-        'git', 'github-actions', 'docker', 'powershell', 'batchfile', 'openai'
+        'git', 'github-actions', 'docker', 'powershell', 'batchfile', 'aws', 'openai'
       ]
     }
   ],
@@ -1669,12 +1687,13 @@ const configureModalFile = ({ file, previewLabel, previewImage, itemType }) => {
 
   if (modalDownload) {
     modalDownload.hidden = !hasDownload;
-    modalDownload.href = hasDownload ? file : '#';
     modalDownload.textContent = t('portfolioDownloadButton', 'Download PDF');
     if (hasDownload) {
+      modalDownload.href = file;
       const filename = file.split('/').pop() || 'zertifikat.pdf';
       modalDownload.setAttribute('download', filename);
     } else {
+      modalDownload.removeAttribute('href');
       modalDownload.removeAttribute('download');
     }
   }

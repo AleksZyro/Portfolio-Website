@@ -23,11 +23,11 @@
 
       <ul class="nav-list" id="nav-list">
         <li><a href="#home" data-i18n="nav.home">Start</a></li>
+        <li><a href="#about" data-i18n="nav.about">Über mich</a></li>
+        <li><a href="#career" data-i18n="nav.career">Werdegang</a></li>
         <li><a href="#portfolio" data-i18n="nav.portfolio">Projekte</a></li>
         <li><a href="#github-activity" data-i18n="nav.github">GitHub</a></li>
         <li><a href="#tech-stack" data-i18n="nav.tech">Tech-Stack</a></li>
-        <li><a href="#about" data-i18n="nav.about">Über mich</a></li>
-        <li><a href="#career" data-i18n="nav.career">Werdegang</a></li>
         <li><a href="#contact" data-i18n="nav.contact">Kontakt</a></li>
       </ul>
 
@@ -117,71 +117,6 @@
       </div>
     </section>
 
-
-    <section class="portfolio section" id="portfolio" aria-labelledby="portfolio-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="kicker" data-i18n="portfolio.kicker">Projekte</p>
-          <h2 id="portfolio-title" data-i18n="portfolio.title">Ausgewählte Arbeiten</h2>
-          <p class="section-subline" data-i18n="portfolio.subline">Projekt-Explorer mit Status, Stack und Links oder Hinweisen.</p>
-        </div>
-
-        <div class="project-explorer reveal">
-          <div class="project-list" id="projects-grid" aria-label="Projektliste"></div>
-        </div>
-
-        <div class="certificate-block reveal">
-          <div class="certificate-head">
-            <h3 data-i18n="portfolio.certificatesTitle">Zertifikate</h3>
-            <p data-i18n="portfolio.certificatesSubline">Nachweise als PDF mit Vorschau und Download.</p>
-          </div>
-          <div class="cards-grid compact-certificates" id="certificates-grid" aria-label="Zertifikatsliste"></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="github-section section" id="github-activity" aria-labelledby="github-title">
-      <div class="container github-grid reveal">
-        <article class="github-card github-activity-card">
-          <p class="kicker" data-i18n="github.kicker">GitHub</p>
-          <h2 id="github-title" data-i18n="github.title">Aktivität und Open Source</h2>
-          <p data-i18n="github.subline">
-            GitHub nutze ich, um Projekte nachvollziehbar zu dokumentieren, Änderungen zu versionieren
-            und öffentliche Arbeiten verlinkbar zu machen.
-          </p>
-          <div class="github-links">
-            <a class="link-arrow" href="https://github.com/AleksZyro" target="_blank" rel="noopener noreferrer" data-i18n="github.profileLink">GitHub-Profil</a>
-            <a class="link-arrow" href="https://github.com/AleksZyro?tab=repositories" target="_blank" rel="noopener noreferrer" data-i18n="github.reposLink">Repositories</a>
-          </div>
-          <div class="activity-strip contribution-strip" aria-label="GitHub Contribution Grafik">
-            <img src="assets/contribution-graphic.svg" alt="GitHub Contribution Uebersicht von Aleksandar Nikolic" loading="lazy">
-          </div>
-        </article>
-
-        <aside class="github-card open-source-card">
-          <h3 data-i18n="github.openSourceTitle">Open-Source-Merges</h3>
-          <p data-i18n="github.openSourceText">
-            Ausgewählte gemergte Pull Requests mit direktem Link zum Nachweis.
-          </p>
-          <div class="open-source-list" id="open-source-list" aria-label="Open-Source-Beiträge"></div>
-        </aside>
-      </div>
-    </section>
-
-
-
-    <section class="tech section" id="tech-stack" aria-labelledby="tech-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="kicker" data-i18n="tech.kicker">Tech-Stack</p>
-          <h2 id="tech-title" data-i18n="tech.title">Tech-Stack nach Einsatzbereich</h2>
-          <p class="section-subline" data-i18n="tech.subline">Nur Technologien, die in aktuellen Projekten vorkommen oder die ich plausibel erklären kann.</p>
-        </div>
-
-        <div class="tech-grid reveal" id="tech-grid" aria-live="polite"></div>
-      </div>
-    </section>
-
     <section class="about section" id="about" aria-labelledby="about-title">
       <div class="container">
         <div class="section-head reveal">
@@ -268,6 +203,71 @@
       </div>
     </section>
 
+
+
+    <section class="portfolio section" id="portfolio" aria-labelledby="portfolio-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker" data-i18n="portfolio.kicker">Projekte</p>
+          <h2 id="portfolio-title" data-i18n="portfolio.title">Ausgewählte Arbeiten</h2>
+          <p class="section-subline" data-i18n="portfolio.subline">Projekt-Explorer mit Status, Stack und Links oder Hinweisen.</p>
+        </div>
+
+        <div class="project-explorer reveal">
+          <div class="project-list" id="projects-grid" aria-label="Projektliste"></div>
+        </div>
+
+        <div class="certificate-block reveal">
+          <div class="certificate-head">
+            <h3 data-i18n="portfolio.certificatesTitle">Zertifikate</h3>
+            <p data-i18n="portfolio.certificatesSubline">Nachweise als PDF mit Vorschau und Download.</p>
+          </div>
+          <div class="cards-grid compact-certificates" id="certificates-grid" aria-label="Zertifikatsliste"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="github-section section" id="github-activity" aria-labelledby="github-title">
+      <div class="container github-grid reveal">
+        <article class="github-card github-activity-card">
+          <p class="kicker" data-i18n="github.kicker">GitHub</p>
+          <h2 id="github-title" data-i18n="github.title">Aktivität und Open Source</h2>
+          <p data-i18n="github.subline">
+            GitHub nutze ich, um Projekte nachvollziehbar zu dokumentieren, Änderungen zu versionieren
+            und öffentliche Arbeiten verlinkbar zu machen.
+          </p>
+          <div class="github-links">
+            <a class="link-arrow" href="https://github.com/AleksZyro" target="_blank" rel="noopener noreferrer" data-i18n="github.profileLink">GitHub-Profil</a>
+            <a class="link-arrow" href="https://github.com/AleksZyro?tab=repositories" target="_blank" rel="noopener noreferrer" data-i18n="github.reposLink">Repositories</a>
+          </div>
+          <div class="activity-strip contribution-strip" aria-label="GitHub Contribution Grafik">
+            <img src="assets/contribution-graphic.svg" alt="GitHub Contribution Uebersicht von Aleksandar Nikolic" loading="lazy">
+          </div>
+        </article>
+
+        <aside class="github-card open-source-card">
+          <h3 data-i18n="github.openSourceTitle">Open-Source-Merges</h3>
+          <p data-i18n="github.openSourceText">
+            Ausgewählte gemergte Pull Requests mit direktem Link zum Nachweis.
+          </p>
+          <div class="open-source-list" id="open-source-list" aria-label="Open-Source-Beiträge"></div>
+        </aside>
+      </div>
+    </section>
+
+
+
+    <section class="tech section" id="tech-stack" aria-labelledby="tech-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker" data-i18n="tech.kicker">Tech-Stack</p>
+          <h2 id="tech-title" data-i18n="tech.title">Tech-Stack nach Einsatzbereich</h2>
+          <p class="section-subline" data-i18n="tech.subline">Nur Technologien, die in aktuellen Projekten vorkommen oder die ich plausibel erklären kann.</p>
+        </div>
+
+        <div class="tech-grid reveal" id="tech-grid" aria-live="polite"></div>
+      </div>
+    </section>
 
     <section class="contact section" id="contact" aria-labelledby="contact-title">
       <div class="container contact-wrap reveal">
