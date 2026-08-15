@@ -403,6 +403,10 @@ h1 span { color: var(--accent); }
   font-weight: 700;
 }
 
+.hero-bridge {
+  margin: 12px 0 16px;
+}
+
 .link-arrow::after,
 .project-links a::after,
 .contact-links a::after {
