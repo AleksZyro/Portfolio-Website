@@ -30,6 +30,32 @@
         display: none;
       }
 
+      .item-card[data-clickable-card="true"] {
+        cursor: pointer;
+      }
+
+      .item-card[data-clickable-card="true"]:hover,
+      .item-card[data-clickable-card="true"]:focus-within {
+        border-color: rgba(180, 167, 229, 0.46);
+      }
+
+      .item-card[data-clickable-card="true"] .project-details-trigger,
+      .item-card[data-clickable-card="true"] [data-detail-trigger="true"] {
+        display: none !important;
+      }
+
+      .item-card[data-project-id="besp2074"] img,
+      .item-card[data-project-id="besp2074"] .project-preview img,
+      .item-card[data-project-id="besp2074"] .item-preview img {
+        object-fit: contain !important;
+        background: #10263a;
+      }
+
+      .item-card[data-project-id="besp2074"] img,
+      .item-card img[data-openable-preview="true"] {
+        cursor: zoom-in;
+      }
+
       .practice-projects {
         min-height: auto;
         padding-top: clamp(28px, 4vw, 52px);
@@ -89,11 +115,23 @@
     document.head.appendChild(style);
   };
 
+  const getCardTitle = (card) => card.querySelector('h3')?.textContent?.trim() || '';
+
+  const findDetailsButton = (card) => [...card.querySelectorAll('button, a')].find((element) => {
+    const text = element.textContent?.trim().toLowerCase() || '';
+    return text.includes('details anzeigen') || text.includes('show details');
+  });
+
   const patchProjectCards = () => {
+    const projectList = document.querySelector('#projects-grid');
     const cards = [...document.querySelectorAll('.item-card')];
 
     for (const card of cards) {
-      const heading = card.querySelector('h3')?.textContent?.trim() || '';
+      const heading = getCardTitle(card);
+
+      if (heading === 'FolioLint' && projectList && projectList.firstElementChild !== card) {
+        projectList.prepend(card);
+      }
 
       if (heading === 'SortLab' && !card.textContent.includes('GitHub Pages')) {
         const tagHost = [...card.querySelectorAll('span')].find((span) => span.textContent.trim() === 'Algorithmen')?.parentElement;
@@ -109,6 +147,48 @@
           if (span.textContent.trim() === 'gemeinsam') {
             span.textContent = 'Gemeinsam';
           }
+        }
+      }
+
+      if (heading === 'BESP2074') {
+        card.dataset.projectId = 'besp2074';
+      }
+
+      const detailsButton = findDetailsButton(card);
+      if (detailsButton) {
+        detailsButton.classList.add('project-details-trigger');
+        detailsButton.dataset.detailTrigger = 'true';
+        card.dataset.clickableCard = 'true';
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('role', 'button');
+        card.setAttribute('aria-label', `${heading || 'Projekt'} öffnen`);
+
+        if (!card.dataset.clickHandlerAttached) {
+          card.dataset.clickHandlerAttached = 'true';
+          card.addEventListener('click', (event) => {
+            if (event.target.closest('a:not([data-detail-trigger="true"]), button:not([data-detail-trigger="true"]), img[data-openable-preview="true"]')) {
+              return;
+            }
+            detailsButton.click();
+          });
+          card.addEventListener('keydown', (event) => {
+            if (event.key !== 'Enter' && event.key !== ' ') return;
+            event.preventDefault();
+            detailsButton.click();
+          });
+        }
+      }
+
+      for (const image of card.querySelectorAll('img')) {
+        image.dataset.openablePreview = 'true';
+        if (!image.dataset.openHandlerAttached) {
+          image.dataset.openHandlerAttached = 'true';
+          image.addEventListener('click', (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            const src = image.currentSrc || image.src;
+            if (src) window.open(src, '_blank', 'noopener,noreferrer');
+          });
         }
       }
     }
@@ -135,6 +215,25 @@
         </div>
 
         <div class="practice-grid reveal">
+          <article class="practice-card">
+            <div class="practice-card-head">
+              <div>
+                <p class="kicker">Kundenprojekt</p>
+                <h3>AargoClean GmbH Website</h3>
+              </div>
+              <span class="practice-badge">in Arbeit</span>
+            </div>
+            <p>
+              Firmenwebsite für ein lokales Reinigungsunternehmen. Der aktuelle Fokus liegt auf Kundengespräch,
+              Anforderungen, Prototyping, statischer Umsetzung sowie Hosting- und Domain-Abklärung.
+            </p>
+            <ul class="practice-list">
+              <li>erstes Kundengespräch und Anforderungsaufnahme</li>
+              <li>geplanter Prototyp für Struktur, Inhalte und Kontaktführung</li>
+              <li>Vorbereitung von Deployment, Domain und DNS ohne Mail-Setup zu beschädigen</li>
+            </ul>
+          </article>
+
           <article class="practice-card">
             <div class="practice-card-head">
               <div>
