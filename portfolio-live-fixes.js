@@ -1,11 +1,8 @@
 (() => {
-  const PUBLIC_EMAIL = 'aleksandar09n@gmail.com';
-  const WORKING_SECTION_ID = 'currently-working-section';
-
   const translations = {
     de: {
-      workingKicker: 'Aktuelle Arbeit',
-      workingTitle: 'Woran ich aktuell arbeite',
+      workingKicker: 'Aktuell',
+      workingTitle: 'Aktuell arbeite ich an',
       workingSubline: 'Laufende Praxisprojekte mit echten Anforderungen, Feedback und Weiterentwicklung.',
       clientType: 'Kundenprojekt',
       teamType: 'Teamprojekt',
@@ -17,10 +14,12 @@
       heimTitle: 'Heimatschutz-Projekt',
       heimText: 'Teamprojekt mit Besuch durch ein Aargauer Heimatschutz-Projekt. Unsere Lösung erreichte den 2. Platz; aktuell wird geprüft, wie die Lösung für Organisationen in anderen Kantonen weitergedacht werden kann.',
       heimPoints: ['Präsentation vor externen Projektbeteiligten', 'Feedback aus einem realen Anwendungskontext', 'Weiterentwicklung für mögliche neue Stakeholder'],
-      contactText: 'Für Praktikum, Rückfragen oder Zusammenarbeit bin ich per E-Mail erreichbar.',
-      legalImprint: 'Impressum lesen',
-      legalPrivacy: 'Datenschutz lesen',
-      legalCookies: 'Cookies lesen'
+      contactText: 'Für eine Praktikumsstelle 2027/2028 in der Schweiz, Rückfragen oder Zusammenarbeit bin ich per E-Mail erreichbar.',
+      legalTexts: [
+        ['Impressum lesen', 'Diese Website ist eine private Portfolio-Seite von Aleksandar Nikolic und dient der Präsentation von Ausbildung, Projekten, Zertifikaten und Kontaktmöglichkeiten. Kontakt erfolgt per E-Mail.'],
+        ['Datenschutz lesen', 'Die Website setzt keine Analytics, keine Werbetracker und keine externen Tracking-Skripte ein. Beim Aufruf können durch den Hoster technisch notwendige Zugriffsdaten verarbeitet werden.'],
+        ['Cookies lesen', 'Es werden keine Tracking-Cookies gesetzt. Die gewählte Sprache kann lokal im Browser gespeichert werden, damit die Einstellung erhalten bleibt.']
+      ]
     },
     en: {
       workingKicker: 'Current work',
@@ -36,10 +35,12 @@
       heimTitle: 'Heritage protection project',
       heimText: 'Team project visited by an Aargau heritage-protection project. Our solution reached 2nd place; the next step is exploring how the solution could be adapted for organizations in other cantons.',
       heimPoints: ['Presentation to external project stakeholders', 'Feedback from a real application context', 'Further development for possible new stakeholders'],
-      contactText: 'For an internship, questions, or collaboration, I am reachable by email.',
-      legalImprint: 'Read imprint',
-      legalPrivacy: 'Read privacy note',
-      legalCookies: 'Read cookie note'
+      contactText: 'For an internship, questions or collaboration, I am reachable by email.',
+      legalTexts: [
+        ['Read imprint', 'This is a private portfolio website by Aleksandar Nikolic for presenting education, projects, certificates and contact options. Contact is available by email.'],
+        ['Read privacy note', 'The website uses no analytics, advertising trackers or external tracking scripts. The host may process technically necessary access data when the site is opened.'],
+        ['Read cookie note', 'No tracking cookies are used. Only the selected language may be stored locally in the browser so the setting is kept.']
+      ]
     },
     fr: {
       workingKicker: 'En cours',
@@ -56,9 +57,11 @@
       heimText: 'Projet d’équipe visité par un projet argovien de protection du patrimoine. Notre solution a obtenu la 2e place; l’étape suivante est d’étudier une adaptation pour d’autres cantons.',
       heimPoints: ['Présentation à des parties prenantes externes', 'Retour d’un contexte d’utilisation réel', 'Développement possible pour de nouveaux acteurs'],
       contactText: 'Pour un stage, des questions ou une collaboration, je suis joignable par e-mail.',
-      legalImprint: 'Lire l’impressum',
-      legalPrivacy: 'Lire la note de confidentialité',
-      legalCookies: 'Lire la note sur les cookies'
+      legalTexts: [
+        ['Lire les mentions légales', 'Cette page est un portfolio privé d’Aleksandar Nikolic pour présenter formation, projets, certificats et possibilités de contact. Le contact se fait par e-mail.'],
+        ['Lire la confidentialité', 'Le site n’utilise pas d’analytics, de trackers publicitaires ou de scripts de suivi externes. L’hébergeur peut traiter les données d’accès techniquement nécessaires.'],
+        ['Lire les cookies', 'Aucun cookie de suivi n’est utilisé. Seule la langue choisie peut être enregistrée localement dans le navigateur afin de conserver le réglage.']
+      ]
     },
     sr: {
       workingKicker: 'Trenutno',
@@ -75,9 +78,11 @@
       heimText: 'Timski projekat koji je posetio jedan aargauski Heimatschutz projekat. Naše rešenje je osvojilo 2. mesto; sada se razmatra dalji razvoj za organizacije u drugim kantonima.',
       heimPoints: ['Prezentacija pred spoljnim učesnicima projekta', 'Feedback iz realnog konteksta', 'Dalji razvoj za moguće nove stakeholder-e'],
       contactText: 'Za praksu, pitanja ili saradnju dostupan sam preko e-maila.',
-      legalImprint: 'Pročitaj impressum',
-      legalPrivacy: 'Pročitaj privatnost',
-      legalCookies: 'Pročitaj cookies'
+      legalTexts: [
+        ['Pročitaj impressum', 'Ovo je privatna portfolio stranica Aleksandra Nikolića za prikaz obrazovanja, projekata, sertifikata i kontakta. Kontakt je moguć putem e-maila.'],
+        ['Pročitaj privatnost', 'Stranica ne koristi analytics, reklamne trackere ili spoljne tracking skripte. Hoster može obrađivati tehnički neophodne podatke pristupa.'],
+        ['Pročitaj cookies', 'Ne koriste se tracking cookies. Samo izabrani jezik može biti lokalno sačuvan u browseru da bi podešavanje ostalo zapamćeno.']
+      ]
     },
     'sr-cyrl': {
       workingKicker: 'Тренутно',
@@ -94,65 +99,57 @@
       heimText: 'Тимски пројекат који је посетио један ааргауски Heimatschutz пројекат. Наше решење је освојило 2. место; сада се разматра даљи развој за организације у другим кантонима.',
       heimPoints: ['Презентација пред спољним учесницима пројекта', 'Feedback из реалног контекста', 'Даљи развој за могуће нове stakeholder-е'],
       contactText: 'За праксу, питања или сарадњу доступан сам преко e-mail-а.',
-      legalImprint: 'Прочитај impressum',
-      legalPrivacy: 'Прочитај приватност',
-      legalCookies: 'Прочитај cookies'
+      legalTexts: [
+        ['Прочитај impressum', 'Ово је приватна портфолио страница Александра Николића за приказ образовања, пројеката, сертификата и контакта. Контакт је могућ путем e-mail-а.'],
+        ['Прочитај приватност', 'Страница не користи analytics, рекламне trackere или спољне tracking скрипте. Хостер може обрађивати технички неопходне податке приступа.'],
+        ['Прочитај cookies', 'Не користе се tracking cookies. Само изабрани језик може бити локално сачуван у browser-у да би подешавање остало запамћено.']
+      ]
     }
   };
 
   const getLang = () => {
-    const active = document.querySelector('.lang-option.is-active')?.dataset.lang;
-    if (active && translations[active]) return active;
-    const selected = document.querySelector('[aria-selected="true"][data-lang]')?.dataset.lang;
-    if (selected && translations[selected]) return selected;
-    const label = document.getElementById('language-current-label')?.textContent?.trim().toLowerCase() || '';
-    if (label.includes('kyr') || label.includes('cyrl')) return 'sr-cyrl';
-    if (label.includes('sr')) return 'sr';
-    if (label.includes('fr')) return 'fr';
-    if (label.includes('en')) return 'en';
+    const current = document.getElementById('language-current-label')?.textContent?.trim().toLowerCase() || document.documentElement.lang || '';
+    if (current.includes('kyr') || current.includes('cyrl')) return 'sr-cyrl';
+    if (current.includes('sr')) return 'sr';
+    if (current.includes('fr')) return 'fr';
+    if (current.includes('en')) return 'en';
     return 'de';
   };
 
-  const text = () => translations[getLang()] || translations.de;
-  const safeList = (items) => items.map((item) => `<li>${item}</li>`).join('');
+  const tr = () => translations[getLang()] || translations.de;
 
-  const injectStyles = () => {
-    if (document.getElementById('portfolio-live-fix-styles')) return;
-    const style = document.createElement('style');
-    style.id = 'portfolio-live-fix-styles';
+  const injectLiveFixStyles = () => {
+    let style = document.getElementById('portfolio-live-fix-styles');
+    if (!style) {
+      style = document.createElement('style');
+      style.id = 'portfolio-live-fix-styles';
+      document.head.appendChild(style);
+    }
+
     style.textContent = `
-      .hero-copy {
-        display: grid !important;
-        justify-items: center !important;
-        text-align: center !important;
+      .hero { padding-top: clamp(42px, 7vw, 84px); }
+      .hero .hero-copy {
+        width: min(1060px, 92vw);
+        margin-inline: auto;
+        text-align: center;
+        display: grid;
+        justify-items: center;
+        gap: 14px;
       }
-
-      .hero-copy .kicker,
-      .section-head .kicker,
-      .working-head .kicker,
+      .hero .kicker,
+      .section .kicker,
       .contact .kicker,
-      .legal-wrap .kicker {
+      .legal-wrap .kicker,
+      .working-head .kicker {
         color: var(--accent-2) !important;
         text-shadow: 0 0 18px rgba(180, 167, 229, 0.18);
       }
-
-      .hero-copy [data-i18n="hero.description"],
-      .hero-copy [data-i18n="hero.about"],
-      .hero-copy [data-i18n="hero.bridge"] {
-        display: none !important;
-      }
-
-      .hero-copy p,
-      .hero-copy h1 { max-width: 72ch; }
-
-      .hero-actions { justify-content: center !important; }
-      .hero-actions .btn-secondary { display: none !important; }
-      .hero-actions .btn-primary {
-        font-size: 1.06rem !important;
-        padding: 12px 20px !important;
-      }
-
-      .hero-ticker { overflow: visible; width: 100%; }
+      .hero-copy > p:not(.kicker):not(.availability-note):not(.hero-bridge) { display: none !important; }
+      .hero-bridge { display: none !important; }
+      .hero-actions { justify-content: center; }
+      .hero-actions .btn:not(:first-child) { display: none !important; }
+      .hero-actions .btn:first-child { font-size: 1.05rem; padding: 13px 22px; }
+      .hero-ticker { width: 100%; overflow: visible; }
       .ticker-track {
         width: 100%;
         display: flex;
@@ -163,40 +160,23 @@
         animation: none !important;
         transform: none !important;
       }
-      .ticker-set { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; padding-right: 0; }
+      .ticker-set {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding-right: 0;
+      }
       .ticker-set[aria-hidden="true"] { display: none !important; }
 
-      .item-card[data-clickable-card="true"] { cursor: pointer; }
-      .item-card[data-clickable-card="true"]:hover,
-      .item-card[data-clickable-card="true"]:focus-visible { border-color: rgba(180, 167, 229, 0.46); }
-      .item-card[data-clickable-card="true"]:focus:not(:focus-visible),
-      .item-card[data-clickable-card="true"].is-modal-return-focus {
-        outline: none !important;
-        border-color: var(--line) !important;
-        box-shadow: var(--shadow) !important;
-      }
-      .item-card [data-detail-trigger="true"],
-      .project-details-trigger {
-        display: none !important;
-      }
-
-      .item-card[data-project-id="besp2074"] img,
-      .item-card[data-project-id="besp2074"] .project-preview img,
-      .item-card[data-project-id="besp2074"] .item-preview img {
-        object-fit: contain !important;
-        background: #10263a;
-      }
-      .item-card img[data-openable-preview="true"],
-      .modal-preview,
-      .modal-preview img { cursor: zoom-in; }
-      .modal-preview img { object-fit: contain !important; }
-
       .currently-working {
-        min-height: auto !important;
+        min-height: auto;
         padding-top: clamp(22px, 4vw, 42px);
         padding-bottom: clamp(26px, 4vw, 52px);
       }
       .working-banner {
+        width: min(1000px, 92vw);
+        margin-inline: auto;
         border: 1px solid rgba(180, 167, 229, 0.30);
         background: linear-gradient(135deg, rgba(32, 26, 50, 0.96), rgba(17, 15, 28, 0.92));
         border-radius: var(--radius-lg);
@@ -206,7 +186,6 @@
         gap: 18px;
         position: relative;
         overflow: hidden;
-        text-align: center;
       }
       .working-banner::before {
         content: "";
@@ -214,16 +193,11 @@
         inset: 0;
         pointer-events: none;
         background: radial-gradient(circle at top right, rgba(141, 108, 255, 0.22), transparent 34%);
+        opacity: 0.9;
       }
       .working-banner > * { position: relative; z-index: 1; }
-      .working-head { display: grid; gap: 8px; justify-items: center; }
-      .working-head p { max-width: 72ch; }
-      .working-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 14px;
-        text-align: left;
-      }
+      .working-head { display: grid; gap: 8px; text-align: center; justify-items: center; }
+      .working-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
       .working-card {
         border: 1px solid rgba(185, 174, 220, 0.18);
         background: rgba(12, 10, 20, 0.52);
@@ -232,7 +206,12 @@
         display: grid;
         gap: 11px;
       }
-      .working-card-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+      .working-card-head {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 12px;
+      }
       .working-card h3 { font-size: 1.12rem; }
       .working-card p,
       .working-card li { color: var(--muted); line-height: 1.58; }
@@ -250,65 +229,135 @@
       .practice-projects,
       .temporary-project-link { display: none !important; }
 
+      .item-card[data-clickable-card="true"] { cursor: pointer; }
+      .item-card[data-clickable-card="true"]:hover,
+      .item-card[data-clickable-card="true"]:focus-visible { border-color: rgba(180, 167, 229, 0.46); }
+      .item-card[data-clickable-card="true"]:focus:not(:focus-visible),
+      .item-card[data-clickable-card="true"].is-modal-return-focus {
+        outline: none !important;
+        border-color: var(--line) !important;
+        box-shadow: var(--shadow) !important;
+      }
+      .item-card[data-clickable-card="true"] .project-details-trigger,
+      .item-card[data-clickable-card="true"] [data-detail-trigger="true"] {
+        position: absolute !important;
+        width: 1px !important;
+        height: 1px !important;
+        padding: 0 !important;
+        margin: -1px !important;
+        overflow: hidden !important;
+        clip: rect(0 0 0 0) !important;
+        white-space: nowrap !important;
+        border: 0 !important;
+      }
+      .item-card[data-project-id="besp2074"] img,
+      .item-card[data-project-id="besp2074"] .project-preview img,
+      .item-card[data-project-id="besp2074"] .item-preview img {
+        object-fit: contain !important;
+        background: #10263a;
+      }
+      .item-card[data-project-id="besp2074"] img,
+      .item-card img[data-openable-preview="true"],
+      .modal-preview,
+      .modal-preview img { cursor: zoom-in; }
+      .modal-preview img { object-fit: contain !important; }
+
       .contact-wrap {
-        display: flex !important;
-        align-items: center !important;
-        justify-content: space-between !important;
-        gap: 18px !important;
-        flex-wrap: wrap !important;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 20px;
       }
-      .contact-wrap > div:first-child { flex: 1 1 360px; }
+      .contact-wrap p { max-width: 62ch; }
       .contact-links {
-        flex: 0 1 auto !important;
-        width: auto !important;
-        display: flex !important;
-        align-items: center !important;
+        width: auto;
+        min-width: 0;
+        justify-self: end;
+        display: flex;
+        align-items: center;
       }
-      .contact-links a:not([href="mailto:${PUBLIC_EMAIL}"]) { display: none !important; }
-      .contact-links a[href="mailto:${PUBLIC_EMAIL}"] {
-        width: auto !important;
-        min-width: 0 !important;
-        min-height: 0 !important;
-        padding: 12px 16px !important;
-        border-radius: 12px !important;
-        display: inline-flex !important;
-        align-items: center !important;
-        justify-content: center !important;
+      .contact-links a:not(:first-child) { display: none !important; }
+      .contact-links a {
+        width: auto;
+        min-width: 0;
+        padding-inline: 18px;
+        white-space: nowrap;
       }
 
-      .legal-details { margin-top: 14px; display: grid; gap: 10px; }
-      .legal-details details { border: 1px solid var(--line); background: var(--surface); border-radius: var(--radius-md); padding: 12px 14px; }
-      .legal-details summary { cursor: pointer; color: var(--text); font-weight: 800; }
-      .legal-details p { color: var(--muted); line-height: 1.58; }
-      .legal-details-content { display: grid; gap: 8px; padding-top: 10px; }
+      .legal-details { display: none !important; }
+      .legal-card {
+        cursor: pointer;
+        transition: border-color 0.16s ease, background 0.16s ease;
+      }
+      .legal-card:hover,
+      .legal-card:focus-visible {
+        border-color: rgba(180, 167, 229, 0.46);
+        background: rgba(30, 25, 44, 0.94);
+      }
+      .legal-card-extra {
+        grid-column: 1 / -1;
+        display: none;
+        margin-top: 10px;
+        color: var(--muted);
+        line-height: 1.58;
+        border-top: 1px solid rgba(185, 174, 220, 0.16);
+        padding-top: 10px;
+      }
+      .legal-card.is-open .legal-card-extra { display: block; }
+      .legal-card .legal-read-hint {
+        display: inline-flex;
+        margin-top: 8px;
+        color: var(--accent-2);
+        font-size: 0.82rem;
+        font-weight: 800;
+      }
+
+      @media (max-width: 760px) {
+        .contact-wrap { grid-template-columns: 1fr; }
+        .contact-links { justify-self: stretch; }
+        .contact-links a { width: 100%; white-space: normal; }
+      }
     `;
-    document.head.appendChild(style);
   };
 
-  const getCardTitle = (card) => card.querySelector('h3')?.textContent?.trim() || '';
-  const isDetailsControl = (element) => {
-    const label = element.textContent?.trim().toLowerCase() || '';
-    return /details anzeigen|show details|détails|details|detal/i.test(label);
+  const stripStrayMediaOverlays = () => {
+    for (const media of document.querySelectorAll('body > video, body > iframe')) {
+      const rect = media.getBoundingClientRect();
+      if (rect.width > 120 && rect.height > 80 && rect.left < 20 && !media.closest('main, header, footer')) {
+        media.remove();
+      }
+    }
   };
-  const findDetailsButton = (card) => [...card.querySelectorAll('button, a')].find(isDetailsControl);
 
   const clearReturnFocus = () => {
-    document.querySelectorAll('.is-modal-return-focus').forEach((el) => el.classList.remove('is-modal-return-focus'));
+    for (const card of document.querySelectorAll('.item-card.is-modal-return-focus')) {
+      card.classList.remove('is-modal-return-focus');
+    }
+
     const active = document.activeElement;
     if (active?.classList?.contains('item-card')) {
       active.classList.add('is-modal-return-focus');
       active.blur();
-      setTimeout(() => active.classList.remove('is-modal-return-focus'), 180);
+      setTimeout(() => active.classList.remove('is-modal-return-focus'), 450);
     }
   };
 
-  const patchCards = () => {
+  const getCardTitle = (card) => card.querySelector('h3')?.textContent?.trim() || '';
+
+  const findDetailsButton = (card) => [...card.querySelectorAll('button, a')].find((element) => {
+    const text = element.textContent?.trim().toLowerCase() || '';
+    return text.includes('details anzeigen') || text.includes('show details') || text.includes('détails') || text.includes('detal');
+  });
+
+  const patchProjectCards = () => {
     const projectList = document.querySelector('#projects-grid');
     const cards = [...document.querySelectorAll('.item-card')];
 
     for (const card of cards) {
       const heading = getCardTitle(card);
-      if (heading === 'FolioLint' && projectList && projectList.firstElementChild !== card) projectList.prepend(card);
+
+      if (heading === 'FolioLint' && projectList && projectList.firstElementChild !== card) {
+        projectList.prepend(card);
+      }
 
       if (heading === 'SortLab' && !card.textContent.includes('GitHub Pages')) {
         const tagHost = [...card.querySelectorAll('span')].find((span) => span.textContent.trim() === 'Algorithmen' || span.textContent.trim() === 'Algorithms')?.parentElement;
@@ -321,15 +370,22 @@
 
       if (heading.includes('VSW')) {
         for (const span of card.querySelectorAll('span')) {
-          if (span.textContent.trim() === 'gemeinsam') span.textContent = 'Gemeinsam';
+          if (span.textContent.trim() === 'gemeinsam') {
+            span.textContent = 'Gemeinsam';
+          }
         }
       }
-      if (heading === 'BESP2074') card.dataset.projectId = 'besp2074';
+
+      if (heading === 'BESP2074') {
+        card.dataset.projectId = 'besp2074';
+      }
 
       const detailsButton = findDetailsButton(card);
       if (detailsButton) {
         detailsButton.classList.add('project-details-trigger');
         detailsButton.dataset.detailTrigger = 'true';
+        detailsButton.setAttribute('aria-hidden', 'true');
+        detailsButton.tabIndex = -1;
         card.dataset.clickableCard = 'true';
         card.setAttribute('tabindex', '0');
         card.setAttribute('role', 'button');
@@ -338,7 +394,9 @@
         if (!card.dataset.clickHandlerAttached) {
           card.dataset.clickHandlerAttached = 'true';
           card.addEventListener('click', (event) => {
-            if (event.target.closest('a:not([data-detail-trigger="true"]), button:not([data-detail-trigger="true"]), img[data-openable-preview="true"]')) return;
+            if (event.target.closest('a:not([data-detail-trigger="true"]), button:not([data-detail-trigger="true"]), img[data-openable-preview="true"]')) {
+              return;
+            }
             detailsButton.click();
           });
           card.addEventListener('keydown', (event) => {
@@ -364,111 +422,182 @@
     }
   };
 
-  const getModalImageUrl = (element) => {
-    const img = element.closest('img') || element.querySelector?.('img');
+  const getOpenableModalImageUrl = (element) => {
+    const img = element.closest?.('img') || element.querySelector?.('img');
     if (img?.currentSrc || img?.src) return img.currentSrc || img.src;
-    const match = window.getComputedStyle(element).backgroundImage.match(/url\(["']?(.*?)["']?\)/);
+
+    const style = window.getComputedStyle(element);
+    const match = style.backgroundImage.match(/url\(["']?(.*?)["']?\)/);
     return match?.[1] || '';
   };
 
-  const patchModal = () => {
-    const modal = document.getElementById('detail-modal') || document.querySelector('dialog, .detail-modal');
+  const patchModalPreview = () => {
     const modalPreview = document.querySelector('.modal-preview');
-    if (modalPreview && !modalPreview.dataset.openHandlerAttached) {
-      modalPreview.dataset.openHandlerAttached = 'true';
-      modalPreview.addEventListener('click', (event) => {
-        const imageUrl = getModalImageUrl(modalPreview);
-        if (!imageUrl || imageUrl === 'none') return;
-        event.preventDefault();
-        event.stopPropagation();
-        window.open(imageUrl, '_blank', 'noopener,noreferrer');
-      });
+    if (!modalPreview || modalPreview.dataset.openHandlerAttached) return;
+
+    modalPreview.dataset.openHandlerAttached = 'true';
+    modalPreview.addEventListener('click', (event) => {
+      const imageUrl = getOpenableModalImageUrl(modalPreview);
+      if (!imageUrl || imageUrl === 'none') return;
+      event.preventDefault();
+      event.stopPropagation();
+      window.open(imageUrl, '_blank', 'noopener,noreferrer');
+    });
+
+    const dialog = document.getElementById('detail-modal');
+    if (dialog && !dialog.dataset.closeFocusPatchAttached) {
+      dialog.dataset.closeFocusPatchAttached = 'true';
+      dialog.addEventListener('close', clearReturnFocus);
+      dialog.addEventListener('cancel', () => setTimeout(clearReturnFocus, 0));
     }
-    if (modal && !modal.dataset.closeFocusPatched) {
-      modal.dataset.closeFocusPatched = 'true';
-      modal.addEventListener('close', () => setTimeout(clearReturnFocus, 0));
-      document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape') setTimeout(clearReturnFocus, 60);
-      });
-      document.querySelectorAll('.modal-close').forEach((button) => button.addEventListener('click', () => setTimeout(clearReturnFocus, 60)));
+
+    const closeButton = document.getElementById('modal-close');
+    if (closeButton && !closeButton.dataset.closeFocusPatchAttached) {
+      closeButton.dataset.closeFocusPatchAttached = 'true';
+      closeButton.addEventListener('click', () => setTimeout(clearReturnFocus, 0));
     }
   };
 
-  const renderWorkingSection = () => {
-    const data = text();
-    const portfolio = document.querySelector('#portfolio');
-    if (!portfolio) return;
-    document.getElementById(WORKING_SECTION_ID)?.remove();
+  const renderWorkingCard = (type, title, badge, text, points) => `
+    <article class="working-card">
+      <div class="working-card-head">
+        <div>
+          <p class="kicker">${type}</p>
+          <h3>${title}</h3>
+        </div>
+        <span class="working-badge">${badge}</span>
+      </div>
+      <p>${text}</p>
+      <ul class="working-list">
+        ${points.map((point) => `<li>${point}</li>`).join('')}
+      </ul>
+    </article>
+  `;
 
-    const section = document.createElement('section');
-    section.className = 'currently-working section';
-    section.id = WORKING_SECTION_ID;
-    section.setAttribute('aria-labelledby', 'currently-working-title');
+  const renderCurrentWork = () => {
+    const text = tr();
+    let section = document.querySelector('[data-section="currently-working"]');
+    const portfolioSection = document.querySelector('#portfolio');
+    if (!portfolioSection) return;
+
+    if (!section) {
+      section = document.createElement('section');
+      section.className = 'currently-working section';
+      section.dataset.section = 'currently-working';
+      section.setAttribute('aria-labelledby', 'currently-working-title');
+      portfolioSection.insertAdjacentElement('beforebegin', section);
+    }
+
     section.innerHTML = `
       <div class="container">
-        <div class="working-banner">
+        <div class="working-banner reveal">
           <div class="working-head">
-            <p class="kicker">${data.workingKicker}</p>
-            <h2 id="currently-working-title">${data.workingTitle}</h2>
-            <p class="section-subline">${data.workingSubline}</p>
+            <p class="kicker">${text.workingKicker}</p>
+            <h2 id="currently-working-title">${text.workingTitle}</h2>
+            <p class="section-subline">${text.workingSubline}</p>
           </div>
           <div class="working-grid">
-            <article class="working-card">
-              <div class="working-card-head"><div><p class="kicker">${data.clientType}</p><h3>${data.aargoTitle}</h3></div><span class="working-badge">${data.inProgress}</span></div>
-              <p>${data.aargoText}</p>
-              <ul class="working-list">${safeList(data.aargoPoints)}</ul>
-            </article>
-            <article class="working-card">
-              <div class="working-card-head"><div><p class="kicker">${data.teamType}</p><h3>${data.heimTitle}</h3></div><span class="working-badge">${data.followUp}</span></div>
-              <p>${data.heimText}</p>
-              <ul class="working-list">${safeList(data.heimPoints)}</ul>
-            </article>
+            ${renderWorkingCard(text.clientType, text.aargoTitle, text.inProgress, text.aargoText, text.aargoPoints)}
+            ${renderWorkingCard(text.teamType, text.heimTitle, text.followUp, text.heimText, text.heimPoints)}
           </div>
         </div>
       </div>
     `;
-    portfolio.insertAdjacentElement('beforebegin', section);
+  };
+
+  const removeOldPracticeSections = () => {
+    for (const oldSection of document.querySelectorAll('[data-section="practice-projects"], .practice-projects')) {
+      oldSection.remove();
+    }
+
+    for (const temporaryProject of document.querySelectorAll('[data-temp-project], .temporary-project-link')) {
+      temporaryProject.remove();
+    }
   };
 
   const patchContact = () => {
-    const data = text();
+    const text = tr();
     const contact = document.querySelector('#contact');
     if (!contact) return;
-    const textNode = contact.querySelector('[data-i18n="contact.description"]');
-    if (textNode) textNode.textContent = data.contactText;
-    const links = contact.querySelector('.contact-links');
-    if (!links) return;
-    links.innerHTML = `<a href="mailto:${PUBLIC_EMAIL}">${PUBLIC_EMAIL}</a>`;
+
+    const description = contact.querySelector('[data-i18n="contact.description"], .contact-wrap p');
+    if (description) description.textContent = text.contactText;
+
+    const links = [...contact.querySelectorAll('.contact-links a')];
+    if (!links.length) return;
+
+    const primary = links[0];
+    primary.href = 'mailto:aleksandar09n@gmail.com';
+    primary.textContent = 'aleksandar09n@gmail.com';
+
+    for (const link of links.slice(1)) {
+      link.remove();
+    }
   };
 
-  const addLegalDetails = () => {
-    const data = text();
-    const legalGrid = document.querySelector('.legal-grid');
-    if (!legalGrid) return;
-    let details = document.querySelector('[data-legal-details="expanded"]');
-    if (!details) {
-      details = document.createElement('div');
-      details.className = 'legal-details';
-      details.dataset.legalDetails = 'expanded';
-      legalGrid.insertAdjacentElement('afterend', details);
-    }
-    details.innerHTML = `
-      <details><summary>${data.legalImprint}</summary><div class="legal-details-content"><p>Diese Website ist eine private Portfolio-Seite von Aleksandar Nikolic und dient der Präsentation von Ausbildung, Projekten, Zertifikaten und Kontaktmöglichkeiten.</p><p>Kontakt erfolgt über die im Kontaktbereich angegebene E-Mail-Adresse. Es gibt kein Kontaktformular und keine direkte Dateneingabe auf der Seite.</p></div></details>
-      <details><summary>${data.legalPrivacy}</summary><div class="legal-details-content"><p>Die Website setzt keine Analytics, keine Werbetracker und keine externen Tracking-Skripte ein. Beim Aufruf können durch den Hoster technisch notwendige Zugriffsdaten verarbeitet werden.</p><p>Projektbilder, Zertifikate und die GitHub-Grafik werden lokal ausgeliefert. Externe Dienste werden erst geöffnet, wenn ein externer Link aktiv angeklickt wird.</p></div></details>
-      <details><summary>${data.legalCookies}</summary><div class="legal-details-content"><p>Es werden keine Tracking-Cookies gesetzt. Die gewählte Sprache kann lokal im Browser gespeichert werden, damit die Einstellung beim nächsten Besuch erhalten bleibt.</p><p>Diese lokale Speicherung dient nur der Bedienbarkeit der Website und nicht der Verfolgung oder Analyse von Besuchern.</p></div></details>
-    `;
+  const patchLegalCards = () => {
+    const legalCards = [...document.querySelectorAll('.legal-card')].slice(0, 3);
+    const text = tr();
+
+    document.querySelector('.legal-details')?.remove();
+
+    legalCards.forEach((card, index) => {
+      const legalText = text.legalTexts[index];
+      if (!legalText) return;
+
+      card.dataset.legalInteractive = 'true';
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('role', 'button');
+      card.setAttribute('aria-expanded', card.classList.contains('is-open') ? 'true' : 'false');
+
+      let hint = card.querySelector('.legal-read-hint');
+      if (!hint) {
+        hint = document.createElement('span');
+        hint.className = 'legal-read-hint';
+        card.appendChild(hint);
+      }
+      hint.textContent = legalText[0];
+
+      let extra = card.querySelector('.legal-card-extra');
+      if (!extra) {
+        extra = document.createElement('div');
+        extra.className = 'legal-card-extra';
+        card.appendChild(extra);
+      }
+      extra.textContent = legalText[1];
+
+      if (!card.dataset.legalClickAttached) {
+        card.dataset.legalClickAttached = 'true';
+        card.addEventListener('click', (event) => {
+          if (event.target.closest('a')) return;
+          card.classList.toggle('is-open');
+          card.setAttribute('aria-expanded', card.classList.contains('is-open') ? 'true' : 'false');
+        });
+        card.addEventListener('keydown', (event) => {
+          if (event.key !== 'Enter' && event.key !== ' ') return;
+          event.preventDefault();
+          card.click();
+        });
+      }
+    });
   };
 
   const runPatches = () => {
-    injectStyles();
-    patchCards();
-    patchModal();
-    renderWorkingSection();
+    injectLiveFixStyles();
+    stripStrayMediaOverlays();
+    removeOldPracticeSections();
+    renderCurrentWork();
+    patchProjectCards();
+    patchModalPreview();
     patchContact();
-    addLegalDetails();
+    patchLegalCards();
   };
 
-  const schedulePatches = () => [0, 80, 250, 700, 1400].forEach((delay) => setTimeout(runPatches, delay));
+  const schedulePatches = () => {
+    runPatches();
+    requestAnimationFrame(runPatches);
+    [100, 300, 700, 1300, 2200].forEach((delay) => setTimeout(runPatches, delay));
+  };
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', schedulePatches, { once: true });
@@ -476,10 +605,35 @@
     schedulePatches();
   }
 
+  window.addEventListener('load', schedulePatches, { once: true });
+
   document.addEventListener('click', (event) => {
-    if (event.target.closest('.lang-option, .lang-menu-button, [data-lang]')) {
+    if (event.target.closest('.lang-option, #language-menu-button, .lang-menu-button')) {
       [80, 250, 600].forEach((delay) => setTimeout(runPatches, delay));
     }
   });
-  window.addEventListener('load', schedulePatches, { once: true });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      setTimeout(clearReturnFocus, 0);
+    }
+  });
+
+  const attachScopedObservers = () => {
+    const targets = ['#projects-grid', '#certificates-grid', '#contact', '#legal'];
+    for (const selector of targets) {
+      const target = document.querySelector(selector);
+      if (!target || target.dataset.liveFixObserverAttached) continue;
+      target.dataset.liveFixObserverAttached = 'true';
+      const observer = new MutationObserver(() => {
+        requestAnimationFrame(runPatches);
+      });
+      observer.observe(target, { childList: true, subtree: true });
+    }
+  };
+
+  [300, 900, 1800].forEach((delay) => setTimeout(() => {
+    attachScopedObservers();
+    runPatches();
+  }, delay));
 })();
