@@ -60,8 +60,14 @@
       }
 
       .item-card[data-project-id="besp2074"] img,
-      .item-card img[data-openable-preview="true"] {
+      .item-card img[data-openable-preview="true"],
+      .modal-preview,
+      .modal-preview img {
         cursor: zoom-in;
+      }
+
+      .modal-preview img {
+        object-fit: contain !important;
       }
 
       .practice-projects {
@@ -118,6 +124,53 @@
         gap: 7px;
         list-style: disc;
         padding-left: 18px;
+      }
+
+      .temporary-project-link {
+        opacity: 0.68;
+        filter: grayscale(0.35);
+      }
+
+      .temporary-project-link::after {
+        content: "temporär";
+        margin-left: auto;
+        border: 1px solid rgba(185, 174, 220, 0.18);
+        border-radius: 999px;
+        padding: 3px 8px;
+        color: var(--muted);
+        font-size: 0.72rem;
+        font-weight: 700;
+      }
+
+      .legal-details {
+        margin-top: 14px;
+        display: grid;
+        gap: 10px;
+      }
+
+      .legal-details details {
+        border: 1px solid var(--line);
+        background: var(--surface);
+        border-radius: var(--radius-md);
+        padding: 12px 14px;
+      }
+
+      .legal-details summary {
+        cursor: pointer;
+        color: var(--text);
+        font-weight: 800;
+      }
+
+      .legal-details p,
+      .legal-details li {
+        color: var(--muted);
+        line-height: 1.58;
+      }
+
+      .legal-details-content {
+        display: grid;
+        gap: 8px;
+        padding-top: 10px;
       }
     `;
     document.head.appendChild(style);
@@ -202,6 +255,29 @@
     }
   };
 
+  const getOpenableModalImageUrl = (element) => {
+    const img = element.closest('img') || element.querySelector?.('img');
+    if (img?.currentSrc || img?.src) return img.currentSrc || img.src;
+
+    const style = window.getComputedStyle(element);
+    const match = style.backgroundImage.match(/url\(["']?(.*?)["']?\)/);
+    return match?.[1] || '';
+  };
+
+  const patchModalPreview = () => {
+    const modalPreview = document.querySelector('.modal-preview');
+    if (!modalPreview || modalPreview.dataset.openHandlerAttached) return;
+
+    modalPreview.dataset.openHandlerAttached = 'true';
+    modalPreview.addEventListener('click', (event) => {
+      const imageUrl = getOpenableModalImageUrl(modalPreview);
+      if (!imageUrl || imageUrl === 'none') return;
+      event.preventDefault();
+      event.stopPropagation();
+      window.open(imageUrl, '_blank', 'noopener,noreferrer');
+    });
+  };
+
   const addPracticeProjectsSection = () => {
     if (document.querySelector('[data-section="practice-projects"]')) return;
 
@@ -267,10 +343,77 @@
     portfolioSection.insertAdjacentElement('afterend', section);
   };
 
+  const addTemporaryMoreProjects = () => {
+    if (document.querySelector('[data-temp-project="aargoclean"]')) return;
+
+    const headings = [...document.querySelectorAll('h2, h3')];
+    const moreHeading = headings.find((heading) => /weitere projekte/i.test(heading.textContent || ''));
+    if (!moreHeading) return;
+
+    const container = moreHeading.closest('article, aside, section, div');
+    if (!container) return;
+
+    const links = [...container.querySelectorAll('a')];
+    const targetParent = links.at(-1)?.parentElement || container;
+
+    const createTempProject = (id, title) => {
+      const template = links.at(-1);
+      const item = template ? document.createElement(template.tagName.toLowerCase()) : document.createElement('span');
+      item.className = `${template?.className || 'project-link'} temporary-project-link`.trim();
+      item.dataset.tempProject = id;
+      item.setAttribute('aria-disabled', 'true');
+      item.removeAttribute('href');
+      item.textContent = title;
+      return item;
+    };
+
+    targetParent.appendChild(createTempProject('aargoclean', 'AargoClean GmbH Website'));
+    targetParent.appendChild(createTempProject('heimatschutz', 'Heimatschutz-Projekt'));
+  };
+
+  const addLegalDetails = () => {
+    if (document.querySelector('[data-legal-details="expanded"]')) return;
+
+    const legalGrid = document.querySelector('.legal-grid');
+    if (!legalGrid) return;
+
+    const details = document.createElement('div');
+    details.className = 'legal-details';
+    details.dataset.legalDetails = 'expanded';
+    details.innerHTML = `
+      <details>
+        <summary>Impressum lesen</summary>
+        <div class="legal-details-content">
+          <p>Diese Website ist eine private Portfolio-Seite von Aleksandar Nikolic und dient der Präsentation von Ausbildung, Projekten, Zertifikaten und Kontaktmöglichkeiten.</p>
+          <p>Kontakt erfolgt über die im Kontaktbereich angegebenen E-Mail-Adressen. Es gibt kein Kontaktformular und keine direkte Dateneingabe auf der Seite.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Datenschutz lesen</summary>
+        <div class="legal-details-content">
+          <p>Die Website setzt keine Analytics, keine Werbetracker und keine externen Tracking-Skripte ein. Beim Aufruf können durch den Hoster technisch notwendige Zugriffsdaten verarbeitet werden.</p>
+          <p>Projektbilder, Zertifikate und die GitHub-Grafik werden lokal ausgeliefert. Externe Dienste werden erst geöffnet, wenn ein externer Link aktiv angeklickt wird.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Cookies lesen</summary>
+        <div class="legal-details-content">
+          <p>Es werden keine Tracking-Cookies gesetzt. Die gewählte Sprache kann lokal im Browser gespeichert werden, damit die Einstellung beim nächsten Besuch erhalten bleibt.</p>
+          <p>Diese lokale Speicherung dient nur der Bedienbarkeit der Website und nicht der Verfolgung oder Analyse von Besuchern.</p>
+        </div>
+      </details>
+    `;
+
+    legalGrid.insertAdjacentElement('afterend', details);
+  };
+
   const runPatches = () => {
     injectLiveFixStyles();
     patchProjectCards();
+    patchModalPreview();
     addPracticeProjectsSection();
+    addTemporaryMoreProjects();
+    addLegalDetails();
   };
 
   if (document.readyState === 'loading') {
@@ -279,5 +422,7 @@
     runPatches();
   }
 
-  window.addEventListener('load', patchProjectCards, { once: true });
+  const observer = new MutationObserver(runPatches);
+  observer.observe(document.body, { childList: true, subtree: true });
+  window.addEventListener('load', runPatches, { once: true });
 })();
