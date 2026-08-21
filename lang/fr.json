@@ -9,7 +9,8 @@
     "tech": "Stack tech",
     "portfolio": "Projets",
     "contact": "Contact & légal",
-    "github": "GitHub"
+    "github": "GitHub",
+    "certificates": "Certificats"
   },
   "hero": {
     "kicker": "Profil développeur",
@@ -24,6 +25,7 @@
     "ctaContact": "Contact",
     "ctaEmail": "E-mail",
     "availability": "Je cherche une place de stage en Suisse pour 2027/2028.",
+    "alias": "Sur GitHub et dans mes projets, j'utilise le nom de développeur AleksZyro.",
     "ctaGithub": "GitHub",
     "title": "Projets web et Python orientés pratique",
     "about": "J'accorde de l'importance aux interfaces claires, au code compréhensible, au travail en équipe et à des états de projet honnêtes.",
@@ -157,7 +159,7 @@
     "detailEmptyTitle": "Choisir un projet",
     "detailEmptyText": "Clique sur une carte de projet pour afficher le statut, le stack, le rôle et ce que le projet m’apporte.",
     "moreProjectsTitle": "Autres projets",
-    "moreProjectsSubline": "Aperçu compact de projets plus petits ou pas encore entièrement documentés."
+    "moreProjectsSubline": "Autres projets que j'ai terminés ou que je développe encore actuellement."
   },
   "filters": {
     "all": "Tous",
@@ -175,7 +177,8 @@
     "close": "Fermer",
     "title": "Vue détail",
     "projectKicker": "Détails du projet",
-    "certificateKicker": "Certificat"
+    "certificateKicker": "Certificat",
+    "openImage": "Ouvrir l’aperçu dans un nouvel onglet"
   },
   "portfolioDownloadButton": "Télécharger le PDF",
   "footer": {
@@ -208,7 +211,7 @@
     "externalTitle": "Contenus externes",
     "externalText": "Les images de projets, certificats et le graphique GitHub sont chargés localement. Les liens externes ne s’ouvrent qu’au clic.",
     "imprintTitle": "Impressum",
-    "imprintText": "Site portfolio privé d’Aleksandar Nikolic. Le contact se fait par e-mail dans la section contact.",
+    "imprintText": "Site portfolio privé d’Aleksandar Nikolić. Le contact se fait par e-mail dans la section contact.",
     "contactLink": "Me contacter"
   },
   "portfolioItems": {
@@ -310,7 +313,7 @@
     "certificates": {
       "ethicalHacker": {
         "title": "Ethical Hacker",
-        "cardDescription": "Certificat au format PDF avec aperçu direct et téléchargement.",
+        "cardDescription": "Certificat avec aperçu, détails et téléchargement PDF dans la vue détaillée.",
         "detailDescription": "Ce certificat peut être consulté directement dans le portfolio ou téléchargé.",
         "meta": [
           "Format: PDF",
@@ -321,7 +324,7 @@
       },
       "introCybersecurity": {
         "title": "Introduction to Cybersecurity",
-        "cardDescription": "Certificat au format PDF avec aperçu direct et téléchargement.",
+        "cardDescription": "Certificat avec aperçu, détails et téléchargement PDF dans la vue détaillée.",
         "detailDescription": "Ce certificat peut être consulté directement dans le portfolio ou téléchargé.",
         "meta": [
           "Format: PDF",
@@ -332,7 +335,7 @@
       },
       "bbbHackathon": {
         "title": "BBB Hackathon",
-        "cardDescription": "Certificat au format PDF avec aperçu direct et téléchargement.",
+        "cardDescription": "Certificat avec aperçu, détails et téléchargement PDF dans la vue détaillée.",
         "detailDescription": "Ce certificat peut être consulté directement dans le portfolio ou téléchargé.",
         "meta": [
           "Format: PDF",
@@ -420,6 +423,14 @@
           "Python",
           "Hackathon"
         ]
+      },
+      "heimatschutz": {
+        "title": "Heimatschutz Aargau",
+        "description": "Application web interne développée en équipe pour collecter et examiner des demandes de construction avec les données de protection AGIS.",
+        "tags": [
+          "Projet d’équipe",
+          "Application web"
+        ]
       }
     }
   },
@@ -480,5 +491,10 @@
   "linkLabels": {
     "github": "GitHub",
     "demo": "Démo"
+  },
+  "certificates": {
+    "kicker": "Certificats",
+    "title": "Formations et apprentissages personnels",
+    "subline": "Certificats sélectionnés avec aperçu, détails et téléchargement PDF."
   }
 }

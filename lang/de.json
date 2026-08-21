@@ -9,7 +9,8 @@
     "tech": "Tech-Stack",
     "portfolio": "Projekte",
     "contact": "Kontakt & Rechtliches",
-    "github": "GitHub"
+    "github": "GitHub",
+    "certificates": "Zertifikate"
   },
   "hero": {
     "kicker": "Entwicklerprofil",
@@ -24,6 +25,7 @@
     "ctaContact": "Kontakt",
     "ctaEmail": "E-Mail",
     "availability": "Praktikumsstelle in der Schweiz für 2027/2028 gesucht.",
+    "alias": "Auf GitHub und in Projekten verwende ich den Entwicklernamen AleksZyro.",
     "ctaGithub": "GitHub",
     "title": "Praxisorientierte Web- und Python-Projekte",
     "about": "Mir sind klare Benutzeroberflächen, nachvollziehbarer Code, Teamfähigkeit und ehrliche Projektstände wichtig.",
@@ -157,7 +159,7 @@
     "detailEmptyTitle": "Projekt auswählen",
     "detailEmptyText": "Klicke auf eine Projektkarte, um Status, Stack, Rolle und Lerneffekt anzuzeigen.",
     "moreProjectsTitle": "Weitere Projekte",
-    "moreProjectsSubline": "Kompakte Übersicht für kleinere oder noch nicht ausführlich dokumentierte Arbeiten."
+    "moreProjectsSubline": "Weitere Projekte, die ich fertiggestellt habe oder aktuell noch entwickle."
   },
   "filters": {
     "all": "Alle",
@@ -175,7 +177,8 @@
     "close": "Schliessen",
     "title": "Detailansicht",
     "projectKicker": "Projektdetails",
-    "certificateKicker": "Zertifikat"
+    "certificateKicker": "Zertifikat",
+    "openImage": "Vorschau in neuem Tab öffnen"
   },
   "portfolioDownloadButton": "Download PDF",
   "footer": {
@@ -208,7 +211,7 @@
     "externalTitle": "Externe Inhalte",
     "externalText": "Projektbilder, Zertifikate und die GitHub-Grafik werden lokal geladen. Externe Links öffnen sich erst beim Anklicken.",
     "imprintTitle": "Impressum",
-    "imprintText": "Private Portfolio-Seite von Aleksandar Nikolic. Kontakt erfolgt per E-Mail im Kontaktbereich.",
+    "imprintText": "Private Portfolio-Seite von Aleksandar Nikolić. Kontakt erfolgt per E-Mail im Kontaktbereich.",
     "contactLink": "Kontakt aufnehmen"
   },
   "portfolioItems": {
@@ -310,7 +313,7 @@
     "certificates": {
       "ethicalHacker": {
         "title": "Ethical Hacker",
-        "cardDescription": "Zertifikat im PDF-Format mit direkter Vorschau und Download.",
+        "cardDescription": "Zertifikat mit Vorschau, Details und PDF-Download in der Detailansicht.",
         "detailDescription": "Dieses Zertifikat kannst du direkt im Portfolio ansehen oder herunterladen.",
         "meta": [
           "Format: PDF",
@@ -321,7 +324,7 @@
       },
       "introCybersecurity": {
         "title": "Introduction to Cybersecurity",
-        "cardDescription": "Zertifikat im PDF-Format mit direkter Vorschau und Download.",
+        "cardDescription": "Zertifikat mit Vorschau, Details und PDF-Download in der Detailansicht.",
         "detailDescription": "Dieses Zertifikat kannst du direkt im Portfolio ansehen oder herunterladen.",
         "meta": [
           "Format: PDF",
@@ -332,7 +335,7 @@
       },
       "bbbHackathon": {
         "title": "BBB Hackathon",
-        "cardDescription": "Zertifikat im PDF-Format mit direkter Vorschau und Download.",
+        "cardDescription": "Zertifikat mit Vorschau, Details und PDF-Download in der Detailansicht.",
         "detailDescription": "Dieses Zertifikat kannst du direkt im Portfolio ansehen oder herunterladen.",
         "meta": [
           "Format: PDF",
@@ -420,6 +423,14 @@
           "Python",
           "Hackathon"
         ]
+      },
+      "heimatschutz": {
+        "title": "Heimatschutz Aargau",
+        "description": "Gemeinsame interne Webanwendung zur Sammlung und Prüfung von Baugesuchen mit AGIS-Schutzdaten.",
+        "tags": [
+          "Teamprojekt",
+          "Webanwendung"
+        ]
       }
     }
   },
@@ -480,5 +491,10 @@
   "linkLabels": {
     "github": "GitHub",
     "demo": "Demo"
+  },
+  "certificates": {
+    "kicker": "Zertifikate",
+    "title": "Weiterbildungen in meiner Freizeit",
+    "subline": "Ausgewählte Zertifikate mit Vorschau, Details und PDF-Download."
   }
 }

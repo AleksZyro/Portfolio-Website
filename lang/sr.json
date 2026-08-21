@@ -9,7 +9,8 @@
     "tech": "Teh stek",
     "portfolio": "Projekti",
     "contact": "Kontakt i pravno",
-    "github": "GitHub"
+    "github": "GitHub",
+    "certificates": "Sertifikati"
   },
   "hero": {
     "kicker": "Developerski profil",
@@ -24,6 +25,7 @@
     "ctaContact": "Kontakt",
     "ctaEmail": "E-mail",
     "availability": "Tražim praksu u Švajcarskoj za 2027/2028.",
+    "alias": "Na GitHubu i u projektima koristim developersko ime AleksZyro.",
     "ctaGithub": "GitHub",
     "title": "Praktični web i Python projekti",
     "about": "Važni su mi jasni korisnički interfejsi, razumljiv kod, timski rad i iskren status projekata.",
@@ -157,7 +159,7 @@
     "detailEmptyTitle": "Izaberi projekat",
     "detailEmptyText": "Klikni na projektnu karticu da vidiš status, stack, ulogu i šta sam naučio.",
     "moreProjectsTitle": "Dodatni projekti",
-    "moreProjectsSubline": "Kompaktan pregled manjih projekata ili radova koji još nisu potpuno dokumentovani."
+    "moreProjectsSubline": "Dodatni projekti koje sam završio ili ih još trenutno razvijam."
   },
   "filters": {
     "all": "Svi",
@@ -175,7 +177,8 @@
     "close": "Zatvori",
     "title": "Detaljni prikaz",
     "projectKicker": "Detalji projekta",
-    "certificateKicker": "Sertifikat"
+    "certificateKicker": "Sertifikat",
+    "openImage": "Otvori pregled u novoj kartici"
   },
   "portfolioDownloadButton": "Preuzmi PDF",
   "footer": {
@@ -310,7 +313,7 @@
     "certificates": {
       "ethicalHacker": {
         "title": "Ethical Hacker",
-        "cardDescription": "Sertifikat u PDF formatu sa direktnim pregledom i preuzimanjem.",
+        "cardDescription": "Sertifikat sa pregledom, detaljima i PDF preuzimanjem u detaljnom prikazu.",
         "detailDescription": "Ovaj sertifikat možeš direktno pogledati ili preuzeti u portfoliju.",
         "meta": [
           "Format: PDF",
@@ -321,7 +324,7 @@
       },
       "introCybersecurity": {
         "title": "Introduction to Cybersecurity",
-        "cardDescription": "Sertifikat u PDF formatu sa direktnim pregledom i preuzimanjem.",
+        "cardDescription": "Sertifikat sa pregledom, detaljima i PDF preuzimanjem u detaljnom prikazu.",
         "detailDescription": "Ovaj sertifikat možeš direktno pogledati ili preuzeti u portfoliju.",
         "meta": [
           "Format: PDF",
@@ -332,7 +335,7 @@
       },
       "bbbHackathon": {
         "title": "BBB hakaton",
-        "cardDescription": "Sertifikat u PDF formatu sa direktnim pregledom i preuzimanjem.",
+        "cardDescription": "Sertifikat sa pregledom, detaljima i PDF preuzimanjem u detaljnom prikazu.",
         "detailDescription": "Ovaj sertifikat možeš direktno pogledati ili preuzeti u portfoliju.",
         "meta": [
           "Format: PDF",
@@ -424,6 +427,14 @@
           "Python",
           "Hakaton"
         ]
+      },
+      "heimatschutz": {
+        "title": "Heimatschutz Aargau",
+        "description": "Zajednička interna web aplikacija za prikupljanje i proveru zahteva za gradnju uz podatke o zaštiti AGIS.",
+        "tags": [
+          "Timski projekat",
+          "Veb aplikacija"
+        ]
       }
     }
   },
@@ -480,5 +491,10 @@
         "OpenAI"
       ]
     }
-  ]
+  ],
+  "certificates": {
+    "kicker": "Sertifikati",
+    "title": "Usavršavanje u slobodno vreme",
+    "subline": "Odabrani sertifikati sa pregledom, detaljima i PDF preuzimanjem."
+  }
 }

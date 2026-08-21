@@ -112,6 +112,13 @@ const portfolioData = {
       description: 'Hackathon-Prototyp für eine Weboberfläche, die Internetzugang pro Schulzimmer oder Subnetz modelliert.',
       tags: ['Python', 'Hackathon'],
       url: 'https://github.com/BotondCsereklye/internet-ein-aus'
+    },
+    {
+      id: 'heimatschutz',
+      title: 'Heimatschutz Aargau',
+      description: 'Gemeinsame interne Webanwendung zur Sammlung und Prüfung von Baugesuchen mit AGIS-Schutzdaten.',
+      tags: ['Teamprojekt', 'Webanwendung'],
+      url: 'https://github.com/Momik-jpg/Projekt-Heimatschutz-ANAMB'
     }
   ],
   certificates: [
@@ -143,6 +150,36 @@ const portfolioData = {
       meta: ['Format: PDF', 'Nachweis: Zertifikat', 'Download: verfügbar'],
       file: 'assets/certificates/bbb-hackathon.pdf',
       previewImage: 'assets/certificate-previews/bbb-hackathon-preview.png',
+      previewLabel: 'Zertifikat'
+    },
+    {
+      id: 'absofort-ki-ollama',
+      title: 'Lokale KI nutzen: private KI-Assistenz mit Ollama & Open-Source-Modellen',
+      cardDescription: 'ab sofort-Zertifikat für einen Kurs zu lokaler KI, Ollama und Open-Source-Modellen.',
+      detailDescription: 'Dieses ab sofort-Zertifikat bestätigt den erfolgreichen Abschluss des Kurses „Lokale KI nutzen: private KI-Assistenz mit Ollama & Open-Source-Modellen“. Das Zertifikat wurde am 22.08.2026 ausgestellt, mit 87.5 Prozent und einem Umfang von 6 Stunden abgeschlossen.',
+      meta: ['Aussteller: Alpasana GmbH / ab sofort', 'Niveau: Foundation', 'Ergebnis: 87.5 %', 'Ausgestellt am: 22.08.2026', 'Verifikation: ab sofort ID 491A67E697', 'Format: PDF'],
+      file: 'assets/certificates/absofort-zertifikat-491A67E697.pdf',
+      previewImage: 'assets/certificate-previews/absofort-zertifikat-491A67E697.png',
+      previewLabel: 'Zertifikat'
+    },
+    {
+      id: 'abacus-finanzbuchhaltung',
+      title: 'ABACUS Finanzbuchhaltung',
+      cardDescription: 'Anwender-Zertifikat für ABACUS Finanzbuchhaltung mit Grundlagen zu Benutzeroberfläche, Stammdaten, Buchungen, Auswertungen und MWST-Abrechnung.',
+      detailDescription: 'Das ABACUS-Zertifikat bestätigt den erfolgreich abgeschlossenen Zertifikatskurs und die bestandene Abschlussprüfung im Bereich ABACUS Finanzbuchhaltung. Inhaltliche Schwerpunkte waren Benutzeroberfläche, Stammdaten, Buchungen anhand von Belegen, Buchungsarten, Auswertungen wie Journal, Kontoauszug, Bilanz und Erfolgsrechnung sowie MWST-Abrechnung.',
+      meta: ['Aussteller: ABACUS Research AG', 'Bereich: Finanzbuchhaltung', 'Nachweis: Zertifikat mit bestandener Abschlussprüfung', 'Format: PDF'],
+      previewImage: 'assets/certificate-previews/abacus-finanzbuchhaltung.svg',
+      expectedFile: 'assets/certificates/abacus-finanzbuchhaltung.pdf',
+      previewLabel: 'Zertifikat'
+    },
+    {
+      id: 'linkedin-generative-ki',
+      title: 'Was ist generative KI?',
+      cardDescription: 'LinkedIn-Learning-Kurs zu generativen KI-Tools, künstlicher Intelligenz und grundlegender Einordnung generativer KI.',
+      detailDescription: 'Dieses LinkedIn-Learning-Zertifikat bestätigt den abgeschlossenen Kurs „Was ist generative KI?“. Der Kurs behandelt generative KI-Tools, künstliche Intelligenz und die grundlegende Einordnung generativer KI im Arbeits- und Lernkontext.',
+      meta: ['Aussteller: LinkedIn Learning', 'Bereich: Generative KI', 'Dauer: 42 Minuten', 'Format: PDF'],
+      previewImage: 'assets/certificate-previews/linkedin-generative-ki.svg',
+      expectedFile: 'assets/certificates/linkedin-generative-ki.pdf',
       previewLabel: 'Zertifikat'
     }
   ],
@@ -265,9 +302,11 @@ const modalKicker = document.querySelector('.modal-kicker');
 const modalPreviewLabel = document.querySelector('.modal-preview-label');
 const modalPreviewTitle = document.getElementById('modal-preview-title');
 const modalPreviewSubtitle = document.getElementById('modal-preview-subtitle');
+const modalPreviewLink = document.getElementById('modal-preview-link');
 const modalDownload = document.getElementById('modal-download');
 
 const yearTarget = document.getElementById('year');
+const footerName = document.getElementById('footer-name');
 const projectsCountEl = document.getElementById('projects-count');
 const certificatesCountEl = document.getElementById('certificates-count');
 const yearsCountEl = document.getElementById('years-count');
@@ -279,6 +318,7 @@ i18nElements.forEach((element) => {
 });
 
 let activeDictionary = {};
+let currentLanguageCode = 'de';
 let currentFocusKey = 'web';
 let activeProjectTitle = '';
 const embeddedDictionaries = {
@@ -292,6 +332,7 @@ const embeddedDictionaries = {
       about: 'Mir sind klare Benutzeroberflächen, nachvollziehbarer Code, Teamfähigkeit und ehrliche Projektstände wichtig.',
       bridge: 'Besonders interessiert mich, wie aus kleinen Tools zuverlässige Anwendungen werden: mit klarer Struktur, verständlicher Bedienung und sauber dokumentierten Änderungen.',
       availability: 'Praktikumsstelle in der Schweiz f\u00fcr 2027/2028 gesucht.',
+      alias: 'Auf GitHub und in Projekten verwende ich den Entwicklernamen AleksZyro.',
       projectsKicker: 'Ausgewählte Projekte',
       projectsTitle: 'Projekte',
       projectPathlab: 'Routing-Visualizer, Tests, GitHub',
@@ -431,6 +472,7 @@ const embeddedDictionaries = {
       about: 'Clear user interfaces, understandable code, teamwork, and honest project status are important to me.',
       bridge: 'I am especially interested in turning small tools into reliable applications: with clear structure, understandable interfaces, and well documented changes.',
       availability: 'Looking for an internship position in Switzerland for 2027/2028.',
+      alias: 'On GitHub and in projects, I use the developer name AleksZyro.',
       projectsKicker: 'Selected projects',
       projectsTitle: 'Easy to verify',
       projectPathlab: 'Routing visualizer, tests, GitHub',
@@ -559,6 +601,7 @@ const embeddedDictionaries = {
       about: 'J\'accorde de l\'importance aux interfaces claires, au code compréhensible, au travail en équipe et à des états de projet honnêtes.',
       bridge: 'Ce qui m\'intéresse surtout, c\'est de transformer de petits outils en applications fiables, avec une structure claire, une utilisation compréhensible et des changements bien documentés.',
       availability: 'Je cherche une place de stage en Suisse pour 2027/2028.',
+      alias: 'Sur GitHub et dans mes projets, j\'utilise le nom de développeur AleksZyro.',
       projectsKicker: 'Projets selectionnes',
       projectsTitle: 'Faciles a verifier',
       projectPathlab: 'Visualiseur de chemins, tests, GitHub',
@@ -689,6 +732,7 @@ const embeddedDictionaries = {
       about: 'Važni su mi jasni korisnički interfejsi, razumljiv kod, timski rad i iskren status projekata.',
       bridge: 'Posebno me zanima kako mali alati postaju pouzdane aplikacije: sa jasnom strukturom, razumljivim korišćenjem i dobro dokumentovanim izmenama.',
       availability: 'Tražim praksu u Švajcarskoj za 2027/2028.',
+      alias: 'Na GitHubu i u projektima koristim developersko ime AleksZyro.',
       projectsKicker: 'Odabrani projekti',
       projectsTitle: 'Lako proverljivo',
       projectPathlab: 'Routing vizualizacija, testovi, GitHub',
@@ -809,6 +853,136 @@ const embeddedDictionaries = {
   }
 };
 
+const certificateCopy = {
+  de: {
+    'absofort-ki-ollama': {
+      title: 'Lokale KI nutzen: private KI-Assistenz mit Ollama & Open-Source-Modellen',
+      cardDescription: 'ab sofort-Zertifikat für einen Kurs zu lokaler KI, Ollama und Open-Source-Modellen.',
+      detailDescription: 'Dieses ab sofort-Zertifikat bestätigt den erfolgreichen Abschluss des Kurses „Lokale KI nutzen: private KI-Assistenz mit Ollama & Open-Source-Modellen“. Das Zertifikat wurde am 22.08.2026 ausgestellt, mit 87.5 Prozent und einem Umfang von 6 Stunden abgeschlossen.',
+      meta: ['Aussteller: Alpasana GmbH / ab sofort', 'Niveau: Foundation', 'Ergebnis: 87.5 %', 'Ausgestellt am: 22.08.2026', 'Verifikation: ab sofort ID 491A67E697', 'Format: PDF'],
+      previewLabel: 'Zertifikat'
+    },
+    'abacus-finanzbuchhaltung': {
+      title: 'ABACUS Finanzbuchhaltung',
+      cardDescription: 'Anwender-Zertifikat für ABACUS Finanzbuchhaltung mit Grundlagen zu Benutzeroberfläche, Stammdaten, Buchungen, Auswertungen und MWST-Abrechnung.',
+      detailDescription: 'Das ABACUS-Zertifikat bestätigt den erfolgreich abgeschlossenen Zertifikatskurs und die bestandene Abschlussprüfung im Bereich ABACUS Finanzbuchhaltung. Inhaltliche Schwerpunkte waren Benutzeroberfläche, Stammdaten, Buchungen anhand von Belegen, Buchungsarten, Auswertungen wie Journal, Kontoauszug, Bilanz und Erfolgsrechnung sowie MWST-Abrechnung.',
+      meta: ['Aussteller: ABACUS Research AG', 'Bereich: Finanzbuchhaltung', 'Nachweis: Zertifikat mit bestandener Abschlussprüfung', 'Format: PDF'],
+      previewLabel: 'Zertifikat'
+    },
+    'linkedin-generative-ki': {
+      title: 'Was ist generative KI?',
+      cardDescription: 'LinkedIn-Learning-Kurs zu generativen KI-Tools, künstlicher Intelligenz und grundlegender Einordnung generativer KI.',
+      detailDescription: 'Dieses LinkedIn-Learning-Zertifikat bestätigt den abgeschlossenen Kurs „Was ist generative KI?“. Der Kurs behandelt generative KI-Tools, künstliche Intelligenz und die grundlegende Einordnung generativer KI im Arbeits- und Lernkontext.',
+      meta: ['Aussteller: LinkedIn Learning', 'Bereich: Generative KI', 'Dauer: 42 Minuten', 'Format: PDF'],
+      previewLabel: 'Zertifikat'
+    }
+  },
+  en: {
+    'absofort-ki-ollama': {
+      title: 'Using local AI: private AI assistance with Ollama & open-source models',
+      cardDescription: 'ab sofort certificate for a course on local AI, Ollama and open-source models.',
+      detailDescription: 'This ab sofort certificate confirms successful completion of the course “Using local AI: private AI assistance with Ollama & open-source models”. The course was completed on 22 August 2026 with a score of 87.5 percent and a duration of 6 hours.',
+      meta: ['Issuer: Alpasana GmbH / ab sofort', 'Level: Foundation', 'Result: 87.5%', 'Issued on: 22 August 2026', 'Verification: ab sofort ID 491A67E697', 'Format: PDF'],
+      previewLabel: 'Certificate'
+    },
+    'abacus-finanzbuchhaltung': {
+      title: 'ABACUS Financial Accounting',
+      cardDescription: 'User certificate for ABACUS financial accounting, covering interface basics, master data, postings, reports and VAT accounting.',
+      detailDescription: 'The ABACUS certificate confirms completion of the certificate course and successful final examination in ABACUS financial accounting. Topics included the user interface, master data, postings based on documents, posting types, reports such as journals, account statements, balance sheet and income statement, as well as VAT accounting.',
+      meta: ['Issuer: ABACUS Research AG', 'Area: Financial accounting', 'Proof: Certificate with passed final exam', 'Format: PDF'],
+      previewLabel: 'Certificate'
+    },
+    'linkedin-generative-ki': {
+      title: 'What is generative AI?',
+      cardDescription: 'LinkedIn Learning course on generative AI tools, artificial intelligence and the basic classification of generative AI.',
+      detailDescription: 'This LinkedIn Learning certificate confirms completion of the course “What is generative AI?”. The course covers generative AI tools, artificial intelligence and the basic classification of generative AI in work and learning contexts.',
+      meta: ['Issuer: LinkedIn Learning', 'Area: Generative AI', 'Duration: 42 minutes', 'Format: PDF'],
+      previewLabel: 'Certificate'
+    }
+  },
+  fr: {
+    'absofort-ki-ollama': {
+      title: 'Utiliser l’IA locale : assistance IA privée avec Ollama et des modèles open source',
+      cardDescription: 'Certificat ab sofort pour un cours sur l’IA locale, Ollama et les modèles open source.',
+      detailDescription: 'Ce certificat ab sofort confirme la réussite du cours « Utiliser l’IA locale : assistance IA privée avec Ollama et des modèles open source ». Le cours a été terminé le 22 août 2026 avec un résultat de 87,5 % et une durée de 6 heures.',
+      meta: ['Émetteur : Alpasana GmbH / ab sofort', 'Niveau : Foundation', 'Résultat : 87,5 %', 'Délivré le : 22 août 2026', 'Vérification : ab sofort ID 491A67E697', 'Format : PDF'],
+      previewLabel: 'Certificat'
+    },
+    'abacus-finanzbuchhaltung': {
+      title: 'ABACUS comptabilité financière',
+      cardDescription: 'Certificat utilisateur pour ABACUS comptabilité financière, avec bases de l’interface, données de base, écritures, rapports et TVA.',
+      detailDescription: 'Le certificat ABACUS confirme la réussite du cours de certificat et de l’examen final dans le domaine de la comptabilité financière ABACUS. Les thèmes abordés comprennent l’interface utilisateur, les données de base, les écritures à partir de pièces justificatives, les types d’écritures, les rapports comme le journal, l’extrait de compte, le bilan et le compte de résultat, ainsi que le décompte TVA.',
+      meta: ['Émetteur: ABACUS Research AG', 'Domaine: Comptabilité financière', 'Preuve: Certificat avec examen final réussi', 'Format: PDF'],
+      previewLabel: 'Certificat'
+    },
+    'linkedin-generative-ki': {
+      title: 'Qu’est-ce que l’IA générative ?',
+      cardDescription: 'Cours LinkedIn Learning sur les outils d’IA générative, l’intelligence artificielle et les bases de l’IA générative.',
+      detailDescription: 'Ce certificat LinkedIn Learning confirme la réussite du cours « Qu’est-ce que l’IA générative ? ». Le cours traite des outils d’IA générative, de l’intelligence artificielle et des bases permettant de situer l’IA générative dans un contexte de travail et d’apprentissage.',
+      meta: ['Émetteur: LinkedIn Learning', 'Domaine: IA générative', 'Durée: 42 minutes', 'Format: PDF'],
+      previewLabel: 'Certificat'
+    }
+  },
+  sr: {
+    'absofort-ki-ollama': {
+      title: 'Korišćenje lokalne AI: privatna AI asistencija uz Ollama i open-source modele',
+      cardDescription: 'ab sofort sertifikat za kurs o lokalnoj AI, Ollama alatu i open-source modelima.',
+      detailDescription: 'Ovaj ab sofort sertifikat potvrđuje uspešno završen kurs „Korišćenje lokalne AI: privatna AI asistencija uz Ollama i open-source modele“. Kurs je završen 22. avgusta 2026. sa rezultatom od 87,5% i trajanjem od 6 sati.',
+      meta: ['Izdavač: Alpasana GmbH / ab sofort', 'Nivo: Foundation', 'Rezultat: 87,5%', 'Izdato: 22. avgusta 2026.', 'Verifikacija: ab sofort ID 491A67E697', 'Format: PDF'],
+      previewLabel: 'Sertifikat'
+    },
+    'abacus-finanzbuchhaltung': {
+      title: 'ABACUS finansijsko knjigovodstvo',
+      cardDescription: 'Korisnički sertifikat za ABACUS finansijsko knjigovodstvo, sa osnovama korisničkog interfejsa, matičnih podataka, knjiženja, izveštaja i PDV obračuna.',
+      detailDescription: 'ABACUS sertifikat potvrđuje uspešno završen kurs i položenu završnu proveru iz oblasti ABACUS finansijskog knjigovodstva. Teme su obuhvatale korisnički interfejs, matične podatke, knjiženja na osnovu dokumenata, vrste knjiženja, izveštaje kao što su dnevnik, izvod računa, bilans i račun uspeha, kao i PDV obračun.',
+      meta: ['Izdavač: ABACUS Research AG', 'Oblast: Finansijsko knjigovodstvo', 'Dokaz: Sertifikat sa položenom završnom proverom', 'Format: PDF'],
+      previewLabel: 'Sertifikat'
+    },
+    'linkedin-generative-ki': {
+      title: 'Šta je generativna veštačka inteligencija?',
+      cardDescription: 'LinkedIn Learning kurs o generativnim AI alatima, veštačkoj inteligenciji i osnovnom razumevanju generativne AI.',
+      detailDescription: 'Ovaj LinkedIn Learning sertifikat potvrđuje završen kurs „Šta je generativna veštačka inteligencija?“. Kurs obrađuje generativne AI alate, veštačku inteligenciju i osnovno razumevanje generativne AI u kontekstu rada i učenja.',
+      meta: ['Izdavač: LinkedIn Learning', 'Oblast: Generativna AI', 'Trajanje: 42 minuta', 'Format: PDF'],
+      previewLabel: 'Sertifikat'
+    }
+  },
+  'sr-cyrl': {
+    'absofort-ki-ollama': {
+      title: 'Коришћење локалне AI: приватна AI асистенција уз Ollama и open-source моделе',
+      cardDescription: 'ab sofort сертификат за курс о локалној AI, Ollama алату и open-source моделима.',
+      detailDescription: 'Овај ab sofort сертификат потврђује успешно завршен курс „Коришћење локалне AI: приватна AI асистенција уз Ollama и open-source моделе“. Курс је завршен 22. августа 2026. са резултатом од 87,5% и трајањем од 6 сати.',
+      meta: ['Издавач: Alpasana GmbH / ab sofort', 'Ниво: Foundation', 'Резултат: 87,5%', 'Издато: 22. августа 2026.', 'Верификација: ab sofort ID 491A67E697', 'Формат: PDF'],
+      previewLabel: 'Сертификат'
+    },
+    'abacus-finanzbuchhaltung': {
+      title: 'ABACUS финансијско књиговодство',
+      cardDescription: 'Кориснички сертификат за ABACUS финансијско књиговодство, са основама корисничког интерфејса, матичних података, књижења, извештаја и ПДВ обрачуна.',
+      detailDescription: 'ABACUS сертификат потврђује успешно завршен курс и положену завршну проверу из области ABACUS финансијског књиговодства. Теме су обухватале кориснички интерфејс, матичне податке, књижења на основу докумената, врсте књижења, извештаје као што су дневник, извод рачуна, биланс и рачун успеха, као и ПДВ обрачун.',
+      meta: ['Издавач: ABACUS Research AG', 'Област: Финансијско књиговодство', 'Доказ: Сертификат са положеном завршном провером', 'Формат: PDF'],
+      previewLabel: 'Сертификат'
+    },
+    'linkedin-generative-ki': {
+      title: 'Шта је генеративна вештачка интелигенција?',
+      cardDescription: 'LinkedIn Learning курс о генеративним AI алатима, вештачкој интелигенцији и основном разумевању генеративне AI.',
+      detailDescription: 'Овај LinkedIn Learning сертификат потврђује завршен курс „Шта је генеративна вештачка интелигенција?“. Курс обрађује генеративне AI алате, вештачку интелигенцију и основно разумевање генеративне AI у контексту рада и учења.',
+      meta: ['Издавач: LinkedIn Learning', 'Област: Генеративна AI', 'Трајање: 42 минута', 'Формат: PDF'],
+      previewLabel: 'Сертификат'
+    }
+  }
+};
+
+const resetHorizontalScroll = () => {
+  document.documentElement.scrollLeft = 0;
+  document.body.scrollLeft = 0;
+  if (window.scrollX !== 0) {
+    window.scrollTo(0, window.scrollY);
+  }
+};
+
+window.addEventListener('pageshow', resetHorizontalScroll);
+window.addEventListener('resize', resetHorizontalScroll);
+window.addEventListener('hashchange', () => requestAnimationFrame(resetHorizontalScroll));
+
 if (yearTarget) {
   yearTarget.textContent = String(new Date().getFullYear());
 }
@@ -829,16 +1003,19 @@ const portfolioItemKey = (item) => item.id || String(item.title || '').toLowerCa
 
 const localizedPortfolioItem = (item, typeKey) => {
   const translationPath = `portfolioItems.${typeKey}.${portfolioItemKey(item)}`;
+  const certificateTranslation = typeKey === 'certificates'
+    ? certificateCopy[currentLanguageCode]?.[item.id]
+    : null;
   return {
     ...item,
-    title: t(`${translationPath}.title`, item.title || ''),
-    cardDescription: t(`${translationPath}.cardDescription`, item.cardDescription || item.description || ''),
-    detailDescription: t(`${translationPath}.detailDescription`, item.detailDescription || item.description || ''),
-    meta: tArray(`${translationPath}.meta`, item.meta || []),
+    title: certificateTranslation?.title || t(`${translationPath}.title`, item.title || ''),
+    cardDescription: certificateTranslation?.cardDescription || t(`${translationPath}.cardDescription`, item.cardDescription || item.description || ''),
+    detailDescription: certificateTranslation?.detailDescription || t(`${translationPath}.detailDescription`, item.detailDescription || item.description || ''),
+    meta: certificateTranslation?.meta || tArray(`${translationPath}.meta`, item.meta || []),
     tags: tArray(`${translationPath}.tags`, item.tags || []),
     role: t(`${translationPath}.role`, item.role || ''),
     learning: t(`${translationPath}.learning`, item.learning || ''),
-    previewLabel: t(`${translationPath}.previewLabel`, item.previewLabel || 'Preview folgt')
+    previewLabel: certificateTranslation?.previewLabel || t(`${translationPath}.previewLabel`, item.previewLabel || 'Preview folgt')
   };
 };
 
@@ -1244,7 +1421,12 @@ const createCard = (item, typeKey = 'projects') => {
   }
   if (item.previewImage) {
     preview.classList.add('has-image');
-    preview.style.setProperty('--preview-image', `url("${item.previewImage}")`);
+    const image = document.createElement('img');
+    image.src = item.previewImage;
+    image.alt = `${displayItem.title} ${displayItem.previewLabel || 'Vorschau'}`;
+    image.loading = 'lazy';
+    image.decoding = 'async';
+    preview.append(image);
   }
 
   const previewLabel = document.createElement('span');
@@ -1305,6 +1487,34 @@ const createCard = (item, typeKey = 'projects') => {
     detailButton.dataset.links = JSON.stringify(item.links);
   }
 
+  const openDetails = () => {
+    openDetailModal(
+      displayItem.title,
+      displayItem.detailDescription || displayItem.description || '',
+      displayItem.meta || [],
+      {
+        file: typeKey === 'certificates' ? item.file || '' : '',
+        previewLabel: displayItem.previewLabel || '',
+        previewImage: item.previewImage || '',
+        itemType: typeKey
+      }
+    );
+  };
+
+  card.dataset.clickableCard = 'true';
+  card.tabIndex = 0;
+  card.setAttribute('aria-label', `${displayItem.title}: ${t('portfolio.detailsButton', 'Details anzeigen')}`);
+  card.addEventListener('click', (event) => {
+    if (event.target.closest('button, a')) return;
+    openDetails();
+  });
+  card.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      openDetails();
+    }
+  });
+
   const actions = document.createElement('div');
   actions.className = 'card-actions';
   actions.append(detailButton);
@@ -1342,7 +1552,7 @@ const createMoreProjectsCard = () => {
   title.textContent = t('portfolio.moreProjectsTitle', 'Weitere Projekte');
 
   const description = document.createElement('p');
-  description.textContent = t('portfolio.moreProjectsSubline', 'Kompakte Übersicht für kleinere oder noch nicht ausführlich dokumentierte Arbeiten.');
+  description.textContent = t('portfolio.moreProjectsSubline', 'Weitere Projekte, die ich fertiggestellt habe oder aktuell noch entwickle.');
 
   const list = document.createElement('div');
   list.className = 'more-projects-card-list';
@@ -1681,6 +1891,19 @@ const configureModalFile = ({ file, previewLabel, previewImage, itemType }) => {
     modalCard?.style.removeProperty('--modal-preview-image');
   }
 
+  if (modalPreviewLink) {
+    modalPreviewLink.setAttribute('aria-disabled', String(!hasPreviewImage));
+    modalPreviewLink.tabIndex = hasPreviewImage ? 0 : -1;
+    modalPreviewLink.setAttribute('aria-label', hasPreviewImage
+      ? t('modal.openImage', 'Vorschau in neuem Tab öffnen')
+      : '');
+    if (hasPreviewImage) {
+      modalPreviewLink.href = previewImage;
+    } else {
+      modalPreviewLink.removeAttribute('href');
+    }
+  }
+
   if (modalDownload) {
     modalDownload.hidden = !hasDownload;
     modalDownload.textContent = t('portfolioDownloadButton', 'Download PDF');
@@ -1749,6 +1972,13 @@ if (modalClose) {
 }
 
 if (modal) {
+  window.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && modal.open) {
+      event.preventDefault();
+      modal.close();
+    }
+  }, true);
+
   modal.addEventListener('cancel', (event) => {
     event.preventDefault();
     modal.close();
@@ -1762,6 +1992,13 @@ if (modal) {
 
   modal.addEventListener('close', () => {
     document.body.classList.remove('modal-open');
+    document.querySelectorAll('[data-clickable-card="true"], .item-card.is-selected').forEach((card) => {
+      card.classList.remove('is-selected', 'is-modal-return-focus');
+    });
+    const activeElement = document.activeElement;
+    if (activeElement instanceof HTMLElement) activeElement.blur();
+    document.body.tabIndex = -1;
+    document.body.focus({ preventScroll: true });
   });
 }
 
@@ -1816,6 +2053,14 @@ const loadLanguage = async (languageCode) => {
   }
 
   activeDictionary = dictionary;
+  currentLanguageCode = languageCode;
+  const isCyrillic = languageCode === 'sr-cyrl';
+  const visibleName = isCyrillic ? 'Александар Николић' : 'Aleksandar Nikolić';
+  const brandName = document.querySelector('.brand-latin');
+  if (brandName) {
+    brandName.innerHTML = isCyrillic ? 'Александар <em>Николић</em>' : 'Aleksandar <em>Nikolić</em>';
+  }
+  if (footerName) footerName.textContent = visibleName;
   applyStaticTranslations();
   refreshDynamicTexts();
 

@@ -9,7 +9,8 @@
     "tech": "Tech Stack",
     "portfolio": "Projects",
     "contact": "Contact & Legal",
-    "github": "GitHub"
+    "github": "GitHub",
+    "certificates": "Certificates"
   },
   "hero": {
     "kicker": "Developer profile",
@@ -24,6 +25,7 @@
     "ctaContact": "Contact",
     "ctaEmail": "Email",
     "availability": "Looking for an internship position in Switzerland for 2027/2028.",
+    "alias": "On GitHub and in projects, I use the developer name AleksZyro.",
     "ctaGithub": "GitHub",
     "title": "Practical web and Python projects",
     "about": "Clear user interfaces, understandable code, teamwork, and honest project status are important to me.",
@@ -157,7 +159,7 @@
     "detailEmptyTitle": "Select a project",
     "detailEmptyText": "Click a project card to show status, stack, role, and learning focus.",
     "moreProjectsTitle": "More projects",
-    "moreProjectsSubline": "Compact overview for smaller projects or work that is not fully documented yet."
+    "moreProjectsSubline": "More projects that I have completed or am still developing."
   },
   "filters": {
     "all": "All",
@@ -175,7 +177,8 @@
     "close": "Close",
     "title": "Detail view",
     "projectKicker": "Project details",
-    "certificateKicker": "Certificate"
+    "certificateKicker": "Certificate",
+    "openImage": "Open preview in a new tab"
   },
   "portfolioDownloadButton": "Download PDF",
   "footer": {
@@ -208,7 +211,7 @@
     "externalTitle": "External content",
     "externalText": "Project images, certificates and the GitHub graphic are loaded locally. External links only open when clicked.",
     "imprintTitle": "Imprint",
-    "imprintText": "Private portfolio website by Aleksandar Nikolic. Contact is available by e-mail in the contact section.",
+    "imprintText": "Private portfolio website by Aleksandar Nikolić. Contact is available by e-mail in the contact section.",
     "contactLink": "Contact me"
   },
   "portfolioItems": {
@@ -310,7 +313,7 @@
     "certificates": {
       "ethicalHacker": {
         "title": "Ethical Hacker",
-        "cardDescription": "Certificate in PDF format with direct preview and download.",
+        "cardDescription": "Certificate with preview, details and PDF download in the detail view.",
         "detailDescription": "You can view or download this certificate directly in the portfolio.",
         "meta": [
           "Format: PDF",
@@ -321,7 +324,7 @@
       },
       "introCybersecurity": {
         "title": "Introduction to Cybersecurity",
-        "cardDescription": "Certificate in PDF format with direct preview and download.",
+        "cardDescription": "Certificate with preview, details and PDF download in the detail view.",
         "detailDescription": "You can view or download this certificate directly in the portfolio.",
         "meta": [
           "Format: PDF",
@@ -332,7 +335,7 @@
       },
       "bbbHackathon": {
         "title": "BBB Hackathon",
-        "cardDescription": "Certificate in PDF format with direct preview and download.",
+        "cardDescription": "Certificate with preview, details and PDF download in the detail view.",
         "detailDescription": "You can view or download this certificate directly in the portfolio.",
         "meta": [
           "Format: PDF",
@@ -420,6 +423,14 @@
           "Python",
           "Hackathon"
         ]
+      },
+      "heimatschutz": {
+        "title": "Heimatschutz Aargau",
+        "description": "Shared internal web application for collecting and reviewing building applications with AGIS protection data.",
+        "tags": [
+          "Team project",
+          "Web application"
+        ]
       }
     }
   },
@@ -480,5 +491,10 @@
   "linkLabels": {
     "github": "GitHub",
     "demo": "Demo"
+  },
+  "certificates": {
+    "kicker": "Certificates",
+    "title": "Learning beyond the classroom",
+    "subline": "Selected certificates with preview, details and PDF download."
   }
 }
