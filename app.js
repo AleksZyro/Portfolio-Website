@@ -315,6 +315,7 @@ const embeddedDictionaries = {
       about: 'Mir sind klare Benutzeroberflächen, nachvollziehbarer Code, Teamfähigkeit und ehrliche Projektstände wichtig.',
       bridge: 'Besonders interessiert mich, wie aus kleinen Tools zuverlässige Anwendungen werden: mit klarer Struktur, verständlicher Bedienung und sauber dokumentierten Änderungen.',
       availability: 'Praktikumsstelle in der Schweiz f\u00fcr 2027/2028 gesucht.',
+      alias: 'Auf GitHub und in Projekten verwende ich den Entwicklernamen AleksZyro.',
       projectsKicker: 'Ausgewählte Projekte',
       projectsTitle: 'Projekte',
       projectPathlab: 'Routing-Visualizer, Tests, GitHub',
@@ -454,6 +455,7 @@ const embeddedDictionaries = {
       about: 'Clear user interfaces, understandable code, teamwork, and honest project status are important to me.',
       bridge: 'I am especially interested in turning small tools into reliable applications: with clear structure, understandable interfaces, and well documented changes.',
       availability: 'Looking for an internship position in Switzerland for 2027/2028.',
+      alias: 'On GitHub and in projects, I use the developer name AleksZyro.',
       projectsKicker: 'Selected projects',
       projectsTitle: 'Easy to verify',
       projectPathlab: 'Routing visualizer, tests, GitHub',
@@ -582,6 +584,7 @@ const embeddedDictionaries = {
       about: 'J\'accorde de l\'importance aux interfaces claires, au code compréhensible, au travail en équipe et à des états de projet honnêtes.',
       bridge: 'Ce qui m\'intéresse surtout, c\'est de transformer de petits outils en applications fiables, avec une structure claire, une utilisation compréhensible et des changements bien documentés.',
       availability: 'Je cherche une place de stage en Suisse pour 2027/2028.',
+      alias: 'Sur GitHub et dans mes projets, j\'utilise le nom de développeur AleksZyro.',
       projectsKicker: 'Projets selectionnes',
       projectsTitle: 'Faciles a verifier',
       projectPathlab: 'Visualiseur de chemins, tests, GitHub',
@@ -712,6 +715,7 @@ const embeddedDictionaries = {
       about: 'Važni su mi jasni korisnički interfejsi, razumljiv kod, timski rad i iskren status projekata.',
       bridge: 'Posebno me zanima kako mali alati postaju pouzdane aplikacije: sa jasnom strukturom, razumljivim korišćenjem i dobro dokumentovanim izmenama.',
       availability: 'Tražim praksu u Švajcarskoj za 2027/2028.',
+      alias: 'Na GitHubu i u projektima koristim developersko ime AleksZyro.',
       projectsKicker: 'Odabrani projekti',
       projectsTitle: 'Lako proverljivo',
       projectPathlab: 'Routing vizualizacija, testovi, GitHub',
@@ -1484,7 +1488,7 @@ const createMoreProjectsCard = () => {
   title.textContent = t('portfolio.moreProjectsTitle', 'Weitere Projekte');
 
   const description = document.createElement('p');
-  description.textContent = t('portfolio.moreProjectsSubline', 'Kompakte Übersicht für kleinere oder noch nicht ausführlich dokumentierte Arbeiten.');
+  description.textContent = t('portfolio.moreProjectsSubline', 'Weitere Projekte, die ich fertiggestellt habe oder aktuell noch entwickle.');
 
   const list = document.createElement('div');
   list.className = 'more-projects-card-list';

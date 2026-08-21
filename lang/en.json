@@ -25,6 +25,7 @@
     "ctaContact": "Contact",
     "ctaEmail": "Email",
     "availability": "Looking for an internship position in Switzerland for 2027/2028.",
+    "alias": "On GitHub and in projects, I use the developer name AleksZyro.",
     "ctaGithub": "GitHub",
     "title": "Practical web and Python projects",
     "about": "Clear user interfaces, understandable code, teamwork, and honest project status are important to me.",
@@ -158,7 +159,7 @@
     "detailEmptyTitle": "Select a project",
     "detailEmptyText": "Click a project card to show status, stack, role, and learning focus.",
     "moreProjectsTitle": "More projects",
-    "moreProjectsSubline": "Compact overview for smaller projects or work that is not fully documented yet."
+    "moreProjectsSubline": "More projects that I have completed or am still developing."
   },
   "filters": {
     "all": "All",
@@ -484,7 +485,7 @@
     "demo": "Demo"
   },
   "certificates": {
-    "kicker": "Credentials",
+    "kicker": "Certificates",
     "title": "Certificates",
     "subline": "Selected certificates with preview, details and PDF download."
   }

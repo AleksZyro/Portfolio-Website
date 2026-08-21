@@ -25,6 +25,7 @@
     "ctaContact": "Kontakt",
     "ctaEmail": "E-mail",
     "availability": "Tražim praksu u Švajcarskoj za 2027/2028.",
+    "alias": "Na GitHubu i u projektima koristim developersko ime AleksZyro.",
     "ctaGithub": "GitHub",
     "title": "Praktični web i Python projekti",
     "about": "Važni su mi jasni korisnički interfejsi, razumljiv kod, timski rad i iskren status projekata.",
@@ -158,7 +159,7 @@
     "detailEmptyTitle": "Izaberi projekat",
     "detailEmptyText": "Klikni na projektnu karticu da vidiš status, stack, ulogu i šta sam naučio.",
     "moreProjectsTitle": "Dodatni projekti",
-    "moreProjectsSubline": "Kompaktan pregled manjih projekata ili radova koji još nisu potpuno dokumentovani."
+    "moreProjectsSubline": "Dodatni projekti koje sam završio ili ih još trenutno razvijam."
   },
   "filters": {
     "all": "Svi",
@@ -484,7 +485,7 @@
     }
   ],
   "certificates": {
-    "kicker": "Dokazi",
+    "kicker": "Sertifikati",
     "title": "Sertifikati",
     "subline": "Odabrani sertifikati sa pregledom, detaljima i PDF preuzimanjem."
   }

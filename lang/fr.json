@@ -25,6 +25,7 @@
     "ctaContact": "Contact",
     "ctaEmail": "E-mail",
     "availability": "Je cherche une place de stage en Suisse pour 2027/2028.",
+    "alias": "Sur GitHub et dans mes projets, j'utilise le nom de développeur AleksZyro.",
     "ctaGithub": "GitHub",
     "title": "Projets web et Python orientés pratique",
     "about": "J'accorde de l'importance aux interfaces claires, au code compréhensible, au travail en équipe et à des états de projet honnêtes.",
@@ -158,7 +159,7 @@
     "detailEmptyTitle": "Choisir un projet",
     "detailEmptyText": "Clique sur une carte de projet pour afficher le statut, le stack, le rôle et ce que le projet m’apporte.",
     "moreProjectsTitle": "Autres projets",
-    "moreProjectsSubline": "Aperçu compact de projets plus petits ou pas encore entièrement documentés."
+    "moreProjectsSubline": "Autres projets que j'ai terminés ou que je développe encore actuellement."
   },
   "filters": {
     "all": "Tous",
@@ -484,7 +485,7 @@
     "demo": "Démo"
   },
   "certificates": {
-    "kicker": "Justificatifs",
+    "kicker": "Certificats",
     "title": "Certificats",
     "subline": "Certificats sélectionnés avec aperçu, détails et téléchargement PDF."
   }
