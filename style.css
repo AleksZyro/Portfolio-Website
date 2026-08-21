@@ -98,12 +98,11 @@ button, select { font: inherit; }
 .container { width: min(1120px, 92vw); margin-inline: auto; }
 .navbar.container { width: min(1360px, 94vw); }
 .section { position: relative; padding: clamp(26px, 4vw, 48px) 0; }
-main > section[id] {
-  min-height: calc(100svh - var(--header-h));
-}
+main > section[id] { min-height: auto; }
 
 main section[id] { scroll-margin-top: calc(var(--header-h) + 28px); }
-.portfolio { padding-bottom: clamp(42px, 6vw, 72px); }
+.portfolio,
+.certificates { padding-bottom: clamp(42px, 6vw, 72px); }
 
 .skip-link {
   position: absolute;
@@ -551,21 +550,6 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   gap: 14px;
 }
 
-.certificate-block {
-  display: grid;
-  gap: 14px;
-  margin-top: 20px;
-}
-
-.certificate-head {
-  display: grid;
-  gap: 5px;
-}
-
-.certificate-head p {
-  color: var(--muted);
-}
-
 .compact-certificates {
   display: grid;
   gap: 14px;
@@ -795,12 +779,6 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   box-shadow: 0 0 0 3px rgba(140, 117, 223, 0.28);
 }
 
-.portfolio-tabs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-bottom: 14px; }
-.tab { border: 1px solid var(--line); background: rgba(19, 13, 41, 0.78); color: var(--muted); border-radius: 10px; padding: 10px; font-weight: 700; cursor: pointer; }
-.tab.is-active { color: var(--text); border-color: rgba(150, 122, 255, 0.65); box-shadow: inset 0 -2px 0 rgba(150, 122, 255, 0.92); }
-
-.tab-panel { display: none; }
-.tab-panel.is-active { display: block; }
 .cards-grid { grid-template-columns: 1fr; }
 
 .item-card, .empty-state { padding: 14px; }
@@ -840,19 +818,20 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   overflow: hidden;
   padding: 16px;
 }
-.project-preview.has-image {
-  background:
-    var(--preview-image) center / contain no-repeat,
-    rgba(13, 14, 27, 0.98);
+.project-preview.has-image { background: rgba(13, 14, 27, 0.98); }
+.project-preview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 238px;
+  object-fit: contain;
 }
-
 .certificate-preview.has-image {
   min-height: clamp(154px, 13vw, 190px);
-  padding: 22px;
-  background:
-    var(--preview-image) center / contain no-repeat,
-    rgba(12, 11, 20, 0.72);
+  padding: 16px;
+  background: rgba(12, 11, 20, 0.72);
 }
+.certificate-preview img { max-height: 210px; }
 
 .certificate-card {
   gap: 8px;
@@ -1006,6 +985,15 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   padding: 18px;
   display: grid;
   gap: 8px;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.18s ease, background 0.18s ease;
+}
+
+.legal-card:hover,
+.legal-card:focus-visible {
+  border-color: rgba(150, 122, 255, 0.58);
+  background: rgba(31, 24, 51, 0.92);
 }
 
 .legal-card h3 {
@@ -1025,22 +1013,6 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
 .legal-card-contact {
   grid-column: 1 / -1;
   max-width: 520px;
-}
-
-.legal-note {
-  border: 1px solid rgba(185, 174, 220, 0.14);
-  border-radius: var(--radius-lg);
-  background: rgba(12, 10, 20, 0.56);
-  padding: 14px 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  color: var(--muted);
-}
-
-.legal-note p {
-  line-height: 1.55;
 }
 
 .legal-list {
@@ -1119,12 +1091,16 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   place-items: center;
   overflow: hidden;
   padding: 18px;
+  color: inherit;
+  text-decoration: none;
 }
 .modal-card.has-preview-image .modal-preview {
   background:
     var(--modal-preview-image) center / contain no-repeat,
     rgba(13, 14, 27, 0.98);
 }
+.modal-preview[aria-disabled="true"] { cursor: default; }
+.modal-preview[aria-disabled="false"] { cursor: zoom-in; }
 .modal-card.has-preview-image .modal-preview-label,
 .modal-card.has-preview-image .modal-preview-title,
 .modal-card.has-preview-image .modal-preview-subtitle {
@@ -1424,17 +1400,6 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   stroke-linejoin: round;
 }
 
-.legal-note {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  margin-top: 14px;
-  padding: 14px 16px;
-  border: 1px solid rgba(185, 174, 220, 0.14);
-  border-radius: 16px;
-  background: rgba(18, 15, 30, 0.46);
-}
 .reveal { opacity: 0; transform: translateY(8px); transition: opacity 0.32s ease, transform 0.32s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
@@ -1450,7 +1415,6 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   .legal-grid { grid-template-columns: 1fr; }
   .compact-legal-card { min-height: auto; }
   .legal-card-wide, .legal-card-contact { grid-column: auto; max-width: none; }
-  .legal-note { align-items: start; flex-direction: column; }
 }
 
 @media (min-width: 960px) {

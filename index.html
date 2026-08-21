@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio von Aleksandar Nikolic - Applikationsentwicklung, Projekte und Tech-Stack.">
-  <title>Aleksandar Nikolic | Portfolio</title>
+  <meta name="description" content="Portfolio von Aleksandar Nikolić - Applikationsentwicklung, Projekte und Tech-Stack.">
+  <title>Aleksandar Nikolić | Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
   <header class="site-header" id="top">
     <nav class="navbar container" aria-label="Hauptnavigation">
       <a class="brand" href="#home" aria-label="Startseite">
-        <span class="brand-latin">Aleksandar <em>Nikolic</em></span>
+        <span class="brand-latin">Aleksandar <em>Nikolić</em></span>
         <span class="brand-cyrillic" aria-hidden="true">Александар Николић</span>
       </a>
 
@@ -25,6 +25,7 @@
         <li><a href="#home" data-i18n="nav.home">Start</a></li>
         <li><a href="#career" data-i18n="nav.career">Werdegang</a></li>
         <li><a href="#portfolio" data-i18n="nav.portfolio">Projekte</a></li>
+        <li><a href="#certificates" data-i18n="nav.certificates">Zertifikate</a></li>
         <li><a href="#github-activity" data-i18n="nav.github">GitHub</a></li>
         <li><a href="#tech-stack" data-i18n="nav.tech">Tech-Stack</a></li>
         <li><a href="#contact" data-i18n="nav.contact">Kontakt</a></li>
@@ -182,13 +183,17 @@
           <div class="project-list" id="projects-grid" aria-label="Projektliste"></div>
         </div>
 
-        <div class="certificate-block reveal">
-          <div class="certificate-head">
-            <h3 data-i18n="portfolio.certificatesTitle">Zertifikate</h3>
-            <p data-i18n="portfolio.certificatesSubline">Nachweise als PDF mit Vorschau und Download.</p>
-          </div>
-          <div class="cards-grid compact-certificates" id="certificates-grid" aria-label="Zertifikatsliste"></div>
+      </div>
+    </section>
+
+    <section class="certificates section" id="certificates" aria-labelledby="certificates-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker" data-i18n="certificates.kicker">Nachweise</p>
+          <h2 id="certificates-title" data-i18n="certificates.title">Zertifikate</h2>
+          <p class="section-subline" data-i18n="certificates.subline">Ausgewählte Zertifikate mit Vorschau, Details und PDF-Download.</p>
         </div>
+        <div class="cards-grid compact-certificates reveal" id="certificates-grid" aria-label="Zertifikatsliste"></div>
       </div>
     </section>
 
@@ -206,7 +211,7 @@
             <a class="link-arrow" href="https://github.com/AleksZyro?tab=repositories" target="_blank" rel="noopener noreferrer" data-i18n="github.reposLink">Repositories</a>
           </div>
           <div class="activity-strip contribution-strip" aria-label="GitHub Contribution Grafik">
-            <img src="assets/contribution-graphic.svg" alt="GitHub Contribution Uebersicht von Aleksandar Nikolic" loading="lazy">
+            <img src="assets/contribution-graphic.svg" alt="GitHub Contribution Uebersicht von Aleksandar Nikolić" loading="lazy">
           </div>
         </article>
 
@@ -256,17 +261,17 @@
         </div>
 
         <div class="legal-grid compact-legal-grid">
-          <article class="legal-card compact-legal-card">
+          <a class="legal-card compact-legal-card" href="impressum.html">
             <span class="legal-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" focusable="false"><path d="M7 3h7l4 4v14H7V3Z"/><path d="M14 3v5h5"/><path d="M9.5 12h5M9.5 15h5M9.5 18h3"/></svg>
             </span>
             <div>
               <h3 data-i18n="legal.imprintTitle">Impressum</h3>
-              <p data-i18n="legal.imprintText">Private Portfolio-Seite von Aleksandar Nikolic. Kontakt erfolgt per E-Mail im Kontaktbereich.</p>
+              <p data-i18n="legal.imprintText">Private Portfolio-Seite von Aleksandar Nikolić. Kontakt erfolgt per E-Mail im Kontaktbereich.</p>
             </div>
-          </article>
+          </a>
 
-          <article class="legal-card compact-legal-card">
+          <a class="legal-card compact-legal-card" href="datenschutz.html">
             <span class="legal-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" focusable="false"><path d="M12 3 5 6v5c0 4.5 2.8 8.5 7 10 4.2-1.5 7-5.5 7-10V6l-7-3Z"/><path d="m9.5 12 1.7 1.7 3.6-4"/></svg>
             </span>
@@ -274,9 +279,9 @@
               <h3 data-i18n="legal.privacyTitle">Datenschutz</h3>
               <p data-i18n="legal.privacyText">Keine Formulare, keine Analytics, keine Werbetracker. Beim Aufruf verarbeitet der Hoster nur technisch notwendige Zugriffsdaten.</p>
             </div>
-          </article>
+          </a>
 
-          <article class="legal-card compact-legal-card">
+          <a class="legal-card compact-legal-card" href="cookies.html">
             <span class="legal-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" focusable="false"><path d="M12 4a7.8 7.8 0 0 0 8 8.2A8 8 0 1 1 12 4Z"/><path d="M9 10h.1M12 15h.1M15 12h.1M16 7h.1"/></svg>
             </span>
@@ -284,13 +289,9 @@
               <h3 data-i18n="legal.cookieTitle">Cookies</h3>
               <p data-i18n="legal.cookieText">Keine Tracking-Cookies. Nur die gewählte Sprache wird lokal gespeichert, damit die Einstellung erhalten bleibt.</p>
             </div>
-          </article>
+          </a>
         </div>
 
-        <div class="legal-note">
-          <p data-i18n="legal.externalText">Projektbilder, Zertifikate und die GitHub-Grafik werden lokal geladen. Externe Links öffnen sich erst beim Anklicken.</p>
-          <a class="link-arrow" href="#contact" data-i18n="legal.contactLink">Kontakt aufnehmen</a>
-        </div>
       </div>
     </section>
   </main>
@@ -308,11 +309,11 @@
         </div>
       </div>
       <div class="modal-body">
-        <div class="modal-preview">
+        <a class="modal-preview" id="modal-preview-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="Vorschau in neuem Tab öffnen" aria-disabled="true" tabindex="-1">
           <span class="modal-preview-label">Vorschau folgt</span>
           <span class="modal-preview-title" id="modal-preview-title">Projektvorschau</span>
           <span class="modal-preview-subtitle" id="modal-preview-subtitle">Visual folgt</span>
-        </div>
+        </a>
         <div id="modal-description" class="modal-description"></div>
         <ul id="modal-meta"></ul>
       </div>
@@ -322,15 +323,13 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <span>Aleksandar Nikolic</span>
+        <span>Aleksandar Nikolić</span>
         <small data-i18n="footer.tagline">IMS Applikationsentwicklung · Portfolio</small>
       </div>
-      <p>&copy; <span id="year"></span> Aleksandar Nikolic</p>
+      <p>&copy; <span id="year"></span> <span id="footer-name">Aleksandar Nikolić</span></p>
     </div>
   </footer>
 
   <script src="app.js" defer></script>
-  <script src="portfolio-live-fixes.js" defer></script>
-  <script src="portfolio-final-fixes.js" defer></script>
 </body>
 </html>

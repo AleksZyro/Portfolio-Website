@@ -144,6 +144,26 @@ const portfolioData = {
       file: 'assets/certificates/bbb-hackathon.pdf',
       previewImage: 'assets/certificate-previews/bbb-hackathon-preview.png',
       previewLabel: 'Zertifikat'
+    },
+    {
+      id: 'abacus-finanzbuchhaltung',
+      title: 'ABACUS Finanzbuchhaltung',
+      cardDescription: 'Anwender-Zertifikat für ABACUS Finanzbuchhaltung mit Grundlagen zu Benutzeroberfläche, Stammdaten, Buchungen, Auswertungen und MWST-Abrechnung.',
+      detailDescription: 'Das ABACUS-Zertifikat bestätigt den erfolgreich abgeschlossenen Zertifikatskurs und die bestandene Abschlussprüfung im Bereich ABACUS Finanzbuchhaltung. Inhaltliche Schwerpunkte waren Benutzeroberfläche, Stammdaten, Buchungen anhand von Belegen, Buchungsarten, Auswertungen wie Journal, Kontoauszug, Bilanz und Erfolgsrechnung sowie MWST-Abrechnung.',
+      meta: ['Aussteller: ABACUS Research AG', 'Bereich: Finanzbuchhaltung', 'Nachweis: Zertifikat mit bestandener Abschlussprüfung', 'Format: PDF'],
+      previewImage: 'assets/certificate-previews/abacus-finanzbuchhaltung.svg',
+      expectedFile: 'assets/certificates/abacus-finanzbuchhaltung.pdf',
+      previewLabel: 'Zertifikat'
+    },
+    {
+      id: 'linkedin-generative-ki',
+      title: 'Was ist generative KI?',
+      cardDescription: 'LinkedIn-Learning-Kurs zu generativen KI-Tools, künstlicher Intelligenz und grundlegender Einordnung generativer KI.',
+      detailDescription: 'Dieses LinkedIn-Learning-Zertifikat bestätigt den abgeschlossenen Kurs „Was ist generative KI?“. Der Kurs behandelt generative KI-Tools, künstliche Intelligenz und die grundlegende Einordnung generativer KI im Arbeits- und Lernkontext.',
+      meta: ['Aussteller: LinkedIn Learning', 'Bereich: Generative KI', 'Dauer: 42 Minuten', 'Format: PDF'],
+      previewImage: 'assets/certificate-previews/linkedin-generative-ki.svg',
+      expectedFile: 'assets/certificates/linkedin-generative-ki.pdf',
+      previewLabel: 'Zertifikat'
     }
   ],
   techGroups: [
@@ -265,9 +285,11 @@ const modalKicker = document.querySelector('.modal-kicker');
 const modalPreviewLabel = document.querySelector('.modal-preview-label');
 const modalPreviewTitle = document.getElementById('modal-preview-title');
 const modalPreviewSubtitle = document.getElementById('modal-preview-subtitle');
+const modalPreviewLink = document.getElementById('modal-preview-link');
 const modalDownload = document.getElementById('modal-download');
 
 const yearTarget = document.getElementById('year');
+const footerName = document.getElementById('footer-name');
 const projectsCountEl = document.getElementById('projects-count');
 const certificatesCountEl = document.getElementById('certificates-count');
 const yearsCountEl = document.getElementById('years-count');
@@ -279,6 +301,7 @@ i18nElements.forEach((element) => {
 });
 
 let activeDictionary = {};
+let currentLanguageCode = 'de';
 let currentFocusKey = 'web';
 let activeProjectTitle = '';
 const embeddedDictionaries = {
@@ -809,6 +832,89 @@ const embeddedDictionaries = {
   }
 };
 
+const certificateCopy = {
+  de: {
+    'abacus-finanzbuchhaltung': {
+      title: 'ABACUS Finanzbuchhaltung',
+      cardDescription: 'Anwender-Zertifikat für ABACUS Finanzbuchhaltung mit Grundlagen zu Benutzeroberfläche, Stammdaten, Buchungen, Auswertungen und MWST-Abrechnung.',
+      detailDescription: 'Das ABACUS-Zertifikat bestätigt den erfolgreich abgeschlossenen Zertifikatskurs und die bestandene Abschlussprüfung im Bereich ABACUS Finanzbuchhaltung. Inhaltliche Schwerpunkte waren Benutzeroberfläche, Stammdaten, Buchungen anhand von Belegen, Buchungsarten, Auswertungen wie Journal, Kontoauszug, Bilanz und Erfolgsrechnung sowie MWST-Abrechnung.',
+      meta: ['Aussteller: ABACUS Research AG', 'Bereich: Finanzbuchhaltung', 'Nachweis: Zertifikat mit bestandener Abschlussprüfung', 'Format: PDF'],
+      previewLabel: 'Zertifikat'
+    },
+    'linkedin-generative-ki': {
+      title: 'Was ist generative KI?',
+      cardDescription: 'LinkedIn-Learning-Kurs zu generativen KI-Tools, künstlicher Intelligenz und grundlegender Einordnung generativer KI.',
+      detailDescription: 'Dieses LinkedIn-Learning-Zertifikat bestätigt den abgeschlossenen Kurs „Was ist generative KI?“. Der Kurs behandelt generative KI-Tools, künstliche Intelligenz und die grundlegende Einordnung generativer KI im Arbeits- und Lernkontext.',
+      meta: ['Aussteller: LinkedIn Learning', 'Bereich: Generative KI', 'Dauer: 42 Minuten', 'Format: PDF'],
+      previewLabel: 'Zertifikat'
+    }
+  },
+  en: {
+    'abacus-finanzbuchhaltung': {
+      title: 'ABACUS Financial Accounting',
+      cardDescription: 'User certificate for ABACUS financial accounting, covering interface basics, master data, postings, reports and VAT accounting.',
+      detailDescription: 'The ABACUS certificate confirms completion of the certificate course and successful final examination in ABACUS financial accounting. Topics included the user interface, master data, postings based on documents, posting types, reports such as journals, account statements, balance sheet and income statement, as well as VAT accounting.',
+      meta: ['Issuer: ABACUS Research AG', 'Area: Financial accounting', 'Proof: Certificate with passed final exam', 'Format: PDF'],
+      previewLabel: 'Certificate'
+    },
+    'linkedin-generative-ki': {
+      title: 'What is generative AI?',
+      cardDescription: 'LinkedIn Learning course on generative AI tools, artificial intelligence and the basic classification of generative AI.',
+      detailDescription: 'This LinkedIn Learning certificate confirms completion of the course “What is generative AI?”. The course covers generative AI tools, artificial intelligence and the basic classification of generative AI in work and learning contexts.',
+      meta: ['Issuer: LinkedIn Learning', 'Area: Generative AI', 'Duration: 42 minutes', 'Format: PDF'],
+      previewLabel: 'Certificate'
+    }
+  },
+  fr: {
+    'abacus-finanzbuchhaltung': {
+      title: 'ABACUS comptabilité financière',
+      cardDescription: 'Certificat utilisateur pour ABACUS comptabilité financière, avec bases de l’interface, données de base, écritures, rapports et TVA.',
+      detailDescription: 'Le certificat ABACUS confirme la réussite du cours de certificat et de l’examen final dans le domaine de la comptabilité financière ABACUS. Les thèmes abordés comprennent l’interface utilisateur, les données de base, les écritures à partir de pièces justificatives, les types d’écritures, les rapports comme le journal, l’extrait de compte, le bilan et le compte de résultat, ainsi que le décompte TVA.',
+      meta: ['Émetteur: ABACUS Research AG', 'Domaine: Comptabilité financière', 'Preuve: Certificat avec examen final réussi', 'Format: PDF'],
+      previewLabel: 'Certificat'
+    },
+    'linkedin-generative-ki': {
+      title: 'Qu’est-ce que l’IA générative ?',
+      cardDescription: 'Cours LinkedIn Learning sur les outils d’IA générative, l’intelligence artificielle et les bases de l’IA générative.',
+      detailDescription: 'Ce certificat LinkedIn Learning confirme la réussite du cours « Qu’est-ce que l’IA générative ? ». Le cours traite des outils d’IA générative, de l’intelligence artificielle et des bases permettant de situer l’IA générative dans un contexte de travail et d’apprentissage.',
+      meta: ['Émetteur: LinkedIn Learning', 'Domaine: IA générative', 'Durée: 42 minutes', 'Format: PDF'],
+      previewLabel: 'Certificat'
+    }
+  },
+  sr: {
+    'abacus-finanzbuchhaltung': {
+      title: 'ABACUS finansijsko knjigovodstvo',
+      cardDescription: 'Korisnički sertifikat za ABACUS finansijsko knjigovodstvo, sa osnovama korisničkog interfejsa, matičnih podataka, knjiženja, izveštaja i PDV obračuna.',
+      detailDescription: 'ABACUS sertifikat potvrđuje uspešno završen kurs i položenu završnu proveru iz oblasti ABACUS finansijskog knjigovodstva. Teme su obuhvatale korisnički interfejs, matične podatke, knjiženja na osnovu dokumenata, vrste knjiženja, izveštaje kao što su dnevnik, izvod računa, bilans i račun uspeha, kao i PDV obračun.',
+      meta: ['Izdavač: ABACUS Research AG', 'Oblast: Finansijsko knjigovodstvo', 'Dokaz: Sertifikat sa položenom završnom proverom', 'Format: PDF'],
+      previewLabel: 'Sertifikat'
+    },
+    'linkedin-generative-ki': {
+      title: 'Šta je generativna veštačka inteligencija?',
+      cardDescription: 'LinkedIn Learning kurs o generativnim AI alatima, veštačkoj inteligenciji i osnovnom razumevanju generativne AI.',
+      detailDescription: 'Ovaj LinkedIn Learning sertifikat potvrđuje završen kurs „Šta je generativna veštačka inteligencija?“. Kurs obrađuje generativne AI alate, veštačku inteligenciju i osnovno razumevanje generativne AI u kontekstu rada i učenja.',
+      meta: ['Izdavač: LinkedIn Learning', 'Oblast: Generativna AI', 'Trajanje: 42 minuta', 'Format: PDF'],
+      previewLabel: 'Sertifikat'
+    }
+  },
+  'sr-cyrl': {
+    'abacus-finanzbuchhaltung': {
+      title: 'ABACUS финансијско књиговодство',
+      cardDescription: 'Кориснички сертификат за ABACUS финансијско књиговодство, са основама корисничког интерфејса, матичних података, књижења, извештаја и ПДВ обрачуна.',
+      detailDescription: 'ABACUS сертификат потврђује успешно завршен курс и положену завршну проверу из области ABACUS финансијског књиговодства. Теме су обухватале кориснички интерфејс, матичне податке, књижења на основу докумената, врсте књижења, извештаје као што су дневник, извод рачуна, биланс и рачун успеха, као и ПДВ обрачун.',
+      meta: ['Издавач: ABACUS Research AG', 'Област: Финансијско књиговодство', 'Доказ: Сертификат са положеном завршном провером', 'Формат: PDF'],
+      previewLabel: 'Сертификат'
+    },
+    'linkedin-generative-ki': {
+      title: 'Шта је генеративна вештачка интелигенција?',
+      cardDescription: 'LinkedIn Learning курс о генеративним AI алатима, вештачкој интелигенцији и основном разумевању генеративне AI.',
+      detailDescription: 'Овај LinkedIn Learning сертификат потврђује завршен курс „Шта је генеративна вештачка интелигенција?“. Курс обрађује генеративне AI алате, вештачку интелигенцију и основно разумевање генеративне AI у контексту рада и учења.',
+      meta: ['Издавач: LinkedIn Learning', 'Област: Генеративна AI', 'Трајање: 42 минута', 'Формат: PDF'],
+      previewLabel: 'Сертификат'
+    }
+  }
+};
+
 if (yearTarget) {
   yearTarget.textContent = String(new Date().getFullYear());
 }
@@ -829,16 +935,19 @@ const portfolioItemKey = (item) => item.id || String(item.title || '').toLowerCa
 
 const localizedPortfolioItem = (item, typeKey) => {
   const translationPath = `portfolioItems.${typeKey}.${portfolioItemKey(item)}`;
+  const certificateTranslation = typeKey === 'certificates'
+    ? certificateCopy[currentLanguageCode]?.[item.id]
+    : null;
   return {
     ...item,
-    title: t(`${translationPath}.title`, item.title || ''),
-    cardDescription: t(`${translationPath}.cardDescription`, item.cardDescription || item.description || ''),
-    detailDescription: t(`${translationPath}.detailDescription`, item.detailDescription || item.description || ''),
-    meta: tArray(`${translationPath}.meta`, item.meta || []),
+    title: certificateTranslation?.title || t(`${translationPath}.title`, item.title || ''),
+    cardDescription: certificateTranslation?.cardDescription || t(`${translationPath}.cardDescription`, item.cardDescription || item.description || ''),
+    detailDescription: certificateTranslation?.detailDescription || t(`${translationPath}.detailDescription`, item.detailDescription || item.description || ''),
+    meta: certificateTranslation?.meta || tArray(`${translationPath}.meta`, item.meta || []),
     tags: tArray(`${translationPath}.tags`, item.tags || []),
     role: t(`${translationPath}.role`, item.role || ''),
     learning: t(`${translationPath}.learning`, item.learning || ''),
-    previewLabel: t(`${translationPath}.previewLabel`, item.previewLabel || 'Preview folgt')
+    previewLabel: certificateTranslation?.previewLabel || t(`${translationPath}.previewLabel`, item.previewLabel || 'Preview folgt')
   };
 };
 
@@ -1244,7 +1353,12 @@ const createCard = (item, typeKey = 'projects') => {
   }
   if (item.previewImage) {
     preview.classList.add('has-image');
-    preview.style.setProperty('--preview-image', `url("${item.previewImage}")`);
+    const image = document.createElement('img');
+    image.src = item.previewImage;
+    image.alt = `${displayItem.title} ${displayItem.previewLabel || 'Vorschau'}`;
+    image.loading = 'lazy';
+    image.decoding = 'async';
+    preview.append(image);
   }
 
   const previewLabel = document.createElement('span');
@@ -1304,6 +1418,34 @@ const createCard = (item, typeKey = 'projects') => {
   if (item.links) {
     detailButton.dataset.links = JSON.stringify(item.links);
   }
+
+  const openDetails = () => {
+    openDetailModal(
+      displayItem.title,
+      displayItem.detailDescription || displayItem.description || '',
+      displayItem.meta || [],
+      {
+        file: typeKey === 'certificates' ? item.file || '' : '',
+        previewLabel: displayItem.previewLabel || '',
+        previewImage: item.previewImage || '',
+        itemType: typeKey
+      }
+    );
+  };
+
+  card.dataset.clickableCard = 'true';
+  card.tabIndex = 0;
+  card.setAttribute('aria-label', `${displayItem.title}: ${t('portfolio.detailsButton', 'Details anzeigen')}`);
+  card.addEventListener('click', (event) => {
+    if (event.target.closest('button, a')) return;
+    openDetails();
+  });
+  card.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      openDetails();
+    }
+  });
 
   const actions = document.createElement('div');
   actions.className = 'card-actions';
@@ -1681,6 +1823,19 @@ const configureModalFile = ({ file, previewLabel, previewImage, itemType }) => {
     modalCard?.style.removeProperty('--modal-preview-image');
   }
 
+  if (modalPreviewLink) {
+    modalPreviewLink.setAttribute('aria-disabled', String(!hasPreviewImage));
+    modalPreviewLink.tabIndex = hasPreviewImage ? 0 : -1;
+    modalPreviewLink.setAttribute('aria-label', hasPreviewImage
+      ? t('modal.openImage', 'Vorschau in neuem Tab öffnen')
+      : '');
+    if (hasPreviewImage) {
+      modalPreviewLink.href = previewImage;
+    } else {
+      modalPreviewLink.removeAttribute('href');
+    }
+  }
+
   if (modalDownload) {
     modalDownload.hidden = !hasDownload;
     modalDownload.textContent = t('portfolioDownloadButton', 'Download PDF');
@@ -1749,6 +1904,13 @@ if (modalClose) {
 }
 
 if (modal) {
+  window.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && modal.open) {
+      event.preventDefault();
+      modal.close();
+    }
+  }, true);
+
   modal.addEventListener('cancel', (event) => {
     event.preventDefault();
     modal.close();
@@ -1762,6 +1924,13 @@ if (modal) {
 
   modal.addEventListener('close', () => {
     document.body.classList.remove('modal-open');
+    document.querySelectorAll('[data-clickable-card="true"], .item-card.is-selected').forEach((card) => {
+      card.classList.remove('is-selected', 'is-modal-return-focus');
+    });
+    const activeElement = document.activeElement;
+    if (activeElement instanceof HTMLElement) activeElement.blur();
+    document.body.tabIndex = -1;
+    document.body.focus({ preventScroll: true });
   });
 }
 
@@ -1816,6 +1985,14 @@ const loadLanguage = async (languageCode) => {
   }
 
   activeDictionary = dictionary;
+  currentLanguageCode = languageCode;
+  const isCyrillic = languageCode === 'sr-cyrl';
+  const visibleName = isCyrillic ? 'Александар Николић' : 'Aleksandar Nikolić';
+  const brandName = document.querySelector('.brand-latin');
+  if (brandName) {
+    brandName.innerHTML = isCyrillic ? 'Александар <em>Николић</em>' : 'Aleksandar <em>Nikolić</em>';
+  }
+  if (footerName) footerName.textContent = visibleName;
   applyStaticTranslations();
   refreshDynamicTexts();
 

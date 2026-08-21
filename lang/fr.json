@@ -9,7 +9,8 @@
     "tech": "Stack tech",
     "portfolio": "Projets",
     "contact": "Contact & légal",
-    "github": "GitHub"
+    "github": "GitHub",
+    "certificates": "Certificats"
   },
   "hero": {
     "kicker": "Profil développeur",
@@ -175,7 +176,8 @@
     "close": "Fermer",
     "title": "Vue détail",
     "projectKicker": "Détails du projet",
-    "certificateKicker": "Certificat"
+    "certificateKicker": "Certificat",
+    "openImage": "Ouvrir l’aperçu dans un nouvel onglet"
   },
   "portfolioDownloadButton": "Télécharger le PDF",
   "footer": {
@@ -208,7 +210,7 @@
     "externalTitle": "Contenus externes",
     "externalText": "Les images de projets, certificats et le graphique GitHub sont chargés localement. Les liens externes ne s’ouvrent qu’au clic.",
     "imprintTitle": "Impressum",
-    "imprintText": "Site portfolio privé d’Aleksandar Nikolic. Le contact se fait par e-mail dans la section contact.",
+    "imprintText": "Site portfolio privé d’Aleksandar Nikolić. Le contact se fait par e-mail dans la section contact.",
     "contactLink": "Me contacter"
   },
   "portfolioItems": {
@@ -310,7 +312,7 @@
     "certificates": {
       "ethicalHacker": {
         "title": "Ethical Hacker",
-        "cardDescription": "Certificat au format PDF avec aperçu direct et téléchargement.",
+        "cardDescription": "Certificat avec aperçu, détails et téléchargement PDF dans la vue détaillée.",
         "detailDescription": "Ce certificat peut être consulté directement dans le portfolio ou téléchargé.",
         "meta": [
           "Format: PDF",
@@ -321,7 +323,7 @@
       },
       "introCybersecurity": {
         "title": "Introduction to Cybersecurity",
-        "cardDescription": "Certificat au format PDF avec aperçu direct et téléchargement.",
+        "cardDescription": "Certificat avec aperçu, détails et téléchargement PDF dans la vue détaillée.",
         "detailDescription": "Ce certificat peut être consulté directement dans le portfolio ou téléchargé.",
         "meta": [
           "Format: PDF",
@@ -332,7 +334,7 @@
       },
       "bbbHackathon": {
         "title": "BBB Hackathon",
-        "cardDescription": "Certificat au format PDF avec aperçu direct et téléchargement.",
+        "cardDescription": "Certificat avec aperçu, détails et téléchargement PDF dans la vue détaillée.",
         "detailDescription": "Ce certificat peut être consulté directement dans le portfolio ou téléchargé.",
         "meta": [
           "Format: PDF",
@@ -480,5 +482,10 @@
   "linkLabels": {
     "github": "GitHub",
     "demo": "Démo"
+  },
+  "certificates": {
+    "kicker": "Justificatifs",
+    "title": "Certificats",
+    "subline": "Certificats sélectionnés avec aperçu, détails et téléchargement PDF."
   }
 }
