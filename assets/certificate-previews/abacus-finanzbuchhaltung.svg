@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">ABACUS Finanzbuchhaltung Zertifikat Vorschau</title>
+  <desc id="desc">Vorschaukarte für das ABACUS Finanzbuchhaltung Zertifikat von Aleksandar Nikolic.</desc>
+  <rect width="1200" height="760" fill="#f7f5f0"/>
+  <rect x="44" y="44" width="1112" height="672" rx="26" fill="#fffdf8" stroke="#ded7ca" stroke-width="4"/>
+  <circle cx="1020" cy="150" r="42" fill="#e74d60" opacity="0.9"/>
+  <g fill="#2f2f35">
+    <text x="120" y="170" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="700">Zertifikat</text>
+    <text x="120" y="250" font-family="Arial, Helvetica, sans-serif" font-size="30" letter-spacing="10">ANWENDER</text>
+    <text x="120" y="305" font-family="Arial, Helvetica, sans-serif" font-size="38" letter-spacing="7">ABACUS FINANZBUCHHALTUNG</text>
+    <text x="120" y="430" font-family="Arial, Helvetica, sans-serif" font-size="52" font-style="italic">Aleksandar Nikolic</text>
+    <text x="120" y="510" font-family="Arial, Helvetica, sans-serif" font-size="28">Abschlussprüfung mit Erfolg bestanden</text>
+    <text x="120" y="565" font-family="Arial, Helvetica, sans-serif" font-size="26">Benutzeroberfläche · Stammdaten · Buchungen · MWST</text>
+    <text x="120" y="650" font-family="Arial, Helvetica, sans-serif" font-size="26">26.05.2026</text>
+    <text x="840" y="650" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" letter-spacing="6">ABACUS</text>
+  </g>
+  <g fill="#e74d60" transform="translate(800 622)">
+    <rect width="16" height="16" transform="rotate(45 8 8)"/>
+    <rect x="24" width="16" height="16" transform="rotate(45 32 8)" opacity="0.7"/>
+    <rect y="24" width="16" height="16" transform="rotate(45 8 32)" opacity="0.7"/>
+  </g>
+</svg>
