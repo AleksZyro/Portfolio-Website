@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">LinkedIn Learning Generative KI Zertifikat Vorschau</title>
+  <desc id="desc">Vorschaukarte für das LinkedIn Learning Zertifikat Was ist generative KI?</desc>
+  <rect width="1200" height="760" fill="#d9e8ea"/>
+  <rect x="70" y="70" width="1060" height="620" fill="#ffffff"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="410" y="125" width="72" height="54" rx="8" fill="#0a66c2"/>
+    <text x="425" y="164" fill="#ffffff" font-size="34" font-weight="700">in</text>
+    <text x="492" y="164" fill="#0a66c2" font-size="46">Learning</text>
+    <text x="270" y="300" fill="#111111" font-size="68" font-weight="400">Was ist generative KI?</text>
+    <text x="318" y="385" fill="#333333" font-size="34">Kurs von Aleksandar Nikolic abgeschlossen</text>
+    <text x="366" y="435" fill="#555555" font-size="28">20.08.2026 · 42 Minuten</text>
+    <text x="500" y="535" fill="#333333" font-size="28">Top-Kenntnisse</text>
+    <g fill="#ffffff" stroke="#999999">
+      <rect x="260" y="565" width="250" height="48" rx="24"/>
+      <rect x="530" y="565" width="260" height="48" rx="24"/>
+      <rect x="810" y="565" width="170" height="48" rx="24"/>
+    </g>
+    <g fill="#222222" font-size="22">
+      <text x="297" y="597">Generative KI-Tools</text>
+      <text x="575" y="597">Künstliche Intelligenz</text>
+      <text x="845" y="597">Generative KI</text>
+    </g>
+    <circle cx="1010" cy="640" r="68" fill="#7a8fa3" opacity="0.95"/>
+    <text x="970" y="654" fill="#ffffff" font-size="42" font-weight="700">in</text>
+  </g>
+</svg>
