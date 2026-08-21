@@ -511,11 +511,11 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
 
 .certificates-heading {
   color: var(--accent-2);
-  font-family: "Space Grotesk", "Sora", sans-serif;
-  font-size: clamp(1.55rem, 3.2vw, 2.35rem);
-  line-height: 1.15;
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1.2;
   text-transform: none;
-  letter-spacing: 0;
+  letter-spacing: 0.04em;
 }
 
 .project-explorer {
@@ -809,10 +809,21 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
 }
 .certificate-preview.has-image {
   aspect-ratio: 16 / 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 16px;
   background: rgba(12, 11, 20, 0.72);
 }
-.certificate-preview img { max-height: 100%; }
+.certificate-preview img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
 
 .certificate-card {
   gap: 8px;
