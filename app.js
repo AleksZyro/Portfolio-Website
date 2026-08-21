@@ -919,6 +919,18 @@ const certificateCopy = {
   }
 };
 
+const resetHorizontalScroll = () => {
+  document.documentElement.scrollLeft = 0;
+  document.body.scrollLeft = 0;
+  if (window.scrollX !== 0) {
+    window.scrollTo(0, window.scrollY);
+  }
+};
+
+window.addEventListener('pageshow', resetHorizontalScroll);
+window.addEventListener('resize', resetHorizontalScroll);
+window.addEventListener('hashchange', () => requestAnimationFrame(resetHorizontalScroll));
+
 if (yearTarget) {
   yearTarget.textContent = String(new Date().getFullYear());
 }

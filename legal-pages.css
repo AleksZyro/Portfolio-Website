@@ -10,7 +10,7 @@
 * { box-sizing: border-box; }
 html {
   max-width: 100%;
-  overflow-x: clip;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 body {
@@ -20,14 +20,7 @@ body {
   background: var(--bg);
   font-family: "Sora", "Segoe UI", sans-serif;
   max-width: 100%;
-  overflow-x: clip;
-}
-
-@supports not (overflow: clip) {
-  html,
-  body {
-    overflow-x: hidden;
-  }
+  overflow-x: hidden;
 }
 body::before {
   content: "";

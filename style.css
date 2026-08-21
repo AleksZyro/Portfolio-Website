@@ -22,7 +22,7 @@
 
 html {
   max-width: 100%;
-  overflow-x: clip;
+  overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-h) + 28px);
 }
@@ -32,15 +32,8 @@ body {
   font-family: "Sora", "Segoe UI", sans-serif;
   color: var(--text);
   max-width: 100%;
-  overflow-x: clip;
+  overflow-x: hidden;
   background-color: var(--bg-900);
-}
-
-@supports not (overflow: clip) {
-  html,
-  body {
-    overflow-x: hidden;
-  }
 }
 
 
