@@ -423,6 +423,14 @@
           "Python",
           "Hackathon"
         ]
+      },
+      "heimatschutz": {
+        "title": "Heimatschutz Aargau",
+        "description": "Gemeinsame interne Webanwendung zur Sammlung und Prüfung von Baugesuchen mit AGIS-Schutzdaten.",
+        "tags": [
+          "Teamprojekt",
+          "Webanwendung"
+        ]
       }
     }
   },
@@ -486,7 +494,7 @@
   },
   "certificates": {
     "kicker": "Zertifikate",
-    "title": "Zertifikate",
+    "title": "Weiterbildungen in meiner Freizeit",
     "subline": "Ausgewählte Zertifikate mit Vorschau, Details und PDF-Download."
   }
 }

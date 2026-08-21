@@ -427,6 +427,14 @@
           "Python",
           "Hakaton"
         ]
+      },
+      "heimatschutz": {
+        "title": "Heimatschutz Aargau",
+        "description": "Zajednička interna web aplikacija za prikupljanje i proveru zahteva za gradnju uz podatke o zaštiti AGIS.",
+        "tags": [
+          "Timski projekat",
+          "Veb aplikacija"
+        ]
       }
     }
   },
@@ -486,7 +494,7 @@
   ],
   "certificates": {
     "kicker": "Sertifikati",
-    "title": "Sertifikati",
+    "title": "Usavršavanje u slobodno vreme",
     "subline": "Odabrani sertifikati sa pregledom, detaljima i PDF preuzimanjem."
   }
 }

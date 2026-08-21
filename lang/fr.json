@@ -423,6 +423,14 @@
           "Python",
           "Hackathon"
         ]
+      },
+      "heimatschutz": {
+        "title": "Heimatschutz Aargau",
+        "description": "Application web interne développée en équipe pour collecter et examiner des demandes de construction avec les données de protection AGIS.",
+        "tags": [
+          "Projet d’équipe",
+          "Application web"
+        ]
       }
     }
   },
@@ -486,7 +494,7 @@
   },
   "certificates": {
     "kicker": "Certificats",
-    "title": "Certificats",
+    "title": "Formations et apprentissages personnels",
     "subline": "Certificats sélectionnés avec aperçu, détails et téléchargement PDF."
   }
 }
