@@ -203,6 +203,9 @@
     "openSourceText": "Selected merged pull requests with a direct link to the proof.",
     "moreMergesTitle": "More merges",
     "moreMergesText": "Additional merged pull requests with direct proof.",
+    "publicRepos": "public repositories",
+    "ossMerges": "open-source merges",
+    "currentStreak": "days current streak",
     "mergedLabel": "Merged"
   },
   "legal": {

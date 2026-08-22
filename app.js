@@ -454,7 +454,8 @@ const embeddedDictionaries = {
       openSourceEmpty: 'Noch keine \u00f6ffentlich belegten Merges hinterlegt.',
       openSourceText: 'Sobald gemergte Pull Requests vorhanden sind, werden sie hier mit Projekt, Kurzbeschreibung und Link aufgef\u00fchrt.',
       moreMergesTitle: 'Weitere Merges',
-      moreMergesText: 'Weitere gemergte Pull Requests mit direktem Nachweis.'
+      moreMergesText: 'Weitere gemergte Pull Requests mit direktem Nachweis.',
+      publicRepos: 'öffentliche Repositories', ossMerges: 'Open-Source-Merges', currentStreak: 'Tage aktuelle Serie'
     },
     contact: {
       kicker: 'Kontakt',
@@ -587,7 +588,7 @@ const embeddedDictionaries = {
       }
     },
     filters: { all: 'All', visualization: 'Visualization', inProgress: 'In progress' },
-    github: { kicker: 'GitHub', title: 'Activity and Open Source', subline: 'I use GitHub to document projects clearly, version changes, and make public work linkable.', profileLink: 'GitHub profile', reposLink: 'Repositories', openSourceTitle: 'Open-source merges', openSourceEmpty: 'No publicly verifiable merges listed yet.', openSourceText: 'Once merged pull requests are available, they will be listed here with project, short description, and link.', moreMergesTitle: 'More merges', moreMergesText: 'Additional merged pull requests with direct proof.' },
+    github: { kicker: 'GitHub', title: 'Activity and Open Source', subline: 'I use GitHub to document projects clearly, version changes, and make public work linkable.', profileLink: 'GitHub profile', reposLink: 'Repositories', openSourceTitle: 'Open-source merges', openSourceEmpty: 'No publicly verifiable merges listed yet.', openSourceText: 'Once merged pull requests are available, they will be listed here with project, short description, and link.', moreMergesTitle: 'More merges', moreMergesText: 'Additional merged pull requests with direct proof.' , publicRepos: 'public repositories', ossMerges: 'open-source merges', currentStreak: 'days current streak' },
     contact: {
       kicker: 'Contact',
       title: "Let's work together",
@@ -721,7 +722,7 @@ const embeddedDictionaries = {
       }
     },
     filters: { all: 'Tous', visualization: 'Visualisation', inProgress: 'En cours' },
-    github: { kicker: 'GitHub', title: 'Activit\u00e9 et open source', subline: 'J\u2019utilise GitHub pour documenter mes projets, versionner les changements et rendre mes travaux publics faciles \u00e0 consulter.', profileLink: 'Profil GitHub', reposLink: 'Repositories', openSourceTitle: 'Merges open source', openSourceEmpty: 'Aucun merge v\u00e9rifiable publiquement n\u2019est encore list\u00e9.', openSourceText: 'D\u00e8s que des pull requests merg\u00e9es seront disponibles, elles seront list\u00e9es ici avec projet, courte description et lien.', moreMergesTitle: 'Autres merges', moreMergesText: 'Autres pull requests merg\u00e9es avec preuve directe.' },
+    github: { kicker: 'GitHub', title: 'Activit\u00e9 et open source', subline: 'J\u2019utilise GitHub pour documenter mes projets, versionner les changements et rendre mes travaux publics faciles \u00e0 consulter.', profileLink: 'Profil GitHub', reposLink: 'Repositories', openSourceTitle: 'Merges open source', openSourceEmpty: 'Aucun merge v\u00e9rifiable publiquement n\u2019est encore list\u00e9.', openSourceText: 'D\u00e8s que des pull requests merg\u00e9es seront disponibles, elles seront list\u00e9es ici avec projet, courte description et lien.', moreMergesTitle: 'Autres merges', moreMergesText: 'Autres pull requests merg\u00e9es avec preuve directe.' , publicRepos: 'dépôts publics', ossMerges: 'merges open source', currentStreak: 'jours de série actuelle' },
     contact: {
       kicker: 'Contact',
       title: 'Travaillons ensemble',
@@ -853,7 +854,7 @@ const embeddedDictionaries = {
       }
     },
     filters: { all: 'Svi', visualization: 'Vizualizacija', inProgress: 'U radu' },
-    github: { kicker: 'GitHub', title: 'Aktivnost i open source', subline: 'GitHub koristim za jasno dokumentovanje projekata, verzionisanje promena i javno linkovanje radova.', profileLink: 'GitHub profil', reposLink: 'Repositories', openSourceTitle: 'Open-source merge-ovi', openSourceEmpty: 'Jos nema javno proverljivih merge-ova.', openSourceText: 'Kada budu dostupni merge-ovani pull requestovi, ovde ce biti navedeni sa projektom, kratkim opisom i linkom.', moreMergesTitle: 'Dodatni merge-ovi', moreMergesText: 'Dodatni merge-ovani pull requestovi sa direktnim dokazom.' },
+    github: { kicker: 'GitHub', title: 'Aktivnost i open source', subline: 'GitHub koristim za jasno dokumentovanje projekata, verzionisanje promena i javno linkovanje radova.', profileLink: 'GitHub profil', reposLink: 'Repositories', openSourceTitle: 'Open-source merge-ovi', openSourceEmpty: 'Jos nema javno proverljivih merge-ova.', openSourceText: 'Kada budu dostupni merge-ovani pull requestovi, ovde ce biti navedeni sa projektom, kratkim opisom i linkom.', moreMergesTitle: 'Dodatni merge-ovi', moreMergesText: 'Dodatni merge-ovani pull requestovi sa direktnim dokazom.' , publicRepos: 'javni repozitorijumi', ossMerges: 'open-source merge-ovi', currentStreak: 'dana trenutnog niza' },
     contact: {
       kicker: 'Kontakt',
       title: 'Hajde da sarađujemo',

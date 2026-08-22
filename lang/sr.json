@@ -203,6 +203,9 @@
     "openSourceText": "Odabrani mergeovani pull requestovi sa direktnim linkom ka dokazu.",
     "moreMergesTitle": "Dodatni mergeovi",
     "moreMergesText": "Dodatni mergeovani pull requestovi sa direktnim dokazom.",
+    "publicRepos": "javni repozitorijumi",
+    "ossMerges": "open-source merge-ovi",
+    "currentStreak": "dana trenutnog niza",
     "mergedLabel": "Merged"
   },
   "legal": {

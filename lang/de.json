@@ -203,6 +203,9 @@
     "openSourceText": "Ausgewählte gemergte Pull Requests mit direktem Link zum Nachweis.",
     "moreMergesTitle": "Weitere Merges",
     "moreMergesText": "Weitere gemergte Pull Requests mit direktem Nachweis.",
+    "publicRepos": "öffentliche Repositories",
+    "ossMerges": "Open-Source-Merges",
+    "currentStreak": "Tage aktuelle Serie",
     "mergedLabel": "Merged"
   },
   "legal": {
