@@ -24,6 +24,9 @@
     "ctaPortfolio": "Pogledaj projekte",
     "ctaContact": "Kontakt",
     "ctaEmail": "E-mail",
+    "proofRepos": "javni repozitorijumi",
+    "proofMerges": "open-source mergeovi",
+    "proofStreak": "GitHub Daily Streak",
     "availability": "Tražim praksu u Švajcarskoj za 2027/2028.",
     "alias": "Na GitHubu i u projektima koristim developersko ime AleksZyro.",
     "ctaGithub": "GitHub",
@@ -168,7 +171,7 @@
   },
   "contact": {
     "kicker": "Kontakt",
-    "title": "Kontakt",
+    "title": "Hajde da sarađujemo",
     "description": "Za praksu u Švajcarskoj za 2027/2028, pitanja ili saradnju dostupan sam putem e-maila.",
     "mailLabel": "",
     "schoolMailLabel": ""
@@ -198,6 +201,8 @@
     "openSourceTitle": "Open source doprinosi",
     "openSourceEmpty": "Još nema javno proverljivih mergeova.",
     "openSourceText": "Odabrani mergeovani pull requestovi sa direktnim linkom ka dokazu.",
+    "moreMergesTitle": "Dodatni mergeovi",
+    "moreMergesText": "Dodatni mergeovani pull requestovi sa direktnim dokazom.",
     "mergedLabel": "Merged"
   },
   "legal": {

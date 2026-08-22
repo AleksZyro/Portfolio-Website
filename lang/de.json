@@ -24,6 +24,9 @@
     "ctaPortfolio": "Projekte ansehen",
     "ctaContact": "Kontakt",
     "ctaEmail": "E-Mail",
+    "proofRepos": "öffentliche Repositories",
+    "proofMerges": "Open-Source-Merges",
+    "proofStreak": "GitHub Daily Streak",
     "availability": "Praktikumsstelle in der Schweiz für 2027/2028 gesucht.",
     "alias": "Auf GitHub und in Projekten verwende ich den Entwicklernamen AleksZyro.",
     "ctaGithub": "GitHub",
@@ -168,7 +171,7 @@
   },
   "contact": {
     "kicker": "Kontakt",
-    "title": "Kontakt",
+    "title": "Zusammenarbeiten",
     "description": "Für eine Praktikumsstelle 2027/2028 in der Schweiz, Rückfragen oder Zusammenarbeit bin ich per E-Mail erreichbar.",
     "mailLabel": "",
     "schoolMailLabel": ""
@@ -198,6 +201,8 @@
     "openSourceTitle": "Open-Source-Merges",
     "openSourceEmpty": "Noch keine öffentlich belegten Merges hinterlegt.",
     "openSourceText": "Ausgewählte gemergte Pull Requests mit direktem Link zum Nachweis.",
+    "moreMergesTitle": "Weitere Merges",
+    "moreMergesText": "Weitere gemergte Pull Requests mit direktem Nachweis.",
     "mergedLabel": "Merged"
   },
   "legal": {

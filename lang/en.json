@@ -24,6 +24,9 @@
     "ctaPortfolio": "View projects",
     "ctaContact": "Contact",
     "ctaEmail": "Email",
+    "proofRepos": "public repositories",
+    "proofMerges": "open-source merges",
+    "proofStreak": "GitHub Daily Streak",
     "availability": "Looking for an internship position in Switzerland for 2027/2028.",
     "alias": "On GitHub and in projects, I use the developer name AleksZyro.",
     "ctaGithub": "GitHub",
@@ -168,7 +171,7 @@
   },
   "contact": {
     "kicker": "Contact",
-    "title": "Contact",
+    "title": "Let's work together",
     "description": "For an internship position in Switzerland for 2027/2028, questions, or collaboration, I am reachable by email.",
     "mailLabel": "",
     "schoolMailLabel": ""
@@ -198,6 +201,8 @@
     "openSourceTitle": "Open-source merges",
     "openSourceEmpty": "No publicly verifiable merges listed yet.",
     "openSourceText": "Selected merged pull requests with a direct link to the proof.",
+    "moreMergesTitle": "More merges",
+    "moreMergesText": "Additional merged pull requests with direct proof.",
     "mergedLabel": "Merged"
   },
   "legal": {

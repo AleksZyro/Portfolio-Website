@@ -342,7 +342,10 @@ const embeddedDictionaries = {
       ctaPortfolio: 'Projekte ansehen',
       ctaGithub: 'GitHub',
       ctaContact: 'Kontakt',
-      ctaEmail: 'E-Mail'
+      ctaEmail: 'E-Mail',
+      proofRepos: 'öffentliche Repositories',
+      proofMerges: 'Open-Source-Merges',
+      proofStreak: 'GitHub Daily Streak'
     },
     focus: {
       title: 'Technische Praxis',
@@ -449,11 +452,13 @@ const embeddedDictionaries = {
       reposLink: 'Repositories',
       openSourceTitle: 'Open-Source-Merges',
       openSourceEmpty: 'Noch keine \u00f6ffentlich belegten Merges hinterlegt.',
-      openSourceText: 'Sobald gemergte Pull Requests vorhanden sind, werden sie hier mit Projekt, Kurzbeschreibung und Link aufgef\u00fchrt.'
+      openSourceText: 'Sobald gemergte Pull Requests vorhanden sind, werden sie hier mit Projekt, Kurzbeschreibung und Link aufgef\u00fchrt.',
+      moreMergesTitle: 'Weitere Merges',
+      moreMergesText: 'Weitere gemergte Pull Requests mit direktem Nachweis.'
     },
     contact: {
       kicker: 'Kontakt',
-      title: 'Kontakt',
+      title: 'Zusammenarbeiten',
       description: 'Für Praktikum, Rückfragen oder Zusammenarbeit bin ich per E-Mail erreichbar.',
       mailLabel: '',
       schoolMailLabel: ''
@@ -482,7 +487,10 @@ const embeddedDictionaries = {
       ctaPortfolio: 'View projects',
       ctaGithub: 'GitHub',
       ctaContact: 'Contact',
-      ctaEmail: 'Email'
+      ctaEmail: 'Email',
+      proofRepos: 'public repositories',
+      proofMerges: 'open-source merges',
+      proofStreak: 'GitHub Daily Streak'
     },
     focus: {
       title: 'Work areas',
@@ -579,10 +587,10 @@ const embeddedDictionaries = {
       }
     },
     filters: { all: 'All', visualization: 'Visualization', inProgress: 'In progress' },
-    github: { kicker: 'GitHub', title: 'Activity and Open Source', subline: 'I use GitHub to document projects clearly, version changes, and make public work linkable.', profileLink: 'GitHub profile', reposLink: 'Repositories', openSourceTitle: 'Open-source merges', openSourceEmpty: 'No publicly verifiable merges listed yet.', openSourceText: 'Once merged pull requests are available, they will be listed here with project, short description, and link.' },
+    github: { kicker: 'GitHub', title: 'Activity and Open Source', subline: 'I use GitHub to document projects clearly, version changes, and make public work linkable.', profileLink: 'GitHub profile', reposLink: 'Repositories', openSourceTitle: 'Open-source merges', openSourceEmpty: 'No publicly verifiable merges listed yet.', openSourceText: 'Once merged pull requests are available, they will be listed here with project, short description, and link.', moreMergesTitle: 'More merges', moreMergesText: 'Additional merged pull requests with direct proof.' },
     contact: {
       kicker: 'Contact',
-      title: 'Contact',
+      title: "Let's work together",
       description: 'For internships, questions, or collaboration, I am reachable by email.',
       mailLabel: '',
       schoolMailLabel: ''
@@ -611,7 +619,10 @@ const embeddedDictionaries = {
       ctaPortfolio: 'Voir les projets',
       ctaGithub: 'GitHub',
       ctaContact: 'Contact',
-      ctaEmail: 'E-mail'
+      ctaEmail: 'E-mail',
+      proofRepos: 'dépôts publics',
+      proofMerges: 'merges open source',
+      proofStreak: 'GitHub Daily Streak'
     },
     focus: {
       title: 'Domaines de travail',
@@ -710,10 +721,10 @@ const embeddedDictionaries = {
       }
     },
     filters: { all: 'Tous', visualization: 'Visualisation', inProgress: 'En cours' },
-    github: { kicker: 'GitHub', title: 'Activit\u00e9 et open source', subline: 'J\u2019utilise GitHub pour documenter mes projets, versionner les changements et rendre mes travaux publics faciles \u00e0 consulter.', profileLink: 'Profil GitHub', reposLink: 'Repositories', openSourceTitle: 'Merges open source', openSourceEmpty: 'Aucun merge v\u00e9rifiable publiquement n\u2019est encore list\u00e9.', openSourceText: 'D\u00e8s que des pull requests merg\u00e9es seront disponibles, elles seront list\u00e9es ici avec projet, courte description et lien.' },
+    github: { kicker: 'GitHub', title: 'Activit\u00e9 et open source', subline: 'J\u2019utilise GitHub pour documenter mes projets, versionner les changements et rendre mes travaux publics faciles \u00e0 consulter.', profileLink: 'Profil GitHub', reposLink: 'Repositories', openSourceTitle: 'Merges open source', openSourceEmpty: 'Aucun merge v\u00e9rifiable publiquement n\u2019est encore list\u00e9.', openSourceText: 'D\u00e8s que des pull requests merg\u00e9es seront disponibles, elles seront list\u00e9es ici avec projet, courte description et lien.', moreMergesTitle: 'Autres merges', moreMergesText: 'Autres pull requests merg\u00e9es avec preuve directe.' },
     contact: {
       kicker: 'Contact',
-      title: 'Contact',
+      title: 'Travaillons ensemble',
       description: 'Pour un stage, des questions ou une collaboration, je suis joignable par e-mail.',
       mailLabel: '',
       schoolMailLabel: ''
@@ -742,7 +753,10 @@ const embeddedDictionaries = {
       ctaPortfolio: 'Pogledaj projekte',
       ctaGithub: 'GitHub',
       ctaContact: 'Kontakt',
-      ctaEmail: 'E-mail'
+      ctaEmail: 'E-mail',
+      proofRepos: 'javni repozitorijumi',
+      proofMerges: 'open-source mergeovi',
+      proofStreak: 'GitHub Daily Streak'
     },
     focus: {
       title: 'Oblasti rada',
@@ -839,10 +853,10 @@ const embeddedDictionaries = {
       }
     },
     filters: { all: 'Svi', visualization: 'Vizualizacija', inProgress: 'U radu' },
-    github: { kicker: 'GitHub', title: 'Aktivnost i open source', subline: 'GitHub koristim za jasno dokumentovanje projekata, verzionisanje promena i javno linkovanje radova.', profileLink: 'GitHub profil', reposLink: 'Repositories', openSourceTitle: 'Open-source merge-ovi', openSourceEmpty: 'Jos nema javno proverljivih merge-ova.', openSourceText: 'Kada budu dostupni merge-ovani pull requestovi, ovde ce biti navedeni sa projektom, kratkim opisom i linkom.' },
+    github: { kicker: 'GitHub', title: 'Aktivnost i open source', subline: 'GitHub koristim za jasno dokumentovanje projekata, verzionisanje promena i javno linkovanje radova.', profileLink: 'GitHub profil', reposLink: 'Repositories', openSourceTitle: 'Open-source merge-ovi', openSourceEmpty: 'Jos nema javno proverljivih merge-ova.', openSourceText: 'Kada budu dostupni merge-ovani pull requestovi, ovde ce biti navedeni sa projektom, kratkim opisom i linkom.', moreMergesTitle: 'Dodatni merge-ovi', moreMergesText: 'Dodatni merge-ovani pull requestovi sa direktnim dokazom.' },
     contact: {
       kicker: 'Kontakt',
-      title: 'Kontakt',
+      title: 'Hajde da sarađujemo',
       description: 'Za praksu, pitanja ili saradnju dostupan sam putem e-maila.',
       mailLabel: '',
       schoolMailLabel: ''
@@ -1076,7 +1090,10 @@ const renderOpenSourceContributions = () => {
     return;
   }
 
-  contributions.forEach((contribution) => {
+  const featured = contributions.slice(0, 5);
+  const additional = contributions.slice(5);
+
+  featured.forEach((contribution) => {
     const item = localizedOpenSourceContribution(contribution);
     const card = document.createElement('a');
     card.className = 'open-source-pr';
@@ -1123,6 +1140,31 @@ const renderOpenSourceContributions = () => {
     card.append(top, title, summary, bottom);
     openSourceList.append(card);
   });
+
+  const moreCard = document.createElement('article');
+  moreCard.className = 'open-source-pr open-source-more-card';
+
+  const moreTitle = document.createElement('h4');
+  moreTitle.textContent = t('github.moreMergesTitle', 'Weitere Merges');
+
+  const moreText = document.createElement('p');
+  moreText.textContent = t('github.moreMergesText', 'Weitere gemergte Pull Requests mit direktem Nachweis.');
+
+  const moreList = document.createElement('div');
+  moreList.className = 'open-source-more-list';
+  additional.forEach((contribution) => {
+    const item = localizedOpenSourceContribution(contribution);
+    const link = document.createElement('a');
+    link.className = 'open-source-more-link link-arrow';
+    link.href = item.url;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.textContent = `${item.repo} #${item.number}`;
+    moreList.append(link);
+  });
+
+  moreCard.append(moreTitle, moreText, moreList);
+  openSourceList.append(moreCard);
 };
 
 const applyStaticTranslations = () => {
