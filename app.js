@@ -1962,6 +1962,7 @@ const configureModalFile = ({ file, previewLabel, previewImage, itemType }) => {
   }
 
   if (modalPreviewLink) {
+    modalPreviewLink.hidden = !hasPreviewImage;
     modalPreviewLink.setAttribute('aria-disabled', String(!hasPreviewImage));
     modalPreviewLink.tabIndex = hasPreviewImage ? 0 : -1;
     modalPreviewLink.setAttribute('aria-label', hasPreviewImage
