@@ -1499,15 +1499,19 @@ const createCard = (item, typeKey = 'projects') => {
     preview.append(image);
   }
 
-  const previewLabel = document.createElement('span');
-  previewLabel.className = 'project-preview-label';
-  previewLabel.textContent = displayItem.previewLabel || 'Preview folgt';
+  if (item.previewImage) {
+    const previewLabel = document.createElement('span');
+    previewLabel.className = 'project-preview-label';
+    previewLabel.textContent = displayItem.previewLabel || '';
 
-  const previewTitle = document.createElement('span');
-  previewTitle.className = 'project-preview-title';
-  previewTitle.textContent = displayItem.title;
+    const previewTitle = document.createElement('span');
+    previewTitle.className = 'project-preview-title';
+    previewTitle.textContent = displayItem.title;
 
-  preview.append(previewLabel, previewTitle);
+    preview.append(previewLabel, previewTitle);
+  } else {
+    preview.remove();
+  }
 
   const title = document.createElement('h3');
   title.textContent = displayItem.title;
@@ -1942,12 +1946,12 @@ const configureModalFile = ({ file, previewLabel, previewImage, itemType }) => {
 
   if (modalPreviewLabel) {
     modalPreviewLabel.hidden = hasPreviewImage;
-    modalPreviewLabel.textContent = previewLabel || 'Preview folgt';
+    modalPreviewLabel.textContent = previewLabel || '';
   }
 
   if (modalPreviewTitle) {
     modalPreviewTitle.hidden = hasPreviewImage;
-    modalPreviewTitle.textContent = optionsTitleBuffer || 'Projektvorschau';
+    modalPreviewTitle.textContent = optionsTitleBuffer || '';
   }
 
   if (modalPreviewSubtitle) {
