@@ -1057,7 +1057,7 @@ const localizedPortfolioItem = (item, typeKey) => {
     tags: tArray(`${translationPath}.tags`, item.tags || []),
     role: t(`${translationPath}.role`, item.role || ''),
     learning: t(`${translationPath}.learning`, item.learning || ''),
-    previewLabel: certificateTranslation?.previewLabel || t(`${translationPath}.previewLabel`, item.previewLabel || 'Preview folgt')
+    previewLabel: certificateTranslation?.previewLabel || t(`${translationPath}.previewLabel`, item.previewLabel || '')
   };
 };
 
@@ -1956,7 +1956,7 @@ const configureModalFile = ({ file, previewLabel, previewImage, itemType }) => {
 
   if (modalPreviewSubtitle) {
     modalPreviewSubtitle.hidden = hasPreviewImage;
-    modalPreviewSubtitle.textContent = isCertificate ? '' : 'Visual folgt';
+    modalPreviewSubtitle.textContent = '';
   }
 
   if (hasPreviewImage) {
