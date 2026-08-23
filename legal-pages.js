@@ -55,7 +55,12 @@ const applyLegalLanguage = (code) => {
   const htmlLanguageCodes = { sr: 'sr-Latn', 'sr-cyrl': 'sr-Cyrl' };
   document.documentElement.lang = htmlLanguageCodes[code] || code;
   document.title = `${title} | ${copy.brand}`;
-  document.querySelectorAll('[data-legal-brand]').forEach((element) => { element.textContent = copy.brand; });
+  document.querySelectorAll('.brand-latin').forEach((element) => {
+    element.innerHTML = 'Aleksandar <em>Nikolić</em>';
+  });
+  document.querySelectorAll('.brand-cyrillic').forEach((element) => {
+    element.textContent = 'Александар Николић';
+  });
   const kicker = document.getElementById('legal-kicker');
   const heading = document.getElementById('legal-title');
   const intro = document.getElementById('legal-intro');

@@ -1542,6 +1542,19 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   .project-list,
   .cards-grid,
   .compact-certificates,
+  .item-card,
+  .project-preview,
+  .certificate-preview,
+  .project-tags,
+  .project-links {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .project-list,
+  .cards-grid,
+  .compact-certificates,
   .legal-grid,
   .compact-legal-grid {
     grid-template-columns: 1fr;
