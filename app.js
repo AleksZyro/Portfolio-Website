@@ -258,6 +258,15 @@ const portfolioData = {
       url: 'https://github.com/beetbox/beets/pull/6837'
     },
     {
+      id: 'vaultCleaner75',
+      repo: 'tonym999/vault-cleaner',
+      number: 75,
+      title: 'Improve cache error handling',
+      summary: 'Verbessert die Behandlung von Cache-Fehlern und macht den CLI-Ablauf robuster.',
+      tags: ['Python', 'CLI'],
+      url: 'https://github.com/tonym999/vault-cleaner/pull/75'
+    },
+    {
       id: 'sshfs73',
       repo: 'fsspec/sshfs',
       number: 73,
@@ -265,6 +274,15 @@ const portfolioData = {
       summary: 'Korrigiert den Standardwert für Detail-Listings, damit sshfs-Auflistungen konsistenter funktionieren.',
       tags: ['Python', 'Filesystem'],
       url: 'https://github.com/fsspec/sshfs/pull/73'
+    },
+    {
+      id: 'archy397',
+      repo: 'hslee16/Archy',
+      number: 397,
+      title: 'Improve navigation behaviour',
+      summary: 'Verbessert die Navigation und das Verhalten der Anwendung in einem öffentlichen Open-Source-Projekt.',
+      tags: ['React', 'Navigation'],
+      url: 'https://github.com/hslee16/Archy/pull/397'
     }
   ]
 };
@@ -955,17 +973,17 @@ const certificateCopy = {
     },
     'linkedin-generative-ki': {
       title: 'Šta je generativna veštačka inteligencija?',
-      cardDescription: 'LinkedIn Learning kurs o generativnim AI alatima, veštačkoj inteligenciji i osnovnom razumevanju generativne AI.',
-      detailDescription: 'Ovaj LinkedIn Learning sertifikat potvrđuje završen kurs „Šta je generativna veštačka inteligencija?“. Kurs obrađuje generativne AI alate, veštačku inteligenciju i osnovno razumevanje generativne AI u kontekstu rada i učenja.',
-      meta: ['Izdavač: LinkedIn Learning', 'Oblast: Generativna AI', 'Trajanje: 42 minuta', 'Format: PDF'],
+      cardDescription: 'LinkdIn Lurning kurs o generativnim AI alatima, veštačkoj inteligenciji i osnovnom razumevanju generativne AI.',
+      detailDescription: 'Ovaj LinkdIn Lurning sertifikat potvrđuje završen kurs „Šta je generativna veštačka inteligencija?“. Kurs obrađuje generativne AI alate, veštačku inteligenciju i osnovno razumevanje generativne AI u kontekstu rada i učenja.',
+      meta: ['Izdavač: LinkdIn Lurning', 'Oblast: Generativna AI', 'Trajanje: 42 minuta', 'Format: PDF'],
       previewLabel: 'Sertifikat'
     }
   },
   'sr-cyrl': {
     'absofort-ki-ollama': {
       title: 'Коришћење локалне AI: приватна AI асистенција уз Ollama и open-source моделе',
-      cardDescription: 'ab sofort сертификат за курс о локалној AI, Ollama алату и open-source моделима.',
-      detailDescription: 'Овај ab sofort сертификат потврђује успешно завршен курс „Коришћење локалне AI: приватна AI асистенција уз Ollama и open-source моделе“. Курс је завршен 22. августа 2026. са резултатом од 87,5% и трајањем од 6 сати.',
+      cardDescription: 'ab sofort сертификат за курс о локалној АИ, Ollama алату и open-source моделима.',
+      detailDescription: 'Овај ab sofort сертификат потврђује успешно завршен курс „Коришћење локалне АИ: приватна АИ асистенција уз Ollama и open-source моделе“. Курс је завршен 22. августа 2026. са резултатом од 87,5% и трајањем од 6 сати.',
       meta: ['Издавач: Alpasana GmbH / ab sofort', 'Ниво: Foundation', 'Резултат: 87,5%', 'Издато: 22. августа 2026.', 'Верификација: ab sofort ID 491A67E697', 'Формат: PDF'],
       previewLabel: 'Сертификат'
     },
@@ -978,9 +996,9 @@ const certificateCopy = {
     },
     'linkedin-generative-ki': {
       title: 'Шта је генеративна вештачка интелигенција?',
-      cardDescription: 'LinkedIn Learning курс о генеративним AI алатима, вештачкој интелигенцији и основном разумевању генеративне AI.',
-      detailDescription: 'Овај LinkedIn Learning сертификат потврђује завршен курс „Шта је генеративна вештачка интелигенција?“. Курс обрађује генеративне AI алате, вештачку интелигенцију и основно разумевање генеративне AI у контексту рада и учења.',
-      meta: ['Издавач: LinkedIn Learning', 'Област: Генеративна AI', 'Трајање: 42 минута', 'Формат: PDF'],
+      cardDescription: 'ЛинкдИн Лернинг курс о генеративним АИ алатима, вештачкој интелигенцији и основном разумевању генеративне АИ.',
+      detailDescription: 'Овај ЛинкдИн Лернинг сертификат потврђује завршен курс „Шта је генеративна вештачка интелигенција?“. Курс обрађује генеративне АИ алате, вештачку интелигенцију и основно разумевање генеративне АИ у контексту рада и учења.',
+      meta: ['Издавач: ЛинкдИн Лернинг', 'Област: Генеративна АИ', 'Трајање: 42 минута', 'Формат: PDF'],
       previewLabel: 'Сертификат'
     }
   }
@@ -1589,7 +1607,7 @@ const renderProjectExplorer = () => {
 
 const createMoreProjectsCard = () => {
   const card = document.createElement('article');
-  card.className = 'item-card more-projects-summary-card';
+  card.className = 'item-card more-projects-summary-card open-source-more-card';
 
   const title = document.createElement('h3');
   title.textContent = t('portfolio.moreProjectsTitle', 'Weitere Projekte');
@@ -1598,12 +1616,12 @@ const createMoreProjectsCard = () => {
   description.textContent = t('portfolio.moreProjectsSubline', 'Weitere Projekte, die ich fertiggestellt habe oder aktuell noch entwickle.');
 
   const list = document.createElement('div');
-  list.className = 'more-projects-card-list';
+  list.className = 'more-projects-card-list open-source-more-list';
 
   (portfolioData.moreProjects || []).forEach((project) => {
     const item = localizedMoreProject(project);
     const action = item.url ? document.createElement('a') : document.createElement('span');
-    action.className = item.url ? 'link-arrow more-project-name' : 'more-project-name is-disabled';
+    action.className = item.url ? 'link-arrow more-project-name open-source-more-link' : 'more-project-name is-disabled';
     action.textContent = item.title;
     if (item.url) {
       action.href = item.url;
@@ -2066,6 +2084,13 @@ const selectLanguageButton = (languageCode) => {
   }
 };
 
+const updateLegalLinks = (languageCode) => {
+  document.querySelectorAll('[data-legal-page-link]').forEach((link) => {
+    const page = link.dataset.legalPageLink;
+    if (page) link.href = `${page}.html?lang=${encodeURIComponent(languageCode)}`;
+  });
+};
+
 const setLanguageMenuOpen = (isOpen) => {
   if (!languageMenu || !languageMenuButton) return;
   languageMenu.hidden = !isOpen;
@@ -2101,7 +2126,7 @@ const loadLanguage = async (languageCode) => {
   const visibleName = isCyrillic ? 'Александар Николић' : 'Aleksandar Nikolić';
   const brandName = document.querySelector('.brand-latin');
   if (brandName) {
-    brandName.innerHTML = isCyrillic ? 'Александар <em>Николић</em>' : 'Aleksandar <em>Nikolić</em>';
+    brandName.innerHTML = 'Aleksandar <em>Nikolić</em>';
   }
   if (footerName) footerName.textContent = visibleName;
   applyStaticTranslations();
@@ -2111,6 +2136,7 @@ const loadLanguage = async (languageCode) => {
   document.documentElement.lang = htmlLanguageCodes[languageCode] || languageCode;
   localStorage.setItem('portfolio-language', languageCode);
   selectLanguageButton(languageCode);
+  updateLegalLinks(languageCode);
 };
 
 const alignInitialHash = () => {

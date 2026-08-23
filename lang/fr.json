@@ -396,6 +396,16 @@
         "Python",
         "Filesystem"
       ]
+    },
+    "vaultCleaner75": {
+      "title": "Améliorer la gestion des erreurs de cache",
+      "summary": "Améliore la gestion des erreurs de cache et renforce le flux CLI.",
+      "tags": ["Python", "CLI"]
+    },
+    "archy397": {
+      "title": "Améliorer la navigation",
+      "summary": "Améliore le comportement de la navigation dans un projet open source.",
+      "tags": ["React", "Navigation"]
     }
   },
   "moreProjects": {
@@ -425,7 +435,7 @@
         ]
       },
       "internetEinAus": {
-        "title": "Internet activé et désactivé",
+        "title": "Internet ein und aus",
         "description": "Prototype de hackathon pour une interface web qui modélise l’accès Internet par salle de classe ou sous-réseau.",
         "tags": [
           "Python",

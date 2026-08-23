@@ -400,6 +400,16 @@
         "Python",
         "Filesystem"
       ]
+    },
+    "vaultCleaner75": {
+      "title": "Poboljšano rukovanje greškama keša",
+      "summary": "Poboljšava rukovanje greškama keša i čini CLI tok pouzdanijim.",
+      "tags": ["Python", "CLI"]
+    },
+    "archy397": {
+      "title": "Poboljšana navigacija",
+      "summary": "Poboljšava ponašanje navigacije u open-source projektu.",
+      "tags": ["React", "Navigacija"]
     }
   },
   "moreProjects": {
@@ -429,7 +439,7 @@
         ]
       },
       "internetEinAus": {
-        "title": "Internet uključi i isključi",
+        "title": "Internet ein und aus",
         "description": "Hakaton prototip za web interfejs koji modeluje pristup internetu po učionici ili subnetu.",
         "tags": [
           "Python",
@@ -440,7 +450,7 @@
         "title": "Heimatschutz Aargau",
         "description": "Zajednička interna web aplikacija za prikupljanje i proveru zahteva za gradnju uz podatke o zaštiti AGIS.",
         "tags": [
-          "Timski projekat",
+          "Zajedno",
           "Veb aplikacija"
         ]
       }
