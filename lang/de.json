@@ -376,6 +376,11 @@
         "JSON"
       ]
     },
+    "contextPilot47": {
+      "title": "Staleness-Score bei einer einzelnen Nachricht korrigieren",
+      "summary": "Korrigiert die Berechnung des Staleness-Scores, wenn nur eine Nachricht vorhanden ist.",
+      "tags": ["Python", "Scoring"]
+    },
     "beets6839": {
       "summary": "Sichert den Umgang mit leerem Artpath beim Bearbeiten, damit bestehende Daten nicht unbeabsichtigt verändert werden.",
       "tags": [

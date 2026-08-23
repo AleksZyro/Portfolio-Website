@@ -376,6 +376,11 @@
         "JSON"
       ]
     },
+    "contextPilot47": {
+      "title": "Fix single-message staleness score",
+      "summary": "Fixes the staleness score calculation when only one message is present.",
+      "tags": ["Python", "Scoring"]
+    },
     "beets6839": {
       "summary": "Preserves empty artpath values during editing so existing data is not changed unintentionally.",
       "tags": [

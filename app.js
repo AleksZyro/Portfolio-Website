@@ -240,13 +240,13 @@ const portfolioData = {
       url: 'https://github.com/msousa202/ContextPilot/pull/36'
     },
     {
-      id: 'beets6839',
-      repo: 'beetbox/beets',
-      number: 6839,
-      title: 'Preserve null artpath in edit',
-      summary: 'Sichert den Umgang mit leerem Artpath beim Bearbeiten, damit bestehende Daten nicht unbeabsichtigt verändert werden.',
-      tags: ['Python', 'Beets'],
-      url: 'https://github.com/beetbox/beets/pull/6839'
+      id: 'contextPilot47',
+      repo: 'msousa202/ContextPilot',
+      number: 47,
+      title: 'Fix single-message staleness score',
+      summary: 'Korrigiert die Berechnung des Staleness-Scores, wenn nur eine Nachricht vorhanden ist.',
+      tags: ['Python', 'Scoring'],
+      url: 'https://github.com/msousa202/ContextPilot/pull/47'
     },
     {
       id: 'beets6837',
@@ -283,6 +283,15 @@ const portfolioData = {
       summary: 'Verbessert die Navigation und das Verhalten der Anwendung in einem öffentlichen Open-Source-Projekt.',
       tags: ['React', 'Navigation'],
       url: 'https://github.com/hslee16/Archy/pull/397'
+    },
+    {
+      id: 'beets6839',
+      repo: 'beetbox/beets',
+      number: 6839,
+      title: 'Preserve null artpath in edit',
+      summary: 'Sichert den Umgang mit leerem Artpath beim Bearbeiten, damit bestehende Daten nicht unbeabsichtigt verändert werden.',
+      tags: ['Python', 'Beets'],
+      url: 'https://github.com/beetbox/beets/pull/6839'
     }
   ]
 };

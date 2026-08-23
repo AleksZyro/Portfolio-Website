@@ -376,6 +376,11 @@
         "JSON"
       ]
     },
+    "contextPilot47": {
+      "title": "Corriger le score de fraîcheur pour un seul message",
+      "summary": "Corrige le calcul du score de fraîcheur lorsqu’un seul message est présent.",
+      "tags": ["Python", "Scoring"]
+    },
     "beets6839": {
       "summary": "Préserve les valeurs artpath vides pendant l’édition afin que les données existantes ne soient pas modifiées involontairement.",
       "tags": [

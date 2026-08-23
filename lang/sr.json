@@ -380,6 +380,11 @@
         "JSON"
       ]
     },
+    "contextPilot47": {
+      "title": "Ispravka staleness skora za jednu poruku",
+      "summary": "Ispravlja izračunavanje staleness skora kada postoji samo jedna poruka.",
+      "tags": ["Python", "Scoring"]
+    },
     "beets6839": {
       "summary": "Čuva prazne artpath vrednosti tokom uređivanja, tako da postojeći podaci ne budu nenamerno promenjeni.",
       "tags": [
