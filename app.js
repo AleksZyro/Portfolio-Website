@@ -1496,18 +1496,6 @@ const createCard = (item, typeKey = 'projects') => {
     image.loading = 'lazy';
     image.decoding = 'async';
     preview.append(image);
-  } else if (item.previewContext) {
-    preview.classList.add('project-context-preview');
-    const contextKicker = document.createElement('span');
-    contextKicker.className = 'project-preview-label';
-    contextKicker.textContent = displayItem.previewLabel || '';
-    const contextTitle = document.createElement('strong');
-    contextTitle.className = 'project-context-title';
-    contextTitle.textContent = displayItem.title;
-    const contextText = document.createElement('span');
-    contextText.className = 'project-context-text';
-    contextText.textContent = item.previewContext;
-    preview.append(contextKicker, contextTitle, contextText);
   }
 
   if (item.previewImage) {
@@ -1605,7 +1593,7 @@ const createCard = (item, typeKey = 'projects') => {
     actions.append(links);
   }
 
-  if (item.previewImage || item.previewContext) {
+  if (item.previewImage) {
     card.append(preview);
   }
   card.append(title, description);
