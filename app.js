@@ -80,9 +80,8 @@ const portfolioData = {
       links: [
         { label: 'GitHub', url: 'https://github.com/BotondCsereklye/internet-ein-aus' }
       ],
-      previewImage: null,
-      previewLabel: 'Hackathon-Prototyp',
-      previewContext: 'Baden hackt 2026'
+      previewImage: 'assets/project-previews/besp2074.png',
+      previewLabel: 'Hackathon-Prototyp'
     }
   ],
   moreProjects: [
