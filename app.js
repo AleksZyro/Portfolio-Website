@@ -1498,7 +1498,7 @@ const createCard = (item, typeKey = 'projects') => {
     preview.append(image);
   }
 
-  if (item.previewImage) {
+  if (item.previewImage && typeKey === 'certificates') {
     const previewLabel = document.createElement('span');
     previewLabel.className = 'project-preview-label';
     previewLabel.textContent = displayItem.previewLabel || '';

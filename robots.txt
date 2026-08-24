@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /assets/certificates/
 
-Sitemap: https://aleksandar-nikolic.netlify.app/sitemap.xml
+Sitemap: https://aleksandar-nikolic.ch/sitemap.xml
