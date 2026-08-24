@@ -243,7 +243,6 @@
         ],
         "role": "Projet personnel d’apprentissage et de portfolio",
         "learning": "Séparer les algorithmes des composants React, écrire des tests pour les cas limites et rendre l’état de l’interface compréhensible.",
-        "previewLabel": "Aperçu du projet"
       },
       "sortlab": {
         "title": "SortLab",
@@ -261,7 +260,6 @@
         ],
         "role": "Projet personnel d’apprentissage",
         "learning": "Relier animation, contrôle de vitesse et statistiques pour que l’algorithme reste visible et utilisable.",
-        "previewLabel": "Aperçu du projet"
       },
       "vsw": {
         "title": "VSW - Vulnerability Scanner Web App",
@@ -280,7 +278,6 @@
         ],
         "role": "Projet commun avec Botond",
         "learning": "Limiter clairement les checks défensifs, séparer backend et frontend et présenter les résultats de façon compréhensible.",
-        "previewLabel": "Aperçu du projet"
       },
       "foliolint": {
         "title": "FolioLint",
@@ -299,7 +296,6 @@
         ],
         "role": "Projet tooling personnel",
         "learning": "Structurer des checks basés sur des règles afin qu’ils restent compréhensibles et améliorent réellement les repositories.",
-        "previewLabel": "Aperçu du projet"
       },
       "besp2074": {
         "title": "Internet activé et désactivé",
@@ -320,7 +316,6 @@
         ],
         "role": "Prototype de hackathon",
         "learning": "Transformer une idée technique en prototype compréhensible sous contrainte de temps.",
-        "previewLabel": "Aperçu du projet"
       }
     },
     "certificates": {

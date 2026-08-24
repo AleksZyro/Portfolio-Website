@@ -15,8 +15,7 @@ const portfolioData = {
         { label: 'GitHub', url: 'https://github.com/AleksZyro/PathLab' },
         { label: 'Demo', url: 'https://alekszyro.github.io/PathLab/' }
       ],
-      previewImage: 'assets/project-previews/pathlab.png',
-      previewLabel: 'Projektvorschau'
+      previewImage: 'assets/project-previews/pathlab.png'
     },
     {
       id: 'sortlab',
@@ -32,8 +31,7 @@ const portfolioData = {
         { label: 'GitHub', url: 'https://github.com/AleksZyro/SortLab' },
         { label: 'Demo', url: 'https://alekszyro.github.io/SortLab/' }
       ],
-      previewImage: 'assets/project-previews/sortlab.png',
-      previewLabel: 'Projektvorschau'
+      previewImage: 'assets/project-previews/sortlab.png'
     },
     {
       id: 'vsw',
@@ -48,8 +46,7 @@ const portfolioData = {
       links: [
         { label: 'GitHub', url: 'https://github.com/BotondCsereklye/VSW' }
       ],
-      previewImage: 'assets/project-previews/vsw.jpeg',
-      previewLabel: 'Projektvorschau'
+      previewImage: 'assets/project-previews/vsw.jpeg'
     },
     {
       id: 'foliolint',
@@ -64,8 +61,7 @@ const portfolioData = {
       links: [
         { label: 'GitHub', url: 'https://github.com/AleksZyro/FolioLint' }
       ],
-      previewImage: 'assets/project-previews/foliolint.png',
-      previewLabel: 'Projektvorschau'
+      previewImage: 'assets/project-previews/foliolint.png'
     },
     {
       id: 'besp2074',
@@ -80,8 +76,7 @@ const portfolioData = {
       links: [
         { label: 'GitHub', url: 'https://github.com/BotondCsereklye/internet-ein-aus' }
       ],
-      previewImage: 'assets/project-previews/besp2074.png',
-      previewLabel: 'Hackathon-Prototyp'
+      previewImage: 'assets/project-previews/internet-ein-aus.png'
     }
   ],
   moreProjects: [
@@ -1483,22 +1478,26 @@ const createCard = (item, typeKey = 'projects') => {
     card.classList.add('is-selected');
   }
 
-  const preview = document.createElement('div');
-  preview.className = 'project-preview';
-  if (typeKey === 'certificates') {
-    preview.classList.add('certificate-preview');
-  }
+  let preview = null;
   if (item.previewImage) {
-    preview.classList.add('has-image');
+    preview = document.createElement('div');
+    preview.className = 'project-preview has-image';
+    if (typeKey === 'certificates') {
+      preview.classList.add('certificate-preview');
+    }
     const image = document.createElement('img');
     image.src = item.previewImage;
     image.alt = `${displayItem.title} ${displayItem.previewLabel || 'Vorschau'}`;
     image.loading = 'lazy';
     image.decoding = 'async';
+    image.addEventListener('error', () => {
+      preview.remove();
+      preview = null;
+    });
     preview.append(image);
   }
 
-  if (item.previewImage && typeKey === 'certificates') {
+  if (preview && typeKey === 'certificates') {
     const previewLabel = document.createElement('span');
     previewLabel.className = 'project-preview-label';
     previewLabel.textContent = displayItem.previewLabel || '';
@@ -1593,7 +1592,7 @@ const createCard = (item, typeKey = 'projects') => {
     actions.append(links);
   }
 
-  if (item.previewImage) {
+  if (preview) {
     card.append(preview);
   }
   card.append(title, description);

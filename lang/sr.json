@@ -243,7 +243,6 @@
         ],
         "role": "Lični projekat za učenje i portfolio",
         "learning": "Odvojiti algoritme od React komponenti, pisati testove za rubne slučajeve i učiniti UI stanje razumljivim.",
-        "previewLabel": "Pregled projekta"
       },
       "sortlab": {
         "title": "SortLab",
@@ -261,7 +260,6 @@
         ],
         "role": "Lični projekat za učenje",
         "learning": "Povezati animaciju, kontrolu brzine i statistiku tako da algoritam ostane vidljiv i upotrebljiv.",
-        "previewLabel": "Pregled projekta"
       },
       "vsw": {
         "title": "VSW - Web aplikacija za proveru ranjivosti",
@@ -280,7 +278,6 @@
         ],
         "role": "Zajednički projekat sa Botondom",
         "learning": "Jasno ograničiti defanzivne provere, odvojiti backend i frontend i razumljivo prikazati rezultate.",
-        "previewLabel": "Pregled projekta"
       },
       "foliolint": {
         "title": "FolioLint",
@@ -299,7 +296,6 @@
         ],
         "role": "Sopstveni tooling projekat",
         "learning": "Strukturisati provere zasnovane na pravilima tako da ostanu razumljive i stvarno poboljšaju projektne repozitorijume.",
-        "previewLabel": "Pregled projekta"
       },
       "besp2074": {
         "title": "Internet uključi i isključi",
@@ -320,7 +316,6 @@
         ],
         "role": "Hakaton prototip",
         "learning": "Pretvoriti tehničku ideju u razumljiv prototip pod vremenskim pritiskom.",
-        "previewLabel": "Pregled projekta"
       }
     },
     "certificates": {
