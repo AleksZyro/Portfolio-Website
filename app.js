@@ -69,19 +69,20 @@ const portfolioData = {
     },
     {
       id: 'besp2074',
-      title: 'BESP2074',
-      cardDescription: 'Lokale Balkan-Wirtschaftssimulation mit Python-Modell, JSON-Export und Web-Dashboard.',
-      detailDescription: 'BESP2074\n\nBESP2074 ist eine lokale, jahresbasierte Balkan-Simulation. Das Projekt nutzt ein Python-Modell, strukturierte JSON-Daten und ein lokales Web-Dashboard, um Szenarien bis 2074 darzustellen.\n\nDie Anwendung ist als Lern- und Szenariosimulation gedacht. Die Resultate sind keine echten wirtschaftlichen, politischen oder finanziellen Prognosen, sondern vereinfachte Modellläufe mit Annahmen, Seeds und optionalen Ereignissen.\n\nDas Projekt ist lokal nutzbar, aber noch nicht als fertige öffentliche Anwendung veröffentlicht.',
-      meta: ['Status: lokal nutzbar, nicht veröffentlicht', 'Stack: Python, JSON, HTML/CSS, JavaScript', 'Fokus: Simulation, Datenexport, Dashboard', 'Repository: öffentlich', 'Hinweis: keine Prognose'],
-      tags: ['Python', 'Simulation'],
-      filters: ['python', 'web', 'visualisierung', 'in-arbeit'],
-      role: 'Eigenes Simulationsprojekt',
-      learning: 'Modellannahmen, JSON-Export und Dashboard so verbinden, dass lokale Szenarien nachvollziehbar bleiben.',
+      title: 'Internet ein und aus',
+      cardDescription: 'Hackathon-Prototyp für eine Weboberfläche, die Internetzugang pro Schulzimmer oder Subnetz modelliert.',
+      detailDescription: 'Internet ein und aus\n\nDieses Projekt entstand im Umfeld des Hackathons "Baden hackt". Der Prototyp modelliert, wie Internetzugänge für Schulzimmer oder Subnetze übersichtlich ein- und ausgeschaltet werden könnten.\n\nDer Schwerpunkt liegt auf einer verständlichen Bedienoberfläche und einer klaren Darstellung von Zuständen. Das Projekt ist ein Hackathon-Prototyp und wird als gemeinsames Arbeiten dokumentiert.',
+      meta: ['Kontext: Hackathon "Baden hackt"', 'Stack: Python, Weboberfläche', 'Fokus: Zustände, Bedienung, Teamarbeit', 'Repository: öffentlich'],
+      tags: ['Python', 'Hackathon'],
+      filters: ['python', 'web', 'visualisierung'],
+      role: 'Hackathon-Prototyp',
+      learning: 'Eine technische Idee unter Zeitdruck als verständlichen Prototyp umsetzen und Zustände klar kommunizieren.',
       links: [
-        { label: 'GitHub', url: 'https://github.com/AleksZyro/BESP2074' }
+        { label: 'GitHub', url: 'https://github.com/BotondCsereklye/internet-ein-aus' }
       ],
-      previewImage: 'assets/project-previews/besp2074.png',
-      previewLabel: 'Projektvorschau'
+      previewImage: null,
+      previewLabel: 'Hackathon-Prototyp',
+      previewContext: 'Baden hackt 2026'
     }
   ],
   moreProjects: [
@@ -105,13 +106,6 @@ const portfolioData = {
       description: 'Dataset-Projekt zur Smartphone-Nutzung, Produktivität und Wohlbefinden mit CSV-Daten und Notebook-Auswertung.',
       tags: ['Daten', 'Notebook'],
       url: 'https://github.com/AleksZyro/LB259'
-    },
-    {
-      id: 'internetEinAus',
-      title: 'Internet ein und aus',
-      description: 'Hackathon-Prototyp für eine Weboberfläche, die Internetzugang pro Schulzimmer oder Subnetz modelliert.',
-      tags: ['Python', 'Hackathon'],
-      url: 'https://github.com/BotondCsereklye/internet-ein-aus'
     },
     {
       id: 'heimatschutz',
@@ -1497,6 +1491,18 @@ const createCard = (item, typeKey = 'projects') => {
     image.loading = 'lazy';
     image.decoding = 'async';
     preview.append(image);
+  } else if (item.previewContext) {
+    preview.classList.add('project-context-preview');
+    const contextKicker = document.createElement('span');
+    contextKicker.className = 'project-preview-label';
+    contextKicker.textContent = displayItem.previewLabel || '';
+    const contextTitle = document.createElement('strong');
+    contextTitle.className = 'project-context-title';
+    contextTitle.textContent = displayItem.title;
+    const contextText = document.createElement('span');
+    contextText.className = 'project-context-text';
+    contextText.textContent = item.previewContext;
+    preview.append(contextKicker, contextTitle, contextText);
   }
 
   if (item.previewImage) {
@@ -1509,8 +1515,6 @@ const createCard = (item, typeKey = 'projects') => {
     previewTitle.textContent = displayItem.title;
 
     preview.append(previewLabel, previewTitle);
-  } else {
-    preview.remove();
   }
 
   const title = document.createElement('h3');
@@ -1596,7 +1600,10 @@ const createCard = (item, typeKey = 'projects') => {
     actions.append(links);
   }
 
-  card.append(preview, title, description);
+  if (item.previewImage || item.previewContext) {
+    card.append(preview);
+  }
+  card.append(title, description);
   if (tags.children.length) {
     card.append(tags);
   }

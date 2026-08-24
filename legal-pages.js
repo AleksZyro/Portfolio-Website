@@ -1,75 +1,142 @@
 const legalPageKind = document.body.dataset.legalPage;
 const languageSelect = document.getElementById('legal-language');
 const languageFromUrl = new URLSearchParams(window.location.search).get('lang');
+
 const resetHorizontalScroll = () => {
   document.documentElement.scrollLeft = 0;
   document.body.scrollLeft = 0;
-  if (window.scrollX !== 0) {
-    window.scrollTo(0, window.scrollY);
-  }
+  if (window.scrollX !== 0) window.scrollTo(0, window.scrollY);
 };
-
 window.addEventListener('pageshow', resetHorizontalScroll);
 window.addEventListener('resize', resetHorizontalScroll);
+
+const section = (title, text) => ({ title, text });
 const legalCopy = {
   de: {
     brand: 'Aleksandar Nikolić', back: 'Zurück zum Portfolio', kicker: 'Rechtliches',
-    intro: { impressum: 'Portfolio und Kontaktinformationen auf einen Blick.', datenschutz: 'Wie diese Portfolio-Seite mit Daten umgeht.', cookies: 'Kurz erklärt, was lokal gespeichert wird.' },
-    impressum: ['Impressum', 'Diese Website ist eine private Portfolio-Seite von Aleksandar Nikolić und dient der Präsentation von Ausbildung, Projekten, Zertifikaten und Kontaktmöglichkeiten. Kontakt ist per E-Mail im Kontaktbereich der Portfolio-Seite möglich.'],
-    datenschutz: ['Datenschutz', 'Diese Website verwendet keine Formulare, keine Analytics, keine Werbetracker und keine externen Tracking-Skripte. Externe Dienste werden erst geöffnet, wenn ein Link aktiv angeklickt wird. Beim Aufruf der Website kann der Hosting-Anbieter technisch notwendige Zugriffsdaten verarbeiten.'],
-    cookies: ['Cookies', 'Diese Website setzt keine Tracking-Cookies. Die gewählte Sprache kann lokal im Browser gespeichert werden, damit die Einstellung beim nächsten Besuch erhalten bleibt.']
+    intro: { impressum: 'Portfolio und Kontaktinformationen auf einen Blick.', datenschutz: 'Transparent erklärt, welche Daten diese Seite verarbeitet.', cookies: 'Kurz erklärt, was lokal gespeichert wird.' },
+    impressum: { title: 'Impressum', sections: [
+      section('Private Portfolio-Seite', 'Diese Website ist eine private Portfolio-Seite von Aleksandar Nikolić. Sie zeigt Ausbildung, Projekte, Zertifikate und berufliche Interessen.'),
+      section('Kontakt', 'Für Fragen zu Projekten oder einer Praktikumsstelle bin ich per E-Mail erreichbar: aleksandar09@gmail.com.'),
+      section('Hosting', 'Die Seite wird als statische Website über Cloudflare Pages bereitgestellt. Cloudflare übernimmt dabei die Auslieferung und den Schutz der Website.'),
+    ]},
+    datenschutz: { title: 'Datenschutz', sections: [
+      section('Keine Formulare und kein Tracking', 'Diese Seite verwendet keine Formulare, keine Analytics, keine Werbetracker und keine externen Tracking-Skripte.'),
+      section('Technisch notwendige Daten', 'Beim Aufruf können technisch notwendige Zugriffsdaten durch Cloudflare als Hosting- und CDN-Anbieter verarbeitet werden. Diese Verarbeitung dient der sicheren Auslieferung der Seite.'),
+      section('Externe Links', 'Links zu GitHub und anderen externen Diensten werden erst geöffnet, wenn du sie aktiv anklickst.'),
+    ]},
+    cookies: { title: 'Cookies', sections: [
+      section('Keine Tracking-Cookies', 'Diese Website setzt keine Cookies für Werbung, Analytics oder Nutzerverfolgung.'),
+      section('Lokale Spracheinstellung', 'Die gewählte Sprache kann lokal im Browser gespeichert werden, damit deine Einstellung beim nächsten Besuch erhalten bleibt.'),
+      section('Hosting', 'Cloudflare Pages kann technisch notwendige Funktionen für die sichere und zuverlässige Auslieferung der Seite verwenden.'),
+    ]},
   },
   en: {
     brand: 'Aleksandar Nikolić', back: 'Back to portfolio', kicker: 'Legal',
-    intro: { impressum: 'Portfolio and contact information at a glance.', datenschutz: 'How this portfolio website handles data.', cookies: 'A short explanation of what is stored locally.' },
-    impressum: ['Imprint', 'This website is a private portfolio website by Aleksandar Nikolić. It presents education, projects, certificates and contact options. Contact is available by email in the portfolio contact section.'],
-    datenschutz: ['Privacy', 'This website uses no forms, analytics, advertising trackers or external tracking scripts. External services only open after an active link click. When visiting the website, the hosting provider may process technically required access data.'],
-    cookies: ['Cookies', 'This website uses no tracking cookies. The selected language may be stored locally in the browser so the setting remains available for the next visit.']
+    intro: { impressum: 'Portfolio and contact information at a glance.', datenschutz: 'A transparent overview of how this site handles data.', cookies: 'A short explanation of what is stored locally.' },
+    impressum: { title: 'Imprint', sections: [
+      section('Private portfolio website', 'This is Aleksandar Nikolić\'s private portfolio website. It presents education, projects, certificates and professional interests.'),
+      section('Contact', 'For questions about projects or an internship, I can be reached by email at aleksandar09@gmail.com.'),
+      section('Hosting', 'The site is delivered as a static website through Cloudflare Pages. Cloudflare provides delivery and protection for the website.'),
+    ]},
+    datenschutz: { title: 'Privacy', sections: [
+      section('No forms and no tracking', 'This site uses no forms, analytics, advertising trackers or external tracking scripts.'),
+      section('Technically necessary data', 'When the site is opened, Cloudflare may process technically necessary access data as the hosting and CDN provider. This supports secure delivery.'),
+      section('External links', 'Links to GitHub and other external services only open after you actively click them.'),
+    ]},
+    cookies: { title: 'Cookies', sections: [
+      section('No tracking cookies', 'This website does not set cookies for advertising, analytics or user tracking.'),
+      section('Local language setting', 'The selected language may be stored locally in your browser so your preference is kept for the next visit.'),
+      section('Hosting', 'Cloudflare Pages may use technically necessary functions to deliver the site securely and reliably.'),
+    ]},
   },
   fr: {
     brand: 'Aleksandar Nikolić', back: 'Retour au portfolio', kicker: 'Mentions légales',
-    intro: { impressum: 'Portfolio et coordonnées en un coup d’œil.', datenschutz: 'Comment ce portfolio traite les données.', cookies: 'Une brève explication de ce qui est enregistré localement.' },
-    impressum: ['Mentions légales', 'Ce site est un portfolio privé d’Aleksandar Nikolić. Il présente sa formation, ses projets, ses certificats et ses possibilités de contact. Le contact est possible par e-mail dans la section contact du portfolio.'],
-    datenschutz: ['Protection des données', 'Ce site n’utilise ni formulaires, ni analytics, ni traceurs publicitaires, ni scripts de suivi externes. Les services externes ne s’ouvrent qu’après un clic actif sur un lien. Lors de la visite, l’hébergeur peut traiter des données d’accès techniquement nécessaires.'],
-    cookies: ['Cookies', 'Ce site n’utilise pas de cookies de suivi. La langue choisie peut être enregistrée localement dans le navigateur afin de conserver le réglage lors de la prochaine visite.']
+    intro: { impressum: 'Portfolio et coordonnées en un coup d’œil.', datenschutz: 'Une présentation transparente du traitement des données.', cookies: 'Une brève explication de ce qui est enregistré localement.' },
+    impressum: { title: 'Mentions légales', sections: [
+      section('Portfolio privé', 'Ce site est le portfolio privé d’Aleksandar Nikolić. Il présente sa formation, ses projets, ses certificats et ses intérêts professionnels.'),
+      section('Contact', 'Pour toute question sur les projets ou un stage, je suis joignable par e-mail à aleksandar09@gmail.com.'),
+      section('Hébergement', 'Le site est diffusé comme site statique via Cloudflare Pages. Cloudflare assure la diffusion et la protection du site.'),
+    ]},
+    datenschutz: { title: 'Protection des données', sections: [
+      section('Aucun formulaire ni suivi', 'Ce site n’utilise ni formulaires, ni analytics, ni traceurs publicitaires, ni scripts externes de suivi.'),
+      section('Données techniquement nécessaires', 'Lors de la visite, Cloudflare peut traiter des données d’accès techniquement nécessaires en tant qu’hébergeur et CDN. Cela permet une diffusion sécurisée.'),
+      section('Liens externes', 'Les liens vers GitHub et d’autres services externes ne s’ouvrent qu’après un clic actif.'),
+    ]},
+    cookies: { title: 'Cookies', sections: [
+      section('Aucun cookie de suivi', 'Ce site n’utilise pas de cookies pour la publicité, les analytics ou le suivi des utilisateurs.'),
+      section('Langue locale', 'La langue choisie peut être enregistrée localement dans le navigateur afin de conserver votre préférence lors de la prochaine visite.'),
+      section('Hébergement', 'Cloudflare Pages peut utiliser des fonctions techniquement nécessaires pour diffuser le site de manière sûre et fiable.'),
+    ]},
   },
   sr: {
     brand: 'Aleksandar Nikolić', back: 'Nazad na portfolio', kicker: 'Pravno',
-    intro: { impressum: 'Portfolio i kontakt-informacije na jednom mestu.', datenschutz: 'Kako ovaj portfolio sajt postupa sa podacima.', cookies: 'Kratko objašnjenje onoga što se čuva lokalno.' },
-    impressum: ['Impresum', 'Ovaj veb-sajt je privatni portfolio Aleksandra Nikolića i služi za predstavljanje obrazovanja, projekata, sertifikata i načina kontakta. Kontakt je moguć putem e-maila u kontakt delu portfolio sajta.'],
-    datenschutz: ['Privatnost', 'Ovaj veb-sajt ne koristi formulare, analitiku, reklamne trekere ni eksterne skripte za praćenje. Eksterni servisi otvaraju se tek nakon aktivnog klika na link. Pri poseti sajt hosting provajder može obraditi tehnički neophodne pristupne podatke.'],
-    cookies: ['Kukiji', 'Ovaj veb-sajt ne postavlja kukije za praćenje. Izabrani jezik može biti lokalno sačuvan u pregledaču kako bi podešavanje ostalo dostupno pri sledećoj poseti.']
+    intro: { impressum: 'Portfolio i kontakt-informacije na jednom mestu.', datenschutz: 'Jasno objašnjenje obrade podataka na ovom sajtu.', cookies: 'Kratko objašnjenje onoga što se čuva lokalno.' },
+    impressum: { title: 'Impresum', sections: [
+      section('Privatni portfolio sajt', 'Ovo je privatni portfolio sajt Aleksandra Nikolića. Predstavlja obrazovanje, projekte, sertifikate i profesionalna interesovanja.'),
+      section('Kontakt', 'Za pitanja o projektima ili praksi dostupan sam putem e-maila: aleksandar09@gmail.com.'),
+      section('Hosting', 'Sajt se isporučuje kao statički sajt preko Cloudflare Pages. Cloudflare obezbeđuje isporuku i zaštitu sajta.'),
+    ]},
+    datenschutz: { title: 'Privatnost', sections: [
+      section('Bez formulara i praćenja', 'Ovaj sajt ne koristi formulare, analitiku, reklamne trekere ni eksterne skripte za praćenje.'),
+      section('Tehnički neophodni podaci', 'Prilikom otvaranja sajta Cloudflare kao hosting i CDN provajder može obraditi tehnički neophodne podatke pristupa. To omogućava bezbednu isporuku.'),
+      section('Eksterni linkovi', 'Linkovi ka GitHubu i drugim eksternim servisima otvaraju se tek nakon aktivnog klika.'),
+    ]},
+    cookies: { title: 'Kukiji', sections: [
+      section('Bez kolačića za praćenje', 'Ovaj sajt ne postavlja kukije za reklame, analitiku ili praćenje korisnika.'),
+      section('Lokalno čuvanje jezika', 'Izabrani jezik može biti lokalno sačuvan u pregledaču kako bi podešavanje ostalo dostupno pri sledećoj poseti.'),
+      section('Hosting', 'Cloudflare Pages može koristiti tehnički neophodne funkcije za bezbednu i pouzdanu isporuku sajta.'),
+    ]},
   },
   'sr-cyrl': {
     brand: 'Александар Николић', back: 'Назад на портфолио', kicker: 'Правно',
-    intro: { impressum: 'Портфолио и контакт-информације на једном месту.', datenschutz: 'Како овај портфолио сајт поступа са подацима.', cookies: 'Кратко објашњење онога што се чува локално.' },
-    impressum: ['Импресум', 'Овај веб-сајт је приватни портфолио Александра Николића и служи за представљање образовања, пројеката, сертификата и начина контакта. Контакт је могућ путем имејла у контакт делу портфолио сајта.'],
-    datenschutz: ['Приватност', 'Овај веб-сајт не користи формуларе, аналитику, рекламне трекере ни екстерне скрипте за праћење. Екстерни сервиси отварају се тек након активног клика на линк. При посети сајту хостинг провајдер може обрадити технички неопходне приступне податке.'],
-    cookies: ['Кукији', 'Овај веб-сајт не поставља кукије за праћење. Изабрани језик може бити локално сачуван у прегледачу како би подешавање остало доступно при следећој посети.']
-  }
+    intro: { impressum: 'Портфолио и контакт-информације на једном месту.', datenschutz: 'Јасно објашњење обраде података на овом сајту.', cookies: 'Кратко објашњење онога што се чува локално.' },
+    impressum: { title: 'Импресум', sections: [
+      section('Приватни портфолио сајт', 'Ово је приватни портфолио сајт Александра Николића. Представља образовање, пројекте, сертификате и професионална интересовања.'),
+      section('Контакт', 'За питања о пројектима или пракси доступан сам путем имејла: aleksandar09@gmail.com.'),
+      section('Хостинг', 'Сајт се испоручује као статички сајт преко Cloudflare Pages. Cloudflare обезбеђује испоруку и заштиту сајта.'),
+    ]},
+    datenschutz: { title: 'Приватност', sections: [
+      section('Без формулара и праћења', 'Овај сајт не користи формуларе, аналитику, рекламне трекере ни екстерне скрипте за праћење.'),
+      section('Технички неопходни подаци', 'Приликом отварања сајта Cloudflare као хостинг и CDN провајдер може обрадити технички неопходне податке приступа. То омогућава безбедну испоруку.'),
+      section('Екстерни линкови', 'Линкови ка GitHub-у и другим екстерним сервисима отварају се тек након активног клика.'),
+    ]},
+    cookies: { title: 'Кукији', sections: [
+      section('Без колачића за праћење', 'Овај сајт не поставља кукије за рекламе, аналитику или праћење корисника.'),
+      section('Локално чување језика', 'Изабрани језик може бити локално сачуван у прегледачу како би подешавање остало доступно при следећој посети.'),
+      section('Хостинг', 'Cloudflare Pages може користити технички неопходне функције за безбедну и поуздану испоруку сајта.'),
+    ]},
+  },
 };
 
 const applyLegalLanguage = (code) => {
   const copy = legalCopy[code] || legalCopy.de;
-  const [title, text] = copy[legalPageKind] || copy.impressum;
+  const page = copy[legalPageKind] || copy.impressum;
   const htmlLanguageCodes = { sr: 'sr-Latn', 'sr-cyrl': 'sr-Cyrl' };
   document.documentElement.lang = htmlLanguageCodes[code] || code;
-  document.title = `${title} | ${copy.brand}`;
-  document.querySelectorAll('.brand-latin').forEach((element) => {
-    element.innerHTML = 'Aleksandar <em>Nikolić</em>';
-  });
-  document.querySelectorAll('.brand-cyrillic').forEach((element) => {
-    element.textContent = 'Александар Николић';
-  });
+  document.title = `${page.title} | ${copy.brand}`;
+  document.querySelectorAll('.brand-latin').forEach((element) => { element.innerHTML = 'Aleksandar <em>Nikolić</em>'; });
+  document.querySelectorAll('.brand-cyrillic').forEach((element) => { element.textContent = 'Александар Николић'; });
   const kicker = document.getElementById('legal-kicker');
   const heading = document.getElementById('legal-title');
   const intro = document.getElementById('legal-intro');
-  const textElement = document.getElementById('legal-text');
+  const blocks = document.getElementById('legal-blocks');
   const back = document.getElementById('legal-back');
   if (kicker) kicker.textContent = copy.kicker;
-  if (heading) heading.textContent = title;
+  if (heading) heading.textContent = page.title;
   if (intro) intro.textContent = copy.intro?.[legalPageKind] || '';
-  if (textElement) textElement.textContent = text;
+  if (blocks) {
+    blocks.replaceChildren(...page.sections.map((item) => {
+      const block = document.createElement('section');
+      block.className = 'legal-block';
+      const title = document.createElement('h2');
+      title.textContent = item.title;
+      const text = document.createElement('p');
+      text.textContent = item.text;
+      block.append(title, text);
+      return block;
+    }));
+  }
   if (back) back.textContent = `← ${copy.back}`;
   if (languageSelect) languageSelect.value = code;
   localStorage.setItem('portfolio-language', code);

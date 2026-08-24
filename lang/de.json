@@ -280,24 +280,6 @@
         "learning": "Defensive Checks klar begrenzen, Backend und Frontend sauber trennen und Ergebnisse verständlich darstellen.",
         "previewLabel": "Projektvorschau"
       },
-      "besp2074": {
-        "title": "BESP2074",
-        "cardDescription": "Lokale Balkan-Wirtschaftssimulation mit Python-Modell, JSON-Export und Web-Dashboard.",
-        "detailDescription": "BESP2074\n\nBESP2074 ist eine lokale, jahresbasierte Balkan-Simulation. Das Projekt nutzt ein Python-Modell, strukturierte JSON-Daten und ein lokales Web-Dashboard, um Szenarien bis 2074 darzustellen.\n\nDie Anwendung ist als Lern- und Szenariosimulation gedacht. Die Resultate sind keine echten wirtschaftlichen, politischen oder finanziellen Prognosen, sondern vereinfachte Modellläufe mit Annahmen, Seeds und optionalen Ereignissen.\n\nDas Projekt ist lokal nutzbar, aber noch nicht als fertige öffentliche Anwendung veröffentlicht.",
-        "meta": [
-          "Stack: Python, JSON, HTML/CSS, JavaScript",
-          "Fokus: Simulation, Datenexport, Dashboard",
-          "Repository: öffentlich",
-          "Hinweis: keine Prognose"
-        ],
-        "tags": [
-          "Python",
-          "Simulation"
-        ],
-        "role": "Eigenes Simulationsprojekt",
-        "learning": "Modellannahmen, JSON-Export und Dashboard so verbinden, dass lokale Szenarien nachvollziehbar bleiben.",
-        "previewLabel": "Projektvorschau"
-      },
       "foliolint": {
         "title": "FolioLint",
         "cardDescription": "Lokales Python-CLI, das Repositories auf Portfolio-Tauglichkeit, README-Struktur und öffentliche Präsentierbarkeit prüft.",
@@ -315,6 +297,27 @@
         ],
         "role": "Eigenes Tooling-Projekt",
         "learning": "Regelbasierte Checks so strukturieren, dass sie nachvollziehbar bleiben und echte Verbesserungen an Projekt-Repositories anstossen.",
+        "previewLabel": "Projektvorschau"
+      },
+      "besp2074": {
+        "title": "Internet ein und aus",
+        "cardDescription": "Hackathon-Prototyp für eine Weboberfläche, die Internetzugang pro Schulzimmer oder Subnetz modelliert.",
+        "detailDescription": "Internet ein und aus\n\nDieses Projekt entstand im Umfeld des Hackathons \"Baden hackt\". Der Prototyp modelliert, wie Internetzugänge für Schulzimmer oder Subnetze übersichtlich ein- und ausgeschaltet werden könnten.\n\nDer Schwerpunkt liegt auf einer verständlichen Bedienoberfläche und einer klaren Darstellung von Zuständen. Das Projekt ist ein Hackathon-Prototyp und wird als gemeinsames Arbeiten dokumentiert.",
+        "meta": [
+          "Kontext: Hackathon \"Baden hackt\"",
+          "Stack: Python, Weboberfläche"
+        ],
+        "tags": [
+          "Python",
+          "Hakaton"
+        ],
+        "filters": [
+          "python",
+          "web",
+          "visualisierung"
+        ],
+        "role": "Hackathon-Prototyp",
+        "learning": "Eine technische Idee unter Zeitdruck als verständlichen Prototyp umsetzen und Zustände klar kommunizieren.",
         "previewLabel": "Projektvorschau"
       }
     },
@@ -379,7 +382,10 @@
     "contextPilot47": {
       "title": "Staleness-Score bei einer einzelnen Nachricht korrigieren",
       "summary": "Korrigiert die Berechnung des Staleness-Scores, wenn nur eine Nachricht vorhanden ist.",
-      "tags": ["Python", "Scoring"]
+      "tags": [
+        "Python",
+        "Scoring"
+      ]
     },
     "beets6839": {
       "summary": "Sichert den Umgang mit leerem Artpath beim Bearbeiten, damit bestehende Daten nicht unbeabsichtigt verändert werden.",
@@ -405,12 +411,18 @@
     "vaultCleaner75": {
       "title": "Robustere Behandlung von Cache-Fehlern",
       "summary": "Verbessert die Behandlung von Cache-Fehlern und macht den CLI-Ablauf robuster.",
-      "tags": ["Python", "CLI"]
+      "tags": [
+        "Python",
+        "CLI"
+      ]
     },
     "archy397": {
       "title": "Verbessertes Navigationsverhalten",
       "summary": "Verbessert das Navigationsverhalten in einem Open-Source-Projekt.",
-      "tags": ["React", "Navigation"]
+      "tags": [
+        "React",
+        "Navigation"
+      ]
     }
   },
   "moreProjects": {
@@ -439,20 +451,20 @@
           "Notebook"
         ]
       },
-      "internetEinAus": {
-        "title": "Internet ein und aus",
-        "description": "Hackathon-Prototyp für eine Weboberfläche, die Internetzugang pro Schulzimmer oder Subnetz modelliert.",
-        "tags": [
-          "Python",
-          "Hackathon"
-        ]
-      },
       "heimatschutz": {
         "title": "Heimatschutz Aargau",
         "description": "Gemeinsame interne Webanwendung zur Sammlung und Prüfung von Baugesuchen mit AGIS-Schutzdaten.",
         "tags": [
           "Teamprojekt",
           "Webanwendung"
+        ]
+      },
+      "besp2074": {
+        "title": "BESP2074",
+        "description": "Lokale Balkan-Wirtschaftssimulation mit Python-Modell, JSON-Export und Web-Dashboard.",
+        "tags": [
+          "Python",
+          "Simulation"
         ]
       }
     }

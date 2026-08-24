@@ -878,6 +878,17 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   font-weight: 700;
   line-height: 1.2;
 }
+.project-context-preview {
+  align-content: center;
+  justify-items: start;
+  gap: 8px;
+  padding: 24px;
+  background-color: rgba(31, 24, 51, 0.78);
+  border-color: rgba(150, 122, 255, 0.5);
+}
+.project-context-preview .project-preview-label { color: var(--accent); }
+.project-context-title { color: var(--text); font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.2rem, 2vw, 1.6rem); line-height: 1.15; }
+.project-context-text { color: var(--muted); font-size: 0.95rem; line-height: 1.4; }
 .project-tags,
 .project-links {
   display: flex;

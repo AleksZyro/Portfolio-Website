@@ -280,24 +280,6 @@
         "learning": "Jasno ograničiti defanzivne provere, odvojiti backend i frontend i razumljivo prikazati rezultate.",
         "previewLabel": "Pregled projekta"
       },
-      "besp2074": {
-        "title": "BESP2074",
-        "cardDescription": "Lokalna balkanska ekonomska simulacija sa Python modelom, JSON exportom i web dashboardom.",
-        "detailDescription": "BESP2074\n\nBESP2074 je lokalna, godišnja balkanska simulacija. Projekat koristi Python model, strukturisane JSON podatke i lokalni web dashboard za prikaz scenarija do 2074.\n\nAplikacija je zamišljena kao simulacija za učenje i scenarije. Rezultati nisu stvarne ekonomske, političke ili finansijske prognoze, već pojednostavljeni model runovi sa pretpostavkama, seedovima i opcionalnim događajima.\n\nProjekat je lokalno upotrebljiv, ali još nije objavljen kao gotova javna aplikacija.",
-        "meta": [
-          "Stack: Python, JSON, HTML/CSS, JavaScript",
-          "Fokus: simulacija, izvoz podataka, dashboard",
-          "Repozitorijum: javan",
-          "Napomena: nije prognoza"
-        ],
-        "tags": [
-          "Python",
-          "Simulacija"
-        ],
-        "role": "Lični simulacioni projekat",
-        "learning": "Povezati pretpostavke modela, JSON export i dashboard tako da lokalni scenariji ostanu razumljivi.",
-        "previewLabel": "Pregled projekta"
-      },
       "foliolint": {
         "title": "FolioLint",
         "cardDescription": "Lokalni Python CLI za proveru da li su repozitorijumi spremni za portfolio, README strukturu i javno predstavljanje.",
@@ -315,6 +297,27 @@
         ],
         "role": "Sopstveni tooling projekat",
         "learning": "Strukturisati provere zasnovane na pravilima tako da ostanu razumljive i stvarno poboljšaju projektne repozitorijume.",
+        "previewLabel": "Pregled projekta"
+      },
+      "besp2074": {
+        "title": "Internet uključi i isključi",
+        "cardDescription": "Hakaton prototip veb interfejsa koji modeluje pristup internetu po učionici ili podmreži.",
+        "detailDescription": "Internet uključi i isključi\n\nOvaj projekat je nastao u okviru hakatona „Baden hackt“. Prototip modeluje kako bi pristup internetu za učionice ili podmreže mogao jasno da se uključi i isključi.\n\nFokus je na razumljivom interfejsu i jasnom prikazu stanja. Projekat je hakaton prototip koji je nastao kroz zajednički rad.",
+        "meta": [
+          "Kontekst: hakaton „Baden hackt“",
+          "Stek: Python, veb interfejs"
+        ],
+        "tags": [
+          "Python",
+          "Hakaton"
+        ],
+        "filters": [
+          "python",
+          "web",
+          "visualisierung"
+        ],
+        "role": "Hakaton prototip",
+        "learning": "Pretvoriti tehničku ideju u razumljiv prototip pod vremenskim pritiskom.",
         "previewLabel": "Pregled projekta"
       }
     },
@@ -383,7 +386,10 @@
     "contextPilot47": {
       "title": "Ispravka staleness skora za jednu poruku",
       "summary": "Ispravlja izračunavanje staleness skora kada postoji samo jedna poruka.",
-      "tags": ["Python", "Scoring"]
+      "tags": [
+        "Python",
+        "Scoring"
+      ]
     },
     "beets6839": {
       "summary": "Čuva prazne artpath vrednosti tokom uređivanja, tako da postojeći podaci ne budu nenamerno promenjeni.",
@@ -409,12 +415,18 @@
     "vaultCleaner75": {
       "title": "Poboljšano rukovanje greškama keša",
       "summary": "Poboljšava rukovanje greškama keša i čini CLI tok pouzdanijim.",
-      "tags": ["Python", "CLI"]
+      "tags": [
+        "Python",
+        "CLI"
+      ]
     },
     "archy397": {
       "title": "Poboljšana navigacija",
       "summary": "Poboljšava ponašanje navigacije u open-source projektu.",
-      "tags": ["React", "Navigacija"]
+      "tags": [
+        "React",
+        "Navigacija"
+      ]
     }
   },
   "moreProjects": {
@@ -443,20 +455,20 @@
           "Notebook"
         ]
       },
-      "internetEinAus": {
-        "title": "Internet ein und aus",
-        "description": "Hakaton prototip za web interfejs koji modeluje pristup internetu po učionici ili subnetu.",
-        "tags": [
-          "Python",
-          "Hakaton"
-        ]
-      },
       "heimatschutz": {
         "title": "Heimatschutz Aargau",
         "description": "Zajednička interna web aplikacija za prikupljanje i proveru zahteva za gradnju uz podatke o zaštiti AGIS.",
         "tags": [
           "Zajedno",
           "Veb aplikacija"
+        ]
+      },
+      "besp2074": {
+        "title": "BESP2074",
+        "description": "Lokalna balkanska ekonomska simulacija sa Python modelom, JSON exportom i web dashboardom.",
+        "tags": [
+          "Python",
+          "Simulacija"
         ]
       }
     }

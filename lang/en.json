@@ -280,24 +280,6 @@
         "learning": "Clearly limiting defensive checks, separating backend and frontend, and presenting results understandably.",
         "previewLabel": "Project preview"
       },
-      "besp2074": {
-        "title": "BESP2074",
-        "cardDescription": "Local Balkan economy simulation with Python model, JSON export, and web dashboard.",
-        "detailDescription": "BESP2074\n\nBESP2074 is a local, year-based Balkan simulation. The project uses a Python model, structured JSON data, and a local web dashboard to display scenarios up to 2074.\n\nThe app is intended as a learning and scenario simulation. The results are not real economic, political, or financial forecasts, but simplified model runs with assumptions, seeds, and optional events.\n\nThe project is usable locally but is not yet published as a finished public application.",
-        "meta": [
-          "Stack: Python, JSON, HTML/CSS, JavaScript",
-          "Focus: simulation, data export, dashboard",
-          "Repository: public",
-          "Note: not a forecast"
-        ],
-        "tags": [
-          "Python",
-          "Simulation"
-        ],
-        "role": "Personal simulation project",
-        "learning": "Connecting model assumptions, JSON export, and dashboard so local scenarios remain understandable.",
-        "previewLabel": "Project preview"
-      },
       "foliolint": {
         "title": "FolioLint",
         "cardDescription": "Local Python CLI for checking repositories for portfolio readiness, README structure, and public presentation quality.",
@@ -315,6 +297,27 @@
         ],
         "role": "Own tooling project",
         "learning": "Structure rule-based checks so they stay understandable and lead to real improvements in project repositories.",
+        "previewLabel": "Project preview"
+      },
+      "besp2074": {
+        "title": "Internet on and off",
+        "cardDescription": "Hackathon prototype for a web interface that models internet access per classroom or subnet.",
+        "detailDescription": "Internet on and off\n\nThis project was created in the context of the Baden hackt hackathon. The prototype models how internet access for classrooms or subnets could be switched on and off clearly.\n\nThe focus is an understandable interface and a clear representation of states. It is a hackathon prototype documented as collaborative work.",
+        "meta": [
+          "Context: Baden hackt hackathon",
+          "Stack: Python, web interface"
+        ],
+        "tags": [
+          "Python",
+          "Hackathon"
+        ],
+        "filters": [
+          "python",
+          "web",
+          "visualisierung"
+        ],
+        "role": "Hackathon prototype",
+        "learning": "Turn a technical idea into an understandable prototype under time pressure.",
         "previewLabel": "Project preview"
       }
     },
@@ -379,7 +382,10 @@
     "contextPilot47": {
       "title": "Fix single-message staleness score",
       "summary": "Fixes the staleness score calculation when only one message is present.",
-      "tags": ["Python", "Scoring"]
+      "tags": [
+        "Python",
+        "Scoring"
+      ]
     },
     "beets6839": {
       "summary": "Preserves empty artpath values during editing so existing data is not changed unintentionally.",
@@ -405,12 +411,18 @@
     "vaultCleaner75": {
       "title": "Improve cache error handling",
       "summary": "Improves cache error handling and makes the CLI flow more robust.",
-      "tags": ["Python", "CLI"]
+      "tags": [
+        "Python",
+        "CLI"
+      ]
     },
     "archy397": {
       "title": "Improve navigation behaviour",
       "summary": "Improves navigation behaviour in an open-source project.",
-      "tags": ["React", "Navigation"]
+      "tags": [
+        "React",
+        "Navigation"
+      ]
     }
   },
   "moreProjects": {
@@ -439,20 +451,20 @@
           "Notebook"
         ]
       },
-      "internetEinAus": {
-        "title": "Internet ein und aus",
-        "description": "Hackathon prototype for a web interface that models internet access per classroom or subnet.",
-        "tags": [
-          "Python",
-          "Hackathon"
-        ]
-      },
       "heimatschutz": {
         "title": "Heimatschutz Aargau",
         "description": "Shared internal web application for collecting and reviewing building applications with AGIS protection data.",
         "tags": [
           "Team project",
           "Web application"
+        ]
+      },
+      "besp2074": {
+        "title": "BESP2074",
+        "description": "Local Balkan economy simulation with Python model, JSON export and web dashboard.",
+        "tags": [
+          "Python",
+          "Simulation"
         ]
       }
     }
