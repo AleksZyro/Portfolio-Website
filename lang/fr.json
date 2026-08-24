@@ -220,7 +220,9 @@
     "externalText": "Les images de projets, certificats et le graphique GitHub sont chargés localement. Les liens externes ne s’ouvrent qu’au clic.",
     "imprintTitle": "Impressum",
     "imprintText": "Site portfolio privé d’Aleksandar Nikolić. Le contact se fait par e-mail dans la section contact.",
-    "contactLink": "Me contacter"
+    "contactLink": "Me contacter",
+    "unifiedTitle": "Mentions légales et informations",
+    "unifiedText": "Une explication commune des mentions légales, de la confidentialité, des cookies et de l’hébergement."
   },
   "portfolioItems": {
     "projects": {

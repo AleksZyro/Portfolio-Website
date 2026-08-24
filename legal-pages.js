@@ -7,6 +7,7 @@ const resetHorizontalScroll = () => {
   document.body.scrollLeft = 0;
   if (window.scrollX !== 0) window.scrollTo(0, window.scrollY);
 };
+
 window.addEventListener('pageshow', resetHorizontalScroll);
 window.addEventListener('resize', resetHorizontalScroll);
 
@@ -109,6 +110,19 @@ const legalCopy = {
   },
 };
 
+const unifiedLegalCopy = {
+  de: { title: 'Impressum und Rechtliches', intro: 'Eine gemeinsame, transparente Erklärung zu Portfolio, Hosting, Datenschutz und Cookies.', heading: 'Impressum, Datenschutz, Cookies und Hosting', text: 'Diese Website ist eine private Portfolio-Seite von Aleksandar Nikolić. Sie präsentiert Ausbildung, Projekte, Zertifikate und berufliche Interessen. Für Fragen oder eine Praktikumsstelle bin ich per E-Mail unter aleksandar09@gmail.com erreichbar.\n\nDie Seite wird als statische Website über Cloudflare Pages bereitgestellt. Beim Aufruf können technisch notwendige Zugriffsdaten durch Cloudflare als Hosting- und CDN-Anbieter verarbeitet werden, damit die Website sicher und zuverlässig ausgeliefert werden kann. Es werden keine Formulare, keine Analytics, keine Werbetracker und keine externen Tracking-Skripte eingesetzt. Externe Links zu GitHub und anderen Diensten öffnen sich erst, wenn sie aktiv angeklickt werden.\n\nDiese Website setzt keine Tracking-Cookies für Werbung, Analytics oder Nutzerverfolgung. Die gewählte Sprache kann lokal im Browser gespeichert werden, damit die Einstellung beim nächsten Besuch erhalten bleibt.' },
+  en: { title: 'Imprint and legal information', intro: 'One transparent explanation covering the portfolio, hosting, privacy and cookies.', heading: 'Imprint, privacy, cookies and hosting', text: 'This is Aleksandar Nikolić\'s private portfolio website. It presents education, projects, certificates and professional interests. For questions or an internship, I can be reached by email at aleksandar09@gmail.com.\n\nThe site is delivered as a static website through Cloudflare Pages. Cloudflare may process technically necessary access data as the hosting and CDN provider so the website can be delivered securely and reliably. No forms, analytics, advertising trackers or external tracking scripts are used. Links to GitHub and other external services only open after an active click.\n\nThis website does not set tracking cookies for advertising, analytics or user tracking. The selected language may be stored locally in the browser so your preference is kept for the next visit.' },
+  fr: { title: 'Mentions légales et informations', intro: 'Une explication transparente du portfolio, de l’hébergement, de la confidentialité et des cookies.', heading: 'Mentions légales, confidentialité, cookies et hébergement', text: 'Ce site est le portfolio privé d’Aleksandar Nikolić. Il présente sa formation, ses projets, ses certificats et ses intérêts professionnels. Pour toute question ou un stage, je suis joignable par e-mail à aleksandar09@gmail.com.\n\nLe site est diffusé comme site statique via Cloudflare Pages. Cloudflare peut traiter des données d’accès techniquement nécessaires en tant qu’hébergeur et CDN afin de diffuser le site de manière sûre et fiable. Aucun formulaire, outil d’analyse, traceur publicitaire ni script externe de suivi n’est utilisé. Les liens vers GitHub et d’autres services externes ne s’ouvrent qu’après un clic actif.\n\nCe site n’utilise pas de cookies de suivi pour la publicité, les analyses ou le suivi des utilisateurs. La langue choisie peut être enregistrée localement dans le navigateur afin de conserver votre préférence lors de la prochaine visite.' },
+  sr: { title: 'Impresum i pravne informacije', intro: 'Jedno jasno objašnjenje o portfoliju, hostingu, privatnosti i kukijima.', heading: 'Impresum, privatnost, kukiji i hosting', text: 'Ovo je privatni portfolio sajt Aleksandra Nikolića. Predstavlja obrazovanje, projekte, sertifikate i profesionalna interesovanja. Za pitanja ili praksu dostupan sam putem e-maila: aleksandar09@gmail.com.\n\nSajt se isporučuje kao statički sajt preko Cloudflare Pages. Cloudflare kao hosting i CDN provajder može obraditi tehnički neophodne podatke pristupa kako bi sajt bio bezbedno i pouzdano isporučen. Sajt ne koristi formulare, analitiku, reklamne trekere ni eksterne skripte za praćenje. Linkovi ka GitHubu i drugim eksternim servisima otvaraju se tek nakon aktivnog klika.\n\nOvaj sajt ne postavlja kukije za reklame, analitiku ili praćenje korisnika. Izabrani jezik može biti lokalno sačuvan u pregledaču kako bi podešavanje ostalo dostupno pri sledećoj poseti.' },
+  'sr-cyrl': { title: 'Импресум и правне информације', intro: 'Једно јасно објашњење о портфолију, хостингу, приватности и кукијима.', heading: 'Импресум, приватност, кукији и хостинг', text: 'Ово је приватни портфолио сајт Александра Николића. Представља образовање, пројекте, сертификате и професионална интересовања. За питања или праксу доступан сам путем имејла: aleksandar09@gmail.com.\n\nСајт се испоручује као статички сајт преко Cloudflare Pages. Cloudflare као хостинг и CDN провајдер може обрадити технички неопходне податке приступа како би сајт био безбедно и поуздано испоручен. Сајт не користи формуларе, аналитику, рекламне трекере ни екстерне скрипте за праћење. Линкови ка GitHub-у и другим екстерним сервисима отварају се тек након активног клика.\n\nОвај сајт не поставља кукије за рекламе, аналитику или праћење корисника. Изабрани језик може бити локално сачуван у прегледачу како би подешавање остало доступно при следећој посети.' }
+};
+
+Object.entries(unifiedLegalCopy).forEach(([code, page]) => {
+  legalCopy[code].legal = { title: page.title, sections: [section(page.heading, page.text)] };
+  legalCopy[code].intro.legal = page.intro;
+});
+
 const applyLegalLanguage = (code) => {
   const copy = legalCopy[code] || legalCopy.de;
   const page = copy[legalPageKind] || copy.impressum;
@@ -133,6 +147,7 @@ const applyLegalLanguage = (code) => {
       title.textContent = item.title;
       const text = document.createElement('p');
       text.textContent = item.text;
+      text.className = 'legal-block-text';
       block.append(title, text);
       return block;
     }));

@@ -1091,6 +1091,12 @@ const localizedOpenSourceContribution = (item) => {
   };
 };
 
+const normalizeVisibleText = (value) => String(value ?? '')
+  .replace(/\\r\\n|\\n|\\r/g, '\n')
+  .replace(/�vent/g, 'Event')
+  .replace(/�/g, '')
+  .trim();
+
 const mergeIcon = () => {
   const icon = document.createElement('span');
   icon.className = 'merge-icon';
@@ -1138,10 +1144,10 @@ const renderOpenSourceContributions = () => {
     top.append(repo, number);
 
     const title = document.createElement('h4');
-    title.textContent = item.title;
+    title.textContent = normalizeVisibleText(item.title);
 
     const summary = document.createElement('p');
-    summary.textContent = item.summary;
+    summary.textContent = normalizeVisibleText(item.summary);
 
     const bottom = document.createElement('div');
     bottom.className = 'open-source-bottom';
@@ -1150,7 +1156,7 @@ const renderOpenSourceContributions = () => {
     tags.className = 'open-source-tags';
     (item.tags || []).forEach((tagText) => {
       const tag = document.createElement('span');
-      tag.textContent = tagText;
+      tag.textContent = normalizeVisibleText(tagText);
       tags.append(tag);
     });
 
