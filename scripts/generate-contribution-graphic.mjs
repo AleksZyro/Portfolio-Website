@@ -1,9 +1,10 @@
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
 const user = process.env.GITHUB_USER || 'AleksZyro';
 const token = process.env.GITHUB_TOKEN;
 const output = process.env.OUTPUT_PATH || 'assets/contribution-graphic.svg';
+const indexPath = process.env.INDEX_PATH || 'index.html';
 
 const query = `
   query($login: String!) {
@@ -108,6 +109,26 @@ const weeks = calendar.weeks.slice(-53);
 const days = weeks.flatMap((week) => week.contributionDays);
 const maxCount = Math.max(1, ...days.map((day) => day.contributionCount));
 
+const contributionByDate = new Map(days.map((day) => [day.date, day.contributionCount]));
+const isoDate = (date) => date.toISOString().slice(0, 10);
+const shiftDate = (date, amount) => {
+  const shifted = new Date(date);
+  shifted.setUTCDate(shifted.getUTCDate() + amount);
+  return shifted;
+};
+
+let streakCursor = new Date();
+const today = isoDate(streakCursor);
+if ((contributionByDate.get(today) || 0) === 0) {
+  streakCursor = shiftDate(streakCursor, -1);
+}
+
+let currentStreak = 0;
+while ((contributionByDate.get(isoDate(streakCursor)) || 0) > 0) {
+  currentStreak += 1;
+  streakCursor = shiftDate(streakCursor, -1);
+}
+
 const width = 960;
 const height = 224;
 const cell = 11;
@@ -180,3 +201,14 @@ ${cells}
 
 await mkdir(path.dirname(output), { recursive: true });
 await writeFile(output, svg, 'utf8');
+const indexHtml = await readFile(indexPath, 'utf8');
+const streakPattern = /(<strong id="github-streak-value">)\d+(<\/strong>)/;
+const updatedIndexHtml = indexHtml.replace(
+  streakPattern,
+  `$1${currentStreak}$2`
+);
+if (!streakPattern.test(indexHtml)) {
+  throw new Error(`Could not update GitHub streak in ${indexPath}.`);
+}
+await writeFile(indexPath, updatedIndexHtml, 'utf8');
+console.log(`Updated GitHub streak to ${currentStreak} days.`);

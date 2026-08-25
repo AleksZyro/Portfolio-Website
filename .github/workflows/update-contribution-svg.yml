@@ -28,15 +28,15 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_USER: AleksZyro
 
-      - name: Commit updated SVG
+      - name: Commit updated contribution data
         run: |
-          if git diff --quiet -- assets/contribution-graphic.svg; then
-            echo "No contribution SVG changes."
+          if git diff --quiet -- assets/contribution-graphic.svg index.html; then
+            echo "No contribution data changes."
             exit 0
           fi
 
           git config user.name "AleksZyro"
           git config user.email "178569539+AleksZyro@users.noreply.github.com"
-          git add assets/contribution-graphic.svg
-          git commit -m "Update contribution graphic"
+          git add assets/contribution-graphic.svg index.html
+          git commit -m "Update contribution graphic and streak"
           git push
