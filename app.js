@@ -944,6 +944,24 @@ embeddedDictionaries['sr-cyrl'] = {
   skip: { content: 'Прескочи на садржај' },
   nav: { home: 'Почетак', about: 'О мени', career: 'Развој', tech: 'Тех стек', portfolio: 'Пројекти', github: 'Гитхаб', contact: 'Контакт и правно', certificates: 'Сертификати' },
   certificates: { kicker: 'Сертификати', title: 'Усавршавање у слободно време', subline: 'Одабрани сертификати са прегледом, детаљима и ПДФ преузимањем.' },
+  portfolio: {
+    ...embeddedDictionaries.sr.portfolio,
+    kicker: 'Пројекти',
+    title: 'Одабрани радови',
+    subline: 'Истраживач пројеката са статусом, стеком и линковима или напоменама.',
+    certificatesTitle: 'Сертификати',
+    certificatesSubline: 'ПДФ докази са прегледом и преузимањем.',
+    detailKicker: 'Детаљи пројекта',
+    detailStatus: 'Статус',
+    detailStack: 'Стек',
+    detailRole: 'Улога',
+    detailLearning: 'Учење',
+    tabs: { projects: 'Пројекти', certificates: 'Сертификати' },
+    detailsButton: 'Прикажи детаље',
+    moreProjectsTitle: 'Додатни пројекти',
+    moreProjectsSubline: 'Додатни пројекти које сам завршио или их још тренутно развијам.'
+  },
+  filters: { all: 'Сви', visualization: 'Визуализација', inProgress: 'У раду' },
   techGroups: [
     { title: 'Фронтенд основе', items: ['ХТМЛ', 'ЦСС', 'ЈаваСкрипт', 'ТајпСкрипт'] },
     { title: 'Фронтенд runtime', items: ['Реакт', 'Вите', 'Node.js'] },
@@ -952,7 +970,10 @@ embeddedDictionaries['sr-cyrl'] = {
     { title: 'Други језици и framework-ови', items: ['Јава', 'Ц#', '.NET'] },
     { title: 'Алати, cloud и аутоматизација', items: ['Гит', 'Докер', 'PowerShell', 'Batchfile', 'AWS', 'OpenAI'] }
   ],
-  legal: { kicker: 'Правне информације', title: 'Импресум, приватност и колачићи', subline: 'Кратко, транспарентно и без сувишног праћења.', privacyTitle: 'Приватност', privacyText: 'Нема формулара, аналитике ни рекламних трекера. Хостинг обрађује само технички неопходне податке приступа.', cookieTitle: 'Колачићи', cookieText: 'Нема колачића за праћење. Локално се чува само изабрани језик.', externalTitle: 'Екстерни садржај', externalText: 'Слике пројеката, сертификати и Гитхаб графика учитавају се локално. Екстерни линкови се отварају тек након клика.', imprintTitle: 'Импресум', imprintText: 'Приватни портфолио сајт Александра Николића. Контакт је доступан у одељку за контакт.', contactLink: 'Контактирај ме', unifiedTitle: 'Импресум и правне информације', unifiedText: 'Једно заједничко објашњење импресума, приватности, колачића и хостинга.' }
+  legal: { kicker: 'Правне информације', title: 'Импресум, приватност и колачићи', subline: 'Кратко, транспарентно и без сувишног праћења.', privacyTitle: 'Приватност', privacyText: 'Нема формулара, аналитике ни рекламних трекера. Хостинг обрађује само технички неопходне податке приступа.', cookieTitle: 'Колачићи', cookieText: 'Нема колачића за праћење. Локално се чува само изабрани језик.', externalTitle: 'Екстерни садржај', externalText: 'Слике пројеката, сертификати и Гитхаб графика учитавају се локално. Екстерни линкови се отварају тек након клика.', imprintTitle: 'Импресум', imprintText: 'Приватни портфолио сајт Александра Николића. Контакт је доступан у одељку за контакт.', contactLink: 'Контактирај ме', unifiedTitle: 'Импресум и правне информације', unifiedText: 'Једно заједничко објашњење импресума, приватности, колачића и хостинга.' },
+  modal: { close: 'Затвори', title: 'Детаљни приказ', projectKicker: 'Статус пројекта', certificateKicker: 'Сертификат', openImage: 'Отвори преглед у новој картици' },
+  portfolioDownloadButton: 'Преузми ПДФ',
+  footer: { rights: 'Сва права задржана.', legalLink: 'Приватност и колачићи' }
 };
 
 const certificateCopy = {
@@ -1177,6 +1198,14 @@ const embeddedMoreProjects = {
     lb259: { title: 'ЛБ259', description: 'Пројекат података о коришћењу телефона, продуктивности и благостању.', tags: ['Подаци', 'Нотбук'] },
     heimatschutz: { title: 'Хеиматшутц Ааргау', description: 'Заједничка интерна веб апликација за проверу грађевинских захтева.', tags: ['Тимски пројекат', 'Веб апликација'] }
   }
+};
+
+const embeddedPortfolioSectionCopy = {
+  de: { title: 'Weitere Projekte', subline: 'Weitere Projekte, die ich fertiggestellt habe oder aktuell noch entwickle.' },
+  en: { title: 'More projects', subline: 'More projects that I have completed or am still developing.' },
+  fr: { title: 'Autres projets', subline: 'Autres projets que j’ai terminés ou que je développe encore actuellement.' },
+  sr: { title: 'Dodatni projekti', subline: 'Dodatni projekti koje sam završio ili ih još trenutno razvijam.' },
+  'sr-cyrl': { title: 'Додатни пројекти', subline: 'Додатни пројекти које сам завршио или их још тренутно развијам.' }
 };
 
 const resetHorizontalScroll = () => {
@@ -1717,7 +1746,7 @@ const createCard = (item, typeKey = 'projects') => {
 
   const detailButton = document.createElement('button');
   detailButton.type = 'button';
-  detailButton.textContent = t('portfolio.detailsButton', 'Details anzeigen');
+  detailButton.textContent = t('portfolio.detailsButton', embeddedDictionaries[currentLanguageCode]?.portfolio?.detailsButton || 'Details anzeigen');
   detailButton.dataset.detailTrigger = 'true';
   detailButton.dataset.title = displayItem.title;
   detailButton.dataset.description = displayItem.detailDescription || displayItem.description || '';
@@ -1753,7 +1782,7 @@ const createCard = (item, typeKey = 'projects') => {
 
   card.dataset.clickableCard = 'true';
   card.tabIndex = 0;
-  card.setAttribute('aria-label', `${displayItem.title}: ${t('portfolio.detailsButton', 'Details anzeigen')}`);
+  card.setAttribute('aria-label', `${displayItem.title}: ${t('portfolio.detailsButton', embeddedDictionaries[currentLanguageCode]?.portfolio?.detailsButton || 'Details anzeigen')}`);
   card.addEventListener('click', (event) => {
     if (event.target.closest('button, a')) return;
     openDetails();
@@ -1800,12 +1829,13 @@ const renderProjectExplorer = () => {
 const createMoreProjectsCard = () => {
   const card = document.createElement('article');
   card.className = 'item-card more-projects-summary-card open-source-more-card';
+  const sectionCopy = embeddedPortfolioSectionCopy[currentLanguageCode] || {};
 
   const title = document.createElement('h3');
-  title.textContent = t('portfolio.moreProjectsTitle', 'Weitere Projekte');
+  title.textContent = sectionCopy.title || t('portfolio.moreProjectsTitle', 'Weitere Projekte');
 
   const description = document.createElement('p');
-  description.textContent = t('portfolio.moreProjectsSubline', 'Weitere Projekte, die ich fertiggestellt habe oder aktuell noch entwickle.');
+  description.textContent = sectionCopy.subline || t('portfolio.moreProjectsSubline', 'Weitere Projekte, die ich fertiggestellt habe oder aktuell noch entwickle.');
 
   const list = document.createElement('div');
   list.className = 'more-projects-card-list open-source-more-list';
