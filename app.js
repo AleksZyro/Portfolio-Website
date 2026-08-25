@@ -339,7 +339,7 @@ let activeProjectTitle = '';
 const embeddedDictionaries = {
   de: {
     skip: { content: 'Zum Inhalt springen' },
-    nav: { home: 'Start', about: '\u00dcber mich', career: 'Werdegang', tech: 'Tech-Stack', portfolio: 'Projekte', github: 'GitHub', contact: 'Kontakt & Rechtliches' },
+    nav: { home: 'Start', about: '\u00dcber mich', career: 'Werdegang', tech: 'Tech-Stack', portfolio: 'Projekte', github: 'GitHub', contact: 'Kontakt & Rechtliches', certificates: 'Zertifikate' },
     hero: {
       kicker: 'Entwicklerprofil',
       title: 'Praxisorientierte Web- und Python-Projekte',
@@ -434,6 +434,11 @@ const embeddedDictionaries = {
       title: 'Technologien, mit denen ich Erfahrung sammeln konnte',
       subline: 'Eine kompakte Übersicht aus Schule, Projekten, lokalen Tools und aktuellen Lernbereichen.'
     },
+    certificates: {
+      kicker: 'Zertifikate',
+      title: 'Weiterbildungen in meiner Freizeit',
+      subline: 'Ausgewählte Zertifikate mit Vorschau, Details und PDF-Download.'
+    },
     portfolio: {
       kicker: 'Projekte',
       title: 'Ausgewählte Arbeiten',
@@ -485,7 +490,7 @@ const embeddedDictionaries = {
   },
   en: {
     skip: { content: 'Skip to content' },
-    nav: { home: 'Home', about: 'About', career: 'Journey', tech: 'Tech Stack', portfolio: 'Projects', github: 'GitHub', contact: 'Contact & Legal' },
+    nav: { home: 'Home', about: 'About', career: 'Journey', tech: 'Tech Stack', portfolio: 'Projects', github: 'GitHub', contact: 'Contact & Legal', certificates: 'Certificates' },
     hero: {
       kicker: 'Developer profile',
       title: 'Practical web and Python projects',
@@ -580,6 +585,11 @@ const embeddedDictionaries = {
       title: 'Technologies I have gained experience with',
       subline: 'A compact overview from school, projects, local tools, and current learning areas.'
     },
+    certificates: {
+      kicker: 'Certificates',
+      title: 'Learning beyond the classroom',
+      subline: 'Selected certificates with preview, details and PDF download.'
+    },
     portfolio: {
       kicker: 'Projects',
       title: 'Selected work',
@@ -617,7 +627,7 @@ const embeddedDictionaries = {
   },
   fr: {
     skip: { content: 'Aller au contenu' },
-    nav: { home: 'Accueil', about: 'À propos', career: 'Parcours', tech: 'Stack tech', portfolio: 'Projets', github: 'GitHub', contact: 'Contact & légal' },
+    nav: { home: 'Accueil', about: 'À propos', career: 'Parcours', tech: 'Stack tech', portfolio: 'Projets', github: 'GitHub', contact: 'Contact & légal', certificates: 'Certificats' },
     hero: {
       kicker: 'Profil développeur',
       title: 'Projets web et Python orientés pratique',
@@ -712,6 +722,11 @@ const embeddedDictionaries = {
       title: 'Technologies avec lesquelles j’ai acquis de l’expérience',
       subline: 'Un aperçu compact issu de l’école, des projets, des outils locaux et des apprentissages actuels.'
     },
+    certificates: {
+      kicker: 'Certificats',
+      title: 'Formations et apprentissages personnels',
+      subline: 'Certificats sélectionnés avec aperçu, détails et téléchargement PDF.'
+    },
     portfolio: {
       kicker: 'Projets',
       title: 'Travaux selectionnes',
@@ -751,7 +766,7 @@ const embeddedDictionaries = {
   },
   sr: {
     skip: { content: 'PreskoÄi na sadrÅ¾aj' },
-    nav: { home: 'PoÄetak', about: 'O meni', career: 'Razvoj', tech: 'Tech stack', portfolio: 'Projekti', github: 'GitHub', contact: 'Kontakt i pravno' },
+    nav: { home: 'PoÄetak', about: 'O meni', career: 'Razvoj', tech: 'Tech stack', portfolio: 'Projekti', github: 'GitHub', contact: 'Kontakt i pravno', certificates: 'Sertifikati' },
     hero: {
       kicker: 'Developerski profil',
       title: 'Praktični web i Python projekti',
@@ -845,6 +860,11 @@ const embeddedDictionaries = {
       kicker: 'Tech stack',
       title: 'Tehnologije sa kojima sam stekao iskustvo',
       subline: 'Kompaktan pregled iz škole, projekata, lokalnih alata i trenutnih oblasti učenja.'
+    },
+    certificates: {
+      kicker: 'Sertifikati',
+      title: 'Usavršavanje u slobodno vreme',
+      subline: 'Odabrani sertifikati sa pregledom, detaljima i PDF preuzimanjem.'
     },
     portfolio: {
       kicker: 'Projekti',
@@ -2243,7 +2263,11 @@ if ('IntersectionObserver' in window) {
   revealItems.forEach((item) => item.classList.add('visible'));
 }
 
-const storedLanguage = localStorage.getItem('portfolio-language') || 'de';
+const requestedLanguage = new URLSearchParams(window.location.search).get('lang');
+const supportedLanguageCodes = ['de', 'en', 'fr', 'sr', 'sr-cyrl'];
+const initialLanguage = supportedLanguageCodes.includes(requestedLanguage)
+  ? requestedLanguage
+  : (localStorage.getItem('portfolio-language') || 'de');
 localStorage.removeItem('portfolio-theme');
 renderStats();
 renderTechStack();
@@ -2252,7 +2276,7 @@ if (tabs.length) {
 }
 updateNavForScroll();
 
-loadLanguage(storedLanguage).then(alignInitialHash).catch(() => {
+loadLanguage(initialLanguage).then(alignInitialHash).catch(() => {
   activeDictionary = {};
   applyStaticTranslations();
   refreshDynamicTexts();
