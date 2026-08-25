@@ -439,6 +439,15 @@ const embeddedDictionaries = {
       title: 'Weiterbildungen in meiner Freizeit',
       subline: 'Ausgewählte Zertifikate mit Vorschau, Details und PDF-Download.'
     },
+    techGroups: [
+      { title: 'Frontend-Grundlagen', items: ['HTML', 'CSS', 'JavaScript', 'TypeScript'] },
+      { title: 'Frontend-Laufzeit', items: ['React', 'Vite', 'Node.js'] },
+      { title: 'Python und API', items: ['Python', 'FastAPI', 'pytest'] },
+      { title: 'Datenformate und Speicher', items: ['JSON', 'CSV', 'SQLite'] },
+      { title: 'Weitere Sprachen und Frameworks', items: ['Java', 'C#', '.NET'] },
+      { title: 'Tools, Cloud und Automatisierung', items: ['Git', 'Docker', 'PowerShell', 'Batchfile', 'AWS', 'OpenAI'] }
+    ],
+    legal: { kicker: 'Rechtliches', title: 'Impressum, Datenschutz und Cookies', subline: 'Kurz, transparent und ohne Tracking-Geschwurbel.', privacyTitle: 'Datenschutz', privacyText: 'Keine Formulare, keine Analytics und keine Werbe-Tracker. Der Hoster verarbeitet nur technisch notwendige Zugriffsdaten.', cookieTitle: 'Cookies', cookieText: 'Keine Tracking-Cookies. Nur die gewählte Sprache wird lokal gespeichert.', externalTitle: 'Externe Inhalte', externalText: 'Projektbilder, Zertifikate und GitHub-Grafik werden lokal geladen. Externe Links öffnen sich erst nach einem Klick.', imprintTitle: 'Impressum', imprintText: 'Private Portfolio-Website von Aleksandar Nikolić. Kontakt ist im Kontaktbereich möglich.', contactLink: 'Kontakt aufnehmen', unifiedTitle: 'Impressum und Rechtliches', unifiedText: 'Eine gemeinsame Erklärung zu Impressum, Datenschutz, Cookies und Hosting.' },
     portfolio: {
       kicker: 'Projekte',
       title: 'Ausgewählte Arbeiten',
@@ -590,6 +599,15 @@ const embeddedDictionaries = {
       title: 'Learning beyond the classroom',
       subline: 'Selected certificates with preview, details and PDF download.'
     },
+    techGroups: [
+      { title: 'Frontend basics', items: ['HTML', 'CSS', 'JavaScript', 'TypeScript'] },
+      { title: 'Frontend runtime', items: ['React', 'Vite', 'Node.js'] },
+      { title: 'Python and API', items: ['Python', 'FastAPI', 'pytest'] },
+      { title: 'Data formats and storage', items: ['JSON', 'CSV', 'SQLite'] },
+      { title: 'Other languages and frameworks', items: ['Java', 'C#', '.NET'] },
+      { title: 'Tools, cloud and automation', items: ['Git', 'Docker', 'PowerShell', 'Batchfile', 'AWS', 'OpenAI'] }
+    ],
+    legal: { kicker: 'Legal', title: 'Imprint, privacy and cookies', subline: 'Short, transparent, and without tracking noise.', privacyTitle: 'Privacy', privacyText: 'No forms, analytics or advertising trackers. The host only processes technically necessary access data.', cookieTitle: 'Cookies', cookieText: 'No tracking cookies. Only the selected language is stored locally.', externalTitle: 'External content', externalText: 'Project images, certificates and the GitHub graphic are loaded locally. External links only open after a click.', imprintTitle: 'Imprint', imprintText: 'Private portfolio website by Aleksandar Nikolić. Contact is available in the contact section.', contactLink: 'Contact me', unifiedTitle: 'Imprint and legal information', unifiedText: 'One shared explanation of the imprint, privacy, cookies and hosting.' },
     portfolio: {
       kicker: 'Projects',
       title: 'Selected work',
@@ -727,6 +745,15 @@ const embeddedDictionaries = {
       title: 'Formations et apprentissages personnels',
       subline: 'Certificats sélectionnés avec aperçu, détails et téléchargement PDF.'
     },
+    techGroups: [
+      { title: 'Bases du frontend', items: ['HTML', 'CSS', 'JavaScript', 'TypeScript'] },
+      { title: 'Runtime frontend', items: ['React', 'Vite', 'Node.js'] },
+      { title: 'Python et API', items: ['Python', 'FastAPI', 'pytest'] },
+      { title: 'Formats de données et stockage', items: ['JSON', 'CSV', 'SQLite'] },
+      { title: 'Autres langages et frameworks', items: ['Java', 'C#', '.NET'] },
+      { title: 'Outils, cloud et automatisation', items: ['Git', 'Docker', 'PowerShell', 'Batchfile', 'AWS', 'OpenAI'] }
+    ],
+    legal: { kicker: 'Mentions légales', title: 'Mentions légales, confidentialité et cookies', subline: 'Court, transparent et sans pistage superflu.', privacyTitle: 'Confidentialité', privacyText: 'Aucun formulaire, outil d’analyse ni traceur publicitaire. L’hébergeur ne traite que les données d’accès techniquement nécessaires.', cookieTitle: 'Cookies', cookieText: 'Aucun cookie de suivi. Seule la langue choisie est enregistrée localement.', externalTitle: 'Contenu externe', externalText: 'Les images, certificats et la graphique GitHub sont chargés localement. Les liens externes ne s’ouvrent qu’après un clic.', imprintTitle: 'Mentions légales', imprintText: 'Portfolio privé d’Aleksandar Nikolić. Le contact est possible dans la section contact.', contactLink: 'Me contacter', unifiedTitle: 'Mentions légales et informations', unifiedText: 'Une explication commune des mentions légales, de la confidentialité, des cookies et de l’hébergement.' },
     portfolio: {
       kicker: 'Projets',
       title: 'Travaux selectionnes',
@@ -866,6 +893,15 @@ const embeddedDictionaries = {
       title: 'Usavršavanje u slobodno vreme',
       subline: 'Odabrani sertifikati sa pregledom, detaljima i PDF preuzimanjem.'
     },
+    techGroups: [
+      { title: 'Frontend osnove', items: ['HTML', 'CSS', 'JavaScript', 'TypeScript'] },
+      { title: 'Frontend runtime', items: ['React', 'Vite', 'Node.js'] },
+      { title: 'Python i API', items: ['Python', 'FastAPI', 'pytest'] },
+      { title: 'Formati podataka i skladištenje', items: ['JSON', 'CSV', 'SQLite'] },
+      { title: 'Drugi jezici i framework-ovi', items: ['Java', 'C#', '.NET'] },
+      { title: 'Alati, cloud i automatizacija', items: ['Git', 'Docker', 'PowerShell', 'Batchfile', 'AWS', 'OpenAI'] }
+    ],
+    legal: { kicker: 'Pravno', title: 'Impresum, privatnost i kukiji', subline: 'Kratko, transparentno i bez suvišnog praćenja.', privacyTitle: 'Privatnost', privacyText: 'Nema formulara, analitike ni reklamnih trekera. Hosting obrađuje samo tehnički neophodne podatke pristupa.', cookieTitle: 'Kukiji', cookieText: 'Nema kukija za praćenje. Lokalno se čuva samo izabrani jezik.', externalTitle: 'Eksterni sadržaj', externalText: 'Slike projekata, sertifikati i GitHub grafika učitavaju se lokalno. Eksterni linkovi se otvaraju tek nakon klika.', imprintTitle: 'Impresum', imprintText: 'Privatni portfolio sajt Aleksandra Nikolića. Kontakt je dostupan u odeljku za kontakt.', contactLink: 'Kontaktiraj me', unifiedTitle: 'Impresum i pravne informacije', unifiedText: 'Jedno zajedničko objašnjenje impresuma, privatnosti, kukija i hostinga.' },
     portfolio: {
       kicker: 'Projekti',
       title: 'Odabrani radovi',
@@ -901,6 +937,22 @@ const embeddedDictionaries = {
     portfolioDownloadButton: 'Preuzmi PDF',
     footer: { rights: 'Sva prava zadržana.', legalLink: 'Privatnost i kukiji' }
   }
+};
+
+embeddedDictionaries['sr-cyrl'] = {
+  ...embeddedDictionaries.sr,
+  skip: { content: 'Прескочи на садржај' },
+  nav: { home: 'Почетак', about: 'О мени', career: 'Развој', tech: 'Тех стек', portfolio: 'Пројекти', github: 'Гитхаб', contact: 'Контакт и правно', certificates: 'Сертификати' },
+  certificates: { kicker: 'Сертификати', title: 'Усавршавање у слободно време', subline: 'Одабрани сертификати са прегледом, детаљима и ПДФ преузимањем.' },
+  techGroups: [
+    { title: 'Фронтенд основе', items: ['ХТМЛ', 'ЦСС', 'ЈаваСкрипт', 'ТајпСкрипт'] },
+    { title: 'Фронтенд runtime', items: ['Реакт', 'Вите', 'Node.js'] },
+    { title: 'Пајтон и API', items: ['Пајтон', 'ФастАПИ', 'pytest'] },
+    { title: 'Формати података и складиштење', items: ['Џејсон', 'ЦСВ', 'СКЛАјт'] },
+    { title: 'Други језици и framework-ови', items: ['Јава', 'Ц#', '.NET'] },
+    { title: 'Алати, cloud и аутоматизација', items: ['Гит', 'Докер', 'PowerShell', 'Batchfile', 'AWS', 'OpenAI'] }
+  ],
+  legal: { kicker: 'Правне информације', title: 'Импресум, приватност и колачићи', subline: 'Кратко, транспарентно и без сувишног праћења.', privacyTitle: 'Приватност', privacyText: 'Нема формулара, аналитике ни рекламних трекера. Хостинг обрађује само технички неопходне податке приступа.', cookieTitle: 'Колачићи', cookieText: 'Нема колачића за праћење. Локално се чува само изабрани језик.', externalTitle: 'Екстерни садржај', externalText: 'Слике пројеката, сертификати и Гитхаб графика учитавају се локално. Екстерни линкови се отварају тек након клика.', imprintTitle: 'Импресум', imprintText: 'Приватни портфолио сајт Александра Николића. Контакт је доступан у одељку за контакт.', contactLink: 'Контактирај ме', unifiedTitle: 'Импресум и правне информације', unifiedText: 'Једно заједничко објашњење импресума, приватности, колачића и хостинга.' }
 };
 
 const certificateCopy = {
