@@ -1073,6 +1073,112 @@ const certificateCopy = {
   }
 };
 
+const embeddedPortfolioItems = {
+  de: {
+    projects: {
+      pathlab: { title: 'PathLab', cardDescription: 'Visualizer für Wegfindungsalgorithmen auf einem gewichteten Raster mit BFS, DFS, Dijkstra und A*.', tags: ['React/Vite', 'Tests', 'GitHub Pages'] },
+      sortlab: { title: 'SortLab', cardDescription: 'Sortieralgorithmus-Visualizer mit Balkenansicht, Steuerung, Statistik und Erklärbereich.', tags: ['React/Vite', 'Algorithmen'] },
+      vsw: { title: 'VSW - Vulnerability Scanner Web App', cardDescription: 'Defensive Fullstack-Web-App für risikoarme Security-Checks an autorisierten Domains oder IPs.', tags: ['gemeinsam', 'FastAPI', 'React'] },
+      foliolint: { title: 'FolioLint', cardDescription: 'Lokales Python-CLI, das Repositories auf Portfolio-Tauglichkeit, README-Struktur und öffentliche Präsentierbarkeit prüft.', tags: ['Python', 'CLI', 'README'] },
+      besp2074: { title: 'Internet ein und aus', cardDescription: 'Hackathon-Prototyp für eine Weboberfläche, die Internetzugang pro Schulzimmer oder Subnetz modelliert.', tags: ['Python', 'Hackathon'] }
+    },
+    certificates: {
+      ethicalHacker: { title: 'Ethical Hacker', cardDescription: 'Zertifikat im PDF-Format mit direkter Vorschau und Download.', previewLabel: 'Zertifikat' },
+      introCybersecurity: { title: 'Introduction to Cybersecurity', cardDescription: 'Zertifikat im PDF-Format mit direkter Vorschau und Download.', previewLabel: 'Zertifikat' },
+      bbbHackathon: { title: 'BBB Hackathon', cardDescription: 'Zertifikat im PDF-Format mit direkter Vorschau und Download.', previewLabel: 'Zertifikat' }
+    }
+  },
+  en: {
+    projects: {
+      pathlab: { title: 'PathLab', cardDescription: 'Visualizer for pathfinding algorithms on a weighted grid with BFS, DFS, Dijkstra, and A*.', tags: ['React/Vite', 'Tests', 'GitHub Pages'] },
+      sortlab: { title: 'SortLab', cardDescription: 'Sorting algorithm visualizer with bar chart, controls, statistics, and explanation area.', tags: ['React/Vite', 'Algorithms'] },
+      vsw: { title: 'VSW - Vulnerability Scanner Web App', cardDescription: 'Defensive full-stack web app for low-risk security checks on authorized domains or IPs.', tags: ['team project', 'FastAPI', 'React'] },
+      foliolint: { title: 'FolioLint', cardDescription: 'Local Python CLI for checking repositories for portfolio readiness, README structure, and public presentation quality.', tags: ['Python', 'CLI', 'README'] },
+      besp2074: { title: 'Internet on and off', cardDescription: 'Hackathon prototype for a web interface that models internet access per classroom or subnet.', tags: ['Python', 'Hackathon'] }
+    },
+    certificates: {
+      ethicalHacker: { title: 'Ethical Hacker', cardDescription: 'Certificate with preview, details and PDF download in the detail view.', previewLabel: 'Certificate' },
+      introCybersecurity: { title: 'Introduction to Cybersecurity', cardDescription: 'Certificate with preview, details and PDF download in the detail view.', previewLabel: 'Certificate' },
+      bbbHackathon: { title: 'BBB Hackathon', cardDescription: 'Certificate with preview, details and PDF download in the detail view.', previewLabel: 'Certificate' }
+    }
+  },
+  fr: {
+    projects: {
+      pathlab: { title: 'PathLab', cardDescription: 'Visualiseur de chemins sur une grille pondérée avec BFS, DFS, Dijkstra et A*.', tags: ['React/Vite', 'Tests', 'GitHub Pages'] },
+      sortlab: { title: 'SortLab', cardDescription: 'Visualiseur d’algorithmes de tri avec barres, contrôles, statistiques et explications.', tags: ['React/Vite', 'Algorithmes'] },
+      vsw: { title: 'VSW - Application web de scan de vulnérabilités', cardDescription: 'Application web full-stack défensive pour des contrôles de sécurité à faible risque sur des domaines ou IP autorisés.', tags: ['projet d’équipe', 'FastAPI', 'React'] },
+      foliolint: { title: 'FolioLint', cardDescription: 'CLI Python local qui vérifie la qualité portfolio, la structure du README et la présentation publique des dépôts.', tags: ['Python', 'CLI', 'README'] },
+      besp2074: { title: 'Internet activé et désactivé', cardDescription: 'Prototype de hackathon pour une interface web modélisant l’accès Internet par salle ou sous-réseau.', tags: ['Python', 'Hackathon'] }
+    },
+    certificates: {
+      ethicalHacker: { title: 'Ethical Hacker', cardDescription: 'Certificat avec aperçu, détails et téléchargement PDF dans la vue détaillée.', previewLabel: 'Certificat' },
+      introCybersecurity: { title: 'Introduction to Cybersecurity', cardDescription: 'Certificat avec aperçu, détails et téléchargement PDF dans la vue détaillée.', previewLabel: 'Certificat' },
+      bbbHackathon: { title: 'BBB Hackathon', cardDescription: 'Certificat avec aperçu, détails et téléchargement PDF dans la vue détaillée.', previewLabel: 'Certificat' }
+    }
+  },
+  sr: {
+    projects: {
+      pathlab: { title: 'PathLab', cardDescription: 'Vizualizator algoritama za pronalaženje puta na mreži sa težinama: BFS, DFS, Dijkstra i A*.', tags: ['React/Vite', 'Testovi', 'GitHub Pages'] },
+      sortlab: { title: 'SortLab', cardDescription: 'Vizualizator algoritama sortiranja sa stubićima, kontrolama, statistikom i objašnjenjem.', tags: ['React/Vite', 'Algoritmi'] },
+      vsw: { title: 'VSW - Web aplikacija za proveru ranjivosti', cardDescription: 'Defanzivna fulstek veb aplikacija za niskorizične provere na autorizovanim domenima ili IP adresama.', tags: ['zajedno', 'FastAPI', 'React'] },
+      foliolint: { title: 'FolioLint', cardDescription: 'Lokalni Python CLI za proveru spremnosti repozitorijuma za portfolio, README strukture i javnog predstavljanja.', tags: ['Python', 'CLI', 'README'] },
+      besp2074: { title: 'Internet uključi i isključi', cardDescription: 'Hakaton prototip veb interfejsa koji modeluje pristup internetu po učionici ili podmreži.', tags: ['Python', 'Hakaton'] }
+    },
+    certificates: {
+      ethicalHacker: { title: 'Ethical Hacker', cardDescription: 'Sertifikat sa pregledom, detaljima i PDF preuzimanjem u detaljnom prikazu.', previewLabel: 'Sertifikat' },
+      introCybersecurity: { title: 'Introduction to Cybersecurity', cardDescription: 'Sertifikat sa pregledom, detaljima i PDF preuzimanjem u detaljnom prikazu.', previewLabel: 'Sertifikat' },
+      bbbHackathon: { title: 'BBB hakaton', cardDescription: 'Sertifikat sa pregledom, detaljima i PDF preuzimanjem u detaljnom prikazu.', previewLabel: 'Sertifikat' }
+    }
+  },
+  'sr-cyrl': {
+    projects: {
+      pathlab: { title: 'ПатЛаб', cardDescription: 'Визуализатор алгоритама за проналажење пута на мрежи са тежинама: БФС, ДФС, Дијкстра и А*.', tags: ['Реакт/Вите', 'Тестови', 'Гитхаб Пејџес'] },
+      sortlab: { title: 'СортЛаб', cardDescription: 'Визуализатор алгоритама сортирања са стубићима, контролама, статистиком и објашњењем.', tags: ['Реакт/Вите', 'Алгоритми'] },
+      vsw: { title: 'ВСВ - веб апликација за проверу рањивости', cardDescription: 'Дефанзивна фулстек веб апликација за нискоризичне безбедносне провере на ауторизованим доменима или ИП адресама.', tags: ['заједно', 'ФастАПИ', 'Реакт'] },
+      foliolint: { title: 'ФолиоЛинт', cardDescription: 'Локални Пајтон ЦЛИ за проверу спремности репозиторијума за портфолио, РИДМИ структуре и јавног представљања.', tags: ['Пајтон', 'ЦЛИ', 'РИДМИ'] },
+      besp2074: { title: 'Интернет укључи и искључи', cardDescription: 'Хакатон прототип веб интерфејса који моделује приступ интернету по учионици или подмрежи.', tags: ['Пајтон', 'Хакатон'] }
+    },
+    certificates: {
+      ethicalHacker: { title: 'Ethical Hacker', cardDescription: 'Сертификат са прегледом, детаљима и ПДФ преузимањем у детаљном приказу.', previewLabel: 'Сертификат' },
+      introCybersecurity: { title: 'Introduction to Cybersecurity', cardDescription: 'Сертификат са прегледом, детаљима и ПДФ преузимањем у детаљном приказу.', previewLabel: 'Сертификат' },
+      bbbHackathon: { title: 'БББ хакатон', cardDescription: 'Сертификат са прегледом, детаљима и ПДФ преузимањем у детаљном приказу.', previewLabel: 'Сертификат' }
+    }
+  }
+};
+
+const embeddedMoreProjects = {
+  de: {
+    umr: { title: 'UMR', description: 'Minecraft-Mod zur Überarbeitung wenig genutzter Mobs mit neuen Funktionen.', tags: ['Java', 'Minecraft-Mod'] },
+    twintype: { title: 'TwinType', description: 'Kleineres Python-Projekt, das noch kompakt dokumentiert wird.', tags: ['Python'] },
+    lb259: { title: 'LB259', description: 'Datenprojekt zu Smartphone-Nutzung, Produktivität und Wohlbefinden.', tags: ['Daten', 'Notebook'] },
+    heimatschutz: { title: 'Heimatschutz Aargau', description: 'Gemeinsame interne Webanwendung zur Prüfung von Baugesuchen.', tags: ['Teamprojekt', 'Webanwendung'] }
+  },
+  en: {
+    umr: { title: 'UMR', description: 'Minecraft mod that reworks rarely used mobs with new functions.', tags: ['Java', 'Minecraft mod'] },
+    twintype: { title: 'TwinType', description: 'Smaller Python project that is still being documented.', tags: ['Python'] },
+    lb259: { title: 'LB259', description: 'Data project about smartphone use, productivity, and wellbeing.', tags: ['Data', 'Notebook'] },
+    heimatschutz: { title: 'Heimatschutz Aargau', description: 'Shared internal web application for reviewing building applications.', tags: ['Team project', 'Web application'] }
+  },
+  fr: {
+    umr: { title: 'UMR', description: 'Mod Minecraft qui retravaille des créatures peu utilisées avec de nouvelles fonctions.', tags: ['Java', 'Mod Minecraft'] },
+    twintype: { title: 'TwinType', description: 'Petit projet Python encore en cours de documentation.', tags: ['Python'] },
+    lb259: { title: 'LB259', description: 'Projet de données sur l’usage du smartphone, la productivité et le bien-être.', tags: ['Données', 'Notebook'] },
+    heimatschutz: { title: 'Heimatschutz Aargau', description: 'Application web interne commune pour examiner des demandes de construction.', tags: ['Projet d’équipe', 'Application web'] }
+  },
+  sr: {
+    umr: { title: 'UMR', description: 'Minecraft mod koji unapređuje retko korišćene mobove novim funkcijama.', tags: ['Java', 'Minecraft mod'] },
+    twintype: { title: 'TwinType', description: 'Manji Python projekat koji se još dokumentuje.', tags: ['Python'] },
+    lb259: { title: 'LB259', description: 'Projekat podataka o korišćenju telefona, produktivnosti i blagostanju.', tags: ['Podaci', 'Notebook'] },
+    heimatschutz: { title: 'Heimatschutz Aargau', description: 'Zajednička interna veb aplikacija za proveru građevinskih zahteva.', tags: ['Timski projekat', 'Veb aplikacija'] }
+  },
+  'sr-cyrl': {
+    umr: { title: 'УМР', description: 'Мајнкрафт мод који унапређује ретко коришћене мобове новим функцијама.', tags: ['Јава', 'Мајнкрафт мод'] },
+    twintype: { title: 'ТвинТајп', description: 'Мањи Пајтон пројекат који се још документује.', tags: ['Пајтон'] },
+    lb259: { title: 'ЛБ259', description: 'Пројекат података о коришћењу телефона, продуктивности и благостању.', tags: ['Подаци', 'Нотбук'] },
+    heimatschutz: { title: 'Хеиматшутц Ааргау', description: 'Заједничка интерна веб апликација за проверу грађевинских захтева.', tags: ['Тимски пројекат', 'Веб апликација'] }
+  }
+};
+
 const resetHorizontalScroll = () => {
   document.documentElement.scrollLeft = 0;
   document.body.scrollLeft = 0;
@@ -1105,29 +1211,31 @@ const portfolioItemKey = (item) => item.id || String(item.title || '').toLowerCa
 
 const localizedPortfolioItem = (item, typeKey) => {
   const translationPath = `portfolioItems.${typeKey}.${portfolioItemKey(item)}`;
+  const embeddedTranslation = embeddedPortfolioItems[currentLanguageCode]?.[typeKey]?.[item.id] || {};
   const certificateTranslation = typeKey === 'certificates'
     ? certificateCopy[currentLanguageCode]?.[item.id]
     : null;
   return {
     ...item,
-    title: certificateTranslation?.title || t(`${translationPath}.title`, item.title || ''),
-    cardDescription: certificateTranslation?.cardDescription || t(`${translationPath}.cardDescription`, item.cardDescription || item.description || ''),
-    detailDescription: certificateTranslation?.detailDescription || t(`${translationPath}.detailDescription`, item.detailDescription || item.description || ''),
-    meta: certificateTranslation?.meta || tArray(`${translationPath}.meta`, item.meta || []),
-    tags: tArray(`${translationPath}.tags`, item.tags || []),
-    role: t(`${translationPath}.role`, item.role || ''),
-    learning: t(`${translationPath}.learning`, item.learning || ''),
-    previewLabel: certificateTranslation?.previewLabel || t(`${translationPath}.previewLabel`, item.previewLabel || '')
+    title: certificateTranslation?.title || t(`${translationPath}.title`, embeddedTranslation.title || item.title || ''),
+    cardDescription: certificateTranslation?.cardDescription || t(`${translationPath}.cardDescription`, embeddedTranslation.cardDescription || item.cardDescription || item.description || ''),
+    detailDescription: certificateTranslation?.detailDescription || t(`${translationPath}.detailDescription`, embeddedTranslation.detailDescription || embeddedTranslation.cardDescription || item.detailDescription || item.description || ''),
+    meta: certificateTranslation?.meta || tArray(`${translationPath}.meta`, embeddedTranslation.meta || item.meta || []),
+    tags: tArray(`${translationPath}.tags`, embeddedTranslation.tags || item.tags || []),
+    role: certificateTranslation?.role || t(`${translationPath}.role`, embeddedTranslation.role || item.role || ''),
+    learning: certificateTranslation?.learning || t(`${translationPath}.learning`, embeddedTranslation.learning || item.learning || ''),
+    previewLabel: certificateTranslation?.previewLabel || t(`${translationPath}.previewLabel`, embeddedTranslation.previewLabel || item.previewLabel || '')
   };
 };
 
 const localizedMoreProject = (item) => {
   const translationPath = `moreProjects.items.${item.id}`;
+  const embeddedTranslation = embeddedMoreProjects[currentLanguageCode]?.[item.id] || {};
   return {
     ...item,
-    title: t(`${translationPath}.title`, item.title),
-    description: t(`${translationPath}.description`, item.description),
-    tags: tArray(`${translationPath}.tags`, item.tags || [])
+    title: t(`${translationPath}.title`, embeddedTranslation.title || item.title),
+    description: t(`${translationPath}.description`, embeddedTranslation.description || item.description),
+    tags: tArray(`${translationPath}.tags`, embeddedTranslation.tags || item.tags || [])
   };
 };
 
