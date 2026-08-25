@@ -943,6 +943,40 @@ embeddedDictionaries['sr-cyrl'] = {
   ...embeddedDictionaries.sr,
   skip: { content: 'Прескочи на садржај' },
   nav: { home: 'Почетак', about: 'О мени', career: 'Развој', tech: 'Тех стек', portfolio: 'Пројекти', github: 'Гитхаб', contact: 'Контакт и правно', certificates: 'Сертификати' },
+  hero: {
+    kicker: 'Девелоперски профил',
+    description: 'У ИМС-у сам са фокусом на развој апликација и радим на Пајтон алатима, веб интерфејсима, АПИ-јима, тестовима и обради података.',
+    projectsKicker: 'Одабрани пројекти',
+    projectsTitle: 'Лако проверљиво',
+    projectPathlab: 'Раутинг визуализација, тестови, Гитхаб',
+    projectSortlab: 'Алгоритми сортирања, Реакт/Вите',
+    projectVsw: 'Дефанзивне провере, тимски пројекат',
+    projectBesp: 'Локална Пајтон симулација',
+    ctaPortfolio: 'Погледај пројекте',
+    ctaContact: 'Контакт',
+    ctaEmail: 'Имејл',
+    proofRepos: 'јавни репозиторијуми',
+    proofMerges: 'опен-сорс мерџеви',
+    proofStreak: 'Гитхаб дневни низ',
+    availability: 'Тражим праксу у Швајцарској за 2027/2028.',
+    alias: 'На Гитхабу и у пројектима користим девелоперско име AleksZyro.',
+    ctaGithub: 'Гитхаб',
+    title: 'Практични веб и Пајтон пројекти',
+    about: 'Важни су ми јасни кориснички интерфејси, разумљив код, тимски рад и искрен статус пројеката.',
+    bridge: 'Посебно ме занима како мали алати постају поуздане апликације: са јасном структуром, разумљивим коришћењем и добро документованим изменама.'
+  },
+  focus: {
+    title: 'Области рада',
+    subline: 'Кратак преглед области у којима тренутно практично радим.',
+    web: { tab: 'Веб', title: 'Веб', text: 'Веб интерфејси за пројекте учења, дешборде и портфолио пројекте.', points: ['ХТМЛ/ЦСС', 'ЈаваСкрипт', 'Реакт/Вите'], status: 'Пракса: ПатхЛаб, СортЛаб, ВСВ' },
+    backend: { tab: 'Бекенд', title: 'Бекенд', text: 'Мали АПИ-ји и локални сервиси са јасном логиком података.', points: ['ФастАПИ', 'Пајтест', 'СКЛите/Џејсон'], status: 'Пракса: ВСВ, локални алати' },
+    cloud: { tab: 'Алати', title: 'Алати', text: 'Пројектни рад са контролом верзија, једноставним воркфлоу процесима и локалним сетапима.', points: ['Гит и Гитхаб', 'Докер основе'], status: 'Пракса: тестови и билдови' },
+    automation: { tab: 'Аутоматизација', title: 'Аутоматизација', text: 'Скрипте за локалне токове рада, покретање алата и једноставне понављајуће задатке.', points: ['ПауерШел', 'ЦЛИ алати', 'локални помоћници'], status: 'Пракса: Виндоуз алати' }
+  },
+  about: { kicker: 'О мени', title: 'О мени', cardTitle: 'Здраво, ја сам Александар', description: 'Ученик сам ИМС-а са фокусом на развој апликација и сада крећем у 3. ИМС годину. Моји пројекти су углавном између Пајтон алата, веб интерфејса, АПИ-ја, тестова и обраде података. За 4. ИМС годину тражим место за праксу у Швајцарској за 2027/2028.', factStatus: 'Статус: од лета 2026 у 3. ИМС години', factFocus: 'Фокус: Пајтон, веб, локални алати, АПИ-ји', factWork: 'Циљ: пракса у Швајцарској, 2027/2028' },
+  career: { kicker: 'Развој', title: 'Развој и окружење за учење', subline: 'Мој тренутни пут повезује школу, информатику и практично искуство у развоју апликација.', items: { hackathon: { type: 'Догађај', title: 'Баден хакатон', period: '2026', description: 'Хакатон „Баден хакт“ са фокусом на тимски рад, развој идеја и брзу техничку реализацију.' }, ims: { type: 'Образовање', title: 'Алте Кантонссцхуле Аарау & Беруфсбилдунг Баден', period: '2024 - данас', description: 'Информатика у средњој школи (ИМС), смер развој апликација. Крећем у 3. ИМС годину и припремам се за праксу у 4. години.' }, school: { type: 'Школа', title: 'Окружна школа Букс АГ', period: '2021 - 2024', description: 'Ту сам изградио своју школску основу и додатно развио интересовање за информатику, технику и структурисано учење.' } } },
+  stats: { projects: 'Пројекти', certificates: 'Сертификати', years: 'Године кодирања' },
+  tech: { kicker: 'Тех стек', title: 'Технологије са којима сам стекао искуство', subline: 'Компактан преглед из школе, пројеката, локалних алата и тренутних области учења.' },
   certificates: { kicker: 'Сертификати', title: 'Усавршавање у слободно време', subline: 'Одабрани сертификати са прегледом, детаљима и ПДФ преузимањем.' },
   portfolio: {
     ...embeddedDictionaries.sr.portfolio,
@@ -962,15 +996,19 @@ embeddedDictionaries['sr-cyrl'] = {
     moreProjectsSubline: 'Додатни пројекти које сам завршио или их још тренутно развијам.'
   },
   filters: { all: 'Сви', visualization: 'Визуализација', inProgress: 'У раду' },
+  contact: { kicker: 'Контакт', title: 'Хајде да сарађујемо', description: 'За праксу у Швајцарској за 2027/2028, питања или сарадњу доступан сам путем имејла.', mailLabel: '', schoolMailLabel: '' },
   techGroups: [
     { title: 'Фронтенд основе', items: ['ХТМЛ', 'ЦСС', 'ЈаваСкрипт', 'ТајпСкрипт'] },
     { title: 'Фронтенд runtime', items: ['Реакт', 'Вите', 'Node.js'] },
     { title: 'Пајтон и API', items: ['Пајтон', 'ФастАПИ', 'pytest'] },
     { title: 'Формати података и складиштење', items: ['Џејсон', 'ЦСВ', 'СКЛАјт'] },
-    { title: 'Други језици и framework-ови', items: ['Јава', 'Ц#', '.NET'] },
-    { title: 'Алати, cloud и аутоматизација', items: ['Гит', 'Докер', 'PowerShell', 'Batchfile', 'AWS', 'OpenAI'] }
+    { title: 'Други језици и фрејмворци', items: ['Џава', 'Ц#', '.НЕТ'] },
+    { title: 'Алати, клауд и аутоматизација', items: ['Гит', 'Докер', 'ПауерШел', 'Батчфајл', 'АВС', 'ОпенАИ'] }
   ],
   legal: { kicker: 'Правне информације', title: 'Импресум, приватност и колачићи', subline: 'Кратко, транспарентно и без сувишног праћења.', privacyTitle: 'Приватност', privacyText: 'Нема формулара, аналитике ни рекламних трекера. Хостинг обрађује само технички неопходне податке приступа.', cookieTitle: 'Колачићи', cookieText: 'Нема колачића за праћење. Локално се чува само изабрани језик.', externalTitle: 'Екстерни садржај', externalText: 'Слике пројеката, сертификати и Гитхаб графика учитавају се локално. Екстерни линкови се отварају тек након клика.', imprintTitle: 'Импресум', imprintText: 'Приватни портфолио сајт Александра Николића. Контакт је доступан у одељку за контакт.', contactLink: 'Контактирај ме', unifiedTitle: 'Импресум и правне информације', unifiedText: 'Једно заједничко објашњење импресума, приватности, колачића и хостинга.' },
+  github: { kicker: 'Гитхаб', title: 'Гитхаб активност и опен сорс', subline: 'Гитхаб користим за документовање пројеката, верзионисање промена и јавно линковање радова.', profileLink: 'Гитхаб профил', reposLink: 'Репозиторијуми', openSourceTitle: 'Опен сорс доприноси', openSourceEmpty: 'Још нема јавно проверљивих мерџова.', openSourceText: 'Одабрани мерџовани пул реквестови са директним линком ка доказу.', moreMergesTitle: 'Додатни мерџеви', moreMergesText: 'Додатни мерџовани пул реквестови са директним доказом.', publicRepos: 'јавни репозиторијуми', ossMerges: 'опен-сорс мерџеви', currentStreak: 'дана тренутног низа', mergedLabel: 'Мерџовано' },
+  linkLabels: { github: 'Гитхаб', demo: 'Демо' },
+  moreProjects: { linkPending: 'Линк следи' },
   modal: { close: 'Затвори', title: 'Детаљни приказ', projectKicker: 'Статус пројекта', certificateKicker: 'Сертификат', openImage: 'Отвори преглед у новој картици' },
   portfolioDownloadButton: 'Преузми ПДФ',
   footer: { rights: 'Сва права задржана.', legalLink: 'Приватност и колачићи' }
@@ -1132,9 +1170,9 @@ const embeddedPortfolioItems = {
       besp2074: { title: 'Internet activé et désactivé', cardDescription: 'Prototype de hackathon pour une interface web modélisant l’accès Internet par salle ou sous-réseau.', tags: ['Python', 'Hackathon'] }
     },
     certificates: {
-      ethicalHacker: { title: 'Ethical Hacker', cardDescription: 'Certificat avec aperçu, détails et téléchargement PDF dans la vue détaillée.', previewLabel: 'Certificat' },
-      introCybersecurity: { title: 'Introduction to Cybersecurity', cardDescription: 'Certificat avec aperçu, détails et téléchargement PDF dans la vue détaillée.', previewLabel: 'Certificat' },
-      bbbHackathon: { title: 'BBB Hackathon', cardDescription: 'Certificat avec aperçu, détails et téléchargement PDF dans la vue détaillée.', previewLabel: 'Certificat' }
+      ethicalHacker: { title: 'Hacker éthique', cardDescription: 'Certificat avec aperçu, détails et téléchargement PDF dans la vue détaillée.', previewLabel: 'Certificat' },
+      introCybersecurity: { title: 'Introduction à la cybersécurité', cardDescription: 'Certificat avec aperçu, détails et téléchargement PDF dans la vue détaillée.', previewLabel: 'Certificat' },
+      bbbHackathon: { title: 'Hackathon BBB', cardDescription: 'Certificat avec aperçu, détails et téléchargement PDF dans la vue détaillée.', previewLabel: 'Certificat' }
     }
   },
   sr: {
@@ -1146,8 +1184,8 @@ const embeddedPortfolioItems = {
       besp2074: { title: 'Internet uključi i isključi', cardDescription: 'Hakaton prototip veb interfejsa koji modeluje pristup internetu po učionici ili podmreži.', tags: ['Python', 'Hakaton'] }
     },
     certificates: {
-      ethicalHacker: { title: 'Ethical Hacker', cardDescription: 'Sertifikat sa pregledom, detaljima i PDF preuzimanjem u detaljnom prikazu.', previewLabel: 'Sertifikat' },
-      introCybersecurity: { title: 'Introduction to Cybersecurity', cardDescription: 'Sertifikat sa pregledom, detaljima i PDF preuzimanjem u detaljnom prikazu.', previewLabel: 'Sertifikat' },
+      ethicalHacker: { title: 'Etički haker', cardDescription: 'Sertifikat sa pregledom, detaljima i PDF preuzimanjem u detaljnom prikazu.', previewLabel: 'Sertifikat' },
+      introCybersecurity: { title: 'Uvod u sajber bezbednost', cardDescription: 'Sertifikat sa pregledom, detaljima i PDF preuzimanjem u detaljnom prikazu.', previewLabel: 'Sertifikat' },
       bbbHackathon: { title: 'BBB hakaton', cardDescription: 'Sertifikat sa pregledom, detaljima i PDF preuzimanjem u detaljnom prikazu.', previewLabel: 'Sertifikat' }
     }
   },
@@ -1160,8 +1198,8 @@ const embeddedPortfolioItems = {
       besp2074: { title: 'Интернет укључи и искључи', cardDescription: 'Хакатон прототип веб интерфејса који моделује приступ интернету по учионици или подмрежи.', tags: ['Пајтон', 'Хакатон'] }
     },
     certificates: {
-      ethicalHacker: { title: 'Ethical Hacker', cardDescription: 'Сертификат са прегледом, детаљима и ПДФ преузимањем у детаљном приказу.', previewLabel: 'Сертификат' },
-      introCybersecurity: { title: 'Introduction to Cybersecurity', cardDescription: 'Сертификат са прегледом, детаљима и ПДФ преузимањем у детаљном приказу.', previewLabel: 'Сертификат' },
+      ethicalHacker: { title: 'Етички хакер', cardDescription: 'Сертификат са прегледом, детаљима и ПДФ преузимањем у детаљном приказу.', previewLabel: 'Сертификат' },
+      introCybersecurity: { title: 'Увод у сајбер безбедност', cardDescription: 'Сертификат са прегледом, детаљима и ПДФ преузимањем у детаљном приказу.', previewLabel: 'Сертификат' },
       bbbHackathon: { title: 'БББ хакатон', cardDescription: 'Сертификат са прегледом, детаљима и ПДФ преузимањем у детаљном приказу.', previewLabel: 'Сертификат' }
     }
   }
@@ -1206,6 +1244,20 @@ const embeddedPortfolioSectionCopy = {
   fr: { title: 'Autres projets', subline: 'Autres projets que j’ai terminés ou que je développe encore actuellement.' },
   sr: { title: 'Dodatni projekti', subline: 'Dodatni projekti koje sam završio ili ih još trenutno razvijam.' },
   'sr-cyrl': { title: 'Додатни пројекти', subline: 'Додатни пројекти које сам завршио или их још тренутно развијам.' }
+};
+
+const embeddedOpenSourceContributions = {
+  'sr-cyrl': {
+    vaultCleaner54: { title: 'Поштује подешене ЦЛИ путање', summary: 'Побољшава ЦЛИ логику путања, тако да се подешене улазне и излазне путање правилно поштују.', tags: ['Пајтон', 'ЦЛИ'] },
+    agentcache38: { title: 'Даје предност ВС Код МЦП конфигурацији радног простора', summary: 'Даје предност конфигурацији радног простора за ВС Код МЦП, тако да подешавања специфична за пројекат раде чистије.', tags: ['Развојни алати', 'Конфигурација'] },
+    contextPilot36: { title: 'Обрађује неисправан компресовани Џејсон', summary: 'Обрађује неважеће Џејсон одговоре током компресије и чини тај случај грешке стабилнијим.', tags: ['Пајтон', 'Џејсон'] },
+    contextPilot47: { title: 'Исправка staleness скора за једну поруку', summary: 'Исправља израчунавање staleness скора када постоји само једна порука.', tags: ['Пајтон', 'Скоринг'] },
+    beets6839: { title: 'Чува празан артпатх при уређивању', summary: 'Чува празне артпатх вредности током уређивања, тако да постојећи подаци не буду ненамерно промењени.', tags: ['Пајтон', 'Битс'] },
+    beets6837: { title: 'Побољшава сабсоникапдејт грешку за не-Џејсон одговоре', summary: 'Побољшава Сабсоник апдејт поруку о грешци када сервер не враћа Џејсон.', tags: ['Пајтон', 'Обрада грешака'] },
+    sshfs73: { title: 'Исправља подразумевани лс детаљ', summary: 'Исправља подразумевану вредност за детаљне листе, како би ссхфс исписи радили конзистентније.', tags: ['Пајтон', 'Фајл систем'] },
+    vaultCleaner75: { title: 'Побољшано руковање грешкама кеша', summary: 'Побољшава руковање грешкама кеша и чини CLI ток поузданијим.', tags: ['Пајтон', 'ЦЛИ'] },
+    archy397: { title: 'Побољшана навигација', summary: 'Побољшава понашање навигације у опен-сорс пројекту.', tags: ['Реакт', 'Навигација'] }
+  }
 };
 
 const resetHorizontalScroll = () => {
@@ -1286,11 +1338,12 @@ const localizedLinkLabel = (label) => {
 
 const localizedOpenSourceContribution = (item) => {
   const translationPath = `openSourceContributions.${item.id}`;
+  const embeddedTranslation = embeddedOpenSourceContributions[currentLanguageCode]?.[item.id] || {};
   return {
     ...item,
-    title: t(`${translationPath}.title`, item.title),
-    summary: t(`${translationPath}.summary`, item.summary),
-    tags: tArray(`${translationPath}.tags`, item.tags || [])
+    title: t(`${translationPath}.title`, embeddedTranslation.title || item.title),
+    summary: t(`${translationPath}.summary`, embeddedTranslation.summary || item.summary),
+    tags: tArray(`${translationPath}.tags`, embeddedTranslation.tags || item.tags || [])
   };
 };
 
