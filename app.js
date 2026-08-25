@@ -765,8 +765,8 @@ const embeddedDictionaries = {
     footer: { rights: 'Tous droits réservés.', legalLink: 'Confidentialité et cookies' }
   },
   sr: {
-    skip: { content: 'PreskoÄi na sadrÅ¾aj' },
-    nav: { home: 'PoÄetak', about: 'O meni', career: 'Razvoj', tech: 'Tech stack', portfolio: 'Projekti', github: 'GitHub', contact: 'Kontakt i pravno', certificates: 'Sertifikati' },
+    skip: { content: 'Preskoči na sadržaj' },
+    nav: { home: 'Početak', about: 'O meni', career: 'Razvoj', tech: 'Tech stack', portfolio: 'Projekti', github: 'GitHub', contact: 'Kontakt i pravno', certificates: 'Sertifikati' },
     hero: {
       kicker: 'Developerski profil',
       title: 'Praktični web i Python projekti',
@@ -825,14 +825,14 @@ const embeddedDictionaries = {
       kicker: 'O meni',
       title: 'Licni profil',
       cardTitle: 'Zdravo, ja sam Aleksandar',
-      description: 'UÄenik sam IMS-a sa fokusom na razvoj aplikacija. Moji projekti su uglavnom izmeÄ‘u Python alata, web interfejsa, API-ja, testova i obrade podataka. VaÅ¾ni su mi jasna struktura, razumljiv kod i iskren status projekta.',
+      description: 'Učenik sam IMS-a sa fokusom na razvoj aplikacija. Moji projekti su uglavnom između Python alata, web interfejsa, API-ja, testova i obrade podataka. Važni su mi jasna struktura, razumljiv kod i iskren status projekta.',
       factStatus: 'Status: IMS, razvoj aplikacija',
       factFocus: 'Fokus: Python, web, lokalni alati',
       factWork: 'Rad: testovi, jasna struktura, iskren status projekta'
     },
     career: {
       kicker: 'Razvoj',
-      title: 'Razvoj i okruÅ¾enje za uÄenje',
+      title: 'Razvoj i okruženje za učenje',
       subline: 'Moj trenutni put povezuje skolu, informatiku i prakticno iskustvo u razvoju aplikacija.',
       items: {
         hackathon: {
