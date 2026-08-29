@@ -2,6 +2,8 @@
 
 [Deutsch](README.md) | **English**
 
+🌐 **Live website:** https://aleksandar-nikolic.ch/
+
 Personal portfolio website for Aleksandar Nikolic. The static site brings profile information, education, tech stack, projects, certificates and contact links into one clear place.
 
 ## What problem does it solve?

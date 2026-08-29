@@ -2,6 +2,8 @@
 
 **Deutsch** | [English](README_EN.md)
 
+🌐 **Live-Website:** https://aleksandar-nikolic.ch/
+
 Persönliche Portfolio-Seite von Aleksandar Nikolic. Die statische Website bündelt Profil, Werdegang, Tech-Stack, Projekte, Zertifikate und Kontaktinformationen an einem Ort.
 
 ## Welches Problem löst das Projekt?
@@ -71,6 +73,24 @@ http://127.0.0.1:8765
 
 - Description: `Personal developer portfolio website for projects, skills, certificates and contact information.`
 - Topics: `portfolio`, `developer-portfolio`, `ims`, `html`, `css`, `javascript`, `multilingual`, `github-pages`
+
+## SEO und öffentliche Identität
+
+- Hauptdomain und Canonical-URL: `https://aleksandar-nikolic.ch/`
+- Öffentlicher Entwicklungsname: `AleksZyro`
+- Offizielles Profil: `https://github.com/AleksZyro`
+- `robots.txt` erlaubt das Crawling der Website und verweist auf `sitemap.xml`.
+- Die Sitemap enthält absichtlich nur die kanonische Startseite. Die Zertifikatsdateien bleiben aus Suchresultaten ausgeschlossen.
+- Die Startseite enthält `ProfilePage`-/`Person`-Daten mit dem echten Namen, dem Alias `AleksZyro` und dem verifizierten GitHub-Profil.
+
+### Deployment- und Indexierungs-Checkliste
+
+1. Dieses Repository muss die tatsächlich verbundene Cloudflare-Pages-Deployment-Quelle bleiben.
+2. `www.aleksandar-nikolic.ch` muss in Cloudflare als Custom Domain korrekt auf dieses Projekt zeigen und danach mit einer Cloudflare Redirect Rule dauerhaft auf `https://aleksandar-nikolic.ch/` weiterleiten. Eine Pages-`_redirects`-Datei kann keine hostweite Weiterleitung konfigurieren.
+3. In Google Search Console die Domain-Property verifizieren, `https://aleksandar-nikolic.ch/sitemap.xml` einreichen und die Startseite über die URL-Prüfung zur Indexierung anfordern.
+4. Im GitHub-Profil-README und in wichtigen öffentlichen Repository-README-Dateien einen sichtbaren Link auf `https://aleksandar-nikolic.ch/` setzen.
+
+Google entscheidet trotz dieser Signale selbst über Indexierung, Snippet und Ranking. Nach einem Deploy braucht die erneute Verarbeitung normalerweise mehrere Tage bis Wochen.
 
 ## Status
 
