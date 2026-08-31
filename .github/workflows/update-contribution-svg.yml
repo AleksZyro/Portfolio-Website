@@ -25,7 +25,6 @@ jobs:
       - name: Generate contribution SVG
         run: node scripts/generate-contribution-graphic.mjs
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_USER: AleksZyro
 
       - name: Commit updated contribution data

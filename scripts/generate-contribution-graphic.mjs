@@ -2,61 +2,14 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
 const user = process.env.GITHUB_USER || 'AleksZyro';
-const token = process.env.GITHUB_TOKEN;
 const output = process.env.OUTPUT_PATH || 'assets/contribution-graphic.svg';
 const indexPath = process.env.INDEX_PATH || 'index.html';
-
-const query = `
-  query($login: String!) {
-    user(login: $login) {
-      contributionsCollection {
-        contributionCalendar {
-          totalContributions
-          weeks {
-            contributionDays {
-              contributionCount
-              date
-            }
-          }
-        }
-      }
-    }
-  }
-`;
 
 const escapeHtml = (value) => String(value)
   .replaceAll('&', '&amp;')
   .replaceAll('<', '&lt;')
   .replaceAll('>', '&gt;')
   .replaceAll('"', '&quot;');
-
-const fetchGraphqlCalendar = async () => {
-  const response = await fetch('https://api.github.com/graphql', {
-    method: 'POST',
-    headers: {
-      authorization: `Bearer ${token}`,
-      'content-type': 'application/json',
-      'user-agent': `${user}-portfolio-contribution-graphic`
-    },
-    body: JSON.stringify({ query, variables: { login: user } })
-  });
-
-  if (!response.ok) {
-    throw new Error(`GitHub GraphQL request failed: ${response.status} ${response.statusText}`);
-  }
-
-  const payload = await response.json();
-  if (payload.errors?.length) {
-    throw new Error(payload.errors.map((error) => error.message).join('; '));
-  }
-
-  const calendar = payload.data?.user?.contributionsCollection?.contributionCalendar;
-  if (!calendar) {
-    throw new Error(`No contribution calendar found for ${user}.`);
-  }
-
-  return calendar;
-};
 
 const contributionCountFromTooltip = (tooltip) => {
   if (/No contributions/i.test(tooltip)) return 0;
@@ -104,7 +57,8 @@ const fetchPublicCalendar = async () => {
   };
 };
 
-const calendar = token ? await fetchGraphqlCalendar() : await fetchPublicCalendar();
+// Use the same public contribution calendar a visitor sees on the GitHub profile.
+const calendar = await fetchPublicCalendar();
 const weeks = calendar.weeks.slice(-53);
 const days = weeks.flatMap((week) => week.contributionDays);
 const maxCount = Math.max(1, ...days.map((day) => day.contributionCount));
