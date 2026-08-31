@@ -1,0 +1,20 @@
+# Local development servers and test jobs
+.local-*
+.wrangler/
+tmp/
+.tmp_*/
+tmp-check-*.png
+
+# Tool caches
+.pytest_cache/
+.ruff_cache/
+
+# Local configuration and operating-system files
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+
+# Never publish local data exports
+/data/

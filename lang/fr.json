@@ -101,6 +101,12 @@
         "period": "2026",
         "description": "Hackathon \"Baden hackt\" avec un accent sur le travail d’équipe, l’idéation et la mise en oeuvre technique rapide."
       },
+      "certificates": {
+        "type": "Formation complémentaire",
+        "title": "Certificats et apprentissage autonome",
+        "period": "2025 - 2026",
+        "description": "Formations terminées : Introduction to Cybersecurity (12.12.2025), Baden hackt (27-28.03.2026), Ethical Hacker (21.04.2026) et IA locale avec Ollama et des modèles open source (22.08.2026)."
+      },
       "ims": {
         "type": "Formation",
         "title": "Alte Kantonsschule Aarau & Berufsbildung Baden",
@@ -242,7 +248,7 @@
           "GitHub Pages"
         ],
         "role": "Projet personnel d’apprentissage et de portfolio",
-        "learning": "Séparer les algorithmes des composants React, écrire des tests pour les cas limites et rendre l’état de l’interface compréhensible.",
+        "learning": "Séparer les algorithmes des composants React, écrire des tests pour les cas limites et rendre l’état de l’interface compréhensible."
       },
       "sortlab": {
         "title": "SortLab",
@@ -259,7 +265,7 @@
           "Algorithmes"
         ],
         "role": "Projet personnel d’apprentissage",
-        "learning": "Relier animation, contrôle de vitesse et statistiques pour que l’algorithme reste visible et utilisable.",
+        "learning": "Relier animation, contrôle de vitesse et statistiques pour que l’algorithme reste visible et utilisable."
       },
       "vsw": {
         "title": "VSW - Vulnerability Scanner Web App",
@@ -277,7 +283,7 @@
           "React"
         ],
         "role": "Projet commun avec Botond",
-        "learning": "Limiter clairement les checks défensifs, séparer backend et frontend et présenter les résultats de façon compréhensible.",
+        "learning": "Limiter clairement les checks défensifs, séparer backend et frontend et présenter les résultats de façon compréhensible."
       },
       "foliolint": {
         "title": "FolioLint",
@@ -295,7 +301,7 @@
           "README"
         ],
         "role": "Projet tooling personnel",
-        "learning": "Structurer des checks basés sur des règles afin qu’ils restent compréhensibles et améliorent réellement les repositories.",
+        "learning": "Structurer des checks basés sur des règles afin qu’ils restent compréhensibles et améliorent réellement les repositories."
       },
       "besp2074": {
         "title": "Internet activé et désactivé",
@@ -315,7 +321,7 @@
           "visualisierung"
         ],
         "role": "Prototype de hackathon",
-        "learning": "Transformer une idée technique en prototype compréhensible sous contrainte de temps.",
+        "learning": "Transformer une idée technique en prototype compréhensible sous contrainte de temps."
       }
     },
     "certificates": {
@@ -355,6 +361,14 @@
     }
   },
   "openSourceContributions": {
+    "pipAudit1106": {
+      "title": "Dédupliquer les vulnérabilités PYSEC correspondantes",
+      "summary": "Évite que les vulnérabilités PYSEC correspondantes soient comptées deux fois.",
+      "tags": [
+        "Python",
+        "Sécurité"
+      ]
+    },
     "vaultCleaner54": {
       "summary": "Améliore la gestion des chemins CLI afin que les chemins configurés soient correctement respectés.",
       "tags": [
@@ -518,6 +532,10 @@
         "AWS",
         "OpenAI"
       ]
+    },
+    {
+      "title": "Hébergement et plateformes",
+      "items": ["Netlify", "Vercel", "WordPress", "HostPoint", "Cloudflare"]
     }
   ],
   "linkLabels": {

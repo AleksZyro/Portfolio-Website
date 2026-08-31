@@ -197,9 +197,22 @@ const portfolioData = {
       items: [
         'git', 'docker', 'powershell', 'batchfile', 'aws', 'openai'
       ]
+    },
+    {
+      title: 'Hosting und Plattformen',
+      items: ['netlify', 'vercel', 'wordpress', 'hostpoint', 'cloudflare']
     }
   ],
   openSourceContributions: [
+    {
+      id: 'pipAudit1106',
+      repo: 'pypa/pip-audit',
+      number: 1106,
+      title: 'Deduplicate matching PYSEC vulnerabilities',
+      summary: 'Verhindert, dass übereinstimmende PYSEC-Schwachstellen doppelt gezählt werden.',
+      tags: ['Python', 'Security'],
+      url: 'https://github.com/pypa/pip-audit/pull/1106'
+    },
     {
       id: 'vaultCleaner54',
       repo: 'tonym999/vault-cleaner',
@@ -414,6 +427,12 @@ const embeddedDictionaries = {
           period: '2026',
           description: 'Hackathon "Baden hackt" mit Fokus auf Teamarbeit, Ideenfindung und schneller technischer Umsetzung.'
         },
+        certificates: {
+          type: 'Weiterbildung',
+          title: 'Zertifikate und selbstständige Weiterbildung',
+          period: '2025 - 2026',
+          description: 'Abgeschlossene Weiterbildungen: Introduction to Cybersecurity (12.12.2025), Baden hackt (27./28.03.2026), Ethical Hacker (21.04.2026) und lokale KI mit Ollama und Open-Source-Modellen (22.08.2026).'
+        },
         ims: {
           type: 'Ausbildung',
           title: 'Alte Kantonsschule Aarau & Berufsbildung Baden',
@@ -445,7 +464,8 @@ const embeddedDictionaries = {
       { title: 'Python und API', items: ['Python', 'FastAPI', 'pytest'] },
       { title: 'Datenformate und Speicher', items: ['JSON', 'CSV', 'SQLite'] },
       { title: 'Weitere Sprachen und Frameworks', items: ['Java', 'C#', '.NET'] },
-      { title: 'Tools, Cloud und Automatisierung', items: ['Git', 'Docker', 'PowerShell', 'Batchfile', 'AWS', 'OpenAI'] }
+      { title: 'Tools, Cloud und Automatisierung', items: ['Git', 'Docker', 'PowerShell', 'Batchfile', 'AWS', 'OpenAI'] },
+      { title: 'Hosting und Plattformen', items: ['Netlify', 'Vercel', 'WordPress', 'HostPoint', 'Cloudflare'] }
     ],
     legal: { kicker: 'Rechtliches', title: 'Impressum, Datenschutz und Cookies', subline: 'Kurz, transparent und ohne Tracking-Geschwurbel.', privacyTitle: 'Datenschutz', privacyText: 'Keine Formulare, keine Analytics und keine Werbe-Tracker. Der Hoster verarbeitet nur technisch notwendige Zugriffsdaten.', cookieTitle: 'Cookies', cookieText: 'Keine Tracking-Cookies. Nur die gewählte Sprache wird lokal gespeichert.', externalTitle: 'Externe Inhalte', externalText: 'Projektbilder, Zertifikate und GitHub-Grafik werden lokal geladen. Externe Links öffnen sich erst nach einem Klick.', imprintTitle: 'Impressum', imprintText: 'Private Portfolio-Website von Aleksandar Nikolić. Kontakt ist im Kontaktbereich möglich.', contactLink: 'Kontakt aufnehmen', unifiedTitle: 'Impressum und Rechtliches', unifiedText: 'Eine gemeinsame Erklärung zu Impressum, Datenschutz, Cookies und Hosting.' },
     portfolio: {
@@ -574,6 +594,12 @@ const embeddedDictionaries = {
           period: '2026',
           description: 'Hackathon "Baden hackt" with a focus on teamwork, ideation, and fast technical implementation.'
         },
+        certificates: {
+          type: 'Further education',
+          title: 'Certificates and independent learning',
+          period: '2025 - 2026',
+          description: 'Completed learning: Introduction to Cybersecurity (12 Dec 2025), Baden hackt (27-28 Mar 2026), Ethical Hacker (21 Apr 2026), and local AI with Ollama and open-source models (22 Aug 2026).'
+        },
         ims: {
           type: 'Education',
           title: 'Alte Kantonsschule Aarau & Berufsbildung Baden',
@@ -605,7 +631,8 @@ const embeddedDictionaries = {
       { title: 'Python and API', items: ['Python', 'FastAPI', 'pytest'] },
       { title: 'Data formats and storage', items: ['JSON', 'CSV', 'SQLite'] },
       { title: 'Other languages and frameworks', items: ['Java', 'C#', '.NET'] },
-      { title: 'Tools, cloud and automation', items: ['Git', 'Docker', 'PowerShell', 'Batchfile', 'AWS', 'OpenAI'] }
+      { title: 'Tools, cloud and automation', items: ['Git', 'Docker', 'PowerShell', 'Batchfile', 'AWS', 'OpenAI'] },
+      { title: 'Hosting and platforms', items: ['Netlify', 'Vercel', 'WordPress', 'HostPoint', 'Cloudflare'] }
     ],
     legal: { kicker: 'Legal', title: 'Imprint, privacy and cookies', subline: 'Short, transparent, and without tracking noise.', privacyTitle: 'Privacy', privacyText: 'No forms, analytics or advertising trackers. The host only processes technically necessary access data.', cookieTitle: 'Cookies', cookieText: 'No tracking cookies. Only the selected language is stored locally.', externalTitle: 'External content', externalText: 'Project images, certificates and the GitHub graphic are loaded locally. External links only open after a click.', imprintTitle: 'Imprint', imprintText: 'Private portfolio website by Aleksandar Nikolić. Contact is available in the contact section.', contactLink: 'Contact me', unifiedTitle: 'Imprint and legal information', unifiedText: 'One shared explanation of the imprint, privacy, cookies and hosting.' },
     portfolio: {
@@ -720,6 +747,12 @@ const embeddedDictionaries = {
           period: '2026',
           description: 'Hackathon "Baden hackt" avec un accent sur le travail d equipe, l ideation et la mise en oeuvre technique rapide.'
         },
+        certificates: {
+          type: 'Formation complémentaire',
+          title: 'Certificats et apprentissage autonome',
+          period: '2025 - 2026',
+          description: 'Formations terminées : Introduction to Cybersecurity (12.12.2025), Baden hackt (27-28.03.2026), Ethical Hacker (21.04.2026) et IA locale avec Ollama et des modèles open source (22.08.2026).'
+        },
         ims: {
           type: 'Formation',
           title: 'Alte Kantonsschule Aarau & Berufsbildung Baden',
@@ -751,7 +784,8 @@ const embeddedDictionaries = {
       { title: 'Python et API', items: ['Python', 'FastAPI', 'pytest'] },
       { title: 'Formats de données et stockage', items: ['JSON', 'CSV', 'SQLite'] },
       { title: 'Autres langages et frameworks', items: ['Java', 'C#', '.NET'] },
-      { title: 'Outils, cloud et automatisation', items: ['Git', 'Docker', 'PowerShell', 'Batchfile', 'AWS', 'OpenAI'] }
+      { title: 'Outils, cloud et automatisation', items: ['Git', 'Docker', 'PowerShell', 'Batchfile', 'AWS', 'OpenAI'] },
+      { title: 'Hébergement et plateformes', items: ['Netlify', 'Vercel', 'WordPress', 'HostPoint', 'Cloudflare'] }
     ],
     legal: { kicker: 'Mentions légales', title: 'Mentions légales, confidentialité et cookies', subline: 'Court, transparent et sans pistage superflu.', privacyTitle: 'Confidentialité', privacyText: 'Aucun formulaire, outil d’analyse ni traceur publicitaire. L’hébergeur ne traite que les données d’accès techniquement nécessaires.', cookieTitle: 'Cookies', cookieText: 'Aucun cookie de suivi. Seule la langue choisie est enregistrée localement.', externalTitle: 'Contenu externe', externalText: 'Les images, certificats et la graphique GitHub sont chargés localement. Les liens externes ne s’ouvrent qu’après un clic.', imprintTitle: 'Mentions légales', imprintText: 'Portfolio privé d’Aleksandar Nikolić. Le contact est possible dans la section contact.', contactLink: 'Me contacter', unifiedTitle: 'Mentions légales et informations', unifiedText: 'Une explication commune des mentions légales, de la confidentialité, des cookies et de l’hébergement.' },
     portfolio: {
@@ -868,6 +902,12 @@ const embeddedDictionaries = {
           period: '2026',
           description: 'Hackathon "Baden hackt" sa fokusom na timski rad, razvoj ideja i brzu tehnicku realizaciju.'
         },
+        certificates: {
+          type: 'Dodatno obrazovanje',
+          title: 'Sertifikati i samostalno učenje',
+          period: '2025 - 2026',
+          description: 'Završene obuke: Introduction to Cybersecurity (12.12.2025), Baden hackt (27-28.03.2026), Ethical Hacker (21.04.2026) i lokalna veštačka inteligencija sa Ollama i open-source modelima (22.08.2026).'
+        },
         ims: {
           type: 'Obrazovanje',
           title: 'Alte Kantonsschule Aarau & Berufsbildung Baden',
@@ -899,7 +939,8 @@ const embeddedDictionaries = {
       { title: 'Python i API', items: ['Python', 'FastAPI', 'pytest'] },
       { title: 'Formati podataka i skladištenje', items: ['JSON', 'CSV', 'SQLite'] },
       { title: 'Drugi jezici i framework-ovi', items: ['Java', 'C#', '.NET'] },
-      { title: 'Alati, cloud i automatizacija', items: ['Git', 'Docker', 'PowerShell', 'Batchfile', 'AWS', 'OpenAI'] }
+      { title: 'Alati, cloud i automatizacija', items: ['Git', 'Docker', 'PowerShell', 'Batchfile', 'AWS', 'OpenAI'] },
+      { title: 'Hosting i platforme', items: ['Netlify', 'Vercel', 'WordPress', 'HostPoint', 'Cloudflare'] }
     ],
     legal: { kicker: 'Pravno', title: 'Impresum, privatnost i kukiji', subline: 'Kratko, transparentno i bez suvišnog praćenja.', privacyTitle: 'Privatnost', privacyText: 'Nema formulara, analitike ni reklamnih trekera. Hosting obrađuje samo tehnički neophodne podatke pristupa.', cookieTitle: 'Kukiji', cookieText: 'Nema kukija za praćenje. Lokalno se čuva samo izabrani jezik.', externalTitle: 'Eksterni sadržaj', externalText: 'Slike projekata, sertifikati i GitHub grafika učitavaju se lokalno. Eksterni linkovi se otvaraju tek nakon klika.', imprintTitle: 'Impresum', imprintText: 'Privatni portfolio sajt Aleksandra Nikolića. Kontakt je dostupan u odeljku za kontakt.', contactLink: 'Kontaktiraj me', unifiedTitle: 'Impresum i pravne informacije', unifiedText: 'Jedno zajedničko objašnjenje impresuma, privatnosti, kukija i hostinga.' },
     portfolio: {
@@ -974,7 +1015,7 @@ embeddedDictionaries['sr-cyrl'] = {
     automation: { tab: 'Аутоматизација', title: 'Аутоматизација', text: 'Скрипте за локалне токове рада, покретање алата и једноставне понављајуће задатке.', points: ['ПауерШел', 'ЦЛИ алати', 'локални помоћници'], status: 'Пракса: Виндоуз алати' }
   },
   about: { kicker: 'О мени', title: 'О мени', cardTitle: 'Здраво, ја сам Александар', description: 'Ученик сам ИМС-а са фокусом на развој апликација и сада крећем у 3. ИМС годину. Моји пројекти су углавном између Пајтон алата, веб интерфејса, АПИ-ја, тестова и обраде података. За 4. ИМС годину тражим место за праксу у Швајцарској за 2027/2028.', factStatus: 'Статус: од лета 2026 у 3. ИМС години', factFocus: 'Фокус: Пајтон, веб, локални алати, АПИ-ји', factWork: 'Циљ: пракса у Швајцарској, 2027/2028' },
-  career: { kicker: 'Развој', title: 'Развој и окружење за учење', subline: 'Мој тренутни пут повезује школу, информатику и практично искуство у развоју апликација.', items: { hackathon: { type: 'Догађај', title: 'Баден хакатон', period: '2026', description: 'Хакатон „Баден хакт“ са фокусом на тимски рад, развој идеја и брзу техничку реализацију.' }, ims: { type: 'Образовање', title: 'Алте Кантонссцхуле Аарау & Беруфсбилдунг Баден', period: '2024 - данас', description: 'Информатика у средњој школи (ИМС), смер развој апликација. Крећем у 3. ИМС годину и припремам се за праксу у 4. години.' }, school: { type: 'Школа', title: 'Окружна школа Букс АГ', period: '2021 - 2024', description: 'Ту сам изградио своју школску основу и додатно развио интересовање за информатику, технику и структурисано учење.' } } },
+  career: { kicker: 'Развој', title: 'Развој и окружење за учење', subline: 'Мој тренутни пут повезује школу, информатику и практично искуство у развоју апликација.', items: { hackathon: { type: 'Догађај', title: 'Баден хакатон', period: '2026', description: 'Хакатон „Баден хакт“ са фокусом на тимски рад, развој идеја и брзу техничку реализацију.' }, certificates: { type: 'Додатно образовање', title: 'Сертификати и самостално учење', period: '2025 - 2026', description: 'Завршене обуке: Introduction to Cybersecurity (12.12.2025), Baden hackt (27-28.03.2026), Ethical Hacker (21.04.2026) и локална вештачка интелигенција са Ollama и open-source моделима (22.08.2026).' }, ims: { type: 'Образовање', title: 'Алте Кантонссцхуле Аарау & Беруфсбилдунг Баден', period: '2024 - данас', description: 'Информатика у средњој школи (ИМС), смер развој апликација. Крећем у 3. ИМС годину и припремам се за праксу у 4. години.' }, school: { type: 'Школа', title: 'Окружна школа Букс АГ', period: '2021 - 2024', description: 'Ту сам изградио своју школску основу и додатно развио интересовање за информатику, технику и структурисано учење.' } } },
   stats: { projects: 'Пројекти', certificates: 'Сертификати', years: 'Године кодирања' },
   tech: { kicker: 'Тех стек', title: 'Технологије са којима сам стекао искуство', subline: 'Компактан преглед из школе, пројеката, локалних алата и тренутних области учења.' },
   certificates: { kicker: 'Сертификати', title: 'Усавршавање у слободно време', subline: 'Одабрани сертификати са прегледом, детаљима и ПДФ преузимањем.' },
@@ -1003,7 +1044,8 @@ embeddedDictionaries['sr-cyrl'] = {
     { title: 'Пајтон и API', items: ['Пајтон', 'ФастАПИ', 'pytest'] },
     { title: 'Формати података и складиштење', items: ['Џејсон', 'ЦСВ', 'СКЛАјт'] },
     { title: 'Други језици и фрејмворци', items: ['Џава', 'Ц#', '.НЕТ'] },
-    { title: 'Алати, клауд и аутоматизација', items: ['Гит', 'Докер', 'ПауерШел', 'Батчфајл', 'АВС', 'ОпенАИ'] }
+    { title: 'Алати, клауд и аутоматизација', items: ['Гит', 'Докер', 'ПауерШел', 'Батчфајл', 'АВС', 'ОпенАИ'] },
+    { title: 'Хостинг и платформе', items: ['Нетлајфај', 'Верцел', 'ВордПрес', 'ХостПоинт', 'Клаудфлер'] }
   ],
   legal: { kicker: 'Правне информације', title: 'Импресум, приватност и колачићи', subline: 'Кратко, транспарентно и без сувишног праћења.', privacyTitle: 'Приватност', privacyText: 'Нема формулара, аналитике ни рекламних трекера. Хостинг обрађује само технички неопходне податке приступа.', cookieTitle: 'Колачићи', cookieText: 'Нема колачића за праћење. Локално се чува само изабрани језик.', externalTitle: 'Екстерни садржај', externalText: 'Слике пројеката, сертификати и Гитхаб графика учитавају се локално. Екстерни линкови се отварају тек након клика.', imprintTitle: 'Импресум', imprintText: 'Приватни портфолио сајт Александра Николића. Контакт је доступан у одељку за контакт.', contactLink: 'Контактирај ме', unifiedTitle: 'Импресум и правне информације', unifiedText: 'Једно заједничко објашњење импресума, приватности, колачића и хостинга.' },
   github: { kicker: 'Гитхаб', title: 'Гитхаб активност и опен сорс', subline: 'Гитхаб користим за документовање пројеката, верзионисање промена и јавно линковање радова.', profileLink: 'Гитхаб профил', reposLink: 'Репозиторијуми', openSourceTitle: 'Опен сорс доприноси', openSourceEmpty: 'Још нема јавно проверљивих мерџова.', openSourceText: 'Одабрани мерџовани пул реквестови са директним линком ка доказу.', moreMergesTitle: 'Додатни мерџеви', moreMergesText: 'Додатни мерџовани пул реквестови са директним доказом.', publicRepos: 'јавни репозиторијуми', ossMerges: 'опен-сорс мерџеви', currentStreak: 'дана тренутног низа', mergedLabel: 'Мерџовано' },
@@ -1248,6 +1290,7 @@ const embeddedPortfolioSectionCopy = {
 
 const embeddedOpenSourceContributions = {
   'sr-cyrl': {
+    pipAudit1106: { title: 'Уклања дуплирање подударних ПИ-СЕК рањивости', summary: 'Спречава да се подударне ПИ-СЕК рањивости броје два пута.', tags: ['Пајтон', 'Безбедност'] },
     vaultCleaner54: { title: 'Поштује подешене ЦЛИ путање', summary: 'Побољшава ЦЛИ логику путања, тако да се подешене улазне и излазне путање правилно поштују.', tags: ['Пајтон', 'ЦЛИ'] },
     agentcache38: { title: 'Даје предност ВС Код МЦП конфигурацији радног простора', summary: 'Даје предност конфигурацији радног простора за ВС Код МЦП, тако да подешавања специфична за пројекат раде чистије.', tags: ['Развојни алати', 'Конфигурација'] },
     contextPilot36: { title: 'Обрађује неисправан компресовани Џејсон', summary: 'Обрађује неважеће Џејсон одговоре током компресије и чини тај случај грешке стабилнијим.', tags: ['Пајтон', 'Џејсон'] },
@@ -1374,8 +1417,8 @@ const renderOpenSourceContributions = () => {
     return;
   }
 
-  const featured = contributions.slice(0, 5);
-  const additional = contributions.slice(5);
+  const featured = contributions.slice(0, 4);
+  const additional = contributions.slice(4);
 
   featured.forEach((contribution) => {
     const item = localizedOpenSourceContribution(contribution);
@@ -1976,7 +2019,12 @@ const techCatalog = {
   docker: { label: 'Docker', mark: 'Dock', icon: 'docker', accent: '#38bdf8', asset: 'docker' },
   powershell: { label: 'PowerShell', mark: '>_', icon: 'powershell', accent: '#58a6ff', asset: 'powershell' },
   batchfile: { label: 'Batchfile', mark: 'BAT', icon: 'batchfile', accent: '#66b5ee', asset: 'batchfile' },
-  openai: { label: 'OpenAI', mark: 'AI', icon: 'openai', accent: '#74d3ae', asset: 'openai' }
+  openai: { label: 'OpenAI', mark: 'AI', icon: 'openai', accent: '#74d3ae', asset: 'openai' },
+  netlify: { label: 'Netlify', icon: 'netlify', accent: '#00c7b7', asset: 'netlify' },
+  vercel: { label: 'Vercel', icon: 'vercel', accent: '#f2edff', asset: 'vercel' },
+  wordpress: { label: 'WordPress', icon: 'wordpress', accent: '#21759b', asset: 'wordpress' },
+  hostpoint: { label: 'HostPoint', icon: 'hostpoint', accent: '#1e9ae2', asset: 'hostpoint' },
+  cloudflare: { label: 'Cloudflare', icon: 'cloudflare', accent: '#f38020', asset: 'cloudflare' }
 };
 
 const renderTechStack = () => {

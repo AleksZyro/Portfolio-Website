@@ -101,6 +101,12 @@
         "period": "2026",
         "description": "Hakaton \"Baden hackt\" sa fokusom na timski rad, razvoj ideja i brzu tehničku realizaciju."
       },
+      "certificates": {
+        "type": "Dodatno obrazovanje",
+        "title": "Sertifikati i samostalno učenje",
+        "period": "2025 - 2026",
+        "description": "Završene obuke: Introduction to Cybersecurity (12.12.2025), Baden hackt (27-28.03.2026), Ethical Hacker (21.04.2026) i lokalna veštačka inteligencija sa Ollama i open-source modelima (22.08.2026)."
+      },
       "ims": {
         "type": "Obrazovanje",
         "title": "Alte Kantonsschule Aarau & Berufsbildung Baden",
@@ -242,7 +248,7 @@
           "GitHub Pages"
         ],
         "role": "Lični projekat za učenje i portfolio",
-        "learning": "Odvojiti algoritme od React komponenti, pisati testove za rubne slučajeve i učiniti UI stanje razumljivim.",
+        "learning": "Odvojiti algoritme od React komponenti, pisati testove za rubne slučajeve i učiniti UI stanje razumljivim."
       },
       "sortlab": {
         "title": "SortLab",
@@ -259,7 +265,7 @@
           "Algoritmi"
         ],
         "role": "Lični projekat za učenje",
-        "learning": "Povezati animaciju, kontrolu brzine i statistiku tako da algoritam ostane vidljiv i upotrebljiv.",
+        "learning": "Povezati animaciju, kontrolu brzine i statistiku tako da algoritam ostane vidljiv i upotrebljiv."
       },
       "vsw": {
         "title": "VSW - Web aplikacija za proveru ranjivosti",
@@ -277,7 +283,7 @@
           "React"
         ],
         "role": "Zajednički projekat sa Botondom",
-        "learning": "Jasno ograničiti defanzivne provere, odvojiti backend i frontend i razumljivo prikazati rezultate.",
+        "learning": "Jasno ograničiti defanzivne provere, odvojiti backend i frontend i razumljivo prikazati rezultate."
       },
       "foliolint": {
         "title": "FolioLint",
@@ -295,7 +301,7 @@
           "README"
         ],
         "role": "Sopstveni tooling projekat",
-        "learning": "Strukturisati provere zasnovane na pravilima tako da ostanu razumljive i stvarno poboljšaju projektne repozitorijume.",
+        "learning": "Strukturisati provere zasnovane na pravilima tako da ostanu razumljive i stvarno poboljšaju projektne repozitorijume."
       },
       "besp2074": {
         "title": "Internet uključi i isključi",
@@ -315,7 +321,7 @@
           "visualisierung"
         ],
         "role": "Hakaton prototip",
-        "learning": "Pretvoriti tehničku ideju u razumljiv prototip pod vremenskim pritiskom.",
+        "learning": "Pretvoriti tehničku ideju u razumljiv prototip pod vremenskim pritiskom."
       }
     },
     "certificates": {
@@ -359,6 +365,14 @@
     "demo": "Demo"
   },
   "openSourceContributions": {
+    "pipAudit1106": {
+      "title": "Uklanja dupliranje podudarnih PYSEC ranjivosti",
+      "summary": "Sprečava da se podudarne PYSEC ranjivosti broje dva puta.",
+      "tags": [
+        "Python",
+        "Bezbednost"
+      ]
+    },
     "vaultCleaner54": {
       "summary": "Poboljšava CLI logiku putanja, tako da se podešene ulazne i izlazne putanje pravilno poštuju.",
       "tags": [
@@ -522,6 +536,10 @@
         "AWS",
         "OpenAI"
       ]
+    },
+    {
+      "title": "Hosting i platforme",
+      "items": ["Netlify", "Vercel", "WordPress", "HostPoint", "Cloudflare"]
     }
   ],
   "certificates": {

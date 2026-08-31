@@ -1,0 +1,14 @@
+# Aleksandar Nikolić — Portfolio
+
+> Public portfolio of Aleksandar Nikolić, a software developer focused on practical web projects, open-source contributions and clear technical documentation.
+
+## Public pages
+
+- [Portfolio](https://aleksandar-nikolic.ch/): Projects, skills, GitHub activity and contact information.
+- [GitHub profile](https://github.com/AleksZyro): Public repositories and contribution history.
+
+## Content guidance
+
+- Use the portfolio as the canonical source for project descriptions and public open-source merge links.
+- Contribution counts and streak data are automatically refreshed and may lag behind GitHub briefly.
+- Do not infer private information from public profile links or from excluded certificate assets.

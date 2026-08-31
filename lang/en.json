@@ -101,6 +101,12 @@
         "period": "2026",
         "description": "Hackathon \"Baden hackt\" with a focus on teamwork, ideation, and fast technical implementation."
       },
+      "certificates": {
+        "type": "Further education",
+        "title": "Certificates and independent learning",
+        "period": "2025 - 2026",
+        "description": "Completed learning: Introduction to Cybersecurity (12 Dec 2025), Baden hackt (27-28 Mar 2026), Ethical Hacker (21 Apr 2026), and local AI with Ollama and open-source models (22 Aug 2026)."
+      },
       "ims": {
         "type": "Education",
         "title": "Alte Kantonsschule Aarau & Berufsbildung Baden",
@@ -242,7 +248,7 @@
           "GitHub Pages"
         ],
         "role": "Personal learning and portfolio project",
-        "learning": "Keeping algorithms separate from React components, writing tests for edge cases, and making UI state understandable.",
+        "learning": "Keeping algorithms separate from React components, writing tests for edge cases, and making UI state understandable."
       },
       "sortlab": {
         "title": "SortLab",
@@ -259,7 +265,7 @@
           "Algorithms"
         ],
         "role": "Personal learning project",
-        "learning": "Connecting animation, speed control, and statistics so the algorithm stays visible and usable.",
+        "learning": "Connecting animation, speed control, and statistics so the algorithm stays visible and usable."
       },
       "vsw": {
         "title": "VSW - Vulnerability Scanner Web App",
@@ -277,7 +283,7 @@
           "React"
         ],
         "role": "Joint project with Botond",
-        "learning": "Clearly limiting defensive checks, separating backend and frontend, and presenting results understandably.",
+        "learning": "Clearly limiting defensive checks, separating backend and frontend, and presenting results understandably."
       },
       "foliolint": {
         "title": "FolioLint",
@@ -295,7 +301,7 @@
           "README"
         ],
         "role": "Own tooling project",
-        "learning": "Structure rule-based checks so they stay understandable and lead to real improvements in project repositories.",
+        "learning": "Structure rule-based checks so they stay understandable and lead to real improvements in project repositories."
       },
       "besp2074": {
         "title": "Internet on and off",
@@ -315,7 +321,7 @@
           "visualisierung"
         ],
         "role": "Hackathon prototype",
-        "learning": "Turn a technical idea into an understandable prototype under time pressure.",
+        "learning": "Turn a technical idea into an understandable prototype under time pressure."
       }
     },
     "certificates": {
@@ -355,6 +361,14 @@
     }
   },
   "openSourceContributions": {
+    "pipAudit1106": {
+      "title": "Deduplicate matching PYSEC vulnerabilities",
+      "summary": "Prevents matching PYSEC vulnerabilities from being counted twice.",
+      "tags": [
+        "Python",
+        "Security"
+      ]
+    },
     "vaultCleaner54": {
       "summary": "Improves CLI path handling so configured input and output paths are respected correctly.",
       "tags": [
@@ -518,6 +532,10 @@
         "AWS",
         "OpenAI"
       ]
+    },
+    {
+      "title": "Hosting and platforms",
+      "items": ["Netlify", "Vercel", "WordPress", "HostPoint", "Cloudflare"]
     }
   ],
   "linkLabels": {
