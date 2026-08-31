@@ -307,6 +307,7 @@ const tabPanels = { projects: document.getElementById('panel-projects'), certifi
 const projectsGrid = document.getElementById('projects-grid');
 const certificatesGrid = document.getElementById('certificates-grid');
 const openSourceList = document.getElementById('open-source-list');
+const openSourceMergeCountEl = document.getElementById('github-oss-merges-value');
 const techGrid = document.getElementById('tech-grid');
 const focusTabs = document.querySelectorAll('.focus-tab');
 const focusTitle = document.getElementById('focus-title');
@@ -1404,10 +1405,11 @@ const mergeIcon = () => {
 };
 
 const renderOpenSourceContributions = () => {
+  const contributions = portfolioData.openSourceContributions || [];
+  if (openSourceMergeCountEl) openSourceMergeCountEl.textContent = contributions.length;
   if (!openSourceList) return;
 
   openSourceList.innerHTML = '';
-  const contributions = portfolioData.openSourceContributions || [];
 
   if (!contributions.length) {
     const empty = document.createElement('p');
