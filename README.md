@@ -83,15 +83,6 @@ http://127.0.0.1:8765
 - Die Sitemap enthält absichtlich nur die kanonische Startseite. Die Zertifikatsdateien bleiben aus Suchresultaten ausgeschlossen.
 - Die Startseite enthält `ProfilePage`-/`Person`-Daten mit dem echten Namen, dem Alias `AleksZyro` und dem verifizierten GitHub-Profil.
 
-### Deployment- und Indexierungs-Checkliste
-
-1. Dieses Repository muss die tatsächlich verbundene Cloudflare-Pages-Deployment-Quelle bleiben.
-2. `www.aleksandar-nikolic.ch` muss in Cloudflare als Custom Domain korrekt auf dieses Projekt zeigen und danach mit einer Cloudflare Redirect Rule dauerhaft auf `https://aleksandar-nikolic.ch/` weiterleiten. Eine Pages-`_redirects`-Datei kann keine hostweite Weiterleitung konfigurieren.
-3. In Google Search Console die Domain-Property verifizieren, `https://aleksandar-nikolic.ch/sitemap.xml` einreichen und die Startseite über die URL-Prüfung zur Indexierung anfordern.
-4. Im GitHub-Profil-README und in wichtigen öffentlichen Repository-README-Dateien einen sichtbaren Link auf `https://aleksandar-nikolic.ch/` setzen.
-
-Google entscheidet trotz dieser Signale selbst über Indexierung, Snippet und Ranking. Nach einem Deploy braucht die erneute Verarbeitung normalerweise mehrere Tage bis Wochen.
-
 ## Status
 
 Aktiv in Bearbeitung. Projektstände im Portfolio werden bewusst ehrlich gekennzeichnet, zB. fertig, in Arbeit, lokal nutzbar oder nicht öffentlich verlinkt.
