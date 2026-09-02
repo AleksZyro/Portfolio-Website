@@ -81,6 +81,21 @@
       "status": "Пракса: Виндоуз алати"
     }
   },
+  "currentWork": {
+    "kicker": "Тренутно",
+    "title": "На чему тренутно радим",
+    "subline": "Кратак преглед текућих клијентских и личних пројеката.",
+    "customerLabel": "Пројекат за клијента",
+    "ownLabel": "Лични пројекат",
+    "status": "У раду",
+    "projects": {
+      "aargoclean": { "title": "Веб сајт за Aargoclean", "description": "Тренутно радим на веб сајту за фирму Aargoclean." },
+      "mmTransport": { "title": "Веб сајт за MM Transport & Assistance", "description": "Тренутно радим на веб сајту за фирму MM Transport & Assistance." },
+      "countryCursors": { "title": "Custom Country Cursors", "description": "Настављам развој пројекта Custom Country Cursors и радим на новим детаљима и побољшањима." },
+      "codexTwin": { "title": "CodexTwin", "description": "Радим на пројекту CodexTwin и даље развијам идеју и имплементацију." },
+      "umr": { "title": "УМР", "description": "Настављам рад на пројекту УМР и редовно додајем или побољшавам функције." }
+    }
+  },
   "about": {
     "kicker": "О мени",
     "title": "О мени",

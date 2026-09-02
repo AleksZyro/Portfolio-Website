@@ -81,6 +81,21 @@
       "status": "Praksa: Windows alati"
     }
   },
+  "currentWork": {
+    "kicker": "Trenutno",
+    "title": "Na čemu trenutno radim",
+    "subline": "Kratak pregled tekućih klijentskih i ličnih projekata.",
+    "customerLabel": "Projekat za klijenta",
+    "ownLabel": "Lični projekat",
+    "status": "U radu",
+    "projects": {
+      "aargoclean": { "title": "Veb sajt za Aargoclean", "description": "Trenutno radim na veb sajtu za firmu Aargoclean." },
+      "mmTransport": { "title": "Veb sajt za MM Transport & Assistance", "description": "Trenutno radim na veb sajtu za firmu MM Transport & Assistance." },
+      "countryCursors": { "title": "Custom Country Cursors", "description": "Nastavljam razvoj projekta Custom Country Cursors i radim na novim detaljima i poboljšanjima." },
+      "codexTwin": { "title": "CodexTwin", "description": "Radim na projektu CodexTwin i dalje razvijam ideju i implementaciju." },
+      "umr": { "title": "UMR", "description": "Nastavljam rad na projektu UMR i redovno dodajem ili poboljšavam funkcije." }
+    }
+  },
   "about": {
     "kicker": "O meni",
     "title": "O meni",

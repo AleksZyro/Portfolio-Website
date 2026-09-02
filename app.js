@@ -81,13 +81,6 @@ const portfolioData = {
   ],
   moreProjects: [
     {
-      id: 'umr',
-      title: 'UMR',
-      description: 'Minecraft-Mod zur Überarbeitung wenig genutzter Mobs mit neuen Funktionen und stärkerem Gameplay-Einfluss.',
-      tags: ['Java', 'Minecraft Mod'],
-      url: 'https://github.com/AleksZyro/UMR-Useless-mobs-reworked-Mod'
-    },
-    {
       id: 'twintype',
       title: 'TwinType',
       description: 'Kleineres Python-Projekt, das noch kompakt dokumentiert wird.',
@@ -1250,31 +1243,26 @@ const embeddedPortfolioItems = {
 
 const embeddedMoreProjects = {
   de: {
-    umr: { title: 'UMR', description: 'Minecraft-Mod zur Überarbeitung wenig genutzter Mobs mit neuen Funktionen.', tags: ['Java', 'Minecraft-Mod'] },
     twintype: { title: 'TwinType', description: 'Kleineres Python-Projekt, das noch kompakt dokumentiert wird.', tags: ['Python'] },
     lb259: { title: 'LB259', description: 'Datenprojekt zu Smartphone-Nutzung, Produktivität und Wohlbefinden.', tags: ['Daten', 'Notebook'] },
     heimatschutz: { title: 'Heimatschutz Aargau', description: 'Gemeinsame interne Webanwendung zur Prüfung von Baugesuchen.', tags: ['Teamprojekt', 'Webanwendung'] }
   },
   en: {
-    umr: { title: 'UMR', description: 'Minecraft mod that reworks rarely used mobs with new functions.', tags: ['Java', 'Minecraft mod'] },
     twintype: { title: 'TwinType', description: 'Smaller Python project that is still being documented.', tags: ['Python'] },
     lb259: { title: 'LB259', description: 'Data project about smartphone use, productivity, and wellbeing.', tags: ['Data', 'Notebook'] },
     heimatschutz: { title: 'Heimatschutz Aargau', description: 'Shared internal web application for reviewing building applications.', tags: ['Team project', 'Web application'] }
   },
   fr: {
-    umr: { title: 'UMR', description: 'Mod Minecraft qui retravaille des créatures peu utilisées avec de nouvelles fonctions.', tags: ['Java', 'Mod Minecraft'] },
     twintype: { title: 'TwinType', description: 'Petit projet Python encore en cours de documentation.', tags: ['Python'] },
     lb259: { title: 'LB259', description: 'Projet de données sur l’usage du smartphone, la productivité et le bien-être.', tags: ['Données', 'Notebook'] },
     heimatschutz: { title: 'Heimatschutz Aargau', description: 'Application web interne commune pour examiner des demandes de construction.', tags: ['Projet d’équipe', 'Application web'] }
   },
   sr: {
-    umr: { title: 'UMR', description: 'Minecraft mod koji unapređuje retko korišćene mobove novim funkcijama.', tags: ['Java', 'Minecraft mod'] },
     twintype: { title: 'TwinType', description: 'Manji Python projekat koji se još dokumentuje.', tags: ['Python'] },
     lb259: { title: 'LB259', description: 'Projekat podataka o korišćenju telefona, produktivnosti i blagostanju.', tags: ['Podaci', 'Notebook'] },
     heimatschutz: { title: 'Heimatschutz Aargau', description: 'Zajednička interna veb aplikacija za proveru građevinskih zahteva.', tags: ['Timski projekat', 'Veb aplikacija'] }
   },
   'sr-cyrl': {
-    umr: { title: 'УМР', description: 'Мајнкрафт мод који унапређује ретко коришћене мобове новим функцијама.', tags: ['Јава', 'Мајнкрафт мод'] },
     twintype: { title: 'ТвинТајп', description: 'Мањи Пајтон пројекат који се још документује.', tags: ['Пајтон'] },
     lb259: { title: 'ЛБ259', description: 'Пројекат података о коришћењу телефона, продуктивности и благостању.', tags: ['Подаци', 'Нотбук'] },
     heimatschutz: { title: 'Хеиматшутц Ааргау', description: 'Заједничка интерна веб апликација за проверу грађевинских захтева.', tags: ['Тимски пројекат', 'Веб апликација'] }

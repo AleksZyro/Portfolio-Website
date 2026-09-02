@@ -81,6 +81,21 @@
       "status": "Practice: Windows tools"
     }
   },
+  "currentWork": {
+    "kicker": "Current",
+    "title": "What I am working on",
+    "subline": "A short look at ongoing client and personal projects.",
+    "customerLabel": "Client project",
+    "ownLabel": "Personal project",
+    "status": "In progress",
+    "projects": {
+      "aargoclean": { "title": "Website for Aargoclean", "description": "I am currently working on the website for Aargoclean." },
+      "mmTransport": { "title": "Website for MM Transport & Assistance", "description": "I am currently working on the website for MM Transport & Assistance." },
+      "countryCursors": { "title": "Custom Country Cursors", "description": "I am continuing development on Custom Country Cursors and working on new details and improvements." },
+      "codexTwin": { "title": "CodexTwin", "description": "I am working on CodexTwin and continuing to develop both the idea and its implementation." },
+      "umr": { "title": "UMR", "description": "I am continuing work on UMR and regularly adding or improving features." }
+    }
+  },
   "about": {
     "kicker": "About",
     "title": "About me",
