@@ -138,7 +138,6 @@ const portfolioData = {
       title: 'Lokale KI nutzen: private KI-Assistenz mit Ollama & Open-Source-Modellen',
       cardDescription: 'ab sofort-Zertifikat für einen Kurs zu lokaler KI, Ollama und Open-Source-Modellen.',
       detailDescription: 'Dieses ab sofort-Zertifikat bestätigt den erfolgreichen Abschluss des Kurses „Lokale KI nutzen: private KI-Assistenz mit Ollama & Open-Source-Modellen“. Das Zertifikat wurde am 22.08.2026 ausgestellt, mit 87.5 Prozent und einem Umfang von 6 Stunden abgeschlossen.',
-      meta: ['Aussteller: Alpasana GmbH / ab sofort', 'Niveau: Foundation', 'Ergebnis: 87.5 %', 'Ausgestellt am: 22.08.2026', 'Verifikation: ab sofort ID 491A67E697', 'Format: PDF'],
       file: 'assets/certificates/absofort-zertifikat-491A67E697.pdf',
       previewImage: 'assets/certificate-previews/absofort-zertifikat-491A67E697.png',
       previewLabel: 'Zertifikat'
@@ -148,7 +147,6 @@ const portfolioData = {
       title: 'ABACUS Finanzbuchhaltung',
       cardDescription: 'Anwender-Zertifikat für ABACUS Finanzbuchhaltung mit Grundlagen zu Benutzeroberfläche, Stammdaten, Buchungen, Auswertungen und MWST-Abrechnung.',
       detailDescription: 'Das ABACUS-Zertifikat bestätigt den erfolgreich abgeschlossenen Zertifikatskurs und die bestandene Abschlussprüfung im Bereich ABACUS Finanzbuchhaltung. Inhaltliche Schwerpunkte waren Benutzeroberfläche, Stammdaten, Buchungen anhand von Belegen, Buchungsarten, Auswertungen wie Journal, Kontoauszug, Bilanz und Erfolgsrechnung sowie MWST-Abrechnung.',
-      meta: ['Aussteller: ABACUS Research AG', 'Bereich: Finanzbuchhaltung', 'Nachweis: Zertifikat mit bestandener Abschlussprüfung', 'Format: PDF'],
       previewImage: 'assets/certificate-previews/abacus-finanzbuchhaltung.svg',
       expectedFile: 'assets/certificates/abacus-finanzbuchhaltung.pdf',
       previewLabel: 'Zertifikat'
@@ -158,7 +156,6 @@ const portfolioData = {
       title: 'Was ist generative KI?',
       cardDescription: 'LinkedIn-Learning-Kurs zu generativen KI-Tools, künstlicher Intelligenz und grundlegender Einordnung generativer KI.',
       detailDescription: 'Dieses LinkedIn-Learning-Zertifikat bestätigt den abgeschlossenen Kurs „Was ist generative KI?“. Der Kurs behandelt generative KI-Tools, künstliche Intelligenz und die grundlegende Einordnung generativer KI im Arbeits- und Lernkontext.',
-      meta: ['Aussteller: LinkedIn Learning', 'Bereich: Generative KI', 'Dauer: 42 Minuten', 'Format: PDF'],
       previewImage: 'assets/certificate-previews/linkedin-generative-ki.svg',
       expectedFile: 'assets/certificates/linkedin-generative-ki.pdf',
       previewLabel: 'Zertifikat'
@@ -1080,21 +1077,18 @@ const certificateCopy = {
       title: 'Using local AI: private AI assistance with Ollama & open-source models',
       cardDescription: 'ab sofort certificate for a course on local AI, Ollama and open-source models.',
       detailDescription: 'This ab sofort certificate confirms successful completion of the course “Using local AI: private AI assistance with Ollama & open-source models”. The course was completed on 22 August 2026 with a score of 87.5 percent and a duration of 6 hours.',
-      meta: ['Issuer: Alpasana GmbH / ab sofort', 'Level: Foundation', 'Result: 87.5%', 'Issued on: 22 August 2026', 'Verification: ab sofort ID 491A67E697', 'Format: PDF'],
       previewLabel: 'Certificate'
     },
     'abacus-finanzbuchhaltung': {
       title: 'ABACUS Financial Accounting',
       cardDescription: 'User certificate for ABACUS financial accounting, covering interface basics, master data, postings, reports and VAT accounting.',
       detailDescription: 'The ABACUS certificate confirms completion of the certificate course and successful final examination in ABACUS financial accounting. Topics included the user interface, master data, postings based on documents, posting types, reports such as journals, account statements, balance sheet and income statement, as well as VAT accounting.',
-      meta: ['Issuer: ABACUS Research AG', 'Area: Financial accounting', 'Proof: Certificate with passed final exam', 'Format: PDF'],
       previewLabel: 'Certificate'
     },
     'linkedin-generative-ki': {
       title: 'What is generative AI?',
       cardDescription: 'LinkedIn Learning course on generative AI tools, artificial intelligence and the basic classification of generative AI.',
       detailDescription: 'This LinkedIn Learning certificate confirms completion of the course “What is generative AI?”. The course covers generative AI tools, artificial intelligence and the basic classification of generative AI in work and learning contexts.',
-      meta: ['Issuer: LinkedIn Learning', 'Area: Generative AI', 'Duration: 42 minutes', 'Format: PDF'],
       previewLabel: 'Certificate'
     }
   },
@@ -1103,21 +1097,18 @@ const certificateCopy = {
       title: 'Utiliser l’IA locale : assistance IA privée avec Ollama et des modèles open source',
       cardDescription: 'Certificat ab sofort pour un cours sur l’IA locale, Ollama et les modèles open source.',
       detailDescription: 'Ce certificat ab sofort confirme la réussite du cours « Utiliser l’IA locale : assistance IA privée avec Ollama et des modèles open source ». Le cours a été terminé le 22 août 2026 avec un résultat de 87,5 % et une durée de 6 heures.',
-      meta: ['Émetteur : Alpasana GmbH / ab sofort', 'Niveau : Foundation', 'Résultat : 87,5 %', 'Délivré le : 22 août 2026', 'Vérification : ab sofort ID 491A67E697', 'Format : PDF'],
       previewLabel: 'Certificat'
     },
     'abacus-finanzbuchhaltung': {
       title: 'ABACUS comptabilité financière',
       cardDescription: 'Certificat utilisateur pour ABACUS comptabilité financière, avec bases de l’interface, données de base, écritures, rapports et TVA.',
       detailDescription: 'Le certificat ABACUS confirme la réussite du cours de certificat et de l’examen final dans le domaine de la comptabilité financière ABACUS. Les thèmes abordés comprennent l’interface utilisateur, les données de base, les écritures à partir de pièces justificatives, les types d’écritures, les rapports comme le journal, l’extrait de compte, le bilan et le compte de résultat, ainsi que le décompte TVA.',
-      meta: ['Émetteur: ABACUS Research AG', 'Domaine: Comptabilité financière', 'Preuve: Certificat avec examen final réussi', 'Format: PDF'],
       previewLabel: 'Certificat'
     },
     'linkedin-generative-ki': {
       title: 'Qu’est-ce que l’IA générative ?',
       cardDescription: 'Cours LinkedIn Learning sur les outils d’IA générative, l’intelligence artificielle et les bases de l’IA générative.',
       detailDescription: 'Ce certificat LinkedIn Learning confirme la réussite du cours « Qu’est-ce que l’IA générative ? ». Le cours traite des outils d’IA générative, de l’intelligence artificielle et des bases permettant de situer l’IA générative dans un contexte de travail et d’apprentissage.',
-      meta: ['Émetteur: LinkedIn Learning', 'Domaine: IA générative', 'Durée: 42 minutes', 'Format: PDF'],
       previewLabel: 'Certificat'
     }
   },
@@ -1126,21 +1117,18 @@ const certificateCopy = {
       title: 'Korišćenje lokalne AI: privatna AI asistencija uz Ollama i open-source modele',
       cardDescription: 'ab sofort sertifikat za kurs o lokalnoj AI, Ollama alatu i open-source modelima.',
       detailDescription: 'Ovaj ab sofort sertifikat potvrđuje uspešno završen kurs „Korišćenje lokalne AI: privatna AI asistencija uz Ollama i open-source modele“. Kurs je završen 22. avgusta 2026. sa rezultatom od 87,5% i trajanjem od 6 sati.',
-      meta: ['Izdavač: Alpasana GmbH / ab sofort', 'Nivo: Foundation', 'Rezultat: 87,5%', 'Izdato: 22. avgusta 2026.', 'Verifikacija: ab sofort ID 491A67E697', 'Format: PDF'],
       previewLabel: 'Sertifikat'
     },
     'abacus-finanzbuchhaltung': {
       title: 'ABACUS finansijsko knjigovodstvo',
       cardDescription: 'Korisnički sertifikat za ABACUS finansijsko knjigovodstvo, sa osnovama korisničkog interfejsa, matičnih podataka, knjiženja, izveštaja i PDV obračuna.',
       detailDescription: 'ABACUS sertifikat potvrđuje uspešno završen kurs i položenu završnu proveru iz oblasti ABACUS finansijskog knjigovodstva. Teme su obuhvatale korisnički interfejs, matične podatke, knjiženja na osnovu dokumenata, vrste knjiženja, izveštaje kao što su dnevnik, izvod računa, bilans i račun uspeha, kao i PDV obračun.',
-      meta: ['Izdavač: ABACUS Research AG', 'Oblast: Finansijsko knjigovodstvo', 'Dokaz: Sertifikat sa položenom završnom proverom', 'Format: PDF'],
       previewLabel: 'Sertifikat'
     },
     'linkedin-generative-ki': {
       title: 'Šta je generativna veštačka inteligencija?',
       cardDescription: 'LinkdIn Lurning kurs o generativnim AI alatima, veštačkoj inteligenciji i osnovnom razumevanju generativne AI.',
       detailDescription: 'Ovaj LinkdIn Lurning sertifikat potvrđuje završen kurs „Šta je generativna veštačka inteligencija?“. Kurs obrađuje generativne AI alate, veštačku inteligenciju i osnovno razumevanje generativne AI u kontekstu rada i učenja.',
-      meta: ['Izdavač: LinkdIn Lurning', 'Oblast: Generativna AI', 'Trajanje: 42 minuta', 'Format: PDF'],
       previewLabel: 'Sertifikat'
     }
   },
@@ -1149,21 +1137,18 @@ const certificateCopy = {
       title: 'Коришћење локалне AI: приватна AI асистенција уз Ollama и open-source моделе',
       cardDescription: 'ab sofort сертификат за курс о локалној АИ, Ollama алату и open-source моделима.',
       detailDescription: 'Овај ab sofort сертификат потврђује успешно завршен курс „Коришћење локалне АИ: приватна АИ асистенција уз Ollama и open-source моделе“. Курс је завршен 22. августа 2026. са резултатом од 87,5% и трајањем од 6 сати.',
-      meta: ['Издавач: Alpasana GmbH / ab sofort', 'Ниво: Foundation', 'Резултат: 87,5%', 'Издато: 22. августа 2026.', 'Верификација: ab sofort ID 491A67E697', 'Формат: PDF'],
       previewLabel: 'Сертификат'
     },
     'abacus-finanzbuchhaltung': {
       title: 'ABACUS финансијско књиговодство',
       cardDescription: 'Кориснички сертификат за ABACUS финансијско књиговодство, са основама корисничког интерфејса, матичних података, књижења, извештаја и ПДВ обрачуна.',
       detailDescription: 'ABACUS сертификат потврђује успешно завршен курс и положену завршну проверу из области ABACUS финансијског књиговодства. Теме су обухватале кориснички интерфејс, матичне податке, књижења на основу докумената, врсте књижења, извештаје као што су дневник, извод рачуна, биланс и рачун успеха, као и ПДВ обрачун.',
-      meta: ['Издавач: ABACUS Research AG', 'Област: Финансијско књиговодство', 'Доказ: Сертификат са положеном завршном провером', 'Формат: PDF'],
       previewLabel: 'Сертификат'
     },
     'linkedin-generative-ki': {
       title: 'Шта је генеративна вештачка интелигенција?',
       cardDescription: 'ЛинкдИн Лернинг курс о генеративним АИ алатима, вештачкој интелигенцији и основном разумевању генеративне АИ.',
       detailDescription: 'Овај ЛинкдИн Лернинг сертификат потврђује завршен курс „Шта је генеративна вештачка интелигенција?“. Курс обрађује генеративне АИ алате, вештачку интелигенцију и основно разумевање генеративне АИ у контексту рада и учења.',
-      meta: ['Издавач: ЛинкдИн Лернинг', 'Област: Генеративна АИ', 'Трајање: 42 минута', 'Формат: PDF'],
       previewLabel: 'Сертификат'
     }
   }
@@ -2318,7 +2303,8 @@ const openDetailModal = (title, description, metaList, options = {}) => {
   modalMeta.innerHTML = '';
   configureModalFile(options);
 
-  (metaList || []).forEach((metaItem) => {
+  const visibleMeta = options.itemType === 'certificates' ? [] : (metaList || []);
+  visibleMeta.forEach((metaItem) => {
     const li = document.createElement('li');
     li.textContent = metaItem;
     modalMeta.append(li);

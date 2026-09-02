@@ -1059,6 +1059,8 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
 .modal-card {
   width: min(820px, 94vw);
   max-width: calc(100vw - 24px);
+  height: min(82vh, 760px);
+  height: min(82dvh, 760px);
   max-height: min(82vh, 760px);
   padding: 18px;
   display: grid;
@@ -1071,8 +1073,11 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   min-width: 0;
 }
 .modal-card.is-document {
-  width: min(1180px, 96vw);
-  max-height: 94vh;
+  width: min(820px, 94vw);
+  max-width: calc(100vw - 24px);
+  height: min(82vh, 760px);
+  height: min(82dvh, 760px);
+  max-height: min(82vh, 760px);
 }
 .modal-head {
   display: flex;
@@ -1141,9 +1146,6 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
 .modal-card.has-preview-image .modal-preview-title,
 .modal-card.has-preview-image .modal-preview-subtitle {
   display: none;
-}
-.modal-card.is-document .modal-preview {
-  min-height: min(72vh, 860px);
 }
 .modal-preview-label {
   color: #efe8ff;
