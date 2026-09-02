@@ -3,7 +3,7 @@
     "content": "Zum Inhalt springen"
   },
   "nav": {
-    "home": "Start",
+    "home": "Über mich",
     "about": "Über mich",
     "career": "Werdegang",
     "tech": "Tech-Stack",
@@ -13,7 +13,7 @@
     "certificates": "Zertifikate"
   },
   "hero": {
-    "kicker": "Entwicklerprofil",
+    "kicker": "Über mich",
     "description": "Ich besuche die IMS mit Schwerpunkt Applikationsentwicklung und arbeite an Python-Tools, Weboberflächen, APIs, Tests und Datenverarbeitung.",
     "projectsKicker": "Ausgewählte Projekte",
     "projectsTitle": "Projekte",

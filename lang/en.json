@@ -3,7 +3,7 @@
     "content": "Skip to content"
   },
   "nav": {
-    "home": "Home",
+    "home": "About me",
     "about": "About",
     "career": "Journey",
     "tech": "Tech Stack",
@@ -13,7 +13,7 @@
     "certificates": "Certificates"
   },
   "hero": {
-    "kicker": "Developer profile",
+    "kicker": "About me",
     "description": "I attend the IMS with a focus on application development and work on Python tools, web interfaces, APIs, tests, and data processing.",
     "projectsKicker": "Selected projects",
     "projectsTitle": "Easy to verify",

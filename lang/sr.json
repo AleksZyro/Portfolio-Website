@@ -3,7 +3,7 @@
     "content": "Preskoči na sadržaj"
   },
   "nav": {
-    "home": "Početak",
+    "home": "O meni",
     "about": "O meni",
     "career": "Razvoj",
     "tech": "Teh stek",
@@ -13,7 +13,7 @@
     "certificates": "Sertifikati"
   },
   "hero": {
-    "kicker": "Developerski profil",
+    "kicker": "O meni",
     "description": "U IMS-u sam sa fokusom na razvoj aplikacija i radim na Python alatima, web interfejsima, API-jima, testovima i obradi podataka.",
     "projectsKicker": "Odabrani projekti",
     "projectsTitle": "Lako proverljivo",

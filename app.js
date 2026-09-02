@@ -300,6 +300,7 @@ const tabPanels = { projects: document.getElementById('panel-projects'), certifi
 const projectsGrid = document.getElementById('projects-grid');
 const certificatesGrid = document.getElementById('certificates-grid');
 const openSourceList = document.getElementById('open-source-list');
+const currentWorkTriggers = document.querySelectorAll('[data-current-work]');
 const openSourceMergeCountEl = document.getElementById('github-oss-merges-value');
 const techGrid = document.getElementById('tech-grid');
 const focusTabs = document.querySelectorAll('.focus-tab');
@@ -346,9 +347,9 @@ let activeProjectTitle = '';
 const embeddedDictionaries = {
   de: {
     skip: { content: 'Zum Inhalt springen' },
-    nav: { home: 'Start', about: '\u00dcber mich', career: 'Werdegang', tech: 'Tech-Stack', portfolio: 'Projekte', github: 'GitHub', contact: 'Kontakt & Rechtliches', certificates: 'Zertifikate' },
+    nav: { home: '\u00dcber mich', about: '\u00dcber mich', career: 'Werdegang', tech: 'Tech-Stack', portfolio: 'Projekte', github: 'GitHub', contact: 'Kontakt & Rechtliches', certificates: 'Zertifikate' },
     hero: {
-      kicker: 'Entwicklerprofil',
+      kicker: '\u00dcber mich',
       title: 'Praxisorientierte Web- und Python-Projekte',
       description: 'Ich besuche die IMS mit Schwerpunkt Applikationsentwicklung und arbeite an Python-Tools, Weboberflächen, APIs, Tests und Datenverarbeitung.',
       about: 'Mir sind klare Benutzeroberflächen, nachvollziehbarer Code, Teamfähigkeit und ehrliche Projektstände wichtig.',
@@ -513,9 +514,9 @@ const embeddedDictionaries = {
   },
   en: {
     skip: { content: 'Skip to content' },
-    nav: { home: 'Home', about: 'About', career: 'Journey', tech: 'Tech Stack', portfolio: 'Projects', github: 'GitHub', contact: 'Contact & Legal', certificates: 'Certificates' },
+    nav: { home: 'About me', about: 'About', career: 'Journey', tech: 'Tech Stack', portfolio: 'Projects', github: 'GitHub', contact: 'Contact & Legal', certificates: 'Certificates' },
     hero: {
-      kicker: 'Developer profile',
+      kicker: 'About me',
       title: 'Practical web and Python projects',
       description: 'I attend the IMS with a focus on application development and work on Python tools, web interfaces, APIs, tests, and data processing.',
       about: 'Clear user interfaces, understandable code, teamwork, and honest project status are important to me.',
@@ -666,9 +667,9 @@ const embeddedDictionaries = {
   },
   fr: {
     skip: { content: 'Aller au contenu' },
-    nav: { home: 'Accueil', about: 'À propos', career: 'Parcours', tech: 'Stack tech', portfolio: 'Projets', github: 'GitHub', contact: 'Contact & légal', certificates: 'Certificats' },
+    nav: { home: 'À propos', about: 'À propos', career: 'Parcours', tech: 'Stack tech', portfolio: 'Projets', github: 'GitHub', contact: 'Contact & légal', certificates: 'Certificats' },
     hero: {
-      kicker: 'Profil développeur',
+      kicker: 'À propos',
       title: 'Projets web et Python orientés pratique',
       description: 'Je suis une formation IMS avec une spécialisation en développement applicatif et je travaille sur des outils Python, des interfaces web, des API, des tests et du traitement de données.',
       about: 'J\'accorde de l\'importance aux interfaces claires, au code compréhensible, au travail en équipe et à des états de projet honnêtes.',
@@ -821,9 +822,9 @@ const embeddedDictionaries = {
   },
   sr: {
     skip: { content: 'Preskoči na sadržaj' },
-    nav: { home: 'Početak', about: 'O meni', career: 'Razvoj', tech: 'Tech stack', portfolio: 'Projekti', github: 'GitHub', contact: 'Kontakt i pravno', certificates: 'Sertifikati' },
+    nav: { home: 'O meni', about: 'O meni', career: 'Razvoj', tech: 'Tech stack', portfolio: 'Projekti', github: 'GitHub', contact: 'Kontakt i pravno', certificates: 'Sertifikati' },
     hero: {
-      kicker: 'Developerski profil',
+      kicker: 'O meni',
       title: 'Praktični web i Python projekti',
       description: 'U IMS-u sam sa fokusom na razvoj aplikacija i radim na Python alatima, web interfejsima, API-jima, testovima i obradi podataka.',
       about: 'Važni su mi jasni korisnički interfejsi, razumljiv kod, timski rad i iskren status projekata.',
@@ -977,9 +978,9 @@ const embeddedDictionaries = {
 embeddedDictionaries['sr-cyrl'] = {
   ...embeddedDictionaries.sr,
   skip: { content: 'Прескочи на садржај' },
-  nav: { home: 'Почетак', about: 'О мени', career: 'Развој', tech: 'Тех стек', portfolio: 'Пројекти', github: 'Гитхаб', contact: 'Контакт и правно', certificates: 'Сертификати' },
+  nav: { home: 'О мени', about: 'О мени', career: 'Развој', tech: 'Тех стек', portfolio: 'Пројекти', github: 'Гитхаб', contact: 'Контакт и правно', certificates: 'Сертификати' },
   hero: {
-    kicker: 'Девелоперски профил',
+    kicker: 'О мени',
     description: 'У ИМС-у сам са фокусом на развој апликација и радим на Пајтон алатима, веб интерфејсима, АПИ-јима, тестовима и обради података.',
     projectsKicker: 'Одабрани пројекти',
     projectsTitle: 'Лако проверљиво',
@@ -1377,6 +1378,20 @@ const localizedOpenSourceContribution = (item) => {
     summary: t(`${translationPath}.summary`, embeddedTranslation.summary || item.summary),
     tags: tArray(`${translationPath}.tags`, embeddedTranslation.tags || item.tags || [])
   };
+};
+
+const refreshCurrentWorkTriggers = () => {
+  currentWorkTriggers.forEach((trigger) => {
+    const projectKey = trigger.dataset.currentWork;
+    const title = t(`currentWork.projects.${projectKey}.title`, trigger.dataset.title || '');
+    const description = t(`currentWork.projects.${projectKey}.description`, trigger.dataset.description || '');
+    const type = trigger.querySelector('.current-work-type')?.textContent.trim() || '';
+    const status = t('currentWork.status', 'In Arbeit');
+    trigger.dataset.title = title;
+    trigger.dataset.description = description;
+    trigger.dataset.meta = JSON.stringify([type, status]);
+    trigger.setAttribute('aria-label', title);
+  });
 };
 
 const normalizeVisibleText = (value) => String(value ?? '')
@@ -2412,6 +2427,7 @@ const setLanguageMenuOpen = (isOpen) => {
 };
 
 const refreshDynamicTexts = () => {
+  refreshCurrentWorkTriggers();
   activateFocus(currentFocusKey);
   renderProjectExplorer();
   renderCollection(portfolioData.certificates, certificatesGrid, 'certificates');

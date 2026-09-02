@@ -3,7 +3,7 @@
     "content": "Aller au contenu"
   },
   "nav": {
-    "home": "Accueil",
+    "home": "À propos",
     "about": "À propos",
     "career": "Parcours",
     "tech": "Stack tech",
@@ -13,7 +13,7 @@
     "certificates": "Certificats"
   },
   "hero": {
-    "kicker": "Profil développeur",
+    "kicker": "À propos",
     "description": "Je suis une formation IMS avec une spécialisation en développement applicatif et je travaille sur des outils Python, des interfaces web, des API, des tests et du traitement de données.",
     "projectsKicker": "Projets sélectionnés",
     "projectsTitle": "Faciles à vérifier",
