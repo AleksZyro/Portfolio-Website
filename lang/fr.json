@@ -89,7 +89,7 @@
     "ownLabel": "Projet personnel",
     "status": "En cours",
     "projects": {
-      "aargoclean": { "title": "Site web pour Aargoclean", "description": "Je travaille actuellement sur le site web de l’entreprise Aargoclean." },
+      "aargoclean": { "title": "Site web pour AARGO Clean GmbH", "description": "Je travaille actuellement sur le site web de l’entreprise AARGO Clean GmbH." },
       "mmTransport": { "title": "Site web pour MM Transport & Assistance", "description": "Je travaille actuellement sur le site web de l’entreprise MM Transport & Assistance." },
       "countryCursors": { "title": "Custom Country Cursors", "description": "Je poursuis le développement de Custom Country Cursors et travaille sur de nouveaux détails et améliorations." },
       "codexTwin": { "title": "CodexTwin", "description": "Je travaille sur CodexTwin et continue à développer l’idée ainsi que sa réalisation." },
