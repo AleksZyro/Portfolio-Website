@@ -1385,7 +1385,8 @@ const refreshCurrentWorkTriggers = () => {
     const projectKey = trigger.dataset.currentWork;
     const title = t(`currentWork.projects.${projectKey}.title`, trigger.dataset.title || '');
     const description = t(`currentWork.projects.${projectKey}.description`, trigger.dataset.description || '');
-    const type = trigger.querySelector('.current-work-type')?.textContent.trim() || '';
+    const typeKey = trigger.dataset.workType === 'customer' ? 'currentWork.customerLabel' : 'currentWork.ownLabel';
+    const type = t(typeKey, trigger.dataset.workType === 'customer' ? 'Kundenprojekt' : 'Eigenes Projekt');
     const status = t('currentWork.status', 'In Arbeit');
     trigger.dataset.title = title;
     trigger.dataset.description = description;
