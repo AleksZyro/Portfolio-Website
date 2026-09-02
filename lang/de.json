@@ -91,7 +91,6 @@
     "projects": {
       "aargoclean": { "title": "Website für AARGO Clean GmbH", "description": "Aktuell arbeite ich an der Website für die Firma AARGO Clean GmbH." },
       "mmTransport": { "title": "Website für MM Transport & Assistance", "description": "Aktuell arbeite ich an der Website für die Firma MM Transport & Assistance." },
-      "countryCursors": { "title": "Custom Country Cursors", "description": "Ich entwickle Custom Country Cursors weiter und arbeite an neuen Details und Verbesserungen." },
       "codexTwin": { "title": "CodexTwin", "description": "Ich arbeite an CodexTwin und entwickle die Idee sowie die Umsetzung weiter." },
       "umr": { "title": "UMR", "description": "Ich bearbeite UMR weiter und ergänze beziehungsweise verbessere laufend Funktionen." }
     }
