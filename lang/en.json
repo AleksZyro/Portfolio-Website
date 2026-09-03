@@ -375,7 +375,7 @@
     }
   },
   "openSourceContributions": {
-    "pipAudit1106": {
+    "pipAudit1119": {
       "title": "Deduplicate matching PYSEC vulnerabilities",
       "summary": "Prevents matching PYSEC vulnerabilities from being counted twice.",
       "tags": [

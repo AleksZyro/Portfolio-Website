@@ -375,7 +375,7 @@
     }
   },
   "openSourceContributions": {
-    "pipAudit1106": {
+    "pipAudit1119": {
       "title": "Übereinstimmende PYSEC-Schwachstellen deduplizieren",
       "summary": "Verhindert, dass übereinstimmende PYSEC-Schwachstellen doppelt gezählt werden.",
       "tags": [

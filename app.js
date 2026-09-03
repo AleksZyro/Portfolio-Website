@@ -195,13 +195,13 @@ const portfolioData = {
   ],
   openSourceContributions: [
     {
-      id: 'pipAudit1106',
+      id: 'pipAudit1119',
       repo: 'pypa/pip-audit',
-      number: 1106,
+      number: 1119,
       title: 'Deduplicate matching PYSEC vulnerabilities',
       summary: 'Verhindert, dass übereinstimmende PYSEC-Schwachstellen doppelt gezählt werden.',
       tags: ['Python', 'Security'],
-      url: 'https://github.com/pypa/pip-audit/pull/1106'
+      url: 'https://github.com/pypa/pip-audit/pull/1119'
     },
     {
       id: 'vaultCleaner54',
@@ -1265,7 +1265,7 @@ const embeddedPortfolioSectionCopy = {
 
 const embeddedOpenSourceContributions = {
   'sr-cyrl': {
-    pipAudit1106: { title: 'Уклања дуплирање подударних ПИ-СЕК рањивости', summary: 'Спречава да се подударне ПИ-СЕК рањивости броје два пута.', tags: ['Пајтон', 'Безбедност'] },
+    pipAudit1119: { title: 'Уклања дуплирање подударних ПИ-СЕК рањивости', summary: 'Спречава да се подударне ПИ-СЕК рањивости броје два пута.', tags: ['Пајтон', 'Безбедност'] },
     vaultCleaner54: { title: 'Поштује подешене ЦЛИ путање', summary: 'Побољшава ЦЛИ логику путања, тако да се подешене улазне и излазне путање правилно поштују.', tags: ['Пајтон', 'ЦЛИ'] },
     agentcache38: { title: 'Даје предност ВС Код МЦП конфигурацији радног простора', summary: 'Даје предност конфигурацији радног простора за ВС Код МЦП, тако да подешавања специфична за пројекат раде чистије.', tags: ['Развојни алати', 'Конфигурација'] },
     contextPilot36: { title: 'Обрађује неисправан компресовани Џејсон', summary: 'Обрађује неважеће Џејсон одговоре током компресије и чини тај случај грешке стабилнијим.', tags: ['Пајтон', 'Џејсон'] },

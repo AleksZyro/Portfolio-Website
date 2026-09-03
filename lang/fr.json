@@ -375,7 +375,7 @@
     }
   },
   "openSourceContributions": {
-    "pipAudit1106": {
+    "pipAudit1119": {
       "title": "Dédupliquer les vulnérabilités PYSEC correspondantes",
       "summary": "Évite que les vulnérabilités PYSEC correspondantes soient comptées deux fois.",
       "tags": [
