@@ -3,7 +3,7 @@
     "content": "Прескочи на садржај"
   },
   "nav": {
-    "home": "Почетак",
+    "home": "О мени",
     "about": "О мени",
     "career": "Развој",
     "tech": "Тех стек",
@@ -13,7 +13,7 @@
     "certificates": "Сертификати"
   },
   "hero": {
-    "kicker": "Девелоперски профил",
+    "kicker": "О мени",
     "description": "У ИМС-у сам са фокусом на развој апликација и радим на Пајтон алатима, веб интерфејсима, АПИ-јима, тестовима и обради података.",
     "projectsKicker": "Одабрани пројекти",
     "projectsTitle": "Лако проверљиво",
@@ -79,6 +79,20 @@
         "локални помоћници"
       ],
       "status": "Пракса: Виндоуз алати"
+    }
+  },
+  "currentWork": {
+    "kicker": "Тренутно",
+    "title": "На чему тренутно радим",
+    "subline": "Кратак преглед текућих клијентских и личних пројеката.",
+    "customerLabel": "Пројекат за клијента",
+    "ownLabel": "Лични пројекат",
+    "status": "У раду",
+    "projects": {
+      "aargoclean": { "title": "Веб сајт за AARGO Clean GmbH", "description": "Тренутно радим на веб сајту за фирму AARGO Clean GmbH." },
+      "mmTransport": { "title": "Веб сајт за MM Transport & Assistance", "description": "Тренутно радим на веб сајту за фирму MM Transport & Assistance." },
+      "codexTwin": { "title": "CodexTwin", "description": "Радим на пројекту CodexTwin и даље развијам идеју и имплементацију." },
+      "umr": { "title": "УМР", "description": "Настављам рад на пројекту УМР и редовно додајем или побољшавам функције." }
     }
   },
   "about": {

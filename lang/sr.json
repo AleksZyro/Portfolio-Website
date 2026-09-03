@@ -3,7 +3,7 @@
     "content": "Preskoči na sadržaj"
   },
   "nav": {
-    "home": "Početak",
+    "home": "O meni",
     "about": "O meni",
     "career": "Razvoj",
     "tech": "Teh stek",
@@ -13,7 +13,7 @@
     "certificates": "Sertifikati"
   },
   "hero": {
-    "kicker": "Developerski profil",
+    "kicker": "O meni",
     "description": "U IMS-u sam sa fokusom na razvoj aplikacija i radim na Python alatima, web interfejsima, API-jima, testovima i obradi podataka.",
     "projectsKicker": "Odabrani projekti",
     "projectsTitle": "Lako proverljivo",
@@ -79,6 +79,20 @@
         "lokalni pomoćnici"
       ],
       "status": "Praksa: Windows alati"
+    }
+  },
+  "currentWork": {
+    "kicker": "Trenutno",
+    "title": "Na čemu trenutno radim",
+    "subline": "Kratak pregled tekućih klijentskih i ličnih projekata.",
+    "customerLabel": "Projekat za klijenta",
+    "ownLabel": "Lični projekat",
+    "status": "U radu",
+    "projects": {
+      "aargoclean": { "title": "Veb sajt za AARGO Clean GmbH", "description": "Trenutno radim na veb sajtu za firmu AARGO Clean GmbH." },
+      "mmTransport": { "title": "Veb sajt za MM Transport & Assistance", "description": "Trenutno radim na veb sajtu za firmu MM Transport & Assistance." },
+      "codexTwin": { "title": "CodexTwin", "description": "Radim na projektu CodexTwin i dalje razvijam ideju i implementaciju." },
+      "umr": { "title": "UMR", "description": "Nastavljam rad na projektu UMR i redovno dodajem ili poboljšavam funkcije." }
     }
   },
   "about": {

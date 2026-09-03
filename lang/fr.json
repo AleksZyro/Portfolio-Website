@@ -3,7 +3,7 @@
     "content": "Aller au contenu"
   },
   "nav": {
-    "home": "Accueil",
+    "home": "À propos",
     "about": "À propos",
     "career": "Parcours",
     "tech": "Stack tech",
@@ -13,7 +13,7 @@
     "certificates": "Certificats"
   },
   "hero": {
-    "kicker": "Profil développeur",
+    "kicker": "À propos",
     "description": "Je suis une formation IMS avec une spécialisation en développement applicatif et je travaille sur des outils Python, des interfaces web, des API, des tests et du traitement de données.",
     "projectsKicker": "Projets sélectionnés",
     "projectsTitle": "Faciles à vérifier",
@@ -79,6 +79,20 @@
         "Assistants locaux"
       ],
       "status": "Pratique: outils Windows"
+    }
+  },
+  "currentWork": {
+    "kicker": "En ce moment",
+    "title": "Sur quoi je travaille actuellement",
+    "subline": "Un aperçu rapide des projets clients et personnels en cours.",
+    "customerLabel": "Projet client",
+    "ownLabel": "Projet personnel",
+    "status": "En cours",
+    "projects": {
+      "aargoclean": { "title": "Site web pour AARGO Clean GmbH", "description": "Je travaille actuellement sur le site web de l’entreprise AARGO Clean GmbH." },
+      "mmTransport": { "title": "Site web pour MM Transport & Assistance", "description": "Je travaille actuellement sur le site web de l’entreprise MM Transport & Assistance." },
+      "codexTwin": { "title": "CodexTwin", "description": "Je travaille sur CodexTwin et continue à développer l’idée ainsi que sa réalisation." },
+      "umr": { "title": "UMR", "description": "Je poursuis le développement d’UMR et j’ajoute ou améliore régulièrement des fonctions." }
     }
   },
   "about": {

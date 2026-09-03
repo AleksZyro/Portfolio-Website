@@ -81,13 +81,6 @@ const portfolioData = {
   ],
   moreProjects: [
     {
-      id: 'umr',
-      title: 'UMR',
-      description: 'Minecraft-Mod zur Überarbeitung wenig genutzter Mobs mit neuen Funktionen und stärkerem Gameplay-Einfluss.',
-      tags: ['Java', 'Minecraft Mod'],
-      url: 'https://github.com/AleksZyro/UMR-Useless-mobs-reworked-Mod'
-    },
-    {
       id: 'twintype',
       title: 'TwinType',
       description: 'Kleineres Python-Projekt, das noch kompakt dokumentiert wird.',
@@ -145,7 +138,6 @@ const portfolioData = {
       title: 'Lokale KI nutzen: private KI-Assistenz mit Ollama & Open-Source-Modellen',
       cardDescription: 'ab sofort-Zertifikat für einen Kurs zu lokaler KI, Ollama und Open-Source-Modellen.',
       detailDescription: 'Dieses ab sofort-Zertifikat bestätigt den erfolgreichen Abschluss des Kurses „Lokale KI nutzen: private KI-Assistenz mit Ollama & Open-Source-Modellen“. Das Zertifikat wurde am 22.08.2026 ausgestellt, mit 87.5 Prozent und einem Umfang von 6 Stunden abgeschlossen.',
-      meta: ['Aussteller: Alpasana GmbH / ab sofort', 'Niveau: Foundation', 'Ergebnis: 87.5 %', 'Ausgestellt am: 22.08.2026', 'Verifikation: ab sofort ID 491A67E697', 'Format: PDF'],
       file: 'assets/certificates/absofort-zertifikat-491A67E697.pdf',
       previewImage: 'assets/certificate-previews/absofort-zertifikat-491A67E697.png',
       previewLabel: 'Zertifikat'
@@ -155,7 +147,6 @@ const portfolioData = {
       title: 'ABACUS Finanzbuchhaltung',
       cardDescription: 'Anwender-Zertifikat für ABACUS Finanzbuchhaltung mit Grundlagen zu Benutzeroberfläche, Stammdaten, Buchungen, Auswertungen und MWST-Abrechnung.',
       detailDescription: 'Das ABACUS-Zertifikat bestätigt den erfolgreich abgeschlossenen Zertifikatskurs und die bestandene Abschlussprüfung im Bereich ABACUS Finanzbuchhaltung. Inhaltliche Schwerpunkte waren Benutzeroberfläche, Stammdaten, Buchungen anhand von Belegen, Buchungsarten, Auswertungen wie Journal, Kontoauszug, Bilanz und Erfolgsrechnung sowie MWST-Abrechnung.',
-      meta: ['Aussteller: ABACUS Research AG', 'Bereich: Finanzbuchhaltung', 'Nachweis: Zertifikat mit bestandener Abschlussprüfung', 'Format: PDF'],
       previewImage: 'assets/certificate-previews/abacus-finanzbuchhaltung.svg',
       expectedFile: 'assets/certificates/abacus-finanzbuchhaltung.pdf',
       previewLabel: 'Zertifikat'
@@ -165,7 +156,6 @@ const portfolioData = {
       title: 'Was ist generative KI?',
       cardDescription: 'LinkedIn-Learning-Kurs zu generativen KI-Tools, künstlicher Intelligenz und grundlegender Einordnung generativer KI.',
       detailDescription: 'Dieses LinkedIn-Learning-Zertifikat bestätigt den abgeschlossenen Kurs „Was ist generative KI?“. Der Kurs behandelt generative KI-Tools, künstliche Intelligenz und die grundlegende Einordnung generativer KI im Arbeits- und Lernkontext.',
-      meta: ['Aussteller: LinkedIn Learning', 'Bereich: Generative KI', 'Dauer: 42 Minuten', 'Format: PDF'],
       previewImage: 'assets/certificate-previews/linkedin-generative-ki.svg',
       expectedFile: 'assets/certificates/linkedin-generative-ki.pdf',
       previewLabel: 'Zertifikat'
@@ -307,6 +297,7 @@ const tabPanels = { projects: document.getElementById('panel-projects'), certifi
 const projectsGrid = document.getElementById('projects-grid');
 const certificatesGrid = document.getElementById('certificates-grid');
 const openSourceList = document.getElementById('open-source-list');
+const currentWorkTriggers = document.querySelectorAll('[data-current-work]');
 const openSourceMergeCountEl = document.getElementById('github-oss-merges-value');
 const techGrid = document.getElementById('tech-grid');
 const focusTabs = document.querySelectorAll('.focus-tab');
@@ -353,9 +344,9 @@ let activeProjectTitle = '';
 const embeddedDictionaries = {
   de: {
     skip: { content: 'Zum Inhalt springen' },
-    nav: { home: 'Start', about: '\u00dcber mich', career: 'Werdegang', tech: 'Tech-Stack', portfolio: 'Projekte', github: 'GitHub', contact: 'Kontakt & Rechtliches', certificates: 'Zertifikate' },
+    nav: { home: '\u00dcber mich', about: '\u00dcber mich', career: 'Werdegang', tech: 'Tech-Stack', portfolio: 'Projekte', github: 'GitHub', contact: 'Kontakt & Rechtliches', certificates: 'Zertifikate' },
     hero: {
-      kicker: 'Entwicklerprofil',
+      kicker: '\u00dcber mich',
       title: 'Praxisorientierte Web- und Python-Projekte',
       description: 'Ich besuche die IMS mit Schwerpunkt Applikationsentwicklung und arbeite an Python-Tools, Weboberflächen, APIs, Tests und Datenverarbeitung.',
       about: 'Mir sind klare Benutzeroberflächen, nachvollziehbarer Code, Teamfähigkeit und ehrliche Projektstände wichtig.',
@@ -520,9 +511,9 @@ const embeddedDictionaries = {
   },
   en: {
     skip: { content: 'Skip to content' },
-    nav: { home: 'Home', about: 'About', career: 'Journey', tech: 'Tech Stack', portfolio: 'Projects', github: 'GitHub', contact: 'Contact & Legal', certificates: 'Certificates' },
+    nav: { home: 'About me', about: 'About', career: 'Journey', tech: 'Tech Stack', portfolio: 'Projects', github: 'GitHub', contact: 'Contact & Legal', certificates: 'Certificates' },
     hero: {
-      kicker: 'Developer profile',
+      kicker: 'About me',
       title: 'Practical web and Python projects',
       description: 'I attend the IMS with a focus on application development and work on Python tools, web interfaces, APIs, tests, and data processing.',
       about: 'Clear user interfaces, understandable code, teamwork, and honest project status are important to me.',
@@ -673,9 +664,9 @@ const embeddedDictionaries = {
   },
   fr: {
     skip: { content: 'Aller au contenu' },
-    nav: { home: 'Accueil', about: 'À propos', career: 'Parcours', tech: 'Stack tech', portfolio: 'Projets', github: 'GitHub', contact: 'Contact & légal', certificates: 'Certificats' },
+    nav: { home: 'À propos', about: 'À propos', career: 'Parcours', tech: 'Stack tech', portfolio: 'Projets', github: 'GitHub', contact: 'Contact & légal', certificates: 'Certificats' },
     hero: {
-      kicker: 'Profil développeur',
+      kicker: 'À propos',
       title: 'Projets web et Python orientés pratique',
       description: 'Je suis une formation IMS avec une spécialisation en développement applicatif et je travaille sur des outils Python, des interfaces web, des API, des tests et du traitement de données.',
       about: 'J\'accorde de l\'importance aux interfaces claires, au code compréhensible, au travail en équipe et à des états de projet honnêtes.',
@@ -828,9 +819,9 @@ const embeddedDictionaries = {
   },
   sr: {
     skip: { content: 'Preskoči na sadržaj' },
-    nav: { home: 'Početak', about: 'O meni', career: 'Razvoj', tech: 'Tech stack', portfolio: 'Projekti', github: 'GitHub', contact: 'Kontakt i pravno', certificates: 'Sertifikati' },
+    nav: { home: 'O meni', about: 'O meni', career: 'Razvoj', tech: 'Tech stack', portfolio: 'Projekti', github: 'GitHub', contact: 'Kontakt i pravno', certificates: 'Sertifikati' },
     hero: {
-      kicker: 'Developerski profil',
+      kicker: 'O meni',
       title: 'Praktični web i Python projekti',
       description: 'U IMS-u sam sa fokusom na razvoj aplikacija i radim na Python alatima, web interfejsima, API-jima, testovima i obradi podataka.',
       about: 'Važni su mi jasni korisnički interfejsi, razumljiv kod, timski rad i iskren status projekata.',
@@ -984,9 +975,9 @@ const embeddedDictionaries = {
 embeddedDictionaries['sr-cyrl'] = {
   ...embeddedDictionaries.sr,
   skip: { content: 'Прескочи на садржај' },
-  nav: { home: 'Почетак', about: 'О мени', career: 'Развој', tech: 'Тех стек', portfolio: 'Пројекти', github: 'Гитхаб', contact: 'Контакт и правно', certificates: 'Сертификати' },
+  nav: { home: 'О мени', about: 'О мени', career: 'Развој', tech: 'Тех стек', portfolio: 'Пројекти', github: 'Гитхаб', contact: 'Контакт и правно', certificates: 'Сертификати' },
   hero: {
-    kicker: 'Девелоперски профил',
+    kicker: 'О мени',
     description: 'У ИМС-у сам са фокусом на развој апликација и радим на Пајтон алатима, веб интерфејсима, АПИ-јима, тестовима и обради података.',
     projectsKicker: 'Одабрани пројекти',
     projectsTitle: 'Лако проверљиво',
@@ -1086,21 +1077,18 @@ const certificateCopy = {
       title: 'Using local AI: private AI assistance with Ollama & open-source models',
       cardDescription: 'ab sofort certificate for a course on local AI, Ollama and open-source models.',
       detailDescription: 'This ab sofort certificate confirms successful completion of the course “Using local AI: private AI assistance with Ollama & open-source models”. The course was completed on 22 August 2026 with a score of 87.5 percent and a duration of 6 hours.',
-      meta: ['Issuer: Alpasana GmbH / ab sofort', 'Level: Foundation', 'Result: 87.5%', 'Issued on: 22 August 2026', 'Verification: ab sofort ID 491A67E697', 'Format: PDF'],
       previewLabel: 'Certificate'
     },
     'abacus-finanzbuchhaltung': {
       title: 'ABACUS Financial Accounting',
       cardDescription: 'User certificate for ABACUS financial accounting, covering interface basics, master data, postings, reports and VAT accounting.',
       detailDescription: 'The ABACUS certificate confirms completion of the certificate course and successful final examination in ABACUS financial accounting. Topics included the user interface, master data, postings based on documents, posting types, reports such as journals, account statements, balance sheet and income statement, as well as VAT accounting.',
-      meta: ['Issuer: ABACUS Research AG', 'Area: Financial accounting', 'Proof: Certificate with passed final exam', 'Format: PDF'],
       previewLabel: 'Certificate'
     },
     'linkedin-generative-ki': {
       title: 'What is generative AI?',
       cardDescription: 'LinkedIn Learning course on generative AI tools, artificial intelligence and the basic classification of generative AI.',
       detailDescription: 'This LinkedIn Learning certificate confirms completion of the course “What is generative AI?”. The course covers generative AI tools, artificial intelligence and the basic classification of generative AI in work and learning contexts.',
-      meta: ['Issuer: LinkedIn Learning', 'Area: Generative AI', 'Duration: 42 minutes', 'Format: PDF'],
       previewLabel: 'Certificate'
     }
   },
@@ -1109,21 +1097,18 @@ const certificateCopy = {
       title: 'Utiliser l’IA locale : assistance IA privée avec Ollama et des modèles open source',
       cardDescription: 'Certificat ab sofort pour un cours sur l’IA locale, Ollama et les modèles open source.',
       detailDescription: 'Ce certificat ab sofort confirme la réussite du cours « Utiliser l’IA locale : assistance IA privée avec Ollama et des modèles open source ». Le cours a été terminé le 22 août 2026 avec un résultat de 87,5 % et une durée de 6 heures.',
-      meta: ['Émetteur : Alpasana GmbH / ab sofort', 'Niveau : Foundation', 'Résultat : 87,5 %', 'Délivré le : 22 août 2026', 'Vérification : ab sofort ID 491A67E697', 'Format : PDF'],
       previewLabel: 'Certificat'
     },
     'abacus-finanzbuchhaltung': {
       title: 'ABACUS comptabilité financière',
       cardDescription: 'Certificat utilisateur pour ABACUS comptabilité financière, avec bases de l’interface, données de base, écritures, rapports et TVA.',
       detailDescription: 'Le certificat ABACUS confirme la réussite du cours de certificat et de l’examen final dans le domaine de la comptabilité financière ABACUS. Les thèmes abordés comprennent l’interface utilisateur, les données de base, les écritures à partir de pièces justificatives, les types d’écritures, les rapports comme le journal, l’extrait de compte, le bilan et le compte de résultat, ainsi que le décompte TVA.',
-      meta: ['Émetteur: ABACUS Research AG', 'Domaine: Comptabilité financière', 'Preuve: Certificat avec examen final réussi', 'Format: PDF'],
       previewLabel: 'Certificat'
     },
     'linkedin-generative-ki': {
       title: 'Qu’est-ce que l’IA générative ?',
       cardDescription: 'Cours LinkedIn Learning sur les outils d’IA générative, l’intelligence artificielle et les bases de l’IA générative.',
       detailDescription: 'Ce certificat LinkedIn Learning confirme la réussite du cours « Qu’est-ce que l’IA générative ? ». Le cours traite des outils d’IA générative, de l’intelligence artificielle et des bases permettant de situer l’IA générative dans un contexte de travail et d’apprentissage.',
-      meta: ['Émetteur: LinkedIn Learning', 'Domaine: IA générative', 'Durée: 42 minutes', 'Format: PDF'],
       previewLabel: 'Certificat'
     }
   },
@@ -1132,21 +1117,18 @@ const certificateCopy = {
       title: 'Korišćenje lokalne AI: privatna AI asistencija uz Ollama i open-source modele',
       cardDescription: 'ab sofort sertifikat za kurs o lokalnoj AI, Ollama alatu i open-source modelima.',
       detailDescription: 'Ovaj ab sofort sertifikat potvrđuje uspešno završen kurs „Korišćenje lokalne AI: privatna AI asistencija uz Ollama i open-source modele“. Kurs je završen 22. avgusta 2026. sa rezultatom od 87,5% i trajanjem od 6 sati.',
-      meta: ['Izdavač: Alpasana GmbH / ab sofort', 'Nivo: Foundation', 'Rezultat: 87,5%', 'Izdato: 22. avgusta 2026.', 'Verifikacija: ab sofort ID 491A67E697', 'Format: PDF'],
       previewLabel: 'Sertifikat'
     },
     'abacus-finanzbuchhaltung': {
       title: 'ABACUS finansijsko knjigovodstvo',
       cardDescription: 'Korisnički sertifikat za ABACUS finansijsko knjigovodstvo, sa osnovama korisničkog interfejsa, matičnih podataka, knjiženja, izveštaja i PDV obračuna.',
       detailDescription: 'ABACUS sertifikat potvrđuje uspešno završen kurs i položenu završnu proveru iz oblasti ABACUS finansijskog knjigovodstva. Teme su obuhvatale korisnički interfejs, matične podatke, knjiženja na osnovu dokumenata, vrste knjiženja, izveštaje kao što su dnevnik, izvod računa, bilans i račun uspeha, kao i PDV obračun.',
-      meta: ['Izdavač: ABACUS Research AG', 'Oblast: Finansijsko knjigovodstvo', 'Dokaz: Sertifikat sa položenom završnom proverom', 'Format: PDF'],
       previewLabel: 'Sertifikat'
     },
     'linkedin-generative-ki': {
       title: 'Šta je generativna veštačka inteligencija?',
       cardDescription: 'LinkdIn Lurning kurs o generativnim AI alatima, veštačkoj inteligenciji i osnovnom razumevanju generativne AI.',
       detailDescription: 'Ovaj LinkdIn Lurning sertifikat potvrđuje završen kurs „Šta je generativna veštačka inteligencija?“. Kurs obrađuje generativne AI alate, veštačku inteligenciju i osnovno razumevanje generativne AI u kontekstu rada i učenja.',
-      meta: ['Izdavač: LinkdIn Lurning', 'Oblast: Generativna AI', 'Trajanje: 42 minuta', 'Format: PDF'],
       previewLabel: 'Sertifikat'
     }
   },
@@ -1155,21 +1137,18 @@ const certificateCopy = {
       title: 'Коришћење локалне AI: приватна AI асистенција уз Ollama и open-source моделе',
       cardDescription: 'ab sofort сертификат за курс о локалној АИ, Ollama алату и open-source моделима.',
       detailDescription: 'Овај ab sofort сертификат потврђује успешно завршен курс „Коришћење локалне АИ: приватна АИ асистенција уз Ollama и open-source моделе“. Курс је завршен 22. августа 2026. са резултатом од 87,5% и трајањем од 6 сати.',
-      meta: ['Издавач: Alpasana GmbH / ab sofort', 'Ниво: Foundation', 'Резултат: 87,5%', 'Издато: 22. августа 2026.', 'Верификација: ab sofort ID 491A67E697', 'Формат: PDF'],
       previewLabel: 'Сертификат'
     },
     'abacus-finanzbuchhaltung': {
       title: 'ABACUS финансијско књиговодство',
       cardDescription: 'Кориснички сертификат за ABACUS финансијско књиговодство, са основама корисничког интерфејса, матичних података, књижења, извештаја и ПДВ обрачуна.',
       detailDescription: 'ABACUS сертификат потврђује успешно завршен курс и положену завршну проверу из области ABACUS финансијског књиговодства. Теме су обухватале кориснички интерфејс, матичне податке, књижења на основу докумената, врсте књижења, извештаје као што су дневник, извод рачуна, биланс и рачун успеха, као и ПДВ обрачун.',
-      meta: ['Издавач: ABACUS Research AG', 'Област: Финансијско књиговодство', 'Доказ: Сертификат са положеном завршном провером', 'Формат: PDF'],
       previewLabel: 'Сертификат'
     },
     'linkedin-generative-ki': {
       title: 'Шта је генеративна вештачка интелигенција?',
       cardDescription: 'ЛинкдИн Лернинг курс о генеративним АИ алатима, вештачкој интелигенцији и основном разумевању генеративне АИ.',
       detailDescription: 'Овај ЛинкдИн Лернинг сертификат потврђује завршен курс „Шта је генеративна вештачка интелигенција?“. Курс обрађује генеративне АИ алате, вештачку интелигенцију и основно разумевање генеративне АИ у контексту рада и учења.',
-      meta: ['Издавач: ЛинкдИн Лернинг', 'Област: Генеративна АИ', 'Трајање: 42 минута', 'Формат: PDF'],
       previewLabel: 'Сертификат'
     }
   }
@@ -1250,31 +1229,26 @@ const embeddedPortfolioItems = {
 
 const embeddedMoreProjects = {
   de: {
-    umr: { title: 'UMR', description: 'Minecraft-Mod zur Überarbeitung wenig genutzter Mobs mit neuen Funktionen.', tags: ['Java', 'Minecraft-Mod'] },
     twintype: { title: 'TwinType', description: 'Kleineres Python-Projekt, das noch kompakt dokumentiert wird.', tags: ['Python'] },
     lb259: { title: 'LB259', description: 'Datenprojekt zu Smartphone-Nutzung, Produktivität und Wohlbefinden.', tags: ['Daten', 'Notebook'] },
     heimatschutz: { title: 'Heimatschutz Aargau', description: 'Gemeinsame interne Webanwendung zur Prüfung von Baugesuchen.', tags: ['Teamprojekt', 'Webanwendung'] }
   },
   en: {
-    umr: { title: 'UMR', description: 'Minecraft mod that reworks rarely used mobs with new functions.', tags: ['Java', 'Minecraft mod'] },
     twintype: { title: 'TwinType', description: 'Smaller Python project that is still being documented.', tags: ['Python'] },
     lb259: { title: 'LB259', description: 'Data project about smartphone use, productivity, and wellbeing.', tags: ['Data', 'Notebook'] },
     heimatschutz: { title: 'Heimatschutz Aargau', description: 'Shared internal web application for reviewing building applications.', tags: ['Team project', 'Web application'] }
   },
   fr: {
-    umr: { title: 'UMR', description: 'Mod Minecraft qui retravaille des créatures peu utilisées avec de nouvelles fonctions.', tags: ['Java', 'Mod Minecraft'] },
     twintype: { title: 'TwinType', description: 'Petit projet Python encore en cours de documentation.', tags: ['Python'] },
     lb259: { title: 'LB259', description: 'Projet de données sur l’usage du smartphone, la productivité et le bien-être.', tags: ['Données', 'Notebook'] },
     heimatschutz: { title: 'Heimatschutz Aargau', description: 'Application web interne commune pour examiner des demandes de construction.', tags: ['Projet d’équipe', 'Application web'] }
   },
   sr: {
-    umr: { title: 'UMR', description: 'Minecraft mod koji unapređuje retko korišćene mobove novim funkcijama.', tags: ['Java', 'Minecraft mod'] },
     twintype: { title: 'TwinType', description: 'Manji Python projekat koji se još dokumentuje.', tags: ['Python'] },
     lb259: { title: 'LB259', description: 'Projekat podataka o korišćenju telefona, produktivnosti i blagostanju.', tags: ['Podaci', 'Notebook'] },
     heimatschutz: { title: 'Heimatschutz Aargau', description: 'Zajednička interna veb aplikacija za proveru građevinskih zahteva.', tags: ['Timski projekat', 'Veb aplikacija'] }
   },
   'sr-cyrl': {
-    umr: { title: 'УМР', description: 'Мајнкрафт мод који унапређује ретко коришћене мобове новим функцијама.', tags: ['Јава', 'Мајнкрафт мод'] },
     twintype: { title: 'ТвинТајп', description: 'Мањи Пајтон пројекат који се још документује.', tags: ['Пајтон'] },
     lb259: { title: 'ЛБ259', description: 'Пројекат података о коришћењу телефона, продуктивности и благостању.', tags: ['Подаци', 'Нотбук'] },
     heimatschutz: { title: 'Хеиматшутц Ааргау', description: 'Заједничка интерна веб апликација за проверу грађевинских захтева.', tags: ['Тимски пројекат', 'Веб апликација'] }
@@ -1389,6 +1363,21 @@ const localizedOpenSourceContribution = (item) => {
     summary: t(`${translationPath}.summary`, embeddedTranslation.summary || item.summary),
     tags: tArray(`${translationPath}.tags`, embeddedTranslation.tags || item.tags || [])
   };
+};
+
+const refreshCurrentWorkTriggers = () => {
+  currentWorkTriggers.forEach((trigger) => {
+    const projectKey = trigger.dataset.currentWork;
+    const title = t(`currentWork.projects.${projectKey}.title`, trigger.dataset.title || '');
+    const description = t(`currentWork.projects.${projectKey}.description`, trigger.dataset.description || '');
+    const typeKey = trigger.dataset.workType === 'customer' ? 'currentWork.customerLabel' : 'currentWork.ownLabel';
+    const type = t(typeKey, trigger.dataset.workType === 'customer' ? 'Kundenprojekt' : 'Eigenes Projekt');
+    const status = t('currentWork.status', 'In Arbeit');
+    trigger.dataset.title = title;
+    trigger.dataset.description = description;
+    trigger.dataset.meta = JSON.stringify([type, status]);
+    trigger.setAttribute('aria-label', title);
+  });
 };
 
 const normalizeVisibleText = (value) => String(value ?? '')
@@ -2314,7 +2303,8 @@ const openDetailModal = (title, description, metaList, options = {}) => {
   modalMeta.innerHTML = '';
   configureModalFile(options);
 
-  (metaList || []).forEach((metaItem) => {
+  const visibleMeta = options.itemType === 'certificates' ? [] : (metaList || []);
+  visibleMeta.forEach((metaItem) => {
     const li = document.createElement('li');
     li.textContent = metaItem;
     modalMeta.append(li);
@@ -2424,6 +2414,7 @@ const setLanguageMenuOpen = (isOpen) => {
 };
 
 const refreshDynamicTexts = () => {
+  refreshCurrentWorkTriggers();
   activateFocus(currentFocusKey);
   renderProjectExplorer();
   renderCollection(portfolioData.certificates, certificatesGrid, 'certificates');

@@ -3,7 +3,7 @@
     "content": "Skip to content"
   },
   "nav": {
-    "home": "Home",
+    "home": "About me",
     "about": "About",
     "career": "Journey",
     "tech": "Tech Stack",
@@ -13,7 +13,7 @@
     "certificates": "Certificates"
   },
   "hero": {
-    "kicker": "Developer profile",
+    "kicker": "About me",
     "description": "I attend the IMS with a focus on application development and work on Python tools, web interfaces, APIs, tests, and data processing.",
     "projectsKicker": "Selected projects",
     "projectsTitle": "Easy to verify",
@@ -79,6 +79,20 @@
         "local helpers"
       ],
       "status": "Practice: Windows tools"
+    }
+  },
+  "currentWork": {
+    "kicker": "Current",
+    "title": "What I am working on",
+    "subline": "A short look at ongoing client and personal projects.",
+    "customerLabel": "Client project",
+    "ownLabel": "Personal project",
+    "status": "In progress",
+    "projects": {
+      "aargoclean": { "title": "Website for AARGO Clean GmbH", "description": "I am currently working on the website for AARGO Clean GmbH." },
+      "mmTransport": { "title": "Website for MM Transport & Assistance", "description": "I am currently working on the website for MM Transport & Assistance." },
+      "codexTwin": { "title": "CodexTwin", "description": "I am working on CodexTwin and continuing to develop both the idea and its implementation." },
+      "umr": { "title": "UMR", "description": "I am continuing work on UMR and regularly adding or improving features." }
     }
   },
   "about": {
