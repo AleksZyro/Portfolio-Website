@@ -166,12 +166,21 @@ await mkdir(path.dirname(output), { recursive: true });
 await writeFile(output, svg, 'utf8');
 const indexHtml = await readFile(indexPath, 'utf8');
 const streakPattern = /(<strong id="github-streak-value">)\d+(<\/strong>)/;
-const updatedIndexHtml = indexHtml.replace(
+const contributionImagePattern = /(<img src="assets\/contribution-graphic\.svg)(?:\?v=[^"]*)?("[^>]*>)/;
+const updatedIndexHtml = indexHtml
+  .replace(
   streakPattern,
   `$1${currentStreak}$2`
-);
+  )
+  .replace(
+    contributionImagePattern,
+    `$1?v=${today}$2`
+  );
 if (!streakPattern.test(indexHtml)) {
   throw new Error(`Could not update GitHub streak in ${indexPath}.`);
+}
+if (!contributionImagePattern.test(indexHtml)) {
+  throw new Error(`Could not update contribution image cache key in ${indexPath}.`);
 }
 await writeFile(indexPath, updatedIndexHtml, 'utf8');
 console.log(`Updated GitHub streak to ${currentStreak} days.`);
