@@ -344,9 +344,8 @@
         "cardDescription": "Zertifikat mit Vorschau, Details und PDF-Download in der Detailansicht.",
         "detailDescription": "Dieses Zertifikat kannst du direkt im Portfolio ansehen oder herunterladen.",
         "meta": [
-          "Format: PDF",
-          "Nachweis: Zertifikat",
-          "Download: verfügbar"
+          "Abgeschlossen am: 21.04.2026",
+          "Format: PDF"
         ],
         "previewLabel": "Zertifikat"
       },
@@ -355,9 +354,8 @@
         "cardDescription": "Zertifikat mit Vorschau, Details und PDF-Download in der Detailansicht.",
         "detailDescription": "Dieses Zertifikat kannst du direkt im Portfolio ansehen oder herunterladen.",
         "meta": [
-          "Format: PDF",
-          "Nachweis: Zertifikat",
-          "Download: verfügbar"
+          "Abgeschlossen am: 12.12.2025",
+          "Format: PDF"
         ],
         "previewLabel": "Zertifikat"
       },
@@ -366,9 +364,9 @@
         "cardDescription": "Zertifikat mit Vorschau, Details und PDF-Download in der Detailansicht.",
         "detailDescription": "Dieses Zertifikat kannst du direkt im Portfolio ansehen oder herunterladen.",
         "meta": [
-          "Format: PDF",
-          "Nachweis: Zertifikat",
-          "Download: verfügbar"
+          "Datum: 27. und 28.03.2026",
+          "Dauer: 2 Tage",
+          "Format: PDF"
         ],
         "previewLabel": "Zertifikat"
       }

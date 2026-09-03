@@ -344,9 +344,8 @@
         "cardDescription": "Certificate with preview, details and PDF download in the detail view.",
         "detailDescription": "You can view or download this certificate directly in the portfolio.",
         "meta": [
-          "Format: PDF",
-          "Proof: certificate",
-          "Download: available"
+          "Completed: 21 April 2026",
+          "Format: PDF"
         ],
         "previewLabel": "Certificate"
       },
@@ -355,9 +354,8 @@
         "cardDescription": "Certificate with preview, details and PDF download in the detail view.",
         "detailDescription": "You can view or download this certificate directly in the portfolio.",
         "meta": [
-          "Format: PDF",
-          "Proof: certificate",
-          "Download: available"
+          "Completed: 12 December 2025",
+          "Format: PDF"
         ],
         "previewLabel": "Certificate"
       },
@@ -366,9 +364,9 @@
         "cardDescription": "Certificate with preview, details and PDF download in the detail view.",
         "detailDescription": "You can view or download this certificate directly in the portfolio.",
         "meta": [
-          "Format: PDF",
-          "Proof: certificate",
-          "Download: available"
+          "Date: 27 and 28 March 2026",
+          "Duration: 2 days",
+          "Format: PDF"
         ],
         "previewLabel": "Certificate"
       }

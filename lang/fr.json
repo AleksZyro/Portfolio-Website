@@ -344,9 +344,8 @@
         "cardDescription": "Certificat avec aperçu, détails et téléchargement PDF dans la vue détaillée.",
         "detailDescription": "Ce certificat peut être consulté directement dans le portfolio ou téléchargé.",
         "meta": [
-          "Format: PDF",
-          "Preuve: certificat",
-          "Téléchargement: disponible"
+          "Terminé le : 21 avril 2026",
+          "Format : PDF"
         ],
         "previewLabel": "Certificat"
       },
@@ -355,9 +354,8 @@
         "cardDescription": "Certificat avec aperçu, détails et téléchargement PDF dans la vue détaillée.",
         "detailDescription": "Ce certificat peut être consulté directement dans le portfolio ou téléchargé.",
         "meta": [
-          "Format: PDF",
-          "Preuve: certificat",
-          "Téléchargement: disponible"
+          "Terminé le : 12 décembre 2025",
+          "Format : PDF"
         ],
         "previewLabel": "Certificat"
       },
@@ -366,9 +364,9 @@
         "cardDescription": "Certificat avec aperçu, détails et téléchargement PDF dans la vue détaillée.",
         "detailDescription": "Ce certificat peut être consulté directement dans le portfolio ou téléchargé.",
         "meta": [
-          "Format: PDF",
-          "Preuve: certificat",
-          "Téléchargement: disponible"
+          "Dates : 27 et 28 mars 2026",
+          "Durée : 2 jours",
+          "Format : PDF"
         ],
         "previewLabel": "Certificat"
       }

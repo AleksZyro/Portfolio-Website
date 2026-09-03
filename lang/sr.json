@@ -344,9 +344,8 @@
         "cardDescription": "Sertifikat sa pregledom, detaljima i PDF preuzimanjem u detaljnom prikazu.",
         "detailDescription": "Ovaj sertifikat možeš direktno pogledati ili preuzeti u portfoliju.",
         "meta": [
-          "Format: PDF",
-          "Dokaz: sertifikat",
-          "Preuzimanje: dostupno"
+          "Završeno: 21. april 2026.",
+          "Format: PDF"
         ],
         "previewLabel": "Sertifikat"
       },
@@ -355,9 +354,8 @@
         "cardDescription": "Sertifikat sa pregledom, detaljima i PDF preuzimanjem u detaljnom prikazu.",
         "detailDescription": "Ovaj sertifikat možeš direktno pogledati ili preuzeti u portfoliju.",
         "meta": [
-          "Format: PDF",
-          "Dokaz: sertifikat",
-          "Preuzimanje: dostupno"
+          "Završeno: 12. decembar 2025.",
+          "Format: PDF"
         ],
         "previewLabel": "Sertifikat"
       },
@@ -366,9 +364,9 @@
         "cardDescription": "Sertifikat sa pregledom, detaljima i PDF preuzimanjem u detaljnom prikazu.",
         "detailDescription": "Ovaj sertifikat možeš direktno pogledati ili preuzeti u portfoliju.",
         "meta": [
-          "Format: PDF",
-          "Dokaz: sertifikat",
-          "Preuzimanje: dostupno"
+          "Datum: 27. i 28. mart 2026.",
+          "Trajanje: 2 dana",
+          "Format: PDF"
         ],
         "previewLabel": "Sertifikat"
       }
