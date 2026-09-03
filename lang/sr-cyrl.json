@@ -89,9 +89,9 @@
     "ownLabel": "Лични пројекат",
     "status": "У раду",
     "projects": {
-      "aargoclean": { "title": "Веб сајт за AARGO Clean GmbH", "description": "Тренутно радим на веб сајту за фирму AARGO Clean GmbH." },
-      "mmTransport": { "title": "Веб сајт за MM Transport & Assistance", "description": "Тренутно радим на веб сајту за фирму MM Transport & Assistance." },
-      "codexTwin": { "title": "CodexTwin", "description": "Радим на пројекту CodexTwin и даље развијам идеју и имплементацију." },
+      "aargoclean": { "title": "Веб сајт за ААРГО Клин ГмбХ", "description": "Тренутно радим на веб сајту за фирму ААРГО Клин ГмбХ." },
+      "mmTransport": { "title": "Веб сајт за ММ Транспорт и Асистенс", "description": "Тренутно радим на веб сајту за фирму ММ Транспорт и Асистенс." },
+      "codexTwin": { "title": "КодексТвин", "description": "Радим на пројекту КодексТвин и даље развијам идеју и имплементацију." },
       "umr": { "title": "УМР", "description": "Настављам рад на пројекту УМР и редовно додајем или побољшавам функције." }
     }
   },
