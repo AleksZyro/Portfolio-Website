@@ -2,7 +2,8 @@ name: Update contribution SVG
 
 on:
   schedule:
-    - cron: "17 3 * * *"
+    # Early morning in Switzerland: 04:30 CEST / 03:30 CET.
+    - cron: "30 2 * * *"
   workflow_dispatch:
 
 permissions:

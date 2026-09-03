@@ -65,23 +65,32 @@ const maxCount = Math.max(1, ...days.map((day) => day.contributionCount));
 
 const contributionByDate = new Map(days.map((day) => [day.date, day.contributionCount]));
 const isoDate = (date) => date.toISOString().slice(0, 10);
+const localDateFormatter = new Intl.DateTimeFormat('en-CA', {
+  timeZone: 'Europe/Zurich',
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit'
+});
+const swissDate = (date) => localDateFormatter.format(date);
 const shiftDate = (date, amount) => {
   const shifted = new Date(date);
   shifted.setUTCDate(shifted.getUTCDate() + amount);
   return shifted;
 };
 
-let streakCursor = new Date();
-const today = isoDate(streakCursor);
-if ((contributionByDate.get(today) || 0) === 0) {
+const today = swissDate(new Date());
+const yesterdayDate = shiftDate(new Date(`${today}T00:00:00Z`), -1);
+let streakCursor = yesterdayDate;
+let completedStreak = 0;
+while ((contributionByDate.get(isoDate(streakCursor)) || 0) > 0) {
+  completedStreak += 1;
   streakCursor = shiftDate(streakCursor, -1);
 }
 
-let currentStreak = 0;
-while ((contributionByDate.get(isoDate(streakCursor)) || 0) > 0) {
-  currentStreak += 1;
-  streakCursor = shiftDate(streakCursor, -1);
-}
+// The daily run happens early in the morning. If yesterday was active, show
+// the expected value for today so a continuous streak stays current all day.
+const currentDayActive = (contributionByDate.get(today) || 0) > 0;
+const currentStreak = completedStreak > 0 ? completedStreak + 1 : (currentDayActive ? 1 : 0);
 
 const width = 960;
 const height = 224;
