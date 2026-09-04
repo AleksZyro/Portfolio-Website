@@ -324,6 +324,44 @@ const modalPreviewTitle = document.getElementById('modal-preview-title');
 const modalPreviewSubtitle = document.getElementById('modal-preview-subtitle');
 const modalPreviewLink = document.getElementById('modal-preview-link');
 const modalDownload = document.getElementById('modal-download');
+const migrationModal = document.getElementById('migration-modal');
+const migrationLink = document.getElementById('migration-link');
+const migrationClose = document.getElementById('migration-close');
+const migrationText = {
+  de: { kicker: 'Website-Umzug', title: 'Diese Website ist umgezogen', description: 'Meine aktuelle Website findest du neu unter aleksandar-nikolic.ch.', cta: 'Zur neuen Website', dismiss: 'Später ansehen' },
+  en: { kicker: 'Website moved', title: 'This website has moved', description: 'You can now find my current website at aleksandar-nikolic.ch.', cta: 'Go to the new website', dismiss: 'Stay here for now' },
+  fr: { kicker: 'Déménagement du site', title: 'Ce site a déménagé', description: 'Mon site actuel se trouve désormais sur aleksandar-nikolic.ch.', cta: 'Ouvrir le nouveau site', dismiss: 'Rester ici pour le moment' },
+  sr: { kicker: 'Sajt je preseljen', title: 'Ovaj sajt je preseljen', description: 'Moj aktuelni sajt je sada dostupan na aleksandar-nikolic.ch.', cta: 'Otvori novi sajt', dismiss: 'Ostani ovde za sada' },
+  'sr-cyrl': { kicker: 'Сајт је пресељен', title: 'Овај сајт је пресељен', description: 'Мој актуелни сајт је сада доступан на aleksandar-nikolic.ch.', cta: 'Отвори нови сајт', dismiss: 'Остани овде за сада' }
+};
+
+const isLegacyHost = window.location.hostname === 'aleksandar-nikolic.netlify.app';
+const updateMigrationNotice = () => {
+  if (!migrationModal || !isLegacyHost) return;
+  const copy = migrationText[currentLanguageCode] || migrationText.de;
+  migrationModal.querySelectorAll('[data-migration]').forEach((element) => {
+    element.textContent = copy[element.dataset.migration] || migrationText.de[element.dataset.migration];
+  });
+  if (migrationLink) {
+    const destination = new URL('https://aleksandar-nikolic.ch/');
+    destination.pathname = window.location.pathname;
+    destination.search = window.location.search;
+    destination.hash = window.location.hash;
+    migrationLink.href = destination.toString();
+  }
+};
+
+const showMigrationNotice = () => {
+  if (!isLegacyHost || !migrationModal || migrationModal.open) return;
+  updateMigrationNotice();
+  if (typeof migrationModal.showModal === 'function') migrationModal.showModal();
+  else migrationModal.setAttribute('open', '');
+};
+
+if (migrationClose && migrationModal) migrationClose.addEventListener('click', () => migrationModal.close());
+if (migrationModal) migrationModal.addEventListener('click', (event) => {
+  if (event.target === migrationModal) migrationModal.close();
+});
 
 const yearTarget = document.getElementById('year');
 const footerName = document.getElementById('footer-name');
@@ -368,6 +406,7 @@ const embeddedDictionaries = {
       proofStreak: 'GitHub Daily Streak'
     },
     focus: {
+      kicker: 'Aktuell',
       title: 'Technische Praxis',
       subline: 'Kurzer Überblick über die Bereiche, in denen ich aktuell praktisch arbeite.',
       web: {
@@ -535,6 +574,7 @@ const embeddedDictionaries = {
       proofStreak: 'GitHub Daily Streak'
     },
     focus: {
+      kicker: 'Current focus',
       title: 'Work areas',
       subline: 'A short overview of the areas where I currently work in practice.',
       web: {
@@ -688,6 +728,7 @@ const embeddedDictionaries = {
       proofStreak: 'GitHub Daily Streak'
     },
     focus: {
+      kicker: 'En ce moment',
       title: 'Domaines de travail',
       subline: 'Apercu court des domaines dans lesquels je travaille actuellement en pratique.',
       web: {
@@ -843,6 +884,7 @@ const embeddedDictionaries = {
       proofStreak: 'GitHub Daily Streak'
     },
     focus: {
+      kicker: 'Trenutno',
       title: 'Oblasti rada',
       subline: 'Kratak pregled oblasti u kojima trenutno prakticno radim.',
       web: {
@@ -999,6 +1041,7 @@ embeddedDictionaries['sr-cyrl'] = {
     bridge: 'Посебно ме занима како мали алати постају поуздане апликације: са јасном структуром, разумљивим коришћењем и добро документованим изменама.'
   },
   focus: {
+    kicker: 'Тренутно',
     title: 'Области рада',
     subline: 'Кратак преглед области у којима тренутно практично радим.',
     web: { tab: 'Веб', title: 'Веб', text: 'Веб интерфејси за пројекте учења, дешборде и портфолио пројекте.', points: ['ХТМЛ/ЦСС', 'ЈаваСкрипт', 'Реакт/Вите'], status: 'Пракса: ПатхЛаб, СортЛаб, ВСВ' },
@@ -2469,6 +2512,7 @@ const loadLanguage = async (languageCode) => {
   localStorage.setItem('portfolio-language', languageCode);
   selectLanguageButton(languageCode);
   updateLegalLinks(languageCode);
+  updateMigrationNotice();
 };
 
 const alignInitialHash = () => {
@@ -2583,4 +2627,6 @@ loadLanguage(initialLanguage).then(alignInitialHash).catch(() => {
   selectLanguageButton('de');
   alignInitialHash();
 });
+
+window.setTimeout(showMigrationNotice, 350);
 

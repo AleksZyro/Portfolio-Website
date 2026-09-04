@@ -69,11 +69,6 @@ http://127.0.0.1:8765
 - Bilder, Previews und PDFs liegen in `assets/`.
 - Neue öffentliche Projekte sollten im Portfolio mit Status, kurzer Beschreibung und Link ergänzt werden.
 
-## Repository-Metadaten Vorschlag
-
-- Description: `Personal developer portfolio website for projects, skills, certificates and contact information.`
-- Topics: `portfolio`, `developer-portfolio`, `ims`, `html`, `css`, `javascript`, `multilingual`, `github-pages`
-
 ## SEO und öffentliche Identität
 
 - Hauptdomain und Canonical-URL: `https://aleksandar-nikolic.ch/`
@@ -82,7 +77,3 @@ http://127.0.0.1:8765
 - `robots.txt` erlaubt das Crawling der Website und verweist auf `sitemap.xml`.
 - Die Sitemap enthält absichtlich nur die kanonische Startseite. Die Zertifikatsdateien bleiben aus Suchresultaten ausgeschlossen.
 - Die Startseite enthält `ProfilePage`-/`Person`-Daten mit dem echten Namen, dem Alias `AleksZyro` und dem verifizierten GitHub-Profil.
-
-## Status
-
-Aktiv in Bearbeitung. Projektstände im Portfolio werden bewusst ehrlich gekennzeichnet, zB. fertig, in Arbeit, lokal nutzbar oder nicht öffentlich verlinkt.

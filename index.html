@@ -187,6 +187,33 @@
       </div>
     </section>
 
+    <section class="focus-section section" id="current-work" aria-labelledby="focus-section-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker" data-i18n="focus.kicker">Aktuell</p>
+          <h2 id="focus-section-title" data-i18n="focus.title">Technische Praxis</h2>
+          <p class="section-subline" data-i18n="focus.subline">Kurzer Überblick über die Bereiche, in denen ich aktuell praktisch arbeite.</p>
+        </div>
+
+        <div class="focus-card reveal">
+          <div class="focus-tabs" role="tablist" aria-label="Aktuelle Arbeitsbereiche">
+            <button class="focus-tab is-active" type="button" role="tab" aria-selected="true" data-focus="web" data-i18n="focus.web.tab">Web</button>
+            <button class="focus-tab" type="button" role="tab" aria-selected="false" data-focus="backend" data-i18n="focus.backend.tab">Backend</button>
+            <button class="focus-tab" type="button" role="tab" aria-selected="false" data-focus="cloud" data-i18n="focus.cloud.tab">Tools</button>
+            <button class="focus-tab" type="button" role="tab" aria-selected="false" data-focus="automation" data-i18n="focus.automation.tab">Automatisierung</button>
+          </div>
+          <div class="focus-panel" role="tabpanel" aria-live="polite">
+            <div>
+              <h3 id="focus-title">Web</h3>
+              <p id="focus-text">Weboberflächen für Lernprojekte, Dashboards und Portfolio-Projekte.</p>
+            </div>
+            <ul id="focus-list" aria-label="Technologien im aktuellen Bereich"></ul>
+            <span class="live-status"><span class="dot" aria-hidden="true"></span><span id="focus-status">Praxis: PathLab, SortLab, VSW</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="career section" id="career" aria-labelledby="career-title">
       <div class="container">
         <div class="section-head reveal">
@@ -369,6 +396,19 @@
       </div>
     </section>
   </main>
+
+  <dialog id="migration-modal" class="migration-modal" aria-labelledby="migration-title" aria-describedby="migration-description">
+    <article class="migration-card">
+      <div class="migration-mark" aria-hidden="true">↗</div>
+      <p class="migration-kicker" data-migration="kicker">Website-Umzug</p>
+      <h2 id="migration-title" data-migration="title">Diese Website ist umgezogen</h2>
+      <p id="migration-description" data-migration="description">Meine aktuelle Website findest du neu unter aleksandar-nikolic.ch.</p>
+      <div class="migration-actions">
+        <a class="migration-primary" id="migration-link" href="https://aleksandar-nikolic.ch/" data-migration="cta">Zur neuen Website</a>
+        <button type="button" class="migration-secondary" id="migration-close" data-migration="dismiss">Später ansehen</button>
+      </div>
+    </article>
+  </dialog>
 
   <dialog id="detail-modal" class="detail-modal" aria-labelledby="modal-title">
     <article class="modal-card" id="modal-card">
