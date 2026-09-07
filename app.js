@@ -15,7 +15,8 @@ const portfolioData = {
         { label: 'GitHub', url: 'https://github.com/AleksZyro/PathLab' },
         { label: 'Demo', url: 'https://alekszyro.github.io/PathLab/' }
       ],
-      previewImage: 'assets/project-previews/pathlab.png'
+      previewImage: 'assets/project-previews/pathlab.png',
+      demoMedia: { src: 'assets/project-demos/pathlab-demo.webp', type: 'image', alt: 'Animierte PathLab-Demo' }
     },
     {
       id: 'sortlab',
@@ -31,7 +32,8 @@ const portfolioData = {
         { label: 'GitHub', url: 'https://github.com/AleksZyro/SortLab' },
         { label: 'Demo', url: 'https://alekszyro.github.io/SortLab/' }
       ],
-      previewImage: 'assets/project-previews/sortlab.png'
+      previewImage: 'assets/project-previews/sortlab.png',
+      demoMedia: { src: 'assets/project-demos/sortlab-demo.webp', type: 'image', alt: 'Animierte SortLab-Demo' }
     },
     {
       id: 'vsw',
@@ -76,7 +78,8 @@ const portfolioData = {
       links: [
         { label: 'GitHub', url: 'https://github.com/BotondCsereklye/internet-ein-aus' }
       ],
-      previewImage: 'assets/project-previews/internet-ein-aus.png'
+      previewImage: 'assets/project-previews/internet-ein-aus.png',
+      demoMedia: { src: 'assets/project-demos/internet-ein-aus-demo.gif', type: 'image', alt: 'Animierte Demo von Internet ein und aus' }
     }
   ],
   moreProjects: [
@@ -313,11 +316,12 @@ const modalClose = document.getElementById('modal-close');
 const modalTitle = document.getElementById('modal-title');
 const modalDescription = document.getElementById('modal-description');
 const modalMeta = document.getElementById('modal-meta');
-const modalKicker = document.querySelector('.modal-kicker');
 const modalPreviewLabel = document.querySelector('.modal-preview-label');
 const modalPreviewTitle = document.getElementById('modal-preview-title');
 const modalPreviewSubtitle = document.getElementById('modal-preview-subtitle');
-const modalPreviewLink = document.getElementById('modal-preview-link');
+const modalPreviewImage = document.getElementById('modal-preview-image');
+const modalPreviewVideo = document.getElementById('modal-preview-video');
+const modalProjectLinks = document.getElementById('modal-project-links');
 const modalDownload = document.getElementById('modal-download');
 const migrationModal = document.getElementById('migration-modal');
 const migrationLink = document.getElementById('migration-link');
@@ -1425,11 +1429,6 @@ const refreshCurrentWorkTriggers = () => {
     trigger.dataset.title = title;
     trigger.dataset.description = description;
     trigger.dataset.meta = JSON.stringify([type, status]);
-    if (trigger.matches('button')) {
-      trigger.removeAttribute('data-detail-trigger');
-      trigger.setAttribute('tabindex', '-1');
-      trigger.removeAttribute('aria-label');
-    }
   });
 };
 
@@ -1889,7 +1888,9 @@ const createCard = (item, typeKey = 'projects') => {
   detailButton.textContent = t('portfolio.detailsButton', embeddedDictionaries[currentLanguageCode]?.portfolio?.detailsButton || 'Details anzeigen');
   detailButton.dataset.detailTrigger = 'true';
   detailButton.dataset.title = displayItem.title;
-  detailButton.dataset.description = displayItem.detailDescription || displayItem.description || '';
+  detailButton.dataset.description = typeKey === 'projects'
+    ? displayItem.cardDescription || displayItem.description || ''
+    : displayItem.detailDescription || displayItem.description || '';
   detailButton.dataset.meta = JSON.stringify(displayItem.meta || []);
   detailButton.dataset.itemType = typeKey;
   if (item.file) {
@@ -1901,6 +1902,9 @@ const createCard = (item, typeKey = 'projects') => {
   if (item.previewImage) {
     detailButton.dataset.previewImage = item.previewImage;
   }
+  if (item.demoMedia) {
+    detailButton.dataset.demoMedia = JSON.stringify(item.demoMedia);
+  }
 
   if (item.links) {
     detailButton.dataset.links = JSON.stringify(item.links);
@@ -1909,12 +1913,16 @@ const createCard = (item, typeKey = 'projects') => {
   const openDetails = () => {
     openDetailModal(
       displayItem.title,
-      displayItem.detailDescription || displayItem.description || '',
+      typeKey === 'projects'
+        ? displayItem.cardDescription || displayItem.description || ''
+        : displayItem.detailDescription || displayItem.description || '',
       displayItem.meta || [],
       {
         file: typeKey === 'certificates' ? item.file || '' : '',
         previewLabel: displayItem.previewLabel || '',
         previewImage: item.previewImage || '',
+        demoMedia: item.demoMedia || null,
+        links: item.links || [],
         itemType: typeKey
       }
     );
@@ -2225,19 +2233,21 @@ const setModalDescription = (description) => {
     });
 };
 
-const configureModalFile = ({ file, previewLabel, previewImage, itemType }) => {
+const configureModalFile = ({ file, previewLabel, previewImage, demoMedia, links, itemType }) => {
   const isCertificate = itemType === 'certificates';
-  const hasPreviewImage = Boolean(previewImage);
+  const isProject = itemType === 'projects';
+  const media = demoMedia?.src
+    ? demoMedia
+    : previewImage
+      ? { src: previewImage, type: 'image', alt: '' }
+      : null;
+  const hasPreviewImage = Boolean(media);
+  const isVideo = media?.type === 'video';
   const hasDownload = isCertificate && Boolean(file);
 
   modalCard?.classList.toggle('is-document', isCertificate);
+  modalCard?.classList.toggle('is-project', isProject);
   modalCard?.classList.toggle('has-preview-image', hasPreviewImage);
-
-  if (modalKicker) {
-    modalKicker.textContent = isCertificate
-      ? t('modal.certificateKicker', 'Zertifikat')
-      : t('modal.projectKicker', 'Projektstatus');
-  }
 
   if (modalPreviewLabel) {
     modalPreviewLabel.hidden = hasPreviewImage;
@@ -2254,24 +2264,43 @@ const configureModalFile = ({ file, previewLabel, previewImage, itemType }) => {
     modalPreviewSubtitle.textContent = '';
   }
 
-  if (hasPreviewImage) {
-    modalCard?.style.setProperty('--modal-preview-image', 'url("' + previewImage + '")');
-  } else {
-    modalCard?.style.removeProperty('--modal-preview-image');
+  if (modalPreviewImage) {
+    modalPreviewImage.hidden = !hasPreviewImage || isVideo;
+    modalPreviewImage.alt = media?.alt || '';
+    if (hasPreviewImage && !isVideo) {
+      modalPreviewImage.src = media.src;
+    } else {
+      modalPreviewImage.removeAttribute('src');
+    }
   }
 
-  if (modalPreviewLink) {
-    modalPreviewLink.hidden = !hasPreviewImage;
-    modalPreviewLink.setAttribute('aria-disabled', String(!hasPreviewImage));
-    modalPreviewLink.tabIndex = hasPreviewImage ? 0 : -1;
-    modalPreviewLink.setAttribute('aria-label', hasPreviewImage
-      ? t('modal.openImage', 'Vorschau in neuem Tab öffnen')
-      : '');
-    if (hasPreviewImage) {
-      modalPreviewLink.href = previewImage;
+  if (modalPreviewVideo) {
+    modalPreviewVideo.hidden = !hasPreviewImage || !isVideo;
+    modalPreviewVideo.autoplay = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    modalPreviewVideo.muted = true;
+    modalPreviewVideo.loop = true;
+    if (hasPreviewImage && isVideo) {
+      modalPreviewVideo.src = media.src;
+      modalPreviewVideo.play().catch(() => {});
     } else {
-      modalPreviewLink.removeAttribute('href');
+      modalPreviewVideo.pause();
+      modalPreviewVideo.removeAttribute('src');
+      modalPreviewVideo.load();
     }
+  }
+
+  if (modalProjectLinks) {
+    modalProjectLinks.innerHTML = '';
+    modalProjectLinks.hidden = !isProject || !(links || []).length;
+    (isProject ? links || [] : []).forEach((linkItem) => {
+      const link = document.createElement('a');
+      link.className = 'modal-project-link';
+      link.href = linkItem.url;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      link.textContent = localizedLinkLabel(linkItem.label);
+      modalProjectLinks.append(link);
+    });
   }
 
   if (modalDownload) {
@@ -2298,9 +2327,12 @@ const openDetailModal = (title, description, metaList, options = {}) => {
   configureModalFile(options);
 
   const redundantCertificateMeta = /^(Aussteller|Issuer|Émetteur|Издавач|Izdavač|Verifikation|Verification|Vérification|Верификација|Verifikacija):/i;
-  const visibleMeta = options.itemType === 'certificates'
+  const visibleMeta = options.itemType === 'projects'
+    ? []
+    : options.itemType === 'certificates'
     ? (metaList || []).filter((metaItem) => !redundantCertificateMeta.test(metaItem))
     : (metaList || []);
+  modalMeta.hidden = options.itemType === 'projects';
   visibleMeta.forEach((metaItem) => {
     const li = document.createElement('li');
     li.className = 'modal-meta-item';
@@ -2334,8 +2366,17 @@ const tryParseMeta = (value) => {
   }
 };
 
+const tryParseObject = (value) => {
+  try {
+    const parsed = JSON.parse(value);
+    return parsed && typeof parsed === 'object' ? parsed : null;
+  } catch {
+    return null;
+  }
+};
+
 document.addEventListener('click', (event) => {
-  const trigger = event.target.closest('button[data-detail-trigger][data-title][data-description]:not([data-current-work])');
+  const trigger = event.target.closest('button[data-detail-trigger][data-title][data-description]');
   if (!trigger) {
     return;
   }
@@ -2348,6 +2389,8 @@ document.addEventListener('click', (event) => {
       file: trigger.dataset.file || '',
       previewLabel: trigger.dataset.previewLabel || '',
       previewImage: trigger.dataset.previewImage || '',
+      demoMedia: tryParseObject(trigger.dataset.demoMedia),
+      links: tryParseMeta(trigger.dataset.links),
       itemType: trigger.dataset.itemType || ''
     }
   );

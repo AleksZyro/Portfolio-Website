@@ -162,12 +162,12 @@
             <span class="current-work-status"><span class="dot" aria-hidden="true"></span><span data-i18n="currentWork.status">In Arbeit</span><span class="current-work-separator" aria-hidden="true">·</span><span data-i18n="currentWork.customerLabel">Kundenprojekt</span></span>
           </div>
 
-          <button class="current-work-card" type="button" data-detail-trigger data-current-work="mmTransport" data-work-type="customer" data-title="Website für MM Transport &amp; Assistance" data-description="Aktuell arbeite ich an der Website für die Firma MM Transport &amp; Assistance." data-meta='["Kundenprojekt", "In Arbeit"]' aria-label="Details zu Website für MM Transport &amp; Assistance öffnen">
+          <div class="current-work-card" data-current-work="mmTransport" data-work-type="customer">
             <div class="current-work-card-head">
               <h3 data-i18n="currentWork.projects.mmTransport.title">Website für MM Transport &amp; Assistance</h3>
             </div>
             <span class="current-work-status"><span class="dot" aria-hidden="true"></span><span data-i18n="currentWork.status">In Arbeit</span><span class="current-work-separator" aria-hidden="true">·</span><span data-i18n="currentWork.customerLabel">Kundenprojekt</span></span>
-          </button>
+          </div>
 
           <div class="current-work-card" data-current-work="codexTwin" data-work-type="own">
             <div class="current-work-card-head">
@@ -386,22 +386,22 @@
   <dialog id="detail-modal" class="detail-modal" aria-labelledby="modal-title">
     <article class="modal-card" id="modal-card">
       <div class="modal-head">
-        <div>
-          <p class="modal-kicker">Projektstatus</p>
-          <h3 id="modal-title" data-i18n="modal.title">Detailansicht</h3>
-        </div>
+        <h3 id="modal-title" data-i18n="modal.title">Detailansicht</h3>
         <div class="modal-actions">
           <a class="modal-download" id="modal-download" href="#" download hidden data-i18n="portfolioDownloadButton">Download PDF</a>
           <button type="button" class="modal-close" id="modal-close" aria-label="Detailansicht schliessen" title="Schliessen">×</button>
         </div>
       </div>
       <div class="modal-body">
-        <a class="modal-preview" id="modal-preview-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="Vorschau in neuem Tab öffnen" aria-disabled="true" tabindex="-1">
+        <div class="modal-preview" id="modal-preview">
+          <img class="modal-preview-media" id="modal-preview-image" alt="" hidden>
+          <video class="modal-preview-media" id="modal-preview-video" muted loop playsinline preload="metadata" hidden></video>
           <span class="modal-preview-label"></span>
           <span class="modal-preview-title" id="modal-preview-title"></span>
           <span class="modal-preview-subtitle" id="modal-preview-subtitle"></span>
-        </a>
+        </div>
         <div id="modal-description" class="modal-description"></div>
+        <div id="modal-project-links" class="modal-project-links" hidden></div>
         <ul id="modal-meta"></ul>
       </div>
     </article>
