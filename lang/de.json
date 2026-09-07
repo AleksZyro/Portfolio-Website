@@ -293,7 +293,7 @@
           "Hinweis: nur defensive Checks"
         ],
         "tags": [
-          "gemeinsam",
+          "Gemeinsam",
           "FastAPI",
           "React"
         ],
@@ -328,7 +328,7 @@
         ],
         "tags": [
           "Python",
-          "Hakaton"
+          "Hackathon"
         ],
         "filters": [
           "python",
@@ -342,7 +342,7 @@
     "certificates": {
       "ethicalHacker": {
         "title": "Ethical Hacker",
-        "cardDescription": "Zertifikat mit Vorschau, Details und PDF-Download in der Detailansicht.",
+        "cardDescription": "Zertifikat zu ethischen Hacking-Grundlagen und sicherheitsbewusstem Testen.",
         "detailDescription": "Dieses Zertifikat kannst du direkt im Portfolio ansehen oder herunterladen.",
         "meta": [
           "Abgeschlossen am: 21.04.2026",
@@ -352,7 +352,7 @@
       },
       "introCybersecurity": {
         "title": "Introduction to Cybersecurity",
-        "cardDescription": "Zertifikat mit Vorschau, Details und PDF-Download in der Detailansicht.",
+        "cardDescription": "Zertifikat mit Grundlagen zu Cybersecurity, Bedrohungen und Schutzmassnahmen.",
         "detailDescription": "Dieses Zertifikat kannst du direkt im Portfolio ansehen oder herunterladen.",
         "meta": [
           "Abgeschlossen am: 12.12.2025",
@@ -362,7 +362,7 @@
       },
       "bbbHackathon": {
         "title": "BBB Hackathon",
-        "cardDescription": "Zertifikat mit Vorschau, Details und PDF-Download in der Detailansicht.",
+        "cardDescription": "Teilnahmezertifikat für Baden hackt vom 27. und 28. März 2026.",
         "detailDescription": "Dieses Zertifikat kannst du direkt im Portfolio ansehen oder herunterladen.",
         "meta": [
           "Datum: 27. und 28.03.2026",

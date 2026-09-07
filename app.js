@@ -1208,7 +1208,7 @@ const embeddedPortfolioItems = {
     projects: {
       pathlab: { title: 'PathLab', cardDescription: 'Visualizer für Wegfindungsalgorithmen auf einem gewichteten Raster mit BFS, DFS, Dijkstra und A*.', tags: ['React/Vite', 'Tests', 'GitHub Pages'] },
       sortlab: { title: 'SortLab', cardDescription: 'Sortieralgorithmus-Visualizer mit Balkenansicht, Steuerung, Statistik und Erklärbereich.', tags: ['React/Vite', 'Algorithmen'] },
-      vsw: { title: 'VSW - Vulnerability Scanner Web App', cardDescription: 'Defensive Fullstack-Web-App für risikoarme Security-Checks an autorisierten Domains oder IPs.', tags: ['gemeinsam', 'FastAPI', 'React'] },
+      vsw: { title: 'VSW - Vulnerability Scanner Web App', cardDescription: 'Defensive Fullstack-Web-App für risikoarme Security-Checks an autorisierten Domains oder IPs.', tags: ['Gemeinsam', 'FastAPI', 'React'] },
       foliolint: { title: 'FolioLint', cardDescription: 'Lokales Python-CLI, das Repositories auf Portfolio-Tauglichkeit, README-Struktur und öffentliche Präsentierbarkeit prüft.', tags: ['Python', 'CLI', 'README'] },
       besp2074: { title: 'Internet ein und aus', cardDescription: 'Hackathon-Prototyp für eine Weboberfläche, die Internetzugang pro Schulzimmer oder Subnetz modelliert.', tags: ['Python', 'Hackathon'] }
     },

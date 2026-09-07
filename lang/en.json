@@ -342,7 +342,7 @@
     "certificates": {
       "ethicalHacker": {
         "title": "Ethical Hacker",
-        "cardDescription": "Certificate with preview, details and PDF download in the detail view.",
+        "cardDescription": "Certificate covering ethical hacking fundamentals and security-aware testing.",
         "detailDescription": "You can view or download this certificate directly in the portfolio.",
         "meta": [
           "Completed: 21 April 2026",
@@ -352,7 +352,7 @@
       },
       "introCybersecurity": {
         "title": "Introduction to Cybersecurity",
-        "cardDescription": "Certificate with preview, details and PDF download in the detail view.",
+        "cardDescription": "Certificate covering cybersecurity basics, threats, and protective measures.",
         "detailDescription": "You can view or download this certificate directly in the portfolio.",
         "meta": [
           "Completed: 12 December 2025",
@@ -362,7 +362,7 @@
       },
       "bbbHackathon": {
         "title": "BBB Hackathon",
-        "cardDescription": "Certificate with preview, details and PDF download in the detail view.",
+        "cardDescription": "Certificate of participation for Baden hackt on 27 and 28 March 2026.",
         "detailDescription": "You can view or download this certificate directly in the portfolio.",
         "meta": [
           "Date: 27 and 28 March 2026",

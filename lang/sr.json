@@ -342,7 +342,7 @@
     "certificates": {
       "ethicalHacker": {
         "title": "Ethical Hacker",
-        "cardDescription": "Sertifikat sa pregledom, detaljima i PDF preuzimanjem u detaljnom prikazu.",
+        "cardDescription": "Sertifikat o osnovama etičkog hakovanja i bezbednosno odgovornom testiranju.",
         "detailDescription": "Ovaj sertifikat možeš direktno pogledati ili preuzeti u portfoliju.",
         "meta": [
           "Završeno: 21. april 2026.",
@@ -352,7 +352,7 @@
       },
       "introCybersecurity": {
         "title": "Introduction to Cybersecurity",
-        "cardDescription": "Sertifikat sa pregledom, detaljima i PDF preuzimanjem u detaljnom prikazu.",
+        "cardDescription": "Sertifikat o osnovama sajber bezbednosti, pretnjama i merama zaštite.",
         "detailDescription": "Ovaj sertifikat možeš direktno pogledati ili preuzeti u portfoliju.",
         "meta": [
           "Završeno: 12. decembar 2025.",
@@ -362,7 +362,7 @@
       },
       "bbbHackathon": {
         "title": "BBB hakaton",
-        "cardDescription": "Sertifikat sa pregledom, detaljima i PDF preuzimanjem u detaljnom prikazu.",
+        "cardDescription": "Sertifikat o učešću na Baden hackt 27. i 28. marta 2026.",
         "detailDescription": "Ovaj sertifikat možeš direktno pogledati ili preuzeti u portfoliju.",
         "meta": [
           "Datum: 27. i 28. mart 2026.",
