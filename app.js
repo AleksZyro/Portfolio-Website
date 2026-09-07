@@ -1425,7 +1425,11 @@ const refreshCurrentWorkTriggers = () => {
     trigger.dataset.title = title;
     trigger.dataset.description = description;
     trigger.dataset.meta = JSON.stringify([type, status]);
-    trigger.setAttribute('aria-label', title);
+    if (trigger.matches('button')) {
+      trigger.removeAttribute('data-detail-trigger');
+      trigger.setAttribute('tabindex', '-1');
+      trigger.removeAttribute('aria-label');
+    }
   });
 };
 
@@ -2331,7 +2335,7 @@ const tryParseMeta = (value) => {
 };
 
 document.addEventListener('click', (event) => {
-  const trigger = event.target.closest('button[data-detail-trigger][data-title][data-description]');
+  const trigger = event.target.closest('button[data-detail-trigger][data-title][data-description]:not([data-current-work])');
   if (!trigger) {
     return;
   }
