@@ -1512,6 +1512,41 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   margin: 0;
 }
 #modal-meta { list-style: disc; padding-left: 18px; color: #ddd2ff; display: grid; gap: 6px; margin: 0; }
+.modal-card.is-document .modal-description {
+  padding: 16px 18px;
+  border: 1px solid rgba(169, 147, 255, 0.18);
+  border-left: 3px solid rgba(169, 147, 255, 0.72);
+  border-radius: 12px;
+  background: rgba(13, 11, 27, 0.42);
+}
+.modal-card.is-document .modal-description p { line-height: 1.65; }
+.modal-card.is-document #modal-meta {
+  list-style: none;
+  padding: 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+.modal-card.is-document .modal-meta-item {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid rgba(169, 147, 255, 0.18);
+  border-radius: 10px;
+  background: rgba(28, 20, 56, 0.54);
+}
+.modal-meta-label {
+  color: #aa9bd7;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.modal-meta-value {
+  color: #eee8ff;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
 
 .site-footer {
   border-top: 1px solid var(--line);
@@ -1668,6 +1703,7 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
 
   .modal-actions { flex-shrink: 0; }
   .modal-preview { width: 100%; max-width: 100%; padding: 12px; }
+  .modal-card.is-document #modal-meta { grid-template-columns: 1fr; }
 
   .project-list,
   .cards-grid,

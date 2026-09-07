@@ -2299,7 +2299,19 @@ const openDetailModal = (title, description, metaList, options = {}) => {
     : (metaList || []);
   visibleMeta.forEach((metaItem) => {
     const li = document.createElement('li');
-    li.textContent = metaItem;
+    li.className = 'modal-meta-item';
+    const separatorIndex = metaItem.indexOf(':');
+    if (separatorIndex > 0) {
+      const label = document.createElement('span');
+      label.className = 'modal-meta-label';
+      label.textContent = metaItem.slice(0, separatorIndex).trim();
+      const value = document.createElement('span');
+      value.className = 'modal-meta-value';
+      value.textContent = metaItem.slice(separatorIndex + 1).trim();
+      li.append(label, value);
+    } else {
+      li.textContent = metaItem;
+    }
     modalMeta.append(li);
   });
 
