@@ -17,7 +17,7 @@
   <meta name="twitter:description" content="Portfolio mit Python-, Web- und Open-Source-Projekten von Aleksandar Nikolić.">
   <link rel="me" href="https://github.com/AleksZyro">
   <title>Aleksandar Nikolić (AleksZyro) | IMS-Portfolio</title>
-  <link rel="stylesheet" href="style.css?v=20260903-modal-size-1">
+  <link rel="stylesheet" href="style.css?v=20260911-mobile-nav-1">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -264,6 +264,33 @@
           <p class="section-subline" data-i18n="portfolio.subline">Projekt-Explorer mit Status, Stack und Links oder Hinweisen.</p>
         </div>
 
+        <div class="project-puzzle reveal" id="project-puzzle" aria-label="Projekt-Schatzkiste">
+          <div class="project-puzzle-intro" id="project-puzzle-intro">
+            <button class="puzzle-chest" id="puzzle-chest" type="button" aria-controls="project-puzzle-dialog">
+              <span class="puzzle-chest-art">
+                <img class="puzzle-chest-image puzzle-chest-closed" src="assets/project-puzzle/treasure-chest-v1.png" alt="Geschlossene Schatzkiste" />
+                <img class="puzzle-chest-image puzzle-chest-open" src="assets/project-puzzle/treasure-chest-open-v1.png" alt="" aria-hidden="true" />
+              </span>
+              <span class="puzzle-chest-label" data-i18n="portfolio.projectPuzzle.openChest">Schatzkiste öffnen</span>
+            </button>
+          </div>
+          <div class="project-puzzle-dialog" id="project-puzzle-dialog" hidden>
+            <div class="puzzle-avatar" aria-hidden="true"><span>A</span></div>
+            <div class="puzzle-dialog-content">
+              <div class="puzzle-dialog-topline">
+                <span class="puzzle-label" data-i18n="portfolio.projectPuzzle.speaker">Aleksandar</span>
+                <span id="puzzle-progress" aria-live="polite">1 / 3</span>
+              </div>
+              <p class="puzzle-question" id="puzzle-question"></p>
+              <div class="puzzle-options" id="puzzle-options" role="group" aria-label="Antwortmöglichkeiten"></div>
+              <p class="puzzle-reaction" id="puzzle-reaction" aria-live="polite"></p>
+              <div class="puzzle-actions">
+                <button class="btn btn-ghost" id="puzzle-skip" type="button" data-i18n="portfolio.projectPuzzle.skip">Überspringen</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="project-explorer reveal">
           <div class="project-list" id="projects-grid" aria-label="Projektliste"></div>
         </div>
@@ -417,6 +444,6 @@
     </div>
   </footer>
 
-  <script src="app.js?v=20260903-certificate-modal-1" defer></script>
+  <script src="app.js?v=20260911-puzzle-session-2" defer></script>
 </body>
 </html>

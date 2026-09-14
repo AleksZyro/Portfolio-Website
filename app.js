@@ -298,6 +298,16 @@ const revealItems = document.querySelectorAll('.reveal');
 const tabs = document.querySelectorAll('.tab');
 const tabPanels = { projects: document.getElementById('panel-projects'), certificates: document.getElementById('panel-certificates') };
 const projectsGrid = document.getElementById('projects-grid');
+const projectPuzzle = document.getElementById('project-puzzle');
+const projectPuzzleIntro = document.getElementById('project-puzzle-intro');
+const projectPuzzleChest = document.getElementById('puzzle-chest');
+const projectPuzzleDialog = document.getElementById('project-puzzle-dialog');
+const projectPuzzleQuestion = document.getElementById('puzzle-question');
+const projectPuzzleOptions = document.getElementById('puzzle-options');
+const projectPuzzleReaction = document.getElementById('puzzle-reaction');
+const projectPuzzleProgress = document.getElementById('puzzle-progress');
+const projectPuzzleSkip = document.getElementById('puzzle-skip');
+const projectExplorer = document.querySelector('.project-explorer');
 const certificatesGrid = document.getElementById('certificates-grid');
 const openSourceList = document.getElementById('open-source-list');
 const currentWorkTriggers = document.querySelectorAll('[data-current-work]');
@@ -1815,6 +1825,169 @@ const renderStats = () => {
   yearsCountEl.textContent = String(yearsCoding);
 };
 
+const projectPuzzleCopy = {
+  de: {
+    questions: [
+      { text: 'Was würdest du in einer geheimen Schatzkiste erwarten?', options: ['Eine alte Karte', 'Einen Schlüssel', 'Eine geheime Nachricht', 'Etwas völlig Unerwartetes'], responses: ['Eine Karte also. Du willst zuerst verstehen, wohin der Weg führt.', 'Ein Schlüssel. Direkt zum Wesentlichen – kann ich respektieren.', 'Eine geheime Nachricht. Vielleicht steckt mehr in der Kiste, als man auf den ersten Blick sieht.', 'Das Unerwartete. Genau dafür ist eine Schatzkiste da.'] },
+      { text: 'Du betrittst einen unbekannten Raum. Was fällt dir zuerst auf?', options: ['Die Atmosphäre', 'Die versteckten Details', 'Der Weg nach draussen', 'Etwas, das sich bewegt'], responses: ['Die Atmosphäre zuerst – ein guter Raum erzählt bereits viel.', 'Du suchst die Details. Die interessanten Dinge sind selten ganz offensichtlich.', 'Pragmatisch: Erst Orientierung, dann Erkundung.', 'Bewegung fällt auf. Klingt, als wärst du aufmerksam.'] },
+      { text: 'Wie würdest du ein kleines Rätsel angehen?', options: ['Ausprobieren und sehen, was passiert', 'Erst alles genau beobachten', 'Hinweise zusammensetzen', 'Einfach meinem Gefühl folgen'], responses: ['Ausprobieren ist oft der schnellste Weg zu einer neuen Idee.', 'Genau beobachten spart später viele Umwege.', 'Hinweise verbinden: solide Strategie.', 'Manchmal ist das Bauchgefühl der beste erste Schritt.'] }
+    ],
+    reaction: 'Interessante Wahl. Du darfst weiter.',
+    progress: (index) => `${index + 1} / 3`
+  },
+  en: {
+    questions: [
+      { text: 'What would you expect to find in a secret treasure chest?', options: ['An old map', 'A key', 'A secret message', 'Something completely unexpected'], responses: ['A map. You want to understand where the path leads first.', 'A key. Straight to what matters – fair enough.', 'A secret message. Maybe there is more to this chest than meets the eye.', 'The unexpected. That is exactly what a treasure chest is for.'] },
+      { text: 'You enter an unfamiliar room. What do you notice first?', options: ['The atmosphere', 'The hidden details', 'The way out', 'Something that moves'], responses: ['The atmosphere first – a good room already tells a story.', 'You look for details. The interesting things are rarely obvious.', 'Practical: get your bearings, then explore.', 'Movement stands out. Sounds like you pay attention.'] },
+      { text: 'How would you approach a small riddle?', options: ['Try things and see what happens', 'Observe everything first', 'Piece the clues together', 'Trust my gut'], responses: ['Trying things is often the quickest route to a new idea.', 'Careful observation saves many detours later.', 'Connecting clues: a solid strategy.', 'Sometimes your instinct is the best first step.'] }
+    ],
+    reaction: 'Interesting choice. You may proceed.',
+    progress: (index) => `${index + 1} / 3`
+  },
+  fr: {
+    questions: [
+      { text: 'Que t’attendrais-tu à trouver dans un coffre au trésor secret ?', options: ['Une vieille carte', 'Une clé', 'Un message secret', 'Quelque chose d’inattendu'], responses: ['Une carte. Tu veux d’abord savoir où mène le chemin.', 'Une clé. Aller droit à l’essentiel, je respecte ça.', 'Un message secret. Il y a peut-être plus dans ce coffre qu’il n’y paraît.', 'L’inattendu. C’est exactement à ça que sert un coffre au trésor.'] },
+      { text: 'Tu entres dans une pièce inconnue. Que remarques-tu en premier ?', options: ['L’ambiance', 'Les détails cachés', 'La sortie', 'Quelque chose qui bouge'], responses: ['L’ambiance d’abord : une bonne pièce raconte déjà quelque chose.', 'Tu cherches les détails. Les choses intéressantes sont rarement évidentes.', 'Pragmatique : d’abord s’orienter, ensuite explorer.', 'Le mouvement attire ton attention. Tu sembles attentif.'] },
+      { text: 'Comment aborderais-tu une petite énigme ?', options: ['Essayer et voir ce qui se passe', 'Tout observer d’abord', 'Assembler les indices', 'Suivre mon intuition'], responses: ['Essayer est souvent le chemin le plus rapide vers une idée.', 'Bien observer évite beaucoup de détours.', 'Relier les indices : une stratégie solide.', 'Parfois, l’intuition est le meilleur premier pas.'] }
+    ],
+    reaction: 'Choix intéressant. Tu peux continuer.',
+    progress: (index) => `${index + 1} / 3`
+  },
+  sr: {
+    questions: [
+      { text: 'Šta bi očekivao da pronađeš u tajnom kovčegu s blagom?', options: ['Staru mapu', 'Ključ', 'Tajnu poruku', 'Nešto potpuno neočekivano'], responses: ['Mapu. Prvo želiš da znaš kuda vodi put.', 'Ključ. Odmah na suštinu – pošteno.', 'Tajnu poruku. Možda u kovčegu ima više nego što se na prvi pogled vidi.', 'Nešto neočekivano. Upravo je za to kovčeg s blagom.'] },
+      { text: 'Ulaziš u nepoznatu prostoriju. Šta prvo primećuješ?', options: ['Atmosferu', 'Skrivene detalje', 'Izlaz', 'Nešto što se kreće'], responses: ['Prvo atmosferu – dobra prostorija već priča priču.', 'Tražiš detalje. Zanimljive stvari retko su očigledne.', 'Praktično: prvo se orijentiši, pa istražuj.', 'Pokret se ističe. Deluje da obraćaš pažnju.'] },
+      { text: 'Kako bi rešavao malu zagonetku?', options: ['Probao bih i video šta će se desiti', 'Prvo bih sve pažljivo posmatrao', 'Spojio bih tragove', 'Pratio bih osećaj'], responses: ['Isprobavanje je često najbrži put do nove ideje.', 'Pažljivo posmatranje kasnije štedi mnogo zaobilazaka.', 'Povezivanje tragova: dobra strategija.', 'Ponekad je osećaj najbolji prvi korak.'] }
+    ],
+    reaction: 'Zanimljiv izbor. Možeš dalje.',
+    progress: (index) => `${index + 1} / 3`
+  },
+  'sr-cyrl': {
+    questions: [
+      { text: 'Шта би очекивао да пронађеш у тајном ковчегу с благом?', options: ['Стару мапу', 'Кључ', 'Тајну поруку', 'Нешто потпуно неочекивано'], responses: ['Мапу. Прво желиш да знаш куда води пут.', 'Кључ. Одмах на суштину – поштено.', 'Тајну поруку. Можда у ковчегу има више него што се на први поглед види.', 'Нешто неочекивано. Управо је за то ковчег с благом.'] },
+      { text: 'Улазиш у непознату просторију. Шта прво примећујеш?', options: ['Атмосферу', 'Скривене детаље', 'Излаз', 'Нешто што се креће'], responses: ['Прво атмосферу – добра просторија већ прича причу.', 'Тражиш детаље. Занимљиве ствари ретко су очигледне.', 'Практично: прво се оријентиши, па истражуј.', 'Покрет се истиче. Дјелује да обраћаш пажњу.'] },
+      { text: 'Како би решавао малу загонетку?', options: ['Пробао бих и видео шта ће се десити', 'Прво бих све пажљиво посматрао', 'Спојио бих трагове', 'Пратио бих осећај'], responses: ['Испробавање је често најбржи пут до нове идеје.', 'Пажљиво посматрање касније штеди много заобилазака.', 'Повезивање трагова: добра стратегија.', 'Понекад је осјећај најбољи први корак.'] }
+    ],
+    reaction: 'Занимљив избор. Можеш да наставиш.',
+    progress: (index) => `${index + 1} / 3`
+  }
+};
+
+let projectPuzzleQuestionIndex = 0;
+let projectPuzzleIsOpen = false;
+let projectPuzzleIsReady = false;
+let projectPuzzleIsUnlocked = (() => {
+  try {
+    return sessionStorage.getItem('project-puzzle-unlocked-session-v2') === 'true';
+  } catch {
+    return false;
+  }
+})();
+
+const saveProjectPuzzleUnlock = () => {
+  try {
+    sessionStorage.setItem('project-puzzle-unlocked-session-v2', 'true');
+  } catch {
+    // The projects remain available for this visit even if session storage is blocked.
+  }
+};
+
+const unlockProjectPuzzle = () => {
+  if (projectPuzzleIsUnlocked) return;
+  projectPuzzleIsUnlocked = true;
+  projectPuzzleIsOpen = false;
+  saveProjectPuzzleUnlock();
+  if (projectPuzzleDialog) projectPuzzleDialog.hidden = true;
+  projectPuzzle?.classList.add('is-opening');
+  window.setTimeout(() => projectPuzzle?.classList.add('is-leaving'), 1150);
+  window.setTimeout(() => {
+    if (projectPuzzle) projectPuzzle.hidden = true;
+    if (projectExplorer) projectExplorer.hidden = false;
+    if (projectsGrid) {
+      projectsGrid.hidden = false;
+      projectsGrid.setAttribute('aria-hidden', 'false');
+    }
+  }, 2050);
+};
+
+const prepareProjectPuzzleUnlock = () => {
+  projectPuzzleIsOpen = false;
+  projectPuzzleIsReady = true;
+  if (projectPuzzleDialog) projectPuzzleDialog.hidden = true;
+  if (projectPuzzleIntro) projectPuzzleIntro.hidden = false;
+};
+
+const renderProjectPuzzle = () => {
+  if (!projectPuzzle || !projectsGrid) return;
+  const copy = projectPuzzleCopy[currentLanguageCode] || projectPuzzleCopy.de;
+  if (projectExplorer) projectExplorer.hidden = !projectPuzzleIsUnlocked;
+  projectsGrid.hidden = !projectPuzzleIsUnlocked;
+  projectsGrid.setAttribute('aria-hidden', String(!projectPuzzleIsUnlocked));
+  if (projectPuzzleIsUnlocked) {
+    projectPuzzle.hidden = true;
+    if (projectPuzzleDialog) projectPuzzleDialog.hidden = true;
+    return;
+  }
+  projectPuzzle.hidden = false;
+  projectPuzzle.classList.remove('is-opening', 'is-leaving');
+  if (projectPuzzleIntro) projectPuzzleIntro.hidden = projectPuzzleIsOpen && !projectPuzzleIsReady;
+  if (projectPuzzleDialog) projectPuzzleDialog.hidden = !projectPuzzleIsOpen || projectPuzzleIsReady;
+  if (!projectPuzzleIsOpen || projectPuzzleIsReady) return;
+
+  const question = copy.questions[projectPuzzleQuestionIndex];
+  if (!question) return;
+  if (projectPuzzleQuestion) projectPuzzleQuestion.textContent = question.text;
+  if (projectPuzzleProgress) projectPuzzleProgress.textContent = copy.progress(projectPuzzleQuestionIndex);
+  if (projectPuzzleReaction) projectPuzzleReaction.textContent = '';
+  if (projectPuzzleOptions) {
+    projectPuzzleOptions.innerHTML = '';
+    question.options.forEach((optionText) => {
+      const option = document.createElement('button');
+      option.type = 'button';
+      option.className = 'puzzle-option';
+      option.textContent = optionText;
+      projectPuzzleOptions.append(option);
+    });
+  }
+};
+
+const openProjectPuzzle = () => {
+  if (projectPuzzleIsReady) {
+    unlockProjectPuzzle();
+    return;
+  }
+  if (projectPuzzleIsOpen) return;
+  projectPuzzleIsOpen = true;
+  projectPuzzleQuestionIndex = 0;
+  renderProjectPuzzle();
+  projectPuzzleOptions?.querySelector('button')?.focus();
+};
+
+projectPuzzleChest?.addEventListener('click', openProjectPuzzle);
+projectPuzzleSkip?.addEventListener('click', unlockProjectPuzzle);
+projectPuzzleOptions?.addEventListener('click', (event) => {
+  const option = event.target.closest('.puzzle-option');
+  if (!option) return;
+  const copy = projectPuzzleCopy[currentLanguageCode] || projectPuzzleCopy.de;
+  const question = copy.questions[projectPuzzleQuestionIndex];
+  const optionIndex = [...projectPuzzleOptions.querySelectorAll('.puzzle-option')].indexOf(option);
+  projectPuzzleOptions.querySelectorAll('.puzzle-option').forEach((button) => { button.disabled = true; });
+  option.classList.add('is-selected');
+  if (projectPuzzleReaction) projectPuzzleReaction.textContent = question.responses?.[optionIndex] || copy.reaction;
+  if (projectPuzzleQuestionIndex >= copy.questions.length - 1) {
+    window.setTimeout(prepareProjectPuzzleUnlock, 1450);
+    return;
+  }
+  projectPuzzleQuestionIndex += 1;
+  window.setTimeout(renderProjectPuzzle, 1450);
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && projectPuzzleIsOpen && !projectPuzzleIsUnlocked) {
+    unlockProjectPuzzle();
+  }
+});
+
 const createCard = (item, typeKey = 'projects') => {
   const displayItem = localizedPortfolioItem(item, typeKey);
   const card = document.createElement('article');
@@ -2467,6 +2640,7 @@ const setLanguageMenuOpen = (isOpen) => {
 
 const refreshDynamicTexts = () => {
   refreshCurrentWorkTriggers();
+  renderProjectPuzzle();
   renderProjectExplorer();
   renderCollection(portfolioData.certificates, certificatesGrid, 'certificates');
   renderOpenSourceContributions();

@@ -183,7 +183,16 @@
     "detailEmptyTitle": "Select a project",
     "detailEmptyText": "Click a project card to show status, stack, role, and learning focus.",
     "moreProjectsTitle": "More projects",
-    "moreProjectsSubline": "More projects that I have completed or am still developing."
+    "moreProjectsSubline": "More projects that I have completed or am still developing.",
+    "projectPuzzle": {
+      "label": "Small side quest",
+      "title": "A short detour to the projects",
+      "intro": "Three questions, four answers, and no wrong choice.",
+      "openChest": "Open treasure chest",
+      "speaker": "Aleksandar",
+      "skip": "Skip",
+      "unlocked": "The chest is open. Enjoy exploring."
+    }
   },
   "filters": {
     "all": "All",

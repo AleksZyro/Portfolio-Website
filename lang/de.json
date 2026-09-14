@@ -183,7 +183,16 @@
     "detailEmptyTitle": "Projekt auswählen",
     "detailEmptyText": "Klicke auf eine Projektkarte, um Status, Stack, Rolle und Lerneffekt anzuzeigen.",
     "moreProjectsTitle": "Weitere Projekte",
-    "moreProjectsSubline": "Weitere Projekte, die ich fertiggestellt habe oder aktuell noch entwickle."
+    "moreProjectsSubline": "Weitere Projekte, die ich fertiggestellt habe oder aktuell noch entwickle.",
+    "projectPuzzle": {
+      "label": "Kleine Nebenquest",
+      "title": "Ein kurzer Umweg zu den Projekten",
+      "intro": "Drei Fragen, vier Antworten und keine falsche Wahl.",
+      "openChest": "Schatzkiste öffnen",
+      "speaker": "Aleksandar",
+      "skip": "Überspringen",
+      "unlocked": "Die Schatzkiste ist offen. Viel Spass beim Stöbern."
+    }
   },
   "filters": {
     "all": "Alle",

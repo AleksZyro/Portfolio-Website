@@ -183,7 +183,16 @@
     "detailEmptyTitle": "Choisir un projet",
     "detailEmptyText": "Clique sur une carte de projet pour afficher le statut, le stack, le rôle et ce que le projet m’apporte.",
     "moreProjectsTitle": "Autres projets",
-    "moreProjectsSubline": "Autres projets que j'ai terminés ou que je développe encore actuellement."
+    "moreProjectsSubline": "Autres projets que j'ai terminés ou que je développe encore actuellement.",
+    "projectPuzzle": {
+      "label": "Petite quête secondaire",
+      "title": "Un court détour vers les projets",
+      "intro": "Trois questions, quatre réponses et aucun mauvais choix.",
+      "openChest": "Ouvrir le coffre au trésor",
+      "speaker": "Aleksandar",
+      "skip": "Passer",
+      "unlocked": "Le coffre est ouvert. Bonne exploration."
+    }
   },
   "filters": {
     "all": "Tous",
