@@ -613,6 +613,35 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   gap: 14px;
 }
 
+.project-group-heading {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 4px;
+  margin-top: clamp(10px, 2vw, 18px);
+  padding-top: clamp(18px, 3vw, 28px);
+  border-top: 1px solid rgba(185, 174, 220, 0.18);
+}
+
+.project-group-heading-featured {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.project-group-heading h3 {
+  color: var(--text);
+  font-family: "Space Grotesk", "Sora", sans-serif;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  line-height: 1.2;
+}
+
+.project-group-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
 .compact-certificates {
   display: grid;
   gap: 14px;
@@ -870,6 +899,33 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
 .item-card.is-selected {
   border-color: rgba(150, 122, 255, 0.62);
   background: rgba(31, 24, 51, 0.94);
+}
+
+.featured-project-card {
+  border-color: rgba(150, 122, 255, 0.34);
+  background:
+    linear-gradient(180deg, rgba(141, 108, 255, 0.08), transparent 38%),
+    var(--surface);
+}
+
+.featured-project-card:hover,
+.featured-project-card:focus-within {
+  border-color: rgba(169, 147, 255, 0.68);
+}
+
+.featured-project-result {
+  margin-top: 2px;
+  padding: 10px 11px;
+  border-left: 2px solid rgba(180, 167, 229, 0.84);
+  border-radius: 0 9px 9px 0;
+  background: rgba(15, 13, 26, 0.54);
+}
+
+.project-evidence-result {
+  margin: 0;
+  color: #e5ddff;
+  font-size: 0.84rem;
+  line-height: 1.48;
 }
 
 
@@ -1336,6 +1392,48 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   font-size: 0.95rem;
 }
 .modal-card.is-project .modal-description p { line-height: 1.55; }
+.modal-project-evidence {
+  display: grid;
+  gap: 10px;
+}
+.project-evidence {
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid rgba(169, 147, 255, 0.25);
+  border-radius: 12px;
+  background: rgba(12, 11, 22, 0.42);
+}
+.project-evidence-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+}
+.project-evidence-list > div {
+  display: grid;
+  grid-template-columns: minmax(106px, 0.32fr) minmax(0, 1fr);
+  gap: 12px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(185, 174, 220, 0.14);
+}
+.project-evidence-list > div:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+.project-evidence-list dt {
+  color: var(--accent-2);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  line-height: 1.45;
+  text-transform: uppercase;
+}
+.project-evidence-list dd {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
 .modal-project-links {
   display: flex;
   flex-wrap: wrap;
@@ -1825,6 +1923,11 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   }
   .language-switch { order: 4; margin-top: 4px; }
   .lang-menu-button { min-height: 36px; min-width: 78px; padding-inline: 10px; font-size: .78rem; }
+
+  .project-group-heading { margin-top: 6px; padding-top: 18px; }
+  .project-group-heading-featured { margin-top: 0; padding-top: 0; }
+  .featured-project-result { padding: 9px 10px; }
+  .project-evidence-list > div { grid-template-columns: 1fr; gap: 3px; }
 
   .current-work-card { align-items: flex-start; flex-direction: column; gap: 8px; }
   .current-work-status { font-size: .78rem; }

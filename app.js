@@ -15,7 +15,10 @@ const portfolioData = {
         { label: 'GitHub', url: 'https://github.com/AleksZyro/PathLab' },
         { label: 'Demo', url: 'https://alekszyro.github.io/PathLab/' }
       ],
+      featured: true,
       previewImage: 'assets/project-previews/pathlab.png',
+      previewWidth: 1440,
+      previewHeight: 1074,
       demoMedia: { src: 'assets/project-demos/pathlab-demo.webp', type: 'image', alt: 'Animierte PathLab-Demo' }
     },
     {
@@ -32,7 +35,10 @@ const portfolioData = {
         { label: 'GitHub', url: 'https://github.com/AleksZyro/SortLab' },
         { label: 'Demo', url: 'https://alekszyro.github.io/SortLab/' }
       ],
+      featured: true,
       previewImage: 'assets/project-previews/sortlab.png',
+      previewWidth: 1440,
+      previewHeight: 950,
       demoMedia: { src: 'assets/project-demos/sortlab-demo.webp', type: 'image', alt: 'Animierte SortLab-Demo' }
     },
     {
@@ -48,7 +54,10 @@ const portfolioData = {
       links: [
         { label: 'GitHub', url: 'https://github.com/BotondCsereklye/VSW' }
       ],
-      previewImage: 'assets/project-previews/vsw.jpeg'
+      featured: true,
+      previewImage: 'assets/project-previews/vsw.jpeg',
+      previewWidth: 2804,
+      previewHeight: 1594
     },
     {
       id: 'foliolint',
@@ -63,7 +72,9 @@ const portfolioData = {
       links: [
         { label: 'GitHub', url: 'https://github.com/AleksZyro/FolioLint' }
       ],
-      previewImage: 'assets/project-previews/foliolint.png'
+      previewImage: 'assets/project-previews/foliolint.png',
+      previewWidth: 1486,
+      previewHeight: 838
     },
     {
       id: 'besp2074',
@@ -79,6 +90,8 @@ const portfolioData = {
         { label: 'GitHub', url: 'https://github.com/BotondCsereklye/internet-ein-aus' }
       ],
       previewImage: 'assets/project-previews/internet-ein-aus.png',
+      previewWidth: 1440,
+      previewHeight: 1000,
       demoMedia: { src: 'assets/project-demos/internet-ein-aus-demo.gif', type: 'image', alt: 'Animierte Demo von Internet ein und aus' }
     }
   ],
@@ -326,6 +339,7 @@ const modalClose = document.getElementById('modal-close');
 const modalTitle = document.getElementById('modal-title');
 const modalDescription = document.getElementById('modal-description');
 const modalMeta = document.getElementById('modal-meta');
+const modalProjectEvidence = document.getElementById('modal-project-evidence');
 const modalPreviewLabel = document.querySelector('.modal-preview-label');
 const modalPreviewTitle = document.getElementById('modal-preview-title');
 const modalPreviewSubtitle = document.getElementById('modal-preview-subtitle');
@@ -1290,6 +1304,202 @@ const embeddedPortfolioItems = {
   }
 };
 
+const projectEvidenceCopy = {
+  de: {
+    pathlab: {
+      result: 'Ergebnis: Öffentliche GitHub-Pages-Demo mit Vergleich von vier Wegfindungsalgorithmen sowie getrennten Kosten- und Zeitanzeigen.',
+      details: [
+        ['Problem', 'Macht Unterschiede zwischen Wegfindungsalgorithmen auf gewichteten Feldern nachvollziehbar.'],
+        ['Mein Beitrag', 'Eigenes Lern- und Portfolio-Projekt mit Raster, Visualisierung, Vergleich und UI-State.'],
+        ['Technik & Entscheidung', 'React, Vite, JavaScript und CSS; Wasser kostet 5, Schlamm 10, A* nutzt eine Manhattan-Heuristik.'],
+        ['Qualität', 'Vitest für Algorithmen, Raster und Undo/Redo; GitHub Actions führt npm ci, Tests und Build aus.'],
+        ['Resultat', 'BFS, DFS, Dijkstra und A* lassen sich auf demselben Raster ausführen und vergleichen.']
+      ]
+    },
+    sortlab: {
+      result: 'Ergebnis: Fertig nutzbare GitHub-Pages-Demo, die fünf Sortierverfahren mit verständlichen Kennzahlen sichtbar macht.',
+      details: [
+        ['Problem', 'Macht den Ablauf und die Unterschiede von Sortieralgorithmen Schritt für Schritt sichtbar.'],
+        ['Mein Beitrag', 'Eigenes Lernprojekt mit Bedienung, Animation, Vergleichsmodus und Statistik.'],
+        ['Technik & Entscheidung', 'React, Vite, JavaScript und CSS; Animationszustände sind von der UI getrennt, „Bewegungen“ statt nur Swaps.'],
+        ['Qualität', '42 lokal bestandene Vitest-Tests prüfen Algorithmen, Randfälle und Zählungen; GitHub Actions nutzt npm ci.'],
+        ['Resultat', 'Bubble, Selection, Insertion, Quick und Heap Sort können mit Vergleichen, Bewegungen und Zeitangaben verglichen werden.']
+      ]
+    },
+    vsw: {
+      result: 'Ergebnis: Lokale Fullstack-Anwendung für defensive Checks mit verständlichen Findings, Evidenz, Empfehlungen und Exporten.',
+      details: [
+        ['Problem', 'Ordnet fehlende Security Header, TLS-Probleme und sichere Port-Checks für autorisierte Ziele verständlich ein.'],
+        ['Mein Beitrag', 'Gemeinsames Projekt mit Botond; eigene Commits belegen Scanner-Härtung, Windows-Start und Release-Dokumentation.'],
+        ['Technik & Entscheidung', 'FastAPI, React, TypeScript, SQLite/PostgreSQL und Docker; bewusst nur passive oder risikoarme Checks.'],
+        ['Qualität', 'Pytest-, Vitest- und Testing-Library-Tests für Backend, Frontend und Extension; zusätzlich Rate-Limit und Target-Validierung.'],
+        ['Resultat', 'Reports speichern, vergleichen sowie als JSON oder CSV exportieren; keine Exploits, kein Brute Force und keine aggressiven Scans.']
+      ]
+    }
+  },
+  en: {
+    pathlab: {
+      result: 'Result: Public GitHub Pages demo comparing four pathfinding algorithms with separate cost and timing information.',
+      details: [
+        ['Problem', 'Makes the differences between pathfinding algorithms on weighted terrain understandable.'],
+        ['My contribution', 'Independent learning and portfolio project covering the grid, visualization, comparison, and UI state.'],
+        ['Technology & decision', 'React, Vite, JavaScript, and CSS; water costs 5, mud 10, and A* uses a Manhattan heuristic.'],
+        ['Quality', 'Vitest covers algorithms, grid logic, and undo/redo; GitHub Actions runs npm ci, tests, and build.'],
+        ['Result', 'BFS, DFS, Dijkstra, and A* can be run and compared on the same grid.']
+      ]
+    },
+    sortlab: {
+      result: 'Result: A usable GitHub Pages demo that makes five sorting algorithms visible with understandable metrics.',
+      details: [
+        ['Problem', 'Makes the steps and differences of sorting algorithms visible.'],
+        ['My contribution', 'Independent learning project with controls, animation, comparison mode, and statistics.'],
+        ['Technology & decision', 'React, Vite, JavaScript, and CSS; animation states are kept separate from the UI, and “moves” are used instead of only swaps.'],
+        ['Quality', '42 locally passing Vitest tests cover algorithms, edge cases, and counters; GitHub Actions uses npm ci.'],
+        ['Result', 'Bubble, Selection, Insertion, Quick, and Heap Sort can be compared through comparisons, moves, and timings.']
+      ]
+    },
+    vsw: {
+      result: 'Result: A local full-stack application for defensive checks with understandable findings, evidence, recommendations, and exports.',
+      details: [
+        ['Problem', 'Presents missing security headers, TLS issues, and safe port checks for authorized targets in an understandable way.'],
+        ['My contribution', 'Team project with Botond; my commits document scanner hardening, Windows startup, and release documentation.'],
+        ['Technology & decision', 'FastAPI, React, TypeScript, SQLite/PostgreSQL, and Docker; deliberately limited to passive or low-risk checks.'],
+        ['Quality', 'Pytest, Vitest, and Testing Library tests cover backend, frontend, and extension; also rate limiting and target validation.'],
+        ['Result', 'Reports can be stored, compared, and exported as JSON or CSV; there are no exploits, brute force, or aggressive scans.']
+      ]
+    }
+  },
+  fr: {
+    pathlab: {
+      result: 'Résultat : démo publique GitHub Pages comparant quatre algorithmes de recherche de chemin, avec coûts et temps séparés.',
+      details: [
+        ['Problème', 'Rend compréhensibles les différences entre les algorithmes de recherche de chemin sur des terrains pondérés.'],
+        ['Ma contribution', 'Projet personnel d’apprentissage et de portfolio : grille, visualisation, comparaison et état de l’interface.'],
+        ['Technique et choix', 'React, Vite, JavaScript et CSS ; eau à 5, boue à 10, A* avec heuristique de Manhattan.'],
+        ['Qualité', 'Vitest couvre les algorithmes, la grille et annuler/rétablir ; GitHub Actions exécute npm ci, les tests et le build.'],
+        ['Résultat', 'BFS, DFS, Dijkstra et A* peuvent être exécutés et comparés sur la même grille.']
+      ]
+    },
+    sortlab: {
+      result: 'Résultat : démo GitHub Pages utilisable qui rend visibles cinq algorithmes de tri avec des indicateurs compréhensibles.',
+      details: [
+        ['Problème', 'Rend visibles les étapes et les différences entre les algorithmes de tri.'],
+        ['Ma contribution', 'Projet personnel d’apprentissage avec commandes, animation, mode comparaison et statistiques.'],
+        ['Technique et choix', 'React, Vite, JavaScript et CSS ; états d’animation séparés de l’interface, « mouvements » au lieu de seuls swaps.'],
+        ['Qualité', '42 tests Vitest réussis localement couvrent algorithmes, cas limites et compteurs ; GitHub Actions utilise npm ci.'],
+        ['Résultat', 'Bubble, Selection, Insertion, Quick et Heap Sort sont comparables par comparaisons, mouvements et temps.']
+      ]
+    },
+    vsw: {
+      result: 'Résultat : application full-stack locale pour des contrôles défensifs, avec constats, preuves, recommandations et exports.',
+      details: [
+        ['Problème', 'Présente clairement les en-têtes de sécurité manquants, les problèmes TLS et les contrôles de ports sûrs pour des cibles autorisées.'],
+        ['Ma contribution', 'Projet d’équipe avec Botond ; mes commits documentent le durcissement du scanner, le démarrage Windows et la documentation de release.'],
+        ['Technique et choix', 'FastAPI, React, TypeScript, SQLite/PostgreSQL et Docker ; contrôles volontairement passifs ou à faible risque.'],
+        ['Qualité', 'Tests Pytest, Vitest et Testing Library pour backend, frontend et extension ; rate limit et validation des cibles inclus.'],
+        ['Résultat', 'Les rapports peuvent être sauvegardés, comparés et exportés en JSON ou CSV ; pas d’exploits, de brute force ni de scans agressifs.']
+      ]
+    }
+  },
+  sr: {
+    pathlab: {
+      result: 'Rezultat: javna GitHub Pages demo verzija poredi četiri algoritma za pronalaženje puta uz odvojene troškove i vreme.',
+      details: [
+        ['Problem', 'Čini razlike između algoritama za pronalaženje puta na poljima sa težinama razumljivim.'],
+        ['Moj doprinos', 'Samostalni projekat za učenje i portfolio: mreža, vizualizacija, poređenje i UI stanje.'],
+        ['Tehnologija i odluka', 'React, Vite, JavaScript i CSS; voda košta 5, blato 10, a A* koristi Manhattan heuristiku.'],
+        ['Kvalitet', 'Vitest pokriva algoritme, mrežu i undo/redo; GitHub Actions pokreće npm ci, testove i build.'],
+        ['Rezultat', 'BFS, DFS, Dijkstra i A* mogu se pokrenuti i porediti na istoj mreži.']
+      ]
+    },
+    sortlab: {
+      result: 'Rezultat: upotrebljiva GitHub Pages demo verzija koja prikazuje pet algoritama sortiranja uz razumljive metrike.',
+      details: [
+        ['Problem', 'Čini korake i razlike između algoritama sortiranja vidljivim.'],
+        ['Moj doprinos', 'Samostalni projekat za učenje sa kontrolama, animacijom, režimom poređenja i statistikom.'],
+        ['Tehnologija i odluka', 'React, Vite, JavaScript i CSS; stanja animacije su odvojena od UI-ja, koriste se „pomeranja“ umesto samo zamena.'],
+        ['Kvalitet', '42 lokalno uspešna Vitest testa pokrivaju algoritme, rubne slučajeve i brojače; GitHub Actions koristi npm ci.'],
+        ['Rezultat', 'Bubble, Selection, Insertion, Quick i Heap Sort mogu se porediti po poređenjima, pomeranjima i vremenu.']
+      ]
+    },
+    vsw: {
+      result: 'Rezultat: lokalna fulstek aplikacija za defanzivne provere sa razumljivim nalazima, dokazima, preporukama i izvozima.',
+      details: [
+        ['Problem', 'Jasno prikazuje nedostajuća bezbednosna zaglavlja, TLS probleme i bezbedne provere portova za autorizovane ciljeve.'],
+        ['Moj doprinos', 'Timski projekat sa Botondom; moji commitovi dokumentuju jačanje skenera, Windows pokretanje i dokumentaciju za izdanje.'],
+        ['Tehnologija i odluka', 'FastAPI, React, TypeScript, SQLite/PostgreSQL i Docker; namerno samo pasivne ili niskorizične provere.'],
+        ['Kvalitet', 'Pytest, Vitest i Testing Library testovi za backend, frontend i ekstenziju; uključeni su rate limit i validacija cilja.'],
+        ['Rezultat', 'Izveštaji se mogu sačuvati, porediti i izvesti kao JSON ili CSV; nema exploita, brute force-a ni agresivnih skeniranja.']
+      ]
+    }
+  },
+  'sr-cyrl': {
+    pathlab: {
+      result: 'Резултат: јавна Гитхаб Пејџес демо верзија пореди четири алгоритма за проналажење пута, са одвојеним трошковима и временом.',
+      details: [
+        ['Проблем', 'Чини разлике између алгоритама за проналажење пута на пољима са тежинама разумљивим.'],
+        ['Мој допринос', 'Самостални пројекат за учење и портфолио: мрежа, визуализација, поређење и UI стање.'],
+        ['Технологија и одлука', 'Реакт, Вите, ЈаваСкрипт и ЦСС; вода кошта 5, блато 10, а А* користи Менхетн хеуристику.'],
+        ['Квалитет', 'Витест покрива алгоритме, мрежу и undo/redo; Гитхаб Акције покрећу npm ci, тестове и билд.'],
+        ['Резултат', 'БФС, ДФС, Дијкстра и А* могу се покренути и поредити на истој мрежи.']
+      ]
+    },
+    sortlab: {
+      result: 'Резултат: употребљива Гитхаб Пејџес демо верзија која приказује пет алгоритама сортирања уз разумљиве метрике.',
+      details: [
+        ['Проблем', 'Чини кораке и разлике између алгоритама сортирања видљивим.'],
+        ['Мој допринос', 'Самостални пројекат за учење са контролама, анимацијом, режимом поређења и статистиком.'],
+        ['Технологија и одлука', 'Реакт, Вите, ЈаваСкрипт и ЦСС; стања анимације су одвојена од UI-ја, користе се „померања“ уместо само замена.'],
+        ['Квалитет', '42 локално успешна Витест теста покривају алгоритме, рубне случајеве и бројаче; Гитхаб Акције користе npm ci.'],
+        ['Резултат', 'Бабл, Селекшн, Инсершн, Квик и Хип Сорт могу се поредити по поређењима, померањима и времену.']
+      ]
+    },
+    vsw: {
+      result: 'Резултат: локална фулстек апликација за дефанзивне провере са разумљивим налазима, доказима, препорукама и извозима.',
+      details: [
+        ['Проблем', 'Јасно приказује недостајућа безбедносна заглавља, TLS проблеме и безбедне провере портова за ауторизоване циљеве.'],
+        ['Мој допринос', 'Тимски пројекат са Ботондом; моји комитови документују јачање скенера, Виндоуз покретање и документацију за издање.'],
+        ['Технологија и одлука', 'ФастАПИ, Реакт, ТајпСкрипт, СКЛајт/ПостгреСКЛ и Докер; намерно само пасивне или нискоризичне провере.'],
+        ['Квалитет', 'Пајтест, Витест и Тестинг Лајбрари тестови за бекенд, фронтенд и екстензију; укључени су rate limit и валидација циља.'],
+        ['Резултат', 'Извештаји се могу сачувати, поредити и извести као Џејсон или ЦСВ; нема експлоита, brute force-а ни агресивних скенирања.']
+      ]
+    }
+  }
+};
+
+const projectPresentationCopy = {
+  de: {
+    featuredTitle: 'Für Praktikumsbewerbungen hervorgehoben',
+    featuredText: 'Drei Projekte mit nachvollziehbarem Code, Qualitätskontrollen und öffentlicher Dokumentation.',
+    moreTitle: 'Weitere Projekte',
+    moreText: 'Weitere Arbeiten und Prototypen bleiben vollständig erreichbar.'
+  },
+  en: {
+    featuredTitle: 'Highlighted for internship applications',
+    featuredText: 'Three projects with traceable code, quality checks, and public documentation.',
+    moreTitle: 'More projects',
+    moreText: 'Further work and prototypes remain fully accessible.'
+  },
+  fr: {
+    featuredTitle: 'Mis en avant pour les candidatures de stage',
+    featuredText: 'Trois projets avec code traçable, contrôles qualité et documentation publique.',
+    moreTitle: 'Autres projets',
+    moreText: 'Les autres réalisations et prototypes restent entièrement accessibles.'
+  },
+  sr: {
+    featuredTitle: 'Izdvojeno za prijave za praksu',
+    featuredText: 'Tri projekta sa proverljivim kodom, proverama kvaliteta i javnom dokumentacijom.',
+    moreTitle: 'Dodatni projekti',
+    moreText: 'Ostali radovi i prototipovi ostaju potpuno dostupni.'
+  },
+  'sr-cyrl': {
+    featuredTitle: 'Издвојено за пријаве за праксу',
+    featuredText: 'Три пројекта са проверљивим кодом, проверама квалитета и јавном документацијом.',
+    moreTitle: 'Додатни пројекти',
+    moreText: 'Остали радови и прототипови остају потпуно доступни.'
+  }
+};
+
 const embeddedMoreProjects = {
   de: {
     twintype: { title: 'TwinType', description: 'Kleineres Python-Projekt, das noch kompakt dokumentiert wird.', tags: ['Python'] },
@@ -1386,7 +1596,8 @@ const localizedPortfolioItem = (item, typeKey) => {
     tags: tArray(`${translationPath}.tags`, embeddedTranslation.tags || item.tags || []),
     role: certificateTranslation?.role || t(`${translationPath}.role`, embeddedTranslation.role || item.role || ''),
     learning: certificateTranslation?.learning || t(`${translationPath}.learning`, embeddedTranslation.learning || item.learning || ''),
-    previewLabel: certificateTranslation?.previewLabel || t(`${translationPath}.previewLabel`, embeddedTranslation.previewLabel || item.previewLabel || '')
+    previewLabel: certificateTranslation?.previewLabel || t(`${translationPath}.previewLabel`, embeddedTranslation.previewLabel || item.previewLabel || ''),
+    evidence: typeKey === 'projects' ? projectEvidenceCopy[currentLanguageCode]?.[item.id] || item.evidence || null : null
   };
 };
 
@@ -1988,10 +2199,55 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
+const createProjectEvidence = (evidence, { compact = false } = {}) => {
+  if (!evidence) return null;
+
+  const wrapper = document.createElement('section');
+  wrapper.className = compact ? 'featured-project-result' : 'project-evidence';
+
+  if (evidence.result) {
+    const result = document.createElement('p');
+    result.className = 'project-evidence-result';
+    result.textContent = evidence.result;
+    wrapper.append(result);
+  }
+
+  if (!compact && Array.isArray(evidence.details)) {
+    const list = document.createElement('dl');
+    list.className = 'project-evidence-list';
+    evidence.details.forEach(([labelText, valueText]) => {
+      const row = document.createElement('div');
+      const label = document.createElement('dt');
+      const value = document.createElement('dd');
+      label.textContent = labelText;
+      value.textContent = valueText;
+      row.append(label, value);
+      list.append(row);
+    });
+    wrapper.append(list);
+  }
+
+  return wrapper;
+};
+
+const createProjectGroupHeading = (titleText, descriptionText, featured = false) => {
+  const heading = document.createElement('div');
+  heading.className = featured ? 'project-group-heading project-group-heading-featured' : 'project-group-heading';
+  const title = document.createElement('h3');
+  const description = document.createElement('p');
+  title.textContent = titleText;
+  description.textContent = descriptionText;
+  heading.append(title, description);
+  return heading;
+};
+
 const createCard = (item, typeKey = 'projects') => {
   const displayItem = localizedPortfolioItem(item, typeKey);
   const card = document.createElement('article');
   card.className = 'item-card';
+  if (typeKey === 'projects' && item.featured) {
+    card.classList.add('featured-project-card');
+  }
   if (typeKey === 'certificates') {
     card.classList.add('certificate-card');
   }
@@ -2011,6 +2267,11 @@ const createCard = (item, typeKey = 'projects') => {
     image.alt = `${displayItem.title} ${displayItem.previewLabel || 'Vorschau'}`;
     image.loading = 'lazy';
     image.decoding = 'async';
+    if (item.previewWidth && item.previewHeight) {
+      image.width = item.previewWidth;
+      image.height = item.previewHeight;
+      image.sizes = '(min-width: 960px) 30vw, (min-width: 700px) 45vw, 100vw';
+    }
     image.addEventListener('error', () => {
       preview.remove();
       preview = null;
@@ -2078,6 +2339,9 @@ const createCard = (item, typeKey = 'projects') => {
   if (item.demoMedia) {
     detailButton.dataset.demoMedia = JSON.stringify(item.demoMedia);
   }
+  if (displayItem.evidence) {
+    detailButton.dataset.evidence = JSON.stringify(displayItem.evidence);
+  }
 
   if (item.links) {
     detailButton.dataset.links = JSON.stringify(item.links);
@@ -2096,6 +2360,7 @@ const createCard = (item, typeKey = 'projects') => {
         previewImage: item.previewImage || '',
         demoMedia: item.demoMedia || null,
         links: item.links || [],
+        evidence: displayItem.evidence || null,
         itemType: typeKey
       }
     );
@@ -2126,6 +2391,10 @@ const createCard = (item, typeKey = 'projects') => {
     card.append(preview);
   }
   card.append(title, description);
+  if (typeKey === 'projects' && item.featured) {
+    const evidence = createProjectEvidence(displayItem.evidence, { compact: true });
+    if (evidence) card.append(evidence);
+  }
   if (tags.children.length) {
     card.append(tags);
   }
@@ -2141,10 +2410,24 @@ const renderProjectExplorer = () => {
   }
 
   projectsGrid.innerHTML = '';
-  portfolioData.projects.forEach((project) => {
+  const copy = projectPresentationCopy[currentLanguageCode] || projectPresentationCopy.de;
+  const featuredProjects = portfolioData.projects.filter((project) => project.featured);
+  const remainingProjects = portfolioData.projects.filter((project) => !project.featured);
+
+  if (featuredProjects.length) {
+    projectsGrid.append(createProjectGroupHeading(copy.featuredTitle, copy.featuredText, true));
+  }
+  featuredProjects.forEach((project) => {
     projectsGrid.append(createCard(project, 'projects'));
   });
-  projectsGrid.append(createMoreProjectsCard());
+
+  if (remainingProjects.length || (portfolioData.moreProjects || []).length) {
+    projectsGrid.append(createProjectGroupHeading(copy.moreTitle, copy.moreText));
+    remainingProjects.forEach((project) => {
+      projectsGrid.append(createCard(project, 'projects'));
+    });
+    projectsGrid.append(createMoreProjectsCard());
+  }
 };
 
 const createMoreProjectsCard = () => {
@@ -2406,6 +2689,15 @@ const setModalDescription = (description) => {
     });
 };
 
+const setModalProjectEvidence = (evidence) => {
+  if (!modalProjectEvidence) return;
+  modalProjectEvidence.innerHTML = '';
+  modalProjectEvidence.hidden = !evidence;
+  if (!evidence) return;
+  const content = createProjectEvidence(evidence);
+  if (content) modalProjectEvidence.append(content);
+};
+
 const configureModalFile = ({ file, previewLabel, previewImage, demoMedia, links, itemType }) => {
   const isCertificate = itemType === 'certificates';
   const isProject = itemType === 'projects';
@@ -2440,6 +2732,8 @@ const configureModalFile = ({ file, previewLabel, previewImage, demoMedia, links
   if (modalPreviewImage) {
     modalPreviewImage.hidden = !hasPreviewImage || isVideo;
     modalPreviewImage.alt = media?.alt || '';
+    modalPreviewImage.decoding = 'async';
+    modalPreviewImage.fetchPriority = 'high';
     if (hasPreviewImage && !isVideo) {
       modalPreviewImage.src = media.src;
     } else {
@@ -2496,6 +2790,7 @@ const openDetailModal = (title, description, metaList, options = {}) => {
   optionsTitleBuffer = title || '';
   modalTitle.textContent = title || t('modal.title', 'Detailansicht');
   setModalDescription(description);
+  setModalProjectEvidence(options.itemType === 'projects' ? options.evidence || null : null);
   modalMeta.innerHTML = '';
   configureModalFile(options);
 
@@ -2564,6 +2859,7 @@ document.addEventListener('click', (event) => {
       previewImage: trigger.dataset.previewImage || '',
       demoMedia: tryParseObject(trigger.dataset.demoMedia),
       links: tryParseMeta(trigger.dataset.links),
+      evidence: tryParseObject(trigger.dataset.evidence),
       itemType: trigger.dataset.itemType || ''
     }
   );
