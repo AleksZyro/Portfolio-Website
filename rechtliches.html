@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <title>Impressum und Rechtliches | Aleksandar Nikolić</title>
-<link rel="stylesheet" href="legal-pages.css">
+<link rel="stylesheet" href="legal-pages.css?v=20260922-final-5">
 </head>
 <body data-legal-page="legal">
 <header class="legal-header">
@@ -13,13 +14,23 @@
       <span class="brand-latin">Aleksandar <em>Nikolić</em></span>
       <span class="brand-cyrillic" aria-hidden="true">Александар Николић</span>
     </a>
-    <select id="legal-language" class="language-select" aria-label="Sprache wählen">
-      <option value="de">🇩🇪 DE</option>
-      <option value="en">🇬🇧 EN</option>
-      <option value="fr">🇫🇷 FR</option>
-      <option value="sr">🇷🇸 SR (lat)</option>
-      <option value="sr-cyrl">🇷🇸 SR (kyr)</option>
-    </select>
+    <div class="legal-language-switch">
+      <button type="button" class="language-select" id="legal-language-button" aria-haspopup="listbox" aria-expanded="false" aria-label="Sprache wählen">
+        <span class="flag flag-de" id="legal-language-flag" aria-hidden="true"></span>
+        <span id="legal-language-label">DE</span>
+        <span class="language-chevron" aria-hidden="true">⌄</span>
+      </button>
+      <div class="legal-language-menu" id="legal-language-menu" role="listbox" hidden>
+        <button type="button" data-lang="de" role="option"><span class="flag flag-de" aria-hidden="true"></span><span>DE</span></button>
+        <button type="button" data-lang="en" role="option"><span class="flag flag-gb" aria-hidden="true"></span><span>EN</span></button>
+        <button type="button" data-lang="fr" role="option"><span class="flag flag-fr" aria-hidden="true"></span><span>FR</span></button>
+        <button type="button" data-lang="sr" role="option"><span class="flag flag-rs" aria-hidden="true"></span><span>SR (lat)</span></button>
+        <button type="button" data-lang="sr-cyrl" role="option"><span class="flag flag-rs" aria-hidden="true"></span><span>SR (kyr)</span></button>
+      </div>
+      <select id="legal-language" class="legal-language-native" aria-hidden="true" tabindex="-1">
+        <option value="de">DE</option><option value="en">EN</option><option value="fr">FR</option><option value="sr">SR (lat)</option><option value="sr-cyrl">SR (kyr)</option>
+      </select>
+    </div>
   </div>
 </header>
 <main class="shell">
@@ -29,6 +40,6 @@
   <article class="legal-content"><div class="legal-blocks" id="legal-blocks"></div></article>
   <a id="legal-back" class="back-link" href="index.html#contact">← Zurück zum Portfolio</a>
 </main>
-<script src="legal-pages.js"></script>
+<script src="legal-pages.js?v=20260922-final-5"></script>
 </body>
 </html>

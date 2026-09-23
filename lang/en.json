@@ -2,6 +2,9 @@
   "skip": {
     "content": "Skip to content"
   },
+  "a11y": {
+    "mainNav": "Main navigation", "home": "Home page", "openMenu": "Open menu", "language": "Change language", "chooseLanguage": "Choose language", "currentWork": "Current projects", "projectSpotlight": "Featured project", "projectList": "Project list", "certificateList": "Certificate list", "githubActivity": "GitHub activity", "contributionGraph": "GitHub contribution graph", "openSourceList": "Open-source contributions", "closeDetails": "Close detail view"
+  },
   "nav": {
     "home": "About me",
     "about": "About",
@@ -116,11 +119,17 @@
         "period": "2026",
         "description": "Hackathon \"Baden hackt\" with a focus on teamwork, ideation, and fast technical implementation."
       },
+      "fhnw": {
+        "type": "Hackathon",
+        "title": "FHNW Hackathon",
+        "period": "2026",
+        "description": "Participation in the FHNW Hackathon 2026, focused on teamwork, ideation, and technical implementation."
+      },
       "certificates": {
         "type": "Further education",
-        "title": "Certificates and independent learning",
+        "title": "CyberSecurity, OWASP and independent learning",
         "period": "2025 - 2026",
-        "description": "Completed learning: Introduction to Cybersecurity (12 Dec 2025), Baden hackt (27-28 Mar 2026), Ethical Hacker (21 Apr 2026), and local AI with Ollama and open-source models (22 Aug 2026)."
+        "description": "Further learning in CyberSecurity, OWASP, ethical hacking, local AI, and open-source models."
       },
       "ims": {
         "type": "Education",
@@ -183,16 +192,7 @@
     "detailEmptyTitle": "Select a project",
     "detailEmptyText": "Click a project card to show status, stack, role, and learning focus.",
     "moreProjectsTitle": "More projects",
-    "moreProjectsSubline": "More projects that I have completed or am still developing.",
-    "projectPuzzle": {
-      "label": "Small side quest",
-      "title": "A short detour to the projects",
-      "intro": "Three questions, four answers, and no wrong choice.",
-      "openChest": "Open treasure chest",
-      "speaker": "Aleksandar",
-      "skip": "Skip",
-      "unlocked": "The chest is open. Enjoy exploring."
-    }
+    "moreProjectsSubline": "More projects that I have completed or am still developing."
   },
   "filters": {
     "all": "All",
@@ -201,8 +201,10 @@
   },
   "contact": {
     "kicker": "Contact",
-    "title": "Let's work together",
+    "title": "Contact & Legal",
     "description": "For an internship position in Switzerland for 2027/2028, questions, or collaboration, I am reachable by email.",
+    "emailLabel": "Email",
+    "linkedinLabel": "LinkedIn",
     "mailLabel": "",
     "schoolMailLabel": ""
   },
@@ -216,10 +218,10 @@
   "portfolioDownloadButton": "Download PDF",
   "footer": {
     "rights": "All rights reserved.",
-    "legalLink": "Privacy and cookies",
+    "legalLink": "Imprint and privacy",
     "tagline": "IMS application development · Portfolio",
     "imprintLink": "Imprint",
-    "privacyLink": "Privacy",
+    "privacyLink": "Privacy policy",
     "cookieLink": "Cookies"
   },
   "github": {
@@ -236,7 +238,8 @@
     "publicRepos": "public repositories",
     "ossMerges": "open-source merges",
     "currentStreak": "days current streak",
-    "mergedLabel": "Merged"
+    "mergedLabel": "Merged",
+    "completedLabel": "Completed"
   },
   "legal": {
     "kicker": "Legal",
@@ -328,7 +331,7 @@
         "learning": "Structure rule-based checks so they stay understandable and lead to real improvements in project repositories."
       },
       "besp2074": {
-        "title": "Internet on and off",
+        "title": "BESP2074 – Internet on and off",
         "cardDescription": "Hackathon prototype for a web interface that models internet access per classroom or subnet.",
         "detailDescription": "Internet on and off\n\nThis project was created in the context of the Baden hackt hackathon. The prototype models how internet access for classrooms or subnets could be switched on and off clearly.\n\nThe focus is an understandable interface and a clear representation of states. It is a hackathon prototype documented as collaborative work.",
         "meta": [
@@ -383,6 +386,15 @@
     }
   },
   "openSourceContributions": {
+    "pipAudit553": {
+      "title": "Run tests for Windows in GitHub Actions",
+      "summary": "Completed issue for adding a Windows test job to GitHub Actions.",
+      "tags": [
+        "Python",
+        "CI/CD",
+        "Windows"
+      ]
+    },
     "pipAudit1119": {
       "title": "Deduplicate matching PYSEC vulnerabilities",
       "summary": "Prevents matching PYSEC vulnerabilities from being counted twice.",
@@ -392,6 +404,7 @@
       ]
     },
     "vaultCleaner54": {
+      "title": "Honor configured CLI paths",
       "summary": "Improves CLI path handling so configured input and output paths are respected correctly.",
       "tags": [
         "Python",
@@ -399,6 +412,7 @@
       ]
     },
     "agentcache38": {
+      "title": "Prefer workspace VS Code MCP config",
       "summary": "Prioritises workspace configuration for VS Code MCP so project-specific setups work cleanly.",
       "tags": [
         "Dev Tools",
@@ -406,6 +420,7 @@
       ]
     },
     "contextPilot36": {
+      "title": "Handle invalid compressed JSON",
       "summary": "Handles invalid JSON responses during compression and makes the error case more robust.",
       "tags": [
         "Python",
@@ -419,6 +434,11 @@
         "Python",
         "Scoring"
       ]
+    },
+    "isort2616": {
+      "title": "Preserve LF stdin output on Windows",
+      "summary": "Prevents unwanted line translation for stdin output on Windows and adds a regression test.",
+      "tags": ["Python", "Testing", "Open"]
     },
     "beets6839": {
       "summary": "Preserves empty artpath values during editing so existing data is not changed unintentionally.",

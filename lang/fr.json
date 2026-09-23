@@ -2,6 +2,9 @@
   "skip": {
     "content": "Aller au contenu"
   },
+  "a11y": {
+    "mainNav": "Navigation principale", "home": "Page d’accueil", "openMenu": "Ouvrir le menu", "language": "Changer de langue", "chooseLanguage": "Choisir la langue", "currentWork": "Projets en cours", "projectSpotlight": "Projet à la une", "projectList": "Liste des projets", "certificateList": "Liste des certificats", "githubActivity": "Activité GitHub", "contributionGraph": "Graphique des contributions GitHub", "openSourceList": "Contributions open source", "closeDetails": "Fermer la vue détaillée"
+  },
   "nav": {
     "home": "À propos",
     "about": "À propos",
@@ -116,11 +119,17 @@
         "period": "2026",
         "description": "Hackathon \"Baden hackt\" avec un accent sur le travail d’équipe, l’idéation et la mise en oeuvre technique rapide."
       },
+      "fhnw": {
+        "type": "Hackathon",
+        "title": "Hackathon FHNW",
+        "period": "2026",
+        "description": "Participation au hackathon FHNW 2026, avec un accent sur le travail d’équipe, l’idéation et la mise en œuvre technique."
+      },
       "certificates": {
         "type": "Formation complémentaire",
-        "title": "Certificats et apprentissage autonome",
+        "title": "CyberSecurity, OWASP et apprentissage autonome",
         "period": "2025 - 2026",
-        "description": "Formations terminées : Introduction to Cybersecurity (12.12.2025), Baden hackt (27-28.03.2026), Ethical Hacker (21.04.2026) et IA locale avec Ollama et des modèles open source (22.08.2026)."
+        "description": "Formations complémentaires en CyberSecurity, OWASP, hacking éthique, IA locale et modèles open source."
       },
       "ims": {
         "type": "Formation",
@@ -183,16 +192,7 @@
     "detailEmptyTitle": "Choisir un projet",
     "detailEmptyText": "Clique sur une carte de projet pour afficher le statut, le stack, le rôle et ce que le projet m’apporte.",
     "moreProjectsTitle": "Autres projets",
-    "moreProjectsSubline": "Autres projets que j'ai terminés ou que je développe encore actuellement.",
-    "projectPuzzle": {
-      "label": "Petite quête secondaire",
-      "title": "Un court détour vers les projets",
-      "intro": "Trois questions, quatre réponses et aucun mauvais choix.",
-      "openChest": "Ouvrir le coffre au trésor",
-      "speaker": "Aleksandar",
-      "skip": "Passer",
-      "unlocked": "Le coffre est ouvert. Bonne exploration."
-    }
+    "moreProjectsSubline": "Autres projets que j'ai terminés ou que je développe encore actuellement."
   },
   "filters": {
     "all": "Tous",
@@ -201,8 +201,10 @@
   },
   "contact": {
     "kicker": "Contact",
-    "title": "Travaillons ensemble",
+    "title": "Contact et légal",
     "description": "Pour une place de stage en Suisse en 2027/2028, des questions ou une collaboration, je suis joignable par e-mail.",
+    "emailLabel": "E-mail",
+    "linkedinLabel": "LinkedIn",
     "mailLabel": "",
     "schoolMailLabel": ""
   },
@@ -216,10 +218,10 @@
   "portfolioDownloadButton": "Télécharger le PDF",
   "footer": {
     "rights": "Tous droits réservés.",
-    "legalLink": "Confidentialité et cookies",
+    "legalLink": "Mentions légales et confidentialité",
     "tagline": "Développement applicatif IMS · Portfolio",
     "imprintLink": "Impressum",
-    "privacyLink": "Confidentialité",
+    "privacyLink": "Politique de confidentialité",
     "cookieLink": "Cookies"
   },
   "github": {
@@ -236,7 +238,8 @@
     "publicRepos": "dépôts publics",
     "ossMerges": "merges open source",
     "currentStreak": "jours de série actuelle",
-    "mergedLabel": "Merged"
+    "mergedLabel": "Merged",
+    "completedLabel": "Terminé"
   },
   "legal": {
     "kicker": "Mentions légales",
@@ -328,7 +331,7 @@
         "learning": "Structurer des checks basés sur des règles afin qu’ils restent compréhensibles et améliorent réellement les repositories."
       },
       "besp2074": {
-        "title": "Internet activé et désactivé",
+        "title": "BESP2074 – Internet activé et désactivé",
         "cardDescription": "Prototype de hackathon pour une interface web qui modélise l’accès à Internet par salle de classe ou sous-réseau.",
         "detailDescription": "Internet activé et désactivé\n\nCe projet a été créé dans le cadre du hackathon Baden hackt. Le prototype modélise comment l’accès à Internet des salles de classe ou des sous-réseaux pourrait être activé et désactivé clairement.\n\nL’accent est mis sur une interface compréhensible et une représentation claire des états. Il s’agit d’un prototype réalisé en équipe.",
         "meta": [
@@ -383,6 +386,15 @@
     }
   },
   "openSourceContributions": {
+    "pipAudit553": {
+      "title": "Exécuter les tests Windows dans GitHub Actions",
+      "summary": "Issue clôturée pour ajouter un job de test Windows à GitHub Actions.",
+      "tags": [
+        "Python",
+        "CI/CD",
+        "Windows"
+      ]
+    },
     "pipAudit1119": {
       "title": "Dédupliquer les vulnérabilités PYSEC correspondantes",
       "summary": "Évite que les vulnérabilités PYSEC correspondantes soient comptées deux fois.",
@@ -392,6 +404,7 @@
       ]
     },
     "vaultCleaner54": {
+      "title": "Respecter les chemins CLI configurés",
       "summary": "Améliore la gestion des chemins CLI afin que les chemins configurés soient correctement respectés.",
       "tags": [
         "Python",
@@ -399,6 +412,7 @@
       ]
     },
     "agentcache38": {
+      "title": "Privilégier la configuration workspace de VS Code MCP",
       "summary": "Priorise la configuration workspace pour VS Code MCP afin que les configurations propres au projet fonctionnent proprement.",
       "tags": [
         "Dev Tools",
@@ -406,6 +420,7 @@
       ]
     },
     "contextPilot36": {
+      "title": "Gérer les JSON compressés invalides",
       "summary": "Gère les réponses JSON invalides pendant la compression et rend ce cas d’erreur plus robuste.",
       "tags": [
         "Python",
@@ -419,6 +434,11 @@
         "Python",
         "Scoring"
       ]
+    },
+    "isort2616": {
+      "title": "Préserver la sortie LF de stdin sous Windows",
+      "summary": "Évite la conversion involontaire des retours à la ligne pour la sortie stdin sous Windows et ajoute un test de régression.",
+      "tags": ["Python", "Tests", "Ouvert"]
     },
     "beets6839": {
       "summary": "Préserve les valeurs artpath vides pendant l’édition afin que les données existantes ne soient pas modifiées involontairement.",

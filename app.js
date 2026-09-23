@@ -164,7 +164,6 @@ const portfolioData = {
       cardDescription: 'Anwender-Zertifikat für ABACUS Finanzbuchhaltung mit Grundlagen zu Benutzeroberfläche, Stammdaten, Buchungen, Auswertungen und MWST-Abrechnung.',
       detailDescription: 'Das ABACUS-Zertifikat bestätigt den erfolgreich abgeschlossenen Zertifikatskurs und die bestandene Abschlussprüfung im Bereich ABACUS Finanzbuchhaltung. Inhaltliche Schwerpunkte waren Benutzeroberfläche, Stammdaten, Buchungen anhand von Belegen, Buchungsarten, Auswertungen wie Journal, Kontoauszug, Bilanz und Erfolgsrechnung sowie MWST-Abrechnung.',
       previewImage: 'assets/certificate-previews/abacus-finanzbuchhaltung.svg',
-      expectedFile: 'assets/certificates/abacus-finanzbuchhaltung.pdf',
       previewLabel: 'Zertifikat'
     },
     {
@@ -173,7 +172,6 @@ const portfolioData = {
       cardDescription: 'LinkedIn-Learning-Kurs zu generativen KI-Tools, künstlicher Intelligenz und grundlegender Einordnung generativer KI.',
       detailDescription: 'Dieses LinkedIn-Learning-Zertifikat bestätigt den abgeschlossenen Kurs „Was ist generative KI?“. Der Kurs behandelt generative KI-Tools, künstliche Intelligenz und die grundlegende Einordnung generativer KI im Arbeits- und Lernkontext.',
       previewImage: 'assets/certificate-previews/linkedin-generative-ki.svg',
-      expectedFile: 'assets/certificates/linkedin-generative-ki.pdf',
       previewLabel: 'Zertifikat'
     }
   ],
@@ -210,6 +208,17 @@ const portfolioData = {
     }
   ],
   openSourceContributions: [
+    {
+      id: 'pipAudit553',
+      repo: 'pypa/pip-audit',
+      number: 553,
+      kind: 'issue',
+      title: 'Run tests for Windows in GitHub Actions',
+      summary: 'Abgeschlossenes Issue zur Ergänzung eines Windows-Testjobs in GitHub Actions.',
+      tags: ['Python', 'CI/CD', 'Windows'],
+      status: 'completed',
+      url: 'https://github.com/pypa/pip-audit/issues/553#event-31566567936'
+    },
     {
       id: 'pipAudit1119',
       repo: 'pypa/pip-audit',
@@ -299,6 +308,16 @@ const portfolioData = {
       summary: 'Sichert den Umgang mit leerem Artpath beim Bearbeiten, damit bestehende Daten nicht unbeabsichtigt verändert werden.',
       tags: ['Python', 'Beets'],
       url: 'https://github.com/beetbox/beets/pull/6839'
+    },
+    {
+      id: 'isort2616',
+      repo: 'PyCQA/isort',
+      number: 2616,
+      title: 'Preserve LF stdin output on Windows',
+      summary: 'Verhindert unerwünschte Zeilenumwandlungen bei stdin-Ausgaben unter Windows und ergänzt einen Regressionstest.',
+      tags: ['Python', 'Testing', 'Open'],
+      status: 'open',
+      url: 'https://github.com/PyCQA/isort/pull/2616'
     }
   ]
 };
@@ -308,19 +327,13 @@ const navList = document.querySelector('.nav-list');
 const navLinks = document.querySelectorAll('.nav-list a');
 const sections = [...document.querySelectorAll('main section[id]')];
 const revealItems = document.querySelectorAll('.reveal');
+const careerTimeline = document.querySelector('.career-timeline');
+const careerPath = careerTimeline?.querySelector('.career-path');
+const careerPathLine = careerPath?.querySelector('path');
 const tabs = document.querySelectorAll('.tab');
 const tabPanels = { projects: document.getElementById('panel-projects'), certificates: document.getElementById('panel-certificates') };
 const projectsGrid = document.getElementById('projects-grid');
-const projectPuzzle = document.getElementById('project-puzzle');
-const projectPuzzleIntro = document.getElementById('project-puzzle-intro');
-const projectPuzzleChest = document.getElementById('puzzle-chest');
-const projectPuzzleDialog = document.getElementById('project-puzzle-dialog');
-const projectPuzzleQuestion = document.getElementById('puzzle-question');
-const projectPuzzleOptions = document.getElementById('puzzle-options');
-const projectPuzzleReaction = document.getElementById('puzzle-reaction');
-const projectPuzzleProgress = document.getElementById('puzzle-progress');
-const projectPuzzleSkip = document.getElementById('puzzle-skip');
-const projectExplorer = document.querySelector('.project-explorer');
+const projectSpotlight = document.getElementById('project-spotlight');
 const certificatesGrid = document.getElementById('certificates-grid');
 const openSourceList = document.getElementById('open-source-list');
 const currentWorkTriggers = document.querySelectorAll('[data-current-work]');
@@ -332,7 +345,7 @@ const languageMenu = document.getElementById('language-menu');
 const languageOptions = document.querySelectorAll('.lang-option');
 const languageCurrentFlag = document.getElementById('language-current-flag');
 const languageCurrentLabel = document.getElementById('language-current-label');
-const surfaceCanvas = document.getElementById('surface-canvas');
+const surfaceCanvas = null;
 const modal = document.getElementById('detail-modal');
 const modalCard = document.getElementById('modal-card');
 const modalClose = document.getElementById('modal-close');
@@ -392,7 +405,36 @@ const projectsCountEl = document.getElementById('projects-count');
 const certificatesCountEl = document.getElementById('certificates-count');
 const yearsCountEl = document.getElementById('years-count');
 
+const updateCareerPath = () => {
+  if (!careerTimeline || !careerPath || !careerPathLine || window.innerWidth < 721) return;
+
+  const timelineRect = careerTimeline.getBoundingClientRect();
+  const points = [...careerTimeline.querySelectorAll('.career-dot')].map((dot) => {
+    const dotRect = dot.getBoundingClientRect();
+    return {
+      x: dotRect.left + dotRect.width / 2 - timelineRect.left,
+      y: dotRect.top + dotRect.height / 2 - timelineRect.top
+    };
+  });
+
+  if (points.length < 2) return;
+
+  careerPath.setAttribute('viewBox', `0 0 ${timelineRect.width} ${timelineRect.height}`);
+  const pathData = points.reduce((data, point, index) => {
+    if (index === 0) return `M ${point.x} ${point.y}`;
+    const previous = points[index - 1];
+    const midpoint = previous.y + (point.y - previous.y) / 2;
+    return `${data} C ${previous.x} ${midpoint}, ${point.x} ${midpoint}, ${point.x} ${point.y}`;
+  }, '');
+  careerPathLine.setAttribute('d', pathData);
+};
+
+if (careerTimeline && 'ResizeObserver' in window) {
+  new ResizeObserver(updateCareerPath).observe(careerTimeline);
+}
+
 const i18nElements = document.querySelectorAll('[data-i18n]');
+const i18nAriaElements = document.querySelectorAll('[data-i18n-aria]');
 const defaultTexts = new Map();
 i18nElements.forEach((element) => {
   defaultTexts.set(element, element.textContent);
@@ -480,11 +522,17 @@ const embeddedDictionaries = {
           period: '2026',
           description: 'Hackathon "Baden hackt" mit Fokus auf Teamarbeit, Ideenfindung und schneller technischer Umsetzung.'
         },
+        fhnw: {
+          type: 'Hackathon',
+          title: 'FHNW Hackathon',
+          period: '2026',
+          description: 'Teilnahme am FHNW Hackathon 2026 mit Fokus auf Teamarbeit, Ideenentwicklung und technischer Umsetzung.'
+        },
         certificates: {
           type: 'Weiterbildung',
-          title: 'Zertifikate und selbstständige Weiterbildung',
+          title: 'CyberSecurity, OWASP und selbstständige Weiterbildung',
           period: '2025 - 2026',
-          description: 'Abgeschlossene Weiterbildungen: Introduction to Cybersecurity (12.12.2025), Baden hackt (27./28.03.2026), Ethical Hacker (21.04.2026) und lokale KI mit Ollama und Open-Source-Modellen (22.08.2026).'
+          description: 'Weiterbildungen in den Bereichen CyberSecurity, OWASP, ethisches Hacking, lokale KI und Open-Source-Modelle.'
         },
         ims: {
           type: 'Ausbildung',
@@ -557,18 +605,20 @@ const embeddedDictionaries = {
       openSourceText: 'Sobald gemergte Pull Requests vorhanden sind, werden sie hier mit Projekt, Kurzbeschreibung und Link aufgef\u00fchrt.',
       moreMergesTitle: 'Weitere Merges',
       moreMergesText: 'Weitere gemergte Pull Requests mit direktem Nachweis.',
-      publicRepos: 'öffentliche Repositories', ossMerges: 'Open-Source-Merges', currentStreak: 'Tage aktuelle Serie'
+      publicRepos: 'öffentliche Repositories', ossMerges: 'Open-Source-Merges', currentStreak: 'Tage aktuelle Serie', mergedLabel: 'Merged', completedLabel: 'Abgeschlossen'
     },
     contact: {
       kicker: 'Kontakt',
-      title: 'Zusammenarbeiten',
+      title: 'Kontakt & Rechtliches',
       description: 'Für Praktikum, Rückfragen oder Zusammenarbeit bin ich per E-Mail erreichbar.',
+      emailLabel: 'E-Mail',
+      linkedinLabel: 'LinkedIn',
       mailLabel: '',
       schoolMailLabel: ''
     },
     modal: { close: 'Schliessen', title: 'Detailansicht', projectKicker: 'Projektstatus', certificateKicker: 'Zertifikat' },
     portfolioDownloadButton: 'Download PDF',
-    footer: { rights: 'Alle Rechte vorbehalten.', legalLink: 'Datenschutz und Cookies' }
+    footer: { rights: 'Alle Rechte vorbehalten.', legalLink: 'Impressum und Datenschutzerklärung' }
   },
   en: {
     skip: { content: 'Skip to content' },
@@ -648,11 +698,17 @@ const embeddedDictionaries = {
           period: '2026',
           description: 'Hackathon "Baden hackt" with a focus on teamwork, ideation, and fast technical implementation.'
         },
+        fhnw: {
+          type: 'Hackathon',
+          title: 'FHNW Hackathon',
+          period: '2026',
+          description: 'Participation in the FHNW Hackathon 2026, focused on teamwork, ideation, and technical implementation.'
+        },
         certificates: {
           type: 'Further education',
-          title: 'Certificates and independent learning',
+          title: 'CyberSecurity, OWASP and independent learning',
           period: '2025 - 2026',
-          description: 'Completed learning: Introduction to Cybersecurity (12 Dec 2025), Baden hackt (27-28 Mar 2026), Ethical Hacker (21 Apr 2026), and local AI with Ollama and open-source models (22 Aug 2026).'
+          description: 'Further learning in CyberSecurity, OWASP, ethical hacking, local AI, and open-source models.'
         },
         ims: {
           type: 'Education',
@@ -712,17 +768,19 @@ const embeddedDictionaries = {
       }
     },
     filters: { all: 'All', visualization: 'Visualization', inProgress: 'In progress' },
-    github: { kicker: 'GitHub', title: 'Activity and Open Source', subline: 'I use GitHub to document projects clearly, version changes, and make public work linkable.', profileLink: 'GitHub profile', reposLink: 'Repositories', openSourceTitle: 'Open-source merges', openSourceEmpty: 'No publicly verifiable merges listed yet.', openSourceText: 'Once merged pull requests are available, they will be listed here with project, short description, and link.', moreMergesTitle: 'More merges', moreMergesText: 'Additional merged pull requests with direct proof.' , publicRepos: 'public repositories', ossMerges: 'open-source merges', currentStreak: 'days current streak' },
+    github: { kicker: 'GitHub', title: 'Activity and Open Source', subline: 'I use GitHub to document projects clearly, version changes, and make public work linkable.', profileLink: 'GitHub profile', reposLink: 'Repositories', openSourceTitle: 'Open-source merges', openSourceEmpty: 'No publicly verifiable merges listed yet.', openSourceText: 'Once merged pull requests are available, they will be listed here with project, short description, and link.', moreMergesTitle: 'More merges', moreMergesText: 'Additional merged pull requests with direct proof.' , publicRepos: 'public repositories', ossMerges: 'open-source merges', currentStreak: 'days current streak', mergedLabel: 'Merged', completedLabel: 'Completed' },
     contact: {
       kicker: 'Contact',
-      title: "Let's work together",
+      title: 'Contact & Legal',
       description: 'For internships, questions, or collaboration, I am reachable by email.',
+      emailLabel: 'Email',
+      linkedinLabel: 'LinkedIn',
       mailLabel: '',
       schoolMailLabel: ''
     },
     modal: { close: 'Close', title: 'Detail view', projectKicker: 'Project status', certificateKicker: 'Certificate' },
     portfolioDownloadButton: 'Download PDF',
-    footer: { rights: 'All rights reserved.', legalLink: 'Privacy and cookies' }
+    footer: { rights: 'All rights reserved.', legalLink: 'Imprint and privacy' }
   },
   fr: {
     skip: { content: 'Aller au contenu' },
@@ -802,11 +860,17 @@ const embeddedDictionaries = {
           period: '2026',
           description: 'Hackathon "Baden hackt" avec un accent sur le travail d equipe, l ideation et la mise en oeuvre technique rapide.'
         },
+        fhnw: {
+          type: 'Hackathon',
+          title: 'Hackathon FHNW',
+          period: '2026',
+          description: 'Participation au hackathon FHNW 2026, avec un accent sur le travail d’équipe, l’idéation et la mise en œuvre technique.'
+        },
         certificates: {
           type: 'Formation complémentaire',
-          title: 'Certificats et apprentissage autonome',
+          title: 'CyberSecurity, OWASP et apprentissage autonome',
           period: '2025 - 2026',
-          description: 'Formations terminées : Introduction to Cybersecurity (12.12.2025), Baden hackt (27-28.03.2026), Ethical Hacker (21.04.2026) et IA locale avec Ollama et des modèles open source (22.08.2026).'
+          description: 'Formations complémentaires en CyberSecurity, OWASP, hacking éthique, IA locale et modèles open source.'
         },
         ims: {
           type: 'Formation',
@@ -868,17 +932,19 @@ const embeddedDictionaries = {
       }
     },
     filters: { all: 'Tous', visualization: 'Visualisation', inProgress: 'En cours' },
-    github: { kicker: 'GitHub', title: 'Activit\u00e9 et open source', subline: 'J\u2019utilise GitHub pour documenter mes projets, versionner les changements et rendre mes travaux publics faciles \u00e0 consulter.', profileLink: 'Profil GitHub', reposLink: 'Repositories', openSourceTitle: 'Merges open source', openSourceEmpty: 'Aucun merge v\u00e9rifiable publiquement n\u2019est encore list\u00e9.', openSourceText: 'D\u00e8s que des pull requests merg\u00e9es seront disponibles, elles seront list\u00e9es ici avec projet, courte description et lien.', moreMergesTitle: 'Autres merges', moreMergesText: 'Autres pull requests merg\u00e9es avec preuve directe.' , publicRepos: 'dépôts publics', ossMerges: 'merges open source', currentStreak: 'jours de série actuelle' },
+    github: { kicker: 'GitHub', title: 'Activit\u00e9 et open source', subline: 'J\u2019utilise GitHub pour documenter mes projets, versionner les changements et rendre mes travaux publics faciles \u00e0 consulter.', profileLink: 'Profil GitHub', reposLink: 'Repositories', openSourceTitle: 'Merges open source', openSourceEmpty: 'Aucun merge v\u00e9rifiable publiquement n\u2019est encore list\u00e9.', openSourceText: 'D\u00e8s que des pull requests merg\u00e9es seront disponibles, elles seront list\u00e9es ici avec projet, courte description et lien.', moreMergesTitle: 'Autres merges', moreMergesText: 'Autres pull requests merg\u00e9es avec preuve directe.' , publicRepos: 'dépôts publics', ossMerges: 'merges open source', currentStreak: 'jours de série actuelle', mergedLabel: 'Merged', completedLabel: 'Terminé' },
     contact: {
       kicker: 'Contact',
-      title: 'Travaillons ensemble',
+      title: 'Contact et légal',
       description: 'Pour un stage, des questions ou une collaboration, je suis joignable par e-mail.',
+      emailLabel: 'E-mail',
+      linkedinLabel: 'LinkedIn',
       mailLabel: '',
       schoolMailLabel: ''
     },
     modal: { close: 'Fermer', title: 'Vue detail', projectKicker: 'Statut du projet', certificateKicker: 'Certificat' },
     portfolioDownloadButton: 'Telecharger le PDF',
-    footer: { rights: 'Tous droits réservés.', legalLink: 'Confidentialité et cookies' }
+    footer: { rights: 'Tous droits réservés.', legalLink: 'Mentions légales et confidentialité' }
   },
   sr: {
     skip: { content: 'Preskoči na sadržaj' },
@@ -958,11 +1024,17 @@ const embeddedDictionaries = {
           period: '2026',
           description: 'Hackathon "Baden hackt" sa fokusom na timski rad, razvoj ideja i brzu tehnicku realizaciju.'
         },
+        fhnw: {
+          type: 'Hakaton',
+          title: 'FHNW hakaton',
+          period: '2026',
+          description: 'Učešće na FHNW hakatonu 2026, sa fokusom na timski rad, razvoj ideja i tehničku realizaciju.'
+        },
         certificates: {
           type: 'Dodatno obrazovanje',
-          title: 'Sertifikati i samostalno učenje',
+          title: 'CyberSecurity, OWASP i samostalno učenje',
           period: '2025 - 2026',
-          description: 'Završene obuke: Introduction to Cybersecurity (12.12.2025), Baden hackt (27-28.03.2026), Ethical Hacker (21.04.2026) i lokalna veštačka inteligencija sa Ollama i open-source modelima (22.08.2026).'
+          description: 'Dodatno učenje u oblastima CyberSecurity, OWASP, etičkog hakovanja, lokalne veštačke inteligencije i open-source modela.'
         },
         ims: {
           type: 'Obrazovanje',
@@ -1022,17 +1094,19 @@ const embeddedDictionaries = {
       }
     },
     filters: { all: 'Svi', visualization: 'Vizualizacija', inProgress: 'U radu' },
-    github: { kicker: 'GitHub', title: 'Aktivnost i open source', subline: 'GitHub koristim za jasno dokumentovanje projekata, verzionisanje promena i javno linkovanje radova.', profileLink: 'GitHub profil', reposLink: 'Repositories', openSourceTitle: 'Open-source merge-ovi', openSourceEmpty: 'Jos nema javno proverljivih merge-ova.', openSourceText: 'Kada budu dostupni merge-ovani pull requestovi, ovde ce biti navedeni sa projektom, kratkim opisom i linkom.', moreMergesTitle: 'Dodatni merge-ovi', moreMergesText: 'Dodatni merge-ovani pull requestovi sa direktnim dokazom.' , publicRepos: 'javni repozitorijumi', ossMerges: 'open-source merge-ovi', currentStreak: 'dana trenutnog niza' },
+    github: { kicker: 'GitHub', title: 'Aktivnost i open source', subline: 'GitHub koristim za jasno dokumentovanje projekata, verzionisanje promena i javno linkovanje radova.', profileLink: 'GitHub profil', reposLink: 'Repositories', openSourceTitle: 'Open-source merge-ovi', openSourceEmpty: 'Jos nema javno proverljivih merge-ova.', openSourceText: 'Kada budu dostupni merge-ovani pull requestovi, ovde ce biti navedeni sa projektom, kratkim opisom i linkom.', moreMergesTitle: 'Dodatni merge-ovi', moreMergesText: 'Dodatni merge-ovani pull requestovi sa direktnim dokazom.' , publicRepos: 'javni repozitorijumi', ossMerges: 'open-source merge-ovi', currentStreak: 'dana trenutnog niza', mergedLabel: 'Merged', completedLabel: 'Završeno' },
     contact: {
       kicker: 'Kontakt',
-      title: 'Hajde da sarađujemo',
+      title: 'Kontakt i pravno',
       description: 'Za praksu, pitanja ili saradnju dostupan sam putem e-maila.',
+      emailLabel: 'E-mail',
+      linkedinLabel: 'LinkedIn',
       mailLabel: '',
       schoolMailLabel: ''
     },
     modal: { close: 'Zatvori', title: 'Detaljni prikaz', projectKicker: 'Status projekta', certificateKicker: 'Sertifikat' },
     portfolioDownloadButton: 'Preuzmi PDF',
-    footer: { rights: 'Sva prava zadržana.', legalLink: 'Privatnost i kukiji' }
+    footer: { rights: 'Sva prava zadržana.', legalLink: 'Impresum i privatnost' }
   }
 };
 
@@ -1072,7 +1146,7 @@ embeddedDictionaries['sr-cyrl'] = {
     automation: { tab: 'Аутоматизација', title: 'Аутоматизација', text: 'Скрипте за локалне токове рада, покретање алата и једноставне понављајуће задатке.', points: ['ПауерШел', 'ЦЛИ алати', 'локални помоћници'], status: 'Пракса: Виндоуз алати' }
   },
   about: { kicker: 'О мени', title: 'О мени', cardTitle: 'Здраво, ја сам Александар', description: 'Ученик сам ИМС-а са фокусом на развој апликација и сада крећем у 3. ИМС годину. Моји пројекти су углавном између Пајтон алата, веб интерфејса, АПИ-ја, тестова и обраде података. За 4. ИМС годину тражим место за праксу у Швајцарској за 2027/2028.', factStatus: 'Статус: од лета 2026 у 3. ИМС години', factFocus: 'Фокус: Пајтон, веб, локални алати, АПИ-ји', factWork: 'Циљ: пракса у Швајцарској, 2027/2028' },
-  career: { kicker: 'Развој', title: 'Развој и окружење за учење', subline: 'Мој тренутни пут повезује школу, информатику и практично искуство у развоју апликација.', items: { hackathon: { type: 'Догађај', title: 'Баден хакатон', period: '2026', description: 'Хакатон „Баден хакт“ са фокусом на тимски рад, развој идеја и брзу техничку реализацију.' }, certificates: { type: 'Додатно образовање', title: 'Сертификати и самостално учење', period: '2025 - 2026', description: 'Завршене обуке: Introduction to Cybersecurity (12.12.2025), Baden hackt (27-28.03.2026), Ethical Hacker (21.04.2026) и локална вештачка интелигенција са Ollama и open-source моделима (22.08.2026).' }, ims: { type: 'Образовање', title: 'Алте Кантонссцхуле Аарау & Беруфсбилдунг Баден', period: '2024 - данас', description: 'Информатика у средњој школи (ИМС), смер развој апликација. Крећем у 3. ИМС годину и припремам се за праксу у 4. години.' }, school: { type: 'Школа', title: 'Окружна школа Букс АГ', period: '2021 - 2024', description: 'Ту сам изградио своју школску основу и додатно развио интересовање за информатику, технику и структурисано учење.' } } },
+  career: { kicker: 'Развој', title: 'Развој и окружење за учење', subline: 'Мој тренутни пут повезује школу, информатику и практично искуство у развоју апликација.', items: { fhnw: { type: 'Хакатон', title: 'ФХНВ хакатон', period: '2026', description: 'Учешће на ФХНВ хакатону 2026, са фокусом на тимски рад, развој идеја и техничку реализацију.' }, hackathon: { type: 'Догађај', title: 'Баден хакатон', period: '2026', description: 'Хакатон „Баден хакт“ са фокусом на тимски рад, развој идеја и брзу техничку реализацију.' }, certificates: { type: 'Додатно образовање', title: 'CyberSecurity, OWASP и самостално учење', period: '2025 - 2026', description: 'Додатно учење у областима сајбер безбедности, OWASP-а, етичког хаковања, локалне вештачке интелигенције и open-source модела.' }, ims: { type: 'Образовање', title: 'Алте Кантонссцхуле Аарау & Беруфсбилдунг Баден', period: '2024 - данас', description: 'Информатика у средњој школи (ИМС), смер развој апликација. Крећем у 3. ИМС годину и припремам се за праксу у 4. години.' }, school: { type: 'Школа', title: 'Окружна школа Букс АГ', period: '2021 - 2024', description: 'Ту сам изградио своју школску основу и додатно развио интересовање за информатику, технику и структурисано учење.' } } },
   stats: { projects: 'Пројекти', certificates: 'Сертификати', years: 'Године кодирања' },
   tech: { kicker: 'Тех стек', title: 'Технологије са којима сам стекао искуство', subline: 'Компактан преглед из школе, пројеката, локалних алата и тренутних области учења.' },
   certificates: { kicker: 'Сертификати', title: 'Усавршавање у слободно време', subline: 'Одабрани сертификати са прегледом, детаљима и ПДФ преузимањем.' },
@@ -1094,7 +1168,7 @@ embeddedDictionaries['sr-cyrl'] = {
     moreProjectsSubline: 'Додатни пројекти које сам завршио или их још тренутно развијам.'
   },
   filters: { all: 'Сви', visualization: 'Визуализација', inProgress: 'У раду' },
-  contact: { kicker: 'Контакт', title: 'Хајде да сарађујемо', description: 'За праксу у Швајцарској за 2027/2028, питања или сарадњу доступан сам путем имејла.', mailLabel: '', schoolMailLabel: '' },
+  contact: { kicker: 'Контакт', title: 'Контакт и правно', description: 'За праксу у Швајцарској за 2027/2028, питања или сарадњу доступан сам путем имејла.', emailLabel: 'Имејл', linkedinLabel: 'ЛинкдИн', mailLabel: '', schoolMailLabel: '' },
   techGroups: [
     { title: 'Фронтенд основе', items: ['ХТМЛ', 'ЦСС', 'ЈаваСкрипт', 'ТајпСкрипт'] },
     { title: 'Фронтенд runtime', items: ['Реакт', 'Вите', 'Node.js'] },
@@ -1105,12 +1179,12 @@ embeddedDictionaries['sr-cyrl'] = {
     { title: 'Хостинг и платформе', items: ['Нетлајфај', 'Верцел', 'ВордПрес', 'ХостПоинт', 'Клаудфлер'] }
   ],
   legal: { kicker: 'Правне информације', title: 'Импресум, приватност и колачићи', subline: 'Кратко, транспарентно и без сувишног праћења.', privacyTitle: 'Приватност', privacyText: 'Нема формулара, аналитике ни рекламних трекера. Хостинг обрађује само технички неопходне податке приступа.', cookieTitle: 'Колачићи', cookieText: 'Нема колачића за праћење. Локално се чува само изабрани језик.', externalTitle: 'Екстерни садржај', externalText: 'Слике пројеката, сертификати и Гитхаб графика учитавају се локално. Екстерни линкови се отварају тек након клика.', imprintTitle: 'Импресум', imprintText: 'Приватни портфолио сајт Александра Николића. Контакт је доступан у одељку за контакт.', contactLink: 'Контактирај ме', unifiedTitle: 'Импресум и правне информације', unifiedText: 'Једно заједничко објашњење импресума, приватности, колачића и хостинга.' },
-  github: { kicker: 'Гитхаб', title: 'Гитхаб активност и опен сорс', subline: 'Гитхаб користим за документовање пројеката, верзионисање промена и јавно линковање радова.', profileLink: 'Гитхаб профил', reposLink: 'Репозиторијуми', openSourceTitle: 'Опен сорс доприноси', openSourceEmpty: 'Још нема јавно проверљивих мерџова.', openSourceText: 'Одабрани мерџовани пул реквестови са директним линком ка доказу.', moreMergesTitle: 'Додатни мерџеви', moreMergesText: 'Додатни мерџовани пул реквестови са директним доказом.', publicRepos: 'јавни репозиторијуми', ossMerges: 'опен-сорс мерџеви', currentStreak: 'дана тренутног низа', mergedLabel: 'Мерџовано' },
+  github: { kicker: 'Гитхаб', title: 'Гитхаб активност и опен сорс', subline: 'Гитхаб користим за документовање пројеката, верзионисање промена и јавно линковање радова.', profileLink: 'Гитхаб профил', reposLink: 'Репозиторијуми', openSourceTitle: 'Опен сорс доприноси', openSourceEmpty: 'Још нема јавно проверљивих мерџова.', openSourceText: 'Одабрани мерџовани пул реквестови са директним линком ка доказу.', moreMergesTitle: 'Додатни мерџеви', moreMergesText: 'Додатни мерџовани пул реквестови са директним доказом.', publicRepos: 'јавни репозиторијуми', ossMerges: 'опен-сорс мерџеви', currentStreak: 'дана тренутног низа', mergedLabel: 'Мерџовано', completedLabel: 'Завршено' },
   linkLabels: { github: 'Гитхаб', demo: 'Демо' },
   moreProjects: { linkPending: 'Линк следи' },
   modal: { close: 'Затвори', title: 'Детаљни приказ', projectKicker: 'Статус пројекта', certificateKicker: 'Сертификат', openImage: 'Отвори преглед у новој картици' },
   portfolioDownloadButton: 'Преузми ПДФ',
-  footer: { rights: 'Сва права задржана.', legalLink: 'Приватност и колачићи' }
+  footer: { rights: 'Сва права задржана.', legalLink: 'Импресум и приватност' }
 };
 
 const certificateCopy = {
@@ -1238,7 +1312,7 @@ const embeddedPortfolioItems = {
       sortlab: { title: 'SortLab', cardDescription: 'Sortieralgorithmus-Visualizer mit Balkenansicht, Steuerung, Statistik und Erklärbereich.', tags: ['React/Vite', 'Algorithmen'] },
       vsw: { title: 'VSW - Vulnerability Scanner Web App', cardDescription: 'Defensive Fullstack-Web-App für risikoarme Security-Checks an autorisierten Domains oder IPs.', tags: ['Gemeinsam', 'FastAPI', 'React'] },
       foliolint: { title: 'FolioLint', cardDescription: 'Lokales Python-CLI, das Repositories auf Portfolio-Tauglichkeit, README-Struktur und öffentliche Präsentierbarkeit prüft.', tags: ['Python', 'CLI', 'README'] },
-      besp2074: { title: 'Internet ein und aus', cardDescription: 'Hackathon-Prototyp für eine Weboberfläche, die Internetzugang pro Schulzimmer oder Subnetz modelliert.', tags: ['Python', 'Hackathon'] }
+      besp2074: { title: 'BESP2074 – Internet ein und aus', cardDescription: 'Hackathon-Prototyp für eine Weboberfläche, die Internetzugang pro Schulzimmer oder Subnetz modelliert.', tags: ['Python', 'Hackathon'] }
     },
     certificates: {
       ethicalHacker: { title: 'Ethical Hacker', cardDescription: 'Zertifikat im PDF-Format mit direkter Vorschau und Download.', previewLabel: 'Zertifikat' },
@@ -1252,7 +1326,7 @@ const embeddedPortfolioItems = {
       sortlab: { title: 'SortLab', cardDescription: 'Sorting algorithm visualizer with bar chart, controls, statistics, and explanation area.', tags: ['React/Vite', 'Algorithms'] },
       vsw: { title: 'VSW - Vulnerability Scanner Web App', cardDescription: 'Defensive full-stack web app for low-risk security checks on authorized domains or IPs.', tags: ['team project', 'FastAPI', 'React'] },
       foliolint: { title: 'FolioLint', cardDescription: 'Local Python CLI for checking repositories for portfolio readiness, README structure, and public presentation quality.', tags: ['Python', 'CLI', 'README'] },
-      besp2074: { title: 'Internet on and off', cardDescription: 'Hackathon prototype for a web interface that models internet access per classroom or subnet.', tags: ['Python', 'Hackathon'] }
+      besp2074: { title: 'BESP2074 – Internet on and off', cardDescription: 'Hackathon prototype for a web interface that models internet access per classroom or subnet.', tags: ['Python', 'Hackathon'] }
     },
     certificates: {
       ethicalHacker: { title: 'Ethical Hacker', cardDescription: 'Certificate with preview, details and PDF download in the detail view.', previewLabel: 'Certificate' },
@@ -1266,7 +1340,7 @@ const embeddedPortfolioItems = {
       sortlab: { title: 'SortLab', cardDescription: 'Visualiseur d’algorithmes de tri avec barres, contrôles, statistiques et explications.', tags: ['React/Vite', 'Algorithmes'] },
       vsw: { title: 'VSW - Application web de scan de vulnérabilités', cardDescription: 'Application web full-stack défensive pour des contrôles de sécurité à faible risque sur des domaines ou IP autorisés.', tags: ['projet d’équipe', 'FastAPI', 'React'] },
       foliolint: { title: 'FolioLint', cardDescription: 'CLI Python local qui vérifie la qualité portfolio, la structure du README et la présentation publique des dépôts.', tags: ['Python', 'CLI', 'README'] },
-      besp2074: { title: 'Internet activé et désactivé', cardDescription: 'Prototype de hackathon pour une interface web modélisant l’accès Internet par salle ou sous-réseau.', tags: ['Python', 'Hackathon'] }
+      besp2074: { title: 'BESP2074 – Internet activé et désactivé', cardDescription: 'Prototype de hackathon pour une interface web modélisant l’accès Internet par salle ou sous-réseau.', tags: ['Python', 'Hackathon'] }
     },
     certificates: {
       ethicalHacker: { title: 'Hacker éthique', cardDescription: 'Certificat avec aperçu, détails et téléchargement PDF dans la vue détaillée.', previewLabel: 'Certificat' },
@@ -1280,7 +1354,7 @@ const embeddedPortfolioItems = {
       sortlab: { title: 'SortLab', cardDescription: 'Vizualizator algoritama sortiranja sa stubićima, kontrolama, statistikom i objašnjenjem.', tags: ['React/Vite', 'Algoritmi'] },
       vsw: { title: 'VSW - Web aplikacija za proveru ranjivosti', cardDescription: 'Defanzivna fulstek veb aplikacija za niskorizične provere na autorizovanim domenima ili IP adresama.', tags: ['zajedno', 'FastAPI', 'React'] },
       foliolint: { title: 'FolioLint', cardDescription: 'Lokalni Python CLI za proveru spremnosti repozitorijuma za portfolio, README strukture i javnog predstavljanja.', tags: ['Python', 'CLI', 'README'] },
-      besp2074: { title: 'Internet uključi i isključi', cardDescription: 'Hakaton prototip veb interfejsa koji modeluje pristup internetu po učionici ili podmreži.', tags: ['Python', 'Hakaton'] }
+      besp2074: { title: 'BESP2074 – Internet uključi i isključi', cardDescription: 'Hakaton prototip veb interfejsa koji modeluje pristup internetu po učionici ili podmreži.', tags: ['Python', 'Hakaton'] }
     },
     certificates: {
       ethicalHacker: { title: 'Etički haker', cardDescription: 'Sertifikat sa pregledom, detaljima i PDF preuzimanjem u detaljnom prikazu.', previewLabel: 'Sertifikat' },
@@ -1294,7 +1368,7 @@ const embeddedPortfolioItems = {
       sortlab: { title: 'СортЛаб', cardDescription: 'Визуализатор алгоритама сортирања са стубићима, контролама, статистиком и објашњењем.', tags: ['Реакт/Вите', 'Алгоритми'] },
       vsw: { title: 'ВСВ - веб апликација за проверу рањивости', cardDescription: 'Дефанзивна фулстек веб апликација за нискоризичне безбедносне провере на ауторизованим доменима или ИП адресама.', tags: ['заједно', 'ФастАПИ', 'Реакт'] },
       foliolint: { title: 'ФолиоЛинт', cardDescription: 'Локални Пајтон ЦЛИ за проверу спремности репозиторијума за портфолио, РИДМИ структуре и јавног представљања.', tags: ['Пајтон', 'ЦЛИ', 'РИДМИ'] },
-      besp2074: { title: 'Интернет укључи и искључи', cardDescription: 'Хакатон прототип веб интерфејса који моделује приступ интернету по учионици или подмрежи.', tags: ['Пајтон', 'Хакатон'] }
+      besp2074: { title: 'БЕСП2074 – Интернет укључи и искључи', cardDescription: 'Хакатон прототип веб интерфејса који моделује приступ интернету по учионици или подмрежи.', tags: ['Пајтон', 'Хакатон'] }
     },
     certificates: {
       ethicalHacker: { title: 'Етички хакер', cardDescription: 'Сертификат са прегледом, детаљима и ПДФ преузимањем у детаљном приказу.', previewLabel: 'Сертификат' },
@@ -1469,34 +1543,39 @@ const projectEvidenceCopy = {
 
 const projectPresentationCopy = {
   de: {
-    featuredTitle: 'Für Praktikumsbewerbungen hervorgehoben',
-    featuredText: 'Drei Projekte mit nachvollziehbarem Code, Qualitätskontrollen und öffentlicher Dokumentation.',
+    featuredTitle: 'Im Fokus',
+    featuredText: 'Ein eigenständig entwickeltes Projekt mit nachvollziehbaren Qualitätskontrollen und direktem Repository-Nachweis.',
     moreTitle: 'Weitere Projekte',
-    moreText: 'Weitere Arbeiten und Prototypen bleiben vollständig erreichbar.'
+    moreText: 'Weitere Arbeiten bleiben mit Details, Repositories und Demos erreichbar.',
+    details: 'Projektinformationen'
   },
   en: {
-    featuredTitle: 'Highlighted for internship applications',
-    featuredText: 'Three projects with traceable code, quality checks, and public documentation.',
+    featuredTitle: 'In focus',
+    featuredText: 'An independently developed project with traceable quality checks and a direct repository record.',
     moreTitle: 'More projects',
-    moreText: 'Further work and prototypes remain fully accessible.'
+    moreText: 'Further work remains available with details, repositories, and demos.',
+    details: 'Project information'
   },
   fr: {
-    featuredTitle: 'Mis en avant pour les candidatures de stage',
-    featuredText: 'Trois projets avec code traçable, contrôles qualité et documentation publique.',
+    featuredTitle: 'À la une',
+    featuredText: 'Un projet développé de manière indépendante, avec des contrôles qualité vérifiables et un dépôt direct.',
     moreTitle: 'Autres projets',
-    moreText: 'Les autres réalisations et prototypes restent entièrement accessibles.'
+    moreText: 'Les autres réalisations restent disponibles avec détails, dépôts et démos.',
+    details: 'Informations sur le projet'
   },
   sr: {
-    featuredTitle: 'Izdvojeno za prijave za praksu',
-    featuredText: 'Tri projekta sa proverljivim kodom, proverama kvaliteta i javnom dokumentacijom.',
+    featuredTitle: 'U fokusu',
+    featuredText: 'Samostalno razvijen projekat sa proverljivim kontrolama kvaliteta i direktnim repozitorijumom.',
     moreTitle: 'Dodatni projekti',
-    moreText: 'Ostali radovi i prototipovi ostaju potpuno dostupni.'
+    moreText: 'Ostali radovi ostaju dostupni sa detaljima, repozitorijumima i demoom.',
+    details: 'Informacije o projektu'
   },
   'sr-cyrl': {
-    featuredTitle: 'Издвојено за пријаве за праксу',
-    featuredText: 'Три пројекта са проверљивим кодом, проверама квалитета и јавном документацијом.',
+    featuredTitle: 'У фокусу',
+    featuredText: 'Самостално развијен пројекат са проверљивим контролама квалитета и директним репозиторијумом.',
     moreTitle: 'Додатни пројекти',
-    moreText: 'Остали радови и прототипови остају потпуно доступни.'
+    moreText: 'Остали радови остају доступни са детаљима, репозиторијумима и демоима.',
+    details: 'Информације о пројекту'
   }
 };
 
@@ -1537,7 +1616,20 @@ const embeddedPortfolioSectionCopy = {
 };
 
 const embeddedOpenSourceContributions = {
+  de: {
+    pipAudit553: { title: 'Windows-Tests in GitHub Actions', summary: 'Abgeschlossenes Issue zur Ergänzung eines Windows-Testjobs in GitHub Actions.', tags: ['Python', 'CI/CD', 'Windows'] }
+  },
+  en: {
+    pipAudit553: { title: 'Run tests for Windows in GitHub Actions', summary: 'Completed issue for adding a Windows test job to GitHub Actions.', tags: ['Python', 'CI/CD', 'Windows'] }
+  },
+  fr: {
+    pipAudit553: { title: 'Exécuter les tests Windows dans GitHub Actions', summary: 'Issue clôturée pour ajouter un job de test Windows à GitHub Actions.', tags: ['Python', 'CI/CD', 'Windows'] }
+  },
+  sr: {
+    pipAudit553: { title: 'Pokrenuti testove za Windows u GitHub Actions', summary: 'Završeni issue za dodavanje Windows testnog posla u GitHub Actions.', tags: ['Python', 'CI/CD', 'Windows'] }
+  },
   'sr-cyrl': {
+    pipAudit553: { title: 'Покренути тестове за Виндоуз у ГитХаб акцијама', summary: 'Завршен issue за додавање Виндоуз тестног посла у ГитХаб акције.', tags: ['Пајтон', 'ЦИ/ЦД', 'Виндоуз'] },
     pipAudit1119: { title: 'Уклања дуплирање подударних ПИ-СЕК рањивости', summary: 'Спречава да се подударне ПИ-СЕК рањивости броје два пута.', tags: ['Пајтон', 'Безбедност'] },
     vaultCleaner54: { title: 'Поштује подешене ЦЛИ путање', summary: 'Побољшава ЦЛИ логику путања, тако да се подешене улазне и излазне путање правилно поштују.', tags: ['Пајтон', 'ЦЛИ'] },
     agentcache38: { title: 'Даје предност ВС Код МЦП конфигурацији радног простора', summary: 'Даје предност конфигурацији радног простора за ВС Код МЦП, тако да подешавања специфична за пројекат раде чистије.', tags: ['Развојни алати', 'Конфигурација'] },
@@ -1668,7 +1760,8 @@ const mergeIcon = () => {
 
 const renderOpenSourceContributions = () => {
   const contributions = portfolioData.openSourceContributions || [];
-  if (openSourceMergeCountEl) openSourceMergeCountEl.textContent = contributions.length;
+  const mergedContributions = contributions.filter((contribution) => !contribution.status || contribution.status === 'merged');
+  if (openSourceMergeCountEl) openSourceMergeCountEl.textContent = mergedContributions.length;
   if (!openSourceList) return;
 
   openSourceList.innerHTML = '';
@@ -1702,7 +1795,7 @@ const renderOpenSourceContributions = () => {
 
     const number = document.createElement('span');
     number.className = 'open-source-number';
-    number.textContent = `PR #${item.number}`;
+    number.textContent = `${item.kind === 'issue' ? 'Issue' : 'PR'} #${item.number}`;
 
     top.append(repo, number);
 
@@ -1725,7 +1818,10 @@ const renderOpenSourceContributions = () => {
 
     const merged = document.createElement('span');
     merged.className = 'merged-badge';
-    merged.append(mergeIcon(), document.createTextNode(t('github.mergedLabel', 'Merged')));
+    const contributionLabel = item.status === 'completed'
+      ? t('github.completedLabel', 'Abgeschlossen')
+      : t('github.mergedLabel', 'Merged');
+    merged.append(mergeIcon(), document.createTextNode(contributionLabel));
 
     bottom.append(tags, merged);
     card.append(top, title, summary, bottom);
@@ -1736,10 +1832,29 @@ const renderOpenSourceContributions = () => {
   moreCard.className = 'open-source-pr open-source-more-card';
 
   const moreTitle = document.createElement('h4');
-  moreTitle.textContent = t('github.moreMergesTitle', 'Weitere Merges');
+  const hasOpenAdditional = additional.some((contribution) => contribution.status === 'open');
+  const additionalTitle = {
+    de: 'Weitere Beiträge',
+    en: 'More contributions',
+    fr: 'Autres contributions',
+    sr: 'Dodatni doprinosi',
+    'sr-cyrl': 'Додатни доприноси'
+  };
+  moreTitle.textContent = hasOpenAdditional
+    ? (additionalTitle[currentLanguageCode] || additionalTitle.de)
+    : t('github.moreMergesTitle', 'Weitere Merges');
 
   const moreText = document.createElement('p');
-  moreText.textContent = t('github.moreMergesText', 'Weitere gemergte Pull Requests mit direktem Nachweis.');
+  const additionalText = {
+    de: 'Weitere Open-Source-Beiträge mit direktem Nachweis; offene Pull Requests sind entsprechend markiert.',
+    en: 'Further open-source contributions with direct proof; open pull requests are marked accordingly.',
+    fr: 'Autres contributions open source avec preuve directe; les pull requests ouvertes sont indiquées.',
+    sr: 'Dodatni open-source doprinosi sa direktnim dokazom; otvoreni pull requestovi su označeni.',
+    'sr-cyrl': 'Додатни опен сорс доприноси са директним доказом; отворени пул реквестови су означени.'
+  };
+  moreText.textContent = hasOpenAdditional
+    ? (additionalText[currentLanguageCode] || additionalText.de)
+    : t('github.moreMergesText', 'Weitere gemergte Pull Requests mit direktem Nachweis.');
 
   const moreList = document.createElement('div');
   moreList.className = 'open-source-more-list';
@@ -1750,7 +1865,12 @@ const renderOpenSourceContributions = () => {
     link.href = item.url;
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
-    link.textContent = `${item.repo} #${item.number}`;
+    const statusSuffix = item.status === 'open'
+      ? ' · offen'
+      : item.status === 'completed'
+        ? ` · ${t('github.completedLabel', 'abgeschlossen').toLowerCase()}`
+        : '';
+    link.textContent = `${item.repo} #${item.number}${statusSuffix}`;
     moreList.append(link);
   });
 
@@ -1763,6 +1883,11 @@ const applyStaticTranslations = () => {
     const key = element.getAttribute('data-i18n');
     const fallback = defaultTexts.get(element) || '';
     element.textContent = t(key, fallback);
+  });
+  i18nAriaElements.forEach((element) => {
+    const key = element.getAttribute('data-i18n-aria');
+    const fallback = element.getAttribute('aria-label') || '';
+    element.setAttribute('aria-label', t(key, fallback));
   });
 };
 
@@ -1975,7 +2100,7 @@ if (surfaceCanvas && !prefersReducedMotion.matches) {
       const alpha = 0.08 + Math.sin(time + dot.phase) * 0.025;
       ctx.beginPath();
       ctx.arc(dot.x, dot.y, dot.radius, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(180, 167, 229, ${alpha})`;
+      ctx.fillStyle = `rgba(125, 211, 252, ${alpha})`;
       ctx.fill();
     });
 
@@ -2035,169 +2160,6 @@ const renderStats = () => {
   certificatesCountEl.textContent = String(portfolioData.certificates.length);
   yearsCountEl.textContent = String(yearsCoding);
 };
-
-const projectPuzzleCopy = {
-  de: {
-    questions: [
-      { text: 'Was würdest du in einer geheimen Schatzkiste erwarten?', options: ['Eine alte Karte', 'Einen Schlüssel', 'Eine geheime Nachricht', 'Etwas völlig Unerwartetes'], responses: ['Eine Karte also. Du willst zuerst verstehen, wohin der Weg führt.', 'Ein Schlüssel. Direkt zum Wesentlichen – kann ich respektieren.', 'Eine geheime Nachricht. Vielleicht steckt mehr in der Kiste, als man auf den ersten Blick sieht.', 'Das Unerwartete. Genau dafür ist eine Schatzkiste da.'] },
-      { text: 'Du betrittst einen unbekannten Raum. Was fällt dir zuerst auf?', options: ['Die Atmosphäre', 'Die versteckten Details', 'Der Weg nach draussen', 'Etwas, das sich bewegt'], responses: ['Die Atmosphäre zuerst – ein guter Raum erzählt bereits viel.', 'Du suchst die Details. Die interessanten Dinge sind selten ganz offensichtlich.', 'Pragmatisch: Erst Orientierung, dann Erkundung.', 'Bewegung fällt auf. Klingt, als wärst du aufmerksam.'] },
-      { text: 'Wie würdest du ein kleines Rätsel angehen?', options: ['Ausprobieren und sehen, was passiert', 'Erst alles genau beobachten', 'Hinweise zusammensetzen', 'Einfach meinem Gefühl folgen'], responses: ['Ausprobieren ist oft der schnellste Weg zu einer neuen Idee.', 'Genau beobachten spart später viele Umwege.', 'Hinweise verbinden: solide Strategie.', 'Manchmal ist das Bauchgefühl der beste erste Schritt.'] }
-    ],
-    reaction: 'Interessante Wahl. Du darfst weiter.',
-    progress: (index) => `${index + 1} / 3`
-  },
-  en: {
-    questions: [
-      { text: 'What would you expect to find in a secret treasure chest?', options: ['An old map', 'A key', 'A secret message', 'Something completely unexpected'], responses: ['A map. You want to understand where the path leads first.', 'A key. Straight to what matters – fair enough.', 'A secret message. Maybe there is more to this chest than meets the eye.', 'The unexpected. That is exactly what a treasure chest is for.'] },
-      { text: 'You enter an unfamiliar room. What do you notice first?', options: ['The atmosphere', 'The hidden details', 'The way out', 'Something that moves'], responses: ['The atmosphere first – a good room already tells a story.', 'You look for details. The interesting things are rarely obvious.', 'Practical: get your bearings, then explore.', 'Movement stands out. Sounds like you pay attention.'] },
-      { text: 'How would you approach a small riddle?', options: ['Try things and see what happens', 'Observe everything first', 'Piece the clues together', 'Trust my gut'], responses: ['Trying things is often the quickest route to a new idea.', 'Careful observation saves many detours later.', 'Connecting clues: a solid strategy.', 'Sometimes your instinct is the best first step.'] }
-    ],
-    reaction: 'Interesting choice. You may proceed.',
-    progress: (index) => `${index + 1} / 3`
-  },
-  fr: {
-    questions: [
-      { text: 'Que t’attendrais-tu à trouver dans un coffre au trésor secret ?', options: ['Une vieille carte', 'Une clé', 'Un message secret', 'Quelque chose d’inattendu'], responses: ['Une carte. Tu veux d’abord savoir où mène le chemin.', 'Une clé. Aller droit à l’essentiel, je respecte ça.', 'Un message secret. Il y a peut-être plus dans ce coffre qu’il n’y paraît.', 'L’inattendu. C’est exactement à ça que sert un coffre au trésor.'] },
-      { text: 'Tu entres dans une pièce inconnue. Que remarques-tu en premier ?', options: ['L’ambiance', 'Les détails cachés', 'La sortie', 'Quelque chose qui bouge'], responses: ['L’ambiance d’abord : une bonne pièce raconte déjà quelque chose.', 'Tu cherches les détails. Les choses intéressantes sont rarement évidentes.', 'Pragmatique : d’abord s’orienter, ensuite explorer.', 'Le mouvement attire ton attention. Tu sembles attentif.'] },
-      { text: 'Comment aborderais-tu une petite énigme ?', options: ['Essayer et voir ce qui se passe', 'Tout observer d’abord', 'Assembler les indices', 'Suivre mon intuition'], responses: ['Essayer est souvent le chemin le plus rapide vers une idée.', 'Bien observer évite beaucoup de détours.', 'Relier les indices : une stratégie solide.', 'Parfois, l’intuition est le meilleur premier pas.'] }
-    ],
-    reaction: 'Choix intéressant. Tu peux continuer.',
-    progress: (index) => `${index + 1} / 3`
-  },
-  sr: {
-    questions: [
-      { text: 'Šta bi očekivao da pronađeš u tajnom kovčegu s blagom?', options: ['Staru mapu', 'Ključ', 'Tajnu poruku', 'Nešto potpuno neočekivano'], responses: ['Mapu. Prvo želiš da znaš kuda vodi put.', 'Ključ. Odmah na suštinu – pošteno.', 'Tajnu poruku. Možda u kovčegu ima više nego što se na prvi pogled vidi.', 'Nešto neočekivano. Upravo je za to kovčeg s blagom.'] },
-      { text: 'Ulaziš u nepoznatu prostoriju. Šta prvo primećuješ?', options: ['Atmosferu', 'Skrivene detalje', 'Izlaz', 'Nešto što se kreće'], responses: ['Prvo atmosferu – dobra prostorija već priča priču.', 'Tražiš detalje. Zanimljive stvari retko su očigledne.', 'Praktično: prvo se orijentiši, pa istražuj.', 'Pokret se ističe. Deluje da obraćaš pažnju.'] },
-      { text: 'Kako bi rešavao malu zagonetku?', options: ['Probao bih i video šta će se desiti', 'Prvo bih sve pažljivo posmatrao', 'Spojio bih tragove', 'Pratio bih osećaj'], responses: ['Isprobavanje je često najbrži put do nove ideje.', 'Pažljivo posmatranje kasnije štedi mnogo zaobilazaka.', 'Povezivanje tragova: dobra strategija.', 'Ponekad je osećaj najbolji prvi korak.'] }
-    ],
-    reaction: 'Zanimljiv izbor. Možeš dalje.',
-    progress: (index) => `${index + 1} / 3`
-  },
-  'sr-cyrl': {
-    questions: [
-      { text: 'Шта би очекивао да пронађеш у тајном ковчегу с благом?', options: ['Стару мапу', 'Кључ', 'Тајну поруку', 'Нешто потпуно неочекивано'], responses: ['Мапу. Прво желиш да знаш куда води пут.', 'Кључ. Одмах на суштину – поштено.', 'Тајну поруку. Можда у ковчегу има више него што се на први поглед види.', 'Нешто неочекивано. Управо је за то ковчег с благом.'] },
-      { text: 'Улазиш у непознату просторију. Шта прво примећујеш?', options: ['Атмосферу', 'Скривене детаље', 'Излаз', 'Нешто што се креће'], responses: ['Прво атмосферу – добра просторија већ прича причу.', 'Тражиш детаље. Занимљиве ствари ретко су очигледне.', 'Практично: прво се оријентиши, па истражуј.', 'Покрет се истиче. Дјелује да обраћаш пажњу.'] },
-      { text: 'Како би решавао малу загонетку?', options: ['Пробао бих и видео шта ће се десити', 'Прво бих све пажљиво посматрао', 'Спојио бих трагове', 'Пратио бих осећај'], responses: ['Испробавање је често најбржи пут до нове идеје.', 'Пажљиво посматрање касније штеди много заобилазака.', 'Повезивање трагова: добра стратегија.', 'Понекад је осјећај најбољи први корак.'] }
-    ],
-    reaction: 'Занимљив избор. Можеш да наставиш.',
-    progress: (index) => `${index + 1} / 3`
-  }
-};
-
-let projectPuzzleQuestionIndex = 0;
-let projectPuzzleIsOpen = false;
-let projectPuzzleIsReady = false;
-let projectPuzzleIsUnlocked = (() => {
-  try {
-    return sessionStorage.getItem('project-puzzle-unlocked-session-v2') === 'true';
-  } catch {
-    return false;
-  }
-})();
-
-const saveProjectPuzzleUnlock = () => {
-  try {
-    sessionStorage.setItem('project-puzzle-unlocked-session-v2', 'true');
-  } catch {
-    // The projects remain available for this visit even if session storage is blocked.
-  }
-};
-
-const unlockProjectPuzzle = () => {
-  if (projectPuzzleIsUnlocked) return;
-  projectPuzzleIsUnlocked = true;
-  projectPuzzleIsOpen = false;
-  saveProjectPuzzleUnlock();
-  if (projectPuzzleDialog) projectPuzzleDialog.hidden = true;
-  projectPuzzle?.classList.add('is-opening');
-  window.setTimeout(() => projectPuzzle?.classList.add('is-leaving'), 1150);
-  window.setTimeout(() => {
-    if (projectPuzzle) projectPuzzle.hidden = true;
-    if (projectExplorer) projectExplorer.hidden = false;
-    if (projectsGrid) {
-      projectsGrid.hidden = false;
-      projectsGrid.setAttribute('aria-hidden', 'false');
-    }
-  }, 2050);
-};
-
-const prepareProjectPuzzleUnlock = () => {
-  projectPuzzleIsOpen = false;
-  projectPuzzleIsReady = true;
-  if (projectPuzzleDialog) projectPuzzleDialog.hidden = true;
-  if (projectPuzzleIntro) projectPuzzleIntro.hidden = false;
-};
-
-const renderProjectPuzzle = () => {
-  if (!projectPuzzle || !projectsGrid) return;
-  const copy = projectPuzzleCopy[currentLanguageCode] || projectPuzzleCopy.de;
-  if (projectExplorer) projectExplorer.hidden = !projectPuzzleIsUnlocked;
-  projectsGrid.hidden = !projectPuzzleIsUnlocked;
-  projectsGrid.setAttribute('aria-hidden', String(!projectPuzzleIsUnlocked));
-  if (projectPuzzleIsUnlocked) {
-    projectPuzzle.hidden = true;
-    if (projectPuzzleDialog) projectPuzzleDialog.hidden = true;
-    return;
-  }
-  projectPuzzle.hidden = false;
-  projectPuzzle.classList.remove('is-opening', 'is-leaving');
-  if (projectPuzzleIntro) projectPuzzleIntro.hidden = projectPuzzleIsOpen && !projectPuzzleIsReady;
-  if (projectPuzzleDialog) projectPuzzleDialog.hidden = !projectPuzzleIsOpen || projectPuzzleIsReady;
-  if (!projectPuzzleIsOpen || projectPuzzleIsReady) return;
-
-  const question = copy.questions[projectPuzzleQuestionIndex];
-  if (!question) return;
-  if (projectPuzzleQuestion) projectPuzzleQuestion.textContent = question.text;
-  if (projectPuzzleProgress) projectPuzzleProgress.textContent = copy.progress(projectPuzzleQuestionIndex);
-  if (projectPuzzleReaction) projectPuzzleReaction.textContent = '';
-  if (projectPuzzleOptions) {
-    projectPuzzleOptions.innerHTML = '';
-    question.options.forEach((optionText) => {
-      const option = document.createElement('button');
-      option.type = 'button';
-      option.className = 'puzzle-option';
-      option.textContent = optionText;
-      projectPuzzleOptions.append(option);
-    });
-  }
-};
-
-const openProjectPuzzle = () => {
-  if (projectPuzzleIsReady) {
-    unlockProjectPuzzle();
-    return;
-  }
-  if (projectPuzzleIsOpen) return;
-  projectPuzzleIsOpen = true;
-  projectPuzzleQuestionIndex = 0;
-  renderProjectPuzzle();
-  projectPuzzleOptions?.querySelector('button')?.focus();
-};
-
-projectPuzzleChest?.addEventListener('click', openProjectPuzzle);
-projectPuzzleSkip?.addEventListener('click', unlockProjectPuzzle);
-projectPuzzleOptions?.addEventListener('click', (event) => {
-  const option = event.target.closest('.puzzle-option');
-  if (!option) return;
-  const copy = projectPuzzleCopy[currentLanguageCode] || projectPuzzleCopy.de;
-  const question = copy.questions[projectPuzzleQuestionIndex];
-  const optionIndex = [...projectPuzzleOptions.querySelectorAll('.puzzle-option')].indexOf(option);
-  projectPuzzleOptions.querySelectorAll('.puzzle-option').forEach((button) => { button.disabled = true; });
-  option.classList.add('is-selected');
-  if (projectPuzzleReaction) projectPuzzleReaction.textContent = question.responses?.[optionIndex] || copy.reaction;
-  if (projectPuzzleQuestionIndex >= copy.questions.length - 1) {
-    window.setTimeout(prepareProjectPuzzleUnlock, 1450);
-    return;
-  }
-  projectPuzzleQuestionIndex += 1;
-  window.setTimeout(renderProjectPuzzle, 1450);
-});
-
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape' && projectPuzzleIsOpen && !projectPuzzleIsUnlocked) {
-    unlockProjectPuzzle();
-  }
-});
 
 const createProjectEvidence = (evidence, { compact = false } = {}) => {
   if (!evidence) return null;
@@ -2402,32 +2364,155 @@ const createCard = (item, typeKey = 'projects') => {
   return card;
 };
 
+const openProjectDetails = (item, displayItem) => {
+  openDetailModal(
+    displayItem.title,
+    displayItem.cardDescription || displayItem.description || '',
+    displayItem.meta || [],
+    {
+      previewImage: item.previewImage || '',
+      demoMedia: item.demoMedia || null,
+      links: item.links || [],
+      evidence: displayItem.evidence || null,
+      itemType: 'projects'
+    }
+  );
+};
+
+const createProjectDetailButton = (item, displayItem, label) => {
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'btn btn-secondary';
+  button.textContent = label;
+  button.addEventListener('click', () => openProjectDetails(item, displayItem));
+  return button;
+};
+
+const createProjectLinks = (links) => {
+  const container = document.createElement('div');
+  container.className = 'project-links';
+  (links || []).forEach((linkItem) => {
+    const link = document.createElement('a');
+    link.className = 'link-arrow';
+    link.href = linkItem.url;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.textContent = localizedLinkLabel(linkItem.label);
+    container.append(link);
+  });
+  return container;
+};
+
+const createProjectListItem = (item, number, copy) => {
+  const displayItem = localizedPortfolioItem(item, 'projects');
+  const card = document.createElement('article');
+  card.className = 'project-list-item';
+  card.tabIndex = 0;
+  card.setAttribute('aria-label', `${displayItem.title}: ${copy.details}`);
+
+  const index = document.createElement('span');
+  index.className = 'project-list-index';
+  index.textContent = String(number).padStart(2, '0');
+
+  const content = document.createElement('div');
+  content.className = 'project-list-content';
+  const title = document.createElement('h3');
+  title.textContent = displayItem.title;
+  const description = document.createElement('p');
+  description.textContent = displayItem.cardDescription || displayItem.description || '';
+  const tags = document.createElement('div');
+  tags.className = 'project-tags';
+  (displayItem.tags || []).forEach((tagText) => {
+    const tag = document.createElement('span');
+    tag.textContent = tagText;
+    tags.append(tag);
+  });
+  const actions = document.createElement('div');
+  actions.className = 'card-actions';
+  actions.append(createProjectDetailButton(item, displayItem, copy.details));
+  const links = createProjectLinks(item.links);
+  if (links.children.length) actions.append(links);
+  content.append(title, description, tags, actions);
+  card.append(index, content);
+
+  const openDetails = () => openProjectDetails(item, displayItem);
+  card.addEventListener('click', (event) => {
+    if (!event.target.closest('button, a')) openDetails();
+  });
+  card.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      openDetails();
+    }
+  });
+  return card;
+};
+
+const renderProjectSpotlight = (item, copy) => {
+  if (!projectSpotlight) return;
+  projectSpotlight.innerHTML = '';
+  if (!item) return;
+  const displayItem = localizedPortfolioItem(item, 'projects');
+  const card = document.createElement('article');
+  card.className = 'project-spotlight-card';
+  const content = document.createElement('div');
+  content.className = 'project-spotlight-copy';
+  const kicker = document.createElement('p');
+  kicker.className = 'kicker';
+  kicker.textContent = `01 · ${copy.featuredTitle}`;
+  const title = document.createElement('h3');
+  title.textContent = displayItem.title;
+  const description = document.createElement('p');
+  description.textContent = displayItem.cardDescription || displayItem.description || '';
+  const evidence = createProjectEvidence(displayItem.evidence, { compact: true });
+  const tags = document.createElement('div');
+  tags.className = 'project-tags';
+  (displayItem.tags || []).forEach((tagText) => {
+    const tag = document.createElement('span');
+    tag.textContent = tagText;
+    tags.append(tag);
+  });
+  const actions = document.createElement('div');
+  actions.className = 'card-actions';
+  actions.append(createProjectDetailButton(item, displayItem, copy.details));
+  const links = createProjectLinks(item.links);
+  if (links.children.length) actions.append(links);
+  content.append(kicker, title, description);
+  if (evidence) content.append(evidence);
+  content.append(tags, actions);
+
+  const media = document.createElement('div');
+  media.className = 'project-spotlight-media';
+  const spotlightMediaSource = item.demoMedia?.src || item.previewImage;
+  if (spotlightMediaSource) {
+    const image = document.createElement('img');
+    image.src = spotlightMediaSource;
+    image.alt = item.demoMedia?.alt || `${displayItem.title} Vorschau`;
+    image.width = item.previewWidth || 1440;
+    image.height = item.previewHeight || 900;
+    image.loading = 'eager';
+    image.decoding = 'async';
+    image.fetchPriority = 'high';
+    media.append(image);
+  }
+  card.append(content, media);
+  projectSpotlight.append(card);
+};
+
 const renderProjectExplorer = () => {
   if (!projectsGrid) return;
-
-  if (activeProjectTitle && !portfolioData.projects.some((project) => project.title === activeProjectTitle)) {
-    activeProjectTitle = '';
-  }
+  if (activeProjectTitle && !portfolioData.projects.some((project) => project.title === activeProjectTitle)) activeProjectTitle = '';
 
   projectsGrid.innerHTML = '';
   const copy = projectPresentationCopy[currentLanguageCode] || projectPresentationCopy.de;
-  const featuredProjects = portfolioData.projects.filter((project) => project.featured);
-  const remainingProjects = portfolioData.projects.filter((project) => !project.featured);
+  const spotlightProject = portfolioData.projects.find((project) => project.id === 'foliolint') || portfolioData.projects[0];
+  const remainingProjects = portfolioData.projects.filter((project) => project !== spotlightProject);
+  renderProjectSpotlight(spotlightProject, copy);
 
-  if (featuredProjects.length) {
-    projectsGrid.append(createProjectGroupHeading(copy.featuredTitle, copy.featuredText, true));
-  }
-  featuredProjects.forEach((project) => {
-    projectsGrid.append(createCard(project, 'projects'));
-  });
-
-  if (remainingProjects.length || (portfolioData.moreProjects || []).length) {
-    projectsGrid.append(createProjectGroupHeading(copy.moreTitle, copy.moreText));
-    remainingProjects.forEach((project) => {
-      projectsGrid.append(createCard(project, 'projects'));
-    });
-    projectsGrid.append(createMoreProjectsCard());
-  }
+  const heading = createProjectGroupHeading(copy.moreTitle, copy.moreText);
+  projectsGrid.append(heading);
+  remainingProjects.forEach((project, index) => projectsGrid.append(createProjectListItem(project, index + 2, copy)));
+  if ((portfolioData.moreProjects || []).length) projectsGrid.append(createMoreProjectsCard());
 };
 
 const createMoreProjectsCard = () => {
@@ -2437,9 +2522,6 @@ const createMoreProjectsCard = () => {
 
   const title = document.createElement('h3');
   title.textContent = sectionCopy.title || t('portfolio.moreProjectsTitle', 'Weitere Projekte');
-
-  const description = document.createElement('p');
-  description.textContent = sectionCopy.subline || t('portfolio.moreProjectsSubline', 'Weitere Projekte, die ich fertiggestellt habe oder aktuell noch entwickle.');
 
   const list = document.createElement('div');
   list.className = 'more-projects-card-list open-source-more-list';
@@ -2459,7 +2541,7 @@ const createMoreProjectsCard = () => {
     list.append(action);
   });
 
-  card.append(title, description, list);
+  card.append(title, list);
   return card;
 };
 
@@ -2556,7 +2638,7 @@ const renderTechStack = () => {
           label: translatedLabel || catalogEntry.label
         } : {
           label: translatedLabel || techId,
-          accent: '#8c75df',
+          accent: '#38bdf8',
           icon: 'code'
         };
         const listItem = document.createElement('li');
@@ -2936,7 +3018,6 @@ const setLanguageMenuOpen = (isOpen) => {
 
 const refreshDynamicTexts = () => {
   refreshCurrentWorkTriggers();
-  renderProjectPuzzle();
   renderProjectExplorer();
   renderCollection(portfolioData.certificates, certificatesGrid, 'certificates');
   renderOpenSourceContributions();
@@ -3074,6 +3155,8 @@ const supportedLanguageCodes = ['de', 'en', 'fr', 'sr', 'sr-cyrl'];
 const initialLanguage = supportedLanguageCodes.includes(requestedLanguage)
   ? requestedLanguage
   : (localStorage.getItem('portfolio-language') || 'de');
+window.addEventListener('resize', updateCareerPath);
+window.addEventListener('load', updateCareerPath, { once: true });
 localStorage.removeItem('portfolio-theme');
 renderStats();
 renderTechStack();
@@ -3081,6 +3164,7 @@ if (tabs.length) {
   activateTab('projects');
 }
 updateNavForScroll();
+window.requestAnimationFrame(updateCareerPath);
 
 loadLanguage(initialLanguage).then(alignInitialHash).catch(() => {
   activeDictionary = {};

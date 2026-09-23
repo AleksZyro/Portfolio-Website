@@ -2,6 +2,9 @@
   "skip": {
     "content": "Zum Inhalt springen"
   },
+  "a11y": {
+    "mainNav": "Hauptnavigation", "home": "Startseite", "openMenu": "Menü öffnen", "language": "Sprache wechseln", "chooseLanguage": "Sprache auswählen", "currentWork": "Aktuelle Projekte", "projectSpotlight": "Projekt im Fokus", "projectList": "Projektliste", "certificateList": "Zertifikatsliste", "githubActivity": "GitHub-Aktivität", "contributionGraph": "GitHub-Contribution-Grafik", "openSourceList": "Open-Source-Beiträge", "closeDetails": "Detailansicht schliessen"
+  },
   "nav": {
     "home": "Über mich",
     "about": "Über mich",
@@ -116,11 +119,17 @@
         "period": "2026",
         "description": "Hackathon \"Baden hackt\" mit Fokus auf Teamarbeit, Ideenfindung und schneller technischer Umsetzung."
       },
+      "fhnw": {
+        "type": "Hackathon",
+        "title": "FHNW Hackathon",
+        "period": "2026",
+        "description": "Teilnahme am FHNW Hackathon 2026 mit Fokus auf Teamarbeit, Ideenentwicklung und technischer Umsetzung."
+      },
       "certificates": {
         "type": "Weiterbildung",
-        "title": "Zertifikate und selbstständige Weiterbildung",
+        "title": "CyberSecurity, OWASP und selbstständige Weiterbildung",
         "period": "2025 - 2026",
-        "description": "Abgeschlossene Weiterbildungen: Introduction to Cybersecurity (12.12.2025), Baden hackt (27./28.03.2026), Ethical Hacker (21.04.2026) und lokale KI mit Ollama und Open-Source-Modellen (22.08.2026)."
+        "description": "Weiterbildungen in den Bereichen CyberSecurity, OWASP, ethisches Hacking, lokale KI und Open-Source-Modelle."
       },
       "ims": {
         "type": "Ausbildung",
@@ -183,16 +192,7 @@
     "detailEmptyTitle": "Projekt auswählen",
     "detailEmptyText": "Klicke auf eine Projektkarte, um Status, Stack, Rolle und Lerneffekt anzuzeigen.",
     "moreProjectsTitle": "Weitere Projekte",
-    "moreProjectsSubline": "Weitere Projekte, die ich fertiggestellt habe oder aktuell noch entwickle.",
-    "projectPuzzle": {
-      "label": "Kleine Nebenquest",
-      "title": "Ein kurzer Umweg zu den Projekten",
-      "intro": "Drei Fragen, vier Antworten und keine falsche Wahl.",
-      "openChest": "Schatzkiste öffnen",
-      "speaker": "Aleksandar",
-      "skip": "Überspringen",
-      "unlocked": "Die Schatzkiste ist offen. Viel Spass beim Stöbern."
-    }
+    "moreProjectsSubline": "Weitere Projekte, die ich fertiggestellt habe oder aktuell noch entwickle."
   },
   "filters": {
     "all": "Alle",
@@ -201,8 +201,10 @@
   },
   "contact": {
     "kicker": "Kontakt",
-    "title": "Zusammenarbeiten",
+    "title": "Kontakt & Rechtliches",
     "description": "Für eine Praktikumsstelle 2027/2028 in der Schweiz, Rückfragen oder Zusammenarbeit bin ich per E-Mail erreichbar.",
+    "emailLabel": "E-Mail",
+    "linkedinLabel": "LinkedIn",
     "mailLabel": "",
     "schoolMailLabel": ""
   },
@@ -216,10 +218,10 @@
   "portfolioDownloadButton": "Download PDF",
   "footer": {
     "rights": "Alle Rechte vorbehalten.",
-    "legalLink": "Datenschutz und Cookies",
+    "legalLink": "Impressum und Datenschutzerklärung",
     "tagline": "IMS Applikationsentwicklung · Portfolio",
     "imprintLink": "Impressum",
-    "privacyLink": "Datenschutz",
+    "privacyLink": "Datenschutzerklärung",
     "cookieLink": "Cookies"
   },
   "github": {
@@ -236,7 +238,8 @@
     "publicRepos": "öffentliche Repositories",
     "ossMerges": "Open-Source-Merges",
     "currentStreak": "Tage aktuelle Serie",
-    "mergedLabel": "Merged"
+    "mergedLabel": "Merged",
+    "completedLabel": "Abgeschlossen"
   },
   "legal": {
     "kicker": "Rechtliches",
@@ -328,7 +331,7 @@
         "learning": "Regelbasierte Checks so strukturieren, dass sie nachvollziehbar bleiben und echte Verbesserungen an Projekt-Repositories anstossen."
       },
       "besp2074": {
-        "title": "Internet ein und aus",
+        "title": "BESP2074 – Internet ein und aus",
         "cardDescription": "Hackathon-Prototyp für eine Weboberfläche, die Internetzugang pro Schulzimmer oder Subnetz modelliert.",
         "detailDescription": "Internet ein und aus\n\nDieses Projekt entstand im Umfeld des Hackathons \"Baden hackt\". Der Prototyp modelliert, wie Internetzugänge für Schulzimmer oder Subnetze übersichtlich ein- und ausgeschaltet werden könnten.\n\nDer Schwerpunkt liegt auf einer verständlichen Bedienoberfläche und einer klaren Darstellung von Zuständen. Das Projekt ist ein Hackathon-Prototyp und wird als gemeinsames Arbeiten dokumentiert.",
         "meta": [
@@ -383,6 +386,15 @@
     }
   },
   "openSourceContributions": {
+    "pipAudit553": {
+      "title": "Windows-Tests in GitHub Actions",
+      "summary": "Abgeschlossenes Issue zur Ergänzung eines Windows-Testjobs in GitHub Actions.",
+      "tags": [
+        "Python",
+        "CI/CD",
+        "Windows"
+      ]
+    },
     "pipAudit1119": {
       "title": "Übereinstimmende PYSEC-Schwachstellen deduplizieren",
       "summary": "Verhindert, dass übereinstimmende PYSEC-Schwachstellen doppelt gezählt werden.",
@@ -392,6 +404,7 @@
       ]
     },
     "vaultCleaner54": {
+      "title": "Konfigurierte CLI-Pfade berücksichtigen",
       "summary": "Verbessert die CLI-Pfadlogik, damit konfigurierte Eingabe- und Ausgabepfade korrekt respektiert werden.",
       "tags": [
         "Python",
@@ -399,6 +412,7 @@
       ]
     },
     "agentcache38": {
+      "title": "Workspace-Konfiguration für VS Code MCP bevorzugen",
       "summary": "Priorisiert Workspace-Konfigurationen für VS Code MCP, damit projektspezifische Setups sauber greifen.",
       "tags": [
         "Dev Tools",
@@ -406,6 +420,7 @@
       ]
     },
     "contextPilot36": {
+      "title": "Ungültiges komprimiertes JSON behandeln",
       "summary": "Fängt ungültige JSON-Antworten beim Komprimieren ab und macht den Fehlerfall robuster.",
       "tags": [
         "Python",
@@ -419,6 +434,11 @@
         "Python",
         "Scoring"
       ]
+    },
+    "isort2616": {
+      "title": "LF-Ausgabe von stdin unter Windows bewahren",
+      "summary": "Verhindert unerwünschte Zeilenumwandlungen bei stdin-Ausgaben unter Windows und ergänzt einen Regressionstest.",
+      "tags": ["Python", "Tests", "Offen"]
     },
     "beets6839": {
       "summary": "Sichert den Umgang mit leerem Artpath beim Bearbeiten, damit bestehende Daten nicht unbeabsichtigt verändert werden.",

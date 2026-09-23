@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <meta name="description" content="Aleksandar Nikolić (AleksZyro), IMS-Schüler aus der Schweiz: Portfolio mit Python-, Web- und Open-Source-Projekten. Praktikum für 2027/2028 gesucht.">
   <meta name="author" content="Aleksandar Nikolić">
   <meta name="robots" content="index, follow">
@@ -16,8 +17,9 @@
   <meta name="twitter:title" content="Aleksandar Nikolić (AleksZyro) | IMS-Portfolio">
   <meta name="twitter:description" content="Portfolio mit Python-, Web- und Open-Source-Projekten von Aleksandar Nikolić.">
   <link rel="me" href="https://github.com/AleksZyro">
+  <link rel="me" href="https://www.linkedin.com/in/aleksandar-nikolic-05b557420/">
   <title>Aleksandar Nikolić (AleksZyro) | IMS-Portfolio</title>
-  <link rel="stylesheet" href="style.css?v=20260914-project-focus-1">
+  <link rel="stylesheet" href="style.css?v=20260922-final-13">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -32,7 +34,10 @@
       "alternateName": ["Aleksandar Nikolic", "AleksZyro"],
       "url": "https://aleksandar-nikolic.ch/",
       "image": "https://aleksandar-nikolic.ch/assets/profile-temp.jpeg",
-      "sameAs": ["https://github.com/AleksZyro"],
+      "sameAs": [
+        "https://github.com/AleksZyro",
+        "https://www.linkedin.com/in/aleksandar-nikolic-05b557420/"
+      ],
       "jobTitle": "IMS-Schüler Applikationsentwicklung",
       "description": "IMS-Schüler aus der Schweiz mit Fokus auf Applikationsentwicklung, Python, Web und Open Source.",
       "knowsAbout": ["Python", "JavaScript", "React", "Vite", "FastAPI", "Git", "GitHub Actions"]
@@ -69,18 +74,17 @@
   </script>
 </head>
 <body>
-  <canvas class="surface-canvas" id="surface-canvas" aria-hidden="true"></canvas>
   <a class="skip-link" href="#main-content" data-i18n="skip.content">Zum Inhalt springen</a>
   <header class="site-header" id="top">
-    <nav class="navbar container" aria-label="Hauptnavigation">
+    <nav class="navbar container" aria-label="Hauptnavigation" data-i18n-aria="a11y.mainNav">
       <div class="brand">
-        <a class="brand-name" href="#home" aria-label="Startseite">
+        <a class="brand-name" href="#home" aria-label="Startseite" data-i18n-aria="a11y.home">
           <span class="brand-latin">Aleksandar <em>Nikolić</em></span>
           <span class="brand-cyrillic" aria-hidden="true">Александар Николић</span>
         </a>
       </div>
 
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Menü öffnen">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Menü öffnen" data-i18n-aria="a11y.openMenu">
         <span></span><span></span><span></span>
       </button>
 
@@ -94,12 +98,12 @@
         <li><a href="#contact" data-i18n="nav.contact">Kontakt</a></li>
       </ul>
 
-      <div class="language-switch" aria-label="Sprache wechseln">
-        <button type="button" class="lang-menu-button" id="language-menu-button" aria-haspopup="listbox" aria-expanded="false" aria-label="Sprache wechseln">
+      <div class="language-switch" aria-label="Sprache wechseln" data-i18n-aria="a11y.language">
+        <button type="button" class="lang-menu-button" id="language-menu-button" aria-haspopup="listbox" aria-expanded="false" aria-label="Sprache wechseln" data-i18n-aria="a11y.language">
           <span class="flag flag-de" id="language-current-flag" aria-hidden="true"></span>
           <span id="language-current-label">DE</span>
         </button>
-        <div class="lang-menu" id="language-menu" role="listbox" aria-label="Sprache auswählen" hidden>
+        <div class="lang-menu" id="language-menu" role="listbox" aria-label="Sprache auswählen" data-i18n-aria="a11y.chooseLanguage" hidden>
           <button type="button" class="lang-option is-active" data-lang="de" role="option" aria-selected="true"><span class="flag flag-de" aria-hidden="true"></span><span>DE</span></button>
           <button type="button" class="lang-option" data-lang="en" role="option" aria-selected="false"><span class="flag flag-gb" aria-hidden="true"></span><span>EN</span></button>
           <button type="button" class="lang-option" data-lang="fr" role="option" aria-selected="false"><span class="flag flag-fr" aria-hidden="true"></span><span>FR</span></button>
@@ -152,7 +156,7 @@
         </div>
 
       </div>
-      <div class="current-work" id="current-work" aria-label="Aktuelle Projekte">
+      <div class="current-work" id="current-work" aria-label="Aktuelle Projekte" data-i18n-aria="a11y.currentWork">
       <div class="container">
         <div class="current-work-grid reveal">
           <div class="current-work-card" data-current-work="aargoclean" data-work-type="customer">
@@ -195,6 +199,23 @@
         </div>
 
         <div class="career-timeline reveal">
+          <svg class="career-path" aria-hidden="true" focusable="false" preserveAspectRatio="none">
+            <path></path>
+          </svg>
+          <article class="career-item">
+            <span class="career-dot" aria-hidden="true"></span>
+            <div class="career-card">
+              <div class="career-card-head">
+                <div>
+                  <p class="career-type" data-i18n="career.items.fhnw.type">Hackathon</p>
+                  <h3 data-i18n="career.items.fhnw.title">FHNW Hackathon</h3>
+                </div>
+                <span class="career-badge" data-i18n="career.items.fhnw.period">2026</span>
+              </div>
+              <p data-i18n="career.items.fhnw.description">Teilnahme am FHNW Hackathon 2026 mit Fokus auf Teamarbeit, Ideenentwicklung und technischer Umsetzung.</p>
+            </div>
+          </article>
+
           <article class="career-item">
             <span class="career-dot" aria-hidden="true"></span>
             <div class="career-card">
@@ -215,7 +236,7 @@
               <div class="career-card-head">
                 <div>
                   <p class="career-type" data-i18n="career.items.certificates.type">Weiterbildung</p>
-                  <h3 data-i18n="career.items.certificates.title">Zertifikate und selbstständige Weiterbildung</h3>
+                  <h3 data-i18n="career.items.certificates.title">CyberSecurity, OWASP und selbstständige Weiterbildung</h3>
                 </div>
                 <span class="career-badge" data-i18n="career.items.certificates.period">2025 - 2026</span>
               </div>
@@ -264,35 +285,9 @@
           <p class="section-subline" data-i18n="portfolio.subline">Projekt-Explorer mit Status, Stack und Links oder Hinweisen.</p>
         </div>
 
-        <div class="project-puzzle reveal" id="project-puzzle" aria-label="Projekt-Schatzkiste">
-          <div class="project-puzzle-intro" id="project-puzzle-intro">
-            <button class="puzzle-chest" id="puzzle-chest" type="button" aria-controls="project-puzzle-dialog">
-              <span class="puzzle-chest-art">
-                <img class="puzzle-chest-image puzzle-chest-closed" src="assets/project-puzzle/treasure-chest-v1.png" alt="Geschlossene Schatzkiste" width="1536" height="1024" loading="lazy" decoding="async" fetchpriority="low" />
-                <img class="puzzle-chest-image puzzle-chest-open" src="assets/project-puzzle/treasure-chest-open-v1.png" alt="" aria-hidden="true" width="1536" height="1024" loading="lazy" decoding="async" fetchpriority="low" />
-              </span>
-              <span class="puzzle-chest-label" data-i18n="portfolio.projectPuzzle.openChest">Schatzkiste öffnen</span>
-            </button>
-          </div>
-          <div class="project-puzzle-dialog" id="project-puzzle-dialog" hidden>
-            <div class="puzzle-avatar" aria-hidden="true"><span>A</span></div>
-            <div class="puzzle-dialog-content">
-              <div class="puzzle-dialog-topline">
-                <span class="puzzle-label" data-i18n="portfolio.projectPuzzle.speaker">Aleksandar</span>
-                <span id="puzzle-progress" aria-live="polite">1 / 3</span>
-              </div>
-              <p class="puzzle-question" id="puzzle-question"></p>
-              <div class="puzzle-options" id="puzzle-options" role="group" aria-label="Antwortmöglichkeiten"></div>
-              <p class="puzzle-reaction" id="puzzle-reaction" aria-live="polite"></p>
-              <div class="puzzle-actions">
-                <button class="btn btn-ghost" id="puzzle-skip" type="button" data-i18n="portfolio.projectPuzzle.skip">Überspringen</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
         <div class="project-explorer reveal">
-          <div class="project-list" id="projects-grid" aria-label="Projektliste"></div>
+          <div class="project-spotlight" id="project-spotlight" aria-label="Projekt im Fokus" data-i18n-aria="a11y.projectSpotlight"></div>
+          <div class="project-list" id="projects-grid" aria-label="Projektliste" data-i18n-aria="a11y.projectList"></div>
         </div>
 
       </div>
@@ -305,7 +300,7 @@
           <h2 id="certificates-title" data-i18n="certificates.title">Weiterbildungen in meiner Freizeit</h2>
           <p class="section-subline" data-i18n="certificates.subline">Ausgewählte Zertifikate mit Vorschau, Details und PDF-Download.</p>
         </div>
-        <div class="cards-grid compact-certificates reveal" id="certificates-grid" aria-label="Zertifikatsliste"></div>
+        <div class="cards-grid compact-certificates reveal" id="certificates-grid" aria-label="Zertifikatsliste" data-i18n-aria="a11y.certificateList"></div>
       </div>
     </section>
 
@@ -322,7 +317,7 @@
             <a class="link-arrow" href="https://github.com/AleksZyro" target="_blank" rel="noopener noreferrer" data-i18n="github.profileLink">GitHub-Profil</a>
             <a class="link-arrow" href="https://github.com/AleksZyro?tab=repositories" target="_blank" rel="noopener noreferrer" data-i18n="github.reposLink">Repositories</a>
           </div>
-          <div class="github-stats" aria-label="GitHub-Aktivität">
+          <div class="github-stats" aria-label="GitHub-Aktivität" data-i18n-aria="a11y.githubActivity">
             <a class="github-stat" href="https://github.com/AleksZyro?tab=repositories" target="_blank" rel="noopener noreferrer">
               <strong>20+</strong>
               <span data-i18n="github.publicRepos">öffentliche Repositories</span>
@@ -336,7 +331,7 @@
               <span data-i18n="github.currentStreak">Tage aktuelle Serie</span>
             </a>
           </div>
-          <div class="activity-strip contribution-strip" aria-label="GitHub Contribution Grafik">
+          <div class="activity-strip contribution-strip" aria-label="GitHub Contribution Grafik" data-i18n-aria="a11y.contributionGraph">
             <img src="assets/contribution-graphic.svg?v=2026-09-08" alt="GitHub Contribution Uebersicht von Aleksandar Nikolić" loading="lazy">
           </div>
         </article>
@@ -346,7 +341,7 @@
           <p data-i18n="github.openSourceText">
             Ausgewählte gemergte Pull Requests mit direktem Link zum Nachweis.
           </p>
-          <div class="open-source-list" id="open-source-list" aria-label="Open-Source-Beiträge"></div>
+          <div class="open-source-list" id="open-source-list" aria-label="Open-Source-Beiträge" data-i18n-aria="a11y.openSourceList"></div>
         </aside>
       </div>
     </section>
@@ -367,32 +362,23 @@
 
     <section class="contact section" id="contact" aria-labelledby="contact-title">
       <div class="container section-head contact-head reveal">
-        <p class="kicker" data-i18n="contact.kicker">Kontakt</p>
-        <h2 id="contact-title" data-i18n="contact.title">Zusammenarbeiten</h2>
-        <p class="section-subline" data-i18n="contact.description">Für eine Praktikumsstelle 2027/2028 in der Schweiz, Rückfragen oder Zusammenarbeit bin ich per E-Mail erreichbar.</p>
+        <h2 id="contact-title" data-i18n="contact.title">Kontakt &amp; Rechtliches</h2>
       </div>
 
-      <div class="container contact-links reveal">
-        <a href="mailto:aleksandar09n@gmail.com">aleksandar09n@gmail.com</a>
-      </div>
-
-      <div class="container legal-wrap reveal" id="legal" aria-labelledby="legal-title">
-        <div class="section-head legal-head">
-          <p class="kicker" data-i18n="legal.kicker">Rechtliches</p>
-          <h2 id="legal-title" data-i18n="legal.title">Impressum, Datenschutz und Cookies</h2>
-          <p class="section-subline" data-i18n="legal.subline">Kurz, transparent und ohne Tracking-Geschwurbel.</p>
-        </div>
-
-        <a class="legal-card compact-legal-card unified-legal-card" href="rechtliches.html" data-legal-page-link="rechtliches">
-          <span class="legal-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" focusable="false"><path d="M7 3h7l4 4v14H7V3Z"/><path d="M14 3v5h5"/><path d="M9.5 12h5M9.5 15h5M9.5 18h3"/></svg>
-          </span>
-          <div>
-            <h3 data-i18n="legal.unifiedTitle">Impressum und Rechtliches</h3>
-            <p data-i18n="legal.unifiedText">Eine gemeinsame Erklärung zu Impressum, Datenschutz, Cookies und Hosting.</p>
+      <div class="container contact-summary reveal" aria-label="Kontakt und rechtliche Informationen">
+        <div class="contact-columns">
+          <div class="contact-column">
+            <a class="contact-main-link" href="mailto:aleksandar09n@gmail.com">
+              <strong>aleksandar09n@gmail.com</strong><span aria-hidden="true">↗</span>
+            </a>
           </div>
-        </a>
-
+          <div class="contact-column">
+            <a class="contact-main-link" href="https://www.linkedin.com/in/aleksandar-nikolic-05b557420/" target="_blank" rel="noopener noreferrer">
+              <strong>LinkedIn</strong><span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <a class="contact-legal-link" href="rechtliches.html" data-i18n="footer.legalLink">Impressum &amp; Datenschutzerklärung</a>
+        </div>
       </div>
     </section>
   </main>
@@ -416,7 +402,7 @@
         <h3 id="modal-title" data-i18n="modal.title">Detailansicht</h3>
         <div class="modal-actions">
           <a class="modal-download" id="modal-download" href="#" download hidden data-i18n="portfolioDownloadButton">Download PDF</a>
-          <button type="button" class="modal-close" id="modal-close" aria-label="Detailansicht schliessen" title="Schliessen">×</button>
+          <button type="button" class="modal-close" id="modal-close" aria-label="Detailansicht schliessen" data-i18n-aria="a11y.closeDetails" title="Schliessen">×</button>
         </div>
       </div>
       <div class="modal-body">
@@ -435,16 +421,6 @@
     </article>
   </dialog>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <span>Aleksandar Nikolić</span>
-        <small data-i18n="footer.tagline">IMS Applikationsentwicklung · Portfolio</small>
-      </div>
-      <p>&copy; <span id="year"></span> <span id="footer-name">Aleksandar Nikolić</span></p>
-    </div>
-  </footer>
-
-  <script src="app.js?v=20260914-project-focus-1" defer></script>
+  <script src="app.js?v=20260922-final-13" defer></script>
 </body>
 </html>

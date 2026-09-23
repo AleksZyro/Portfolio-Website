@@ -2,6 +2,9 @@
   "skip": {
     "content": "Preskoči na sadržaj"
   },
+  "a11y": {
+    "mainNav": "Glavna navigacija", "home": "Početna stranica", "openMenu": "Otvori meni", "language": "Promeni jezik", "chooseLanguage": "Izaberi jezik", "currentWork": "Trenutni projekti", "projectSpotlight": "Istaknuti projekat", "projectList": "Lista projekata", "certificateList": "Lista sertifikata", "githubActivity": "GitHub aktivnost", "contributionGraph": "Grafikon GitHub doprinosa", "openSourceList": "Open-source doprinosi", "closeDetails": "Zatvori detaljni prikaz"
+  },
   "nav": {
     "home": "O meni",
     "about": "O meni",
@@ -116,11 +119,17 @@
         "period": "2026",
         "description": "Hakaton \"Baden hackt\" sa fokusom na timski rad, razvoj ideja i brzu tehničku realizaciju."
       },
+      "fhnw": {
+        "type": "Hakaton",
+        "title": "FHNW hakaton",
+        "period": "2026",
+        "description": "Učešće na FHNW hakatonu 2026, sa fokusom na timski rad, razvoj ideja i tehničku realizaciju."
+      },
       "certificates": {
         "type": "Dodatno obrazovanje",
-        "title": "Sertifikati i samostalno učenje",
+        "title": "CyberSecurity, OWASP i samostalno učenje",
         "period": "2025 - 2026",
-        "description": "Završene obuke: Introduction to Cybersecurity (12.12.2025), Baden hackt (27-28.03.2026), Ethical Hacker (21.04.2026) i lokalna veštačka inteligencija sa Ollama i open-source modelima (22.08.2026)."
+        "description": "Dodatno učenje u oblastima CyberSecurity, OWASP, etičkog hakovanja, lokalne veštačke inteligencije i open-source modela."
       },
       "ims": {
         "type": "Obrazovanje",
@@ -183,16 +192,7 @@
     "detailEmptyTitle": "Izaberi projekat",
     "detailEmptyText": "Klikni na projektnu karticu da vidiš status, stack, ulogu i šta sam naučio.",
     "moreProjectsTitle": "Dodatni projekti",
-    "moreProjectsSubline": "Dodatni projekti koje sam završio ili ih još trenutno razvijam.",
-    "projectPuzzle": {
-      "label": "Mala sporedna misija",
-      "title": "Kratak obilazak do projekata",
-      "intro": "Tri pitanja, četiri odgovora i nema pogrešnog izbora.",
-      "openChest": "Otvori kovčeg s blagom",
-      "speaker": "Aleksandar",
-      "skip": "Preskoči",
-      "unlocked": "Kovčeg je otvoren. Uživaj u istraživanju."
-    }
+    "moreProjectsSubline": "Dodatni projekti koje sam završio ili ih još trenutno razvijam."
   },
   "filters": {
     "all": "Svi",
@@ -201,8 +201,10 @@
   },
   "contact": {
     "kicker": "Kontakt",
-    "title": "Hajde da sarađujemo",
+    "title": "Kontakt i pravno",
     "description": "Za praksu u Švajcarskoj za 2027/2028, pitanja ili saradnju dostupan sam putem e-maila.",
+    "emailLabel": "E-mail",
+    "linkedinLabel": "LinkedIn",
     "mailLabel": "",
     "schoolMailLabel": ""
   },
@@ -216,10 +218,10 @@
   "portfolioDownloadButton": "Preuzmi PDF",
   "footer": {
     "rights": "Sva prava zadržana.",
-    "legalLink": "Privatnost i kukiji",
+    "legalLink": "Impresum i privatnost",
     "tagline": "IMS razvoj aplikacija · Portfolio",
     "imprintLink": "Impresum",
-    "privacyLink": "Privatnost",
+    "privacyLink": "Izjava o privatnosti",
     "cookieLink": "Kukiji"
   },
   "github": {
@@ -236,7 +238,8 @@
     "publicRepos": "javni repozitorijumi",
     "ossMerges": "open-source merge-ovi",
     "currentStreak": "dana trenutnog niza",
-    "mergedLabel": "Merged"
+    "mergedLabel": "Merged",
+    "completedLabel": "Završeno"
   },
   "legal": {
     "kicker": "Pravno",
@@ -328,7 +331,7 @@
         "learning": "Strukturisati provere zasnovane na pravilima tako da ostanu razumljive i stvarno poboljšaju projektne repozitorijume."
       },
       "besp2074": {
-        "title": "Internet uključi i isključi",
+        "title": "BESP2074 – Internet uključi i isključi",
         "cardDescription": "Hakaton prototip veb interfejsa koji modeluje pristup internetu po učionici ili podmreži.",
         "detailDescription": "Internet uključi i isključi\n\nOvaj projekat je nastao u okviru hakatona „Baden hackt“. Prototip modeluje kako bi pristup internetu za učionice ili podmreže mogao jasno da se uključi i isključi.\n\nFokus je na razumljivom interfejsu i jasnom prikazu stanja. Projekat je hakaton prototip koji je nastao kroz zajednički rad.",
         "meta": [
@@ -387,6 +390,15 @@
     "demo": "Demo"
   },
   "openSourceContributions": {
+    "pipAudit553": {
+      "title": "Pokrenuti testove za Windows u GitHub Actions",
+      "summary": "Završeni issue za dodavanje Windows testnog posla u GitHub Actions.",
+      "tags": [
+        "Python",
+        "CI/CD",
+        "Windows"
+      ]
+    },
     "pipAudit1119": {
       "title": "Uklanja dupliranje podudarnih PYSEC ranjivosti",
       "summary": "Sprečava da se podudarne PYSEC ranjivosti broje dva puta.",
@@ -396,6 +408,7 @@
       ]
     },
     "vaultCleaner54": {
+      "title": "Poštovanje podešenih CLI putanja",
       "summary": "Poboljšava CLI logiku putanja, tako da se podešene ulazne i izlazne putanje pravilno poštuju.",
       "tags": [
         "Python",
@@ -403,6 +416,7 @@
       ]
     },
     "agentcache38": {
+      "title": "Prednost workspace VS Code MCP konfiguraciji",
       "summary": "Daje prednost workspace konfiguraciji za VS Code MCP, tako da podešavanja specifična za projekat rade čistije.",
       "tags": [
         "Dev Tools",
@@ -410,6 +424,7 @@
       ]
     },
     "contextPilot36": {
+      "title": "Obrada nevažećeg kompresovanog JSON-a",
       "summary": "Obrađuje nevažeće JSON odgovore tokom kompresije i čini taj slučaj greške stabilnijim.",
       "tags": [
         "Python",
@@ -423,6 +438,11 @@
         "Python",
         "Scoring"
       ]
+    },
+    "isort2616": {
+      "title": "Očuvati LF stdin izlaz na Windowsu",
+      "summary": "Sprečava neželjenu promenu krajeva redova za stdin izlaz na Windowsu i dodaje regresioni test.",
+      "tags": ["Python", "Testovi", "Otvoreno"]
     },
     "beets6839": {
       "summary": "Čuva prazne artpath vrednosti tokom uređivanja, tako da postojeći podaci ne budu nenamerno promenjeni.",
