@@ -2136,6 +2136,164 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   .compact-certificates .item-card { transition: none; transform: none; }
 }
 
+/* Kompakte Kontakt-Fusszeile und undurchsichtige Detailansichten. */
+.site-footer {
+  padding: clamp(42px, 6vw, 68px) 0 30px;
+  background: rgba(11, 18, 32, .72);
+}
+
+.footer-inner {
+  width: min(1120px, 92vw);
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 22px;
+  text-align: center;
+}
+
+.footer-heading {
+  display: grid;
+  justify-items: center;
+  gap: 5px;
+}
+
+.footer-heading h2 {
+  color: var(--accent);
+  font-size: clamp(1.55rem, 3vw, 2.35rem);
+  line-height: 1.08;
+}
+
+.footer-contact {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px clamp(28px, 7vw, 96px);
+}
+
+.footer-contact-link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  color: #bae6fd;
+  transition: color 180ms ease, transform 180ms ease;
+}
+
+.footer-contact-link strong {
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  font-weight: 750;
+}
+
+.footer-contact-link:hover,
+.footer-contact-link:focus-visible {
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.footer-legal {
+  padding-top: 2px;
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+.footer-legal a {
+  transition: color 180ms ease;
+}
+
+.footer-legal a:hover,
+.footer-legal a:focus-visible {
+  color: var(--accent-2);
+}
+
+.modal-card {
+  isolation: isolate;
+}
+
+.modal-card.is-project .modal-preview {
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  flex: 0 0 auto;
+  aspect-ratio: 16 / 9;
+  max-height: none;
+  background: var(--bg-850);
+  border: 1px solid var(--line);
+}
+
+.modal-card.is-project .modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.modal-card.is-document {
+  width: min(980px, 94vw);
+  height: auto;
+  max-height: min(88dvh, 820px);
+}
+
+.modal-card.is-document .modal-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(250px, .88fr);
+  grid-template-areas:
+    "preview description"
+    "preview meta";
+  align-items: start;
+  gap: 20px 24px;
+}
+
+.modal-card.is-document .modal-preview {
+  grid-area: preview;
+  height: min(62dvh, 540px);
+  min-height: 300px;
+  aspect-ratio: auto;
+  padding: 20px;
+  background: var(--bg-900);
+  border: 1px solid var(--line);
+}
+
+.modal-card.is-document .modal-preview-media {
+  inset: 20px;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  object-fit: contain;
+}
+
+.modal-card.is-document .modal-description {
+  grid-area: description;
+  align-self: start;
+  padding: 4px 0 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.modal-card.is-document #modal-meta {
+  grid-area: meta;
+  align-self: start;
+}
+
+@media (max-width: 720px) {
+  .modal-card.is-document .modal-body {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "preview"
+      "description"
+      "meta";
+    gap: 16px;
+  }
+
+  .modal-card.is-document .modal-preview {
+    height: min(46dvh, 360px);
+    min-height: 230px;
+  }
+
+  .footer-contact {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
 /* Ruhige Schieferblau-/Cyan-Variante für sämtliche bestehenden Komponenten. */
 .current-work-card:hover,
 .item-card:hover,
