@@ -2662,3 +2662,84 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   }
 }
 
+/* Kontakt mittig spiegeln: gleiche Spaltenbreite statt flexibler Linkgruppe. */
+.site-footer {
+  padding: clamp(28px, 4vw, 42px) 0 26px;
+}
+
+.footer-contact {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: min(760px, 100%);
+  gap: 12px 28px;
+}
+
+.footer-contact-link {
+  justify-content: center;
+}
+
+/* Die ab sofort-Vorschau ist ein Browser-Screenshot: die eingebrannte Scrollleiste bleibt ausserhalb. */
+.compact-certificates .certificate-preview img[src*="absofort-zertifikat"],
+.modal-card.is-document .modal-preview-media[src*="absofort-zertifikat"] {
+  clip-path: inset(0 14px 0 0);
+}
+
+.tech-group-feedback {
+  grid-column: 2;
+  margin: 10px 0 0;
+  padding: 8px 10px;
+  border-left: 2px solid var(--accent);
+  color: var(--muted);
+  font-size: .8rem;
+  line-height: 1.45;
+}
+
+.tech-selection-summary {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 14px;
+  margin-top: 2px;
+  padding: 16px 14px;
+  border-top: 1px solid rgba(148, 163, 184, .2);
+  background: rgba(15, 23, 42, .34);
+}
+
+.tech-selection-count {
+  min-width: 48px;
+  color: var(--accent-2);
+  font-size: 1.1rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.tech-selection-message {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.tech-selection-summary.is-complete {
+  border-top-color: rgba(56, 189, 248, .55);
+  background: linear-gradient(90deg, rgba(56, 189, 248, .12), rgba(15, 23, 42, .34));
+}
+
+.tech-selection-summary.is-complete .tech-selection-count {
+  color: var(--accent);
+}
+
+@media (max-width: 720px) {
+  .footer-contact {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-group-feedback {
+    grid-column: 1;
+  }
+
+  .tech-selection-summary {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+}
+

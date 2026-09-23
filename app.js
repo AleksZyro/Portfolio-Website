@@ -1216,7 +1216,7 @@ const certificateCopy = {
       title: 'Using local AI: private AI assistance with Ollama & open-source models',
       cardDescription: 'ab sofort certificate for a course on local AI, Ollama and open-source models.',
       detailDescription: 'This ab sofort certificate confirms successful completion of the course “Using local AI: private AI assistance with Ollama & open-source models”. The course was completed on 22 August 2026 with a score of 87.5 percent and a duration of 6 hours.',
-      meta: ['Completed: 22 August 2026', 'Duration: 6 hours', 'Format: PDF'],
+      meta: ['Issued on: 22 August 2026', 'Duration: 6 hours', 'Format: PDF'],
       previewLabel: 'Certificate'
     },
     'abacus-finanzbuchhaltung': {
@@ -1239,7 +1239,7 @@ const certificateCopy = {
       title: 'Utiliser l’IA locale : assistance IA privée avec Ollama et des modèles open source',
       cardDescription: 'Certificat ab sofort pour un cours sur l’IA locale, Ollama et les modèles open source.',
       detailDescription: 'Ce certificat ab sofort confirme la réussite du cours « Utiliser l’IA locale : assistance IA privée avec Ollama et des modèles open source ». Le cours a été terminé le 22 août 2026 avec un résultat de 87,5 % et une durée de 6 heures.',
-      meta: ['Terminé le : 22 août 2026', 'Durée : 6 heures', 'Format : PDF'],
+      meta: ['Délivré le : 22 août 2026', 'Durée : 6 heures', 'Format : PDF'],
       previewLabel: 'Certificat'
     },
     'abacus-finanzbuchhaltung': {
@@ -1262,7 +1262,7 @@ const certificateCopy = {
       title: 'Korišćenje lokalne AI: privatna AI asistencija uz Ollama i open-source modele',
       cardDescription: 'ab sofort sertifikat za kurs o lokalnoj AI, Ollama alatu i open-source modelima.',
       detailDescription: 'Ovaj ab sofort sertifikat potvrđuje uspešno završen kurs „Korišćenje lokalne AI: privatna AI asistencija uz Ollama i open-source modele“. Kurs je završen 22. avgusta 2026. sa rezultatom od 87,5% i trajanjem od 6 sati.',
-      meta: ['Završeno: 22. avgust 2026.', 'Trajanje: 6 sati', 'Format: PDF'],
+      meta: ['Izdato: 22. avgust 2026.', 'Trajanje: 6 sati', 'Format: PDF'],
       previewLabel: 'Sertifikat'
     },
     'abacus-finanzbuchhaltung': {
@@ -1285,7 +1285,7 @@ const certificateCopy = {
       title: 'Коришћење локалне AI: приватна AI асистенција уз Ollama и open-source моделе',
       cardDescription: 'ab sofort сертификат за курс о локалној АИ, Ollama алату и open-source моделима.',
       detailDescription: 'Овај ab sofort сертификат потврђује успешно завршен курс „Коришћење локалне АИ: приватна АИ асистенција уз Ollama и open-source моделе“. Курс је завршен 22. августа 2026. са резултатом од 87,5% и трајањем од 6 сати.',
-      meta: ['Завршено: 22. август 2026.', 'Трајање: 6 сати', 'Формат: ПДФ'],
+      meta: ['Издато: 22. август 2026.', 'Трајање: 6 сати', 'Формат: ПДФ'],
       previewLabel: 'Сертификат'
     },
     'abacus-finanzbuchhaltung': {
@@ -2618,10 +2618,112 @@ const techCatalog = {
   cloudflare: { label: 'Cloudflare', icon: 'cloudflare', accent: '#f38020', asset: 'cloudflare' }
 };
 
+const techSelectionState = new Map();
+const techInteractionCopy = {
+  de: {
+    choose: 'Wähle pro Bereich eine Technologie und stelle dir dein persönliches Stack-Profil zusammen.',
+    partial: (count, total) => `${count} von ${total} Bereichen ausgewählt.`,
+    complete: 'Stack-Profil vollständig — alle Bereiche sind abgedeckt.',
+    selected: (label) => `Ausgewählt: ${label}.`,
+    notes: [
+      'Gute Basis für sichtbare Weboberflächen.',
+      'Damit werden Frontend-Projekte interaktiv und schnell.',
+      'Starke Wahl für robuste Python-Backends und Tests.',
+      'Praktisch für strukturierte Daten und Speicherung.',
+      'Passt zu klassischen und grösseren Anwendungen.',
+      'Hilft beim Entwickeln, Automatisieren und Ausliefern.',
+      'Damit werden Projekte online erreichbar.'
+    ]
+  },
+  en: {
+    choose: 'Choose one technology per area and build your personal stack profile.',
+    partial: (count, total) => `${count} of ${total} areas selected.`,
+    complete: 'Stack profile complete — every area is covered.',
+    selected: (label) => `Selected: ${label}.`,
+    notes: [
+      'A strong base for visible web interfaces.',
+      'A fast, interactive foundation for frontend projects.',
+      'A solid choice for robust Python backends and tests.',
+      'Useful for structured data and storage.',
+      'A good fit for classic and larger applications.',
+      'Useful for development, automation and delivery.',
+      'A practical route to publishing projects online.'
+    ]
+  },
+  fr: {
+    choose: 'Choisis une technologie par domaine et compose ton profil technique personnel.',
+    partial: (count, total) => `${count} domaine(s) sur ${total} sélectionné(s).`,
+    complete: 'Profil technique complet — tous les domaines sont couverts.',
+    selected: (label) => `Sélection : ${label}.`,
+    notes: [
+      'Une bonne base pour les interfaces web.',
+      'Une base rapide et interactive pour le frontend.',
+      'Un choix solide pour les backends Python et les tests.',
+      'Utile pour les données structurées et le stockage.',
+      'Adapté aux applications classiques et plus importantes.',
+      'Utile pour développer, automatiser et livrer.',
+      'Une voie pratique pour publier les projets en ligne.'
+    ]
+  },
+  sr: {
+    choose: 'Izaberi jednu tehnologiju po oblasti i sastavi svoj lični stack profil.',
+    partial: (count, total) => `${count} od ${total} oblasti je izabrano.`,
+    complete: 'Stack profil je potpun — sve oblasti su pokrivene.',
+    selected: (label) => `Izabrano: ${label}.`,
+    notes: [
+      'Dobra osnova za vidljive veb interfejse.',
+      'Brza i interaktivna osnova za frontend projekte.',
+      'Dobar izbor za pouzdane Python backende i testove.',
+      'Praktično za strukturisane podatke i skladištenje.',
+      'Odgovara klasičnim i većim aplikacijama.',
+      'Pomaže pri razvoju, automatizaciji i isporuci.',
+      'Praktičan put za objavljivanje projekata na internetu.'
+    ]
+  },
+  'sr-cyrl': {
+    choose: 'Изабери једну технологију по области и састави свој лични стек профил.',
+    partial: (count, total) => `${count} од ${total} области је изабрано.`,
+    complete: 'Стек профил је потпун — све области су покривене.',
+    selected: (label) => `Изабрано: ${label}.`,
+    notes: [
+      'Добра основа за видљиве веб интерфејсе.',
+      'Брза и интерактивна основа за фронтенд пројекте.',
+      'Добар избор за поуздане Пајтон бекенде и тестове.',
+      'Практично за структуриране податке и складиштење.',
+      'Одговара класичним и већим апликацијама.',
+      'Помаже при развоју, аутоматизацији и испоруци.',
+      'Практичан пут за објављивање пројеката на интернету.'
+    ]
+  }
+};
+
 const renderTechStack = () => {
   techGrid.innerHTML = '';
 
   if (Array.isArray(portfolioData.techGroups)) {
+    const copy = techInteractionCopy[currentLanguageCode] || techInteractionCopy.de;
+    const totalGroups = portfolioData.techGroups.length;
+    const selectionSummary = document.createElement('aside');
+    selectionSummary.className = 'tech-selection-summary';
+    selectionSummary.setAttribute('aria-live', 'polite');
+    const selectionCount = document.createElement('strong');
+    selectionCount.className = 'tech-selection-count';
+    const selectionMessage = document.createElement('p');
+    selectionMessage.className = 'tech-selection-message';
+    selectionSummary.append(selectionCount, selectionMessage);
+
+    const updateSelectionSummary = () => {
+      const selectedCount = techSelectionState.size;
+      const isComplete = selectedCount === totalGroups;
+      selectionSummary.classList.toggle('is-complete', isComplete);
+      selectionCount.textContent = `${selectedCount}/${totalGroups}`;
+      selectionMessage.textContent = selectedCount === 0
+        ? copy.choose
+        : isComplete
+          ? copy.complete
+          : copy.partial(selectedCount, totalGroups);
+    };
+
     portfolioData.techGroups.forEach((group, index) => {
       const displayGroup = localizedTechGroup(group, index);
       const card = document.createElement('article');
@@ -2631,6 +2733,10 @@ const renderTechStack = () => {
       title.textContent = displayGroup.title;
 
       const list = document.createElement('ul');
+      const groupLabels = new Map();
+      const groupFeedback = document.createElement('p');
+      groupFeedback.className = 'tech-group-feedback';
+      groupFeedback.setAttribute('aria-live', 'polite');
       (group.items || []).forEach((techId, itemIndex) => {
         const translatedLabel = (displayGroup.items || [])[itemIndex];
         const catalogEntry = techCatalog[techId];
@@ -2648,8 +2754,9 @@ const renderTechStack = () => {
         button.className = 'tech-logo-button';
         button.style.setProperty('--tech-accent', tech.accent);
         button.setAttribute('aria-label', tech.label);
-        button.setAttribute('aria-pressed', 'false');
+        button.setAttribute('aria-pressed', String(techSelectionState.get(index) === techId));
         button.title = tech.label;
+        groupLabels.set(techId, tech.label);
 
         const icon = document.createElement('span');
         icon.className = `tech-brand-icon tech-brand-${tech.icon}`;
@@ -2670,20 +2777,41 @@ const renderTechStack = () => {
 
         button.addEventListener('click', () => {
           const isSelected = button.getAttribute('aria-pressed') === 'true';
-          list.querySelectorAll('.tech-logo-button[aria-pressed="true"]').forEach((activeButton) => {
-            activeButton.setAttribute('aria-pressed', 'false');
+          if (isSelected) {
+            techSelectionState.delete(index);
+          } else {
+            techSelectionState.set(index, techId);
+          }
+
+          const selectedTechId = techSelectionState.get(index);
+          list.querySelectorAll('.tech-logo-button').forEach((groupButton) => {
+            groupButton.setAttribute('aria-pressed', String(groupButton === button
+              ? !isSelected
+              : groupButton.dataset.techId === selectedTechId));
           });
-          button.setAttribute('aria-pressed', String(!isSelected));
+          groupFeedback.hidden = !selectedTechId;
+          groupFeedback.textContent = selectedTechId
+            ? `${copy.selected(groupLabels.get(selectedTechId))} ${copy.notes[index] || ''}`
+            : '';
+          updateSelectionSummary();
         });
+        button.dataset.techId = techId;
 
         button.append(icon, label);
         listItem.append(button);
         list.append(listItem);
       });
 
-      card.append(title, list);
+      const selectedTechId = techSelectionState.get(index);
+      groupFeedback.hidden = !selectedTechId;
+      groupFeedback.textContent = selectedTechId
+        ? `${copy.selected(groupLabels.get(selectedTechId))} ${copy.notes[index] || ''}`
+        : '';
+      card.append(title, list, groupFeedback);
       techGrid.append(card);
     });
+    techGrid.append(selectionSummary);
+    updateSelectionSummary();
     return;
   }
 
