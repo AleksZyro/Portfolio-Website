@@ -463,6 +463,7 @@ i18nElements.forEach((element) => {
 let activeDictionary = {};
 let currentLanguageCode = 'de';
 let activeProjectTitle = '';
+let modalScrollY = 0;
 const embeddedDictionaries = {
   de: {
     skip: { content: 'Zum Inhalt springen' },
@@ -2702,8 +2703,10 @@ const renderTechStack = () => {
           const isSelected = button.getAttribute('aria-pressed') === 'true';
           list.querySelectorAll('.tech-logo-button[aria-pressed="true"]').forEach((activeButton) => {
             activeButton.setAttribute('aria-pressed', 'false');
+            activeButton.closest('.tech-group-card')?.classList.remove('has-selected-technology');
           });
           button.setAttribute('aria-pressed', String(!isSelected));
+          button.closest('.tech-group-card')?.classList.toggle('has-selected-technology', !isSelected);
         });
 
         button.append(icon, label);
@@ -2933,6 +2936,8 @@ const openDetailModal = (title, description, metaList, options = {}) => {
   });
 
   if (typeof modal.showModal === 'function') {
+    modalScrollY = window.scrollY;
+    document.body.style.top = `-${modalScrollY}px`;
     modal.showModal();
     document.body.classList.add('modal-open');
   }
@@ -3003,6 +3008,8 @@ if (modal) {
 
   modal.addEventListener('close', () => {
     document.body.classList.remove('modal-open');
+    document.body.style.removeProperty('top');
+    window.scrollTo(0, modalScrollY);
     document.querySelectorAll('[data-clickable-card="true"], .item-card.is-selected').forEach((card) => {
       card.classList.remove('is-selected', 'is-modal-return-focus');
     });

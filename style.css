@@ -48,6 +48,8 @@ body::before {
 
 body.modal-open {
   overflow: hidden;
+  position: fixed;
+  width: 100%;
 }
 
 .site-header,
@@ -153,11 +155,13 @@ main > section[id].contact { min-height: auto; }
 
 .nav-list.is-open { display: flex; }
 
-.nav-list a { padding: 10px 12px; border-radius: 10px; color: var(--muted); font-weight: 600; }
+.nav-list a { display: block; width: 100%; padding: 10px 12px; border-radius: 10px; color: var(--muted); font-weight: 600; }
 .nav-list a { white-space: nowrap; }
-.nav-list a:hover,
 .nav-list a:focus-visible,
 .nav-list a.is-active { color: var(--text); background: rgba(56, 189, 248, 0.13); }
+@media (hover: hover) and (pointer: fine) {
+  .nav-list a:hover { color: var(--text); background: rgba(56, 189, 248, 0.13); }
+}
 
 .language-switch {
   width: auto;
@@ -837,13 +841,19 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   transition: border-color 0.18s ease, background 0.18s ease, color 0.18s ease;
 }
 
-.tech-logo-button:hover,
 .tech-logo-button:focus-visible,
 .tech-logo-button[aria-pressed="true"] {
   border-color: color-mix(in srgb, var(--tech-accent) 48%, transparent);
   background: color-mix(in srgb, var(--tech-accent) 10%, transparent);
   color: var(--text);
   outline: none;
+}
+@media (hover: hover) and (pointer: fine) {
+  .tech-logo-button:hover {
+    border-color: color-mix(in srgb, var(--tech-accent) 48%, transparent);
+    background: color-mix(in srgb, var(--tech-accent) 10%, transparent);
+    color: var(--text);
+  }
 }
 
 .tech-brand-icon {
@@ -1053,9 +1063,11 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   border-color: rgba(56, 189, 248, 0.34);
 }
 
-.project-links a:hover,
 .project-links a:focus-visible {
   border-color: rgba(125, 211, 252, 0.72);
+}
+@media (hover: hover) and (pointer: fine) {
+  .project-links a:hover { border-color: rgba(125, 211, 252, 0.72); }
 }
 
 .more-projects-summary-card {
@@ -1085,10 +1097,12 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   padding: 9px 11px;
 }
 
-.more-project-name:hover,
 .more-project-name:focus-visible {
   border-color: rgba(125, 211, 252, 0.62);
   background: rgba(30, 41, 59, 0.86);
+}
+@media (hover: hover) and (pointer: fine) {
+  .more-project-name:hover { border-color: rgba(125, 211, 252, 0.62); background: rgba(30, 41, 59, 0.86); }
 }
 
 .more-project-name.is-disabled {
@@ -1624,10 +1638,12 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   line-height: 1.35;
   text-transform: uppercase;
 }
-.github-stat:hover,
 .github-stat:focus-visible {
   background: rgba(56, 189, 248, 0.08);
   box-shadow: inset 0 -2px 0 var(--accent-2), 0 0 18px rgba(56, 189, 248, 0.12);
+}
+@media (hover: hover) and (pointer: fine) {
+  .github-stat:hover { background: rgba(56, 189, 248, 0.08); box-shadow: inset 0 -2px 0 var(--accent-2), 0 0 18px rgba(56, 189, 248, 0.12); }
 }
 
 .activity-strip {
@@ -1663,11 +1679,13 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   transition: border-color 0.16s ease, transform 0.16s ease, background-color 0.16s ease;
 }
 
-.open-source-pr:hover,
 .open-source-pr:focus-visible {
   border-color: rgba(56, 189, 248, 0.58);
   background-color: rgba(15, 23, 42, 0.9);
   transform: translateY(-2px);
+}
+@media (hover: hover) and (pointer: fine) {
+  .open-source-pr:hover { border-color: rgba(125, 211, 252, .58); background-color: rgba(30, 41, 59, .9); transform: translateY(-2px); }
 }
 
 .open-source-top,
@@ -2027,7 +2045,6 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
     font-size: .88rem;
     line-height: 1.2;
   }
-  .nav-list a:hover,
   .nav-list a:focus-visible,
   .nav-list a.is-active {
     background: rgba(56, 189, 248, .08);
@@ -2295,18 +2312,23 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
 }
 
 /* Ruhige Schieferblau-/Cyan-Variante für sämtliche bestehenden Komponenten. */
-.current-work-card:hover,
-.item-card:hover,
 .item-card:focus-within,
 .item-card.is-selected,
-.more-project-name:hover,
 .more-project-name:focus-visible,
-.legal-card:hover,
 .legal-card:focus-visible,
-.open-source-pr:hover,
 .open-source-pr:focus-visible {
   border-color: rgba(56, 189, 248, .52);
   background: rgba(30, 41, 59, .88);
+}
+@media (hover: hover) and (pointer: fine) {
+  .current-work-card:hover,
+  .item-card:hover,
+  .more-project-name:hover,
+  .legal-card:hover,
+  .open-source-pr:hover {
+    border-color: rgba(56, 189, 248, .52);
+    background: rgba(30, 41, 59, .88);
+  }
 }
 
 .featured-project-card,
@@ -2326,12 +2348,14 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
 .project-links a,
 .contact-links a,
 .modal-project-link { border-color: rgba(56, 189, 248, .34); }
-.project-links a:hover,
 .project-links a:focus-visible,
-.contact-links a:hover,
 .contact-links a:focus-visible,
-.modal-project-link:hover,
 .modal-project-link:focus-visible { border-color: rgba(125, 211, 252, .75); background: rgba(56, 189, 248, .1); }
+@media (hover: hover) and (pointer: fine) {
+  .project-links a:hover,
+  .contact-links a:hover,
+  .modal-project-link:hover { border-color: rgba(125, 211, 252, .75); background: rgba(56, 189, 248, .1); }
+}
 
 .timeline-line { background: rgba(125, 211, 252, .42); }
 .timeline-dot { background: var(--accent); box-shadow: 0 0 0 5px rgba(56, 189, 248, .12); }
@@ -2350,12 +2374,16 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
 .project-evidence-list > div { border-color: var(--line); background: transparent; }
 .project-evidence-list dt { color: var(--accent-2); }
 
-.github-stat:hover,
 .github-stat:focus-visible { background: rgba(56, 189, 248, .08); box-shadow: inset 0 -2px 0 var(--accent-2), 0 0 18px rgba(56, 189, 248, .12); }
+@media (hover: hover) and (pointer: fine) {
+  .github-stat:hover { background: rgba(56, 189, 248, .08); box-shadow: inset 0 -2px 0 var(--accent-2), 0 0 18px rgba(56, 189, 248, .12); }
+}
 .activity-strip { border-color: rgba(56, 189, 248, .26); }
 .open-source-pr { background: linear-gradient(90deg, rgba(56, 189, 248, .12), transparent 34%) top left / 100% 3px no-repeat, rgba(15, 23, 42, .76); }
-.open-source-more-link:hover,
 .open-source-more-link:focus-visible { border-bottom-color: rgba(125, 211, 252, .72); color: #e0f2fe; text-shadow: 0 0 10px rgba(125, 211, 252, .36); }
+@media (hover: hover) and (pointer: fine) {
+  .open-source-more-link:hover { border-bottom-color: rgba(125, 211, 252, .72); color: #e0f2fe; text-shadow: 0 0 10px rgba(125, 211, 252, .36); }
+}
 .open-source-more-link:focus-visible { outline-color: rgba(125, 211, 252, .78); }
 .open-source-more-list li::before { color: rgba(125, 211, 252, .7); }
 
@@ -2383,13 +2411,15 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   transition: background-color .2s ease, border-color .2s ease, transform .2s ease, box-shadow .2s ease;
 }
 
-#open-source-list .open-source-pr:hover,
 #open-source-list .open-source-pr:focus-visible {
   border-color: var(--line);
   background: transparent;
   transform: translateX(3px);
   box-shadow: none;
   outline: none;
+}
+@media (hover: hover) and (pointer: fine) {
+  #open-source-list .open-source-pr:hover { border-color: var(--line); background: transparent; transform: translateX(3px); box-shadow: none; outline: none; }
 }
 
 #open-source-list .open-source-pr::before { display: none; }
@@ -2451,11 +2481,13 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   padding: 9px 0;
 }
 
-.project-list .more-project-name:hover,
 .project-list .more-project-name:focus-visible {
   border-bottom-color: rgba(125, 211, 252, .65);
   background: transparent;
   transform: translateX(3px);
+}
+@media (hover: hover) and (pointer: fine) {
+  .project-list .more-project-name:hover { border-bottom-color: rgba(125, 211, 252, .65); background: transparent; transform: translateX(3px); }
 }
 
 .compact-certificates .project-preview {
