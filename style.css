@@ -2187,7 +2187,7 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   grid-template-columns: repeat(2, minmax(0, 1fr));
   justify-content: center;
   align-items: center;
-  gap: 14px clamp(28px, 7vw, 96px);
+  gap: 14px clamp(16px, 4vw, 48px);
 }
 
 .footer-contact-link {
