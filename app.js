@@ -209,6 +209,26 @@ const portfolioData = {
   ],
   openSourceContributions: [
     {
+      id: 'leetcodeRanking543',
+      repo: 'codepvg/leetcode-ranking',
+      number: 543,
+      title: 'fix: handle invalid users in data workflows',
+      summary: 'Gemergte Workflow-Korrektur: invalid-users.json wird in der Inaktivitätsanalyse korrekt verarbeitet und im Sync-Workflow ausgeschlossen.',
+      tags: ['GitHub Actions', 'Workflows', 'LeetCode'],
+      url: 'https://github.com/codepvg/leetcode-ranking/pull/543'
+    },
+    {
+      id: 'leetcodeRanking542',
+      repo: 'codepvg/leetcode-ranking',
+      number: 542,
+      kind: 'issue',
+      title: 'Update GitHub Actions workflows to handle invalid-users.json',
+      summary: 'Abgeschlossenes Issue zur korrekten Behandlung von invalid-users.json in den GitHub-Actions-Workflows.',
+      tags: ['GitHub Actions', 'Issue', 'LeetCode'],
+      status: 'completed',
+      url: 'https://github.com/codepvg/leetcode-ranking/issues/542'
+    },
+    {
       id: 'pipAudit553',
       repo: 'pypa/pip-audit',
       number: 553,
@@ -1617,18 +1637,28 @@ const embeddedPortfolioSectionCopy = {
 
 const embeddedOpenSourceContributions = {
   de: {
+    leetcodeRanking543: { title: 'Ungültige Nutzer in Daten-Workflows behandeln', summary: 'Gemergte Workflow-Korrektur: invalid-users.json wird in der Inaktivitätsanalyse korrekt verarbeitet und im Sync-Workflow ausgeschlossen.', tags: ['GitHub Actions', 'Workflows', 'LeetCode'] },
+    leetcodeRanking542: { title: 'GitHub-Actions-Workflows für invalid-users.json aktualisieren', summary: 'Abgeschlossenes Issue zur korrekten Behandlung von invalid-users.json in den GitHub-Actions-Workflows.', tags: ['GitHub Actions', 'Issue', 'LeetCode'] },
     pipAudit553: { title: 'Windows-Tests in GitHub Actions', summary: 'Abgeschlossenes Issue zur Ergänzung eines Windows-Testjobs in GitHub Actions.', tags: ['Python', 'CI/CD', 'Windows'] }
   },
   en: {
+    leetcodeRanking543: { title: 'Handle invalid users in data workflows', summary: 'Merged workflow fix: process invalid-users.json in inactivity analysis and exclude it from sync changes.', tags: ['GitHub Actions', 'Workflows', 'LeetCode'] },
+    leetcodeRanking542: { title: 'Update workflows for invalid-users.json', summary: 'Completed issue for handling invalid-users.json correctly in the GitHub Actions workflows.', tags: ['GitHub Actions', 'Issue', 'LeetCode'] },
     pipAudit553: { title: 'Run tests for Windows in GitHub Actions', summary: 'Completed issue for adding a Windows test job to GitHub Actions.', tags: ['Python', 'CI/CD', 'Windows'] }
   },
   fr: {
+    leetcodeRanking543: { title: 'Gérer les utilisateurs invalides dans les workflows de données', summary: 'Correction de workflow mergée : invalid-users.json est traité dans l’analyse d’inactivité et exclu de la synchronisation.', tags: ['GitHub Actions', 'Workflows', 'LeetCode'] },
+    leetcodeRanking542: { title: 'Mettre à jour les workflows pour invalid-users.json', summary: 'Issue clôturée pour traiter correctement invalid-users.json dans les workflows GitHub Actions.', tags: ['GitHub Actions', 'Issue', 'LeetCode'] },
     pipAudit553: { title: 'Exécuter les tests Windows dans GitHub Actions', summary: 'Issue clôturée pour ajouter un job de test Windows à GitHub Actions.', tags: ['Python', 'CI/CD', 'Windows'] }
   },
   sr: {
+    leetcodeRanking543: { title: 'Obrada nevažećih korisnika u data workflow-ima', summary: 'Meržovana ispravka workflow-a: invalid-users.json se obrađuje u analizi neaktivnosti i izuzima iz sinhronizacije.', tags: ['GitHub Actions', 'Workflow', 'LeetCode'] },
+    leetcodeRanking542: { title: 'Ažuriranje workflow-a za invalid-users.json', summary: 'Završen issue za pravilnu obradu invalid-users.json u GitHub Actions workflow-ima.', tags: ['GitHub Actions', 'Issue', 'LeetCode'] },
     pipAudit553: { title: 'Pokrenuti testove za Windows u GitHub Actions', summary: 'Završeni issue za dodavanje Windows testnog posla u GitHub Actions.', tags: ['Python', 'CI/CD', 'Windows'] }
   },
   'sr-cyrl': {
+    leetcodeRanking543: { title: 'Обрада неважећих корисника у радним токовима података', summary: 'Мерџована исправка радног тока: invalid-users.json се обрађује у анализи неактивности и изузима из синхронизације.', tags: ['Гитхаб акције', 'Радни токови', 'Литкод'] },
+    leetcodeRanking542: { title: 'Ажурирање радних токова за invalid-users.json', summary: 'Завршен issue за правилну обраду invalid-users.json у Гитхаб акцијама.', tags: ['Гитхаб акције', 'Issue', 'Литкод'] },
     pipAudit553: { title: 'Покренути тестове за Виндоуз у ГитХаб акцијама', summary: 'Завршен issue за додавање Виндоуз тестног посла у ГитХаб акције.', tags: ['Пајтон', 'ЦИ/ЦД', 'Виндоуз'] },
     pipAudit1119: { title: 'Уклања дуплирање подударних ПИ-СЕК рањивости', summary: 'Спречава да се подударне ПИ-СЕК рањивости броје два пута.', tags: ['Пајтон', 'Безбедност'] },
     vaultCleaner54: { title: 'Поштује подешене ЦЛИ путање', summary: 'Побољшава ЦЛИ логику путања, тако да се подешене улазне и излазне путање правилно поштују.', tags: ['Пајтон', 'ЦЛИ'] },
