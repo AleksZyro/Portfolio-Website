@@ -1116,7 +1116,7 @@ const embeddedDictionaries = {
       }
     },
     filters: { all: 'Svi', visualization: 'Vizualizacija', inProgress: 'U radu' },
-    github: { kicker: 'GitHub', title: 'Aktivnost i open source', subline: 'GitHub koristim za jasno dokumentovanje projekata, verzionisanje promena i javno linkovanje radova.', profileLink: 'GitHub profil', reposLink: 'Repositories', openSourceTitle: 'Open-source merge-ovi', openSourceEmpty: 'Jos nema javno proverljivih merge-ova.', openSourceText: 'Kada budu dostupni merge-ovani pull requestovi, ovde ce biti navedeni sa projektom, kratkim opisom i linkom.', moreMergesTitle: 'Dodatni merge-ovi', moreMergesText: 'Dodatni merge-ovani pull requestovi sa direktnim dokazom.' , publicRepos: 'javni repozitorijumi', ossMerges: 'open-source merge-ovi', currentStreak: 'dana trenutnog niza', mergedLabel: 'Merged', completedLabel: 'Završeno' },
+    github: { kicker: 'GitHub', title: 'Aktivnost i open source', subline: 'GitHub koristim za jasno dokumentovanje projekata, verzionisanje promena i javno linkovanje radova.', profileLink: 'GitHub profil', reposLink: 'Repositories', openSourceTitle: 'Open-source merge-ovi', openSourceEmpty: 'Jos nema javno proverljivih merge-ova.', openSourceText: 'Kada budu dostupni merge-ovani pull requestovi, ovde ce biti navedeni sa projektom, kratkim opisom i linkom.', moreMergesTitle: 'Dodatni merge-ovi', moreMergesText: 'Dodatni merge-ovani pull requestovi sa direktnim dokazom.' , publicRepos: 'javni repozitorijumi', ossMerges: 'open-source merge-ovi', currentStreak: 'dana trenutnog niza', mergedLabel: 'Merdžovano', completedLabel: 'Završeno' },
     contact: {
       kicker: 'Kontakt',
       title: 'Kontakt i pravno',
