@@ -442,7 +442,7 @@
     "isort2616": {
       "title": "Očuvati LF stdin izlaz na Windowsu",
       "summary": "Sprečava neželjenu promenu krajeva redova za stdin izlaz na Windowsu i dodaje regresioni test.",
-      "tags": ["Python", "Testovi", "Otvoreno"]
+      "tags": ["Python", "Testovi"]
     },
     "beets6839": {
       "summary": "Čuva prazne artpath vrednosti tokom uređivanja, tako da postojeći podaci ne budu nenamerno promenjeni.",

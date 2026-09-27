@@ -438,7 +438,7 @@
     "isort2616": {
       "title": "LF-Ausgabe von stdin unter Windows bewahren",
       "summary": "Verhindert unerwünschte Zeilenumwandlungen bei stdin-Ausgaben unter Windows und ergänzt einen Regressionstest.",
-      "tags": ["Python", "Tests", "Offen"]
+      "tags": ["Python", "Tests"]
     },
     "beets6839": {
       "summary": "Sichert den Umgang mit leerem Artpath beim Bearbeiten, damit bestehende Daten nicht unbeabsichtigt verändert werden.",

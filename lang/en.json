@@ -438,7 +438,7 @@
     "isort2616": {
       "title": "Preserve LF stdin output on Windows",
       "summary": "Prevents unwanted line translation for stdin output on Windows and adds a regression test.",
-      "tags": ["Python", "Testing", "Open"]
+      "tags": ["Python", "Testing"]
     },
     "beets6839": {
       "summary": "Preserves empty artpath values during editing so existing data is not changed unintentionally.",

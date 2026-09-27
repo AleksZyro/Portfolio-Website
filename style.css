@@ -2183,16 +2183,18 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
 
 .footer-contact {
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   gap: 14px clamp(28px, 7vw, 96px);
 }
 
 .footer-contact-link {
   display: inline-flex;
   align-items: baseline;
+  justify-content: center;
+  min-width: 0;
   gap: 8px;
   color: #bae6fd;
   transition: color 180ms ease, transform 180ms ease;
@@ -2306,7 +2308,7 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   }
 
   .footer-contact {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 12px;
   }
 }

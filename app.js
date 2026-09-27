@@ -335,8 +335,7 @@ const portfolioData = {
       number: 2616,
       title: 'Preserve LF stdin output on Windows',
       summary: 'Verhindert unerwünschte Zeilenumwandlungen bei stdin-Ausgaben unter Windows und ergänzt einen Regressionstest.',
-      tags: ['Python', 'Testing', 'Open'],
-      status: 'open',
+      tags: ['Python', 'Testing'],
       url: 'https://github.com/PyCQA/isort/pull/2616'
     }
   ]
@@ -464,6 +463,8 @@ let activeDictionary = {};
 let currentLanguageCode = 'de';
 let activeProjectTitle = '';
 let modalScrollY = 0;
+let modalReturnFocus = null;
+let lastScrollSectionId = '';
 const embeddedDictionaries = {
   de: {
     skip: { content: 'Zum Inhalt springen' },
@@ -1704,18 +1705,36 @@ const tArray = (key, fallback = []) => {
 
 const portfolioItemKey = (item) => item.id || String(item.title || '').toLowerCase().replace(/[^a-z0-9]+/g, '');
 
+const normalizeCertificateMeta = (meta) => {
+  const dateLabel = {
+    de: 'Datum',
+    en: 'Date',
+    fr: 'Date',
+    sr: 'Datum',
+    'sr-cyrl': 'Датум'
+  }[currentLanguageCode] || 'Datum';
+  return (meta || []).map((entry) => String(entry).replace(
+    /^(Abgeschlossen am|Ausgestellt am|Completed|Terminé le|Završeno|Завршено)\s*:/i,
+    `${dateLabel}:`
+  ));
+};
+
 const localizedPortfolioItem = (item, typeKey) => {
   const translationPath = `portfolioItems.${typeKey}.${portfolioItemKey(item)}`;
   const embeddedTranslation = embeddedPortfolioItems[currentLanguageCode]?.[typeKey]?.[item.id] || {};
   const certificateTranslation = typeKey === 'certificates'
     ? certificateCopy[currentLanguageCode]?.[item.id]
     : null;
+  const translatedMeta = certificateTranslation?.meta || tArray(`${translationPath}.meta`, embeddedTranslation.meta || item.meta || []);
+  const certificateMeta = typeKey === 'certificates'
+    ? normalizeCertificateMeta(translatedMeta)
+    : translatedMeta;
   return {
     ...item,
     title: certificateTranslation?.title || t(`${translationPath}.title`, embeddedTranslation.title || item.title || ''),
     cardDescription: certificateTranslation?.cardDescription || t(`${translationPath}.cardDescription`, embeddedTranslation.cardDescription || item.cardDescription || item.description || ''),
     detailDescription: certificateTranslation?.detailDescription || t(`${translationPath}.detailDescription`, embeddedTranslation.detailDescription || embeddedTranslation.cardDescription || item.detailDescription || item.description || ''),
-    meta: certificateTranslation?.meta || tArray(`${translationPath}.meta`, embeddedTranslation.meta || item.meta || []),
+    meta: certificateMeta,
     tags: tArray(`${translationPath}.tags`, embeddedTranslation.tags || item.tags || []),
     role: certificateTranslation?.role || t(`${translationPath}.role`, embeddedTranslation.role || item.role || ''),
     learning: certificateTranslation?.learning || t(`${translationPath}.learning`, embeddedTranslation.learning || item.learning || ''),
@@ -1979,6 +1998,10 @@ const updateNavForScroll = () => {
   const nearBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
   if (nearBottom) {
     setActiveNav('contact');
+    if (lastScrollSectionId !== 'contact' && !modal?.open) {
+      lastScrollSectionId = 'contact';
+      window.history.replaceState(null, '', '#contact');
+    }
     return;
   }
 
@@ -1992,6 +2015,11 @@ const updateNavForScroll = () => {
   });
 
   setActiveNav(currentId);
+  if (currentId && currentId !== lastScrollSectionId && !modal?.open) {
+    lastScrollSectionId = currentId;
+    const nextHash = `#${currentId}`;
+    if (window.location.hash !== nextHash) window.history.replaceState(null, '', nextHash);
+  }
 };
 
 window.addEventListener('scroll', updateNavForScroll);
@@ -2936,10 +2964,11 @@ const openDetailModal = (title, description, metaList, options = {}) => {
   });
 
   if (typeof modal.showModal === 'function') {
+    modalReturnFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     modalScrollY = window.scrollY;
+    document.body.classList.add('modal-open');
     document.body.style.top = `-${modalScrollY}px`;
     modal.showModal();
-    document.body.classList.add('modal-open');
   }
 };
 
@@ -3015,8 +3044,11 @@ if (modal) {
     });
     const activeElement = document.activeElement;
     if (activeElement instanceof HTMLElement) activeElement.blur();
-    document.body.tabIndex = -1;
-    document.body.focus({ preventScroll: true });
+    const returnFocus = modalReturnFocus;
+    modalReturnFocus = null;
+    if (returnFocus instanceof HTMLElement) {
+      window.requestAnimationFrame(() => returnFocus.focus({ preventScroll: true }));
+    }
   });
 }
 
