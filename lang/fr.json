@@ -438,7 +438,7 @@
     "isort2616": {
       "title": "Préserver la sortie LF de stdin sous Windows",
       "summary": "Évite la conversion involontaire des retours à la ligne pour la sortie stdin sous Windows et ajoute un test de régression.",
-      "tags": ["Python", "Tests", "Ouvert"]
+      "tags": ["Python", "Tests"]
     },
     "beets6839": {
       "summary": "Préserve les valeurs artpath vides pendant l’édition afin que les données existantes ne soient pas modifiées involontairement.",
