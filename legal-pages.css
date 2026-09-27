@@ -40,13 +40,11 @@ body {
 .legal-language-menu button:hover, .legal-language-menu button:focus-visible { background: rgba(56, 189, 248, .12); color: var(--text); outline: none; }
 .legal-language-native { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
 .flag { position: relative; display: inline-block; width: 22px; height: 15px; overflow: hidden; flex: 0 0 auto; border: 1px solid rgba(255,255,255,.18); border-radius: 2px; box-shadow: 0 1px 2px rgba(0,0,0,.2); }
-.flag-de { background: linear-gradient(#111 0 33.33%, #dd0000 33.33% 66.66%, #ffce00 66.66%); }
-.flag-fr { background: linear-gradient(90deg, #0055a4 0 33.33%, #fff 33.33% 66.66%, #ef4135 66.66%); }
-.flag-rs { background: linear-gradient(#c6363c 0 33.33%, #0c4076 33.33% 66.66%, #fff 66.66%); }
-.flag-gb { background: linear-gradient(32deg, transparent 41%, #fff 41% 47%, #c8102e 47% 52%, #fff 52% 58%, transparent 58%), linear-gradient(-32deg, transparent 41%, #fff 41% 47%, #c8102e 47% 52%, #fff 52% 58%, transparent 58%), #012169; }
-.flag-gb::before, .flag-gb::after { content: ""; position: absolute; inset: 0; }
-.flag-gb::before { background: linear-gradient(90deg, transparent 39%, #fff 39% 61%, transparent 61%), linear-gradient(0deg, transparent 32%, #fff 32% 68%, transparent 68%); }
-.flag-gb::after { background: linear-gradient(90deg, transparent 45%, #c8102e 45% 55%, transparent 55%), linear-gradient(0deg, transparent 42%, #c8102e 42% 58%, transparent 58%); }
+.flag-de { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 15'%3E%3Cpath fill='%23000' d='M0 0h22v5H0z'/%3E%3Cpath fill='%23d00' d='M0 5h22v5H0z'/%3E%3Cpath fill='%23ffce00' d='M0 10h22v5H0z'/%3E%3C/svg%3E") center/cover no-repeat; }
+.flag-fr { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 15'%3E%3Cpath fill='%230055a4' d='M0 0h7.33v15H0z'/%3E%3Cpath fill='%23fff' d='M7.33 0h7.34v15H7.33z'/%3E%3Cpath fill='%23ef4135' d='M14.67 0H22v15h-7.33z'/%3E%3C/svg%3E") center/cover no-repeat; }
+.flag-rs { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 15'%3E%3Cpath fill='%23c6363c' d='M0 0h22v5H0z'/%3E%3Cpath fill='%230c4076' d='M0 5h22v5H0z'/%3E%3Cpath fill='%23fff' d='M0 10h22v5H0z'/%3E%3Cpath fill='%23c6363c' d='M2 4h4v5c0 2-2 3-2 3S2 11 2 9z'/%3E%3Cpath fill='%23fff' d='M3.5 5h1v4h-1zM2.5 6.5h3v1h-3z'/%3E%3C/svg%3E") center/cover no-repeat; }
+.flag-gb { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 15'%3E%3Cpath fill='%23012169' d='M0 0h22v15H0z'/%3E%3Cpath stroke='%23fff' stroke-width='3' d='M0 0l22 15M22 0L0 15'/%3E%3Cpath stroke='%23c8102e' stroke-width='1.2' d='M0 0l22 15M22 0L0 15'/%3E%3Cpath stroke='%23fff' stroke-width='5' d='M11 0v15M0 7.5h22'/%3E%3Cpath stroke='%23c8102e' stroke-width='2.8' d='M11 0v15M0 7.5h22'/%3E%3C/svg%3E") center/cover no-repeat; }
+.flag-gb::before, .flag-gb::after { display: none; }
 main { padding: clamp(42px, 8vw, 82px) 0; }
 .kicker { display: inline-flex; align-items: center; gap: 10px; margin: 0 0 12px; color: var(--accent); font-size: 0.78rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
 .kicker::before { content: ""; width: 28px; height: 1px; background: var(--accent); box-shadow: 0 0 12px rgba(56,189,248,.55); }

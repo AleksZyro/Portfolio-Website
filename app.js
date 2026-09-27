@@ -627,7 +627,7 @@ const embeddedDictionaries = {
       openSourceText: 'Sobald gemergte Pull Requests vorhanden sind, werden sie hier mit Projekt, Kurzbeschreibung und Link aufgef\u00fchrt.',
       moreMergesTitle: 'Weitere Merges',
       moreMergesText: 'Weitere gemergte Pull Requests mit direktem Nachweis.',
-      publicRepos: 'öffentliche Repositories', ossMerges: 'Open-Source-Merges', currentStreak: 'Tage aktuelle Serie', mergedLabel: 'Merged', completedLabel: 'Abgeschlossen'
+      publicRepos: 'öffentliche Repositories', ossMerges: 'Open-Source-Merges', currentStreak: 'Tage aktuelle Serie', mergedLabel: 'Gemergt', completedLabel: 'Abgeschlossen'
     },
     contact: {
       kicker: 'Kontakt',
@@ -1869,9 +1869,7 @@ const renderOpenSourceContributions = () => {
 
     const merged = document.createElement('span');
     merged.className = 'merged-badge';
-    const contributionLabel = item.status === 'completed'
-      ? t('github.completedLabel', 'Abgeschlossen')
-      : t('github.mergedLabel', 'Merged');
+    const contributionLabel = t('github.mergedLabel', 'Merged');
     merged.append(mergeIcon(), document.createTextNode(contributionLabel));
 
     bottom.append(tags, merged);
