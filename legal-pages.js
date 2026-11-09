@@ -195,14 +195,17 @@ const applyLegalLanguage = (code) => {
   if (heading) heading.textContent = page.title;
   if (intro) intro.textContent = copy.intro?.[legalPageKind] || '';
   if (blocks) {
-    blocks.replaceChildren(...page.sections.map((item) => {
+    const sectionIds = ['impressum', 'hosting', 'auslieferung', 'datenschutz', 'datenschutzrechte'];
+    blocks.replaceChildren(...page.sections.map((item, index) => {
       const block = document.createElement('section');
       block.className = 'legal-block';
+      block.id = sectionIds[index];
       const title = document.createElement('h2');
       title.textContent = item.title;
       const text = document.createElement('p');
       text.textContent = item.text;
       text.className = 'legal-block-text';
+      if (block.id === 'datenschutz') text.id = 'cookies';
       block.append(title, text);
       return block;
     }));
@@ -225,8 +228,15 @@ if (languageButton && languageMenu) {
     option.addEventListener('click', () => {
       languageMenu.hidden = true;
       languageButton.setAttribute('aria-expanded', 'false');
+      languageButton.focus();
       applyLegalLanguage(option.dataset.lang);
     });
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape' || languageMenu.hidden) return;
+    languageMenu.hidden = true;
+    languageButton.setAttribute('aria-expanded', 'false');
+    languageButton.focus();
   });
   document.addEventListener('click', (event) => {
     if (!event.target.closest('.legal-language-switch')) {

@@ -1,0 +1,13 @@
+{
+  "name": "aleksandar-portfolio",
+  "private": true,
+  "scripts": {
+    "preview": "node scripts/serve-preview.mjs",
+    "test:browser": "playwright test",
+    "test:visual": "playwright test --config=playwright.visual.config.mjs",
+    "test:visual:update": "playwright test --config=playwright.visual.config.mjs --update-snapshots"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.0"
+  }
+}

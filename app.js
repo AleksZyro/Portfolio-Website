@@ -1,3 +1,5 @@
+// Preserve deep links before the initial scroll observer can replace the hash.
+const initialSectionHash = window.location.hash;
 const portfolioData = {
   codingSinceYear: 2025,
   projects: [
@@ -2394,6 +2396,7 @@ const createCard = (item, typeKey = 'projects') => {
     openDetails();
   });
   card.addEventListener('keydown', (event) => {
+    if (event.target !== card) return;
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
       openDetails();
@@ -2498,6 +2501,7 @@ const createProjectListItem = (item, number, copy) => {
     if (!event.target.closest('button, a')) openDetails();
   });
   card.addEventListener('keydown', (event) => {
+    if (event.target !== card) return;
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
       openDetails();
@@ -2563,6 +2567,10 @@ const renderProjectExplorer = () => {
 
   projectsGrid.innerHTML = '';
   const copy = projectPresentationCopy[currentLanguageCode] || projectPresentationCopy.de;
+  if (document.body.dataset.projectLayout === 'rows') {
+    portfolioData.projects.forEach((project, index) => projectsGrid.append(createProjectListItem(project, index + 1, copy)));
+    return;
+  }
   const spotlightProject = portfolioData.projects.find((project) => project.id === 'foliolint') || portfolioData.projects[0];
   const remainingProjects = portfolioData.projects.filter((project) => project !== spotlightProject);
   renderProjectSpotlight(spotlightProject, copy);
@@ -3128,7 +3136,7 @@ const loadLanguage = async (languageCode) => {
 };
 
 const alignInitialHash = () => {
-  const target = window.location.hash;
+  const target = initialSectionHash;
   const cleanId = target.replace(/^#/, '').split(/[?&]/)[0];
   if (!cleanId || !document.getElementById(cleanId)) return;
 
@@ -3158,6 +3166,7 @@ if (languageMenuButton && languageMenu) {
   languageOptions.forEach((option) => {
     option.addEventListener('click', () => {
       setLanguageMenuOpen(false);
+      languageMenuButton.focus();
       loadLanguage(option.dataset.lang).catch(() => {
         selectLanguageButton('de');
         document.documentElement.lang = 'de';
@@ -3172,24 +3181,10 @@ if (languageMenuButton && languageMenu) {
   });
 
   document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
+    if (event.key === 'Escape' && !languageMenu.hidden) {
       setLanguageMenuOpen(false);
+      languageMenuButton.focus();
     }
-  });
-}
-
-if (languageOptions.length) {
-  languageOptions.forEach((option) => {
-    option.addEventListener('keydown', (event) => {
-      if (event.key === 'Enter' || event.key === ' ') {
-        event.preventDefault();
-        setLanguageMenuOpen(false);
-        loadLanguage(option.dataset.lang).catch(() => {
-          selectLanguageButton('de');
-          document.documentElement.lang = 'de';
-        });
-      }
-    });
   });
 }
 

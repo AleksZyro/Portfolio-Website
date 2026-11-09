@@ -20,6 +20,9 @@
   <link rel="icon" href="data:,">
   <title>Aleksandar Nikolić (AleksZyro) | IMS-Portfolio</title>
   <link rel="stylesheet" href="style.css?v=20260927-mobile-fixes-1">
+  <link rel="stylesheet" href="concept/identity.css">
+  <link rel="stylesheet" href="concept/experience.css">
+  <link rel="stylesheet" href="concept/refinements.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -73,7 +76,7 @@
   }
   </script>
 </head>
-<body>
+<body class="identity-preview" data-project-layout="rows">
   <a class="skip-link" href="#main-content" data-i18n="skip.content">Zum Inhalt springen</a>
   <header class="site-header" id="top">
     <nav class="navbar container" aria-label="Hauptnavigation" data-i18n-aria="a11y.mainNav">
@@ -123,27 +126,18 @@
       <div class="container hero-grid">
         <div class="hero-copy reveal">
           <p class="kicker" data-i18n="hero.kicker">Entwicklerprofil</p>
-          <h1 id="hero-title" data-i18n="hero.title">Praxisorientierte Web- und Python-Projekte</h1>
+          <h1 id="hero-title">Aleksandar<br><span>Nikolić.</span></h1>
+          <p class="identity-role" data-i18n="hero.title">Praxisorientierte Web- und Python-Projekte</p>
           <p data-i18n="hero.description">
             Ich besuche die IMS mit Schwerpunkt Applikationsentwicklung und arbeite an Python-Tools,
             Weboberflächen, APIs, Tests und Datenverarbeitung.
-          </p>
-          <p data-i18n="hero.about">
-            Mir sind klare Benutzeroberflächen, nachvollziehbarer Code, Teamfähigkeit und ehrliche Projektstände wichtig.
           </p>
 
           <p class="availability-note" data-i18n="hero.availability">
             Aktuell suche ich eine Praktikumsstelle in der Schweiz für das 4. IMS-Jahr, Zeitraum 2027/2028.
           </p>
 
-          <p class="alias-note" data-i18n="hero.alias">
-            Auf GitHub und in Projekten verwende ich den Entwicklernamen AleksZyro.
-          </p>
 
-          <p class="hero-bridge" data-i18n="hero.bridge">
-            Besonders interessiert mich, wie aus kleinen Tools zuverlässige Anwendungen werden: mit klarer Struktur,
-            verständlicher Bedienung und sauber dokumentierten Änderungen.
-          </p>
 
           <div class="hero-actions">
             <a class="btn btn-primary" href="#portfolio" data-i18n="hero.ctaPortfolio">Projekte ansehen</a>
@@ -154,7 +148,18 @@
             <a class="btn btn-secondary" href="#contact" data-i18n="hero.ctaContact">Kontakt</a>
           </div>
         </div>
-
+      </div>
+      <div class="container intro-notes">
+          <p data-i18n="hero.about">
+            Mir sind klare Benutzeroberflächen, nachvollziehbarer Code, Teamfähigkeit und ehrliche Projektstände wichtig.
+          </p>
+          <p class="alias-note" data-i18n="hero.alias">
+            Auf GitHub und in Projekten verwende ich den Entwicklernamen AleksZyro.
+          </p>
+          <p class="hero-bridge" data-i18n="hero.bridge">
+            Besonders interessiert mich, wie aus kleinen Tools zuverlässige Anwendungen werden: mit klarer Struktur,
+            verständlicher Bedienung und sauber dokumentierten Änderungen.
+          </p>
       </div>
       <div class="current-work" id="current-work" aria-label="Aktuelle Projekte" data-i18n-aria="a11y.currentWork">
       <div class="container">
@@ -166,26 +171,26 @@
             <span class="current-work-status"><span class="dot" aria-hidden="true"></span><span data-i18n="currentWork.status">In Arbeit</span><span class="current-work-separator" aria-hidden="true">·</span><span data-i18n="currentWork.customerLabel">Kundenprojekt</span></span>
           </div>
 
-          <div class="current-work-card" data-current-work="mmTransport" data-work-type="customer">
+          <a class="current-work-card" href="https://www.mmta.ch/" target="_blank" rel="noopener noreferrer" data-current-work="mmTransport" data-work-type="customer">
             <div class="current-work-card-head">
               <h3 data-i18n="currentWork.projects.mmTransport.title">Website für MM Transport &amp; Assistance</h3>
             </div>
-            <span class="current-work-status"><span class="dot" aria-hidden="true"></span><span data-i18n="currentWork.status">In Arbeit</span><span class="current-work-separator" aria-hidden="true">·</span><span data-i18n="currentWork.customerLabel">Kundenprojekt</span></span>
-          </div>
+            <span class="current-work-status"><span class="dot" aria-hidden="true"></span><span data-experience="maintenance">Kontinuierlich in Arbeit</span><span class="current-work-separator" aria-hidden="true">·</span><span data-i18n="currentWork.customerLabel">Kundenprojekt</span></span>
+          </a>
 
-          <div class="current-work-card" data-current-work="codexTwin" data-work-type="own">
+          <a class="current-work-card" href="https://github.com/AleksZyro/Agent-Dock" target="_blank" rel="noopener noreferrer" data-current-work="agentDock" data-work-type="own">
             <div class="current-work-card-head">
-              <h3 data-i18n="currentWork.projects.codexTwin.title">CodexTwin</h3>
+              <h3>Agent Dock</h3>
             </div>
-            <span class="current-work-status"><span class="dot" aria-hidden="true"></span><span data-i18n="currentWork.status">In Arbeit</span></span>
-          </div>
+            <span class="current-work-status"><span class="dot" aria-hidden="true"></span><span data-i18n="currentWork.status">In Arbeit</span><span class="current-work-separator" aria-hidden="true">·</span><span data-experience="privateRepo">Privates Repository</span></span>
+          </a>
 
-          <div class="current-work-card" data-current-work="umr" data-work-type="own">
+          <a class="current-work-card" href="https://github.com/AleksZyro/UMR-Useless-mobs-reworked-Mod" target="_blank" rel="noopener noreferrer" data-current-work="umr" data-work-type="own">
             <div class="current-work-card-head">
               <h3 data-i18n="currentWork.projects.umr.title">UMR</h3>
             </div>
             <span class="current-work-status"><span class="dot" aria-hidden="true"></span><span data-i18n="currentWork.status">In Arbeit</span></span>
-          </div>
+          </a>
         </div>
       </div>
       </div>
@@ -284,9 +289,7 @@
           <h2 id="portfolio-title" data-i18n="portfolio.title">Ausgewählte Arbeiten</h2>
           <p class="section-subline" data-i18n="portfolio.subline">Projekt-Explorer mit Status, Stack und Links oder Hinweisen.</p>
         </div>
-
         <div class="project-explorer reveal">
-          <div class="project-spotlight" id="project-spotlight" aria-label="Projekt im Fokus" data-i18n-aria="a11y.projectSpotlight"></div>
           <div class="project-list" id="projects-grid" aria-label="Projektliste" data-i18n-aria="a11y.projectList"></div>
         </div>
 
@@ -377,7 +380,7 @@
         </a>
       </div>
       <div class="footer-legal">
-        <a href="rechtliches.html" data-i18n="footer.legalLink">Impressum &amp; Datenschutzerklärung</a>
+        <a href="rechtliches.html" data-legal-page-link="rechtliches" data-i18n="footer.legalLink">Impressum &amp; Datenschutzerklärung</a>
       </div>
     </div>
   </footer>
@@ -420,6 +423,7 @@
     </article>
   </dialog>
 
-  <script src="app.js?v=20260927-mobile-fixes-1" defer></script>
+  <script src="app.js?v=20261109-redesign" defer></script>
+  <script src="concept/experience.js" type="module"></script>
 </body>
 </html>
