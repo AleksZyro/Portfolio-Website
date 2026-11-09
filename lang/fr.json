@@ -216,6 +216,7 @@
     "openImage": "Ouvrir l’aperçu dans un nouvel onglet"
   },
   "portfolioDownloadButton": "Télécharger le PDF",
+  "portfolioCourseButton": "Cours sur LinkedIn Learning",
   "footer": {
     "rights": "Tous droits réservés.",
     "legalLink": "Mentions légales et confidentialité",
@@ -238,6 +239,7 @@
     "publicRepos": "dépôts publics",
     "ossMerges": "merges open source",
     "currentStreak": "jours de série actuelle",
+    "longestStreak": "jours pour la plus longue série terminée (12 mois)",
     "mergedLabel": "Fusionné",
     "completedLabel": "Terminé"
   },
@@ -355,7 +357,7 @@
       "ethicalHacker": {
         "title": "Ethical Hacker",
         "cardDescription": "Certificat sur les bases du hacking éthique et des tests orientés sécurité.",
-        "detailDescription": "Ce certificat peut être consulté directement dans le portfolio ou téléchargé.",
+        "detailDescription": "J’ai terminé le cours Ethical Hacker de la Cisco Networking Academy, consacré au piratage éthique et aux tests de sécurité.",
         "meta": [
           "Terminé le : 21 avril 2026",
           "Format : PDF"
@@ -365,7 +367,7 @@
       "introCybersecurity": {
         "title": "Introduction to Cybersecurity",
         "cardDescription": "Certificat sur les bases de la cybersécurité, les menaces et les mesures de protection.",
-        "detailDescription": "Ce certificat peut être consulté directement dans le portfolio ou téléchargé.",
+        "detailDescription": "J’ai terminé le cours d’initiation de la Cisco Networking Academy sur les cybermenaces courantes et les mesures de protection de base.",
         "meta": [
           "Terminé le : 12 décembre 2025",
           "Format : PDF"
@@ -375,7 +377,7 @@
       "bbbHackathon": {
         "title": "BBB Hackathon",
         "cardDescription": "Certificat de participation à Baden hackt les 27 et 28 mars 2026.",
-        "detailDescription": "Ce certificat peut être consulté directement dans le portfolio ou téléchargé.",
+        "detailDescription": "Le comité d’organisation confirme ma participation à Baden hackt, où j’ai travaillé sur un défi pendant deux jours.",
         "meta": [
           "Dates : 27 et 28 mars 2026",
           "Durée : 2 jours",
@@ -587,6 +589,6 @@
   "certificates": {
     "kicker": "Certificats",
     "title": "Formations et apprentissages personnels",
-    "subline": "Certificats sélectionnés avec aperçu, détails et téléchargement PDF."
+    "subline": "Une sélection de certificats avec aperçu et détails."
   }
 }

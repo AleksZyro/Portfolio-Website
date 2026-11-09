@@ -173,6 +173,7 @@ const portfolioData = {
       title: 'Was ist generative KI?',
       cardDescription: 'LinkedIn-Learning-Kurs zu generativen KI-Tools, künstlicher Intelligenz und grundlegender Einordnung generativer KI.',
       detailDescription: 'Dieses LinkedIn-Learning-Zertifikat bestätigt den abgeschlossenen Kurs „Was ist generative KI?“. Der Kurs behandelt generative KI-Tools, künstliche Intelligenz und die grundlegende Einordnung generativer KI im Arbeits- und Lernkontext.',
+      courseUrl: 'https://de.linkedin.com/learning/was-ist-generative-ki-22860708',
       previewImage: 'assets/certificate-previews/linkedin-generative-ki.svg',
       previewLabel: 'Zertifikat'
     }
@@ -346,7 +347,7 @@ const portfolioData = {
 const navToggle = document.querySelector('.nav-toggle');
 const navList = document.querySelector('.nav-list');
 const navLinks = document.querySelectorAll('.nav-list a');
-const sections = [...document.querySelectorAll('main section[id]')];
+const sections = [...document.querySelectorAll('main section[id], footer#contact')];
 const revealItems = document.querySelectorAll('.reveal');
 const careerTimeline = document.querySelector('.career-timeline');
 const careerPath = careerTimeline?.querySelector('.career-path');
@@ -370,6 +371,7 @@ const surfaceCanvas = null;
 const modal = document.getElementById('detail-modal');
 const modalCard = document.getElementById('modal-card');
 const modalClose = document.getElementById('modal-close');
+const modalBody = modal?.querySelector('.modal-body');
 const modalTitle = document.getElementById('modal-title');
 const modalDescription = document.getElementById('modal-description');
 const modalMeta = document.getElementById('modal-meta');
@@ -1231,7 +1233,7 @@ const certificateCopy = {
       title: 'Was ist generative KI?',
       cardDescription: 'LinkedIn-Learning-Kurs zu generativen KI-Tools, künstlicher Intelligenz und grundlegender Einordnung generativer KI.',
       detailDescription: 'Dieses LinkedIn-Learning-Zertifikat bestätigt den abgeschlossenen Kurs „Was ist generative KI?“. Der Kurs behandelt generative KI-Tools, künstliche Intelligenz und die grundlegende Einordnung generativer KI im Arbeits- und Lernkontext.',
-      meta: ['Bereich: Generative KI', 'Dauer: 42 Minuten', 'Format: PDF'],
+      meta: ['Bereich: Generative KI', 'Dauer: 42 Minuten', 'Datum: 20.08.2026'],
       previewLabel: 'Zertifikat'
     }
   },
@@ -1254,7 +1256,7 @@ const certificateCopy = {
       title: 'What is generative AI?',
       cardDescription: 'LinkedIn Learning course on generative AI tools, artificial intelligence and the basic classification of generative AI.',
       detailDescription: 'This LinkedIn Learning certificate confirms completion of the course “What is generative AI?”. The course covers generative AI tools, artificial intelligence and the basic classification of generative AI in work and learning contexts.',
-      meta: ['Area: Generative AI', 'Duration: 42 minutes', 'Format: PDF'],
+      meta: ['Area: Generative AI', 'Duration: 42 minutes', 'Date: 20 August 2026'],
       previewLabel: 'Certificate'
     }
   },
@@ -1277,7 +1279,7 @@ const certificateCopy = {
       title: 'Qu’est-ce que l’IA générative ?',
       cardDescription: 'Cours LinkedIn Learning sur les outils d’IA générative, l’intelligence artificielle et les bases de l’IA générative.',
       detailDescription: 'Ce certificat LinkedIn Learning confirme la réussite du cours « Qu’est-ce que l’IA générative ? ». Le cours traite des outils d’IA générative, de l’intelligence artificielle et des bases permettant de situer l’IA générative dans un contexte de travail et d’apprentissage.',
-      meta: ['Domaine : IA générative', 'Durée : 42 minutes', 'Format : PDF'],
+      meta: ['Domaine : IA générative', 'Durée : 42 minutes', 'Date : 20 août 2026'],
       previewLabel: 'Certificat'
     }
   },
@@ -1298,9 +1300,9 @@ const certificateCopy = {
     },
     'linkedin-generative-ki': {
       title: 'Šta je generativna veštačka inteligencija?',
-      cardDescription: 'LinkdIn Lurning kurs o generativnim AI alatima, veštačkoj inteligenciji i osnovnom razumevanju generativne AI.',
-      detailDescription: 'Ovaj LinkdIn Lurning sertifikat potvrđuje završen kurs „Šta je generativna veštačka inteligencija?“. Kurs obrađuje generativne AI alate, veštačku inteligenciju i osnovno razumevanje generativne AI u kontekstu rada i učenja.',
-      meta: ['Oblast: generativna veštačka inteligencija', 'Trajanje: 42 minuta', 'Format: PDF'],
+      cardDescription: 'LinkedIn Learning kurs o generativnim AI alatima, veštačkoj inteligenciji i osnovnom razumevanju generativne AI.',
+      detailDescription: 'Ovaj LinkedIn Learning sertifikat potvrđuje završen kurs „Šta je generativna veštačka inteligencija?“. Kurs obrađuje generativne AI alate, veštačku inteligenciju i osnovno razumevanje generativne AI u kontekstu rada i učenja.',
+      meta: ['Oblast: generativna veštačka inteligencija', 'Trajanje: 42 minuta', 'Datum: 20. avgust 2026.'],
       previewLabel: 'Sertifikat'
     }
   },
@@ -1323,7 +1325,7 @@ const certificateCopy = {
       title: 'Шта је генеративна вештачка интелигенција?',
       cardDescription: 'ЛинкдИн Лернинг курс о генеративним АИ алатима, вештачкој интелигенцији и основном разумевању генеративне АИ.',
       detailDescription: 'Овај ЛинкдИн Лернинг сертификат потврђује завршен курс „Шта је генеративна вештачка интелигенција?“. Курс обрађује генеративне АИ алате, вештачку интелигенцију и основно разумевање генеративне АИ у контексту рада и учења.',
-      meta: ['Област: генеративна вештачка интелигенција', 'Трајање: 42 минута', 'Формат: ПДФ'],
+      meta: ['Област: генеративна вештачка интелигенција', 'Трајање: 42 минута', 'Датум: 20. август 2026.'],
       previewLabel: 'Сертификат'
     }
   }
@@ -1957,7 +1959,7 @@ const scrollToSection = (targetId, behavior = 'smooth') => {
   const headerHeight = header ? Math.ceil(header.getBoundingClientRect().height) : 0;
   const top = Math.max(window.pageYOffset + section.getBoundingClientRect().top - headerHeight - 22, 0);
 
-  window.scrollTo({ top, behavior });
+  window.scrollTo({ top, behavior: prefersReducedMotion.matches ? 'instant' : behavior });
   const nextHash = `#${cleanId}`;
   if (window.location.hash !== nextHash) {
     window.history.replaceState(null, '', nextHash);
@@ -1976,29 +1978,25 @@ if (navToggle && navList) {
     const expanded = navToggle.getAttribute('aria-expanded') === 'true';
     setMenuState(!expanded);
   });
-
-  navLinks.forEach((link) => {
-    link.addEventListener('click', (event) => {
-      const target = link.getAttribute('href');
-      if (target && target.startsWith('#')) {
-        event.preventDefault();
-        setMenuState(false);
-        window.requestAnimationFrame(() => {
-          scrollToSection(target);
-          setActiveNav(target.slice(1));
-        });
-        return;
-      }
-      setMenuState(false);
-    });
-  });
 }
 
+document.querySelectorAll('.nav-list a[href^="#"], .hero-actions a[href^="#"]').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    if (event.ctrlKey || event.metaKey || event.altKey || event.shiftKey) return;
+    event.preventDefault();
+    setMenuState(false);
+    const target = link.hash;
+    scrollToSection(target);
+    setActiveNav(target.slice(1));
+  });
+});
+
 const updateNavForScroll = () => {
+  if (modal?.open || document.body.classList.contains('modal-open')) return;
   const nearBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
   if (nearBottom) {
     setActiveNav('contact');
-    if (lastScrollSectionId !== 'contact' && !modal?.open) {
+    if (lastScrollSectionId !== 'contact') {
       lastScrollSectionId = 'contact';
       window.history.replaceState(null, '', '#contact');
     }
@@ -2015,7 +2013,7 @@ const updateNavForScroll = () => {
   });
 
   setActiveNav(currentId);
-  if (currentId && currentId !== lastScrollSectionId && !modal?.open) {
+  if (currentId && currentId !== lastScrollSectionId) {
     lastScrollSectionId = currentId;
     const nextHash = `#${currentId}`;
     if (window.location.hash !== nextHash) window.history.replaceState(null, '', nextHash);
@@ -2352,6 +2350,9 @@ const createCard = (item, typeKey = 'projects') => {
   if (item.file) {
     detailButton.dataset.file = item.file;
   }
+  if (item.courseUrl) {
+    detailButton.dataset.courseUrl = item.courseUrl;
+  }
   if (displayItem.previewLabel) {
     detailButton.dataset.previewLabel = displayItem.previewLabel;
   }
@@ -2378,6 +2379,7 @@ const createCard = (item, typeKey = 'projects') => {
       displayItem.meta || [],
       {
         file: typeKey === 'certificates' ? item.file || '' : '',
+        courseUrl: item.courseUrl || '',
         previewLabel: displayItem.previewLabel || '',
         previewImage: item.previewImage || '',
         demoMedia: item.demoMedia || null,
@@ -2837,6 +2839,7 @@ const setModalDescription = (description) => {
       p.textContent = paragraph;
       modalDescription.append(p);
     });
+  modalDescription.hidden = !modalDescription.childElementCount;
 };
 
 const setModalProjectEvidence = (evidence) => {
@@ -2848,7 +2851,7 @@ const setModalProjectEvidence = (evidence) => {
   if (content) modalProjectEvidence.append(content);
 };
 
-const configureModalFile = ({ file, previewLabel, previewImage, demoMedia, links, itemType }) => {
+const configureModalFile = ({ file, courseUrl, previewLabel, previewImage, demoMedia, links, itemType }) => {
   const isCertificate = itemType === 'certificates';
   const isProject = itemType === 'projects';
   const media = demoMedia?.src
@@ -2859,6 +2862,7 @@ const configureModalFile = ({ file, previewLabel, previewImage, demoMedia, links
   const hasPreviewImage = Boolean(media);
   const isVideo = media?.type === 'video';
   const hasDownload = isCertificate && Boolean(file);
+  const hasCourseLink = isCertificate && Boolean(courseUrl);
 
   modalCard?.classList.toggle('is-document', isCertificate);
   modalCard?.classList.toggle('is-project', isProject);
@@ -2921,15 +2925,21 @@ const configureModalFile = ({ file, previewLabel, previewImage, demoMedia, links
   }
 
   if (modalDownload) {
-    modalDownload.hidden = !hasDownload;
-    modalDownload.textContent = t('portfolioDownloadButton', 'Download PDF');
-    if (hasDownload) {
+    modalDownload.hidden = !hasCourseLink && !hasDownload;
+    modalDownload.removeAttribute('href');
+    modalDownload.removeAttribute('download');
+    modalDownload.removeAttribute('target');
+    modalDownload.removeAttribute('rel');
+    if (hasCourseLink) {
+      modalDownload.textContent = t('portfolioCourseButton', 'Kurs auf LinkedIn Learning');
+      modalDownload.href = courseUrl;
+      modalDownload.target = '_blank';
+      modalDownload.rel = 'noopener noreferrer';
+    } else if (hasDownload) {
+      modalDownload.textContent = t('portfolioDownloadButton', 'Download PDF');
       modalDownload.href = file;
       const filename = file.split('/').pop() || 'zertifikat.pdf';
       modalDownload.setAttribute('download', filename);
-    } else {
-      modalDownload.removeAttribute('href');
-      modalDownload.removeAttribute('download');
     }
   }
 };
@@ -2939,7 +2949,7 @@ let optionsTitleBuffer = '';
 const openDetailModal = (title, description, metaList, options = {}) => {
   optionsTitleBuffer = title || '';
   modalTitle.textContent = title || t('modal.title', 'Detailansicht');
-  setModalDescription(description);
+  setModalDescription(options.itemType === 'projects' ? '' : description);
   setModalProjectEvidence(options.itemType === 'projects' ? options.evidence || null : null);
   modalMeta.innerHTML = '';
   configureModalFile(options);
@@ -2950,7 +2960,7 @@ const openDetailModal = (title, description, metaList, options = {}) => {
     : options.itemType === 'certificates'
     ? (metaList || []).filter((metaItem) => !redundantCertificateMeta.test(metaItem))
     : (metaList || []);
-  modalMeta.hidden = options.itemType === 'projects';
+  modalMeta.hidden = !visibleMeta.length;
   visibleMeta.forEach((metaItem) => {
     const li = document.createElement('li');
     li.className = 'modal-meta-item';
@@ -2975,6 +2985,7 @@ const openDetailModal = (title, description, metaList, options = {}) => {
     document.body.classList.add('modal-open');
     document.body.style.top = `-${modalScrollY}px`;
     modal.showModal();
+    if (modalBody) modalBody.scrollTop = 0;
   }
 };
 
@@ -3008,6 +3019,7 @@ document.addEventListener('click', (event) => {
     tryParseMeta(trigger.dataset.meta),
     {
       file: trigger.dataset.file || '',
+      courseUrl: trigger.dataset.courseUrl || '',
       previewLabel: trigger.dataset.previewLabel || '',
       previewImage: trigger.dataset.previewImage || '',
       demoMedia: tryParseObject(trigger.dataset.demoMedia),
@@ -3044,7 +3056,7 @@ if (modal) {
   modal.addEventListener('close', () => {
     document.body.classList.remove('modal-open');
     document.body.style.removeProperty('top');
-    window.scrollTo(0, modalScrollY);
+    window.scrollTo({ top: modalScrollY, behavior: 'instant' });
     document.querySelectorAll('[data-clickable-card="true"], .item-card.is-selected').forEach((card) => {
       card.classList.remove('is-selected', 'is-modal-return-focus');
     });
@@ -3118,11 +3130,20 @@ const loadLanguage = async (languageCode) => {
   activeDictionary = dictionary;
   currentLanguageCode = languageCode;
   const isCyrillic = languageCode === 'sr-cyrl';
-  const visibleName = isCyrillic ? 'Александар Николић' : 'Aleksandar Nikolić';
+  const firstName = isCyrillic ? 'Александар' : 'Aleksandar';
+  const lastName = isCyrillic ? 'Николић' : 'Nikolić';
+  const visibleName = `${firstName} ${lastName}`;
   const brandName = document.querySelector('.brand-latin');
   if (brandName) {
-    brandName.innerHTML = 'Aleksandar <em>Nikolić</em>';
+    brandName.innerHTML = `${firstName} <em>${lastName}</em>`;
   }
+  const alternateBrand = document.querySelector('.brand-cyrillic');
+  if (alternateBrand) alternateBrand.textContent = isCyrillic ? 'Aleksandar Nikolić' : 'Александар Николић';
+  const heroFirstName = document.getElementById('hero-first-name');
+  const heroLastName = document.getElementById('hero-last-name');
+  if (heroFirstName) heroFirstName.textContent = firstName;
+  if (heroLastName) heroLastName.textContent = `${lastName}.`;
+  document.title = `${visibleName} (AleksZyro) | IMS-Portfolio`;
   if (footerName) footerName.textContent = visibleName;
   applyStaticTranslations();
   refreshDynamicTexts();
@@ -3140,13 +3161,8 @@ const alignInitialHash = () => {
   const cleanId = target.replace(/^#/, '').split(/[?&]/)[0];
   if (!cleanId || !document.getElementById(cleanId)) return;
 
-  const align = () => {
-    scrollToSection(`#${cleanId}`, 'auto');
-    setActiveNav(cleanId);
-  };
-
-  window.setTimeout(align, 80);
-  window.setTimeout(align, 420);
+  scrollToSection(`#${cleanId}`, 'instant');
+  setActiveNav(cleanId);
 };
 
 languageButtons.forEach((button) => {

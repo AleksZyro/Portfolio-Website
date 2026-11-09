@@ -1,5 +1,6 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
+import { calculateContributionStreaks } from './contribution-streaks.mjs';
 
 const user = process.env.GITHUB_USER || 'AleksZyro';
 const output = process.env.OUTPUT_PATH || 'assets/contribution-graphic.svg';
@@ -63,34 +64,14 @@ const weeks = calendar.weeks.slice(-53);
 const days = weeks.flatMap((week) => week.contributionDays);
 const maxCount = Math.max(1, ...days.map((day) => day.contributionCount));
 
-const contributionByDate = new Map(days.map((day) => [day.date, day.contributionCount]));
-const isoDate = (date) => date.toISOString().slice(0, 10);
 const localDateFormatter = new Intl.DateTimeFormat('en-CA', {
   timeZone: 'Europe/Zurich',
   year: 'numeric',
   month: '2-digit',
   day: '2-digit'
 });
-const swissDate = (date) => localDateFormatter.format(date);
-const shiftDate = (date, amount) => {
-  const shifted = new Date(date);
-  shifted.setUTCDate(shifted.getUTCDate() + amount);
-  return shifted;
-};
-
-const today = swissDate(new Date());
-const yesterdayDate = shiftDate(new Date(`${today}T00:00:00Z`), -1);
-let streakCursor = yesterdayDate;
-let completedStreak = 0;
-while ((contributionByDate.get(isoDate(streakCursor)) || 0) > 0) {
-  completedStreak += 1;
-  streakCursor = shiftDate(streakCursor, -1);
-}
-
-// The daily run happens early in the morning. If yesterday was active, show
-// the expected value for today so a continuous streak stays current all day.
-const currentDayActive = (contributionByDate.get(today) || 0) > 0;
-const currentStreak = completedStreak > 0 ? completedStreak + 1 : (currentDayActive ? 1 : 0);
+const today = localDateFormatter.format(new Date());
+const { current: currentStreak, longestPast } = calculateContributionStreaks(days, today);
 
 const width = 960;
 const height = 224;
@@ -166,21 +147,20 @@ await mkdir(path.dirname(output), { recursive: true });
 await writeFile(output, svg, 'utf8');
 const indexHtml = await readFile(indexPath, 'utf8');
 const streakPattern = /(<strong id="github-streak-value">)\d+(<\/strong>)/;
+const longestStreakPattern = /(<strong id="github-longest-streak-value">)\d+(<\/strong>)/;
 const contributionImagePattern = /(<img src="assets\/contribution-graphic\.svg)(?:\?v=[^"]*)?("[^>]*>)/;
 const updatedIndexHtml = indexHtml
-  .replace(
-  streakPattern,
-  `$1${currentStreak}$2`
-  )
+  .replace(streakPattern, `$1${currentStreak}$2`)
+  .replace(longestStreakPattern, `$1${longestPast}$2`)
   .replace(
     contributionImagePattern,
     `$1?v=${today}$2`
   );
-if (!streakPattern.test(indexHtml)) {
+if (!streakPattern.test(indexHtml) || !longestStreakPattern.test(indexHtml)) {
   throw new Error(`Could not update GitHub streak in ${indexPath}.`);
 }
 if (!contributionImagePattern.test(indexHtml)) {
   throw new Error(`Could not update contribution image cache key in ${indexPath}.`);
 }
 await writeFile(indexPath, updatedIndexHtml, 'utf8');
-console.log(`Updated GitHub streak to ${currentStreak} days.`);
+console.log(`Updated GitHub streaks: ${currentStreak} active, ${longestPast} longest past.`);

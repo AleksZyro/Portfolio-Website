@@ -37,6 +37,12 @@
   font-size: 14px;
   min-height: 44px;
 }
+.identity-preview .project-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 14px;
+}
 .identity-preview .current-work-card h3 {
   font-size: 17px;
 }
@@ -134,11 +140,83 @@
   min-height: 52px;
 }
 .identity-preview .open-source-more-card .open-source-more-link:last-child {
-  border-bottom: 0;
+  border-bottom: 1px solid var(--line);
 }
 .identity-preview .github-stat span,
 .identity-preview .open-source-number {
   font-size: 13px;
+}
+.identity-preview .github-streak-stat {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.github-streak-stat > div > span {
+  display: block;
+  margin-top: 7px;
+}
+.github-streak-record {
+  text-align: right;
+}
+.github-streak-record-value {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  color: var(--muted);
+}
+.modal-copy {
+  display: contents;
+}
+.modal-description[hidden],
+#modal-meta[hidden] {
+  display: none;
+}
+.modal-card.is-document .modal-body {
+  grid-template-areas: none;
+}
+.modal-card.is-document .modal-preview,
+.modal-card.is-document .modal-description,
+.modal-card.is-document #modal-meta {
+  grid-area: auto;
+}
+.modal-card.is-document .modal-copy {
+  display: grid;
+  gap: 14px;
+  min-width: 0;
+}
+.modal-copy .modal-download {
+  justify-self: start;
+  max-width: 100%;
+  white-space: normal;
+}
+.modal-card.is-document .modal-description {
+  padding: 0;
+  border-bottom: 0;
+}
+.modal-card.is-document #modal-meta {
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+}
+.modal-card.is-document .modal-meta-item {
+  border-top: 0;
+}
+@media (max-width: 720px) {
+  .modal-card.is-document .modal-preview {
+    height: clamp(190px, 64vw, 320px);
+    min-height: 0;
+  }
+}
+.identity-preview .github-stats {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) minmax(0, 2fr);
+}
+@media (max-width: 700px) {
+  .identity-preview .github-stats {
+    grid-template-columns: 1fr;
+  }
+  .identity-preview .github-stat:not(:last-child) {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
 }
 .identity-preview #contact-title {
   background: none;

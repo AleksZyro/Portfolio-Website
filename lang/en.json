@@ -216,6 +216,7 @@
     "openImage": "Open preview in a new tab"
   },
   "portfolioDownloadButton": "Download PDF",
+  "portfolioCourseButton": "Course on LinkedIn Learning",
   "footer": {
     "rights": "All rights reserved.",
     "legalLink": "Imprint and privacy",
@@ -238,6 +239,7 @@
     "publicRepos": "public repositories",
     "ossMerges": "open-source merges",
     "currentStreak": "days current streak",
+    "longestStreak": "days longest ended streak (12 months)",
     "mergedLabel": "Merged",
     "completedLabel": "Completed"
   },
@@ -355,7 +357,7 @@
       "ethicalHacker": {
         "title": "Ethical Hacker",
         "cardDescription": "Certificate covering ethical hacking fundamentals and security-aware testing.",
-        "detailDescription": "You can view or download this certificate directly in the portfolio.",
+        "detailDescription": "I completed the Cisco Networking Academy Ethical Hacker course. It covers ethical hacking and security-aware testing.",
         "meta": [
           "Completed: 21 April 2026",
           "Format: PDF"
@@ -365,7 +367,7 @@
       "introCybersecurity": {
         "title": "Introduction to Cybersecurity",
         "cardDescription": "Certificate covering cybersecurity basics, threats, and protective measures.",
-        "detailDescription": "You can view or download this certificate directly in the portfolio.",
+        "detailDescription": "I completed the Cisco Networking Academy introductory course on common cyber threats and basic protection measures.",
         "meta": [
           "Completed: 12 December 2025",
           "Format: PDF"
@@ -375,7 +377,7 @@
       "bbbHackathon": {
         "title": "BBB Hackathon",
         "cardDescription": "Certificate of participation for Baden hackt on 27 and 28 March 2026.",
-        "detailDescription": "You can view or download this certificate directly in the portfolio.",
+        "detailDescription": "The organising committee confirms my participation in Baden hackt, where I worked on a hackathon challenge over two days.",
         "meta": [
           "Date: 27 and 28 March 2026",
           "Duration: 2 days",
@@ -587,6 +589,6 @@
   "certificates": {
     "kicker": "Certificates",
     "title": "Learning beyond the classroom",
-    "subline": "Selected certificates with preview, details and PDF download."
+    "subline": "Selected certificates with previews and details."
   }
 }

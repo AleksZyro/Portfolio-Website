@@ -172,7 +172,7 @@ def test_layout_and_interaction_contracts_are_present() -> None:
     app = (ROOT / "app.js").read_text(encoding="utf-8")
     assert "window.history.replaceState" in app
     assert "modalScrollY" in app
-    assert "window.scrollTo(0, modalScrollY)" in app
+    assert "window.scrollTo({ top: modalScrollY, behavior: 'instant' })" in app
 
     index = (ROOT / "index.html").read_text(encoding="utf-8")
     for section_id in ("career", "portfolio", "certificates", "github-activity", "tech-stack", "contact"):

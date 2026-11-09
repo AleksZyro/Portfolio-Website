@@ -80,7 +80,7 @@ body.identity-preview {
   font-weight: 500;
   margin: 20px 0;
 }
-.identity-preview h1 > span {
+.identity-preview #hero-last-name {
   color: #596874;
 }
 .identity-preview .hero-copy p {

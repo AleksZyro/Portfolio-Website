@@ -216,6 +216,7 @@
     "openImage": "Vorschau in neuem Tab öffnen"
   },
   "portfolioDownloadButton": "Download PDF",
+  "portfolioCourseButton": "Kurs auf LinkedIn Learning",
   "footer": {
     "rights": "Alle Rechte vorbehalten.",
     "legalLink": "Impressum und Datenschutzerklärung",
@@ -238,6 +239,7 @@
     "publicRepos": "öffentliche Repositories",
     "ossMerges": "Open-Source-Merges",
     "currentStreak": "Tage aktuelle Serie",
+    "longestStreak": "Tage längste beendete Serie (12 Monate)",
     "mergedLabel": "Gemergt",
     "completedLabel": "Abgeschlossen"
   },
@@ -355,7 +357,7 @@
       "ethicalHacker": {
         "title": "Ethical Hacker",
         "cardDescription": "Zertifikat zu ethischen Hacking-Grundlagen und sicherheitsbewusstem Testen.",
-        "detailDescription": "Dieses Zertifikat kannst du direkt im Portfolio ansehen oder herunterladen.",
+        "detailDescription": "Ich habe den Kurs «Ethical Hacker» der Cisco Networking Academy abgeschlossen. Er behandelt ethisches Hacking und sicherheitsbewusstes Testen.",
         "meta": [
           "Abgeschlossen am: 21.04.2026",
           "Format: PDF"
@@ -365,7 +367,7 @@
       "introCybersecurity": {
         "title": "Introduction to Cybersecurity",
         "cardDescription": "Zertifikat mit Grundlagen zu Cybersecurity, Bedrohungen und Schutzmassnahmen.",
-        "detailDescription": "Dieses Zertifikat kannst du direkt im Portfolio ansehen oder herunterladen.",
+        "detailDescription": "Ich habe den Einführungskurs der Cisco Networking Academy abgeschlossen. Er behandelt typische Cyberbedrohungen und grundlegende Schutzmassnahmen.",
         "meta": [
           "Abgeschlossen am: 12.12.2025",
           "Format: PDF"
@@ -375,7 +377,7 @@
       "bbbHackathon": {
         "title": "BBB Hackathon",
         "cardDescription": "Teilnahmezertifikat für Baden hackt vom 27. und 28. März 2026.",
-        "detailDescription": "Dieses Zertifikat kannst du direkt im Portfolio ansehen oder herunterladen.",
+        "detailDescription": "Das Organisationskomitee bestätigt meine Teilnahme an Baden hackt. Während der zwei Tage habe ich eine Hackathon-Challenge bearbeitet.",
         "meta": [
           "Datum: 27. und 28.03.2026",
           "Dauer: 2 Tage",
@@ -587,6 +589,6 @@
   "certificates": {
     "kicker": "Zertifikate",
     "title": "Weiterbildungen in meiner Freizeit",
-    "subline": "Ausgewählte Zertifikate mit Vorschau, Details und PDF-Download."
+    "subline": "Ausgewählte Zertifikate mit Vorschau und Details."
   }
 }

@@ -17,12 +17,12 @@
   <meta name="twitter:description" content="Portfolio mit Python-, Web- und Open-Source-Projekten von Aleksandar Nikolić.">
   <link rel="me" href="https://github.com/AleksZyro">
   <link rel="me" href="https://www.linkedin.com/in/aleksandar-nikolic-05b557420/">
-  <link rel="icon" href="data:,">
+  <link rel="icon" href="assets/status-dot.svg" type="image/svg+xml">
   <title>Aleksandar Nikolić (AleksZyro) | IMS-Portfolio</title>
   <link rel="stylesheet" href="style.css?v=20260927-mobile-fixes-1">
-  <link rel="stylesheet" href="concept/identity.css">
-  <link rel="stylesheet" href="concept/experience.css">
-  <link rel="stylesheet" href="concept/refinements.css">
+  <link rel="stylesheet" href="concept/identity.css?v=20261109-polish">
+  <link rel="stylesheet" href="concept/experience.css?v=20261109-polish">
+  <link rel="stylesheet" href="concept/refinements.css?v=20261109-polish">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -126,7 +126,7 @@
       <div class="container hero-grid">
         <div class="hero-copy reveal">
           <p class="kicker" data-i18n="hero.kicker">Entwicklerprofil</p>
-          <h1 id="hero-title">Aleksandar<br><span>Nikolić.</span></h1>
+          <h1 id="hero-title"><span id="hero-first-name">Aleksandar</span><br><span id="hero-last-name">Nikolić.</span></h1>
           <p class="identity-role" data-i18n="hero.title">Praxisorientierte Web- und Python-Projekte</p>
           <p data-i18n="hero.description">
             Ich besuche die IMS mit Schwerpunkt Applikationsentwicklung und arbeite an Python-Tools,
@@ -301,7 +301,7 @@
         <div class="section-head reveal">
           <p class="kicker certificates-heading" data-i18n="certificates.kicker">Zertifikate</p>
           <h2 id="certificates-title" data-i18n="certificates.title">Weiterbildungen in meiner Freizeit</h2>
-          <p class="section-subline" data-i18n="certificates.subline">Ausgewählte Zertifikate mit Vorschau, Details und PDF-Download.</p>
+          <p class="section-subline" data-i18n="certificates.subline">Ausgewählte Zertifikate mit Vorschau und Details.</p>
         </div>
         <div class="cards-grid compact-certificates reveal" id="certificates-grid" aria-label="Zertifikatsliste" data-i18n-aria="a11y.certificateList"></div>
       </div>
@@ -329,13 +329,25 @@
               <strong id="github-oss-merges-value">10</strong>
               <span data-i18n="github.ossMerges">Open-Source-Merges</span>
             </a>
-            <a class="github-stat" href="https://github.com/AleksZyro" target="_blank" rel="noopener noreferrer">
-              <strong id="github-streak-value">5</strong>
-              <span data-i18n="github.currentStreak">Tage aktuelle Serie</span>
+            <a class="github-stat github-streak-stat" href="https://github.com/AleksZyro" target="_blank" rel="noopener noreferrer">
+              <div>
+                <strong id="github-streak-value">5</strong>
+                <span data-i18n="github.currentStreak">Tage aktuelle Serie</span>
+              </div>
+              <div class="github-streak-record">
+                <div class="github-streak-record-value">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 22c-4 0-7-3-7-7 0-3 2-5 4-7 0 2 1 3 2 3 0-4 2-7 4-9 0 4 1 6 3 8 1 1 2 3 2 5 0 4-4 7-8 7Z"/>
+                    <path d="M3 3l18 18" />
+                  </svg>
+                  <strong id="github-longest-streak-value">95</strong>
+                </div>
+                <span data-i18n="github.longestStreak">Tage längste beendete Serie (12 Monate)</span>
+              </div>
             </a>
           </div>
           <div class="activity-strip contribution-strip" aria-label="GitHub Contribution Grafik" data-i18n-aria="a11y.contributionGraph">
-            <img src="assets/contribution-graphic.svg?v=2026-11-09" alt="GitHub Contribution Uebersicht von Aleksandar Nikolić" loading="lazy">
+            <img src="assets/contribution-graphic.svg?v=2026-11-09" width="1200" height="280" alt="GitHub Contribution Uebersicht von Aleksandar Nikolić" loading="lazy">
           </div>
         </article>
 
@@ -403,8 +415,7 @@
       <div class="modal-head">
         <h3 id="modal-title" data-i18n="modal.title">Detailansicht</h3>
         <div class="modal-actions">
-          <a class="modal-download" id="modal-download" href="#" download hidden data-i18n="portfolioDownloadButton">Download PDF</a>
-          <button type="button" class="modal-close" id="modal-close" aria-label="Detailansicht schliessen" data-i18n-aria="a11y.closeDetails" title="Schliessen">×</button>
+          <button type="button" class="modal-close" id="modal-close" aria-label="Detailansicht schliessen" data-i18n-aria="a11y.closeDetails" title="Schliessen" autofocus>×</button>
         </div>
       </div>
       <div class="modal-body">
@@ -415,15 +426,18 @@
           <span class="modal-preview-title" id="modal-preview-title"></span>
           <span class="modal-preview-subtitle" id="modal-preview-subtitle"></span>
         </div>
-        <div id="modal-description" class="modal-description"></div>
-        <section id="modal-project-evidence" class="modal-project-evidence" hidden></section>
-        <div id="modal-project-links" class="modal-project-links" hidden></div>
-        <ul id="modal-meta"></ul>
+        <div class="modal-copy">
+          <div id="modal-description" class="modal-description"></div>
+          <a class="modal-download" id="modal-download" hidden data-i18n="portfolioDownloadButton">Download PDF</a>
+          <section id="modal-project-evidence" class="modal-project-evidence" hidden></section>
+          <div id="modal-project-links" class="modal-project-links" hidden></div>
+          <ul id="modal-meta"></ul>
+        </div>
       </div>
     </article>
   </dialog>
 
-  <script src="app.js?v=20261109-redesign" defer></script>
+  <script src="app.js?v=20261109-polish" defer></script>
   <script src="concept/experience.js" type="module"></script>
 </body>
 </html>

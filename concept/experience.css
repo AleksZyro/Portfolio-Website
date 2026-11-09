@@ -116,7 +116,7 @@ body.identity-preview {
   font-weight: 500;
   margin: 30px 0;
 }
-.identity-preview h1 > span {
+.identity-preview #hero-last-name {
   color: #b5c7ea;
   background: linear-gradient(110deg, #c0c8ef, #9dd5cb);
   background-clip: text;

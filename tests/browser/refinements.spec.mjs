@@ -97,7 +97,7 @@ test("certificate separators exist between rows, not below the final row", async
     expect(card.border).toBe(Math.abs(card.top - lastTop) < 3 ? 0 : 1);
   }
 });
-test("contribution SVG is intact without the blue wrapper and OSS has no terminal line", async ({
+test("contribution SVG has no blue wrapper and OSS ends with a separator", async ({
   page,
 }) => {
   const graph = page.locator(".contribution-strip");
@@ -113,7 +113,7 @@ test("contribution SVG is intact without the blue wrapper and OSS has no termina
   await expect(last).toContainText("2616");
   expect(
     await last.evaluate((e) => getComputedStyle(e).borderBottomWidth),
-  ).toBe("0px");
+  ).toBe("1px");
   expect(
     await last.evaluate((e) => parseFloat(getComputedStyle(e).fontSize)),
   ).toBeGreaterThanOrEqual(16);

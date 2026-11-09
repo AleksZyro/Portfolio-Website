@@ -42,6 +42,8 @@ jobs:
         run: npm ci
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
+      - name: Check GitHub streak calculation
+        run: node --test tests/contribution-streaks.test.mjs
       - name: Check portfolio in real browser viewports
         run: npm run test:browser
       - name: Keep screenshots and failure traces
