@@ -1,9 +1,21 @@
-{
+portfolioLanguages.register("de", {
   "skip": {
     "content": "Zum Inhalt springen"
   },
   "a11y": {
-    "mainNav": "Hauptnavigation", "home": "Startseite", "openMenu": "Menü öffnen", "language": "Sprache wechseln", "chooseLanguage": "Sprache auswählen", "currentWork": "Aktuelle Projekte", "projectSpotlight": "Projekt im Fokus", "projectList": "Projektliste", "certificateList": "Zertifikatsliste", "githubActivity": "GitHub-Aktivität", "contributionGraph": "GitHub-Contribution-Grafik", "openSourceList": "Open-Source-Beiträge", "closeDetails": "Detailansicht schliessen"
+    "mainNav": "Hauptnavigation",
+    "home": "Startseite",
+    "openMenu": "Menü öffnen",
+    "language": "Sprache wechseln",
+    "chooseLanguage": "Sprache auswählen",
+    "currentWork": "Aktuelle Projekte",
+    "projectSpotlight": "Projekt im Fokus",
+    "projectList": "Projektliste",
+    "certificateList": "Zertifikatsliste",
+    "githubActivity": "GitHub-Aktivität",
+    "contributionGraph": "GitHub-Contribution-Grafik",
+    "openSourceList": "Open-Source-Beiträge",
+    "closeDetails": "Detailansicht schliessen"
   },
   "nav": {
     "home": "Über mich",
@@ -93,11 +105,25 @@
     "ownLabel": "Eigenes Projekt",
     "status": "In Arbeit",
     "projects": {
-      "aargoclean": { "title": "Website für AARGO Clean GmbH", "description": "Aktuell arbeite ich an der Website für die Firma AARGO Clean GmbH." },
-      "mmTransport": { "title": "Website für MM Transport & Assistance", "description": "Aktuell arbeite ich an der Website für die Firma MM Transport & Assistance." },
-      "codexTwin": { "title": "CodexTwin", "description": "Ich arbeite an CodexTwin und entwickle die Idee sowie die Umsetzung weiter." },
-      "umr": { "title": "UMR", "description": "Ich bearbeite UMR weiter und ergänze beziehungsweise verbessere laufend Funktionen." }
-    }
+      "aargoclean": {
+        "title": "Website für AARGO Clean GmbH",
+        "description": "Aktuell arbeite ich an der Website für die Firma AARGO Clean GmbH."
+      },
+      "mmTransport": {
+        "title": "Website für MM Transport & Assistance",
+        "description": "Aktuell arbeite ich an der Website für die Firma MM Transport & Assistance."
+      },
+      "codexTwin": {
+        "title": "CodexTwin",
+        "description": "Ich arbeite an CodexTwin und entwickle die Idee sowie die Umsetzung weiter."
+      },
+      "umr": {
+        "title": "UMR",
+        "description": "Ich bearbeite UMR weiter und ergänze beziehungsweise verbessere laufend Funktionen."
+      }
+    },
+    "maintenance": "Kontinuierlich in Arbeit",
+    "privateRepo": "Privates Repository"
   },
   "about": {
     "kicker": "Über mich",
@@ -192,7 +218,8 @@
     "detailEmptyTitle": "Projekt auswählen",
     "detailEmptyText": "Klicke auf eine Projektkarte, um Status, Stack, Rolle und Lerneffekt anzuzeigen.",
     "moreProjectsTitle": "Weitere Projekte",
-    "moreProjectsSubline": "Weitere Projekte, die ich fertiggestellt habe oder aktuell noch entwickle."
+    "moreProjectsSubline": "Weitere Projekte, die ich fertiggestellt habe oder aktuell noch entwickle.",
+    "projectInformation": "Projektinformationen"
   },
   "filters": {
     "all": "Alle",
@@ -277,12 +304,37 @@
           "GitHub Pages"
         ],
         "role": "Eigenes Lern- und Portfolio-Projekt",
-        "learning": "Algorithmen getrennt von React-Komponenten halten, Tests für Randfälle schreiben und UI-State nachvollziehbar machen."
+        "learning": "Algorithmen getrennt von React-Komponenten halten, Tests für Randfälle schreiben und UI-State nachvollziehbar machen.",
+        "evidence": {
+          "result": "Ergebnis: Öffentliche GitHub-Pages-Demo mit Vergleich von vier Wegfindungsalgorithmen sowie getrennten Kosten- und Zeitanzeigen.",
+          "details": [
+            [
+              "Problem",
+              "Macht Unterschiede zwischen Wegfindungsalgorithmen auf gewichteten Feldern nachvollziehbar."
+            ],
+            [
+              "Mein Beitrag",
+              "Eigenes Lern- und Portfolio-Projekt mit Raster, Visualisierung, Vergleich und UI-State."
+            ],
+            [
+              "Technik & Entscheidung",
+              "React, Vite, JavaScript und CSS; Wasser kostet 5, Schlamm 10, A* nutzt eine Manhattan-Heuristik."
+            ],
+            [
+              "Qualität",
+              "Vitest für Algorithmen, Raster und Undo/Redo; GitHub Actions führt npm ci, Tests und Build aus."
+            ],
+            [
+              "Resultat",
+              "BFS, DFS, Dijkstra und A* lassen sich auf demselben Raster ausführen und vergleichen."
+            ]
+          ]
+        }
       },
       "sortlab": {
         "title": "SortLab",
         "cardDescription": "Sortieralgorithmus-Visualizer mit Balkenansicht, Steuerung, Statistik und Erklärbereich.",
-        "detailDescription": "SortLab\n\nSortLab ist ein interaktiver Visualizer für Sortieralgorithmen. Nutzerinnen und Nutzer sehen Schritt für Schritt, wie ein Array sortiert wird, können die Geschwindigkeit live anpassen und verschiedene Verfahren vergleichen.\n\nEnthalten sind Bubble Sort, Selection Sort, Insertion Sort, Quick Sort und Heap Sort. Das Dashboard zeigt Vergleiche, Swaps, Schritte und Laufzeit in Millisekunden.\n\nDas Projekt dient als Lernprojekt für Algorithmen, React-State und Visualisierung.",
+        "detailDescription": "SortLab\n\nSortLab ist ein interaktiver Visualizer für Sortieralgorithmen. Nutzerinnen und Nutzer sehen Schritt für Schritt, wie ein Array sortiert wird, können die Geschwindigkeit live anpassen und verschiedene Verfahren vergleichen.\n\nBubble Sort, Selection Sort, Insertion Sort, Merge Sort, Quick Sort und Heap Sort. Die Übersicht zeigt Vergleiche, Array-Schreibzugriffe, Vertauschungen, Berechnungszeit sowie Zeit- und Speicherkomplexität.\n\nDas Projekt dient als Lernprojekt für Algorithmen, React-State und Visualisierung.",
         "meta": [
           "Stack: React, Vite, JavaScript, CSS",
           "Fokus: Sortieralgorithmen und Visualisierung",
@@ -294,7 +346,32 @@
           "Algorithmen"
         ],
         "role": "Eigenes Lernprojekt",
-        "learning": "Animation, Laufzeitsteuerung und Statistik so verbinden, dass der Algorithmus sichtbar und bedienbar bleibt."
+        "learning": "Animation, Laufzeitsteuerung und Statistik so verbinden, dass der Algorithmus sichtbar und bedienbar bleibt.",
+        "evidence": {
+          "result": "Die GitHub-Pages-Demo visualisiert sechs Sortierverfahren und kann zwei davon mit identischen Eingaben direkt vergleichen.",
+          "details": [
+            [
+              "Problem",
+              "Macht den Ablauf und die Unterschiede von Sortieralgorithmen Schritt für Schritt sichtbar."
+            ],
+            [
+              "Mein Beitrag",
+              "Eigenes Lernprojekt mit Bedienung, Animation, Vergleichsmodus und Statistik."
+            ],
+            [
+              "Technik & Entscheidung",
+              "React, Vite, JavaScript und CSS. Algorithmusereignisse und Kennzahlen werden getrennt von der Animation erfasst."
+            ],
+            [
+              "Qualität",
+              "Vitest prüft Algorithmen, Randfälle, Zählungen und Wiedergabesteuerung."
+            ],
+            [
+              "Resultat",
+              "Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, Quick Sort und Heap Sort. Die Übersicht zeigt Vergleiche, Array-Schreibzugriffe, Vertauschungen, Berechnungszeit sowie Zeit- und Speicherkomplexität."
+            ]
+          ]
+        }
       },
       "vsw": {
         "title": "VSW - Vulnerability Scanner Web App",
@@ -312,7 +389,32 @@
           "React"
         ],
         "role": "Gemeinsames Projekt mit Botond",
-        "learning": "Defensive Checks klar begrenzen, Backend und Frontend sauber trennen und Ergebnisse verständlich darstellen."
+        "learning": "Defensive Checks klar begrenzen, Backend und Frontend sauber trennen und Ergebnisse verständlich darstellen.",
+        "evidence": {
+          "result": "Ergebnis: Lokale Fullstack-Anwendung für defensive Checks mit verständlichen Findings, Evidenz, Empfehlungen und Exporten.",
+          "details": [
+            [
+              "Problem",
+              "Ordnet fehlende Security Header, TLS-Probleme und sichere Port-Checks für autorisierte Ziele verständlich ein."
+            ],
+            [
+              "Mein Beitrag",
+              "Gemeinsames Projekt mit Botond; eigene Commits belegen Scanner-Härtung, Windows-Start und Release-Dokumentation."
+            ],
+            [
+              "Technik & Entscheidung",
+              "FastAPI, React, TypeScript, SQLite/PostgreSQL und Docker; bewusst nur passive oder risikoarme Checks."
+            ],
+            [
+              "Qualität",
+              "Pytest-, Vitest- und Testing-Library-Tests für Backend, Frontend und Extension; zusätzlich Rate-Limit und Target-Validierung."
+            ],
+            [
+              "Resultat",
+              "Reports speichern, vergleichen sowie als JSON oder CSV exportieren; keine Exploits, kein Brute Force und keine aggressiven Scans."
+            ]
+          ]
+        }
       },
       "foliolint": {
         "title": "FolioLint",
@@ -332,8 +434,8 @@
         "role": "Eigenes Tooling-Projekt",
         "learning": "Regelbasierte Checks so strukturieren, dass sie nachvollziehbar bleiben und echte Verbesserungen an Projekt-Repositories anstossen."
       },
-      "besp2074": {
-        "title": "BESP2074 – Internet ein und aus",
+      "internetEinAus": {
+        "title": "Internet ein und aus",
         "cardDescription": "Hackathon-Prototyp für eine Weboberfläche, die Internetzugang pro Schulzimmer oder Subnetz modelliert.",
         "detailDescription": "Internet ein und aus\n\nDieses Projekt entstand im Umfeld des Hackathons \"Baden hackt\". Der Prototyp modelliert, wie Internetzugänge für Schulzimmer oder Subnetze übersichtlich ein- und ausgeschaltet werden könnten.\n\nDer Schwerpunkt liegt auf einer verständlichen Bedienoberfläche und einer klaren Darstellung von Zuständen. Das Projekt ist ein Hackathon-Prototyp und wird als gemeinsames Arbeiten dokumentiert.",
         "meta": [
@@ -359,7 +461,7 @@
         "cardDescription": "Zertifikat zu ethischen Hacking-Grundlagen und sicherheitsbewusstem Testen.",
         "detailDescription": "Ich habe den Kurs «Ethical Hacker» der Cisco Networking Academy abgeschlossen. Er behandelt ethisches Hacking und sicherheitsbewusstes Testen.",
         "meta": [
-          "Abgeschlossen am: 21.04.2026",
+          "Datum: 21.04.2026",
           "Format: PDF"
         ],
         "previewLabel": "Zertifikat"
@@ -369,7 +471,7 @@
         "cardDescription": "Zertifikat mit Grundlagen zu Cybersecurity, Bedrohungen und Schutzmassnahmen.",
         "detailDescription": "Ich habe den Einführungskurs der Cisco Networking Academy abgeschlossen. Er behandelt typische Cyberbedrohungen und grundlegende Schutzmassnahmen.",
         "meta": [
-          "Abgeschlossen am: 12.12.2025",
+          "Datum: 12.12.2025",
           "Format: PDF"
         ],
         "previewLabel": "Zertifikat"
@@ -382,6 +484,41 @@
           "Datum: 27. und 28.03.2026",
           "Dauer: 2 Tage",
           "Format: PDF"
+        ],
+        "previewLabel": "Zertifikat"
+      },
+      "absofort-ki-ollama": {
+        "title": "Lokale KI nutzen: private KI-Assistenz mit Ollama & Open-Source-Modellen",
+        "cardDescription": "ab sofort-Zertifikat für einen Kurs zu lokaler KI, Ollama und Open-Source-Modellen.",
+        "detailDescription": "Dieses ab sofort-Zertifikat bestätigt den erfolgreichen Abschluss des Kurses „Lokale KI nutzen: private KI-Assistenz mit Ollama & Open-Source-Modellen“. Das Zertifikat wurde am 22.08.2026 ausgestellt, mit 87.5 Prozent und einem Umfang von 6 Stunden abgeschlossen.",
+        "meta": [
+          "Niveau: Foundation",
+          "Ergebnis: 87.5 %",
+          "Datum: 22.08.2026",
+          "Dauer: 6 Stunden",
+          "Format: PDF"
+        ],
+        "previewLabel": "Zertifikat"
+      },
+      "abacus-finanzbuchhaltung": {
+        "title": "ABACUS Finanzbuchhaltung",
+        "cardDescription": "Anwender-Zertifikat für ABACUS Finanzbuchhaltung mit Grundlagen zu Benutzeroberfläche, Stammdaten, Buchungen, Auswertungen und MWST-Abrechnung.",
+        "detailDescription": "Das ABACUS-Zertifikat bestätigt den erfolgreich abgeschlossenen Zertifikatskurs und die bestandene Abschlussprüfung im Bereich ABACUS Finanzbuchhaltung. Inhaltliche Schwerpunkte waren Benutzeroberfläche, Stammdaten, Buchungen anhand von Belegen, Buchungsarten, Auswertungen wie Journal, Kontoauszug, Bilanz und Erfolgsrechnung sowie MWST-Abrechnung.",
+        "meta": [
+          "Bereich: Finanzbuchhaltung",
+          "Nachweis: Zertifikat mit bestandener Abschlussprüfung",
+          "Format: PDF"
+        ],
+        "previewLabel": "Zertifikat"
+      },
+      "linkedin-generative-ki": {
+        "title": "Was ist generative KI?",
+        "cardDescription": "LinkedIn-Learning-Kurs zu generativen KI-Tools, künstlicher Intelligenz und grundlegender Einordnung generativer KI.",
+        "detailDescription": "Dieses LinkedIn-Learning-Zertifikat bestätigt den abgeschlossenen Kurs „Was ist generative KI?“. Der Kurs behandelt generative KI-Tools, künstliche Intelligenz und die grundlegende Einordnung generativer KI im Arbeits- und Lernkontext.",
+        "meta": [
+          "Bereich: Generative KI",
+          "Dauer: 42 Minuten",
+          "Datum: 20.08.2026"
         ],
         "previewLabel": "Zertifikat"
       }
@@ -440,9 +577,13 @@
     "isort2616": {
       "title": "LF-Ausgabe von stdin unter Windows bewahren",
       "summary": "Verhindert unerwünschte Zeilenumwandlungen bei stdin-Ausgaben unter Windows und ergänzt einen Regressionstest.",
-      "tags": ["Python", "Tests"]
+      "tags": [
+        "Python",
+        "Tests"
+      ]
     },
     "beets6839": {
+      "title": "Preserve null artpath in edit",
       "summary": "Sichert den Umgang mit leerem Artpath beim Bearbeiten, damit bestehende Daten nicht unbeabsichtigt verändert werden.",
       "tags": [
         "Python",
@@ -450,6 +591,7 @@
       ]
     },
     "beets6837": {
+      "title": "Improve subsonicupdate error for non-JSON responses",
       "summary": "Verbessert die Fehlermeldung für Subsonic-Updates, wenn ein Server keine JSON-Antwort liefert.",
       "tags": [
         "Python",
@@ -457,6 +599,7 @@
       ]
     },
     "sshfs73": {
+      "title": "Fix ls detail default",
       "summary": "Korrigiert den Standardwert für Detail-Listings, damit sshfs-Auflistungen konsistenter funktionieren.",
       "tags": [
         "Python",
@@ -472,11 +615,29 @@
       ]
     },
     "archy397": {
-      "title": "Verbessertes Navigationsverhalten",
-      "summary": "Verbessert das Navigationsverhalten in einem Open-Source-Projekt.",
+      "title": "Gemeinsame Test-Fixture extrahiert",
+      "summary": "Lagert das doppelte app/core.py-Testgerüst in eine gemeinsame Hilfsfunktion für zwei CLI-Tests aus.",
       "tags": [
-        "React",
-        "Navigation"
+        "CLI",
+        "Tests"
+      ]
+    },
+    "leetcodeRanking543": {
+      "title": "Ungültige Nutzer in Daten-Workflows behandeln",
+      "summary": "Gemergte Workflow-Korrektur: invalid-users.json wird in der Inaktivitätsanalyse korrekt verarbeitet und im Sync-Workflow ausgeschlossen.",
+      "tags": [
+        "GitHub Actions",
+        "Workflows",
+        "LeetCode"
+      ]
+    },
+    "leetcodeRanking542": {
+      "title": "GitHub-Actions-Workflows für invalid-users.json aktualisieren",
+      "summary": "Abgeschlossenes Issue zur korrekten Behandlung von invalid-users.json in den GitHub-Actions-Workflows.",
+      "tags": [
+        "GitHub Actions",
+        "Issue",
+        "LeetCode"
       ]
     }
   },
@@ -500,7 +661,7 @@
       },
       "lb259": {
         "title": "LB259",
-        "description": "Dataset-Projekt zur Smartphone-Nutzung, Produktivität und Wohlbefinden mit CSV-Daten und Notebook-Auswertung.",
+        "description": "Schulprojekt zur Vorhersage des Energieverbrauchs in der Stahlindustrie mit Python-Notebooks und linearer Regression.",
         "tags": [
           "Daten",
           "Notebook"
@@ -579,7 +740,13 @@
     },
     {
       "title": "Hosting und Plattformen",
-      "items": ["Netlify", "Vercel", "WordPress", "HostPoint", "Cloudflare"]
+      "items": [
+        "Netlify",
+        "Vercel",
+        "WordPress",
+        "HostPoint",
+        "Cloudflare"
+      ]
     }
   ],
   "linkLabels": {
@@ -590,5 +757,41 @@
     "kicker": "Zertifikate",
     "title": "Weiterbildungen in meiner Freizeit",
     "subline": "Ausgewählte Zertifikate mit Vorschau und Details."
+  },
+  "migration": {
+    "kicker": "Website-Umzug",
+    "title": "Diese Website ist umgezogen",
+    "description": "Meine aktuelle Website findest du neu unter aleksandar-nikolic.ch.",
+    "cta": "Zur neuen Website",
+    "dismiss": "Später ansehen"
+  },
+  "legalPage": {
+    "brand": "Aleksandar Nikolić",
+    "back": "Zurück zum Portfolio",
+    "kicker": "Rechtliches",
+    "title": "Impressum und Rechtliches",
+    "intro": "Eine gemeinsame, transparente Erklärung zu Portfolio, Hosting, Datenschutz und Cookies.",
+    "sections": [
+      {
+        "title": "Impressum und Kontakt",
+        "text": "Diese Website ist eine private Portfolio-Seite von Aleksandar Nikolić. Sie präsentiert Ausbildung, Projekte, Zertifikate und berufliche Interessen. Für Fragen zu Projekten oder einer Praktikumsstelle bin ich per E-Mail unter info@aleksandar-nikolic.ch erreichbar."
+      },
+      {
+        "title": "Hosting und eigene Domain",
+        "text": "Die Website wird als statische Seite über Cloudflare Pages veröffentlicht. Meine eigene Domain aleksandar-nikolic.ch ist mit diesem Hosting verbunden; die Auslieferung erfolgt verschlüsselt über HTTPS und ein CDN. Beim Aufruf können technisch notwendige Zugriffsdaten durch Cloudflare verarbeitet werden, damit die Seite sicher und zuverlässig ausgeliefert werden kann."
+      },
+      {
+        "title": "Technische Auslieferung",
+        "text": "Statische Dateien werden zwischengespeichert, damit die Website schnell lädt. HTML, JavaScript, CSS und die täglich aktualisierte GitHub-Contribution-Grafik werden regelmässig neu validiert, während unveränderte Assets länger aus dem Cache geladen werden dürfen. Sicherheits-Header schützen unter anderem vor unerwünschtem Einbetten und vor falsch interpretierten Dateitypen."
+      },
+      {
+        "title": "Datenschutz und lokale Einstellungen",
+        "text": "Diese Website verwendet keine Formulare, Analytics, Werbetracker oder externen Tracking-Skripte. Externe Links zu GitHub und anderen Diensten öffnen sich erst nach einem aktiven Klick. Es werden keine Tracking-Cookies eingesetzt; lediglich die gewählte Sprache kann lokal im Browser gespeichert werden. Die robots.txt beschreibt öffentliche Bereiche für Suchmaschinen, und die optionale llms.txt fasst öffentliche Inhalte für KI-Systeme zusammen. Beide Dateien sind keine Zugriffssperre."
+      },
+      {
+        "title": "Verantwortung und Datenschutzrechte",
+        "text": "Verantwortlich für diese Website und die beschriebenen Datenbearbeitungen ist Aleksandar Nikolić. Fragen zur Datenbearbeitung sowie Auskunfts-, Berichtigungs- oder Löschbegehren können per E-Mail an info@aleksandar-nikolic.ch gerichtet werden. Soweit technische Zugriffsdaten beim Hosting anfallen, richten sich deren Aufbewahrung nach den Einstellungen und Vorgaben des Hosting-Anbieters."
+      }
+    ]
   }
-}
+});

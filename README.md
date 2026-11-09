@@ -26,7 +26,7 @@ Ein GitHub-Profil zeigt zwar Repositories, aber selten den Kontext dahinter: Was
 - gruppierter Tech-Stack nach Einsatzbereich
 - Portfolio-Bereich mit Projekten und Zertifikaten
 - Detailansicht für Projekte und PDF-Zertifikate
-- Mehrsprachigkeit über `lang/de.json`, `lang/en.json`, `lang/fr.json` und `lang/sr.json`
+- Fünf Sprachen über `lang/*.js`, inklusive Serbisch in Lateinisch und Kyrillisch
 
 ## Tech-Stack
 
@@ -65,7 +65,8 @@ http://127.0.0.1:8765
 ## Projektpflege
 
 - Projekte, Zertifikate und Tech-Gruppen werden in `app.js` gepflegt.
-- Übersetzungen werden in `lang/*.json` gepflegt.
+- Jede Datei unter `lang/*.js` ist die einzige gepflegte Quelle für ihre Sprache, inklusive Projekt- und Rechtstexten. Der Browser lädt sie bei Bedarf als normales Skript, auch beim Öffnen der HTML-Datei von der Festplatte.
+- Links, Medien und technische Katalogdaten liegen in `src/portfolio-data.js`. `app.js` baut die Startseite auf, `src/detail-dialog.js` verwaltet Vorschau, Fokus und Scrollposition.
 - Bilder, Previews und PDFs liegen in `assets/`.
 - Neue öffentliche Projekte sollten im Portfolio mit Status, kurzer Beschreibung und Link ergänzt werden.
 

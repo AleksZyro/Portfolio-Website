@@ -17,7 +17,6 @@
   --texture-mark: rgba(125, 211, 252, 0.16);
 }
 
-
 * { box-sizing: border-box; }
 
 html {
@@ -35,7 +34,6 @@ body {
   overflow-x: clip;
   background-color: var(--bg-900);
 }
-
 
 body::before {
   content: "";
@@ -113,7 +111,6 @@ main > section[id].contact { min-height: auto; }
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--line);
 }
-
 
 .navbar {
   min-height: var(--header-h);
@@ -312,7 +309,6 @@ main > section[id].contact { min-height: auto; }
   background: rgba(56, 189, 248, 0.16);
 }
 
-
 .hero { overflow: clip; padding-top: clamp(24px, 4vw, 38px); padding-bottom: clamp(28px, 4vw, 44px); }
 .bg-glow { display: none; }
 
@@ -330,7 +326,6 @@ main > section[id].contact { min-height: auto; }
 .hero-copy,
 .about-card,
 .profile-card,
-.empty-state,
 .item-card,
 .contact-wrap,
 .modal-card {
@@ -434,19 +429,17 @@ h1 span { color: var(--accent); }
 .mini-title { font-family: "Space Grotesk", "Sora", sans-serif; font-size: 1.15rem; }
 .mini-subline { color: var(--muted); font-size: 0.92rem; margin-top: 6px; }
 
-.focus-tabs { margin-top: 14px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
-.focus-tab { border: 1px solid var(--line); border-radius: 10px; background: rgba(15, 23, 42, 0.72); color: var(--muted); padding: 8px; font-weight: 700; cursor: pointer; }
-.focus-tab.is-active { color: var(--text); border-color: rgba(56, 189, 248, 0.65); box-shadow: inset 0 -2px 0 rgba(56, 189, 248, 0.92); }
-
 .focus-card { max-width: 860px; padding: clamp(18px, 3vw, 26px); border: 1px solid var(--line); border-radius: 18px; background: var(--surface); box-shadow: 0 16px 36px rgba(0, 0, 0, .18); }
-.focus-panel { margin-top: 12px; padding: 14px; border-radius: 10px; border: 1px solid var(--line); background: rgba(15, 23, 42, 0.82); display: grid; gap: 10px; }
-.focus-panel h3 { margin: 0 0 6px; color: var(--text); font-size: 1.18rem; }
-.focus-panel p, .focus-panel li, .section-subline, .about-card p, .contact-wrap p, .item-card p, .empty-state p { color: var(--muted); }
+
+.section-subline,
+.about-card p,
+.contact-wrap p,
+.item-card p { color: var(--muted); }
 .about-card p {
   font-size: clamp(1.05rem, 1.55vw, 1.22rem);
   line-height: 1.68;
 }
-.focus-panel ul { list-style: disc; padding-left: 18px; display: grid; gap: 6px; }
+
 .live-status { display: inline-flex; align-items: center; gap: 8px; color: var(--accent-2); font-size: 0.82rem; font-weight: 600; }
 .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent-2); }
 
@@ -485,56 +478,6 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   display: grid;
   gap: 0;
   align-items: start;
-}
-
-.project-spotlight-card {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, .94fr);
-  overflow: hidden;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  background: transparent;
-  transition: border-color .2s ease, background-color .2s ease, box-shadow .2s ease;
-}
-
-.project-spotlight-card:hover,
-.project-spotlight-card:focus-within {
-  border-color: rgba(125, 211, 252, .58);
-  background: rgba(56, 189, 248, .035);
-  box-shadow: 0 14px 32px rgba(2, 6, 23, .18);
-}
-
-.project-spotlight-copy {
-  display: grid;
-  align-content: center;
-  gap: 14px;
-  padding: clamp(22px, 4vw, 42px);
-}
-
-.project-spotlight-copy h3 {
-  font-family: "Space Grotesk", "Sora", sans-serif;
-  font-size: clamp(1.55rem, 3vw, 2.45rem);
-  line-height: 1.05;
-}
-
-.project-spotlight-copy > p:not(.kicker) {
-  color: var(--muted);
-  line-height: 1.58;
-  max-width: 60ch;
-}
-
-.project-spotlight-media {
-  min-height: 100%;
-  aspect-ratio: 16 / 10;
-  border-left: 1px solid var(--line);
-  background: #070d18;
-}
-
-.project-spotlight-media img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
 }
 
 .project-list {
@@ -585,21 +528,10 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   max-width: 72ch;
 }
 
-.project-group-heading {
-  grid-column: 1 / -1;
-  display: grid;
-  gap: 4px;
-  margin-top: clamp(10px, 2vw, 18px);
-  padding-top: clamp(18px, 3vw, 28px);
-  border-top: 0;
-}
-
-.project-spotlight-card .project-tags,
 .project-list-item .project-tags {
   gap: 6px 12px;
 }
 
-.project-spotlight-card .project-tags span,
 .project-list-item .project-tags span {
   padding: 0;
   border: 0;
@@ -608,40 +540,10 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   color: var(--muted);
 }
 
-.project-spotlight-card .project-tags span:not(:last-child)::after,
 .project-list-item .project-tags span:not(:last-child)::after {
-  content: '·';
+  content: "·";
   margin-left: 12px;
   color: var(--accent-2);
-}
-
-.more-projects-summary-card {
-  margin-top: 0;
-  border: 0;
-  border-top: 1px solid var(--line);
-  border-radius: 0;
-  background: transparent;
-  box-shadow: none;
-}
-
-.project-group-heading-featured {
-  margin-top: 0;
-  padding-top: 0;
-  border-top: 0;
-}
-
-.project-group-heading h3 {
-  color: var(--text);
-  font-family: "Space Grotesk", "Sora", sans-serif;
-  font-size: clamp(1.1rem, 2vw, 1.4rem);
-  line-height: 1.2;
-}
-
-.project-group-heading p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.9rem;
-  line-height: 1.5;
 }
 
 .compact-certificates {
@@ -898,7 +800,7 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
 
 .cards-grid { grid-template-columns: 1fr; }
 
-.item-card, .empty-state { padding: 14px; }
+.item-card { padding: 14px; }
 .item-card {
   display: flex;
   flex-direction: column;
@@ -921,33 +823,12 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   background: rgba(30, 41, 59, 0.94);
 }
 
-.featured-project-card {
-  border-color: rgba(56, 189, 248, 0.34);
-  background:
-    linear-gradient(180deg, rgba(56, 189, 248, 0.08), transparent 38%),
-    var(--surface);
-}
-
-.featured-project-card:hover,
-.featured-project-card:focus-within {
-  border-color: rgba(125, 211, 252, 0.68);
-}
-
-.featured-project-result {
-  margin-top: 2px;
-  padding: 10px 11px;
-  border-left: 2px solid rgba(125, 211, 252, 0.84);
-  border-radius: 0 9px 9px 0;
-  background: rgba(11, 18, 32, 0.54);
-}
-
 .project-evidence-result {
   margin: 0;
   color: #dbeafe;
   font-size: 0.84rem;
   line-height: 1.48;
 }
-
 
 .project-preview {
   position: relative;
@@ -1054,10 +935,6 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   font-weight: 600;
 }
 
-
-
-
-
 .project-links a {
   color: #dbeafe;
   border-color: rgba(56, 189, 248, 0.34);
@@ -1070,61 +947,12 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   .project-links a:hover { border-color: rgba(125, 211, 252, 0.72); }
 }
 
-.more-projects-summary-card {
-  justify-content: start;
-}
-
-.more-projects-summary-card > p {
-  margin-bottom: 4px;
-}
-
-.more-projects-card-list {
-  display: grid;
-  gap: 10px;
-  margin-top: 8px;
-}
-
-.more-project-name {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  border: 1px solid rgba(148, 163, 184, 0.18);
-  border-radius: 10px;
-  background: rgba(15, 23, 42, 0.58);
-  color: var(--text);
-  font-weight: 800;
-  padding: 9px 11px;
-}
-
-.more-project-name:focus-visible {
-  border-color: rgba(125, 211, 252, 0.62);
-  background: rgba(30, 41, 59, 0.86);
-}
-@media (hover: hover) and (pointer: fine) {
-  .more-project-name:hover { border-color: rgba(125, 211, 252, 0.62); background: rgba(30, 41, 59, 0.86); }
-}
-
-.more-project-name.is-disabled {
-  color: var(--muted);
-  cursor: default;
-  opacity: 0.76;
-}
-
-.item-card button, .empty-action { justify-self: start; border: 1px solid var(--line); background: rgba(15, 23, 42, 0.78); color: var(--text); border-radius: 10px; padding: 7px 11px; cursor: pointer; transition: background 0.16s ease, border-color 0.16s ease, color 0.16s ease; }
+.item-card button { justify-self: start; border: 1px solid var(--line); background: rgba(15, 23, 42, 0.78); color: var(--text); border-radius: 10px; padding: 7px 11px; cursor: pointer; transition: background 0.16s ease, border-color 0.16s ease, color 0.16s ease; }
 .item-card button:hover,
-.item-card button:focus-visible,
-.empty-action:hover,
-.empty-action:focus-visible {
+.item-card button:focus-visible {
   border-color: rgba(125, 211, 252, 0.62);
   background: rgba(56, 189, 248, 0.18);
 }
-
-
-
-
-
-.empty-state { display: grid; gap: 10px; }
 
 .contact-wrap {
   grid-template-columns: 1fr;
@@ -1438,8 +1266,7 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
 }
 .modal-preview-media[hidden] { display: none; }
 .modal-card.has-preview-image .modal-preview-label,
-.modal-card.has-preview-image .modal-preview-title,
-.modal-card.has-preview-image .modal-preview-subtitle {
+.modal-card.has-preview-image .modal-preview-title {
   display: none;
 }
 .modal-preview-label {
@@ -1458,12 +1285,7 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   line-height: 1.08;
   max-width: 90%;
 }
-.modal-preview-subtitle {
-  color: var(--accent-2);
-  font-size: 0.92rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
+
 .modal-card.is-project .modal-body { gap: 12px; }
 .modal-card.is-document .modal-body,
 .modal-card.is-project .modal-body { align-content: start; }
@@ -1775,7 +1597,7 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
 }
 
 .open-source-tags span + span::before {
-  content: "\00b7";
+  content: "·";
   margin-right: 6px;
   color: rgba(125, 211, 252, 0.7);
 }
@@ -2011,9 +1833,9 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   .github-stat { border-right: 0; border-bottom: 1px solid var(--line); }
   .github-stat:last-child { border-bottom: 0; }
   .tech-grid { grid-template-columns: 1fr; gap: 0; }
-  .tech-tile { width: min(100%, 98px); min-height: 98px; padding: 8px; }
-  .tech-icon { width: 54px; height: 54px; }
-  .tech-icon-image { width: 44px; height: 44px; }
+
+
+
   .career-card-head { grid-template-columns: 1fr; display: grid; }
   .career-badge { justify-self: start; }
 }
@@ -2053,9 +1875,9 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   .language-switch { order: 4; margin-top: 4px; }
   .lang-menu-button { min-height: 36px; min-width: 78px; padding-inline: 10px; font-size: .78rem; }
 
-  .project-group-heading { margin-top: 6px; padding-top: 18px; }
-  .project-group-heading-featured { margin-top: 0; padding-top: 0; }
-  .featured-project-result { padding: 9px 10px; }
+
+
+
   .project-evidence-list > div { grid-template-columns: 1fr; gap: 3px; }
 
   .current-work-card { align-items: flex-start; flex-direction: column; gap: 8px; }
@@ -2143,14 +1965,13 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .reveal,
-  .item-card,
-  .tech-group-card,
-  .open-source-more-link,
-  .project-spotlight-card,
-  .project-list-item,
-  .career-card,
-  #open-source-list .open-source-pr,
-  .compact-certificates .item-card { transition: none; transform: none; }
+.item-card,
+.tech-group-card,
+.open-source-more-link,
+.project-list-item,
+.career-card,
+#open-source-list .open-source-pr,
+.compact-certificates .item-card { transition: none; transform: none; }
 }
 
 /* Kompakte Kontakt-Fusszeile und undurchsichtige Detailansichten. */
@@ -2247,12 +2068,6 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   align-items: stretch;
 }
 
-.modal-card.is-document {
-  width: min(980px, 94vw);
-  height: auto;
-  max-height: min(88dvh, 820px);
-}
-
 .modal-card.is-document .modal-body {
   display: grid;
   grid-template-columns: minmax(0, 1.12fr) minmax(250px, .88fr);
@@ -2316,7 +2131,6 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
 /* Ruhige Schieferblau-/Cyan-Variante für sämtliche bestehenden Komponenten. */
 .item-card:focus-within,
 .item-card.is-selected,
-.more-project-name:focus-visible,
 .legal-card:focus-visible,
 .open-source-pr:focus-visible {
   border-color: rgba(56, 189, 248, .52);
@@ -2324,22 +2138,19 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
 }
 @media (hover: hover) and (pointer: fine) {
   .current-work-card:hover,
-  .item-card:hover,
-  .more-project-name:hover,
-  .legal-card:hover,
-  .open-source-pr:hover {
+.item-card:hover,
+.legal-card:hover,
+.open-source-pr:hover {
     border-color: rgba(56, 189, 248, .52);
     background: rgba(30, 41, 59, .88);
   }
 }
 
-.featured-project-card,
 .project-context-preview {
   border-color: rgba(56, 189, 248, .36);
   background: var(--surface);
 }
 
-.featured-project-result { border-left-color: var(--accent-2); background: rgba(2, 6, 23, .34); }
 .project-evidence-result,
 .project-preview-label,
 .project-links a,
@@ -2452,46 +2263,6 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   color: var(--accent-2);
 }
 
-.project-list .more-projects-summary-card {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: minmax(180px, .7fr) minmax(0, 1.3fr);
-  gap: 8px 36px;
-  margin-top: 8px;
-  padding: 24px 0 0;
-  border: 0;
-  border-top: 0;
-  border-radius: 0;
-  background: transparent;
-  box-shadow: none;
-}
-
-.project-list .more-projects-summary-card > p { margin: 0; }
-
-.project-list .more-projects-card-list {
-  grid-column: 2;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0 24px;
-  margin-top: 0;
-}
-
-.project-list .more-project-name {
-  border: 0;
-  border-bottom: 1px solid var(--line);
-  border-radius: 0;
-  background: transparent;
-  padding: 9px 0;
-}
-
-.project-list .more-project-name:focus-visible {
-  border-bottom-color: rgba(125, 211, 252, .65);
-  background: transparent;
-  transform: translateX(3px);
-}
-@media (hover: hover) and (pointer: fine) {
-  .project-list .more-project-name:hover { border-bottom-color: rgba(125, 211, 252, .65); background: transparent; transform: translateX(3px); }
-}
-
 .compact-certificates .project-preview {
   border: 0;
   border-radius: 0;
@@ -2511,18 +2282,12 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
   .contact-main-link { grid-template-columns: 1fr auto; }
   .contact-legal-link { grid-column: auto; }
   .contact-links { grid-template-columns: 1fr; }
-  .project-spotlight-card { grid-template-columns: 1fr; }
-  .project-spotlight-copy { padding: 24px 0; }
-  .project-spotlight-media { border-top: 1px solid var(--line); border-left: 0; min-height: auto; }
+
+
+
   .project-list-item { grid-template-columns: 32px minmax(0, 1fr); gap: 12px; padding: 20px 0; }
-  .project-list .more-projects-summary-card {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-  .project-list .more-projects-card-list {
-    grid-column: auto;
-    grid-template-columns: 1fr;
-  }
+
+
 }
 
 /* Der Werdegang wird auf breiten Bildschirmen als ruhiger Zickzack-Weg geführt. */
@@ -2695,4 +2460,3 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
     width: 100%;
   }
 }
-

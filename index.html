@@ -19,10 +19,8 @@
   <link rel="me" href="https://www.linkedin.com/in/aleksandar-nikolic-05b557420/">
   <link rel="icon" href="assets/status-dot-green.svg" type="image/svg+xml">
   <title>Aleksandar Nikolić (AleksZyro) | IMS-Portfolio</title>
-  <link rel="stylesheet" href="style.css?v=20260927-mobile-fixes-1">
-  <link rel="stylesheet" href="concept/identity.css?v=20261109-polish">
-  <link rel="stylesheet" href="concept/experience.css?v=20261109-polish">
-  <link rel="stylesheet" href="concept/refinements.css?v=20261109-polish">
+  <link rel="stylesheet" href="style.css?v=20261109-refactor">
+  <link rel="stylesheet" href="concept/portfolio.css?v=20261109-refactor">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -76,7 +74,7 @@
   }
   </script>
 </head>
-<body class="identity-preview" data-project-layout="rows">
+<body class="identity-preview">
   <a class="skip-link" href="#main-content" data-i18n="skip.content">Zum Inhalt springen</a>
   <header class="site-header" id="top">
     <nav class="navbar container" aria-label="Hauptnavigation" data-i18n-aria="a11y.mainNav">
@@ -175,14 +173,14 @@
             <div class="current-work-card-head">
               <h3 data-i18n="currentWork.projects.mmTransport.title">Website für MM Transport &amp; Assistance</h3>
             </div>
-            <span class="current-work-status"><span class="dot" aria-hidden="true"></span><span data-experience="maintenance">Kontinuierlich in Arbeit</span><span class="current-work-separator" aria-hidden="true">·</span><span data-i18n="currentWork.customerLabel">Kundenprojekt</span></span>
+            <span class="current-work-status"><span class="dot" aria-hidden="true"></span><span data-i18n="currentWork.maintenance">Kontinuierlich in Arbeit</span><span class="current-work-separator" aria-hidden="true">·</span><span data-i18n="currentWork.customerLabel">Kundenprojekt</span></span>
           </a>
 
           <a class="current-work-card" href="https://github.com/AleksZyro/Agent-Dock" target="_blank" rel="noopener noreferrer" data-current-work="agentDock" data-work-type="own">
             <div class="current-work-card-head">
               <h3>Agent Dock</h3>
             </div>
-            <span class="current-work-status"><span class="dot" aria-hidden="true"></span><span data-i18n="currentWork.status">In Arbeit</span><span class="current-work-separator" aria-hidden="true">·</span><span data-experience="privateRepo">Privates Repository</span></span>
+            <span class="current-work-status"><span class="dot" aria-hidden="true"></span><span data-i18n="currentWork.status">In Arbeit</span><span class="current-work-separator" aria-hidden="true">·</span><span data-i18n="currentWork.privateRepo">Privates Repository</span></span>
           </a>
 
           <a class="current-work-card" href="https://github.com/AleksZyro/UMR-Useless-mobs-reworked-Mod" target="_blank" rel="noopener noreferrer" data-current-work="umr" data-work-type="own">
@@ -400,12 +398,12 @@
   <dialog id="migration-modal" class="migration-modal" aria-labelledby="migration-title" aria-describedby="migration-description">
     <article class="migration-card">
       <div class="migration-mark" aria-hidden="true">↗</div>
-      <p class="migration-kicker" data-migration="kicker">Website-Umzug</p>
-      <h2 id="migration-title" data-migration="title">Diese Website ist umgezogen</h2>
-      <p id="migration-description" data-migration="description">Meine aktuelle Website findest du neu unter aleksandar-nikolic.ch.</p>
+      <p class="migration-kicker" data-i18n="migration.kicker">Website-Umzug</p>
+      <h2 id="migration-title" data-i18n="migration.title">Diese Website ist umgezogen</h2>
+      <p id="migration-description" data-i18n="migration.description">Meine aktuelle Website findest du neu unter aleksandar-nikolic.ch.</p>
       <div class="migration-actions">
-        <a class="migration-primary" id="migration-link" href="https://aleksandar-nikolic.ch/" data-migration="cta">Zur neuen Website</a>
-        <button type="button" class="migration-secondary" id="migration-close" data-migration="dismiss">Später ansehen</button>
+        <a class="migration-primary" id="migration-link" href="https://aleksandar-nikolic.ch/" data-i18n="migration.cta">Zur neuen Website</a>
+        <button type="button" class="migration-secondary" id="migration-close" data-i18n="migration.dismiss">Später ansehen</button>
       </div>
     </article>
   </dialog>
@@ -420,11 +418,9 @@
       </div>
       <div class="modal-body">
         <div class="modal-preview" id="modal-preview">
-          <img class="modal-preview-media" id="modal-preview-image" alt="" hidden>
-          <video class="modal-preview-media" id="modal-preview-video" muted loop playsinline preload="metadata" hidden></video>
+          <img class="modal-preview-media" id="modal-preview-image" alt="" decoding="async" fetchpriority="high" hidden>
           <span class="modal-preview-label"></span>
           <span class="modal-preview-title" id="modal-preview-title"></span>
-          <span class="modal-preview-subtitle" id="modal-preview-subtitle"></span>
         </div>
         <div class="modal-copy">
           <div id="modal-description" class="modal-description"></div>
@@ -437,7 +433,10 @@
     </article>
   </dialog>
 
-  <script src="app.js?v=20261109-polish" defer></script>
-  <script src="concept/experience.js" type="module"></script>
+  <script src="src/languages.js?v=20261109-refactor" defer></script>
+  <script src="src/portfolio-data.js?v=20261109-refactor" defer></script>
+  <script src="src/detail-dialog.js?v=20261109-refactor" defer></script>
+  <script src="app.js?v=20261109-refactor" defer></script>
+  <script src="concept/experience.js?v=20261109-refactor" defer></script>
 </body>
 </html>

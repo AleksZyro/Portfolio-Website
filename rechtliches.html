@@ -5,11 +5,10 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="icon" href="data:,">
 <title>Impressum und Rechtliches | Aleksandar Nikolić</title>
-<link rel="stylesheet" href="legal-pages.css?v=20260927-review-2">
-  <link rel="stylesheet" href="concept/legal-theme.css">
+<link rel="stylesheet" href="legal-pages.css?v=20261109-refactor">
   <link rel="icon" href="assets/status-dot-green.svg" type="image/svg+xml">
 </head>
-<body data-legal-page="legal">
+<body>
 <header class="legal-header">
   <div class="legal-nav">
     <a class="brand" href="./#home" aria-label="Startseite">
@@ -29,9 +28,6 @@
         <button type="button" data-lang="sr" role="option"><span class="flag flag-rs" aria-hidden="true"></span><span>SR (lat)</span></button>
         <button type="button" data-lang="sr-cyrl" role="option"><span class="flag flag-rs" aria-hidden="true"></span><span>SR (kyr)</span></button>
       </div>
-      <select id="legal-language" class="legal-language-native" aria-hidden="true" tabindex="-1">
-        <option value="de">DE</option><option value="en">EN</option><option value="fr">FR</option><option value="sr">SR (lat)</option><option value="sr-cyrl">SR (kyr)</option>
-      </select>
     </div>
   </div>
 </header>
@@ -42,6 +38,7 @@
   <article class="legal-content"><div class="legal-blocks" id="legal-blocks"></div></article>
   <a id="legal-back" class="back-link" href="./#contact">← Zurück zum Portfolio</a>
 </main>
-<script src="legal-pages.js?v=20261109-redesign"></script>
+<script src="src/languages.js?v=20261109-refactor" defer></script>
+<script src="legal-pages.js?v=20261109-refactor" defer></script>
 </body>
 </html>

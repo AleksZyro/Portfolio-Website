@@ -1,9 +1,21 @@
-{
+portfolioLanguages.register("sr", {
   "skip": {
     "content": "Preskoči na sadržaj"
   },
   "a11y": {
-    "mainNav": "Glavna navigacija", "home": "Početna stranica", "openMenu": "Otvori meni", "language": "Promeni jezik", "chooseLanguage": "Izaberi jezik", "currentWork": "Trenutni projekti", "projectSpotlight": "Istaknuti projekat", "projectList": "Lista projekata", "certificateList": "Lista sertifikata", "githubActivity": "GitHub aktivnost", "contributionGraph": "Grafikon GitHub doprinosa", "openSourceList": "Open-source doprinosi", "closeDetails": "Zatvori detaljni prikaz"
+    "mainNav": "Glavna navigacija",
+    "home": "Početna stranica",
+    "openMenu": "Otvori meni",
+    "language": "Promeni jezik",
+    "chooseLanguage": "Izaberi jezik",
+    "currentWork": "Trenutni projekti",
+    "projectSpotlight": "Istaknuti projekat",
+    "projectList": "Lista projekata",
+    "certificateList": "Lista sertifikata",
+    "githubActivity": "GitHub aktivnost",
+    "contributionGraph": "Grafikon GitHub doprinosa",
+    "openSourceList": "Open-source doprinosi",
+    "closeDetails": "Zatvori detaljni prikaz"
   },
   "nav": {
     "home": "O meni",
@@ -93,11 +105,25 @@
     "ownLabel": "Lični projekat",
     "status": "U radu",
     "projects": {
-      "aargoclean": { "title": "Veb sajt za AARGO Clean GmbH", "description": "Trenutno radim na veb sajtu za firmu AARGO Clean GmbH." },
-      "mmTransport": { "title": "Veb sajt za MM Transport & Assistance", "description": "Trenutno radim na veb sajtu za firmu MM Transport & Assistance." },
-      "codexTwin": { "title": "CodexTwin", "description": "Radim na projektu CodexTwin i dalje razvijam ideju i implementaciju." },
-      "umr": { "title": "UMR", "description": "Nastavljam rad na projektu UMR i redovno dodajem ili poboljšavam funkcije." }
-    }
+      "aargoclean": {
+        "title": "Veb sajt za AARGO Clean GmbH",
+        "description": "Trenutno radim na veb sajtu za firmu AARGO Clean GmbH."
+      },
+      "mmTransport": {
+        "title": "Veb sajt za MM Transport & Assistance",
+        "description": "Trenutno radim na veb sajtu za firmu MM Transport & Assistance."
+      },
+      "codexTwin": {
+        "title": "CodexTwin",
+        "description": "Radim na projektu CodexTwin i dalje razvijam ideju i implementaciju."
+      },
+      "umr": {
+        "title": "UMR",
+        "description": "Nastavljam rad na projektu UMR i redovno dodajem ili poboljšavam funkcije."
+      }
+    },
+    "maintenance": "Kontinuirano se razvija",
+    "privateRepo": "Privatni repozitorijum"
   },
   "about": {
     "kicker": "O meni",
@@ -192,7 +218,8 @@
     "detailEmptyTitle": "Izaberi projekat",
     "detailEmptyText": "Klikni na projektnu karticu da vidiš status, stack, ulogu i šta sam naučio.",
     "moreProjectsTitle": "Dodatni projekti",
-    "moreProjectsSubline": "Dodatni projekti koje sam završio ili ih još trenutno razvijam."
+    "moreProjectsSubline": "Dodatni projekti koje sam završio ili ih još trenutno razvijam.",
+    "projectInformation": "Informacije o projektu"
   },
   "filters": {
     "all": "Svi",
@@ -277,12 +304,37 @@
           "GitHub Pages"
         ],
         "role": "Lični projekat za učenje i portfolio",
-        "learning": "Odvojiti algoritme od React komponenti, pisati testove za rubne slučajeve i učiniti UI stanje razumljivim."
+        "learning": "Odvojiti algoritme od React komponenti, pisati testove za rubne slučajeve i učiniti UI stanje razumljivim.",
+        "evidence": {
+          "result": "Rezultat: javna GitHub Pages demo verzija poredi četiri algoritma za pronalaženje puta uz odvojene troškove i vreme.",
+          "details": [
+            [
+              "Problem",
+              "Čini razlike između algoritama za pronalaženje puta na poljima sa težinama razumljivim."
+            ],
+            [
+              "Moj doprinos",
+              "Samostalni projekat za učenje i portfolio: mreža, vizualizacija, poređenje i UI stanje."
+            ],
+            [
+              "Tehnologija i odluka",
+              "React, Vite, JavaScript i CSS; voda košta 5, blato 10, a A* koristi Manhattan heuristiku."
+            ],
+            [
+              "Kvalitet",
+              "Vitest pokriva algoritme, mrežu i undo/redo; GitHub Actions pokreće npm ci, testove i build."
+            ],
+            [
+              "Rezultat",
+              "BFS, DFS, Dijkstra i A* mogu se pokrenuti i porediti na istoj mreži."
+            ]
+          ]
+        }
       },
       "sortlab": {
         "title": "SortLab",
         "cardDescription": "Vizualizator algoritama sortiranja sa stubićima, kontrolama, statistikom i objašnjenjem.",
-        "detailDescription": "SortLab\n\nSortLab je interaktivni vizualizator algoritama sortiranja. Korisnici korak po korak vide kako se niz sortira, mogu uživo menjati brzinu i porediti različite algoritme.\n\nUključeni su Bubble Sort, Selection Sort, Insertion Sort, Quick Sort i Heap Sort. Dashboard prikazuje poređenja, zamene, korake i vreme izvršavanja u milisekundama.\n\nProjekat služi kao projekat za učenje algoritama, React state-a i vizualizacije.",
+        "detailDescription": "SortLab\n\nSortLab je interaktivni vizualizator algoritama sortiranja. Korisnici korak po korak vide kako se niz sortira, mogu uživo menjati brzinu i porediti različite algoritme.\n\nBubble Sort, Selection Sort, Insertion Sort, Merge Sort, Quick Sort i Heap Sort. Prikaz obuhvata poređenja, upise u niz, zamene, vreme računanja i vremensku i prostornu složenost.\n\nProjekat služi kao projekat za učenje algoritama, React state-a i vizualizacije.",
         "meta": [
           "Stack: React, Vite, JavaScript, CSS",
           "Fokus: algoritmi sortiranja i vizualizacija",
@@ -294,7 +346,32 @@
           "Algoritmi"
         ],
         "role": "Lični projekat za učenje",
-        "learning": "Povezati animaciju, kontrolu brzine i statistiku tako da algoritam ostane vidljiv i upotrebljiv."
+        "learning": "Povezati animaciju, kontrolu brzine i statistiku tako da algoritam ostane vidljiv i upotrebljiv.",
+        "evidence": {
+          "result": "GitHub Pages demo prikazuje šest algoritama sortiranja i može da uporedi dva sa istim ulaznim podacima.",
+          "details": [
+            [
+              "Problem",
+              "Čini korake i razlike između algoritama sortiranja vidljivim."
+            ],
+            [
+              "Moj doprinos",
+              "Samostalni projekat za učenje sa kontrolama, animacijom, režimom poređenja i statistikom."
+            ],
+            [
+              "Tehnologija i odluka",
+              "React, Vite, JavaScript i CSS. Događaji algoritama i brojači beleže se odvojeno od animacije."
+            ],
+            [
+              "Kvalitet",
+              "Vitest proverava algoritme, rubne slučajeve, brojače i upravljanje animacijom."
+            ],
+            [
+              "Rezultat",
+              "Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, Quick Sort i Heap Sort. Prikaz obuhvata poređenja, upise u niz, zamene, vreme računanja i vremensku i prostornu složenost."
+            ]
+          ]
+        }
       },
       "vsw": {
         "title": "VSW - Web aplikacija za proveru ranjivosti",
@@ -312,7 +389,32 @@
           "React"
         ],
         "role": "Zajednički projekat sa Botondom",
-        "learning": "Jasno ograničiti defanzivne provere, odvojiti backend i frontend i razumljivo prikazati rezultate."
+        "learning": "Jasno ograničiti defanzivne provere, odvojiti backend i frontend i razumljivo prikazati rezultate.",
+        "evidence": {
+          "result": "Rezultat: lokalna fulstek aplikacija za defanzivne provere sa razumljivim nalazima, dokazima, preporukama i izvozima.",
+          "details": [
+            [
+              "Problem",
+              "Jasno prikazuje nedostajuća bezbednosna zaglavlja, TLS probleme i bezbedne provere portova za autorizovane ciljeve."
+            ],
+            [
+              "Moj doprinos",
+              "Timski projekat sa Botondom; moji commitovi dokumentuju jačanje skenera, Windows pokretanje i dokumentaciju za izdanje."
+            ],
+            [
+              "Tehnologija i odluka",
+              "FastAPI, React, TypeScript, SQLite/PostgreSQL i Docker; namerno samo pasivne ili niskorizične provere."
+            ],
+            [
+              "Kvalitet",
+              "Pytest, Vitest i Testing Library testovi za backend, frontend i ekstenziju; uključeni su rate limit i validacija cilja."
+            ],
+            [
+              "Rezultat",
+              "Izveštaji se mogu sačuvati, porediti i izvesti kao JSON ili CSV; nema exploita, brute force-a ni agresivnih skeniranja."
+            ]
+          ]
+        }
       },
       "foliolint": {
         "title": "FolioLint",
@@ -332,8 +434,8 @@
         "role": "Sopstveni tooling projekat",
         "learning": "Strukturisati provere zasnovane na pravilima tako da ostanu razumljive i stvarno poboljšaju projektne repozitorijume."
       },
-      "besp2074": {
-        "title": "BESP2074 – Internet uključi i isključi",
+      "internetEinAus": {
+        "title": "Internet uključi i isključi",
         "cardDescription": "Hakaton prototip veb interfejsa koji modeluje pristup internetu po učionici ili podmreži.",
         "detailDescription": "Internet uključi i isključi\n\nOvaj projekat je nastao u okviru hakatona „Baden hackt“. Prototip modeluje kako bi pristup internetu za učionice ili podmreže mogao jasno da se uključi i isključi.\n\nFokus je na razumljivom interfejsu i jasnom prikazu stanja. Projekat je hakaton prototip koji je nastao kroz zajednički rad.",
         "meta": [
@@ -359,7 +461,7 @@
         "cardDescription": "Sertifikat o osnovama etičkog hakovanja i bezbednosno odgovornom testiranju.",
         "detailDescription": "Završio sam kurs Ethical Hacker na Cisco Networking Academy, posvećen etičkom hakovanju i bezbednosnom testiranju.",
         "meta": [
-          "Završeno: 21. april 2026.",
+          "Datum: 21. april 2026.",
           "Format: PDF"
         ],
         "previewLabel": "Sertifikat"
@@ -369,7 +471,7 @@
         "cardDescription": "Sertifikat o osnovama sajber bezbednosti, pretnjama i merama zaštite.",
         "detailDescription": "Završio sam uvodni kurs Cisco Networking Academy o čestim sajber pretnjama i osnovnim merama zaštite.",
         "meta": [
-          "Završeno: 12. decembar 2025.",
+          "Datum: 12. decembar 2025.",
           "Format: PDF"
         ],
         "previewLabel": "Sertifikat"
@@ -382,6 +484,39 @@
           "Datum: 27. i 28. mart 2026.",
           "Trajanje: 2 dana",
           "Format: PDF"
+        ],
+        "previewLabel": "Sertifikat"
+      },
+      "absofort-ki-ollama": {
+        "title": "Korišćenje lokalne AI: privatna AI asistencija uz Ollama i open-source modele",
+        "cardDescription": "ab sofort sertifikat za kurs o lokalnoj AI, Ollama alatu i open-source modelima.",
+        "detailDescription": "Ovaj ab sofort sertifikat potvrđuje uspešno završen kurs „Korišćenje lokalne AI: privatna AI asistencija uz Ollama i open-source modele“. Kurs je završen 22. avgusta 2026. sa rezultatom od 87,5% i trajanjem od 6 sati.",
+        "meta": [
+          "Datum: 22. avgust 2026.",
+          "Trajanje: 6 sati",
+          "Format: PDF"
+        ],
+        "previewLabel": "Sertifikat"
+      },
+      "abacus-finanzbuchhaltung": {
+        "title": "ABACUS finansijsko knjigovodstvo",
+        "cardDescription": "Korisnički sertifikat za ABACUS finansijsko knjigovodstvo, sa osnovama korisničkog interfejsa, matičnih podataka, knjiženja, izveštaja i PDV obračuna.",
+        "detailDescription": "ABACUS sertifikat potvrđuje uspešno završen kurs i položenu završnu proveru iz oblasti ABACUS finansijskog knjigovodstva. Teme su obuhvatale korisnički interfejs, matične podatke, knjiženja na osnovu dokumenata, vrste knjiženja, izveštaje kao što su dnevnik, izvod računa, bilans i račun uspeha, kao i PDV obračun.",
+        "meta": [
+          "Oblast: finansijsko knjigovodstvo",
+          "Dokaz: sertifikat sa položenim završnim ispitom",
+          "Format: PDF"
+        ],
+        "previewLabel": "Sertifikat"
+      },
+      "linkedin-generative-ki": {
+        "title": "Šta je generativna veštačka inteligencija?",
+        "cardDescription": "LinkedIn Learning kurs o generativnim AI alatima, veštačkoj inteligenciji i osnovnom razumevanju generativne AI.",
+        "detailDescription": "Ovaj LinkedIn Learning sertifikat potvrđuje završen kurs „Šta je generativna veštačka inteligencija?“. Kurs obrađuje generativne AI alate, veštačku inteligenciju i osnovno razumevanje generativne AI u kontekstu rada i učenja.",
+        "meta": [
+          "Oblast: generativna veštačka inteligencija",
+          "Trajanje: 42 minuta",
+          "Datum: 20. avgust 2026."
         ],
         "previewLabel": "Sertifikat"
       }
@@ -444,9 +579,13 @@
     "isort2616": {
       "title": "Očuvati LF stdin izlaz na Windowsu",
       "summary": "Sprečava neželjenu promenu krajeva redova za stdin izlaz na Windowsu i dodaje regresioni test.",
-      "tags": ["Python", "Testovi"]
+      "tags": [
+        "Python",
+        "Testovi"
+      ]
     },
     "beets6839": {
+      "title": "Preserve null artpath in edit",
       "summary": "Čuva prazne artpath vrednosti tokom uređivanja, tako da postojeći podaci ne budu nenamerno promenjeni.",
       "tags": [
         "Python",
@@ -454,6 +593,7 @@
       ]
     },
     "beets6837": {
+      "title": "Improve subsonicupdate error for non-JSON responses",
       "summary": "Poboljšava Subsonic update poruku o grešci kada server ne vraća JSON.",
       "tags": [
         "Python",
@@ -461,6 +601,7 @@
       ]
     },
     "sshfs73": {
+      "title": "Fix ls detail default",
       "summary": "Ispravlja podrazumevanu vrednost za detaljne liste, kako bi sshfs ispisi radili konzistentnije.",
       "tags": [
         "Python",
@@ -476,11 +617,29 @@
       ]
     },
     "archy397": {
-      "title": "Poboljšana navigacija",
-      "summary": "Poboljšava ponašanje navigacije u open-source projektu.",
+      "title": "Izdvojena zajednička priprema testa",
+      "summary": "Duplirana priprema app/core.py izdvojena je u zajedničku pomoćnu funkciju za dva CLI testa.",
       "tags": [
-        "React",
-        "Navigacija"
+        "CLI",
+        "Tests"
+      ]
+    },
+    "leetcodeRanking543": {
+      "title": "Obrada nevažećih korisnika u data workflow-ima",
+      "summary": "Meržovana ispravka workflow-a: invalid-users.json se obrađuje u analizi neaktivnosti i izuzima iz sinhronizacije.",
+      "tags": [
+        "GitHub Actions",
+        "Workflow",
+        "LeetCode"
+      ]
+    },
+    "leetcodeRanking542": {
+      "title": "Ažuriranje workflow-a za invalid-users.json",
+      "summary": "Završen issue za pravilnu obradu invalid-users.json u GitHub Actions workflow-ima.",
+      "tags": [
+        "GitHub Actions",
+        "Issue",
+        "LeetCode"
       ]
     }
   },
@@ -504,7 +663,7 @@
       },
       "lb259": {
         "title": "LB259",
-        "description": "Dataset projekat o korišćenju pametnih telefona, produktivnosti i dobrobiti sa CSV podacima i notebook analizom.",
+        "description": "Školski projekat za predviđanje potrošnje energije u industriji čelika pomoću Python notebookova i linearne regresije.",
         "tags": [
           "Podaci",
           "Notebook"
@@ -583,12 +742,54 @@
     },
     {
       "title": "Hosting i platforme",
-      "items": ["Netlify", "Vercel", "WordPress", "HostPoint", "Cloudflare"]
+      "items": [
+        "Netlify",
+        "Vercel",
+        "WordPress",
+        "HostPoint",
+        "Cloudflare"
+      ]
     }
   ],
   "certificates": {
     "kicker": "Sertifikati",
     "title": "Usavršavanje u slobodno vreme",
     "subline": "Izabrani sertifikati sa pregledom i detaljima."
+  },
+  "migration": {
+    "kicker": "Sajt je preseljen",
+    "title": "Ovaj sajt je preseljen",
+    "description": "Moj aktuelni sajt je sada dostupan na aleksandar-nikolic.ch.",
+    "cta": "Otvori novi sajt",
+    "dismiss": "Ostani ovde za sada"
+  },
+  "legalPage": {
+    "brand": "Aleksandar Nikolić",
+    "back": "Nazad na portfolio",
+    "kicker": "Pravno",
+    "title": "Impresum i pravne informacije",
+    "intro": "Jedno jasno objašnjenje o portfoliju, hostingu, privatnosti i kukijima.",
+    "sections": [
+      {
+        "title": "Impresum i kontakt",
+        "text": "Ovo je privatni portfolio sajt Aleksandra Nikolića. Predstavlja obrazovanje, projekte, sertifikate i profesionalna interesovanja. Za pitanja o projektima ili praksi dostupan sam putem e-maila: info@aleksandar-nikolic.ch."
+      },
+      {
+        "title": "Hosting i sopstveni domen",
+        "text": "Sajt se objavljuje kao statički sajt preko Cloudflare Pages. Moj sopstveni domen, aleksandar-nikolic.ch, povezan je sa ovim hostingom i isporučuje se preko HTTPS-a i CDN-a. Pri otvaranju sajta Cloudflare može obraditi tehnički neophodne podatke pristupa kako bi sajt bio bezbedno i pouzdano isporučen."
+      },
+      {
+        "title": "Tehnička isporuka",
+        "text": "Statički fajlovi se keširaju radi bržeg učitavanja. HTML, JavaScript, CSS i dnevna GitHub grafika se redovno ponovo proveravaju, dok neizmenjeni resursi mogu duže ostati u kešu. Sigurnosna zaglavlja pomažu da se spreči neželjeno ugrađivanje stranice i pogrešno tumačenje tipova fajlova."
+      },
+      {
+        "title": "Privatnost i lokalna podešavanja",
+        "text": "Sajt ne koristi formulare, analitiku, reklamne trekere ni eksterne skripte za praćenje. Linkovi ka GitHubu i drugim eksternim servisima otvaraju se tek nakon aktivnog klika. Ne koriste se kukiji za praćenje; lokalno se može sačuvati samo izabrani jezik. robots.txt opisuje javne oblasti za pretraživače, a opcioni llms.txt sažima javni sadržaj za AI sisteme. Nijedan od ova dva fajla nije kontrola pristupa."
+      },
+      {
+        "title": "Odgovornost i prava na privatnost",
+        "text": "Aleksandar Nikolić je odgovoran za ovaj sajt i ovde opisanu obradu podataka. Pitanja o obradi podataka, kao i zahtevi za pristup, ispravku ili brisanje, mogu se poslati e-mailom na info@aleksandar-nikolic.ch. Ako hosting generiše tehničke pristupne podatke, njihovo čuvanje zavisi od podešavanja i zahteva hosting provajdera."
+      }
+    ]
   }
-}
+});

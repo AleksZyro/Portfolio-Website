@@ -141,3 +141,21 @@ test("both hero buttons reach their destination on the first click with motion e
     await expect(page).toHaveURL(new RegExp(`#${id}$`));
   }
 });
+
+test("language loading falls back to German and also works from disk", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== "desktop", "Language resource loading is independent of viewport size.");
+  await page.route("**/lang/fr.js?*", (route) => route.abort());
+  await page.goto("/?lang=fr");
+  await expect(page.locator("#language-current-label")).toHaveText("DE");
+  await expect(page.locator("#projects-grid article")).toHaveCount(5);
+  await expect(page.locator(".footer-legal a")).toHaveAttribute("href", "rechtliches.html?lang=de");
+  await page.unroute("**/lang/fr.js?*");
+
+  const local = new URL("../../index.html?lang=fr", import.meta.url);
+  await page.goto(local.href);
+  await expect(page.locator("html")).toHaveAttribute("lang", "fr");
+  await expect(page.locator("#projects-grid article")).toHaveCount(5);
+  await page.locator(".footer-legal a").click();
+  await expect(page.locator("html")).toHaveAttribute("lang", "fr");
+  await expect(page.locator("#legal-blocks section")).toHaveCount(5);
+});

@@ -1,9 +1,21 @@
-{
+portfolioLanguages.register("fr", {
   "skip": {
     "content": "Aller au contenu"
   },
   "a11y": {
-    "mainNav": "Navigation principale", "home": "Page d’accueil", "openMenu": "Ouvrir le menu", "language": "Changer de langue", "chooseLanguage": "Choisir la langue", "currentWork": "Projets en cours", "projectSpotlight": "Projet à la une", "projectList": "Liste des projets", "certificateList": "Liste des certificats", "githubActivity": "Activité GitHub", "contributionGraph": "Graphique des contributions GitHub", "openSourceList": "Contributions open source", "closeDetails": "Fermer la vue détaillée"
+    "mainNav": "Navigation principale",
+    "home": "Page d’accueil",
+    "openMenu": "Ouvrir le menu",
+    "language": "Changer de langue",
+    "chooseLanguage": "Choisir la langue",
+    "currentWork": "Projets en cours",
+    "projectSpotlight": "Projet à la une",
+    "projectList": "Liste des projets",
+    "certificateList": "Liste des certificats",
+    "githubActivity": "Activité GitHub",
+    "contributionGraph": "Graphique des contributions GitHub",
+    "openSourceList": "Contributions open source",
+    "closeDetails": "Fermer la vue détaillée"
   },
   "nav": {
     "home": "À propos",
@@ -93,11 +105,25 @@
     "ownLabel": "Projet personnel",
     "status": "En cours",
     "projects": {
-      "aargoclean": { "title": "Site web pour AARGO Clean GmbH", "description": "Je travaille actuellement sur le site web de l’entreprise AARGO Clean GmbH." },
-      "mmTransport": { "title": "Site web pour MM Transport & Assistance", "description": "Je travaille actuellement sur le site web de l’entreprise MM Transport & Assistance." },
-      "codexTwin": { "title": "CodexTwin", "description": "Je travaille sur CodexTwin et continue à développer l’idée ainsi que sa réalisation." },
-      "umr": { "title": "UMR", "description": "Je poursuis le développement d’UMR et j’ajoute ou améliore régulièrement des fonctions." }
-    }
+      "aargoclean": {
+        "title": "Site web pour AARGO Clean GmbH",
+        "description": "Je travaille actuellement sur le site web de l’entreprise AARGO Clean GmbH."
+      },
+      "mmTransport": {
+        "title": "Site web pour MM Transport & Assistance",
+        "description": "Je travaille actuellement sur le site web de l’entreprise MM Transport & Assistance."
+      },
+      "codexTwin": {
+        "title": "CodexTwin",
+        "description": "Je travaille sur CodexTwin et continue à développer l’idée ainsi que sa réalisation."
+      },
+      "umr": {
+        "title": "UMR",
+        "description": "Je poursuis le développement d’UMR et j’ajoute ou améliore régulièrement des fonctions."
+      }
+    },
+    "maintenance": "Amélioration continue",
+    "privateRepo": "Dépôt privé"
   },
   "about": {
     "kicker": "À propos",
@@ -192,7 +218,8 @@
     "detailEmptyTitle": "Choisir un projet",
     "detailEmptyText": "Clique sur une carte de projet pour afficher le statut, le stack, le rôle et ce que le projet m’apporte.",
     "moreProjectsTitle": "Autres projets",
-    "moreProjectsSubline": "Autres projets que j'ai terminés ou que je développe encore actuellement."
+    "moreProjectsSubline": "Autres projets que j'ai terminés ou que je développe encore actuellement.",
+    "projectInformation": "Informations sur le projet"
   },
   "filters": {
     "all": "Tous",
@@ -277,12 +304,37 @@
           "GitHub Pages"
         ],
         "role": "Projet personnel d’apprentissage et de portfolio",
-        "learning": "Séparer les algorithmes des composants React, écrire des tests pour les cas limites et rendre l’état de l’interface compréhensible."
+        "learning": "Séparer les algorithmes des composants React, écrire des tests pour les cas limites et rendre l’état de l’interface compréhensible.",
+        "evidence": {
+          "result": "Résultat : démo publique GitHub Pages comparant quatre algorithmes de recherche de chemin, avec coûts et temps séparés.",
+          "details": [
+            [
+              "Problème",
+              "Rend compréhensibles les différences entre les algorithmes de recherche de chemin sur des terrains pondérés."
+            ],
+            [
+              "Ma contribution",
+              "Projet personnel d’apprentissage et de portfolio : grille, visualisation, comparaison et état de l’interface."
+            ],
+            [
+              "Technique et choix",
+              "React, Vite, JavaScript et CSS ; eau à 5, boue à 10, A* avec heuristique de Manhattan."
+            ],
+            [
+              "Qualité",
+              "Vitest couvre les algorithmes, la grille et annuler/rétablir ; GitHub Actions exécute npm ci, les tests et le build."
+            ],
+            [
+              "Résultat",
+              "BFS, DFS, Dijkstra et A* peuvent être exécutés et comparés sur la même grille."
+            ]
+          ]
+        }
       },
       "sortlab": {
         "title": "SortLab",
         "cardDescription": "Visualiseur d’algorithmes de tri avec barres, contrôles, statistiques et zone d’explication.",
-        "detailDescription": "SortLab\n\nSortLab est un visualiseur interactif pour les algorithmes de tri. Les utilisateurs voient étape par étape comment un tableau est trié, peuvent ajuster la vitesse en direct et comparer différentes méthodes.\n\nLe projet contient Bubble Sort, Selection Sort, Insertion Sort, Quick Sort et Heap Sort. Le dashboard affiche les comparaisons, les swaps, les étapes et le temps d’exécution en millisecondes.\n\nLe projet est utilisable comme projet d’apprentissage pour les algorithmes, l’état React et la visualisation.",
+        "detailDescription": "SortLab\n\nSortLab est un visualiseur interactif pour les algorithmes de tri. Les utilisateurs voient étape par étape comment un tableau est trié, peuvent ajuster la vitesse en direct et comparer différentes méthodes.\n\nBubble Sort, Selection Sort, Insertion Sort, Merge Sort, Quick Sort et Heap Sort. L’interface affiche les comparaisons, les écritures dans le tableau, les permutations, le temps de calcul et les complexités en temps et en espace.\n\nLe projet est utilisable comme projet d’apprentissage pour les algorithmes, l’état React et la visualisation.",
         "meta": [
           "Stack: React, Vite, JavaScript, CSS",
           "Focus: algorithmes de tri et visualisation",
@@ -294,7 +346,32 @@
           "Algorithmes"
         ],
         "role": "Projet personnel d’apprentissage",
-        "learning": "Relier animation, contrôle de vitesse et statistiques pour que l’algorithme reste visible et utilisable."
+        "learning": "Relier animation, contrôle de vitesse et statistiques pour que l’algorithme reste visible et utilisable.",
+        "evidence": {
+          "result": "La démo GitHub Pages visualise six algorithmes de tri et peut en comparer deux avec les mêmes données.",
+          "details": [
+            [
+              "Problème",
+              "Rend visibles les étapes et les différences entre les algorithmes de tri."
+            ],
+            [
+              "Ma contribution",
+              "Projet personnel d’apprentissage avec commandes, animation, mode comparaison et statistiques."
+            ],
+            [
+              "Technique et choix",
+              "React, Vite, JavaScript et CSS. Les événements des algorithmes et les compteurs sont enregistrés indépendamment de l’animation."
+            ],
+            [
+              "Qualité",
+              "Vitest vérifie les algorithmes, les cas limites, les compteurs et les commandes de lecture."
+            ],
+            [
+              "Résultat",
+              "Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, Quick Sort et Heap Sort. L’interface affiche les comparaisons, les écritures dans le tableau, les permutations, le temps de calcul et les complexités en temps et en espace."
+            ]
+          ]
+        }
       },
       "vsw": {
         "title": "VSW - Vulnerability Scanner Web App",
@@ -312,7 +389,32 @@
           "React"
         ],
         "role": "Projet commun avec Botond",
-        "learning": "Limiter clairement les checks défensifs, séparer backend et frontend et présenter les résultats de façon compréhensible."
+        "learning": "Limiter clairement les checks défensifs, séparer backend et frontend et présenter les résultats de façon compréhensible.",
+        "evidence": {
+          "result": "Résultat : application full-stack locale pour des contrôles défensifs, avec constats, preuves, recommandations et exports.",
+          "details": [
+            [
+              "Problème",
+              "Présente clairement les en-têtes de sécurité manquants, les problèmes TLS et les contrôles de ports sûrs pour des cibles autorisées."
+            ],
+            [
+              "Ma contribution",
+              "Projet d’équipe avec Botond ; mes commits documentent le durcissement du scanner, le démarrage Windows et la documentation de release."
+            ],
+            [
+              "Technique et choix",
+              "FastAPI, React, TypeScript, SQLite/PostgreSQL et Docker ; contrôles volontairement passifs ou à faible risque."
+            ],
+            [
+              "Qualité",
+              "Tests Pytest, Vitest et Testing Library pour backend, frontend et extension ; rate limit et validation des cibles inclus."
+            ],
+            [
+              "Résultat",
+              "Les rapports peuvent être sauvegardés, comparés et exportés en JSON ou CSV ; pas d’exploits, de brute force ni de scans agressifs."
+            ]
+          ]
+        }
       },
       "foliolint": {
         "title": "FolioLint",
@@ -332,8 +434,8 @@
         "role": "Projet tooling personnel",
         "learning": "Structurer des checks basés sur des règles afin qu’ils restent compréhensibles et améliorent réellement les repositories."
       },
-      "besp2074": {
-        "title": "BESP2074 – Internet activé et désactivé",
+      "internetEinAus": {
+        "title": "Internet activé et désactivé",
         "cardDescription": "Prototype de hackathon pour une interface web qui modélise l’accès à Internet par salle de classe ou sous-réseau.",
         "detailDescription": "Internet activé et désactivé\n\nCe projet a été créé dans le cadre du hackathon Baden hackt. Le prototype modélise comment l’accès à Internet des salles de classe ou des sous-réseaux pourrait être activé et désactivé clairement.\n\nL’accent est mis sur une interface compréhensible et une représentation claire des états. Il s’agit d’un prototype réalisé en équipe.",
         "meta": [
@@ -359,7 +461,7 @@
         "cardDescription": "Certificat sur les bases du hacking éthique et des tests orientés sécurité.",
         "detailDescription": "J’ai terminé le cours Ethical Hacker de la Cisco Networking Academy, consacré au piratage éthique et aux tests de sécurité.",
         "meta": [
-          "Terminé le : 21 avril 2026",
+          "Date: 21 avril 2026",
           "Format : PDF"
         ],
         "previewLabel": "Certificat"
@@ -369,7 +471,7 @@
         "cardDescription": "Certificat sur les bases de la cybersécurité, les menaces et les mesures de protection.",
         "detailDescription": "J’ai terminé le cours d’initiation de la Cisco Networking Academy sur les cybermenaces courantes et les mesures de protection de base.",
         "meta": [
-          "Terminé le : 12 décembre 2025",
+          "Date: 12 décembre 2025",
           "Format : PDF"
         ],
         "previewLabel": "Certificat"
@@ -382,6 +484,39 @@
           "Dates : 27 et 28 mars 2026",
           "Durée : 2 jours",
           "Format : PDF"
+        ],
+        "previewLabel": "Certificat"
+      },
+      "absofort-ki-ollama": {
+        "title": "Utiliser l’IA locale : assistance IA privée avec Ollama et des modèles open source",
+        "cardDescription": "Certificat ab sofort pour un cours sur l’IA locale, Ollama et les modèles open source.",
+        "detailDescription": "Ce certificat ab sofort confirme la réussite du cours « Utiliser l’IA locale : assistance IA privée avec Ollama et des modèles open source ». Le cours a été terminé le 22 août 2026 avec un résultat de 87,5 % et une durée de 6 heures.",
+        "meta": [
+          "Date: 22 août 2026",
+          "Durée : 6 heures",
+          "Format : PDF"
+        ],
+        "previewLabel": "Certificat"
+      },
+      "abacus-finanzbuchhaltung": {
+        "title": "ABACUS comptabilité financière",
+        "cardDescription": "Certificat utilisateur pour ABACUS comptabilité financière, avec bases de l’interface, données de base, écritures, rapports et TVA.",
+        "detailDescription": "Le certificat ABACUS confirme la réussite du cours de certificat et de l’examen final dans le domaine de la comptabilité financière ABACUS. Les thèmes abordés comprennent l’interface utilisateur, les données de base, les écritures à partir de pièces justificatives, les types d’écritures, les rapports comme le journal, l’extrait de compte, le bilan et le compte de résultat, ainsi que le décompte TVA.",
+        "meta": [
+          "Domaine : comptabilité financière",
+          "Preuve : certificat avec examen final réussi",
+          "Format : PDF"
+        ],
+        "previewLabel": "Certificat"
+      },
+      "linkedin-generative-ki": {
+        "title": "Qu’est-ce que l’IA générative ?",
+        "cardDescription": "Cours LinkedIn Learning sur les outils d’IA générative, l’intelligence artificielle et les bases de l’IA générative.",
+        "detailDescription": "Ce certificat LinkedIn Learning confirme la réussite du cours « Qu’est-ce que l’IA générative ? ». Le cours traite des outils d’IA générative, de l’intelligence artificielle et des bases permettant de situer l’IA générative dans un contexte de travail et d’apprentissage.",
+        "meta": [
+          "Domaine : IA générative",
+          "Durée : 42 minutes",
+          "Date : 20 août 2026"
         ],
         "previewLabel": "Certificat"
       }
@@ -440,9 +575,13 @@
     "isort2616": {
       "title": "Préserver la sortie LF de stdin sous Windows",
       "summary": "Évite la conversion involontaire des retours à la ligne pour la sortie stdin sous Windows et ajoute un test de régression.",
-      "tags": ["Python", "Tests"]
+      "tags": [
+        "Python",
+        "Tests"
+      ]
     },
     "beets6839": {
+      "title": "Preserve null artpath in edit",
       "summary": "Préserve les valeurs artpath vides pendant l’édition afin que les données existantes ne soient pas modifiées involontairement.",
       "tags": [
         "Python",
@@ -450,6 +589,7 @@
       ]
     },
     "beets6837": {
+      "title": "Improve subsonicupdate error for non-JSON responses",
       "summary": "Améliore le message d’erreur Subsonic update lorsqu’un serveur ne renvoie pas de JSON.",
       "tags": [
         "Python",
@@ -457,6 +597,7 @@
       ]
     },
     "sshfs73": {
+      "title": "Fix ls detail default",
       "summary": "Corrige la valeur par défaut des listings détaillés afin que les listings sshfs soient plus cohérents.",
       "tags": [
         "Python",
@@ -472,11 +613,29 @@
       ]
     },
     "archy397": {
-      "title": "Améliorer la navigation",
-      "summary": "Améliore le comportement de la navigation dans un projet open source.",
+      "title": "Extraction d’une fixture de test commune",
+      "summary": "Déplace la préparation dupliquée de app/core.py dans une fonction partagée par deux tests CLI.",
       "tags": [
-        "React",
-        "Navigation"
+        "CLI",
+        "Tests"
+      ]
+    },
+    "leetcodeRanking543": {
+      "title": "Gérer les utilisateurs invalides dans les workflows de données",
+      "summary": "Correction de workflow mergée : invalid-users.json est traité dans l’analyse d’inactivité et exclu de la synchronisation.",
+      "tags": [
+        "GitHub Actions",
+        "Workflows",
+        "LeetCode"
+      ]
+    },
+    "leetcodeRanking542": {
+      "title": "Mettre à jour les workflows pour invalid-users.json",
+      "summary": "Issue clôturée pour traiter correctement invalid-users.json dans les workflows GitHub Actions.",
+      "tags": [
+        "GitHub Actions",
+        "Issue",
+        "LeetCode"
       ]
     }
   },
@@ -500,7 +659,7 @@
       },
       "lb259": {
         "title": "LB259",
-        "description": "Projet de dataset sur l’usage du smartphone, la productivité et le bien-être avec données CSV et analyse notebook.",
+        "description": "Projet scolaire sur la prévision de la consommation énergétique dans la sidérurgie avec des notebooks Python et une régression linéaire.",
         "tags": [
           "Données",
           "Notebook"
@@ -579,7 +738,13 @@
     },
     {
       "title": "Hébergement et plateformes",
-      "items": ["Netlify", "Vercel", "WordPress", "HostPoint", "Cloudflare"]
+      "items": [
+        "Netlify",
+        "Vercel",
+        "WordPress",
+        "HostPoint",
+        "Cloudflare"
+      ]
     }
   ],
   "linkLabels": {
@@ -590,5 +755,41 @@
     "kicker": "Certificats",
     "title": "Formations et apprentissages personnels",
     "subline": "Une sélection de certificats avec aperçu et détails."
+  },
+  "migration": {
+    "kicker": "Déménagement du site",
+    "title": "Ce site a déménagé",
+    "description": "Mon site actuel se trouve désormais sur aleksandar-nikolic.ch.",
+    "cta": "Ouvrir le nouveau site",
+    "dismiss": "Rester ici pour le moment"
+  },
+  "legalPage": {
+    "brand": "Aleksandar Nikolić",
+    "back": "Retour au portfolio",
+    "kicker": "Mentions légales",
+    "title": "Mentions légales et informations",
+    "intro": "Une explication transparente du portfolio, de l’hébergement, de la confidentialité et des cookies.",
+    "sections": [
+      {
+        "title": "Mentions légales et contact",
+        "text": "Ce site est le portfolio privé d’Aleksandar Nikolić. Il présente sa formation, ses projets, ses certificats et ses intérêts professionnels. Pour toute question sur les projets ou un stage, je suis joignable par e-mail à info@aleksandar-nikolic.ch."
+      },
+      {
+        "title": "Hébergement et domaine personnel",
+        "text": "Le site est publié comme site statique via Cloudflare Pages. Mon domaine personnel, aleksandar-nikolic.ch, est relié à cet hébergement et diffusé en HTTPS via un CDN. Lors de la visite, Cloudflare peut traiter des données d’accès techniquement nécessaires afin de diffuser le site de manière sûre et fiable."
+      },
+      {
+        "title": "Diffusion technique",
+        "text": "Les fichiers statiques sont mis en cache pour accélérer le chargement. Les fichiers HTML, JavaScript, CSS et le graphique GitHub quotidien sont régulièrement revalidés, tandis que les ressources inchangées peuvent rester en cache plus longtemps. Des en-têtes de sécurité contribuent à empêcher l’intégration non souhaitée et les types de fichiers mal interprétés."
+      },
+      {
+        "title": "Confidentialité et réglages locaux",
+        "text": "Ce site n’utilise ni formulaires, ni analytics, ni traceurs publicitaires, ni scripts externes de suivi. Les liens vers GitHub et d’autres services externes ne s’ouvrent qu’après un clic actif. Aucun cookie de suivi n’est utilisé ; seule la langue choisie peut être enregistrée localement dans le navigateur. robots.txt décrit les zones publiques pour les moteurs de recherche et le fichier optionnel llms.txt résume le contenu public destiné aux systèmes d’IA. Aucun de ces fichiers ne constitue un contrôle d’accès."
+      },
+      {
+        "title": "Responsabilité et droits relatifs aux données",
+        "text": "Aleksandar Nikolić est responsable de ce site et des traitements décrits ici. Les questions sur le traitement des données ainsi que les demandes d’accès, de rectification ou de suppression peuvent être adressées par e-mail à info@aleksandar-nikolic.ch. Lorsque des données techniques d’accès sont générées par l’hébergement, leur durée de conservation dépend des réglages et des exigences de l’hébergeur."
+      }
+    ]
   }
-}
+});

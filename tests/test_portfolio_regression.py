@@ -24,7 +24,10 @@ EXPECTED_MERGED_LABELS = {
 
 
 def load_language(code: str) -> dict:
-    return json.loads((ROOT / "lang" / f"{code}.json").read_text(encoding="utf-8"))
+    script = (ROOT / "lang" / f"{code}.js").read_text(encoding="utf-8").strip()
+    prefix = f'portfolioLanguages.register("{code}", '
+    assert script.startswith(prefix) and script.endswith(");")
+    return json.loads(script[len(prefix):-2])
 
 
 def flatten_keys(value: object, prefix: str = "") -> set[str]:
@@ -91,18 +94,20 @@ def test_all_local_markup_assets_exist_and_images_have_alt_text() -> None:
 
 
 def test_css_asset_references_exist() -> None:
-    css_files = list(ROOT.glob("*.css"))
+    css_files = list(ROOT.glob("*.css")) + list((ROOT / "concept").glob("*.css"))
     references: list[str] = []
     for css_file in css_files:
         css = css_file.read_text(encoding="utf-8")
-        references.extend(re.findall(r"url\(\s*[\"']?([^\"')]+)", css))
-    missing = [reference for reference in references if (path := local_path(reference)) and not path.exists()]
-    assert not missing, f"Fehlende lokale CSS-Ressourcen: {missing}"
+        for reference in re.findall(r"url\(\s*[\"']?([^\"')]+)", css):
+            if local_path(reference) and not (css_file.parent / reference).is_file():
+                references.append(f"{css_file.name}: {reference}")
+    assert not references, f"Fehlende lokale CSS-Ressourcen: {references}"
 
 
 def test_javascript_asset_references_exist() -> None:
     """Catch broken project/certificate graphics created dynamically by app.js."""
-    app = (ROOT / "app.js").read_text(encoding="utf-8")
+    sources = [ROOT / "app.js", *sorted((ROOT / "src").glob("*.js"))]
+    app = "\n".join(path.read_text(encoding="utf-8") for path in sources)
     references = re.findall(r"[\"'`](assets/[^\"'`?#]+)", app)
     missing = sorted(
         {
@@ -135,11 +140,17 @@ def test_all_markup_translation_keys_exist_in_every_language() -> None:
 
 
 def test_merged_status_is_consistent_across_languages_and_renderer() -> None:
+    catalog = (ROOT / "src/portfolio-data.js").read_text(encoding="utf-8")
+    oss_block = catalog.split("openSourceContributions:", 1)[1].split("\n};", 1)[0]
+    contribution_ids = re.findall(r"id: '([^']+)'", oss_block)
     for code, expected in EXPECTED_MERGED_LABELS.items():
-        assert load_language(code)["github"]["mergedLabel"] == expected
+        dictionary = load_language(code)
+        assert dictionary["github"]["mergedLabel"] == expected
+        for contribution_id in contribution_ids:
+            entry = dictionary["openSourceContributions"][contribution_id]
+            assert entry["title"] and entry["summary"] and entry["tags"]
 
     app = (ROOT / "app.js").read_text(encoding="utf-8")
-    oss_block = app.split("openSourceContributions:", 1)[1].split("\n};", 1)[0]
     assert "status: 'open'" not in oss_block
     badge_block = app.split("const contributionLabel", 1)[1].split("bottom.append", 1)[0]
     assert "completedLabel" not in badge_block
@@ -147,10 +158,13 @@ def test_merged_status_is_consistent_across_languages_and_renderer() -> None:
 
 
 def test_certificate_date_labels_are_normalized() -> None:
-    app = (ROOT / "app.js").read_text(encoding="utf-8")
-    assert "normalizeCertificateMeta" in app
-    assert "certificateMeta" in app
-    assert "Datum" in app and "Date" in app and "Датум" in app
+    labels = {"de": "Datum", "en": "Date", "fr": "Date", "sr": "Datum", "sr-cyrl": "Датум"}
+    for code, label in labels.items():
+        certificates = load_language(code)["portfolioItems"]["certificates"]
+        for key in ("ethicalHacker", "introCybersecurity", "bbbHackathon",
+                    "absofort-ki-ollama", "linkedin-generative-ki"):
+            expected = "Dates" if code == "fr" and key == "bbbHackathon" else label
+            assert any(entry.split(":", 1)[0].strip() == expected for entry in certificates[key]["meta"])
 
 
 def test_layout_and_interaction_contracts_are_present() -> None:
@@ -170,9 +184,10 @@ def test_layout_and_interaction_contracts_are_present() -> None:
     assert "grid-template-columns: 1fr" in css
 
     app = (ROOT / "app.js").read_text(encoding="utf-8")
+    dialog = (ROOT / "src/detail-dialog.js").read_text(encoding="utf-8")
     assert "window.history.replaceState" in app
-    assert "modalScrollY" in app
-    assert "window.scrollTo({ top: modalScrollY, behavior: 'instant' })" in app
+    assert "modalScrollY" in dialog
+    assert "window.scrollTo({ top: modalScrollY, behavior: 'instant' })" in dialog
 
     index = (ROOT / "index.html").read_text(encoding="utf-8")
     for section_id in ("career", "portfolio", "certificates", "github-activity", "tech-stack", "contact"):
