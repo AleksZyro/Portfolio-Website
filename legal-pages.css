@@ -55,6 +55,7 @@ h1 { margin: 0; font-size: clamp(2.25rem, 6vw, 3.7rem); letter-spacing: -0.025em
 .legal-block { padding: clamp(24px, 4vw, 36px) 0; border: 0; border-bottom: 1px solid var(--line); background: transparent; }
 .legal-block h2 { margin: 0 0 10px; color: var(--text); font-size: clamp(1.18rem, 2vw, 1.38rem); line-height: 1.35; }
 .legal-block-text { white-space: pre-line; }
+.legal-block-text a { color: var(--accent); text-underline-offset: .18em; }
 .legal-content p { max-width: 70ch; margin: 0; color: var(--muted); font-size: .98rem; line-height: 1.68; overflow-wrap: anywhere; }
 .back-link { display: inline-flex; max-width: 100%; margin-top: 30px; align-items: center; gap: 8px; color: var(--text); border: 1px solid var(--line); border-radius: 999px; padding: 12px 17px; font-weight: 800; text-decoration: none; white-space: normal; transition: border-color .2s ease, background .2s ease, transform .2s ease; }
 .back-link:hover, .back-link:focus-visible { border-color: var(--accent); background: rgba(56,189,248,.1); transform: translateX(3px); }

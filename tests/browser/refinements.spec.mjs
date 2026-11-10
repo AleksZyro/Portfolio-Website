@@ -118,6 +118,27 @@ test("contribution SVG has no blue wrapper and OSS ends with a separator", async
     await last.evaluate((e) => parseFloat(getComputedStyle(e).fontSize)),
   ).toBeGreaterThanOrEqual(16);
 });
+test("streak numbers are centred independently of their flames", async ({ page }) => {
+  await page.evaluate(() => document.fonts.ready);
+  const streaks = page.locator(".github-streak-item");
+  await expect(streaks).toHaveCount(2);
+  await expect(page.locator(".github-streak-flame")).toHaveCount(2);
+  const geometry = await streaks.evaluateAll((items) => items.map((item) => {
+    const number = item.querySelector("strong").getBoundingClientRect();
+    const label = item.querySelector(".github-streak-label").getBoundingClientRect();
+    const period = item.querySelector(".github-streak-period")?.getBoundingClientRect();
+    return {
+      offset: Math.abs((number.left + number.right - label.left - label.right) / 2),
+      periodBelowLabel: !period || period.top >= label.bottom,
+    };
+  }));
+  for (const item of geometry) {
+    expect(item.offset).toBeLessThan(1);
+    expect(item.periodBelowLabel).toBe(true);
+  }
+  await expect(page.locator(".github-streak-period")).toHaveText("(12 Monate)");
+});
+
 test("contact heading has a plain colour and a readable ampersand", async ({
   page,
 }) => {
@@ -169,6 +190,12 @@ test("legal pages share the theme, support languages and return to the home page
     await expect(page.locator("html")).toHaveAttribute("lang", html);
     await expect(page.locator("#legal-language-button")).toBeFocused();
     await expect(page.locator("#legal-title")).not.toBeEmpty();
+    await expect(page.locator("#impressum p")).toContainText(
+      lang === "sr-cyrl" ? "Александар Николић" : "Aleksandar Nikolić",
+    );
+    await expect(page.locator("#impressum p")).toContainText("info@aleksandar-nikolic.ch");
+    await expect(page.locator("#hosting a")).toHaveAttribute("href", "https://www.cloudflare.com/privacypolicy/");
+    await expect(page.locator("#datenschutzrechte p")).toContainText("Cloudflare Email Routing");
   }
   await page.locator("#legal-back").click();
   await expect(page).toHaveURL(/\/#contact$/);

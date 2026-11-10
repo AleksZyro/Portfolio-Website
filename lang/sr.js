@@ -266,9 +266,10 @@ portfolioLanguages.register("sr", {
     "publicRepos": "javni repozitorijumi",
     "ossMerges": "open-source merge-ovi",
     "currentStreak": "dana trenutnog niza",
-    "longestStreak": "dana najdužeg završenog niza (12 meseci)",
+    "longestStreak": "dana najdužeg završenog niza",
     "mergedLabel": "Merdžovano",
-    "completedLabel": "Završeno"
+    "completedLabel": "Završeno",
+    "streakPeriod": "(12 meseci)"
   },
   "legal": {
     "kicker": "Pravno",
@@ -772,11 +773,11 @@ portfolioLanguages.register("sr", {
     "sections": [
       {
         "title": "Impresum i kontakt",
-        "text": "Ovo je privatni portfolio sajt Aleksandra Nikolića. Predstavlja obrazovanje, projekte, sertifikate i profesionalna interesovanja. Za pitanja o projektima ili praksi dostupan sam putem e-maila: info@aleksandar-nikolic.ch."
+        "text": "Aleksandar Nikolić upravlja ovim sajtom i odgovoran je za obradu podataka o ličnosti. Ovaj lični portfolio predstavlja moje obrazovanje, projekte i sertifikate. Možeš mi pisati na info@aleksandar-nikolic.ch."
       },
       {
         "title": "Hosting i sopstveni domen",
-        "text": "Sajt se objavljuje kao statički sajt preko Cloudflare Pages. Moj sopstveni domen, aleksandar-nikolic.ch, povezan je sa ovim hostingom i isporučuje se preko HTTPS-a i CDN-a. Pri otvaranju sajta Cloudflare može obraditi tehnički neophodne podatke pristupa kako bi sajt bio bezbedno i pouzdano isporučen."
+        "text": "Cloudflare Pages isporučuje ovaj statički sajt preko šifrovane veze. Cloudflare, Inc. (SAD), može da obrađuje tehničke podatke o pristupu, poput IP adrese i traženog URL-a, radi isporuke i zaštite sajta. Obrada se može odvijati i van Švajcarske. Cloudflare navodi Swiss–U.S. Data Privacy Framework za prenose iz Švajcarske u SAD, a standardne ugovorne klauzule za druge međunarodne prenose."
       },
       {
         "title": "Tehnička isporuka",
@@ -788,8 +789,9 @@ portfolioLanguages.register("sr", {
       },
       {
         "title": "Odgovornost i prava na privatnost",
-        "text": "Aleksandar Nikolić je odgovoran za ovaj sajt i ovde opisanu obradu podataka. Pitanja o obradi podataka, kao i zahtevi za pristup, ispravku ili brisanje, mogu se poslati e-mailom na info@aleksandar-nikolic.ch. Ako hosting generiše tehničke pristupne podatke, njihovo čuvanje zavisi od podešavanja i zahteva hosting provajdera."
+        "text": "Aleksandar Nikolić je odgovoran za ovaj sajt i ovde opisanu obradu podataka. Pitanja o obradi podataka, kao i zahtevi za pristup, ispravku ili brisanje, mogu se poslati e-mailom na info@aleksandar-nikolic.ch. Ako hosting generiše tehničke pristupne podatke, njihovo čuvanje zavisi od podešavanja i zahteva hosting provajdera.\n\nAko mi pišeš e-poštom, obrađujem adresu pošiljaoca, sadržaj poruke i eventualne priloge da bih odgovorio na upit. Koristim Cloudflare Email Routing za prosleđivanje poruka poslatih na moj domen u sanduče e-pošte."
       }
-    ]
+    ],
+    "cloudflarePrivacy": "Cloudflare politika privatnosti"
   }
 });

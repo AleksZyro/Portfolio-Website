@@ -266,9 +266,10 @@ portfolioLanguages.register("de", {
     "publicRepos": "öffentliche Repositories",
     "ossMerges": "Open-Source-Merges",
     "currentStreak": "Tage aktuelle Serie",
-    "longestStreak": "Tage längste beendete Serie (12 Monate)",
+    "longestStreak": "Tage längste beendete Serie",
     "mergedLabel": "Gemergt",
-    "completedLabel": "Abgeschlossen"
+    "completedLabel": "Abgeschlossen",
+    "streakPeriod": "(12 Monate)"
   },
   "legal": {
     "kicker": "Rechtliches",
@@ -774,11 +775,11 @@ portfolioLanguages.register("de", {
     "sections": [
       {
         "title": "Impressum und Kontakt",
-        "text": "Diese Website ist eine private Portfolio-Seite von Aleksandar Nikolić. Sie präsentiert Ausbildung, Projekte, Zertifikate und berufliche Interessen. Für Fragen zu Projekten oder einer Praktikumsstelle bin ich per E-Mail unter info@aleksandar-nikolic.ch erreichbar."
+        "text": "Betreiber der Website und Verantwortlicher für die Bearbeitung von Personendaten ist Aleksandar Nikolić. Das private Portfolio zeigt meine Ausbildung, Projekte und Zertifikate. Du erreichst mich unter info@aleksandar-nikolic.ch."
       },
       {
         "title": "Hosting und eigene Domain",
-        "text": "Die Website wird als statische Seite über Cloudflare Pages veröffentlicht. Meine eigene Domain aleksandar-nikolic.ch ist mit diesem Hosting verbunden; die Auslieferung erfolgt verschlüsselt über HTTPS und ein CDN. Beim Aufruf können technisch notwendige Zugriffsdaten durch Cloudflare verarbeitet werden, damit die Seite sicher und zuverlässig ausgeliefert werden kann."
+        "text": "Die statische Website wird über Cloudflare Pages verschlüsselt ausgeliefert. Cloudflare, Inc. (USA), kann dabei technische Zugriffsdaten wie IP-Adresse und angefragte URL bearbeiten, um die Website auszuliefern und zu schützen. Die Bearbeitung kann auch ausserhalb der Schweiz stattfinden. Cloudflare nennt für Übermittlungen von der Schweiz in die USA das Swiss–U.S. Data Privacy Framework und für weitere internationale Übermittlungen Standardvertragsklauseln."
       },
       {
         "title": "Technische Auslieferung",
@@ -790,8 +791,9 @@ portfolioLanguages.register("de", {
       },
       {
         "title": "Verantwortung und Datenschutzrechte",
-        "text": "Verantwortlich für diese Website und die beschriebenen Datenbearbeitungen ist Aleksandar Nikolić. Fragen zur Datenbearbeitung sowie Auskunfts-, Berichtigungs- oder Löschbegehren können per E-Mail an info@aleksandar-nikolic.ch gerichtet werden. Soweit technische Zugriffsdaten beim Hosting anfallen, richten sich deren Aufbewahrung nach den Einstellungen und Vorgaben des Hosting-Anbieters."
+        "text": "Verantwortlich für diese Website und die beschriebenen Datenbearbeitungen ist Aleksandar Nikolić. Fragen zur Datenbearbeitung sowie Auskunfts-, Berichtigungs- oder Löschbegehren können per E-Mail an info@aleksandar-nikolic.ch gerichtet werden. Soweit technische Zugriffsdaten beim Hosting anfallen, richten sich deren Aufbewahrung nach den Einstellungen und Vorgaben des Hosting-Anbieters.\n\nWenn du mir per E-Mail schreibst, bearbeite ich deine Absenderadresse, den Inhalt und etwaige Anhänge zur Beantwortung deiner Anfrage. Für eingehende Nachrichten an meine Domain nutze ich Cloudflare Email Routing zur Weiterleitung an ein E-Mail-Postfach."
       }
-    ]
+    ],
+    "cloudflarePrivacy": "Datenschutzerklärung von Cloudflare"
   }
 });

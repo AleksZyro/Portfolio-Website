@@ -960,19 +960,32 @@ body.identity-preview {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
 }
-.github-streak-stat > div > span {
+.github-streak-item {
+  min-width: 0;
+  text-align: center;
+}
+.github-streak-value {
+  position: relative;
+  display: inline-block;
+}
+.github-streak-flame {
+  position: absolute;
+  inset-inline-end: calc(100% + 6px);
+  top: 50%;
+  translate: 0 -50%;
+  width: clamp(18px, 2vw, 25px);
+  height: auto;
+  color: var(--muted);
+}
+.github-streak-label,
+.github-streak-period {
   display: block;
+}
+.github-streak-label {
   margin-top: 7px;
 }
-.github-streak-record {
-  text-align: right;
-}
-.github-streak-record-value {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 6px;
-  color: var(--muted);
+.github-streak-period {
+  margin-top: 2px;
 }
 .modal-copy {
   display: contents;

@@ -266,9 +266,10 @@ portfolioLanguages.register("fr", {
     "publicRepos": "dépôts publics",
     "ossMerges": "merges open source",
     "currentStreak": "jours de série actuelle",
-    "longestStreak": "jours pour la plus longue série terminée (12 mois)",
+    "longestStreak": "jours pour la plus longue série terminée",
     "mergedLabel": "Fusionné",
-    "completedLabel": "Terminé"
+    "completedLabel": "Terminé",
+    "streakPeriod": "(12 mois)"
   },
   "legal": {
     "kicker": "Mentions légales",
@@ -772,11 +773,11 @@ portfolioLanguages.register("fr", {
     "sections": [
       {
         "title": "Mentions légales et contact",
-        "text": "Ce site est le portfolio privé d’Aleksandar Nikolić. Il présente sa formation, ses projets, ses certificats et ses intérêts professionnels. Pour toute question sur les projets ou un stage, je suis joignable par e-mail à info@aleksandar-nikolic.ch."
+        "text": "Aleksandar Nikolić exploite ce site et est responsable du traitement des données personnelles. Ce portfolio personnel présente ma formation, mes projets et mes certificats. Tu peux me joindre à info@aleksandar-nikolic.ch."
       },
       {
         "title": "Hébergement et domaine personnel",
-        "text": "Le site est publié comme site statique via Cloudflare Pages. Mon domaine personnel, aleksandar-nikolic.ch, est relié à cet hébergement et diffusé en HTTPS via un CDN. Lors de la visite, Cloudflare peut traiter des données d’accès techniquement nécessaires afin de diffuser le site de manière sûre et fiable."
+        "text": "Cloudflare Pages diffuse ce site statique via une connexion chiffrée. Cloudflare, Inc. (États-Unis), peut traiter des données techniques d’accès telles que l’adresse IP et l’URL demandée afin de diffuser et de protéger le site. Le traitement peut aussi avoir lieu hors de Suisse. Cloudflare indique s’appuyer sur le Swiss–U.S. Data Privacy Framework pour les transferts de la Suisse vers les États-Unis et sur des clauses contractuelles types pour les autres transferts internationaux."
       },
       {
         "title": "Diffusion technique",
@@ -788,8 +789,9 @@ portfolioLanguages.register("fr", {
       },
       {
         "title": "Responsabilité et droits relatifs aux données",
-        "text": "Aleksandar Nikolić est responsable de ce site et des traitements décrits ici. Les questions sur le traitement des données ainsi que les demandes d’accès, de rectification ou de suppression peuvent être adressées par e-mail à info@aleksandar-nikolic.ch. Lorsque des données techniques d’accès sont générées par l’hébergement, leur durée de conservation dépend des réglages et des exigences de l’hébergeur."
+        "text": "Aleksandar Nikolić est responsable de ce site et des traitements décrits ici. Les questions sur le traitement des données ainsi que les demandes d’accès, de rectification ou de suppression peuvent être adressées par e-mail à info@aleksandar-nikolic.ch. Lorsque des données techniques d’accès sont générées par l’hébergement, leur durée de conservation dépend des réglages et des exigences de l’hébergeur.\n\nSi tu me contactes par e-mail, je traite ton adresse, ton message et les éventuelles pièces jointes pour répondre à ta demande. J’utilise Cloudflare Email Routing pour transférer les messages reçus sur mon domaine vers une boîte de réception."
       }
-    ]
+    ],
+    "cloudflarePrivacy": "Politique de confidentialité de Cloudflare"
   }
 });

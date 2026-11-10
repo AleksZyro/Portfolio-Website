@@ -31,6 +31,12 @@ async function applyLegalLanguage(requested) {
     const paragraph = document.createElement('p');
     paragraph.className = 'legal-block-text';
     paragraph.textContent = text;
+    if (block.id === 'hosting') {
+      const privacyLink = document.createElement('a');
+      privacyLink.href = 'https://www.cloudflare.com/privacypolicy/';
+      privacyLink.textContent = page.cloudflarePrivacy;
+      paragraph.append('\n\n', privacyLink);
+    }
     if (block.id === 'datenschutz') paragraph.id = 'cookies';
     block.append(heading, paragraph);
     return block;
