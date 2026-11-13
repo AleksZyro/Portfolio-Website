@@ -8,7 +8,7 @@ const portfolioData = {
         { label: 'Demo', url: 'https://alekszyro.github.io/PathLab/' }
       ],
       previewImage: 'assets/project-previews/pathlab.png',
-      demoMedia: { src: 'assets/project-demos/pathlab-demo.webp', type: 'image', alt: 'Animierte PathLab-Demo' }
+      demoMedia: { src: 'assets/project-demos/pathlab-demo.webp', alt: 'Animierte PathLab-Demo' }
     },
     {
       id: 'sortlab',
@@ -18,7 +18,7 @@ const portfolioData = {
         { label: 'Demo', url: 'https://alekszyro.github.io/SortLab/' }
       ],
       previewImage: 'assets/project-previews/sortlab.png',
-      demoMedia: { src: 'assets/project-demos/sortlab-demo.webp', type: 'image', alt: 'Animierte SortLab-Demo' }
+      demoMedia: { src: 'assets/project-demos/sortlab-demo.webp', alt: 'Animierte SortLab-Demo' }
     },
     {
       id: 'vsw',
@@ -43,7 +43,7 @@ const portfolioData = {
         { label: 'GitHub', url: 'https://github.com/BotondCsereklye/internet-ein-aus' }
       ],
       previewImage: 'assets/project-previews/internet-ein-aus.png',
-      demoMedia: { src: 'assets/project-demos/internet-ein-aus-demo.gif', type: 'image', alt: 'Animierte Demo von Internet ein und aus' }
+      demoMedia: { src: 'assets/project-demos/internet-ein-aus-demo.gif', alt: 'Animierte Demo von Internet ein und aus' }
     }
   ],
   moreProjects: [

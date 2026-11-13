@@ -684,69 +684,14 @@ portfolioLanguages.register("en", {
       }
     }
   },
-  "techGroups": [
-    {
-      "title": "Frontend basics",
-      "items": [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "TypeScript"
-      ]
-    },
-    {
-      "title": "Frontend runtime",
-      "items": [
-        "React",
-        "Vite",
-        "Node.js"
-      ]
-    },
-    {
-      "title": "Python and API",
-      "items": [
-        "Python",
-        "FastAPI",
-        "pytest"
-      ]
-    },
-    {
-      "title": "Data formats and storage",
-      "items": [
-        "JSON",
-        "CSV",
-        "SQLite"
-      ]
-    },
-    {
-      "title": "Other languages and frameworks",
-      "items": [
-        "Java",
-        "C#",
-        ".NET"
-      ]
-    },
-    {
-      "title": "Tools, cloud and automation",
-      "items": [
-        "Git",
-        "Docker",
-        "PowerShell",
-        "Batchfile",
-        "AWS",
-        "OpenAI"
-      ]
-    },
-    {
-      "title": "Hosting and platforms",
-      "items": [
-        "Netlify",
-        "Vercel",
-        "WordPress",
-        "HostPoint",
-        "Cloudflare"
-      ]
-    }
+  "techGroupTitles": [
+    "Frontend basics",
+    "Frontend runtime",
+    "Python and API",
+    "Data formats and storage",
+    "Other languages and frameworks",
+    "Tools, cloud and automation",
+    "Hosting and platforms"
   ],
   "linkLabels": {
     "github": "GitHub",

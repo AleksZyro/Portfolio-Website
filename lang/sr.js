@@ -688,69 +688,14 @@ portfolioLanguages.register("sr", {
       }
     }
   },
-  "techGroups": [
-    {
-      "title": "Frontend osnove",
-      "items": [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "TypeScript"
-      ]
-    },
-    {
-      "title": "Frontend runtime",
-      "items": [
-        "React",
-        "Vite",
-        "Node.js"
-      ]
-    },
-    {
-      "title": "Python i API",
-      "items": [
-        "Python",
-        "FastAPI",
-        "pytest"
-      ]
-    },
-    {
-      "title": "Formati podataka i skladistenje",
-      "items": [
-        "JSON",
-        "CSV",
-        "SQLite"
-      ]
-    },
-    {
-      "title": "Drugi jezici i framework-i",
-      "items": [
-        "Java",
-        "C#",
-        ".NET"
-      ]
-    },
-    {
-      "title": "Alati, cloud i automatizacija",
-      "items": [
-        "Git",
-        "Docker",
-        "PowerShell",
-        "Batchfile",
-        "AWS",
-        "OpenAI"
-      ]
-    },
-    {
-      "title": "Hosting i platforme",
-      "items": [
-        "Netlify",
-        "Vercel",
-        "WordPress",
-        "HostPoint",
-        "Cloudflare"
-      ]
-    }
+  "techGroupTitles": [
+    "Frontend osnove",
+    "Frontend runtime",
+    "Python i API",
+    "Formati podataka i skladistenje",
+    "Drugi jezici i framework-i",
+    "Alati, cloud i automatizacija",
+    "Hosting i platforme"
   ],
   "certificates": {
     "kicker": "Sertifikati",

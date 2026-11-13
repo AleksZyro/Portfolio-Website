@@ -108,24 +108,10 @@ const t = (key, fallback = '') => {
   return typeof value === 'string' ? value : fallback;
 };
 
-const tArray = (key, fallback = []) => {
-  const value = pathGet(activeDictionary, key);
-  return Array.isArray(value) ? value : fallback;
-};
-
 const localizedPortfolioItem = (item, type) => ({
   ...item,
   ...pathGet(activeDictionary, `portfolioItems.${type}.${item.id}`)
 });
-
-const localizedTechGroup = (group, index) => {
-  const translationPath = `techGroups.${index}`;
-  return {
-    ...group,
-    title: t(`${translationPath}.title`, group.title),
-    items: tArray(`${translationPath}.items`, group.items || [])
-  };
-};
 
 const localizedLinkLabel = (label) => {
   const key = String(label).toLowerCase();
@@ -138,12 +124,6 @@ const localizedOpenSourceContribution = (item) => ({
   ...item,
   ...activeDictionary.openSourceContributions?.[item.id]
 });
-
-const normalizeVisibleText = (value) => String(value ?? '')
-  .replace(/\\r\\n|\\n|\\r/g, '\n')
-  .replace(/�vent/g, 'Event')
-  .replace(/�/g, '')
-  .trim();
 
 const mergeIcon = () => {
   const icon = document.createElement('span');
@@ -195,10 +175,10 @@ const renderOpenSourceContributions = () => {
     top.append(repo, number);
 
     const title = document.createElement('h4');
-    title.textContent = normalizeVisibleText(item.title);
+    title.textContent = item.title;
 
     const summary = document.createElement('p');
-    summary.textContent = normalizeVisibleText(item.summary);
+    summary.textContent = item.summary;
 
     const bottom = document.createElement('div');
     bottom.className = 'open-source-bottom';
@@ -207,7 +187,7 @@ const renderOpenSourceContributions = () => {
     tags.className = 'open-source-tags';
     (item.tags || []).forEach((tagText) => {
       const tag = document.createElement('span');
-      tag.textContent = normalizeVisibleText(tagText);
+      tag.textContent = tagText;
       tags.append(tag);
     });
 
@@ -282,7 +262,10 @@ const scrollToSection = (targetId, behavior = 'smooth') => {
   }
 };
 
+let activeNavSectionId;
 const setActiveNav = (sectionId) => {
+  if (activeNavSectionId === sectionId) return;
+  activeNavSectionId = sectionId;
   navLinks.forEach((link) => {
     const active = link.getAttribute('href') === `#${sectionId}`;
     link.classList.toggle('is-active', active);
@@ -448,93 +431,78 @@ const createCertificateCard = (item) => {
 };
 
 const techCatalog = {
-  python: { label: 'Python', mark: 'Py', icon: 'python', accent: '#4f9ef8', asset: 'python' },
-  javascript: { label: 'JavaScript', mark: 'JS', icon: 'javascript', accent: '#f5d849', asset: 'javascript' },
-  html: { label: 'HTML', mark: '5', icon: 'html', accent: '#f0643b', asset: 'html' },
-  css: { label: 'CSS', mark: '3', icon: 'css', accent: '#3f9ef3', asset: 'css' },
-  react: { label: 'React', mark: 'R', icon: 'react', accent: '#61dafb', asset: 'react' },
-  vite: { label: 'Vite', mark: 'V', icon: 'vite', accent: '#9b7cff', asset: 'vite' },
-  nodejs: { label: 'Node.js', mark: 'Node', icon: 'nodejs', accent: '#76c76b', asset: 'nodejs' },
-  fastapi: { label: 'FastAPI', mark: 'F', icon: 'fastapi', accent: '#18b892', asset: 'fastapi' },
-  pytest: { label: 'pytest', mark: 'pt', icon: 'pytest', accent: '#f0a84b', asset: 'pytest' },
-  java: { label: 'Java', mark: 'J', icon: 'java', accent: '#f06445', asset: 'java' },
-  csharp: { label: 'C#', mark: 'C#', icon: 'csharp', accent: '#a26bff', asset: 'csharp' },
-  dotnet: { label: '.NET', mark: '.NET', icon: 'dotnet', accent: '#8f5cff', asset: 'dotnet' },
-  typescript: { label: 'TypeScript', mark: 'TS', icon: 'typescript', accent: '#3178c6', asset: 'typescript' },
-  sqlite: { label: 'SQLite', mark: 'SQL', icon: 'sqlite', accent: '#4aa7d9', asset: 'sqlite' },
-  json: { label: 'JSON', mark: '{ }', icon: 'json', accent: '#d5b35a', asset: 'json' },
-  csv: { label: 'CSV', mark: 'CSV', icon: 'csv', accent: '#5fca91', asset: 'csv' },
-  aws: { label: 'AWS', mark: 'AWS', icon: 'aws', accent: '#ffb44c', asset: 'aws' },
-  git: { label: 'Git', mark: 'Git', icon: 'git', accent: '#f26545', asset: 'git' },
-
-  docker: { label: 'Docker', mark: 'Dock', icon: 'docker', accent: '#38bdf8', asset: 'docker' },
-  powershell: { label: 'PowerShell', mark: '>_', icon: 'powershell', accent: '#58a6ff', asset: 'powershell' },
-  batchfile: { label: 'Batchfile', mark: 'BAT', icon: 'batchfile', accent: '#66b5ee', asset: 'batchfile' },
-  openai: { label: 'OpenAI', mark: 'AI', icon: 'openai', accent: '#74d3ae', asset: 'openai' },
-  netlify: { label: 'Netlify', icon: 'netlify', accent: '#00c7b7', asset: 'netlify' },
-  vercel: { label: 'Vercel', icon: 'vercel', accent: '#f2edff', asset: 'vercel' },
-  wordpress: { label: 'WordPress', icon: 'wordpress', accent: '#21759b', asset: 'wordpress' },
-  hostpoint: { label: 'HostPoint', icon: 'hostpoint', accent: '#1e9ae2', asset: 'hostpoint' },
-  cloudflare: { label: 'Cloudflare', icon: 'cloudflare', accent: '#f38020', asset: 'cloudflare' }
+  python: { label: 'Python', accent: '#4f9ef8' },
+  javascript: { label: 'JavaScript', accent: '#f5d849' },
+  html: { label: 'HTML', accent: '#f0643b' },
+  css: { label: 'CSS', accent: '#3f9ef3' },
+  react: { label: 'React', accent: '#61dafb' },
+  vite: { label: 'Vite', accent: '#9b7cff' },
+  nodejs: { label: 'Node.js', accent: '#76c76b' },
+  fastapi: { label: 'FastAPI', accent: '#18b892' },
+  pytest: { label: 'pytest', accent: '#f0a84b' },
+  java: { label: 'Java', accent: '#f06445' },
+  csharp: { label: 'C#', accent: '#a26bff' },
+  dotnet: { label: '.NET', accent: '#8f5cff' },
+  typescript: { label: 'TypeScript', accent: '#3178c6' },
+  sqlite: { label: 'SQLite', accent: '#4aa7d9' },
+  json: { label: 'JSON', accent: '#d5b35a' },
+  csv: { label: 'CSV', accent: '#5fca91' },
+  aws: { label: 'AWS', accent: '#ffb44c' },
+  git: { label: 'Git', accent: '#f26545' },
+  docker: { label: 'Docker', accent: '#38bdf8' },
+  powershell: { label: 'PowerShell', accent: '#58a6ff' },
+  batchfile: { label: 'Batchfile', accent: '#66b5ee' },
+  openai: { label: 'OpenAI', accent: '#74d3ae' },
+  netlify: { label: 'Netlify', accent: '#00c7b7' },
+  vercel: { label: 'Vercel', accent: '#f2edff' },
+  wordpress: { label: 'WordPress', accent: '#21759b' },
+  hostpoint: { label: 'HostPoint', accent: '#1e9ae2' },
+  cloudflare: { label: 'Cloudflare', accent: '#f38020' }
 };
 
 const renderTechStack = () => {
   techGrid.innerHTML = '';
 
   portfolioData.techGroups.forEach((group, index) => {
-    const displayGroup = localizedTechGroup(group, index);
     const card = document.createElement('article');
     card.className = 'tech-group-card';
 
     const title = document.createElement('h3');
-    title.textContent = displayGroup.title;
+    title.textContent = activeDictionary.techGroupTitles?.[index] ?? group.title;
 
     const list = document.createElement('ul');
-    (group.items || []).forEach((techId, itemIndex) => {
-      const translatedLabel = (displayGroup.items || [])[itemIndex];
-      const catalogEntry = techCatalog[techId];
-      const tech = catalogEntry ? {
-        ...catalogEntry,
-        label: translatedLabel || catalogEntry.label
-      } : {
-        label: translatedLabel || techId,
-        accent: '#38bdf8',
-        icon: 'code'
-      };
+    let selectedButton;
+    group.items.forEach((techId) => {
+      const { accent, label: defaultLabel } = techCatalog[techId];
+      const labelText = activeDictionary.techLabels?.[techId] ?? defaultLabel;
       const listItem = document.createElement('li');
       const button = document.createElement('button');
       button.type = 'button';
       button.className = 'tech-logo-button';
-      button.style.setProperty('--tech-accent', tech.accent);
-      button.setAttribute('aria-label', tech.label);
+      button.style.setProperty('--tech-accent', accent);
+      button.setAttribute('aria-label', labelText);
       button.setAttribute('aria-pressed', 'false');
-      button.title = tech.label;
+      button.title = labelText;
 
       const icon = document.createElement('span');
-      icon.className = `tech-brand-icon tech-brand-${tech.icon}`;
+      icon.className = `tech-brand-icon tech-brand-${techId}`;
       icon.setAttribute('aria-hidden', 'true');
-      if (tech.asset) {
-        const image = document.createElement('img');
-        image.src = `assets/tech-icons/${tech.asset}.svg`;
-        image.alt = '';
-        image.loading = 'lazy';
-        icon.append(image);
-      } else {
-        icon.textContent = tech.mark || '';
-      }
+      const image = document.createElement('img');
+      image.src = `assets/tech-icons/${techId}.svg`;
+      image.alt = '';
+      image.loading = 'lazy';
+      icon.append(image);
 
       const label = document.createElement('span');
       label.className = 'tech-logo-label';
-      label.textContent = tech.label;
+      label.textContent = labelText;
 
       button.addEventListener('click', () => {
-        const isSelected = button.getAttribute('aria-pressed') === 'true';
-        list.querySelectorAll('.tech-logo-button[aria-pressed="true"]').forEach((activeButton) => {
-          activeButton.setAttribute('aria-pressed', 'false');
-          activeButton.closest('.tech-group-card')?.classList.remove('has-selected-technology');
-        });
-        button.setAttribute('aria-pressed', String(!isSelected));
-        button.closest('.tech-group-card')?.classList.toggle('has-selected-technology', !isSelected);
+        const isSelected = selectedButton === button;
+        selectedButton?.setAttribute('aria-pressed', 'false');
+        selectedButton = isSelected ? undefined : button;
+        selectedButton?.setAttribute('aria-pressed', 'true');
+        card.classList.toggle('has-selected-technology', !isSelected);
       });
 
       button.append(icon, label);

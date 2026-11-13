@@ -208,3 +208,42 @@ test("old legal addresses scroll to the corresponding sections", async ({ page }
     await expect(page.locator(`#${id}`)).toBeInViewport();
   }
 });
+
+test("technology labels, icons and independent selection survive language changes", async ({ page }) => {
+  const groups = page.locator(".tech-group-card");
+  const html = groups.nth(0).getByRole("button", { name: "HTML", exact: true });
+  const css = groups.nth(0).getByRole("button", { name: "CSS", exact: true });
+  const react = groups.nth(1).getByRole("button", { name: "React", exact: true });
+  await expect(groups).toHaveCount(7);
+  await expect(page.locator(".tech-brand-icon img")).toHaveCount(27);
+  const missingIcons = await page.locator(".tech-brand-icon img").evaluateAll(
+    async (images) => {
+      const results = await Promise.all(images.map((image) => {
+        image.loading = "eager";
+        return image.decode().then(() => null, () => image.src);
+      }));
+      return results.filter(Boolean);
+    },
+  );
+  expect(missingIcons).toEqual([]);
+
+  await html.click();
+  await react.click();
+  await css.click();
+  await expect(html).toHaveAttribute("aria-pressed", "false");
+  await expect(css).toHaveAttribute("aria-pressed", "true");
+  await expect(react).toHaveAttribute("aria-pressed", "true");
+  await css.press("Enter");
+  await expect(groups.nth(0)).not.toHaveClass(/has-selected-technology/);
+  await expect(groups.nth(1)).toHaveClass(/has-selected-technology/);
+
+  for (const [lang, expectedLabel] of [["sr-cyrl", "ХТМЛ"], ["sr", "HTML"]]) {
+    await page.locator("#language-menu-button").click();
+    await page.locator(`.lang-option[data-lang="${lang}"]`).click();
+    await expect(groups.first().getByRole("button", { name: expectedLabel, exact: true }))
+      .toHaveAttribute("aria-pressed", "false");
+    await expect(page.locator(".tech-brand-html img")).toHaveAttribute(
+      "src", "assets/tech-icons/html.svg",
+    );
+  }
+});

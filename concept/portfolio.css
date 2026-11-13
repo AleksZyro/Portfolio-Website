@@ -134,28 +134,6 @@ body.identity-preview {
   color: var(--text);
   border-color: #cbd1d8;
 }
-.identity-portrait {
-  margin: 0;
-  align-self: center;
-  min-width: 0;
-}
-.identity-portrait img {
-  display: block;
-  width: 100%;
-  height: 560px;
-  object-fit: cover;
-  object-position: center 33%;
-  border-radius: 3px;
-}
-.identity-portrait figcaption {
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
-  font-size: 10px;
-  padding-top: 14px;
-  color: var(--muted);
-  letter-spacing: 0.5px;
-}
 .identity-preview .current-work {
   margin-top: 55px;
   background: none;
@@ -227,10 +205,7 @@ body.identity-preview {
   background: var(--text);
 }
 .identity-preview .career-card,
-.identity-preview .tech-card,
-.identity-preview .tech-group,
-.identity-preview .github-card,
-.identity-preview .stat-box {
+.identity-preview .github-card {
   background: transparent;
   border-color: var(--line);
   box-shadow: none;
@@ -247,9 +222,7 @@ body.identity-preview {
   background: #657480;
   box-shadow: 0 0 0 5px #e7ebee;
 }
-.identity-preview .career-badge,
-.identity-preview .project-status,
-.identity-preview .project-tag {
+.identity-preview .career-badge {
   background: #e7ebee;
   color: var(--text);
   border-color: var(--line);
@@ -275,10 +248,6 @@ body.identity-preview {
   color: var(--text);
   background: none;
   border-color: var(--line);
-}
-.identity-preview .oss-merged-badge {
-  background: #354955;
-  color: white;
 }
 .identity-preview .site-footer {
   background: #e9ecef;
@@ -332,9 +301,6 @@ body.identity-preview {
   .identity-preview .hero-grid {
     gap: 35px;
   }
-  .identity-portrait img {
-    height: 520px;
-  }
   .identity-preview h1 {
     font-size: 68px;
     letter-spacing: -3.5px;
@@ -354,15 +320,6 @@ body.identity-preview {
   .identity-preview h1 {
     font-size: 62px;
     letter-spacing: -3px;
-  }
-  .identity-portrait {
-    width: 100%;
-    max-width: 440px;
-    margin-inline: auto;
-  }
-  .identity-portrait img {
-    height: 420px;
-    object-position: center 32%;
   }
   .identity-preview .current-work {
     margin-top: 35px;
@@ -628,9 +585,7 @@ body.identity-preview {
   background: #a3b6cf;
   box-shadow: 0 0 0 5px #18202c;
 }
-.identity-preview .career-badge,
-.identity-preview .project-status,
-.identity-preview .project-tag {
+.identity-preview .career-badge {
   background: #252f3d;
   color: #d3deed;
   border-color: #ffffff18;
@@ -647,8 +602,6 @@ body.identity-preview {
   border-color: #ffffff15;
   border-radius: 12px;
 }
-.identity-preview .tech-group,
-.identity-preview .tech-card,
 .identity-preview .github-card {
   background: transparent;
   border-color: var(--line);
@@ -656,10 +609,6 @@ body.identity-preview {
 }
 .identity-preview .github-stat {
   color: var(--text);
-}
-.identity-preview .oss-merged-badge {
-  background: #293f4a;
-  color: #cde9ed;
 }
 .identity-preview .site-footer {
   background: #141b24;
@@ -819,7 +768,6 @@ body.identity-preview {
 .identity-preview .item-card > p,
 .identity-preview .github-card > p,
 .identity-preview .open-source-pr > p,
-.identity-preview .tech-detail-panel p,
 .identity-preview .modal-description {
   font-size: 16px;
   line-height: 1.8;
@@ -1052,13 +1000,6 @@ body.identity-preview {
 }
 .identity-preview .footer-contact-link {
   font-size: 18px;
-}
-.identity-preview .tech-group-copy p,
-.identity-preview .tech-group-description,
-.identity-preview .tech-group-detail,
-.identity-preview .tech-description {
-  font-size: 16px;
-  line-height: 1.8;
 }
 @media (min-width: 960px) {
   .identity-preview .compact-certificates .item-card:nth-last-child(-n + 3) {

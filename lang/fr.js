@@ -684,69 +684,14 @@ portfolioLanguages.register("fr", {
       }
     }
   },
-  "techGroups": [
-    {
-      "title": "Bases frontend",
-      "items": [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "TypeScript"
-      ]
-    },
-    {
-      "title": "Runtime frontend",
-      "items": [
-        "React",
-        "Vite",
-        "Node.js"
-      ]
-    },
-    {
-      "title": "Python et API",
-      "items": [
-        "Python",
-        "FastAPI",
-        "pytest"
-      ]
-    },
-    {
-      "title": "Formats de données et stockage",
-      "items": [
-        "JSON",
-        "CSV",
-        "SQLite"
-      ]
-    },
-    {
-      "title": "Autres langages et frameworks",
-      "items": [
-        "Java",
-        "C#",
-        ".NET"
-      ]
-    },
-    {
-      "title": "Outils, cloud et automatisation",
-      "items": [
-        "Git",
-        "Docker",
-        "PowerShell",
-        "Batchfile",
-        "AWS",
-        "OpenAI"
-      ]
-    },
-    {
-      "title": "Hébergement et plateformes",
-      "items": [
-        "Netlify",
-        "Vercel",
-        "WordPress",
-        "HostPoint",
-        "Cloudflare"
-      ]
-    }
+  "techGroupTitles": [
+    "Bases frontend",
+    "Runtime frontend",
+    "Python et API",
+    "Formats de données et stockage",
+    "Autres langages et frameworks",
+    "Outils, cloud et automatisation",
+    "Hébergement et plateformes"
   ],
   "linkLabels": {
     "github": "GitHub",
