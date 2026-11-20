@@ -247,3 +247,57 @@ test("technology labels, icons and independent selection survive language change
     );
   }
 });
+
+test("favourites give translated feedback and respect reduced motion", async ({ page }) => {
+  for (const [language, retry, success] of [
+    ["de", "Versuch’s nochmals!", "Python ist meine Lieblingssprache."],
+    ["en", "Try again!", "Python is my favourite programming language."],
+    ["fr", "Essaie encore !", "Python est mon langage de programmation préféré."],
+    ["sr", "Pokušaj ponovo!", "Python je moj omiljeni programski jezik."],
+    ["sr-cyrl", "Покушај поново!", "Пајтон је мој омиљени програмски језик."],
+  ]) {
+    await page.goto("/?lang=" + language);
+    const group = page.locator(".tech-group-card").nth(2);
+    await group.locator(".tech-brand-fastapi").click();
+    await expect(group.getByRole("status")).toHaveText(retry);
+    await group.locator(".tech-brand-python").click();
+    await expect(group.getByRole("status")).toHaveText(success);
+    await expect(page.locator(".tech-confetti")).toHaveCount(0);
+  }
+  await page.emulateMedia({ reducedMotion: "no-preference" });
+  await page.goto("/?lang=de");
+  const group = page.locator(".tech-group-card").nth(2);
+  await group.locator(".tech-brand-python").click();
+  await expect(group.locator(".tech-confetti")).toHaveCount(1);
+  await expect(group.locator(".tech-confetti")).toHaveCount(0);
+  await group.locator(".tech-brand-fastapi").click();
+  await expect(group.getByRole("status")).toHaveText("Versuch’s nochmals!");
+  await group.locator(".tech-brand-python").click();
+  await expect(group.getByRole("status")).toHaveText("Python ist meine Lieblingssprache.");
+  await expect(group.locator(".tech-confetti")).toHaveCount(0);
+});
+
+test("project previews preload and never display a stale image during decoding", async ({ page }) => {
+  await expect.poll(() => page.evaluate(() =>
+    performance.getEntriesByType("resource").filter(entry =>
+      /project-demos\/|project-previews\/(vsw|foliolint)/.test(entry.name)
+    ).length
+  )).toBeGreaterThanOrEqual(5);
+  await page.locator("#projects-grid article button").first().click();
+  await expect(page.locator("#modal-preview-image")).toBeVisible();
+  await page.keyboard.press("Escape");
+
+  // Delay the second image's decode to reproduce a cold/slow preview switch.
+  await page.evaluate(() => {
+    const image = document.querySelector("#modal-preview-image");
+    const decode = image.decode.bind(image);
+    image.decode = () => new Promise(resolve => {
+      window.finishPreviewDecode = () => decode().then(resolve);
+    });
+  });
+  await page.locator("#projects-grid article").nth(1).locator("button").click();
+  await expect(page.locator("#modal-preview-image")).toBeHidden();
+  await page.evaluate(() => window.finishPreviewDecode());
+  await expect(page.locator("#modal-preview-image")).toBeVisible();
+  await expect(page.locator("#modal-preview-image")).toHaveAttribute("src", /sortlab-demo/);
+});

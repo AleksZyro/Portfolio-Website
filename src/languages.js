@@ -22,7 +22,7 @@ const portfolioLanguages = (() => {
     if (dictionaries.has(code)) return Promise.resolve(dictionaries.get(code));
     if (!pending.has(code)) {
       const script = document.createElement('script');
-      script.src = `lang/${code}.js?v=20261113-audit`;
+      script.src = `lang/${code}.js?v=20261121-tech-game`;
       const request = new Promise((resolve) => {
         const finish = () => {
           pending.delete(code);

@@ -738,5 +738,11 @@ portfolioLanguages.register("en", {
       }
     ],
     "cloudflarePrivacy": "Cloudflare privacy policy"
+  },
+  "techGame": {
+    "hint": "Can you guess my favourite in each category?",
+    "retry": "Try again!",
+    "favorite": "{name} is my favourite in this category.",
+    "python": "Python is my favourite programming language."
   }
 });

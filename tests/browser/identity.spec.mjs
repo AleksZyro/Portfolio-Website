@@ -42,7 +42,7 @@ test("all five language selections work without leaving the home page", async ({
       code === "sr-cyrl" ? "Александар" : "Aleksandar",
     );
     await expect(page.locator("#hero-last-name")).toHaveText(
-      code === "sr-cyrl" ? "Николић." : "Nikolić.",
+      code === "sr-cyrl" ? "Николић" : "Nikolić",
     );
     await expect(page).toHaveTitle(
       code === "sr-cyrl" ? /^Александар Николић/ : /^Aleksandar Nikolić/,

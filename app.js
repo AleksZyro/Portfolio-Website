@@ -460,8 +460,32 @@ const techCatalog = {
   cloudflare: { label: 'Cloudflare', accent: '#f38020' }
 };
 
+const celebrateTechnology = (card) => {
+  if (prefersReducedMotion.matches) return;
+  const confetti = document.createElement('span');
+  confetti.className = 'tech-confetti';
+  confetti.setAttribute('aria-hidden', 'true');
+  for (let index = 0; index < 20; index++) {
+    const piece = document.createElement('i');
+    piece.style.backgroundColor = ['#9dd5cb', '#f5d849', '#b5c7ea', '#f3a0bc'][index % 4];
+    confetti.append(piece);
+    const angle = index / 20 * Math.PI * 2;
+    const distance = 45 + Math.random() * 60;
+    piece.animate([
+      { transform: 'translate(0, 0) rotate(0deg)', opacity: 1 },
+      { transform: `translate(${Math.cos(angle) * distance}px, ${Math.sin(angle) * distance + 35}px) rotate(${index * 50}deg)`, opacity: 0 }
+    ], { duration: 900, easing: 'cubic-bezier(.15,.6,.4,1)' });
+  }
+  card.append(confetti);
+  setTimeout(() => confetti.remove(), 950);
+};
+
 const renderTechStack = () => {
   techGrid.innerHTML = '';
+  const hint = document.createElement('p');
+  hint.className = 'tech-game-hint';
+  hint.textContent = t('techGame.hint');
+  techGrid.append(hint);
 
   portfolioData.techGroups.forEach((group, index) => {
     const card = document.createElement('article');
@@ -471,7 +495,12 @@ const renderTechStack = () => {
     title.textContent = activeDictionary.techGroupTitles?.[index] ?? group.title;
 
     const list = document.createElement('ul');
+    const feedback = document.createElement('p');
+    feedback.className = 'tech-game-feedback';
+    feedback.setAttribute('role', 'status');
+    feedback.setAttribute('aria-atomic', 'true');
     let selectedButton;
+    let celebrated = false;
     group.items.forEach((techId) => {
       const { accent, label: defaultLabel } = techCatalog[techId];
       const labelText = activeDictionary.techLabels?.[techId] ?? defaultLabel;
@@ -503,6 +532,22 @@ const renderTechStack = () => {
         selectedButton = isSelected ? undefined : button;
         selectedButton?.setAttribute('aria-pressed', 'true');
         card.classList.toggle('has-selected-technology', !isSelected);
+        const correct = techId === group.favorite;
+        feedback.textContent = isSelected ? '' : correct
+          ? (techId === 'python' ? t('techGame.python') : t('techGame.favorite').replace('{name}', labelText))
+          : t('techGame.retry');
+        feedback.dataset.result = correct ? 'correct' : 'retry';
+        if (isSelected) return;
+        if (!correct && !prefersReducedMotion.matches) {
+          button.animate([
+            { backgroundColor: 'rgba(239, 100, 100, 0.28)', borderColor: '#ef6464' },
+            { backgroundColor: 'transparent', borderColor: 'transparent' }
+          ], { duration: 650 });
+        }
+        if (correct && !celebrated) {
+          celebrated = true;
+          celebrateTechnology(card);
+        }
       });
 
       button.append(icon, label);
@@ -510,7 +555,7 @@ const renderTechStack = () => {
       list.append(listItem);
     });
 
-    card.append(title, list);
+    card.append(title, list, feedback);
     techGrid.append(card);
   });
 };
@@ -548,7 +593,7 @@ const loadLanguage = async (requested) => {
   const heroFirstName = document.getElementById('hero-first-name');
   const heroLastName = document.getElementById('hero-last-name');
   if (heroFirstName) heroFirstName.textContent = firstName;
-  if (heroLastName) heroLastName.textContent = `${lastName}.`;
+  if (heroLastName) heroLastName.textContent = lastName;
   document.title = `${visibleName} (AleksZyro) | IMS-Portfolio`;
   if (footerName) footerName.textContent = visibleName;
   applyStaticTranslations();
@@ -598,3 +643,17 @@ loadLanguage(portfolioLanguages.initial()).then(() => {
   if (languageRequest === 1) alignInitialHash();
 });
 window.setTimeout(showMigrationNotice, 350);
+
+// Warm the detail previews after the initial page has rendered.
+const preloadProjectPreviews = () => {
+  portfolioData.projects.forEach((project) => {
+    const preview = new Image();
+    preview.src = project.demoMedia?.src || project.previewImage;
+    preview.decode().catch(() => {});
+  });
+};
+if ('requestIdleCallback' in window) {
+  requestIdleCallback(preloadProjectPreviews, { timeout: 1500 });
+} else {
+  setTimeout(preloadProjectPreviews, 0);
+}

@@ -11,12 +11,19 @@ function createDetailDialog(dialog, translate, linkLabel) {
   let modalScrollY = 0;
   let returnFocus = null;
 
+  let previewRequest = 0;
   function updatePreview(item) {
+    const request = ++previewRequest;
     const src = item.demoMedia?.src || item.previewImage;
     card.classList.toggle('has-preview-image', Boolean(src));
-    image.hidden = !src;
+    image.hidden = true;
     image.alt = item.demoMedia?.alt || '';
-    if (src) image.src = src;
+    if (src) {
+      image.src = src;
+      image.decode().then(() => {
+        if (request === previewRequest) image.hidden = false;
+      }).catch(() => {});
+    }
     else image.removeAttribute('src');
     dialog.querySelector('.modal-preview-label').textContent = item.previewLabel || '';
     dialog.querySelector('#modal-preview-title').textContent = item.title || '';

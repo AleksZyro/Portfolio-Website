@@ -738,5 +738,11 @@ portfolioLanguages.register("sr", {
       }
     ],
     "cloudflarePrivacy": "Cloudflare politika privatnosti"
+  },
+  "techGame": {
+    "hint": "Možeš li da pogodiš moj favorit u svakoj kategoriji?",
+    "retry": "Pokušaj ponovo!",
+    "favorite": "{name} je moj favorit u ovoj kategoriji.",
+    "python": "Python je moj omiljeni programski jezik."
   }
 });

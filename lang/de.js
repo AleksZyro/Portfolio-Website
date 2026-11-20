@@ -740,5 +740,11 @@ portfolioLanguages.register("de", {
       }
     ],
     "cloudflarePrivacy": "Datenschutzerklärung von Cloudflare"
+  },
+  "techGame": {
+    "hint": "Errätst du meinen Favoriten in jeder Kategorie?",
+    "retry": "Versuch’s nochmals!",
+    "favorite": "{name} ist mein Favorit in dieser Kategorie.",
+    "python": "Python ist meine Lieblingssprache."
   }
 });

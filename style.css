@@ -2028,7 +2028,7 @@ h2 { font-family: "Space Grotesk", "Sora", sans-serif; font-size: clamp(1.55rem,
 }
 
 .footer-legal {
-  width: min(620px, 100%);
+  width: 100%;
   margin-top: 10px;
   padding-top: 18px;
   border-top: 1px solid var(--line);

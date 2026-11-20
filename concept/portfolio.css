@@ -1,4 +1,10 @@
 @font-face {
+  font-family: Manrope;
+  src: url("assets/manrope.ttf") format("truetype");
+  font-weight: 200 800;
+  font-display: swap;
+}
+@font-face {
   font-family: Identity;
   src: url("assets/space-grotesk.ttf") format("truetype");
   font-weight: 300 700;
@@ -465,12 +471,11 @@ body.identity-preview {
   font-weight: 500;
   margin: 30px 0;
 }
+.identity-preview #hero-first-name,
 .identity-preview #hero-last-name {
-  color: #b5c7ea;
-  background: linear-gradient(110deg, #c0c8ef, #9dd5cb);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--accent);
+  background: none;
+  -webkit-text-fill-color: currentColor;
 }
 .identity-preview .hero-copy .identity-role {
   max-width: 700px;
@@ -1048,4 +1053,44 @@ body.identity-preview {
   .identity-preview a.current-work-card:hover h3 {
     color: #c2e2df;
   }
+}
+
+.identity-preview .brand-latin,
+.identity-preview h1 {
+  font-family: Manrope, "Segoe UI", sans-serif;
+}
+.identity-preview h1 {
+  font-weight: 650;
+  letter-spacing: -0.055em;
+}
+.tech-game-hint {
+  color: var(--muted);
+  margin: 0 0 12px;
+  font-size: 1rem;
+}
+.tech-group-card { position: relative; }
+.tech-game-feedback {
+  grid-column: 2;
+  min-height: 1.6em;
+  margin: -12px 0 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.tech-game-feedback[data-result="correct"] { color: #9dd5cb; }
+.tech-game-feedback[data-result="retry"] { color: #f3a0a0; }
+.tech-confetti {
+  position: absolute;
+  left: 65%;
+  top: 45%;
+  pointer-events: none;
+}
+.tech-confetti i {
+  position: absolute;
+  display: block;
+  width: 5px;
+  height: 9px;
+  border-radius: 1px;
+}
+@media (max-width: 640px) {
+  .tech-game-feedback { grid-column: 1 / -1; margin-top: -8px; }
 }

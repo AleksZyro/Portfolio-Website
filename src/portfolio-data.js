@@ -109,32 +109,39 @@ const portfolioData = {
   techGroups: [
     {
       title: 'Frontend-Basics',
+      favorite: 'javascript',
       items: ['html', 'css', 'javascript', 'typescript']
     },
     {
       title: 'Frontend-Runtime',
+      favorite: 'react',
       items: ['react', 'vite', 'nodejs']
     },
     {
       title: 'Python und API',
+      favorite: 'python',
       items: ['python', 'fastapi', 'pytest']
     },
     {
       title: 'Datenformate und Speicher',
+      favorite: 'json',
       items: ['json', 'csv', 'sqlite']
     },
     {
       title: 'Weitere Sprachen und Frameworks',
+      favorite: 'csharp',
       items: ['java', 'csharp', 'dotnet']
     },
     {
       title: 'Tools, Cloud und Automation',
+      favorite: 'git',
       items: [
         'git', 'docker', 'powershell', 'batchfile', 'aws', 'openai'
       ]
     },
     {
       title: 'Hosting und Plattformen',
+      favorite: 'cloudflare',
       items: ['netlify', 'vercel', 'wordpress', 'hostpoint', 'cloudflare']
     }
   ],
